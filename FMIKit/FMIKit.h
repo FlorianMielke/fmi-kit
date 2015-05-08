@@ -11,7 +11,6 @@ FOUNDATION_EXPORT double FMIKitVersionNumber;
 //! Project version string for FMIKit.
 FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 
-#import <FMIKit/MFMailComposeViewController+AlertView.h>
 #import <FMIKit/NSArray+Initialization.h>
 #import <FMIKit/NSArray+Querying.h>
 #import <FMIKit/NSBundle+Configuration.h>
@@ -35,7 +34,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/NSString+Folding.h>
 #import <FMIKit/NSUndoManager+Grouping.h>
 #import <FMIKit/SKProduct+LocalizedPrice.h>
-#import <FMIKit/UIApplication+Twitter.h>
 #import <FMIKit/UIColor+SystemDefaults.h>
 #import <FMIKit/UIDevice+Platform.h>
 #import <FMIKit/UIImage+Creation.h>
@@ -48,12 +46,14 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/UITableView+Selection.h>
 #import <FMIKit/UIScrollView+Scrolling.h>
 
+#import <FMIKit/FMIAcceptedCell.h>
 #import <FMIKit/FMIBinding.h>
 #import <FMIKit/FMIBindingManager.h>
 #import <FMIKit/FMIComparator.h>
 #import <FMIKit/FMICSVDeserializer.h>
 #import <FMIKit/FMICSVFieldDeserializer.h>
 #import <FMIKit/FMICSVFileDescription.h>
+#import <FMIKit/FMIDatePickerController.h>
 #import <FMIKit/FMIDuration.h>
 #import <FMIKit/FMIDurationFormatter.h>
 #import <FMIKit/FMIEditingToolbar.h>
@@ -68,7 +68,3 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIStore.h>
 #import <FMIKit/FMISupportMessage.h>
 #import <FMIKit/FMITableView.h>
-#import <FMIKit/FMIAcceptedCell.h>
-#import <FMIKit/FMIActivityAlertView.h>
-#import <FMIKit/FMIImagePickerController.h>
-#import <FMIKit/FMIDatePickerController.h>
