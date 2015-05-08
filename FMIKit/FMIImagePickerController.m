@@ -1,6 +1,4 @@
 //
-//  FMIImagePickerController.m
-//
 //  Created by Florian Mielke on 27.07.13.
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //
@@ -45,10 +43,10 @@ typedef struct {
 {
     return [[UIActionSheet alloc] initWithTitle:nil
                                        delegate:self
-                              cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"Cancel", @"FMFrameworkLocalizable", [FMIKitPrivates resourcesBundle], @"Used for button title")
+                              cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"Cancel", @"FMIKitLocalizable", [FMIKitPrivates resourcesBundle], @"Used for button title")
                          destructiveButtonTitle:[self destructiveButtonTitleForImage:image]
-                              otherButtonTitles:NSLocalizedStringFromTableInBundle(@"Choose Photo", @"FMFrameworkLocalizable", [FMIKitPrivates resourcesBundle], @"Used for button title: Choose an existing photo")
-                                                , NSLocalizedStringFromTableInBundle(@"Take Photo", @"FMFrameworkLocalizable", [FMIKitPrivates resourcesBundle], @"Used for button title: Take a new photo"), nil];
+                              otherButtonTitles:NSLocalizedStringFromTableInBundle(@"Choose Photo", @"FMIKitLocalizable", [FMIKitPrivates resourcesBundle], @"Used for button title: Choose an existing photo")
+                                                , NSLocalizedStringFromTableInBundle(@"Take Photo", @"FMIKitLocalizable", [FMIKitPrivates resourcesBundle], @"Used for button title: Take a new photo"), nil];
 }
 
 
@@ -56,9 +54,9 @@ typedef struct {
 {
     return [[UIActionSheet alloc] initWithTitle:nil
                                        delegate:self
-                              cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"Cancel", @"FMFrameworkLocalizable", [FMIKitPrivates resourcesBundle], @"Used for button title")
+                              cancelButtonTitle:NSLocalizedStringFromTableInBundle(@"Cancel", @"FMIKitLocalizable", [FMIKitPrivates resourcesBundle], @"Used for button title")
                          destructiveButtonTitle:[self destructiveButtonTitleForImage:image]
-                              otherButtonTitles:NSLocalizedStringFromTableInBundle(@"Choose Photo", @"FMFrameworkLocalizable", [FMIKitPrivates resourcesBundle], @"Used for button title: Choose an existing photo"), nil];
+                              otherButtonTitles:NSLocalizedStringFromTableInBundle(@"Choose Photo", @"FMIKitLocalizable", [FMIKitPrivates resourcesBundle], @"Used for button title: Choose an existing photo"), nil];
 }
 
 
@@ -103,7 +101,7 @@ typedef struct {
 
 - (NSString *)destructiveButtonTitleForImage:(UIImage *)image
 {
-    return ((image == nil) ? nil : NSLocalizedStringFromTableInBundle(@"Delete Photo", @"FMFrameworkLocalizable", [FMIKitPrivates resourcesBundle], @"Used for button title: Delete current photo"));
+    return ((image == nil) ? nil : NSLocalizedStringFromTableInBundle(@"Delete Photo", @"FMIKitLocalizable", [FMIKitPrivates resourcesBundle], @"Used for button title: Delete current photo"));
 }
 
 

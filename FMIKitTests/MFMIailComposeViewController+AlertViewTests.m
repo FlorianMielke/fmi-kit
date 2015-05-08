@@ -1,7 +1,4 @@
 //
-//  MFMailComposeViewController+AlertViewTests.m
-//  MeetingMinutes
-//
 //  Created by Florian Mielke on 19.04.13.
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //
@@ -50,7 +47,7 @@
     NSString *okButtonTitle = [[MFMailComposeViewController cannotSendMailAlertView] buttonTitleAtIndex:0];
     
     // Then
-    XCTAssertTrue([okButtonTitle isEqualToString:NSLocalizedStringFromTableInBundle(@"OK", @"FMFrameworkLocalizable", [FMIKitPrivates resourcesBundle], @"Used for word")]);
+    XCTAssertTrue([okButtonTitle isEqualToString:NSLocalizedStringFromTableInBundle(@"OK", @"FMIKitLocalizable", [FMIKitPrivates resourcesBundle], @"Used for word")]);
 }
 
 
@@ -86,7 +83,7 @@
     NSString *okButtonTitle = [[MFMailComposeViewController sendingMailFailedAlertView] buttonTitleAtIndex:0];
     
     // Then
-    XCTAssertTrue([okButtonTitle isEqualToString:NSLocalizedStringFromTableInBundle(@"OK", @"FMFrameworkLocalizable", [FMIKitPrivates resourcesBundle], @"Used for word")]);
+    XCTAssertTrue([okButtonTitle isEqualToString:NSLocalizedStringFromTableInBundle(@"OK", @"FMIKitLocalizable", [FMIKitPrivates resourcesBundle], @"Used for word")]);
 }
 
 

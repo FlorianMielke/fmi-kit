@@ -1,7 +1,4 @@
 //
-//  NSIndexSet+InitializationAdditionsTests.m
-//  MeetingMinutes
-//
 //  Created by Florian Mielke on 15.04.13.
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //

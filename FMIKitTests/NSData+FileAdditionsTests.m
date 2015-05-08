@@ -1,7 +1,4 @@
 //
-//  NSDataFile+AdditionsTests.m
-//  MeetingMinutes
-//
 //  Created by Florian on 08.02.13.
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //
