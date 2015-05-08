@@ -1,0 +1,1416 @@
+parentMANR;childMANR;childAnrede;childTitel;childVorname;childNachname;childTitelLang;BAEH_Referenzwert;BAEH_Messwert;RgbColorCode;childHeader
+45856;36975;Herr;FB;Vorname_1;Nachname_1;Finanzberater;28940;26873;150,54,52;Organisation von Finanzberater Nachname_1
+41437;17795;Herr;TL;Vorname_2;Nachname_2;Teamleiter;125641;67356;150,54,52;Organisation von Teamleiter Nachname_2
+19196;14515;Herr;FB;Vorname_3;Nachname_3;Finanzberater;18656;13345;150,54,52;Organisation von Finanzberater Nachname_3
+84681;15231;Herr;FT;Vorname_4;Nachname_4;Finanzberater Trainee;5944;10923;0,90,50;Organisation von Finanzberater Trainee Nachname_4
+80207;92277;Herr;FB;Vorname_5;Nachname_5;Finanzberater;35647;23016;150,54,52;Organisation von Finanzberater Nachname_5
+20848;21809;Herr;TL;Vorname_6;Nachname_6;Teamleiter;54052;49348;150,54,52;Organisation von Teamleiter Nachname_6
+70173;30318;Herr;TL;Vorname_7;Nachname_7;Teamleiter;97815;68429;150,54,52;Organisation von Teamleiter Nachname_7
+80210;22981;Herr;FIND;Vorname_8;Nachname_8;Finanzierungsdirektor;180692;124061;150,54,52;Organisation von Finanzierungsdirektor Nachname_8
+20814;22004;Herr;FT;Vorname_9;Nachname_9;Finanzberater Trainee;48;72;0,90,50;Organisation von Finanzberater Trainee Nachname_9
+45937;38322;Herr;TL;Vorname_10;Nachname_10;Teamleiter;101046;73819;150,54,52;Organisation von Teamleiter Nachname_10
+73001;73071;Herr;FB;Vorname_11;Nachname_11;Finanzberater;9015;6326;150,54,52;Organisation von Finanzberater Nachname_11
+68224;51977;Herr;FB;Vorname_12;Nachname_12;Finanzberater;17235;4478;150,54,52;Organisation von Finanzberater Nachname_12
+35151;31813;Herr;TL;Vorname_13;Nachname_13;Teamleiter;39666;31933;150,54,52;Organisation von Teamleiter Nachname_13
+45044;49489;Frau;TL;Vorname_14;Nachname_14;Teamleiter;34335;44979;0,90,50;Organisation von Teamleiter Nachname_14
+62232;67415;Herr;TL;Vorname_15;Nachname_15;Teamleiter;136944;139292;0,90,50;Organisation von Teamleiter Nachname_15
+11045;78361;Herr;TL;Vorname_16;Nachname_16;Teamleiter;219305;272456;0,90,50;Organisation von Teamleiter Nachname_16
+88455;79499;Herr;FB;Vorname_17;Nachname_17;Finanzberater;1760;123;150,54,52;Organisation von Finanzberater Nachname_17
+51456;52767;Herr;FTVP;Vorname_18;Nachname_18;Finanzberater Trainee Vertriebsprofi;17;2463;0,90,50;Organisation von Finanzberater Trainee Vertriebsprofi Nachname_18
+43023;46655;Herr;TL;Vorname_19;Nachname_19;Teamleiter;130858;121516;150,54,52;Organisation von Teamleiter Nachname_19
+73001;60443;Herr;FB;Vorname_20;Nachname_20;Finanzberater;37705;30738;150,54,52;Organisation von Finanzberater Nachname_20
+14439;16538;Frau;BA;Vorname_21;Nachname_21;Beraterassistent;3384;2099;150,54,52;Organisation von Beraterassistent Nachname_21
+80207;96430;Herr;TL;Vorname_22;Nachname_22;Teamleiter;146824;91956;150,54,52;Organisation von Teamleiter Nachname_22
+86603;86666;Herr;TL;Vorname_23;Nachname_23;Teamleiter;67591;39973;150,54,52;Organisation von Teamleiter Nachname_23
+75558;75997;Herr;FB;Vorname_24;Nachname_24;Finanzberater;37830;23377;150,54,52;Organisation von Finanzberater Nachname_24
+51529;52598;Herr;FB;Vorname_25;Nachname_25;Finanzberater;6198;6814;0,90,50;Organisation von Finanzberater Nachname_25
+81674;88378;Herr;TM;Vorname_26;Nachname_26;Teammanager;665739;529397;150,54,52;Organisation von Teammanager Nachname_26
+15235;22134;Herr;FB;Vorname_27;Nachname_27;Finanzberater;30308;14060;150,54,52;Organisation von Finanzberater Nachname_27
+81674;79616;Herr;FT;Vorname_28;Nachname_28;Finanzberater Trainee;7730;5856;150,54,52;Organisation von Finanzberater Trainee Nachname_28
+45856;36953;Herr;FB;Vorname_29;Nachname_29;Finanzberater;54064;59492;0,90,50;Organisation von Finanzberater Nachname_29
+19715;14965;Herr;FB;Vorname_30;Nachname_30;Finanzberater;26683;16645;150,54,52;Organisation von Finanzberater Nachname_30
+96247;96251;Herr;FB;Vorname_31;Nachname_31;Finanzberater;51702;50179;150,54,52;Organisation von Finanzberater Nachname_31
+99514;99029;Herr;FB;Vorname_32;Nachname_32;Finanzberater;9109;19508;0,90,50;Organisation von Finanzberater Nachname_32
+79252;52513;Herr;FB;Vorname_33;Nachname_33;Finanzberater;30708;16973;150,54,52;Organisation von Finanzberater Nachname_33
+73041;76645;Herr;FB;Vorname_34;Nachname_34;Finanzberater;38236;64592;0,90,50;Organisation von Finanzberater Nachname_34
+77010;75181;Frau;FB;Vorname_35;Nachname_35;Finanzberater;142420;122286;150,54,52;Organisation von Finanzberater Nachname_35
+45937;36828;Herr;TL;Vorname_36;Nachname_36;Teamleiter;115223;56573;150,54,52;Organisation von Teamleiter Nachname_36
+12973;11953;Herr;FB;Vorname_37;Nachname_37;Finanzberater;26612;23615;150,54,52;Organisation von Finanzberater Nachname_37
+74452;69138;Herr;TL;Vorname_38;Nachname_38;Teamleiter;149514;131426;150,54,52;Organisation von Teamleiter Nachname_38
+79252;52528;Herr;BAA;Vorname_39;Nachname_39;Beraterassistent in Ausbildung;15847;23389;0,90,50;Organisation von Beraterassistent in Ausbildung Nachname_39
+45044;38080;Herr;BA;Vorname_40;Nachname_40;Beraterassistent;3081;1412;150,54,52;Organisation von Beraterassistent Nachname_40
+79252;40776;Herr;TM;Vorname_41;Nachname_41;Teammanager;158924;103990;150,54,52;Organisation von Teammanager Nachname_41
+96991;80017;Herr;FB;Vorname_42;Nachname_42;Finanzberater;31630;38908;0,90,50;Organisation von Finanzberater Nachname_42
+98980;89598;Herr;FB;Vorname_43;Nachname_43;Finanzberater;30914;42705;0,90,50;Organisation von Finanzberater Nachname_43
+37146;36652;Herr;FB;Vorname_44;Nachname_44;Finanzberater;12768;764;150,54,52;Organisation von Finanzberater Nachname_44
+73001;76591;Herr;FT;Vorname_45;Nachname_45;Finanzberater Trainee;14374;13025;150,54,52;Organisation von Finanzberater Trainee Nachname_45
+43827;43441;Herr;FB;Vorname_46;Nachname_46;Finanzberater;34240;35683;0,90,50;Organisation von Finanzberater Nachname_46
+77778;95120;Frau;TL;Vorname_47;Nachname_47;Teamleiter;147246;119005;150,54,52;Organisation von Teamleiter Nachname_47
+60884;16462;Herr;TL;Vorname_48;Nachname_48;Teamleiter;78024;96152;0,90,50;Organisation von Teamleiter Nachname_48
+89663;87841;Herr;FB;Vorname_49;Nachname_49;Finanzberater;17315;5886;150,54,52;Organisation von Finanzberater Nachname_49
+89663;81469;Herr;TL;Vorname_50;Nachname_50;Teamleiter;190301;160904;150,54,52;Organisation von Teamleiter Nachname_50
+51802;67028;Herr;FB;Vorname_51;Nachname_51;Finanzberater;51663;55290;0,90,50;Organisation von Finanzberater Nachname_51
+44631;39338;Herr;TL;Vorname_52;Nachname_52;Teamleiter;212793;201712;150,54,52;Organisation von Teamleiter Nachname_52
+17542;50830;Herr;TL;Vorname_53;Nachname_53;Teamleiter;97531;57873;150,54,52;Organisation von Teamleiter Nachname_53
+40608;52103;Herr;FT;Vorname_54;Nachname_54;Finanzberater Trainee;2224;337;150,54,52;Organisation von Finanzberater Trainee Nachname_54
+89663;79758;Frau;BA;Vorname_55;Nachname_55;Beraterassistent;3902;530;150,54,52;Organisation von Beraterassistent Nachname_55
+79270;52380;Herr;FB;Vorname_56;Nachname_56;Finanzberater;48166;45170;150,54,52;Organisation von Finanzberater Nachname_56
+74452;69137;Herr;TM;Vorname_57;Nachname_57;Teammanager;415186;216613;150,54,52;Organisation von Teammanager Nachname_57
+68241;40506;Herr;FB;Vorname_58;Nachname_58;Finanzberater;22328;4857;150,54,52;Organisation von Finanzberater Nachname_58
+36744;31859;Herr;FB;Vorname_59;Nachname_59;Finanzberater;88050;14728;150,54,52;Organisation von Finanzberater Nachname_59
+89663;79756;Herr;BA;Vorname_60;Nachname_60;Beraterassistent;2401;1334;150,54,52;Organisation von Beraterassistent Nachname_60
+80309;90415;Herr;TM;Vorname_61;Nachname_61;Teammanager;506659;357017;150,54,52;Organisation von Teammanager Nachname_61
+96092;63812;Frau;FB;Vorname_62;Nachname_62;Finanzberater;7082;1935;150,54,52;Organisation von Finanzberater Nachname_62
+21812;62745;Frau;FB;Vorname_63;Nachname_63;Finanzberater;65912;58800;150,54,52;Organisation von Finanzberater Nachname_63
+72949;69638;Herr;FT;Vorname_64;Nachname_64;Finanzberater Trainee;1;1;0,90,50;Organisation von Finanzberater Trainee Nachname_64
+80207;14453;Frau;FB;Vorname_65;Nachname_65;Finanzberater;8990;1352;150,54,52;Organisation von Finanzberater Nachname_65
+46594;39217;Herr;FB;Vorname_66;Nachname_66;Finanzberater;51741;57741;0,90,50;Organisation von Finanzberater Nachname_66
+43827;49543;Herr;TM;Vorname_67;Nachname_67;Teammanager;626293;581441;150,54,52;Organisation von Teammanager Nachname_67
+90571;79686;Herr;FT;Vorname_68;Nachname_68;Finanzberater Trainee;5277;2019;150,54,52;Organisation von Finanzberater Trainee Nachname_68
+49465;47679;Herr;FB;Vorname_69;Nachname_69;Finanzberater;34488;42651;0,90,50;Organisation von Finanzberater Nachname_69
+56868;57548;Herr;FB;Vorname_70;Nachname_70;Finanzberater;27929;15430;150,54,52;Organisation von Finanzberater Nachname_70
+95120;95174;Herr;FB;Vorname_71;Nachname_71;Finanzberater;10529;11421;0,90,50;Organisation von Finanzberater Nachname_71
+62508;62952;Herr;TM;Vorname_72;Nachname_72;Teammanager;277676;214058;150,54,52;Organisation von Teammanager Nachname_72
+36392;64289;Herr;TL;Vorname_73;Nachname_73;Teamleiter;69933;34810;150,54,52;Organisation von Teamleiter Nachname_73
+86603;86642;Frau;FB;Vorname_74;Nachname_74;Finanzberater;12210;10083;150,54,52;Organisation von Finanzberater Nachname_74
+92164;82771;Herr;FB;Vorname_75;Nachname_75;Finanzberater;48816;44797;150,54,52;Organisation von Finanzberater Nachname_75
+72299;69098;Herr;FB;Vorname_76;Nachname_76;Finanzberater;74092;58892;150,54,52;Organisation von Finanzberater Nachname_76
+43016;16822;Herr;FB;Vorname_77;Nachname_77;Finanzberater;163895;142190;150,54,52;Organisation von Finanzberater Nachname_77
+96247;86365;Herr;TL;Vorname_78;Nachname_78;Teamleiter;91143;184163;0,90,50;Organisation von Teamleiter Nachname_78
+21508;22014;Herr;FB;Vorname_79;Nachname_79;Finanzberater;84681;84965;0,90,50;Organisation von Finanzberater Nachname_79
+50608;79684;Herr;FT;Vorname_80;Nachname_80;Finanzberater Trainee;25154;19972;150,54,52;Organisation von Finanzberater Trainee Nachname_80
+40319;40459;Herr;FB;Vorname_81;Nachname_81;Finanzberater;43004;32297;150,54,52;Organisation von Finanzberater Nachname_81
+79133;89349;Frau;FB;Vorname_82;Nachname_82;Finanzberater;16323;8562;150,54,52;Organisation von Finanzberater Nachname_82
+72949;69059;Herr;FB;Vorname_83;Nachname_83;Finanzberater;44225;32164;150,54,52;Organisation von Finanzberater Nachname_83
+83273;16562;Herr;FT;Vorname_84;Nachname_84;Finanzberater Trainee;5887;6032;0,90,50;Organisation von Finanzberater Trainee Nachname_84
+43827;41553;Herr;FB;Vorname_85;Nachname_85;Finanzberater;58369;40386;150,54,52;Organisation von Finanzberater Nachname_85
+66823;83265;Herr;FB;Vorname_86;Nachname_86;Finanzberater;5134;441;150,54,52;Organisation von Finanzberater Nachname_86
+77010;54017;Herr;FB;Vorname_87;Nachname_87;Finanzberater;84429;55651;150,54,52;Organisation von Finanzberater Nachname_87
+45044;47635;Frau;TL;Vorname_88;Nachname_88;Teamleiter;67099;48097;150,54,52;Organisation von Teamleiter Nachname_88
+45414;45804;Herr;FB;Vorname_89;Nachname_89;Finanzberater;62537;37942;150,54,52;Organisation von Finanzberater Nachname_89
+62922;63043;Herr;FT;Vorname_90;Nachname_90;Finanzberater Trainee;2054;630;150,54,52;Organisation von Finanzberater Trainee Nachname_90
+63377;90139;Frau;FB;Vorname_91;Nachname_91;Finanzberater;47868;38143;150,54,52;Organisation von Finanzberater Nachname_91
+96247;96285;Herr;TL;Vorname_92;Nachname_92;Teamleiter;70333;50890;150,54,52;Organisation von Teamleiter Nachname_92
+62317;62694;Herr;FB;Vorname_93;Nachname_93;Finanzberater;66221;46134;150,54,52;Organisation von Finanzberater Nachname_93
+61637;44587;Herr;TL;Vorname_94;Nachname_94;Teamleiter;78128;52126;150,54,52;Organisation von Teamleiter Nachname_94
+16092;16084;Herr;FB;Vorname_95;Nachname_95;Finanzberater;32803;25088;150,54,52;Organisation von Finanzberater Nachname_95
+94582;14559;Frau;FT;Vorname_96;Nachname_96;Finanzberater Trainee;16493;9644;150,54,52;Organisation von Finanzberater Trainee Nachname_96
+84681;15762;Herr;TL;Vorname_97;Nachname_97;Teamleiter;88631;73236;150,54,52;Organisation von Teamleiter Nachname_97
+79252;51449;Herr;TL;Vorname_98;Nachname_98;Teamleiter;114967;74229;150,54,52;Organisation von Teamleiter Nachname_98
+17364;52054;Herr;FB;Vorname_99;Nachname_99;Finanzberater;4946;1721;150,54,52;Organisation von Finanzberater Nachname_99
+37116;36713;Herr;TL;Vorname_100;Nachname_100;Teamleiter;46381;40956;150,54,52;Organisation von Teamleiter Nachname_100
+72949;68241;Herr;TM;Vorname_101;Nachname_101;Teammanager;559237;477343;150,54,52;Organisation von Teammanager Nachname_101
+86797;86745;Herr;FB;Vorname_102;Nachname_102;Finanzberater;31106;5590;150,54,52;Organisation von Finanzberater Nachname_102
+95529;51957;Frau;TL;Vorname_103;Nachname_103;Teamleiter;62022;48490;150,54,52;Organisation von Teamleiter Nachname_103
+13315;14446;Herr;TL;Vorname_104;Nachname_104;Teamleiter;268193;195611;150,54,52;Organisation von Teamleiter Nachname_104
+46424;39464;Herr;FB;Vorname_105;Nachname_105;Finanzberater;29319;15745;150,54,52;Organisation von Finanzberater Nachname_105
+80210;88455;Herr;MG;Vorname_106;Nachname_106;Manager;1110465;982724;150,54,52;Organisation von Manager Nachname_106
+17364;52562;Herr;FT;Vorname_107;Nachname_107;Finanzberater Trainee;21832;20235;150,54,52;Organisation von Finanzberater Trainee Nachname_107
+62232;63115;Herr;TL;Vorname_108;Nachname_108;Teamleiter;54337;85556;0,90,50;Organisation von Teamleiter Nachname_108
+50518;52426;Herr;FT;Vorname_109;Nachname_109;Finanzberater Trainee;31263;15196;150,54,52;Organisation von Finanzberater Trainee Nachname_109
+44631;47725;Herr;FB;Vorname_110;Nachname_110;Finanzberater;37329;22668;150,54,52;Organisation von Finanzberater Nachname_110
+86603;86738;Herr;FB;Vorname_111;Nachname_111;Finanzberater;94076;79648;150,54,52;Organisation von Finanzberater Nachname_111
+62508;21508;Herr;TL;Vorname_112;Nachname_112;Teamleiter;172541;152241;150,54,52;Organisation von Teamleiter Nachname_112
+41230;83388;Herr;FB;Vorname_113;Nachname_113;Finanzberater;39765;25955;150,54,52;Organisation von Finanzberater Nachname_113
+68241;73938;Herr;FB;Vorname_114;Nachname_114;Finanzberater;77760;64585;150,54,52;Organisation von Finanzberater Nachname_114
+14422;91944;Herr;FB;Vorname_115;Nachname_115;Finanzberater;214610;179414;150,54,52;Organisation von Finanzberater Nachname_115
+80309;49566;Herr;BAVM;Vorname_116;Nachname_116;Manager bAV;149969;85800;150,54,52;Organisation von Manager bAV Nachname_116
+42121;18006;Herr;TM;Vorname_117;Nachname_117;Teammanager;118360;86373;150,54,52;Organisation von Teammanager Nachname_117
+49049;42005;Frau;FB;Vorname_118;Nachname_118;Finanzberater;10021;15026;0,90,50;Organisation von Finanzberater Nachname_118
+95120;93361;Herr;FB;Vorname_119;Nachname_119;Finanzberater;11662;13090;0,90,50;Organisation von Finanzberater Nachname_119
+92164;79991;Herr;TL;Vorname_120;Nachname_120;Teamleiter;101218;80990;150,54,52;Organisation von Teamleiter Nachname_120
+20347;21812;Herr;TL;Vorname_121;Nachname_121;Teamleiter;145001;157984;0,90,50;Organisation von Teamleiter Nachname_121
+11204;13118;Herr;FB;Vorname_122;Nachname_122;Finanzberater;7523;6241;150,54,52;Organisation von Finanzberater Nachname_122
+94263;14975;Frau;BA;Vorname_123;Nachname_123;Beraterassistent;4262;4558;0,90,50;Organisation von Beraterassistent Nachname_123
+51867;22422;Herr;BAA;Vorname_124;Nachname_124;Beraterassistent in Ausbildung;4535;1677;150,54,52;Organisation von Beraterassistent in Ausbildung Nachname_124
+43827;65356;Herr;TL;Vorname_125;Nachname_125;Teamleiter;84813;68301;150,54,52;Organisation von Teamleiter Nachname_125
+45845;36973;Herr;TL;Vorname_126;Nachname_126;Teamleiter;24902;21302;150,54,52;Organisation von Teamleiter Nachname_126
+63422;50882;Herr;FB;Vorname_127;Nachname_127;Finanzberater;52682;39174;150,54,52;Organisation von Finanzberater Nachname_127
+56558;50138;Herr;FB;Vorname_128;Nachname_128;Finanzberater;54609;59507;0,90,50;Organisation von Finanzberater Nachname_128
+74000;69169;Herr;FB;Vorname_129;Nachname_129;Finanzberater;58978;44222;150,54,52;Organisation von Finanzberater Nachname_129
+37116;30332;Herr;TL;Vorname_130;Nachname_130;Teamleiter;213179;189390;150,54,52;Organisation von Teamleiter Nachname_130
+43827;94041;Frau;TL;Vorname_131;Nachname_131;Teamleiter;37911;40487;0,90,50;Organisation von Teamleiter Nachname_131
+46569;39491;Herr;FB;Vorname_132;Nachname_132;Finanzberater;81320;68476;150,54,52;Organisation von Finanzberater Nachname_132
+90415;79012;Herr;TL;Vorname_133;Nachname_133;Teamleiter;141963;111956;150,54,52;Organisation von Teamleiter Nachname_133
+50439;50642;Frau;FB;Vorname_134;Nachname_134;Finanzberater;29209;13780;150,54,52;Organisation von Finanzberater Nachname_134
+62508;21536;Herr;TL;Vorname_135;Nachname_135;Teamleiter;228634;212326;150,54,52;Organisation von Teamleiter Nachname_135
+37101;31871;Frau;BAA;Vorname_136;Nachname_136;Beraterassistent in Ausbildung;52;11;150,54,52;Organisation von Beraterassistent in Ausbildung Nachname_136
+14066;22992;Herr;FB;Vorname_137;Nachname_137;Finanzberater;26606;23013;150,54,52;Organisation von Finanzberater Nachname_137
+36584;31863;Herr;FT;Vorname_138;Nachname_138;Finanzberater Trainee;19608;23175;0,90,50;Organisation von Finanzberater Trainee Nachname_138
+83831;79095;Herr;FB;Vorname_139;Nachname_139;Finanzberater;32283;33112;0,90,50;Organisation von Finanzberater Nachname_139
+60084;56995;Frau;FB;Vorname_140;Nachname_140;Finanzberater;2193;611;150,54,52;Organisation von Finanzberater Nachname_140
+74165;75002;Frau;FB;Vorname_141;Nachname_141;Finanzberater;31126;16602;150,54,52;Organisation von Finanzberater Nachname_141
+99037;14889;Herr;FB;Vorname_142;Nachname_142;Finanzberater;17445;10605;150,54,52;Organisation von Finanzberater Nachname_142
+75961;76651;Herr;FT;Vorname_143;Nachname_143;Finanzberater Trainee;15060;10721;150,54,52;Organisation von Finanzberater Trainee Nachname_143
+77010;56445;Herr;TM;Vorname_144;Nachname_144;Teammanager;285547;184736;150,54,52;Organisation von Teammanager Nachname_144
+35151;1081;Herr;TM;Vorname_145;Nachname_145;Teammanager;922748;680142;150,54,52;Organisation von Teammanager Nachname_145
+49543;18898;Herr;TL;Vorname_146;Nachname_146;Teamleiter;78676;68929;150,54,52;Organisation von Teamleiter Nachname_146
+80326;89425;Herr;FB;Vorname_147;Nachname_147;Finanzberater;2181;2126;150,54,52;Organisation von Finanzberater Nachname_147
+70211;56988;Herr;FB;Vorname_148;Nachname_148;Finanzberater;56452;35319;150,54,52;Organisation von Finanzberater Nachname_148
+90571;51314;Herr;FB;Vorname_149;Nachname_149;Finanzberater;20141;19126;150,54,52;Organisation von Finanzberater Nachname_149
+83954;85302;Herr;FB;Vorname_150;Nachname_150;Finanzberater;18614;5215;150,54,52;Organisation von Finanzberater Nachname_150
+50677;52579;Herr;FT;Vorname_151;Nachname_151;Finanzberater Trainee;24059;19589;150,54,52;Organisation von Finanzberater Trainee Nachname_151
+41944;42840;Herr;BA;Vorname_152;Nachname_152;Beraterassistent;8748;2620;150,54,52;Organisation von Beraterassistent Nachname_152
+40319;40972;Herr;FB;Vorname_153;Nachname_153;Finanzberater;2637;2953;0,90,50;Organisation von Finanzberater Nachname_153
+21580;20676;Herr;FB;Vorname_154;Nachname_154;Finanzberater;112812;57501;150,54,52;Organisation von Finanzberater Nachname_154
+14066;14045;Herr;FB;Vorname_155;Nachname_155;Finanzberater;2727;699;150,54,52;Organisation von Finanzberater Nachname_155
+42058;19828;Herr;FB;Vorname_156;Nachname_156;Finanzberater;18018;11862;150,54,52;Organisation von Finanzberater Nachname_156
+35151;35603;Herr;TL;Vorname_157;Nachname_157;Teamleiter;61248;45698;150,54,52;Organisation von Teamleiter Nachname_157
+98980;47099;Frau;FB;Vorname_158;Nachname_158;Finanzberater;44038;34854;150,54,52;Organisation von Finanzberater Nachname_158
+15940;15281;Frau;FT;Vorname_159;Nachname_159;Finanzberater Trainee;1360;6;150,54,52;Organisation von Finanzberater Trainee Nachname_159
+15105;15940;Herr;TL;Vorname_160;Nachname_160;Teamleiter;223729;184809;150,54,52;Organisation von Teamleiter Nachname_160
+14349;16542;Herr;FT;Vorname_161;Nachname_161;Finanzberater Trainee;2122;3956;0,90,50;Organisation von Finanzberater Trainee Nachname_161
+62508;51812;Herr;FT;Vorname_162;Nachname_162;Finanzberater Trainee;4477;2416;150,54,52;Organisation von Finanzberater Trainee Nachname_162
+74360;71934;Herr;TM;Vorname_163;Nachname_163;Teammanager;439902;313277;150,54,52;Organisation von Teammanager Nachname_163
+98253;51954;Herr;FB;Vorname_164;Nachname_164;Finanzberater;65619;35740;150,54,52;Organisation von Finanzberater Nachname_164
+90571;96476;Frau;FB;Vorname_165;Nachname_165;Finanzberater;29809;31905;0,90,50;Organisation von Finanzberater Nachname_165
+77778;57611;Herr;FB;Vorname_166;Nachname_166;Finanzberater;7917;4599;150,54,52;Organisation von Finanzberater Nachname_166
+51449;52603;Herr;BA;Vorname_167;Nachname_167;Beraterassistent;1287;133;150,54,52;Organisation von Beraterassistent Nachname_167
+35151;70173;Herr;TM;Vorname_168;Nachname_168;Teammanager;691407;522919;150,54,52;Organisation von Teammanager Nachname_168
+35675;37637;Herr;FB;Vorname_169;Nachname_169;Finanzberater;47836;23250;150,54,52;Organisation von Finanzberater Nachname_169
+62707;21723;Herr;FB;Vorname_170;Nachname_170;Finanzberater;96760;94810;150,54,52;Organisation von Finanzberater Nachname_170
+70173;30246;Herr;TL;Vorname_171;Nachname_171;Teamleiter;79152;58585;150,54,52;Organisation von Teamleiter Nachname_171
+65268;78346;Frau;FT;Vorname_172;Nachname_172;Finanzberater Trainee;507;1647;0,90,50;Organisation von Finanzberater Trainee Nachname_172
+1081;36772;Frau;TL;Vorname_173;Nachname_173;Teamleiter;168723;144421;150,54,52;Organisation von Teamleiter Nachname_173
+13315;14645;Herr;TL;Vorname_174;Nachname_174;Teamleiter;58405;57837;150,54,52;Organisation von Teamleiter Nachname_174
+79287;40787;Herr;FB;Vorname_175;Nachname_175;Finanzberater;42346;40667;150,54,52;Organisation von Finanzberater Nachname_175
+77778;55171;Herr;FB;Vorname_176;Nachname_176;Finanzberater;45880;42651;150,54,52;Organisation von Finanzberater Nachname_176
+43827;83272;Frau;FB;Vorname_177;Nachname_177;Finanzberater;10612;420;150,54,52;Organisation von Finanzberater Nachname_177
+13315;67438;Herr;TL;Vorname_178;Nachname_178;Teamleiter;35352;23532;150,54,52;Organisation von Teamleiter Nachname_178
+45040;45937;Herr;TM;Vorname_179;Nachname_179;Teammanager;816396;577644;150,54,52;Organisation von Teammanager Nachname_179
+90415;86949;Herr;FB;Vorname_180;Nachname_180;Finanzberater;49800;19743;150,54,52;Organisation von Finanzberater Nachname_180
+81622;78446;Herr;FT;Vorname_181;Nachname_181;Finanzberater Trainee;383;780;0,90,50;Organisation von Finanzberater Trainee Nachname_181
+22142;22189;Frau;FB;Vorname_182;Nachname_182;Finanzberater;47075;34634;150,54,52;Organisation von Finanzberater Nachname_182
+43016;51156;Herr;TL;Vorname_183;Nachname_183;Teamleiter;213690;169727;150,54,52;Organisation von Teamleiter Nachname_183
+94756;14895;Frau;FT;Vorname_184;Nachname_184;Finanzberater Trainee;38232;17683;150,54,52;Organisation von Finanzberater Trainee Nachname_184
+40319;49343;Herr;FB;Vorname_185;Nachname_185;Finanzberater;29592;47717;0,90,50;Organisation von Finanzberater Nachname_185
+37422;30362;Frau;FB;Vorname_186;Nachname_186;Finanzberater;23667;20835;150,54,52;Organisation von Finanzberater Nachname_186
+39338;38121;Herr;FB;Vorname_187;Nachname_187;Finanzberater;50755;60630;0,90,50;Organisation von Finanzberater Nachname_187
+45044;38138;Frau;FB;Vorname_188;Nachname_188;Finanzberater;9513;18231;0,90,50;Organisation von Finanzberater Nachname_188
+74461;97899;Herr;FB;Vorname_189;Nachname_189;Finanzberater;25084;13297;150,54,52;Organisation von Finanzberater Nachname_189
+46341;46424;Herr;TL;Vorname_190;Nachname_190;Teamleiter;98293;82774;150,54,52;Organisation von Teamleiter Nachname_190
+43023;59058;Herr;FB;Vorname_191;Nachname_191;Finanzberater;522;208;150,54,52;Organisation von Finanzberater Nachname_191
+66893;94756;Herr;TL;Vorname_192;Nachname_192;Teamleiter;349081;224306;150,54,52;Organisation von Teamleiter Nachname_192
+58397;58398;Herr;TL;Vorname_193;Nachname_193;Teamleiter;96598;60808;150,54,52;Organisation von Teamleiter Nachname_193
+37617;35883;Herr;FB;Vorname_194;Nachname_194;Finanzberater;49280;58993;0,90,50;Organisation von Finanzberater Nachname_194
+21580;20814;Frau;TM;Vorname_195;Nachname_195;Teammanager;536696;432664;150,54,52;Organisation von Teammanager Nachname_195
+13254;78430;Herr;FT;Vorname_196;Nachname_196;Finanzberater Trainee;30305;25113;150,54,52;Organisation von Finanzberater Trainee Nachname_196
+96247;90234;Herr;FB;Vorname_197;Nachname_197;Finanzberater;46479;60234;0,90,50;Organisation von Finanzberater Nachname_197
+74165;75509;Herr;FB;Vorname_198;Nachname_198;Finanzberater;33318;13714;150,54,52;Organisation von Finanzberater Nachname_198
+46569;39227;Herr;FB;Vorname_199;Nachname_199;Finanzberater;50069;43618;150,54,52;Organisation von Finanzberater Nachname_199
+80207;79064;Herr;FB;Vorname_200;Nachname_200;Finanzberater;23441;22298;150,54,52;Organisation von Finanzberater Nachname_200
+43827;82802;Frau;FB;Vorname_201;Nachname_201;Finanzberater;9242;2487;150,54,52;Organisation von Finanzberater Nachname_201
+53650;55266;Herr;TL;Vorname_202;Nachname_202;Teamleiter;53711;50049;150,54,52;Organisation von Teamleiter Nachname_202
+88378;93718;Herr;FB;Vorname_203;Nachname_203;Finanzberater;86368;92267;0,90,50;Organisation von Finanzberater Nachname_203
+11045;11278;Frau;FT;Vorname_204;Nachname_204;Finanzberater Trainee;2;0;150,54,52;Organisation von Finanzberater Trainee Nachname_204
+95349;57584;Herr;FT;Vorname_205;Nachname_205;Finanzberater Trainee;24447;17695;150,54,52;Organisation von Finanzberater Trainee Nachname_205
+62046;14647;Herr;FB;Vorname_206;Nachname_206;Finanzberater;35726;22420;150,54,52;Organisation von Finanzberater Nachname_206
+37116;36645;Herr;FB;Vorname_207;Nachname_207;Finanzberater;19106;10319;150,54,52;Organisation von Finanzberater Nachname_207
+80668;81132;Herr;TL;Vorname_208;Nachname_208;Teamleiter;221468;175962;150,54,52;Organisation von Teamleiter Nachname_208
+49543;18922;Frau;FINM;Vorname_209;Nachname_209;Finanzierungsmanager;85979;91992;0,90,50;Organisation von Finanzierungsmanager Nachname_209
+81668;81712;Herr;TM;Vorname_210;Nachname_210;Teammanager;474211;309279;150,54,52;Organisation von Teammanager Nachname_210
+81622;11624;Herr;TL;Vorname_211;Nachname_211;Teamleiter;45992;62109;0,90,50;Organisation von Teamleiter Nachname_211
+81712;57546;Herr;FB;Vorname_212;Nachname_212;Finanzberater;28329;20273;150,54,52;Organisation von Finanzberater Nachname_212
+40776;52276;Herr;FB;Vorname_213;Nachname_213;Finanzberater;26428;16770;150,54,52;Organisation von Finanzberater Nachname_213
+40438;51528;Herr;FB;Vorname_214;Nachname_214;Finanzberater;14214;10453;150,54,52;Organisation von Finanzberater Nachname_214
+44199;48375;Herr;FB;Vorname_215;Nachname_215;Finanzberater;56185;57977;0,90,50;Organisation von Finanzberater Nachname_215
+80207;14825;Herr;FB;Vorname_216;Nachname_216;Finanzberater;47496;51011;0,90,50;Organisation von Finanzberater Nachname_216
+95933;67612;Frau;FB;Vorname_217;Nachname_217;Finanzberater;85785;53532;150,54,52;Organisation von Finanzberater Nachname_217
+81668;95933;Herr;TL;Vorname_218;Nachname_218;Teamleiter;216655;171579;150,54,52;Organisation von Teamleiter Nachname_218
+98253;50519;Herr;FB;Vorname_219;Nachname_219;Finanzberater;35800;15925;150,54,52;Organisation von Finanzberater Nachname_219
+19954;19294;Herr;FB;Vorname_220;Nachname_220;Finanzberater;68934;38661;150,54,52;Organisation von Finanzberater Nachname_220
+90415;50659;Herr;FB;Vorname_221;Nachname_221;Finanzberater;5544;8781;0,90,50;Organisation von Finanzberater Nachname_221
+75558;75877;Herr;FB;Vorname_222;Nachname_222;Finanzberater;31417;19068;150,54,52;Organisation von Finanzberater Nachname_222
+79252;52299;Herr;TL;Vorname_223;Nachname_223;Teamleiter;42324;44221;0,90,50;Organisation von Teamleiter Nachname_223
+35036;60122;Herr;FB;Vorname_224;Nachname_224;Finanzberater;5020;1604;150,54,52;Organisation von Finanzberater Nachname_224
+62232;16631;Herr;FT;Vorname_225;Nachname_225;Finanzberater Trainee;8080;4714;150,54,52;Organisation von Finanzberater Trainee Nachname_225
+96991;93984;Frau;FT;Vorname_226;Nachname_226;Finanzberater Trainee;15117;22451;0,90,50;Organisation von Finanzberater Trainee Nachname_226
+62952;22116;Herr;FB;Vorname_227;Nachname_227;Finanzberater;58208;39866;150,54,52;Organisation von Finanzberater Nachname_227
+73001;69334;Herr;TL;Vorname_228;Nachname_228;Teamleiter;29200;34992;0,90,50;Organisation von Teamleiter Nachname_228
+14422;11045;Herr;MG;Vorname_229;Nachname_229;Manager;1787027;1203442;150,54,52;Organisation von Manager Nachname_229
+40870;40871;Frau;TL;Vorname_230;Nachname_230;Teamleiter;84555;52885;150,54,52;Organisation von Teamleiter Nachname_230
+73041;74707;Herr;TL;Vorname_231;Nachname_231;Teamleiter;202181;108613;150,54,52;Organisation von Teamleiter Nachname_231
+70173;37422;Herr;TL;Vorname_232;Nachname_232;Teamleiter;205273;135342;150,54,52;Organisation von Teamleiter Nachname_232
+46102;44385;Herr;TL;Vorname_233;Nachname_233;Teamleiter;90;36;150,54,52;Organisation von Teamleiter Nachname_233
+45845;36970;Herr;TL;Vorname_234;Nachname_234;Teamleiter;1644;4796;0,90,50;Organisation von Teamleiter Nachname_234
+35151;35823;Herr;TM;Vorname_235;Nachname_235;Teammanager;256075;236268;150,54,52;Organisation von Teammanager Nachname_235
+88455;96105;Frau;TL;Vorname_236;Nachname_236;Teamleiter;97530;116697;0,90,50;Organisation von Teamleiter Nachname_236
+43023;40523;Frau;FB;Vorname_237;Nachname_237;Finanzberater;34085;10465;150,54,52;Organisation von Finanzberater Nachname_237
+93928;65944;Herr;FB;Vorname_238;Nachname_238;Finanzberater;35022;17548;150,54,52;Organisation von Finanzberater Nachname_238
+51156;47167;Herr;FB;Vorname_239;Nachname_239;Finanzberater;70354;52333;150,54,52;Organisation von Finanzberater Nachname_239
+90190;80747;Frau;FB;Vorname_240;Nachname_240;Finanzberater;4443;3723;150,54,52;Organisation von Finanzberater Nachname_240
+81674;98823;Herr;FB;Vorname_241;Nachname_241;Finanzberater;39633;34907;150,54,52;Organisation von Finanzberater Nachname_241
+79357;17074;Herr;FB;Vorname_242;Nachname_242;Finanzberater;19200;18838;150,54,52;Organisation von Finanzberater Nachname_242
+38322;36854;Herr;FB;Vorname_243;Nachname_243;Finanzberater;41666;29925;150,54,52;Organisation von Finanzberater Nachname_243
+42121;17655;Herr;TL;Vorname_244;Nachname_244;Teamleiter;368734;298323;150,54,52;Organisation von Teamleiter Nachname_244
+75558;75624;Herr;TL;Vorname_245;Nachname_245;Teamleiter;76329;69939;150,54,52;Organisation von Teamleiter Nachname_245
+79342;74135;Frau;FB;Vorname_246;Nachname_246;Finanzberater;3032;5380;0,90,50;Organisation von Finanzberater Nachname_246
+74452;79342;Frau;TL;Vorname_247;Nachname_247;Teamleiter;212265;180140;150,54,52;Organisation von Teamleiter Nachname_247
+47311;36923;Frau;BAA;Vorname_248;Nachname_248;Beraterassistent in Ausbildung;331;14;150,54,52;Organisation von Beraterassistent in Ausbildung Nachname_248
+14292;14295;Frau;FB;Vorname_249;Nachname_249;Finanzberater;64655;41492;150,54,52;Organisation von Finanzberater Nachname_249
+73041;71850;Herr;BA;Vorname_250;Nachname_250;Beraterassistent;1324;1215;150,54,52;Organisation von Beraterassistent Nachname_250
+45845;38326;Herr;FB;Vorname_251;Nachname_251;Finanzberater;18888;50760;0,90,50;Organisation von Finanzberater Nachname_251
+49543;19715;Herr;TL;Vorname_252;Nachname_252;Teamleiter;201573;220572;0,90,50;Organisation von Teamleiter Nachname_252
+44631;45578;Herr;FB;Vorname_253;Nachname_253;Finanzberater;242047;31200;150,54,52;Organisation von Finanzberater Nachname_253
+37146;37639;Herr;FB;Vorname_254;Nachname_254;Finanzberater;5576;925;150,54,52;Organisation von Finanzberater Nachname_254
+47332;52323;Herr;FB;Vorname_255;Nachname_255;Finanzberater;2262;504;150,54,52;Organisation von Finanzberater Nachname_255
+19181;99037;Herr;TL;Vorname_256;Nachname_256;Teamleiter;124055;106213;150,54,52;Organisation von Teamleiter Nachname_256
+40571;52123;Herr;FB;Vorname_257;Nachname_257;Finanzberater;10067;10712;0,90,50;Organisation von Finanzberater Nachname_257
+98811;51662;Frau;FB;Vorname_258;Nachname_258;Finanzberater;796;2788;0,90,50;Organisation von Finanzberater Nachname_258
+87973;94938;Herr;FB;Vorname_259;Nachname_259;Finanzberater;12132;3138;150,54,52;Organisation von Finanzberater Nachname_259
+62718;62983;Herr;FB;Vorname_260;Nachname_260;Finanzberater;121139;126127;0,90,50;Organisation von Finanzberater Nachname_260
+86522;78432;Frau;FT;Vorname_261;Nachname_261;Finanzberater Trainee;40762;37256;150,54,52;Organisation von Finanzberater Trainee Nachname_261
+40465;51532;Herr;FB;Vorname_262;Nachname_262;Finanzberater;50490;55520;0,90,50;Organisation von Finanzberater Nachname_262
+21456;11038;Frau;FB;Vorname_263;Nachname_263;Finanzberater;32613;14210;150,54,52;Organisation von Finanzberater Nachname_263
+79357;75009;Herr;FB;Vorname_264;Nachname_264;Finanzberater;62838;52933;150,54,52;Organisation von Finanzberater Nachname_264
+42121;41477;Herr;MG;Vorname_265;Nachname_265;Manager;1168668;1055959;150,54,52;Organisation von Manager Nachname_265
+45841;47976;Herr;FB;Vorname_266;Nachname_266;Finanzberater;46579;39797;150,54,52;Organisation von Finanzberater Nachname_266
+37116;36633;Herr;TL;Vorname_267;Nachname_267;Teamleiter;109625;109251;150,54,52;Organisation von Teamleiter Nachname_267
+51822;22401;Herr;FT;Vorname_268;Nachname_268;Finanzberater Trainee;2870;122;150,54,52;Organisation von Finanzberater Trainee Nachname_268
+38433;36892;Herr;FT;Vorname_269;Nachname_269;Finanzberater Trainee;6693;17636;0,90,50;Organisation von Finanzberater Trainee Nachname_269
+61818;13385;Herr;FB;Vorname_270;Nachname_270;Finanzberater;42540;34871;150,54,52;Organisation von Finanzberater Nachname_270
+40508;52298;Herr;FB;Vorname_271;Nachname_271;Finanzberater;395;2452;0,90,50;Organisation von Finanzberater Nachname_271
+42927;47895;Herr;FB;Vorname_272;Nachname_272;Finanzberater;12535;12480;150,54,52;Organisation von Finanzberater Nachname_272
+42565;44000;Herr;FB;Vorname_273;Nachname_273;Finanzberater;47018;13005;150,54,52;Organisation von Finanzberater Nachname_273
+73041;74708;Herr;FB;Vorname_274;Nachname_274;Finanzberater;42702;23601;150,54,52;Organisation von Finanzberater Nachname_274
+51802;21698;Herr;FB;Vorname_275;Nachname_275;Finanzberater;29668;25503;150,54,52;Organisation von Finanzberater Nachname_275
+61637;38433;Herr;TL;Vorname_276;Nachname_276;Teamleiter;148563;169629;0,90,50;Organisation von Teamleiter Nachname_276
+17999;46204;Herr;FB;Vorname_277;Nachname_277;Finanzberater;69616;71629;0,90,50;Organisation von Finanzberater Nachname_277
+88378;67123;Herr;BAVM;Vorname_278;Nachname_278;Manager bAV;164036;144961;150,54,52;Organisation von Manager bAV Nachname_278
+70211;93273;Herr;FB;Vorname_279;Nachname_279;Finanzberater;12952;1174;150,54,52;Organisation von Finanzberater Nachname_279
+77010;57517;Frau;FB;Vorname_280;Nachname_280;Finanzberater;54873;45089;150,54,52;Organisation von Finanzberater Nachname_280
+30332;31792;Herr;FB;Vorname_281;Nachname_281;Finanzberater;53478;59930;0,90,50;Organisation von Finanzberater Nachname_281
+83273;16482;Herr;BAA;Vorname_282;Nachname_282;Beraterassistent in Ausbildung;17812;28145;0,90,50;Organisation von Beraterassistent in Ausbildung Nachname_282
+92164;65850;Herr;TL;Vorname_283;Nachname_283;Teamleiter;83015;76141;150,54,52;Organisation von Teamleiter Nachname_283
+83468;56874;Herr;FB;Vorname_284;Nachname_284;Finanzberater;14277;3135;150,54,52;Organisation von Finanzberater Nachname_284
+86696;78269;Herr;FB;Vorname_285;Nachname_285;Finanzberater;72414;43688;150,54,52;Organisation von Finanzberater Nachname_285
+51781;55271;Herr;FINM;Vorname_286;Nachname_286;Finanzierungsmanager;62139;51846;150,54,52;Organisation von Finanzierungsmanager Nachname_286
+42121;42565;Herr;TM;Vorname_287;Nachname_287;Teammanager;615750;336017;150,54,52;Organisation von Teammanager Nachname_287
+42565;17885;Herr;FB;Vorname_288;Nachname_288;Finanzberater;132831;62268;150,54,52;Organisation von Finanzberater Nachname_288
+12973;12164;Herr;FB;Vorname_289;Nachname_289;Finanzberater;94538;82160;150,54,52;Organisation von Finanzberater Nachname_289
+83401;14552;Herr;TL;Vorname_290;Nachname_290;Teamleiter;45728;51453;0,90,50;Organisation von Teamleiter Nachname_290
+83401;85757;Herr;TL;Vorname_291;Nachname_291;Teamleiter;156363;92456;150,54,52;Organisation von Teamleiter Nachname_291
+20989;62532;Herr;TM;Vorname_292;Nachname_292;Teammanager;507159;303613;150,54,52;Organisation von Teammanager Nachname_292
+83468;56868;Herr;TL;Vorname_293;Nachname_293;Teamleiter;139799;88832;150,54,52;Organisation von Teamleiter Nachname_293
+60433;75916;Frau;BA;Vorname_294;Nachname_294;Beraterassistent;546;549;0,90,50;Organisation von Beraterassistent Nachname_294
+20989;21488;Herr;FB;Vorname_295;Nachname_295;Finanzberater;115640;97668;150,54,52;Organisation von Finanzberater Nachname_295
+21456;21461;Herr;FB;Vorname_296;Nachname_296;Finanzberater;60420;47818;150,54,52;Organisation von Finanzberater Nachname_296
+36584;30488;Herr;TL;Vorname_297;Nachname_297;Teamleiter;90623;62317;150,54,52;Organisation von Teamleiter Nachname_297
+19870;40543;Herr;FB;Vorname_298;Nachname_298;Finanzberater;42085;33186;150,54,52;Organisation von Finanzberater Nachname_298
+21812;20977;Herr;FB;Vorname_299;Nachname_299;Finanzberater;20866;24255;0,90,50;Organisation von Finanzberater Nachname_299
+41437;46265;Herr;FB;Vorname_300;Nachname_300;Finanzberater;6689;45370;0,90,50;Organisation von Finanzberater Nachname_300
+90622;51752;Herr;TL;Vorname_301;Nachname_301;Teamleiter;35892;9523;150,54,52;Organisation von Teamleiter Nachname_301
+80210;88511;Frau;FB;Vorname_302;Nachname_302;Finanzberater;107803;67659;150,54,52;Organisation von Finanzberater Nachname_302
+62368;46781;Herr;TL;Vorname_303;Nachname_303;Teamleiter;83657;86557;0,90,50;Organisation von Teamleiter Nachname_303
+16092;22393;Herr;FB;Vorname_304;Nachname_304;Finanzberater;55134;57484;0,90,50;Organisation von Finanzberater Nachname_304
+65340;60824;Herr;TL;Vorname_305;Nachname_305;Teamleiter;227406;162603;150,54,52;Organisation von Teamleiter Nachname_305
+46626;40656;Herr;FB;Vorname_306;Nachname_306;Finanzberater;51580;55468;0,90,50;Organisation von Finanzberater Nachname_306
+1081;45909;Herr;FB;Vorname_307;Nachname_307;Finanzberater;9818;4251;150,54,52;Organisation von Finanzberater Nachname_307
+40662;14326;Herr;FT;Vorname_308;Nachname_308;Finanzberater Trainee;10137;18316;0,90,50;Organisation von Finanzberater Trainee Nachname_308
+98388;51948;Herr;TL;Vorname_309;Nachname_309;Teamleiter;100836;102836;0,90,50;Organisation von Teamleiter Nachname_309
+35151;35184;Herr;BAVM;Vorname_310;Nachname_310;Manager bAV;105820;142787;0,90,50;Organisation von Manager bAV Nachname_310
+80207;80198;Herr;FB;Vorname_311;Nachname_311;Finanzberater;27108;27615;0,90,50;Organisation von Finanzberater Nachname_311
+36392;63736;Herr;TL;Vorname_312;Nachname_312;Teamleiter;207239;147690;150,54,52;Organisation von Teamleiter Nachname_312
+66401;66949;Herr;FB;Vorname_313;Nachname_313;Finanzberater;45400;34254;150,54,52;Organisation von Finanzberater Nachname_313
+56701;56584;Herr;FB;Vorname_314;Nachname_314;Finanzberater;19696;14636;150,54,52;Organisation von Finanzberater Nachname_314
+67021;63068;Frau;FB;Vorname_315;Nachname_315;Finanzberater;9941;8020;150,54,52;Organisation von Finanzberater Nachname_315
+17464;50654;Herr;FB;Vorname_316;Nachname_316;Finanzberater;318;1076;0,90,50;Organisation von Finanzberater Nachname_316
+79270;52607;Frau;FT;Vorname_317;Nachname_317;Finanzberater Trainee;5739;9953;0,90,50;Organisation von Finanzberater Trainee Nachname_317
+74000;76136;Herr;TL;Vorname_318;Nachname_318;Teamleiter;37762;27936;150,54,52;Organisation von Teamleiter Nachname_318
+35151;38740;Herr;FB;Vorname_319;Nachname_319;Finanzberater;105590;56826;150,54,52;Organisation von Finanzberater Nachname_319
+80326;95119;Herr;TL;Vorname_320;Nachname_320;Teamleiter;101835;28231;150,54,52;Organisation von Teamleiter Nachname_320
+21580;62597;Herr;TL;Vorname_321;Nachname_321;Teamleiter;155172;153523;150,54,52;Organisation von Teamleiter Nachname_321
+95933;57549;Herr;FT;Vorname_322;Nachname_322;Finanzberater Trainee;37937;26024;150,54,52;Organisation von Finanzberater Trainee Nachname_322
+39219;38081;Frau;BA;Vorname_323;Nachname_323;Beraterassistent;3316;837;150,54,52;Organisation von Beraterassistent Nachname_323
+93219;70053;Herr;FB;Vorname_324;Nachname_324;Finanzberater;48433;58630;0,90,50;Organisation von Finanzberater Nachname_324
+63736;15435;Herr;FB;Vorname_325;Nachname_325;Finanzberater;174335;142553;150,54,52;Organisation von Finanzberater Nachname_325
+80210;94981;Herr;FB;Vorname_326;Nachname_326;Finanzberater;73360;82824;0,90,50;Organisation von Finanzberater Nachname_326
+98980;14967;Herr;FB;Vorname_327;Nachname_327;Finanzberater;45543;51576;0,90,50;Organisation von Finanzberater Nachname_327
+74360;76658;Herr;FT;Vorname_328;Nachname_328;Finanzberater Trainee;4793;4512;150,54,52;Organisation von Finanzberater Trainee Nachname_328
+42475;52624;Herr;BA;Vorname_329;Nachname_329;Beraterassistent;1343;626;150,54,52;Organisation von Beraterassistent Nachname_329
+93219;56986;Herr;FB;Vorname_330;Nachname_330;Finanzberater;49839;40701;150,54,52;Organisation von Finanzberater Nachname_330
+73001;76609;Herr;BAA;Vorname_331;Nachname_331;Beraterassistent in Ausbildung;15579;10508;150,54,52;Organisation von Beraterassistent in Ausbildung Nachname_331
+72949;50703;Herr;FB;Vorname_332;Nachname_332;Finanzberater;27140;24868;150,54,52;Organisation von Finanzberater Nachname_332
+94041;14976;Frau;FT;Vorname_333;Nachname_333;Finanzberater Trainee;2783;6569;0,90,50;Organisation von Finanzberater Trainee Nachname_333
+81132;90338;Herr;IMM;Vorname_334;Nachname_334;Manager I&K;100517;108820;0,90,50;Organisation von Manager I&K Nachname_334
+79991;79779;Herr;FB;Vorname_335;Nachname_335;Finanzberater;37598;26673;150,54,52;Organisation von Finanzberater Nachname_335
+11195;12836;Herr;FB;Vorname_336;Nachname_336;Finanzberater;49183;43565;150,54,52;Organisation von Finanzberater Nachname_336
+65396;16508;Frau;FB;Vorname_337;Nachname_337;Finanzberater;48576;33122;150,54,52;Organisation von Finanzberater Nachname_337
+62508;21987;Herr;FB;Vorname_338;Nachname_338;Finanzberater;74854;35337;150,54,52;Organisation von Finanzberater Nachname_338
+21509;22363;Frau;BAA;Vorname_339;Nachname_339;Beraterassistent in Ausbildung;408;16;150,54,52;Organisation von Beraterassistent in Ausbildung Nachname_339
+51822;51818;Herr;FB;Vorname_340;Nachname_340;Finanzberater;131626;182953;0,90,50;Organisation von Finanzberater Nachname_340
+95120;89045;Herr;FB;Vorname_341;Nachname_341;Finanzberater;913;778;150,54,52;Organisation von Finanzberater Nachname_341
+49998;52486;Herr;FB;Vorname_342;Nachname_342;Finanzberater;29138;13929;150,54,52;Organisation von Finanzberater Nachname_342
+70173;31763;Herr;FB;Vorname_343;Nachname_343;Finanzberater;28463;29602;0,90,50;Organisation von Finanzberater Nachname_343
+96092;57533;Herr;FT;Vorname_344;Nachname_344;Finanzberater Trainee;44398;39414;150,54,52;Organisation von Finanzberater Trainee Nachname_344
+37116;30342;Herr;FB;Vorname_345;Nachname_345;Finanzberater;38437;77377;0,90,50;Organisation von Finanzberater Nachname_345
+66893;95884;Herr;TL;Vorname_346;Nachname_346;Teamleiter;83495;107670;0,90,50;Organisation von Teamleiter Nachname_346
+73041;60415;Frau;FT;Vorname_347;Nachname_347;Finanzberater Trainee;10841;1297;150,54,52;Organisation von Finanzberater Trainee Nachname_347
+79252;79285;Herr;FB;Vorname_348;Nachname_348;Finanzberater;42169;54468;0,90,50;Organisation von Finanzberater Nachname_348
+17464;17688;Herr;FB;Vorname_349;Nachname_349;Finanzberater;16280;13017;150,54,52;Organisation von Finanzberater Nachname_349
+42121;40319;Herr;TM;Vorname_350;Nachname_350;Teammanager;343018;333316;150,54,52;Organisation von Teammanager Nachname_350
+38433;36922;Herr;FTVP;Vorname_351;Nachname_351;Finanzberater Trainee Vertriebsprofi;3420;4007;0,90,50;Organisation von Finanzberater Trainee Vertriebsprofi Nachname_351
+68241;52383;Frau;FB;Vorname_352;Nachname_352;Finanzberater;40520;28981;150,54,52;Organisation von Finanzberater Nachname_352
+51822;22427;Herr;BAA;Vorname_353;Nachname_353;Beraterassistent in Ausbildung;2961;2238;150,54,52;Organisation von Beraterassistent in Ausbildung Nachname_353
+19715;16566;Herr;FT;Vorname_354;Nachname_354;Finanzberater Trainee;3155;1263;150,54,52;Organisation von Finanzberater Trainee Nachname_354
+74360;71393;Herr;FT;Vorname_355;Nachname_355;Finanzberater Trainee;23001;13612;150,54,52;Organisation von Finanzberater Trainee Nachname_355
+53650;50381;Herr;FB;Vorname_356;Nachname_356;Finanzberater;32366;19567;150,54,52;Organisation von Finanzberater Nachname_356
+40776;52612;Herr;FT;Vorname_357;Nachname_357;Finanzberater Trainee;5420;3348;150,54,52;Organisation von Finanzberater Trainee Nachname_357
+42121;49049;Herr;TM;Vorname_358;Nachname_358;Teammanager;382793;379782;150,54,52;Organisation von Teammanager Nachname_358
+86603;11145;Herr;BAVM;Vorname_359;Nachname_359;Manager bAV;118646;85315;150,54,52;Organisation von Manager bAV Nachname_359
+12973;12556;Herr;FB;Vorname_360;Nachname_360;Finanzberater;63630;54077;150,54,52;Organisation von Finanzberater Nachname_360
+97868;79327;Herr;FB;Vorname_361;Nachname_361;Finanzberater;387417;73211;150,54,52;Organisation von Finanzberater Nachname_361
+62707;67279;Herr;FB;Vorname_362;Nachname_362;Finanzberater;77259;54284;150,54,52;Organisation von Finanzberater Nachname_362
+43016;49612;Herr;TM;Vorname_363;Nachname_363;Teammanager;256694;208076;150,54,52;Organisation von Teammanager Nachname_363
+13315;62232;Herr;MG;Vorname_364;Nachname_364;Manager;1091542;1104040;0,90,50;Organisation von Manager Nachname_364
+51456;52757;Herr;FT;Vorname_365;Nachname_365;Finanzberater Trainee;421;1375;0,90,50;Organisation von Finanzberater Trainee Nachname_365
+72299;40438;Herr;TL;Vorname_366;Nachname_366;Teamleiter;19826;9817;150,54,52;Organisation von Teamleiter Nachname_366
+86671;86681;Herr;TM;Vorname_367;Nachname_367;Teammanager;560925;395272;150,54,52;Organisation von Teammanager Nachname_367
+95933;57629;Herr;BA;Vorname_368;Nachname_368;Beraterassistent;412;16;150,54,52;Organisation von Beraterassistent Nachname_368
+40192;73462;Herr;FB;Vorname_369;Nachname_369;Finanzberater;35340;29616;150,54,52;Organisation von Finanzberater Nachname_369
+60884;14599;Frau;TL;Vorname_370;Nachname_370;Teamleiter;154837;192406;0,90,50;Organisation von Teamleiter Nachname_370
+42565;52552;Herr;FT;Vorname_371;Nachname_371;Finanzberater Trainee;254;0;150,54,52;Organisation von Finanzberater Trainee Nachname_371
+83401;83403;Herr;TM;Vorname_372;Nachname_372;Teammanager;263244;212788;150,54,52;Organisation von Teammanager Nachname_372
+51400;52754;Herr;FTVP;Vorname_373;Nachname_373;Finanzberater Trainee Vertriebsprofi;6781;13934;0,90,50;Organisation von Finanzberater Trainee Vertriebsprofi Nachname_373
+36392;68686;Frau;FB;Vorname_374;Nachname_374;Finanzberater;53712;43403;150,54,52;Organisation von Finanzberater Nachname_374
+48095;48709;Herr;FB;Vorname_375;Nachname_375;Finanzberater;125701;149373;0,90,50;Organisation von Finanzberater Nachname_375
+99037;14914;Herr;FT;Vorname_376;Nachname_376;Finanzberater Trainee;3518;1604;150,54,52;Organisation von Finanzberater Trainee Nachname_376
+75917;76613;Herr;BAA;Vorname_377;Nachname_377;Beraterassistent in Ausbildung;7075;5751;150,54,52;Organisation von Beraterassistent in Ausbildung Nachname_377
+95120;95690;Herr;FB;Vorname_378;Nachname_378;Finanzberater;30219;22421;150,54,52;Organisation von Finanzberater Nachname_378
+56868;57544;Herr;BA;Vorname_379;Nachname_379;Beraterassistent;22781;2429;150,54,52;Organisation von Beraterassistent Nachname_379
+37116;36725;Herr;FB;Vorname_380;Nachname_380;Finanzberater;43632;38317;150,54,52;Organisation von Finanzberater Nachname_380
+51529;52296;Herr;FB;Vorname_381;Nachname_381;Finanzberater;42701;24172;150,54,52;Organisation von Finanzberater Nachname_381
+80210;88711;Herr;FB;Vorname_382;Nachname_382;Finanzberater;87496;9;150,54,52;Organisation von Finanzberater Nachname_382
+58397;58406;Herr;TL;Vorname_383;Nachname_383;Teamleiter;65313;40734;150,54,52;Organisation von Teamleiter Nachname_383
+81674;88000;Herr;FB;Vorname_384;Nachname_384;Finanzberater;26732;11442;150,54,52;Organisation von Finanzberater Nachname_384
+43023;17504;Herr;FB;Vorname_385;Nachname_385;Finanzberater;18098;9484;150,54,52;Organisation von Finanzberater Nachname_385
+81622;78411;Herr;FB;Vorname_386;Nachname_386;Finanzberater;7938;23859;0,90,50;Organisation von Finanzberater Nachname_386
+65396;16511;Frau;FT;Vorname_387;Nachname_387;Finanzberater Trainee;18176;17460;150,54,52;Organisation von Finanzberater Trainee Nachname_387
+67021;21613;Herr;FB;Vorname_388;Nachname_388;Finanzberater;73557;53015;150,54,52;Organisation von Finanzberater Nachname_388
+37484;14692;Herr;FB;Vorname_389;Nachname_389;Finanzberater;17673;9330;150,54,52;Organisation von Finanzberater Nachname_389
+81668;94166;Herr;FB;Vorname_390;Nachname_390;Finanzberater;36782;36993;0,90,50;Organisation von Finanzberater Nachname_390
+62584;21845;Frau;FB;Vorname_391;Nachname_391;Finanzberater;70467;73044;0,90,50;Organisation von Finanzberater Nachname_391
+51712;52293;Herr;FB;Vorname_392;Nachname_392;Finanzberater;14221;10858;150,54,52;Organisation von Finanzberater Nachname_392
+50608;79691;Frau;FB;Vorname_393;Nachname_393;Finanzberater;17613;16185;150,54,52;Organisation von Finanzberater Nachname_393
+93219;93267;Herr;FB;Vorname_394;Nachname_394;Finanzberater;1332;145;150,54,52;Organisation von Finanzberater Nachname_394
+49612;19673;Herr;FB;Vorname_395;Nachname_395;Finanzberater;94578;88620;150,54,52;Organisation von Finanzberater Nachname_395
+56383;52652;Herr;BAA;Vorname_396;Nachname_396;Beraterassistent in Ausbildung;1113;8;150,54,52;Organisation von Beraterassistent in Ausbildung Nachname_396
+35151;37617;Herr;TL;Vorname_397;Nachname_397;Teamleiter;136911;97444;150,54,52;Organisation von Teamleiter Nachname_397
+36649;31794;Herr;FT;Vorname_398;Nachname_398;Finanzberater Trainee;18641;6943;150,54,52;Organisation von Finanzberater Trainee Nachname_398
+80326;66736;Herr;FB;Vorname_399;Nachname_399;Finanzberater;617;433;150,54,52;Organisation von Finanzberater Nachname_399
+58416;57568;Herr;FB;Vorname_400;Nachname_400;Finanzberater;62798;50376;150,54,52;Organisation von Finanzberater Nachname_400
+79342;74823;Herr;FB;Vorname_401;Nachname_401;Finanzberater;53858;50764;150,54,52;Organisation von Finanzberater Nachname_401
+72379;72378;Herr;FB;Vorname_402;Nachname_402;Finanzberater;11870;8583;150,54,52;Organisation von Finanzberater Nachname_402
+61637;47267;Herr;FB;Vorname_403;Nachname_403;Finanzberater;46641;41813;150,54,52;Organisation von Finanzberater Nachname_403
+40931;47466;Herr;FB;Vorname_404;Nachname_404;Finanzberater;63938;61369;150,54,52;Organisation von Finanzberater Nachname_404
+63422;79771;Herr;FB;Vorname_405;Nachname_405;Finanzberater;6214;9530;0,90,50;Organisation von Finanzberater Nachname_405
+88455;79695;Herr;FT;Vorname_406;Nachname_406;Finanzberater Trainee;4752;3584;150,54,52;Organisation von Finanzberater Trainee Nachname_406
+17364;17999;Herr;TL;Vorname_407;Nachname_407;Teamleiter;130076;125733;150,54,52;Organisation von Teamleiter Nachname_407
+84681;21037;Herr;FB;Vorname_408;Nachname_408;Finanzberater;167136;167734;0,90,50;Organisation von Finanzberater Nachname_408
+86671;65268;Herr;TL;Vorname_409;Nachname_409;Teamleiter;329877;255165;150,54,52;Organisation von Teamleiter Nachname_409
+65340;14847;Herr;FB;Vorname_410;Nachname_410;Finanzberater;32894;34368;0,90,50;Organisation von Finanzberater Nachname_410
+77778;80658;Herr;TL;Vorname_411;Nachname_411;Teamleiter;105603;100424;150,54,52;Organisation von Teamleiter Nachname_411
+96765;57556;Herr;FT;Vorname_412;Nachname_412;Finanzberater Trainee;13290;15301;0,90,50;Organisation von Finanzberater Trainee Nachname_412
+80658;63338;Herr;FB;Vorname_413;Nachname_413;Finanzberater;31309;28150;150,54,52;Organisation von Finanzberater Nachname_413
+42036;14756;Herr;BAA;Vorname_414;Nachname_414;Beraterassistent in Ausbildung;13595;18946;0,90,50;Organisation von Beraterassistent in Ausbildung Nachname_414
+58397;58416;Herr;TL;Vorname_415;Nachname_415;Teamleiter;111063;100183;150,54,52;Organisation von Teamleiter Nachname_415
+13254;78351;Herr;FB;Vorname_416;Nachname_416;Finanzberater;41364;45765;0,90,50;Organisation von Finanzberater Nachname_416
+14446;14676;Herr;BAA;Vorname_417;Nachname_417;Beraterassistent in Ausbildung;38636;32958;150,54,52;Organisation von Beraterassistent in Ausbildung Nachname_417
+80326;82489;Herr;BAVM;Vorname_418;Nachname_418;Manager bAV;84382;88370;0,90,50;Organisation von Manager bAV Nachname_418
+84046;15817;Herr;FB;Vorname_419;Nachname_419;Finanzberater;64736;108825;0,90,50;Organisation von Finanzberater Nachname_419
+77010;56798;Herr;TL;Vorname_420;Nachname_420;Teamleiter;293681;233002;150,54,52;Organisation von Teamleiter Nachname_420
+71934;76138;Frau;FB;Vorname_421;Nachname_421;Finanzberater;1314;794;150,54,52;Organisation von Finanzberater Nachname_421
+62539;21722;Frau;TL;Vorname_422;Nachname_422;Teamleiter;2597;471;150,54,52;Organisation von Teamleiter Nachname_422
+51802;20756;Herr;BAVM;Vorname_423;Nachname_423;Manager bAV;97640;35505;150,54,52;Organisation von Manager bAV Nachname_423
+19954;18596;Frau;FB;Vorname_424;Nachname_424;Finanzberater;61533;47951;150,54,52;Organisation von Finanzberater Nachname_424
+95490;95296;Herr;FB;Vorname_425;Nachname_425;Finanzberater;21468;5117;150,54,52;Organisation von Finanzberater Nachname_425
+47182;47335;Frau;FB;Vorname_426;Nachname_426;Finanzberater;55562;46662;150,54,52;Organisation von Finanzberater Nachname_426
+36584;65611;Herr;FB;Vorname_427;Nachname_427;Finanzberater;120655;108178;150,54,52;Organisation von Finanzberater Nachname_427
+62539;62949;Herr;TL;Vorname_428;Nachname_428;Teamleiter;65249;60995;150,54,52;Organisation von Teamleiter Nachname_428
+42121;42187;Herr;MG;Vorname_429;Nachname_429;Manager;144191;137784;150,54,52;Organisation von Manager Nachname_429
+86603;86763;Herr;TM;Vorname_430;Nachname_430;Teammanager;17888;9914;150,54,52;Organisation von Teammanager Nachname_430
+35151;35576;Herr;TM;Vorname_431;Nachname_431;Teammanager;69322;50211;150,54,52;Organisation von Teammanager Nachname_431
+51752;79601;Herr;FB;Vorname_432;Nachname_432;Finanzberater;30586;14254;150,54,52;Organisation von Finanzberater Nachname_432
+73001;71721;Herr;IMM;Vorname_433;Nachname_433;Manager I&K;107990;114619;0,90,50;Organisation von Manager I&K Nachname_433
+86671;86679;Herr;TL;Vorname_434;Nachname_434;Teamleiter;127602;90839;150,54,52;Organisation von Teamleiter Nachname_434
+86679;78307;Herr;FT;Vorname_435;Nachname_435;Finanzberater Trainee;19506;14280;150,54,52;Organisation von Finanzberater Trainee Nachname_435
+72299;40788;Herr;TL;Vorname_436;Nachname_436;Teamleiter;14825;13001;150,54,52;Organisation von Teamleiter Nachname_436
+36584;65646;Herr;TL;Vorname_437;Nachname_437;Teamleiter;77672;60764;150,54,52;Organisation von Teamleiter Nachname_437
+20989;21509;Herr;TL;Vorname_438;Nachname_438;Teamleiter;73243;56315;150,54,52;Organisation von Teamleiter Nachname_438
+11045;11204;Herr;TL;Vorname_439;Nachname_439;Teamleiter;164881;118076;150,54,52;Organisation von Teamleiter Nachname_439
+51802;22356;Herr;TL;Vorname_440;Nachname_440;Teamleiter;47716;33908;150,54,52;Organisation von Teamleiter Nachname_440
+66401;37667;Herr;FB;Vorname_441;Nachname_441;Finanzberater;75851;47894;150,54,52;Organisation von Finanzberater Nachname_441
+45856;36913;Herr;FT;Vorname_442;Nachname_442;Finanzberater Trainee;3708;464;150,54,52;Organisation von Finanzberater Trainee Nachname_442
+93928;94947;Herr;FB;Vorname_443;Nachname_443;Finanzberater;42506;17589;150,54,52;Organisation von Finanzberater Nachname_443
+67415;67455;Herr;FB;Vorname_444;Nachname_444;Finanzberater;58400;60143;0,90,50;Organisation von Finanzberater Nachname_444
+97429;97235;Herr;FB;Vorname_445;Nachname_445;Finanzberater;126336;54079;150,54,52;Organisation von Finanzberater Nachname_445
+56798;56488;Herr;FB;Vorname_446;Nachname_446;Finanzberater;104999;99026;150,54,52;Organisation von Finanzberater Nachname_446
+77010;75636;Herr;FB;Vorname_447;Nachname_447;Finanzberater;76607;34134;150,54,52;Organisation von Finanzberater Nachname_447
+36847;36983;Herr;FT;Vorname_448;Nachname_448;Finanzberater Trainee;473;1774;0,90,50;Organisation von Finanzberater Trainee Nachname_448
+43016;49634;Herr;TL;Vorname_449;Nachname_449;Teamleiter;9189;9576;0,90,50;Organisation von Teamleiter Nachname_449
+42497;47496;Herr;FB;Vorname_450;Nachname_450;Finanzberater;51436;38824;150,54,52;Organisation von Finanzberater Nachname_450
+46796;47307;Frau;FB;Vorname_451;Nachname_451;Finanzberater;61050;42674;150,54,52;Organisation von Finanzberater Nachname_451
+61637;36844;Herr;FB;Vorname_452;Nachname_452;Finanzberater;2605;3321;0,90,50;Organisation von Finanzberater Nachname_452
+60071;60079;Herr;FB;Vorname_453;Nachname_453;Finanzberater;24657;10876;150,54,52;Organisation von Finanzberater Nachname_453
+17364;46208;Herr;FB;Vorname_454;Nachname_454;Finanzberater;66745;43922;150,54,52;Organisation von Finanzberater Nachname_454
+67021;21671;Herr;FB;Vorname_455;Nachname_455;Finanzberater;46402;41447;150,54,52;Organisation von Finanzberater Nachname_455
+73041;69426;Frau;FB;Vorname_456;Nachname_456;Finanzberater;15686;15692;0,90,50;Organisation von Finanzberater Nachname_456
+49049;47123;Herr;FB;Vorname_457;Nachname_457;Finanzberater;75881;43389;150,54,52;Organisation von Finanzberater Nachname_457
+95349;57503;Herr;FB;Vorname_458;Nachname_458;Finanzberater;27259;19560;150,54,52;Organisation von Finanzberater Nachname_458
+45856;22983;Herr;FB;Vorname_459;Nachname_459;Finanzberater;58081;84981;0,90,50;Organisation von Finanzberater Nachname_459
+11045;96706;Herr;FB;Vorname_460;Nachname_460;Finanzberater;51173;51776;0,90,50;Organisation von Finanzberater Nachname_460
+79133;38448;Herr;FB;Vorname_461;Nachname_461;Finanzberater;3156;1753;150,54,52;Organisation von Finanzberater Nachname_461
+42036;16823;Herr;BAVM;Vorname_462;Nachname_462;Manager bAV;140773;103624;150,54,52;Organisation von Manager bAV Nachname_462
+81668;83778;Herr;TL;Vorname_463;Nachname_463;Teamleiter;234205;259515;0,90,50;Organisation von Teamleiter Nachname_463
+81710;96488;Herr;FT;Vorname_464;Nachname_464;Finanzberater Trainee;12638;5577;150,54,52;Organisation von Finanzberater Trainee Nachname_464
+80309;88303;Herr;FIND;Vorname_465;Nachname_465;Finanzierungsdirektor;78390;95186;0,90,50;Organisation von Finanzierungsdirektor Nachname_465
+92164;66230;Herr;FB;Vorname_466;Nachname_466;Finanzberater;135520;136672;0,90,50;Organisation von Finanzberater Nachname_466
+19715;14897;Herr;FB;Vorname_467;Nachname_467;Finanzberater;22442;24220;0,90,50;Organisation von Finanzberater Nachname_467
+75249;75558;Herr;TM;Vorname_468;Nachname_468;Teammanager;526964;394931;150,54,52;Organisation von Teammanager Nachname_468
+81469;79599;Frau;BA;Vorname_469;Nachname_469;Beraterassistent;45621;22017;150,54,52;Organisation von Beraterassistent Nachname_469
+74360;75962;Herr;FB;Vorname_470;Nachname_470;Finanzberater;26359;15043;150,54,52;Organisation von Finanzberater Nachname_470
+98811;67160;Herr;FB;Vorname_471;Nachname_471;Finanzberater;59231;41709;150,54,52;Organisation von Finanzberater Nachname_471
+11204;78209;Herr;FB;Vorname_472;Nachname_472;Finanzberater;47680;41363;150,54,52;Organisation von Finanzberater Nachname_472
+19181;83038;Herr;FINM;Vorname_473;Nachname_473;Finanzierungsmanager;86771;63770;150,54,52;Organisation von Finanzierungsmanager Nachname_473
+66893;14473;Herr;TL;Vorname_474;Nachname_474;Teamleiter;22025;37555;0,90,50;Organisation von Teamleiter Nachname_474
+17583;47043;Herr;FB;Vorname_475;Nachname_475;Finanzberater;61205;70227;0,90,50;Organisation von Finanzberater Nachname_475
+17542;51277;Herr;FB;Vorname_476;Nachname_476;Finanzberater;13410;4052;150,54,52;Organisation von Finanzberater Nachname_476
+42565;46486;Herr;FB;Vorname_477;Nachname_477;Finanzberater;72940;47143;150,54,52;Organisation von Finanzberater Nachname_477
+96247;86321;Frau;FB;Vorname_478;Nachname_478;Finanzberater;44691;38593;150,54,52;Organisation von Finanzberater Nachname_478
+86603;77946;Herr;FT;Vorname_479;Nachname_479;Finanzberater Trainee;5097;2714;150,54,52;Organisation von Finanzberater Trainee Nachname_479
+81622;15074;Herr;FB;Vorname_480;Nachname_480;Finanzberater;9668;4851;150,54,52;Organisation von Finanzberater Nachname_480
+43016;43023;Herr;MG;Vorname_481;Nachname_481;Manager;1332005;958766;150,54,52;Organisation von Manager Nachname_481
+95349;57502;Herr;FB;Vorname_482;Nachname_482;Finanzberater;37131;45425;0,90,50;Organisation von Finanzberater Nachname_482
+99518;14425;Herr;FB;Vorname_483;Nachname_483;Finanzberater;118983;127128;0,90,50;Organisation von Finanzberater Nachname_483
+71934;75961;Herr;TL;Vorname_484;Nachname_484;Teamleiter;137939;136660;150,54,52;Organisation von Teamleiter Nachname_484
+15360;16041;Herr;FB;Vorname_485;Nachname_485;Finanzberater;54329;28908;150,54,52;Organisation von Finanzberater Nachname_485
+79208;52373;Herr;BA;Vorname_486;Nachname_486;Beraterassistent;13326;4302;150,54,52;Organisation von Beraterassistent Nachname_486
+80326;87900;Herr;FB;Vorname_487;Nachname_487;Finanzberater;16148;11600;150,54,52;Organisation von Finanzberater Nachname_487
+21580;20928;Herr;TL;Vorname_488;Nachname_488;Teamleiter;187844;144838;150,54,52;Organisation von Teamleiter Nachname_488
+51802;63061;Herr;FB;Vorname_489;Nachname_489;Finanzberater;79534;52932;150,54,52;Organisation von Finanzberater Nachname_489
+95488;21451;Herr;FB;Vorname_490;Nachname_490;Finanzberater;64912;60243;150,54,52;Organisation von Finanzberater Nachname_490
+79208;79264;Herr;TL;Vorname_491;Nachname_491;Teamleiter;146874;126977;150,54,52;Organisation von Teamleiter Nachname_491
+62584;21656;Herr;FB;Vorname_492;Nachname_492;Finanzberater;139961;66338;150,54,52;Organisation von Finanzberater Nachname_492
+93928;96959;Frau;FB;Vorname_493;Nachname_493;Finanzberater;38469;50613;0,90,50;Organisation von Finanzberater Nachname_493
+35787;35767;Herr;FB;Vorname_494;Nachname_494;Finanzberater;7709;7689;150,54,52;Organisation von Finanzberater Nachname_494
+45414;46569;Herr;TM;Vorname_495;Nachname_495;Teammanager;214273;236233;0,90,50;Organisation von Teammanager Nachname_495
+51449;51227;Frau;FT;Vorname_496;Nachname_496;Finanzberater Trainee;3814;3287;150,54,52;Organisation von Finanzberater Trainee Nachname_496
+62726;62789;Herr;FB;Vorname_497;Nachname_497;Finanzberater;76209;65611;150,54,52;Organisation von Finanzberater Nachname_497
+43827;60832;Herr;TL;Vorname_498;Nachname_498;Teamleiter;30378;2848;150,54,52;Organisation von Teamleiter Nachname_498
+81674;66818;Herr;FB;Vorname_499;Nachname_499;Finanzberater;34926;16889;150,54,52;Organisation von Finanzberater Nachname_499
+17837;50653;Herr;FB;Vorname_500;Nachname_500;Finanzberater;4206;2542;150,54,52;Organisation von Finanzberater Nachname_500
+45845;38401;Herr;FB;Vorname_501;Nachname_501;Finanzberater;82761;58320;150,54,52;Organisation von Finanzberater Nachname_501
+46341;45755;Herr;FB;Vorname_502;Nachname_502;Finanzberater;98546;41110;150,54,52;Organisation von Finanzberater Nachname_502
+35787;37143;Herr;FB;Vorname_503;Nachname_503;Finanzberater;97354;61641;150,54,52;Organisation von Finanzberater Nachname_503
+37116;36693;Herr;FB;Vorname_504;Nachname_504;Finanzberater;59077;26829;150,54,52;Organisation von Finanzberater Nachname_504
+80207;14822;Frau;FB;Vorname_505;Nachname_505;Finanzberater;21933;35655;0,90,50;Organisation von Finanzberater Nachname_505
+77778;95468;Herr;TL;Vorname_506;Nachname_506;Teamleiter;47036;51657;0,90,50;Organisation von Teamleiter Nachname_506
+19715;14429;Herr;FB;Vorname_507;Nachname_507;Finanzberater;26769;33573;0,90,50;Organisation von Finanzberater Nachname_507
+74000;74360;Herr;MG;Vorname_508;Nachname_508;Manager;1246646;847400;150,54,52;Organisation von Manager Nachname_508
+44631;38128;Herr;BA;Vorname_509;Nachname_509;Beraterassistent;24053;20261;150,54,52;Organisation von Beraterassistent Nachname_509
+53650;51027;Herr;FB;Vorname_510;Nachname_510;Finanzberater;10540;6374;150,54,52;Organisation von Finanzberater Nachname_510
+35151;37116;Herr;MG;Vorname_511;Nachname_511;Manager;1524528;1224510;150,54,52;Organisation von Manager Nachname_511
+50677;52457;Herr;FT;Vorname_512;Nachname_512;Finanzberater Trainee;314;1876;0,90,50;Organisation von Finanzberater Trainee Nachname_512
+79159;63878;Frau;FB;Vorname_513;Nachname_513;Finanzberater;38253;28964;150,54,52;Organisation von Finanzberater Nachname_513
+20928;62947;Herr;FB;Vorname_514;Nachname_514;Finanzberater;60859;37319;150,54,52;Organisation von Finanzberater Nachname_514
+42036;49941;Frau;FB;Vorname_515;Nachname_515;Finanzberater;30005;25627;150,54,52;Organisation von Finanzberater Nachname_515
+86603;86797;Herr;TL;Vorname_516;Nachname_516;Teamleiter;117821;48582;150,54,52;Organisation von Teamleiter Nachname_516
+79159;56919;Herr;FB;Vorname_517;Nachname_517;Finanzberater;5663;17239;0,90,50;Organisation von Finanzberater Nachname_517
+14439;14918;Herr;FB;Vorname_518;Nachname_518;Finanzberater;11504;20843;0,90,50;Organisation von Finanzberater Nachname_518
+14599;16475;Frau;BA;Vorname_519;Nachname_519;Beraterassistent;112;371;0,90,50;Organisation von Beraterassistent Nachname_519
+40192;40483;Herr;FB;Vorname_520;Nachname_520;Finanzberater;122127;137848;0,90,50;Organisation von Finanzberater Nachname_520
+51802;62781;Herr;FB;Vorname_521;Nachname_521;Finanzberater;32974;28168;150,54,52;Organisation von Finanzberater Nachname_521
+50422;52412;Frau;BA;Vorname_522;Nachname_522;Beraterassistent;13666;2855;150,54,52;Organisation von Beraterassistent Nachname_522
+83403;93991;Frau;FB;Vorname_523;Nachname_523;Finanzberater;17744;2080;150,54,52;Organisation von Finanzberater Nachname_523
+83401;86226;Herr;TL;Vorname_524;Nachname_524;Teamleiter;75065;36317;150,54,52;Organisation von Teamleiter Nachname_524
+41437;17542;Herr;TM;Vorname_525;Nachname_525;Teammanager;855217;633941;150,54,52;Organisation von Teammanager Nachname_525
+15360;15188;Herr;FINM;Vorname_526;Nachname_526;Finanzierungsmanager;120193;123580;0,90,50;Organisation von Finanzierungsmanager Nachname_526
+96247;90944;Herr;FB;Vorname_527;Nachname_527;Finanzberater;63122;53221;150,54,52;Organisation von Finanzberater Nachname_527
+15105;16092;Herr;TM;Vorname_528;Nachname_528;Teammanager;256442;252796;150,54,52;Organisation von Teammanager Nachname_528
+63399;51102;Herr;FB;Vorname_529;Nachname_529;Finanzberater;3858;3959;0,90,50;Organisation von Finanzberater Nachname_529
+50094;51924;Herr;FT;Vorname_530;Nachname_530;Finanzberater Trainee;4971;4704;150,54,52;Organisation von Finanzberater Trainee Nachname_530
+19715;14978;Herr;FB;Vorname_531;Nachname_531;Finanzberater;39955;18692;150,54,52;Organisation von Finanzberater Nachname_531
+40508;21081;Herr;FB;Vorname_532;Nachname_532;Finanzberater;35102;26951;150,54,52;Organisation von Finanzberater Nachname_532
+92164;65789;Herr;FB;Vorname_533;Nachname_533;Finanzberater;75961;50516;150,54,52;Organisation von Finanzberater Nachname_533
+45363;47955;Herr;BA;Vorname_534;Nachname_534;Beraterassistent;27723;42650;0,90,50;Organisation von Beraterassistent Nachname_534
+43827;65396;Herr;TL;Vorname_535;Nachname_535;Teamleiter;88407;97891;0,90,50;Organisation von Teamleiter Nachname_535
+45845;36930;Herr;TL;Vorname_536;Nachname_536;Teamleiter;76853;145263;0,90,50;Organisation von Teamleiter Nachname_536
+21580;22283;Herr;FB;Vorname_537;Nachname_537;Finanzberater;1510;322;150,54,52;Organisation von Finanzberater Nachname_537
+95529;51939;Herr;BAA;Vorname_538;Nachname_538;Beraterassistent in Ausbildung;2694;1123;150,54,52;Organisation von Beraterassistent in Ausbildung Nachname_538
+81469;52037;Frau;BA;Vorname_539;Nachname_539;Beraterassistent;151;48;150,54,52;Organisation von Beraterassistent Nachname_539
+76558;76629;Herr;FT;Vorname_540;Nachname_540;Finanzberater Trainee;5363;1510;150,54,52;Organisation von Finanzberater Trainee Nachname_540
+45856;36944;Herr;FB;Vorname_541;Nachname_541;Finanzberater;67672;69243;0,90,50;Organisation von Finanzberater Nachname_541
+20814;62915;Herr;FB;Vorname_542;Nachname_542;Finanzberater;30518;11126;150,54,52;Organisation von Finanzberater Nachname_542
+75961;72058;Herr;FB;Vorname_543;Nachname_543;Finanzberater;30323;17646;150,54,52;Organisation von Finanzberater Nachname_543
+51802;51799;Frau;FB;Vorname_544;Nachname_544;Finanzberater;46939;60416;0,90,50;Organisation von Finanzberater Nachname_544
+84046;22072;Herr;FB;Vorname_545;Nachname_545;Finanzberater;25633;10689;150,54,52;Organisation von Finanzberater Nachname_545
+17542;17837;Herr;TL;Vorname_546;Nachname_546;Teamleiter;266129;260265;150,54,52;Organisation von Teamleiter Nachname_546
+43016;42927;Herr;TL;Vorname_547;Nachname_547;Teamleiter;82431;76201;150,54,52;Organisation von Teamleiter Nachname_547
+13315;62421;Frau;BAVD;Vorname_548;Nachname_548;Direktor bAV;190525;148565;150,54,52;Organisation von Direktor bAV Nachname_548
+80309;89173;Herr;FB;Vorname_549;Nachname_549;Finanzberater;14838;11881;150,54,52;Organisation von Finanzberater Nachname_549
+75249;72764;Herr;FB;Vorname_550;Nachname_550;Finanzberater;196359;111070;150,54,52;Organisation von Finanzberater Nachname_550
+60884;16564;Herr;BAA;Vorname_551;Nachname_551;Beraterassistent in Ausbildung;6238;1142;150,54,52;Organisation von Beraterassistent in Ausbildung Nachname_551
+80210;81849;Herr;FB;Vorname_552;Nachname_552;Finanzberater;760196;214075;150,54,52;Organisation von Finanzberater Nachname_552
+45040;95924;Herr;TM;Vorname_553;Nachname_553;Teammanager;428888;311990;150,54,52;Organisation von Teammanager Nachname_553
+64427;14080;Frau;FB;Vorname_554;Nachname_554;Finanzberater;28971;28324;150,54,52;Organisation von Finanzberater Nachname_554
+42036;13839;Herr;TL;Vorname_555;Nachname_555;Teamleiter;13347;46537;0,90,50;Organisation von Teamleiter Nachname_555
+72949;68224;Herr;TL;Vorname_556;Nachname_556;Teamleiter;112871;90966;150,54,52;Organisation von Teamleiter Nachname_556
+13937;14666;Herr;FB;Vorname_557;Nachname_557;Finanzberater;9496;13798;0,90,50;Organisation von Finanzberater Nachname_557
+72299;51529;Herr;TL;Vorname_558;Nachname_558;Teamleiter;28211;18978;150,54,52;Organisation von Teamleiter Nachname_558
+19196;82787;Herr;BA;Vorname_559;Nachname_559;Beraterassistent;322;15;150,54,52;Organisation von Beraterassistent Nachname_559
+81674;79982;Frau;FB;Vorname_560;Nachname_560;Finanzberater;28892;29117;0,90,50;Organisation von Finanzberater Nachname_560
+19954;52162;Herr;FT;Vorname_561;Nachname_561;Finanzberater Trainee;9787;26656;0,90,50;Organisation von Finanzberater Trainee Nachname_561
+41944;42720;Herr;BA;Vorname_562;Nachname_562;Beraterassistent;9298;8406;150,54,52;Organisation von Beraterassistent Nachname_562
+36584;31852;Herr;FB;Vorname_563;Nachname_563;Finanzberater;30957;17837;150,54,52;Organisation von Finanzberater Nachname_563
+40508;52399;Herr;TL;Vorname_564;Nachname_564;Teamleiter;106212;81973;150,54,52;Organisation von Teamleiter Nachname_564
+37027;37035;Frau;FB;Vorname_565;Nachname_565;Finanzberater;4578;1730;150,54,52;Organisation von Finanzberater Nachname_565
+46102;47573;Frau;FB;Vorname_566;Nachname_566;Finanzberater;71158;84920;0,90,50;Organisation von Finanzberater Nachname_566
+41437;46102;Herr;TM;Vorname_567;Nachname_567;Teammanager;288741;184270;150,54,52;Organisation von Teammanager Nachname_567
+80326;79133;Herr;TL;Vorname_568;Nachname_568;Teamleiter;148415;84088;150,54,52;Organisation von Teamleiter Nachname_568
+42121;19954;Herr;TL;Vorname_569;Nachname_569;Teamleiter;325224;297672;150,54,52;Organisation von Teamleiter Nachname_569
+61637;44266;Herr;FB;Vorname_570;Nachname_570;Finanzberater;1495;196;150,54,52;Organisation von Finanzberater Nachname_570
+20347;62922;Herr;TL;Vorname_571;Nachname_571;Teamleiter;167584;166540;150,54,52;Organisation von Teamleiter Nachname_571
+63017;22424;Herr;FT;Vorname_572;Nachname_572;Finanzberater Trainee;29518;11218;150,54,52;Organisation von Finanzberater Trainee Nachname_572
+43827;94263;Herr;TL;Vorname_573;Nachname_573;Teamleiter;89497;66842;150,54,52;Organisation von Teamleiter Nachname_573
+80207;79057;Herr;FB;Vorname_574;Nachname_574;Finanzberater;52461;38967;150,54,52;Organisation von Finanzberater Nachname_574
+51529;51733;Herr;FT;Vorname_575;Nachname_575;Finanzberater Trainee;4148;28;150,54,52;Organisation von Finanzberater Trainee Nachname_575
+20814;62506;Herr;FB;Vorname_576;Nachname_576;Finanzberater;38824;52594;0,90,50;Organisation von Finanzberater Nachname_576
+61818;62050;Frau;FB;Vorname_577;Nachname_577;Finanzberater;47718;35488;150,54,52;Organisation von Finanzberater Nachname_577
+19181;60806;Herr;FB;Vorname_578;Nachname_578;Finanzberater;47051;50227;0,90,50;Organisation von Finanzberater Nachname_578
+38433;13587;Herr;FB;Vorname_579;Nachname_579;Finanzberater;3268;4095;0,90,50;Organisation von Finanzberater Nachname_579
+10854;60717;Frau;FB;Vorname_580;Nachname_580;Finanzberater;44817;33893;150,54,52;Organisation von Finanzberater Nachname_580
+72299;79288;Frau;FB;Vorname_581;Nachname_581;Finanzberater;5099;3353;150,54,52;Organisation von Finanzberater Nachname_581
+21881;22082;Herr;FB;Vorname_582;Nachname_582;Finanzberater;14063;7300;150,54,52;Organisation von Finanzberater Nachname_582
+86603;86793;Herr;FB;Vorname_583;Nachname_583;Finanzberater;174498;110886;150,54,52;Organisation von Finanzberater Nachname_583
+60071;55613;Frau;FB;Vorname_584;Nachname_584;Finanzberater;118446;88468;150,54,52;Organisation von Finanzberater Nachname_584
+12973;96867;Herr;FB;Vorname_585;Nachname_585;Finanzberater;14952;11873;150,54,52;Organisation von Finanzberater Nachname_585
+90415;94076;Herr;FB;Vorname_586;Nachname_586;Finanzberater;66858;52023;150,54,52;Organisation von Finanzberater Nachname_586
+45040;61637;Herr;TM;Vorname_587;Nachname_587;Teammanager;625668;633060;0,90,50;Organisation von Teammanager Nachname_587
+21580;20347;Herr;MG;Vorname_588;Nachname_588;Manager;1002894;802732;150,54,52;Organisation von Manager Nachname_588
+61637;13493;Herr;FB;Vorname_589;Nachname_589;Finanzberater;29370;27426;150,54,52;Organisation von Finanzberater Nachname_589
+14450;14969;Herr;FB;Vorname_590;Nachname_590;Finanzberater;42581;42807;0,90,50;Organisation von Finanzberater Nachname_590
+86696;77906;Herr;TL;Vorname_591;Nachname_591;Teamleiter;57954;52160;150,54,52;Organisation von Teamleiter Nachname_591
+46626;40652;Herr;FB;Vorname_592;Nachname_592;Finanzberater;37232;28755;150,54,52;Organisation von Finanzberater Nachname_592
+83778;57637;Herr;FTVP;Vorname_593;Nachname_593;Finanzberater Trainee Vertriebsprofi;12506;12927;0,90,50;Organisation von Finanzberater Trainee Vertriebsprofi Nachname_593
+86696;86697;Herr;FB;Vorname_594;Nachname_594;Finanzberater;172034;138596;150,54,52;Organisation von Finanzberater Nachname_594
+86603;86610;Herr;FB;Vorname_595;Nachname_595;Finanzberater;44522;38087;150,54,52;Organisation von Finanzberater Nachname_595
+45845;47965;Herr;FT;Vorname_596;Nachname_596;Finanzberater Trainee;2656;3928;0,90,50;Organisation von Finanzberater Trainee Nachname_596
+66893;14835;Herr;TL;Vorname_597;Nachname_597;Teamleiter;9084;6105;150,54,52;Organisation von Teamleiter Nachname_597
+80309;41596;Herr;TL;Vorname_598;Nachname_598;Teamleiter;43910;42919;150,54,52;Organisation von Teamleiter Nachname_598
+62508;63017;Herr;TL;Vorname_599;Nachname_599;Teamleiter;48758;32925;150,54,52;Organisation von Teamleiter Nachname_599
+95120;95195;Herr;FB;Vorname_600;Nachname_600;Finanzberater;66326;55113;150,54,52;Organisation von Finanzberater Nachname_600
+41944;42078;Herr;FB;Vorname_601;Nachname_601;Finanzberater;48009;39712;150,54,52;Organisation von Finanzberater Nachname_601
+77010;57518;Herr;FB;Vorname_602;Nachname_602;Finanzberater;43081;4990;150,54,52;Organisation von Finanzberater Nachname_602
+10854;14186;Herr;FB;Vorname_603;Nachname_603;Finanzberater;4719;4758;0,90,50;Organisation von Finanzberater Nachname_603
+95924;47301;Frau;FB;Vorname_604;Nachname_604;Finanzberater;74065;67448;150,54,52;Organisation von Finanzberater Nachname_604
+17464;50818;Herr;FB;Vorname_605;Nachname_605;Finanzberater;31398;22569;150,54,52;Organisation von Finanzberater Nachname_605
+72949;73468;Herr;FB;Vorname_606;Nachname_606;Finanzberater;29003;15257;150,54,52;Organisation von Finanzberater Nachname_606
+37146;36673;Herr;FB;Vorname_607;Nachname_607;Finanzberater;37804;34178;150,54,52;Organisation von Finanzberater Nachname_607
+86696;77752;Herr;FB;Vorname_608;Nachname_608;Finanzberater;18318;23678;0,90,50;Organisation von Finanzberater Nachname_608
+35151;84148;Herr;FB;Vorname_609;Nachname_609;Finanzberater;143223;99584;150,54,52;Organisation von Finanzberater Nachname_609
+43016;19870;Herr;TL;Vorname_610;Nachname_610;Teamleiter;169892;141968;150,54,52;Organisation von Teamleiter Nachname_610
+19954;39184;Frau;BA;Vorname_611;Nachname_611;Beraterassistent;12123;1660;150,54,52;Organisation von Beraterassistent Nachname_611
+96991;81805;Herr;FB;Vorname_612;Nachname_612;Finanzberater;33852;30890;150,54,52;Organisation von Finanzberater Nachname_612
+20935;27450;Herr;FB;Vorname_613;Nachname_613;Finanzberater;253090;241038;150,54,52;Organisation von Finanzberater Nachname_613
+43016;42036;Herr;MG;Vorname_614;Nachname_614;Manager;961475;792291;150,54,52;Organisation von Manager Nachname_614
+42121;17017;Herr;FB;Vorname_615;Nachname_615;Finanzberater;81951;56801;150,54,52;Organisation von Finanzberater Nachname_615
+56383;51052;Herr;TL;Vorname_616;Nachname_616;Teamleiter;50447;56480;0,90,50;Organisation von Teamleiter Nachname_616
+73041;74504;Herr;BA;Vorname_617;Nachname_617;Beraterassistent;22848;8552;150,54,52;Organisation von Beraterassistent Nachname_617
+43898;43885;Herr;FB;Vorname_618;Nachname_618;Finanzberater;53159;46846;150,54,52;Organisation von Finanzberater Nachname_618
+17583;47609;Herr;FB;Vorname_619;Nachname_619;Finanzberater;57641;42024;150,54,52;Organisation von Finanzberater Nachname_619
+10854;14785;Herr;BA;Vorname_620;Nachname_620;Beraterassistent;251;7;150,54,52;Organisation von Beraterassistent Nachname_620
+37146;31811;Herr;FT;Vorname_621;Nachname_621;Finanzberater Trainee;5672;2929;150,54,52;Organisation von Finanzberater Trainee Nachname_621
+42058;19829;Herr;FB;Vorname_622;Nachname_622;Finanzberater;1224;1684;0,90,50;Organisation von Finanzberater Nachname_622
+83468;56873;Herr;FB;Vorname_623;Nachname_623;Finanzberater;4197;7373;0,90,50;Organisation von Finanzberater Nachname_623
+94041;16494;Frau;FT;Vorname_624;Nachname_624;Finanzberater Trainee;401;182;150,54,52;Organisation von Finanzberater Trainee Nachname_624
+79992;51771;Herr;FB;Vorname_625;Nachname_625;Finanzberater;72024;73626;0,90,50;Organisation von Finanzberater Nachname_625
+11045;12934;Herr;FB;Vorname_626;Nachname_626;Finanzberater;17077;10766;150,54,52;Organisation von Finanzberater Nachname_626
+95529;98388;Herr;TM;Vorname_627;Nachname_627;Teammanager;306391;336864;0,90,50;Organisation von Teammanager Nachname_627
+18898;60894;Herr;FT;Vorname_628;Nachname_628;Finanzberater Trainee;4327;4000;150,54,52;Organisation von Finanzberater Trainee Nachname_628
+21580;62584;Herr;MG;Vorname_629;Nachname_629;Manager;972768;654687;150,54,52;Organisation von Manager Nachname_629
+96439;83474;Herr;FB;Vorname_630;Nachname_630;Finanzberater;55225;52307;150,54,52;Organisation von Finanzberater Nachname_630
+42121;18544;Herr;FB;Vorname_631;Nachname_631;Finanzberater;2192;2555;0,90,50;Organisation von Finanzberater Nachname_631
+79252;52593;Herr;FB;Vorname_632;Nachname_632;Finanzberater;13701;10867;150,54,52;Organisation von Finanzberater Nachname_632
+63051;21701;Herr;TL;Vorname_633;Nachname_633;Teamleiter;107268;29799;150,54,52;Organisation von Teamleiter Nachname_633
+52399;52378;Herr;FB;Vorname_634;Nachname_634;Finanzberater;11869;4091;150,54,52;Organisation von Finanzberater Nachname_634
+36733;31861;Herr;BA;Vorname_635;Nachname_635;Beraterassistent;512;128;150,54,52;Organisation von Beraterassistent Nachname_635
+14450;14833;Herr;FT;Vorname_636;Nachname_636;Finanzberater Trainee;18586;4474;150,54,52;Organisation von Finanzberater Trainee Nachname_636
+90219;90214;Herr;FB;Vorname_637;Nachname_637;Finanzberater;61046;56669;150,54,52;Organisation von Finanzberater Nachname_637
+43827;19181;Herr;TM;Vorname_638;Nachname_638;Teammanager;311156;222941;150,54,52;Organisation von Teammanager Nachname_638
+37116;35971;Herr;FB;Vorname_639;Nachname_639;Finanzberater;62944;63481;0,90,50;Organisation von Finanzberater Nachname_639
+83401;85748;Herr;FB;Vorname_640;Nachname_640;Finanzberater;46122;24881;150,54,52;Organisation von Finanzberater Nachname_640
+78361;78363;Herr;FB;Vorname_641;Nachname_641;Finanzberater;75699;31410;150,54,52;Organisation von Finanzberater Nachname_641
+56383;50787;Herr;FB;Vorname_642;Nachname_642;Finanzberater;62520;68181;0,90,50;Organisation von Finanzberater Nachname_642
+86603;86645;Frau;TL;Vorname_643;Nachname_643;Teamleiter;43421;45082;0,90,50;Organisation von Teamleiter Nachname_643
+14066;14206;Frau;FB;Vorname_644;Nachname_644;Finanzberater;4185;23383;0,90,50;Organisation von Finanzberater Nachname_644
+58398;58442;Herr;BA;Vorname_645;Nachname_645;Beraterassistent;7041;3676;150,54,52;Organisation von Beraterassistent Nachname_645
+74000;74452;Herr;MG;Vorname_646;Nachname_646;Manager;2097186;1127923;150,54,52;Organisation von Manager Nachname_646
+96247;63317;Herr;FB;Vorname_647;Nachname_647;Finanzberater;16980;8901;150,54,52;Organisation von Finanzberater Nachname_647
+61364;44131;Herr;FB;Vorname_648;Nachname_648;Finanzberater;33854;34484;0,90,50;Organisation von Finanzberater Nachname_648
+11204;91468;Herr;FB;Vorname_649;Nachname_649;Finanzberater;46485;29395;150,54,52;Organisation von Finanzberater Nachname_649
+20989;51821;Herr;MG;Vorname_650;Nachname_650;Manager;372401;279093;150,54,52;Organisation von Manager Nachname_650
+63051;21474;Herr;FB;Vorname_651;Nachname_651;Finanzberater;4723;1943;150,54,52;Organisation von Finanzberater Nachname_651
+35151;35036;Herr;TM;Vorname_652;Nachname_652;Teammanager;80381;43993;150,54,52;Organisation von Teammanager Nachname_652
+37484;30371;Herr;FB;Vorname_653;Nachname_653;Finanzberater;36699;48608;0,90,50;Organisation von Finanzberater Nachname_653
+45856;36980;Herr;FB;Vorname_654;Nachname_654;Finanzberater;11051;16503;0,90,50;Organisation von Finanzberater Nachname_654
+40508;52606;Herr;FT;Vorname_655;Nachname_655;Finanzberater Trainee;1877;35;150,54,52;Organisation von Finanzberater Trainee Nachname_655
+15105;16057;Herr;BAVM;Vorname_656;Nachname_656;Manager bAV;62977;60489;150,54,52;Organisation von Manager bAV Nachname_656
+74707;75979;Herr;FB;Vorname_657;Nachname_657;Finanzberater;26632;11551;150,54,52;Organisation von Finanzberater Nachname_657
+65340;14845;Herr;TL;Vorname_658;Nachname_658;Teamleiter;31455;46504;0,90,50;Organisation von Teamleiter Nachname_658
+92164;85468;Herr;FB;Vorname_659;Nachname_659;Finanzberater;80504;46106;150,54,52;Organisation von Finanzberater Nachname_659
+17542;51894;Frau;FB;Vorname_660;Nachname_660;Finanzberater;13466;5021;150,54,52;Organisation von Finanzberater Nachname_660
+96092;57386;Herr;FB;Vorname_661;Nachname_661;Finanzberater;16209;3173;150,54,52;Organisation von Finanzberater Nachname_661
+51156;16868;Frau;BA;Vorname_662;Nachname_662;Beraterassistent;22162;12577;150,54,52;Organisation von Beraterassistent Nachname_662
+86522;77758;Frau;FB;Vorname_663;Nachname_663;Finanzberater;45978;54811;0,90,50;Organisation von Finanzberater Nachname_663
+15940;22377;Herr;FT;Vorname_664;Nachname_664;Finanzberater Trainee;48649;31850;150,54,52;Organisation von Finanzberater Trainee Nachname_664
+65850;78973;Herr;FTVP;Vorname_665;Nachname_665;Finanzberater Trainee Vertriebsprofi;142;498;0,90,50;Organisation von Finanzberater Trainee Vertriebsprofi Nachname_665
+88455;95739;Herr;FB;Vorname_666;Nachname_666;Finanzberater;21351;11517;150,54,52;Organisation von Finanzberater Nachname_666
+81674;67182;Herr;FB;Vorname_667;Nachname_667;Finanzberater;236777;186298;150,54,52;Organisation von Finanzberater Nachname_667
+96439;14904;Herr;BA;Vorname_668;Nachname_668;Beraterassistent;1716;323;150,54,52;Organisation von Beraterassistent Nachname_668
+96092;56918;Herr;FB;Vorname_669;Nachname_669;Finanzberater;17692;6369;150,54,52;Organisation von Finanzberater Nachname_669
+74165;69168;Herr;FB;Vorname_670;Nachname_670;Finanzberater;62205;42351;150,54,52;Organisation von Finanzberater Nachname_670
+62532;22008;Herr;FB;Vorname_671;Nachname_671;Finanzberater;163334;51868;150,54,52;Organisation von Finanzberater Nachname_671
+11045;78311;Herr;TL;Vorname_672;Nachname_672;Teamleiter;35649;12549;150,54,52;Organisation von Teamleiter Nachname_672
+21580;20935;Frau;TL;Vorname_673;Nachname_673;Teamleiter;254433;243068;150,54,52;Organisation von Teamleiter Nachname_673
+56798;57512;Frau;FB;Vorname_674;Nachname_674;Finanzberater;39482;43871;0,90,50;Organisation von Finanzberater Nachname_674
+42058;41130;Herr;FB;Vorname_675;Nachname_675;Finanzberater;1582;4020;0,90,50;Organisation von Finanzberater Nachname_675
+42036;16832;Herr;TL;Vorname_676;Nachname_676;Teamleiter;61482;31696;150,54,52;Organisation von Teamleiter Nachname_676
+79381;79364;Frau;FB;Vorname_677;Nachname_677;Finanzberater;32686;27166;150,54,52;Organisation von Finanzberater Nachname_677
+36742;31882;Herr;FT;Vorname_678;Nachname_678;Finanzberater Trainee;15906;20429;0,90,50;Organisation von Finanzberater Trainee Nachname_678
+81710;57638;Herr;FT;Vorname_679;Nachname_679;Finanzberater Trainee;1736;217;150,54,52;Organisation von Finanzberater Trainee Nachname_679
+81710;57625;Herr;FT;Vorname_680;Nachname_680;Finanzberater Trainee;16953;13144;150,54,52;Organisation von Finanzberater Trainee Nachname_680
+18162;19256;Herr;FB;Vorname_681;Nachname_681;Finanzberater;61048;39686;150,54,52;Organisation von Finanzberater Nachname_681
+1081;31183;Herr;FIND;Vorname_682;Nachname_682;Finanzierungsdirektor;185646;124258;150,54,52;Organisation von Finanzierungsdirektor Nachname_682
+92164;97429;Herr;TM;Vorname_683;Nachname_683;Teammanager;138976;106283;150,54,52;Organisation von Teammanager Nachname_683
+20347;22276;Frau;FB;Vorname_684;Nachname_684;Finanzberater;44184;33092;150,54,52;Organisation von Finanzberater Nachname_684
+95349;55889;Herr;FB;Vorname_685;Nachname_685;Finanzberater;69529;66462;150,54,52;Organisation von Finanzberater Nachname_685
+48095;48509;Herr;FB;Vorname_686;Nachname_686;Finanzberater;50532;33053;150,54,52;Organisation von Finanzberater Nachname_686
+93928;68315;Frau;TL;Vorname_687;Nachname_687;Teamleiter;40131;33900;150,54,52;Organisation von Teamleiter Nachname_687
+41230;52442;Herr;BA;Vorname_688;Nachname_688;Beraterassistent;8296;15710;0,90,50;Organisation von Beraterassistent Nachname_688
+11045;65532;Herr;FB;Vorname_689;Nachname_689;Finanzberater;26198;3307;150,54,52;Organisation von Finanzberater Nachname_689
+50439;54007;Frau;FB;Vorname_690;Nachname_690;Finanzberater;83052;47994;150,54,52;Organisation von Finanzberater Nachname_690
+68224;52532;Herr;FT;Vorname_691;Nachname_691;Finanzberater Trainee;2608;656;150,54,52;Organisation von Finanzberater Trainee Nachname_691
+77010;50439;Frau;TL;Vorname_692;Nachname_692;Teamleiter;189808;120427;150,54,52;Organisation von Teamleiter Nachname_692
+49543;19719;Herr;FB;Vorname_693;Nachname_693;Finanzberater;31752;30438;150,54,52;Organisation von Finanzberater Nachname_693
+80210;65724;Herr;FB;Vorname_694;Nachname_694;Finanzberater;3127;3306;0,90,50;Organisation von Finanzberater Nachname_694
+96247;63377;Herr;TL;Vorname_695;Nachname_695;Teamleiter;214598;112074;150,54,52;Organisation von Teamleiter Nachname_695
+46180;47062;Herr;FB;Vorname_696;Nachname_696;Finanzberater;42382;28060;150,54,52;Organisation von Finanzberater Nachname_696
+80326;79472;Herr;TM;Vorname_697;Nachname_697;Teammanager;221319;136915;150,54,52;Organisation von Teammanager Nachname_697
+45040;40870;Herr;DR;Vorname_698;Nachname_698;Direktor;556964;477682;150,54,52;Organisation von Direktor Nachname_698
+95529;51119;Herr;FB;Vorname_699;Nachname_699;Finanzberater;64503;45977;150,54,52;Organisation von Finanzberater Nachname_699
+48596;48714;Herr;FB;Vorname_700;Nachname_700;Finanzberater;26292;25645;150,54,52;Organisation von Finanzberater Nachname_700
+19870;40234;Herr;FB;Vorname_701;Nachname_701;Finanzberater;90417;84775;150,54,52;Organisation von Finanzberater Nachname_701
+68315;65928;Frau;FB;Vorname_702;Nachname_702;Finanzberater;39312;33149;150,54,52;Organisation von Finanzberater Nachname_702
+96430;14903;Herr;BA;Vorname_703;Nachname_703;Beraterassistent;3774;2504;150,54,52;Organisation von Beraterassistent Nachname_703
+79133;83979;Herr;FB;Vorname_704;Nachname_704;Finanzberater;119191;104787;150,54,52;Organisation von Finanzberater Nachname_704
+10710;14269;Herr;FB;Vorname_705;Nachname_705;Finanzberater;19540;10207;150,54,52;Organisation von Finanzberater Nachname_705
+20814;21667;Frau;FB;Vorname_706;Nachname_706;Finanzberater;147947;100454;150,54,52;Organisation von Finanzberater Nachname_706
+11045;96723;Herr;FB;Vorname_707;Nachname_707;Finanzberater;6046;797;150,54,52;Organisation von Finanzberater Nachname_707
+65268;78297;Herr;FB;Vorname_708;Nachname_708;Finanzberater;34829;20662;150,54,52;Organisation von Finanzberater Nachname_708
+14066;85764;Herr;FB;Vorname_709;Nachname_709;Finanzberater;16760;14678;150,54,52;Organisation von Finanzberater Nachname_709
+43023;18710;Herr;FB;Vorname_710;Nachname_710;Finanzberater;636256;316886;150,54,52;Organisation von Finanzberater Nachname_710
+13315;61818;Herr;TL;Vorname_711;Nachname_711;Teamleiter;233895;217731;150,54,52;Organisation von Teamleiter Nachname_711
+68241;50868;Herr;FB;Vorname_712;Nachname_712;Finanzberater;51589;44440;150,54,52;Organisation von Finanzberater Nachname_712
+37116;36541;Herr;TL;Vorname_713;Nachname_713;Teamleiter;105790;83973;150,54,52;Organisation von Teamleiter Nachname_713
+49612;43008;Herr;FB;Vorname_714;Nachname_714;Finanzberater;22279;15334;150,54,52;Organisation von Finanzberater Nachname_714
+40319;19880;Herr;FB;Vorname_715;Nachname_715;Finanzberater;122305;112852;150,54,52;Organisation von Finanzberater Nachname_715
+97868;71471;Herr;FB;Vorname_716;Nachname_716;Finanzberater;288;15;150,54,52;Organisation von Finanzberater Nachname_716
+85757;14782;Herr;FT;Vorname_717;Nachname_717;Finanzberater Trainee;20852;10264;150,54,52;Organisation von Finanzberater Trainee Nachname_717
+83403;14349;Herr;TL;Vorname_718;Nachname_718;Teamleiter;69402;75980;0,90,50;Organisation von Teamleiter Nachname_718
+35603;36684;Herr;FB;Vorname_719;Nachname_719;Finanzberater;39367;27687;150,54,52;Organisation von Finanzberater Nachname_719
+42565;17635;Herr;FB;Vorname_720;Nachname_720;Finanzberater;19;56;0,90,50;Organisation von Finanzberater Nachname_720
+68241;51998;Herr;FB;Vorname_721;Nachname_721;Finanzberater;47761;33731;150,54,52;Organisation von Finanzberater Nachname_721
+75249;70045;Herr;FINM;Vorname_722;Nachname_722;Finanzierungsmanager;57070;35883;150,54,52;Organisation von Finanzierungsmanager Nachname_722
+45856;37000;Frau;FTVP;Vorname_723;Nachname_723;Finanzberater Trainee Vertriebsprofi;0;5193;0,90,50;Organisation von Finanzberater Trainee Vertriebsprofi Nachname_723
+51117;52670;Frau;FT;Vorname_724;Nachname_724;Finanzberater Trainee;11648;7075;150,54,52;Organisation von Finanzberater Trainee Nachname_724
+51867;22396;Herr;FT;Vorname_725;Nachname_725;Finanzberater Trainee;31852;13621;150,54,52;Organisation von Finanzberater Trainee Nachname_725
+62584;51867;Herr;TL;Vorname_726;Nachname_726;Teamleiter;129023;105046;150,54,52;Organisation von Teamleiter Nachname_726
+89663;38505;Herr;FB;Vorname_727;Nachname_727;Finanzberater;9968;581;150,54,52;Organisation von Finanzberater Nachname_727
+36392;64285;Herr;FB;Vorname_728;Nachname_728;Finanzberater;39299;27091;150,54,52;Organisation von Finanzberater Nachname_728
+45845;45856;Herr;TM;Vorname_729;Nachname_729;Teammanager;537992;884384;0,90,50;Organisation von Teammanager Nachname_729
+45040;45845;Herr;MG;Vorname_730;Nachname_730;Manager;484077;712631;0,90,50;Organisation von Manager Nachname_730
+42565;17846;Herr;FB;Vorname_731;Nachname_731;Finanzberater;49188;43101;150,54,52;Organisation von Finanzberater Nachname_731
+83403;14539;Herr;TL;Vorname_732;Nachname_732;Teamleiter;98670;88358;150,54,52;Organisation von Teamleiter Nachname_732
+36651;31877;Herr;FB;Vorname_733;Nachname_733;Finanzberater;35205;35322;0,90,50;Organisation von Finanzberater Nachname_733
+56445;13844;Herr;FB;Vorname_734;Nachname_734;Finanzberater;35277;24473;150,54,52;Organisation von Finanzberater Nachname_734
+69138;76584;Herr;FB;Vorname_735;Nachname_735;Finanzberater;7127;2816;150,54,52;Organisation von Finanzberater Nachname_735
+62368;47452;Frau;FB;Vorname_736;Nachname_736;Finanzberater;38181;32995;150,54,52;Organisation von Finanzberater Nachname_736
+62597;62945;Herr;FB;Vorname_737;Nachname_737;Finanzberater;174;1837;0,90,50;Organisation von Finanzberater Nachname_737
+83273;16571;Herr;FTVP;Vorname_738;Nachname_738;Finanzberater Trainee Vertriebsprofi;309;1499;0,90,50;Organisation von Finanzberater Trainee Vertriebsprofi Nachname_738
+42475;13805;Herr;FB;Vorname_739;Nachname_739;Finanzberater;36054;14009;150,54,52;Organisation von Finanzberater Nachname_739
+62308;14950;Herr;FB;Vorname_740;Nachname_740;Finanzberater;5794;11071;0,90,50;Organisation von Finanzberater Nachname_740
+40870;40931;Herr;TL;Vorname_741;Nachname_741;Teamleiter;111952;114247;0,90,50;Organisation von Teamleiter Nachname_741
+61637;36851;Herr;TL;Vorname_742;Nachname_742;Teamleiter;55321;23828;150,54,52;Organisation von Teamleiter Nachname_742
+80309;43827;Herr;MG;Vorname_743;Nachname_743;Manager;2689020;1855903;150,54,52;Organisation von Manager Nachname_743
+43827;43241;Herr;BAVM;Vorname_744;Nachname_744;Manager bAV;111773;83842;150,54,52;Organisation von Manager bAV Nachname_744
+80326;79559;Herr;TL;Vorname_745;Nachname_745;Teamleiter;46593;64025;0,90,50;Organisation von Teamleiter Nachname_745
+37146;32077;Herr;FINM;Vorname_746;Nachname_746;Finanzierungsmanager;78021;65558;150,54,52;Organisation von Finanzierungsmanager Nachname_746
+81712;57395;Herr;FB;Vorname_747;Nachname_747;Finanzberater;28576;36150;0,90,50;Organisation von Finanzberater Nachname_747
+86226;16543;Herr;FTVP;Vorname_748;Nachname_748;Finanzberater Trainee Vertriebsprofi;139;183;0,90,50;Organisation von Finanzberater Trainee Vertriebsprofi Nachname_748
+13315;14775;Herr;TL;Vorname_749;Nachname_749;Teamleiter;41526;26959;150,54,52;Organisation von Teamleiter Nachname_749
+42121;41437;Herr;MG;Vorname_750;Nachname_750;Manager;2383728;1928572;150,54,52;Organisation von Manager Nachname_750
+81674;66816;Herr;FB;Vorname_751;Nachname_751;Finanzberater;22351;5445;150,54,52;Organisation von Finanzberater Nachname_751
+93219;93215;Herr;FB;Vorname_752;Nachname_752;Finanzberater;123716;92439;150,54,52;Organisation von Finanzberater Nachname_752
+53650;52210;Herr;FB;Vorname_753;Nachname_753;Finanzberater;5732;1702;150,54,52;Organisation von Finanzberater Nachname_753
+96092;57404;Herr;FT;Vorname_754;Nachname_754;Finanzberater Trainee;7042;4605;150,54,52;Organisation von Finanzberater Trainee Nachname_754
+98388;52654;Herr;BAA;Vorname_755;Nachname_755;Beraterassistent in Ausbildung;507;388;150,54,52;Organisation von Beraterassistent in Ausbildung Nachname_755
+69137;76583;Frau;BAA;Vorname_756;Nachname_756;Beraterassistent in Ausbildung;5169;2887;150,54,52;Organisation von Beraterassistent in Ausbildung Nachname_756
+93786;57558;Herr;FB;Vorname_757;Nachname_757;Finanzberater;10649;13154;0,90,50;Organisation von Finanzberater Nachname_757
+67021;20932;Frau;FT;Vorname_758;Nachname_758;Finanzberater Trainee;61;21;150,54,52;Organisation von Finanzberater Trainee Nachname_758
+95924;47311;Herr;TL;Vorname_759;Nachname_759;Teamleiter;103513;55747;150,54,52;Organisation von Teamleiter Nachname_759
+41437;17886;Herr;FB;Vorname_760;Nachname_760;Finanzberater;65135;93118;0,90,50;Organisation von Finanzberater Nachname_760
+88455;79500;Herr;TL;Vorname_761;Nachname_761;Teamleiter;111726;158196;0,90,50;Organisation von Teamleiter Nachname_761
+55898;58481;Herr;FB;Vorname_762;Nachname_762;Finanzberater;99163;77157;150,54,52;Organisation von Finanzberater Nachname_762
+46102;47182;Herr;TL;Vorname_763;Nachname_763;Teamleiter;123274;91929;150,54,52;Organisation von Teamleiter Nachname_763
+44199;45539;Herr;FB;Vorname_764;Nachname_764;Finanzberater;27849;20332;150,54,52;Organisation von Finanzberater Nachname_764
+81668;83468;Herr;TM;Vorname_765;Nachname_765;Teammanager;742346;482330;150,54,52;Organisation von Teammanager Nachname_765
+17837;46374;Frau;FB;Vorname_766;Nachname_766;Finanzberater;59986;41108;150,54,52;Organisation von Finanzberater Nachname_766
+30332;36662;Herr;FB;Vorname_767;Nachname_767;Finanzberater;38765;31923;150,54,52;Organisation von Finanzberater Nachname_767
+63017;22431;Frau;BA;Vorname_768;Nachname_768;Beraterassistent;1657;622;150,54,52;Organisation von Beraterassistent Nachname_768
+62539;62709;Herr;FB;Vorname_769;Nachname_769;Finanzberater;150789;145156;150,54,52;Organisation von Finanzberater Nachname_769
+79159;57283;Frau;FB;Vorname_770;Nachname_770;Finanzberater;43761;39670;150,54,52;Organisation von Finanzberater Nachname_770
+20862;21616;Herr;FB;Vorname_771;Nachname_771;Finanzberater;54124;47379;150,54,52;Organisation von Finanzberater Nachname_771
+36772;31789;Frau;FB;Vorname_772;Nachname_772;Finanzberater;53074;51073;150,54,52;Organisation von Finanzberater Nachname_772
+79252;40508;Herr;TM;Vorname_773;Nachname_773;Teammanager;281545;134831;150,54,52;Organisation von Teammanager Nachname_773
+15762;17057;Herr;BAA;Vorname_774;Nachname_774;Beraterassistent in Ausbildung;414;413;150,54,52;Organisation von Beraterassistent in Ausbildung Nachname_774
+46341;45754;Herr;FB;Vorname_775;Nachname_775;Finanzberater;48080;31036;150,54,52;Organisation von Finanzberater Nachname_775
+70159;70442;Herr;TL;Vorname_776;Nachname_776;Teamleiter;160487;62168;150,54,52;Organisation von Teamleiter Nachname_776
+62539;22007;Herr;TL;Vorname_777;Nachname_777;Teamleiter;105726;85237;150,54,52;Organisation von Teamleiter Nachname_777
+50677;51879;Herr;FB;Vorname_778;Nachname_778;Finanzberater;45124;30280;150,54,52;Organisation von Finanzberater Nachname_778
+68241;40778;Herr;TL;Vorname_779;Nachname_779;Teamleiter;25749;41257;0,90,50;Organisation von Teamleiter Nachname_779
+36742;31876;Herr;FT;Vorname_780;Nachname_780;Finanzberater Trainee;16615;19926;0,90,50;Organisation von Finanzberater Trainee Nachname_780
+86671;86677;Herr;FB;Vorname_781;Nachname_781;Finanzberater;68171;51881;150,54,52;Organisation von Finanzberater Nachname_781
+11045;65543;Herr;TL;Vorname_782;Nachname_782;Teamleiter;48415;32736;150,54,52;Organisation von Teamleiter Nachname_782
+81674;67168;Herr;FB;Vorname_783;Nachname_783;Finanzberater;34210;30401;150,54,52;Organisation von Finanzberater Nachname_783
+62232;62696;Herr;FB;Vorname_784;Nachname_784;Finanzberater;238670;220559;150,54,52;Organisation von Finanzberater Nachname_784
+90622;79073;Frau;TL;Vorname_785;Nachname_785;Teamleiter;196291;134052;150,54,52;Organisation von Teamleiter Nachname_785
+80668;81227;Frau;FB;Vorname_786;Nachname_786;Finanzberater;36410;27379;150,54,52;Organisation von Finanzberater Nachname_786
+14446;15776;Herr;BA;Vorname_787;Nachname_787;Beraterassistent;7552;1017;150,54,52;Organisation von Beraterassistent Nachname_787
+90190;98838;Herr;FB;Vorname_788;Nachname_788;Finanzberater;72024;42520;150,54,52;Organisation von Finanzberater Nachname_788
+62584;21539;Herr;FB;Vorname_789;Nachname_789;Finanzberater;68554;48257;150,54,52;Organisation von Finanzberater Nachname_789
+13400;84681;Herr;TM;Vorname_790;Nachname_790;Teammanager;453862;438309;150,54,52;Organisation von Teammanager Nachname_790
+15105;84046;Herr;TM;Vorname_791;Nachname_791;Teammanager;240419;202333;150,54,52;Organisation von Teammanager Nachname_791
+99514;14841;Herr;FB;Vorname_792;Nachname_792;Finanzberater;6459;24;150,54,52;Organisation von Finanzberater Nachname_792
+79287;52610;Herr;BAA;Vorname_793;Nachname_793;Beraterassistent in Ausbildung;1137;1972;0,90,50;Organisation von Beraterassistent in Ausbildung Nachname_793
+95434;79607;Frau;BA;Vorname_794;Nachname_794;Beraterassistent;1990;511;150,54,52;Organisation von Beraterassistent Nachname_794
+10854;14089;Herr;FB;Vorname_795;Nachname_795;Finanzberater;72219;38716;150,54,52;Organisation von Finanzberater Nachname_795
+80326;79824;Herr;FB;Vorname_796;Nachname_796;Finanzberater;30564;28384;150,54,52;Organisation von Finanzberater Nachname_796
+73001;60410;Herr;FB;Vorname_797;Nachname_797;Finanzberater;71921;33116;150,54,52;Organisation von Finanzberater Nachname_797
+86681;78349;Herr;TL;Vorname_798;Nachname_798;Teamleiter;91978;49316;150,54,52;Organisation von Teamleiter Nachname_798
+83831;79087;Frau;FB;Vorname_799;Nachname_799;Finanzberater;478;40;150,54,52;Organisation von Finanzberater Nachname_799
+79264;50709;Herr;FB;Vorname_800;Nachname_800;Finanzberater;81564;61625;150,54,52;Organisation von Finanzberater Nachname_800
+37116;36744;Herr;TL;Vorname_801;Nachname_801;Teamleiter;232146;129223;150,54,52;Organisation von Teamleiter Nachname_801
+13937;14652;Herr;FB;Vorname_802;Nachname_802;Finanzberater;18503;11295;150,54,52;Organisation von Finanzberater Nachname_802
+74452;79381;Herr;TL;Vorname_803;Nachname_803;Teamleiter;149548;133837;150,54,52;Organisation von Teamleiter Nachname_803
+30332;31816;Herr;FT;Vorname_804;Nachname_804;Finanzberater Trainee;43097;18221;150,54,52;Organisation von Finanzberater Trainee Nachname_804
+20848;22041;Herr;FT;Vorname_805;Nachname_805;Finanzberater Trainee;2145;12317;0,90,50;Organisation von Finanzberater Trainee Nachname_805
+83401;94581;Herr;FB;Vorname_806;Nachname_806;Finanzberater;1860;488;150,54,52;Organisation von Finanzberater Nachname_806
+36584;30779;Herr;FB;Vorname_807;Nachname_807;Finanzberater;13268;11726;150,54,52;Organisation von Finanzberater Nachname_807
+63399;94126;Herr;FB;Vorname_808;Nachname_808;Finanzberater;138261;110929;150,54,52;Organisation von Finanzberater Nachname_808
+86603;16834;Herr;TM;Vorname_809;Nachname_809;Teammanager;104839;74916;150,54,52;Organisation von Teammanager Nachname_809
+45937;46770;Herr;TL;Vorname_810;Nachname_810;Teamleiter;113013;88928;150,54,52;Organisation von Teamleiter Nachname_810
+81674;79615;Frau;FT;Vorname_811;Nachname_811;Finanzberater Trainee;27538;19945;150,54,52;Organisation von Finanzberater Trainee Nachname_811
+80210;81674;Herr;MG;Vorname_812;Nachname_812;Manager;1899282;1298935;150,54,52;Organisation von Manager Nachname_812
+79252;51712;Herr;TL;Vorname_813;Nachname_813;Teamleiter;88943;67231;150,54,52;Organisation von Teamleiter Nachname_813
+86603;86638;Herr;FB;Vorname_814;Nachname_814;Finanzberater;40578;59630;0,90,50;Organisation von Finanzberater Nachname_814
+81712;57406;Herr;FB;Vorname_815;Nachname_815;Finanzberater;48814;45679;150,54,52;Organisation von Finanzberater Nachname_815
+60884;14846;Herr;FB;Vorname_816;Nachname_816;Finanzberater;93861;82402;150,54,52;Organisation von Finanzberater Nachname_816
+37027;60167;Herr;TL;Vorname_817;Nachname_817;Teamleiter;23045;10893;150,54,52;Organisation von Teamleiter Nachname_817
+94751;14876;Frau;TL;Vorname_818;Nachname_818;Teamleiter;57286;145244;0,90,50;Organisation von Teamleiter Nachname_818
+66823;94751;Herr;TM;Vorname_819;Nachname_819;Teammanager;186976;301516;0,90,50;Organisation von Teammanager Nachname_819
+81668;80661;Herr;BAVM;Vorname_820;Nachname_820;Manager bAV;97676;89607;150,54,52;Organisation von Manager bAV Nachname_820
+50677;52180;Herr;FB;Vorname_821;Nachname_821;Finanzberater;39584;49766;0,90,50;Organisation von Finanzberater Nachname_821
+40571;52530;Herr;FT;Vorname_822;Nachname_822;Finanzberater Trainee;6653;4380;150,54,52;Organisation von Finanzberater Trainee Nachname_822
+20347;62505;Herr;FB;Vorname_823;Nachname_823;Finanzberater;40930;43103;0,90,50;Organisation von Finanzberater Nachname_823
+62597;62954;Herr;FB;Vorname_824;Nachname_824;Finanzberater;79403;65403;150,54,52;Organisation von Finanzberater Nachname_824
+45856;36899;Herr;TL;Vorname_825;Nachname_825;Teamleiter;93064;176846;0,90,50;Organisation von Teamleiter Nachname_825
+74000;74800;Herr;FB;Vorname_826;Nachname_826;Finanzberater;9701;6552;150,54,52;Organisation von Finanzberater Nachname_826
+86603;78401;Herr;FT;Vorname_827;Nachname_827;Finanzberater Trainee;26833;54223;0,90,50;Organisation von Finanzberater Trainee Nachname_827
+11045;13124;Herr;FB;Vorname_828;Nachname_828;Finanzberater;40683;34986;150,54,52;Organisation von Finanzberater Nachname_828
+41477;17364;Herr;TM;Vorname_829;Nachname_829;Teammanager;337970;307501;150,54,52;Organisation von Teammanager Nachname_829
+70173;60104;Herr;TL;Vorname_830;Nachname_830;Teamleiter;125727;95398;150,54,52;Organisation von Teamleiter Nachname_830
+72949;69591;Herr;FB;Vorname_831;Nachname_831;Finanzberater;76564;70408;150,54,52;Organisation von Finanzberater Nachname_831
+44631;45044;Herr;TM;Vorname_832;Nachname_832;Teammanager;201091;200920;150,54,52;Organisation von Teammanager Nachname_832
+19954;52437;Herr;FB;Vorname_833;Nachname_833;Finanzberater;20433;25770;0,90,50;Organisation von Finanzberater Nachname_833
+51802;62726;Herr;TL;Vorname_834;Nachname_834;Teamleiter;174357;167875;150,54,52;Organisation von Teamleiter Nachname_834
+49543;83332;Herr;TL;Vorname_835;Nachname_835;Teamleiter;111602;92635;150,54,52;Organisation von Teamleiter Nachname_835
+42036;19494;Herr;FB;Vorname_836;Nachname_836;Finanzberater;164052;141937;150,54,52;Organisation von Finanzberater Nachname_836
+45363;47705;Herr;FB;Vorname_837;Nachname_837;Finanzberater;45865;49521;0,90,50;Organisation von Finanzberater Nachname_837
+80309;67138;Herr;FT;Vorname_838;Nachname_838;Finanzberater Trainee;386;450;0,90,50;Organisation von Finanzberater Trainee Nachname_838
+42036;18162;Herr;TL;Vorname_839;Nachname_839;Teamleiter;94149;55768;150,54,52;Organisation von Teamleiter Nachname_839
+83468;57314;Frau;FB;Vorname_840;Nachname_840;Finanzberater;16243;21239;0,90,50;Organisation von Finanzberater Nachname_840
+37101;36500;Herr;FB;Vorname_841;Nachname_841;Finanzberater;18053;28774;0,90,50;Organisation von Finanzberater Nachname_841
+62368;38334;Frau;TL;Vorname_842;Nachname_842;Teamleiter;73574;65068;150,54,52;Organisation von Teamleiter Nachname_842
+47248;47963;Herr;FB;Vorname_843;Nachname_843;Finanzberater;58211;78066;0,90,50;Organisation von Finanzberater Nachname_843
+17583;17779;Herr;FB;Vorname_844;Nachname_844;Finanzberater;43589;69094;0,90,50;Organisation von Finanzberater Nachname_844
+41477;17583;Herr;TM;Vorname_845;Nachname_845;Teammanager;296485;300153;0,90,50;Organisation von Teammanager Nachname_845
+80309;65340;Herr;TM;Vorname_846;Nachname_846;Teammanager;611318;501231;150,54,52;Organisation von Teammanager Nachname_846
+35151;36584;Herr;TM;Vorname_847;Nachname_847;Teammanager;664578;473710;150,54,52;Organisation von Teammanager Nachname_847
+86671;81622;Herr;TM;Vorname_848;Nachname_848;Teammanager;177819;160133;150,54,52;Organisation von Teammanager Nachname_848
+81622;78447;Herr;FT;Vorname_849;Nachname_849;Finanzberater Trainee;4398;1473;150,54,52;Organisation von Finanzberater Trainee Nachname_849
+13315;62317;Herr;TL;Vorname_850;Nachname_850;Teamleiter;146003;79688;150,54,52;Organisation von Teamleiter Nachname_850
+62232;14568;Herr;TL;Vorname_851;Nachname_851;Teamleiter;38747;64760;0,90,50;Organisation von Teamleiter Nachname_851
+86671;86696;Herr;TM;Vorname_852;Nachname_852;Teammanager;717341;509688;150,54,52;Organisation von Teammanager Nachname_852
+79133;79815;Frau;BA;Vorname_853;Nachname_853;Beraterassistent;14668;3001;150,54,52;Organisation von Beraterassistent Nachname_853
+97868;71202;Frau;FB;Vorname_854;Nachname_854;Finanzberater;85210;104888;0,90,50;Organisation von Finanzberater Nachname_854
+74452;97868;Herr;TM;Vorname_855;Nachname_855;Teammanager;505088;209127;150,54,52;Organisation von Teammanager Nachname_855
+79252;52498;Frau;BA;Vorname_856;Nachname_856;Beraterassistent;17474;15518;150,54,52;Organisation von Beraterassistent Nachname_856
+95529;51012;Herr;TL;Vorname_857;Nachname_857;Teamleiter;118979;92340;150,54,52;Organisation von Teamleiter Nachname_857
+10854;60722;Herr;FB;Vorname_858;Nachname_858;Finanzberater;35020;13810;150,54,52;Organisation von Finanzberater Nachname_858
+65340;19184;Herr;FB;Vorname_859;Nachname_859;Finanzberater;61843;45833;150,54,52;Organisation von Finanzberater Nachname_859
+36876;36925;Herr;FB;Vorname_860;Nachname_860;Finanzberater;32042;37279;0,90,50;Organisation von Finanzberater Nachname_860
+45562;45488;Herr;FB;Vorname_861;Nachname_861;Finanzberater;49361;45441;150,54,52;Organisation von Finanzberater Nachname_861
+12973;13214;Herr;FB;Vorname_862;Nachname_862;Finanzberater;61096;50378;150,54,52;Organisation von Finanzberater Nachname_862
+90415;98980;Herr;TL;Vorname_863;Nachname_863;Teamleiter;159742;145797;150,54,52;Organisation von Teamleiter Nachname_863
+36847;36986;Herr;FB;Vorname_864;Nachname_864;Finanzberater;7172;11002;0,90,50;Organisation von Finanzberater Nachname_864
+43827;83189;Herr;TL;Vorname_865;Nachname_865;Teamleiter;40244;12907;150,54,52;Organisation von Teamleiter Nachname_865
+80658;81219;Herr;FB;Vorname_866;Nachname_866;Finanzberater;6365;5405;150,54,52;Organisation von Finanzberater Nachname_866
+17583;46380;Herr;FB;Vorname_867;Nachname_867;Finanzberater;398;862;0,90,50;Organisation von Finanzberater Nachname_867
+46796;47305;Frau;FB;Vorname_868;Nachname_868;Finanzberater;112057;83780;150,54,52;Organisation von Finanzberater Nachname_868
+62232;62676;Herr;FB;Vorname_869;Nachname_869;Finanzberater;101246;104273;0,90,50;Organisation von Finanzberater Nachname_869
+20814;21082;Frau;FB;Vorname_870;Nachname_870;Finanzberater;34686;20799;150,54,52;Organisation von Finanzberater Nachname_870
+72949;40571;Herr;TL;Vorname_871;Nachname_871;Teamleiter;144592;123715;150,54,52;Organisation von Teamleiter Nachname_871
+1081;36649;Herr;TL;Vorname_872;Nachname_872;Teamleiter;179679;150489;150,54,52;Organisation von Teamleiter Nachname_872
+95529;56758;Frau;FB;Vorname_873;Nachname_873;Finanzberater;1089;245;150,54,52;Organisation von Finanzberater Nachname_873
+41596;65313;Herr;FB;Vorname_874;Nachname_874;Finanzberater;34;1744;0,90,50;Organisation von Finanzberater Nachname_874
+43016;49603;Herr;FB;Vorname_875;Nachname_875;Finanzberater;57899;46507;150,54,52;Organisation von Finanzberater Nachname_875
+45414;45831;Herr;FB;Vorname_876;Nachname_876;Finanzberater;101492;95404;150,54,52;Organisation von Finanzberater Nachname_876
+51781;54600;Herr;FB;Vorname_877;Nachname_877;Finanzberater;50541;49206;150,54,52;Organisation von Finanzberater Nachname_877
+81674;81841;Herr;IMM;Vorname_878;Nachname_878;Manager I&K;91675;69707;150,54,52;Organisation von Manager I&K Nachname_878
+81674;93563;Frau;FB;Vorname_879;Nachname_879;Finanzberater;6374;4226;150,54,52;Organisation von Finanzberater Nachname_879
+74000;73041;Herr;MG;Vorname_880;Nachname_880;Manager;991198;714747;150,54,52;Organisation von Manager Nachname_880
+95488;95342;Frau;FB;Vorname_881;Nachname_881;Finanzberater;48166;44862;150,54,52;Organisation von Finanzberater Nachname_881
+86671;77842;Herr;TL;Vorname_882;Nachname_882;Teamleiter;27508;29824;0,90,50;Organisation von Teamleiter Nachname_882
+58397;58401;Herr;TL;Vorname_883;Nachname_883;Teamleiter;54439;43315;150,54,52;Organisation von Teamleiter Nachname_883
+43916;41601;Herr;FB;Vorname_884;Nachname_884;Finanzberater;47128;29501;150,54,52;Organisation von Finanzberater Nachname_884
+86696;86707;Frau;FINM;Vorname_885;Nachname_885;Finanzierungsmanager;101611;99155;150,54,52;Organisation von Finanzierungsmanager Nachname_885
+37116;37115;Herr;IMM;Vorname_886;Nachname_886;Manager I&K;32858;34437;0,90,50;Organisation von Manager I&K Nachname_886
+96991;83415;Herr;FB;Vorname_887;Nachname_887;Finanzberater;21327;42648;0,90,50;Organisation von Finanzberater Nachname_887
+51802;22330;Herr;FT;Vorname_888;Nachname_888;Finanzberater Trainee;19425;8994;150,54,52;Organisation von Finanzberater Trainee Nachname_888
+58398;58419;Frau;FB;Vorname_889;Nachname_889;Finanzberater;34687;24253;150,54,52;Organisation von Finanzberater Nachname_889
+39219;38275;Frau;BA;Vorname_890;Nachname_890;Beraterassistent;4239;2094;150,54,52;Organisation von Beraterassistent Nachname_890
+44631;39219;Herr;TL;Vorname_891;Nachname_891;Teamleiter;73918;64760;150,54,52;Organisation von Teamleiter Nachname_891
+48352;48563;Herr;FB;Vorname_892;Nachname_892;Finanzberater;47925;27083;150,54,52;Organisation von Finanzberater Nachname_892
+95349;63824;Herr;FB;Vorname_893;Nachname_893;Finanzberater;43761;34409;150,54,52;Organisation von Finanzberater Nachname_893
+79287;52286;Herr;FB;Vorname_894;Nachname_894;Finanzberater;26298;47464;0,90,50;Organisation von Finanzberater Nachname_894
+13315;13937;Herr;TL;Vorname_895;Nachname_895;Teamleiter;174672;199199;0,90,50;Organisation von Teamleiter Nachname_895
+95529;51959;Herr;FB;Vorname_896;Nachname_896;Finanzberater;42755;16883;150,54,52;Organisation von Finanzberater Nachname_896
+56383;56558;Herr;TL;Vorname_897;Nachname_897;Teamleiter;82411;134614;0,90,50;Organisation von Teamleiter Nachname_897
+80668;94134;Herr;TL;Vorname_898;Nachname_898;Teamleiter;54297;13720;150,54,52;Organisation von Teamleiter Nachname_898
+65842;79969;Herr;FB;Vorname_899;Nachname_899;Finanzberater;69750;62723;150,54,52;Organisation von Finanzberater Nachname_899
+18006;51874;Herr;FB;Vorname_900;Nachname_900;Finanzberater;15821;9104;150,54,52;Organisation von Finanzberater Nachname_900
+46341;51456;Herr;TL;Vorname_901;Nachname_901;Teamleiter;58461;92032;0,90,50;Organisation von Teamleiter Nachname_901
+83468;79159;Herr;TL;Vorname_902;Nachname_902;Teamleiter;149112;128630;150,54,52;Organisation von Teamleiter Nachname_902
+61637;36847;Herr;TL;Vorname_903;Nachname_903;Teamleiter;75547;142473;0,90,50;Organisation von Teamleiter Nachname_903
+14446;15985;Herr;FB;Vorname_904;Nachname_904;Finanzberater;15297;14205;150,54,52;Organisation von Finanzberater Nachname_904
+41477;42497;Herr;TL;Vorname_905;Nachname_905;Teamleiter;88875;62175;150,54,52;Organisation von Teamleiter Nachname_905
+86671;86672;Herr;FB;Vorname_906;Nachname_906;Finanzberater;135798;101721;150,54,52;Organisation von Finanzberater Nachname_906
+20989;67021;Herr;TL;Vorname_907;Nachname_907;Teamleiter;459438;274695;150,54,52;Organisation von Teamleiter Nachname_907
+14066;64277;Frau;FB;Vorname_908;Nachname_908;Finanzberater;10445;9887;150,54,52;Organisation von Finanzberater Nachname_908
+73001;60433;Herr;TL;Vorname_909;Nachname_909;Teamleiter;66171;63677;150,54,52;Organisation von Teamleiter Nachname_909
+69137;74165;Herr;TL;Vorname_910;Nachname_910;Teamleiter;312701;122074;150,54,52;Organisation von Teamleiter Nachname_910
+41596;49594;Herr;FB;Vorname_911;Nachname_911;Finanzberater;8193;3631;150,54,52;Organisation von Finanzberater Nachname_911
+79381;79317;Herr;FB;Vorname_912;Nachname_912;Finanzberater;17939;14514;150,54,52;Organisation von Finanzberater Nachname_912
+20814;20921;Herr;FB;Vorname_913;Nachname_913;Finanzberater;55609;46775;150,54,52;Organisation von Finanzberater Nachname_913
+51529;52589;Herr;FT;Vorname_914;Nachname_914;Finanzberater Trainee;3304;73;150,54,52;Organisation von Finanzberater Trainee Nachname_914
+10854;14023;Herr;FB;Vorname_915;Nachname_915;Finanzberater;12687;1004;150,54,52;Organisation von Finanzberater Nachname_915
+37116;36651;Herr;TL;Vorname_916;Nachname_916;Teamleiter;154987;118434;150,54,52;Organisation von Teamleiter Nachname_916
+95490;95247;Frau;FB;Vorname_917;Nachname_917;Finanzberater;29102;25093;150,54,52;Organisation von Finanzberater Nachname_917
+62922;21866;Herr;FB;Vorname_918;Nachname_918;Finanzberater;53139;10401;150,54,52;Organisation von Finanzberater Nachname_918
+37146;88120;Herr;FB;Vorname_919;Nachname_919;Finanzberater;12258;6323;150,54,52;Organisation von Finanzberater Nachname_919
+42350;41276;Herr;FB;Vorname_920;Nachname_920;Finanzberater;115770;102317;150,54,52;Organisation von Finanzberater Nachname_920
+81668;93928;Herr;TM;Vorname_921;Nachname_921;Teammanager;350779;216301;150,54,52;Organisation von Teammanager Nachname_921
+13937;16636;Herr;FT;Vorname_922;Nachname_922;Finanzberater Trainee;9118;20437;0,90,50;Organisation von Finanzberater Trainee Nachname_922
+79500;50232;Frau;FB;Vorname_923;Nachname_923;Finanzberater;52726;25571;150,54,52;Organisation von Finanzberater Nachname_923
+17542;52464;Herr;FT;Vorname_924;Nachname_924;Finanzberater Trainee;1333;3;150,54,52;Organisation von Finanzberater Trainee Nachname_924
+17542;52636;Herr;FT;Vorname_925;Nachname_925;Finanzberater Trainee;34420;16655;150,54,52;Organisation von Finanzberater Trainee Nachname_925
+83273;16471;Frau;FB;Vorname_926;Nachname_926;Finanzberater;20004;4730;150,54,52;Organisation von Finanzberater Nachname_926
+88455;79693;Herr;FT;Vorname_927;Nachname_927;Finanzberater Trainee;10980;5818;150,54,52;Organisation von Finanzberater Trainee Nachname_927
+40571;52368;Herr;FT;Vorname_928;Nachname_928;Finanzberater Trainee;27891;13709;150,54,52;Organisation von Finanzberater Trainee Nachname_928
+80210;85504;Frau;FB;Vorname_929;Nachname_929;Finanzberater;3212;2697;150,54,52;Organisation von Finanzberater Nachname_929
+69138;79339;Herr;FB;Vorname_930;Nachname_930;Finanzberater;46090;32009;150,54,52;Organisation von Finanzberater Nachname_930
+77778;57363;Herr;TL;Vorname_931;Nachname_931;Teamleiter;62584;48939;150,54,52;Organisation von Teamleiter Nachname_931
+20989;21881;Herr;TL;Vorname_932;Nachname_932;Teamleiter;137604;132314;150,54,52;Organisation von Teamleiter Nachname_932
+17542;47059;Herr;FB;Vorname_933;Nachname_933;Finanzberater;5931;1675;150,54,52;Organisation von Finanzberater Nachname_933
+21536;22216;Herr;FB;Vorname_934;Nachname_934;Finanzberater;63351;62138;150,54,52;Organisation von Finanzberater Nachname_934
+63097;62561;Herr;FB;Vorname_935;Nachname_935;Finanzberater;96488;82902;150,54,52;Organisation von Finanzberater Nachname_935
+21536;22391;Herr;BAVM;Vorname_936;Nachname_936;Manager bAV;65849;49502;150,54,52;Organisation von Manager bAV Nachname_936
+66823;95827;Herr;TL;Vorname_937;Nachname_937;Teamleiter;100028;58249;150,54,52;Organisation von Teamleiter Nachname_937
+66823;83273;Herr;TL;Vorname_938;Nachname_938;Teamleiter;139732;129162;150,54,52;Organisation von Teamleiter Nachname_938
+46341;50677;Herr;TL;Vorname_939;Nachname_939;Teamleiter;271579;259670;150,54,52;Organisation von Teamleiter Nachname_939
+70159;70041;Herr;FB;Vorname_940;Nachname_940;Finanzberater;28916;30896;0,90,50;Organisation von Finanzberater Nachname_940
+37422;66083;Herr;FB;Vorname_941;Nachname_941;Finanzberater;72710;39812;150,54,52;Organisation von Finanzberater Nachname_941
+93786;57559;Herr;BA;Vorname_942;Nachname_942;Beraterassistent;165;176;0,90,50;Organisation von Beraterassistent Nachname_942
+11204;91896;Frau;FB;Vorname_943;Nachname_943;Finanzberater;39559;24026;150,54,52;Organisation von Finanzberater Nachname_943
+40870;36891;Herr;TL;Vorname_944;Nachname_944;Teamleiter;56870;78932;0,90,50;Organisation von Teamleiter Nachname_944
+42121;43977;Herr;IMM;Vorname_945;Nachname_945;Manager I&K;59811;128803;0,90,50;Organisation von Manager I&K Nachname_945
+77010;58290;Herr;BA;Vorname_946;Nachname_946;Beraterassistent;197;1333;0,90,50;Organisation von Beraterassistent Nachname_946
+74360;69174;Herr;FB;Vorname_947;Nachname_947;Finanzberater;39596;43350;0,90,50;Organisation von Finanzberater Nachname_947
+69140;72694;Herr;FB;Vorname_948;Nachname_948;Finanzberater;38663;41122;0,90,50;Organisation von Finanzberater Nachname_948
+11045;13244;Herr;TL;Vorname_949;Nachname_949;Teamleiter;1043;368;150,54,52;Organisation von Teamleiter Nachname_949
+36392;68685;Herr;FB;Vorname_950;Nachname_950;Finanzberater;169644;156501;150,54,52;Organisation von Finanzberater Nachname_950
+79133;99469;Frau;FT;Vorname_951;Nachname_951;Finanzberater Trainee;145;539;0,90,50;Organisation von Finanzberater Trainee Nachname_951
+74000;73001;Herr;MG;Vorname_952;Nachname_952;Manager;727678;521783;150,54,52;Organisation von Manager Nachname_952
+73041;74582;Frau;FB;Vorname_953;Nachname_953;Finanzberater;30260;13243;150,54,52;Organisation von Finanzberater Nachname_953
+40319;49946;Herr;FB;Vorname_954;Nachname_954;Finanzberater;19834;22454;0,90,50;Organisation von Finanzberater Nachname_954
+51822;51819;Herr;FB;Vorname_955;Nachname_955;Finanzberater;239527;131961;150,54,52;Organisation von Finanzberater Nachname_955
+86522;78354;Herr;FB;Vorname_956;Nachname_956;Finanzberater;39393;27506;150,54,52;Organisation von Finanzberater Nachname_956
+47182;50790;Frau;FB;Vorname_957;Nachname_957;Finanzberater;24801;30674;0,90,50;Organisation von Finanzberater Nachname_957
+20814;22419;Frau;BA;Vorname_958;Nachname_958;Beraterassistent;1173;1289;0,90,50;Organisation von Beraterassistent Nachname_958
+60071;30221;Herr;FB;Vorname_959;Nachname_959;Finanzberater;124357;75766;150,54,52;Organisation von Finanzberater Nachname_959
+15105;15284;Frau;FT;Vorname_960;Nachname_960;Finanzberater Trainee;35203;19356;150,54,52;Organisation von Finanzberater Trainee Nachname_960
+83778;57632;Frau;FT;Vorname_961;Nachname_961;Finanzberater Trainee;17190;6620;150,54,52;Organisation von Finanzberater Trainee Nachname_961
+86681;86522;Herr;TL;Vorname_962;Nachname_962;Teamleiter;248179;272445;0,90,50;Organisation von Teamleiter Nachname_962
+86696;86701;Herr;TL;Vorname_963;Nachname_963;Teamleiter;24604;27805;0,90,50;Organisation von Teamleiter Nachname_963
+16086;16159;Herr;FB;Vorname_964;Nachname_964;Finanzberater;12752;24002;0,90,50;Organisation von Finanzberater Nachname_964
+95349;55614;Herr;FB;Vorname_965;Nachname_965;Finanzberater;56831;44744;150,54,52;Organisation von Finanzberater Nachname_965
+80207;96439;Herr;TL;Vorname_966;Nachname_966;Teamleiter;79850;78984;150,54,52;Organisation von Teamleiter Nachname_966
+65340;60833;Herr;FB;Vorname_967;Nachname_967;Finanzberater;10611;27880;0,90,50;Organisation von Finanzberater Nachname_967
+73001;75917;Herr;TL;Vorname_968;Nachname_968;Teamleiter;96801;108985;0,90,50;Organisation von Teamleiter Nachname_968
+15360;15275;Herr;FB;Vorname_969;Nachname_969;Finanzberater;53235;35521;150,54,52;Organisation von Finanzberater Nachname_969
+16092;21335;Herr;FB;Vorname_970;Nachname_970;Finanzberater;22199;28265;0,90,50;Organisation von Finanzberater Nachname_970
+42121;43916;Herr;TL;Vorname_971;Nachname_971;Teamleiter;85822;60388;150,54,52;Organisation von Teamleiter Nachname_971
+20989;63059;Herr;TL;Vorname_972;Nachname_972;Teamleiter;91440;66389;150,54,52;Organisation von Teamleiter Nachname_972
+17795;47017;Herr;FB;Vorname_973;Nachname_973;Finanzberater;55772;32132;150,54,52;Organisation von Finanzberater Nachname_973
+37101;37174;Herr;FB;Vorname_974;Nachname_974;Finanzberater;248;125;150,54,52;Organisation von Finanzberater Nachname_974
+36847;36958;Herr;FB;Vorname_975;Nachname_975;Finanzberater;10004;11504;0,90,50;Organisation von Finanzberater Nachname_975
+35823;36695;Herr;BA;Vorname_976;Nachname_976;Beraterassistent;522;76;150,54,52;Organisation von Beraterassistent Nachname_976
+15105;16086;Herr;TL;Vorname_977;Nachname_977;Teamleiter;54535;70816;0,90,50;Organisation von Teamleiter Nachname_977
+40319;49149;Herr;FB;Vorname_978;Nachname_978;Finanzberater;27606;42709;0,90,50;Organisation von Finanzberater Nachname_978
+49049;51400;Herr;TL;Vorname_979;Nachname_979;Teamleiter;88941;121188;0,90,50;Organisation von Teamleiter Nachname_979
+51781;95580;Herr;BAVM;Vorname_980;Nachname_980;Manager bAV;87675;124697;0,90,50;Organisation von Manager bAV Nachname_980
+13254;78303;Herr;FB;Vorname_981;Nachname_981;Finanzberater;3749;225;150,54,52;Organisation von Finanzberater Nachname_981
+83468;57435;Herr;FT;Vorname_982;Nachname_982;Finanzberater Trainee;8676;1145;150,54,52;Organisation von Finanzberater Trainee Nachname_982
+88455;63422;Herr;TM;Vorname_983;Nachname_983;Teammanager;323071;284194;150,54,52;Organisation von Teammanager Nachname_983
+40662;19743;Herr;FB;Vorname_984;Nachname_984;Finanzberater;21675;28489;0,90,50;Organisation von Finanzberater Nachname_984
+18006;18396;Herr;FB;Vorname_985;Nachname_985;Finanzberater;23808;17266;150,54,52;Organisation von Finanzberater Nachname_985
+63736;64886;Frau;FB;Vorname_986;Nachname_986;Finanzberater;2517;1049;150,54,52;Organisation von Finanzberater Nachname_986
+79073;79814;Herr;FB;Vorname_987;Nachname_987;Finanzberater;22663;9568;150,54,52;Organisation von Finanzberater Nachname_987
+41477;17665;Herr;FB;Vorname_988;Nachname_988;Finanzberater;37076;41850;0,90,50;Organisation von Finanzberater Nachname_988
+20862;22354;Frau;BA;Vorname_989;Nachname_989;Beraterassistent;9760;12273;0,90,50;Organisation von Beraterassistent Nachname_989
+15045;13175;Herr;FB;Vorname_990;Nachname_990;Finanzberater;34738;1729;150,54,52;Organisation von Finanzberater Nachname_990
+36651;36755;Herr;FB;Vorname_991;Nachname_991;Finanzberater;14800;6716;150,54,52;Organisation von Finanzberater Nachname_991
+35151;37146;Herr;TM;Vorname_992;Nachname_992;Teammanager;348968;237604;150,54,52;Organisation von Teammanager Nachname_992
+70173;14028;Herr;TL;Vorname_993;Nachname_993;Teamleiter;24744;43841;0,90,50;Organisation von Teamleiter Nachname_993
+86603;86639;Herr;FB;Vorname_994;Nachname_994;Finanzberater;11885;6814;150,54,52;Organisation von Finanzberater Nachname_994
+14028;13978;Herr;FB;Vorname_995;Nachname_995;Finanzberater;42545;30405;150,54,52;Organisation von Finanzberater Nachname_995
+96991;85880;Frau;FB;Vorname_996;Nachname_996;Finanzberater;45490;39204;150,54,52;Organisation von Finanzberater Nachname_996
+56445;56485;Herr;FB;Vorname_997;Nachname_997;Finanzberater;58334;42829;150,54,52;Organisation von Finanzberater Nachname_997
+61818;13386;Herr;FB;Vorname_998;Nachname_998;Finanzberater;68424;73149;0,90,50;Organisation von Finanzberater Nachname_998
+48095;48472;Herr;FINM;Vorname_999;Nachname_999;Finanzierungsmanager;99523;88381;150,54,52;Organisation von Finanzierungsmanager Nachname_999
+20848;20919;Herr;FB;Vorname_1000;Nachname_1000;Finanzberater;60380;42344;150,54,52;Organisation von Finanzberater Nachname_1000
+51802;20987;Herr;FB;Vorname_1001;Nachname_1001;Finanzberater;46986;42281;150,54,52;Organisation von Finanzberater Nachname_1001
+94049;60812;Herr;FB;Vorname_1002;Nachname_1002;Finanzberater;44950;37624;150,54,52;Organisation von Finanzberater Nachname_1002
+40237;16865;Herr;BAA;Vorname_1003;Nachname_1003;Beraterassistent in Ausbildung;4127;5809;0,90,50;Organisation von Beraterassistent in Ausbildung Nachname_1003
+21580;51802;Herr;TM;Vorname_1004;Nachname_1004;Teammanager;677535;582134;150,54,52;Organisation von Teammanager Nachname_1004
+36899;36971;Herr;FB;Vorname_1005;Nachname_1005;Finanzberater;4936;5637;0,90,50;Organisation von Finanzberater Nachname_1005
+63422;79510;Herr;FB;Vorname_1006;Nachname_1006;Finanzberater;75420;70204;150,54,52;Organisation von Finanzberater Nachname_1006
+79342;79349;Frau;FB;Vorname_1007;Nachname_1007;Finanzberater;9901;6033;150,54,52;Organisation von Finanzberater Nachname_1007
+66893;14439;Frau;TL;Vorname_1008;Nachname_1008;Teamleiter;146615;113278;150,54,52;Organisation von Teamleiter Nachname_1008
+43827;19196;Herr;TM;Vorname_1009;Nachname_1009;Teammanager;418618;173672;150,54,52;Organisation von Teammanager Nachname_1009
+51781;51944;Herr;TL;Vorname_1010;Nachname_1010;Teamleiter;47084;32492;150,54,52;Organisation von Teamleiter Nachname_1010
+42187;17508;Herr;FB;Vorname_1011;Nachname_1011;Finanzberater;95694;77519;150,54,52;Organisation von Finanzberater Nachname_1011
+56383;50267;Herr;FB;Vorname_1012;Nachname_1012;Finanzberater;70696;66438;150,54,52;Organisation von Finanzberater Nachname_1012
+80326;67947;Frau;FB;Vorname_1013;Nachname_1013;Finanzberater;26316;18334;150,54,52;Organisation von Finanzberater Nachname_1013
+72299;40192;Herr;TL;Vorname_1014;Nachname_1014;Teamleiter;400511;441648;0,90,50;Organisation von Teamleiter Nachname_1014
+83401;94582;Herr;TL;Vorname_1015;Nachname_1015;Teamleiter;89567;26583;150,54,52;Organisation von Teamleiter Nachname_1015
+92164;65842;Herr;TL;Vorname_1016;Nachname_1016;Teamleiter;191234;169461;150,54,52;Organisation von Teamleiter Nachname_1016
+15105;15360;Herr;TM;Vorname_1017;Nachname_1017;Teammanager;312825;255844;150,54,52;Organisation von Teammanager Nachname_1017
+63051;22439;Herr;FT;Vorname_1018;Nachname_1018;Finanzberater Trainee;588;1593;0,90,50;Organisation von Finanzberater Trainee Nachname_1018
+52399;52518;Herr;FB;Vorname_1019;Nachname_1019;Finanzberater;30622;22090;150,54,52;Organisation von Finanzberater Nachname_1019
+52399;52503;Frau;BA;Vorname_1020;Nachname_1020;Beraterassistent;864;209;150,54,52;Organisation von Beraterassistent Nachname_1020
+93928;67316;Herr;FB;Vorname_1021;Nachname_1021;Finanzberater;44278;25146;150,54,52;Organisation von Finanzberater Nachname_1021
+42036;16867;Herr;FT;Vorname_1022;Nachname_1022;Finanzberater Trainee;3941;2506;150,54,52;Organisation von Finanzberater Trainee Nachname_1022
+45856;36876;Herr;TL;Vorname_1023;Nachname_1023;Teamleiter;78316;77921;150,54,52;Organisation von Teamleiter Nachname_1023
+35823;30341;Herr;TL;Vorname_1024;Nachname_1024;Teamleiter;220973;138482;150,54,52;Organisation von Teamleiter Nachname_1024
+81710;98863;Frau;FB;Vorname_1025;Nachname_1025;Finanzberater;28597;11755;150,54,52;Organisation von Finanzberater Nachname_1025
+62539;62718;Herr;TL;Vorname_1026;Nachname_1026;Teamleiter;130084;127261;150,54,52;Organisation von Teamleiter Nachname_1026
+75249;76626;Herr;BA;Vorname_1027;Nachname_1027;Beraterassistent;556;1;150,54,52;Organisation von Beraterassistent Nachname_1027
+42036;19484;Herr;FINM;Vorname_1028;Nachname_1028;Finanzierungsmanager;94933;89930;150,54,52;Organisation von Finanzierungsmanager Nachname_1028
+86603;86741;Herr;FB;Vorname_1029;Nachname_1029;Finanzberater;28345;21568;150,54,52;Organisation von Finanzberater Nachname_1029
+71780;68291;Frau;FB;Vorname_1030;Nachname_1030;Finanzberater;22698;36812;0,90,50;Organisation von Finanzberater Nachname_1030
+92164;79992;Herr;TL;Vorname_1031;Nachname_1031;Teamleiter;87711;109965;0,90,50;Organisation von Teamleiter Nachname_1031
+62952;22293;Herr;FB;Vorname_1032;Nachname_1032;Finanzberater;57330;69251;0,90,50;Organisation von Finanzberater Nachname_1032
+86603;77938;Herr;FB;Vorname_1033;Nachname_1033;Finanzberater;24780;29543;0,90,50;Organisation von Finanzberater Nachname_1033
+43023;13813;Herr;FB;Vorname_1034;Nachname_1034;Finanzberater;14452;886;150,54,52;Organisation von Finanzberater Nachname_1034
+51821;51822;Herr;TM;Vorname_1035;Nachname_1035;Teammanager;522945;447942;150,54,52;Organisation von Teammanager Nachname_1035
+41944;46965;Frau;FB;Vorname_1036;Nachname_1036;Finanzberater;53325;52090;150,54,52;Organisation von Finanzberater Nachname_1036
+17542;52146;Herr;TL;Vorname_1037;Nachname_1037;Teamleiter;56774;63747;0,90,50;Organisation von Teamleiter Nachname_1037
+98980;16561;Herr;BA;Vorname_1038;Nachname_1038;Beraterassistent;5104;666;150,54,52;Organisation von Beraterassistent Nachname_1038
+75558;75511;Herr;FB;Vorname_1039;Nachname_1039;Finanzberater;103889;68151;150,54,52;Organisation von Finanzberater Nachname_1039
+56445;50277;Herr;TL;Vorname_1040;Nachname_1040;Teamleiter;65510;47208;150,54,52;Organisation von Teamleiter Nachname_1040
+50518;52217;Frau;FB;Vorname_1041;Nachname_1041;Finanzberater;19430;11020;150,54,52;Organisation von Finanzberater Nachname_1041
+49998;83311;Frau;FB;Vorname_1042;Nachname_1042;Finanzberater;39831;25878;150,54,52;Organisation von Finanzberater Nachname_1042
+95488;55692;Frau;FB;Vorname_1043;Nachname_1043;Finanzberater;20465;20707;0,90,50;Organisation von Finanzberater Nachname_1043
+72299;72949;Herr;MG;Vorname_1044;Nachname_1044;Manager;1680102;1393958;150,54,52;Organisation von Manager Nachname_1044
+80668;67746;Herr;FB;Vorname_1045;Nachname_1045;Finanzberater;41883;31955;150,54,52;Organisation von Finanzberater Nachname_1045
+95933;83469;Herr;FB;Vorname_1046;Nachname_1046;Finanzberater;34184;32118;150,54,52;Organisation von Finanzberater Nachname_1046
+74360;74462;Herr;FB;Vorname_1047;Nachname_1047;Finanzberater;22960;5123;150,54,52;Organisation von Finanzberater Nachname_1047
+79208;40465;Herr;TL;Vorname_1048;Nachname_1048;Teamleiter;106264;107808;0,90,50;Organisation von Teamleiter Nachname_1048
+92164;79970;Herr;TL;Vorname_1049;Nachname_1049;Teamleiter;100910;119630;0,90,50;Organisation von Teamleiter Nachname_1049
+42350;49998;Herr;TL;Vorname_1050;Nachname_1050;Teamleiter;236985;132745;150,54,52;Organisation von Teamleiter Nachname_1050
+43827;83292;Frau;TL;Vorname_1051;Nachname_1051;Teamleiter;33947;29756;150,54,52;Organisation von Teamleiter Nachname_1051
+62368;13326;Herr;FB;Vorname_1052;Nachname_1052;Finanzberater;29043;32832;0,90,50;Organisation von Finanzberater Nachname_1052
+17837;51582;Frau;FB;Vorname_1053;Nachname_1053;Finanzberater;76618;87670;0,90,50;Organisation von Finanzberater Nachname_1053
+66850;66830;Herr;FB;Vorname_1054;Nachname_1054;Finanzberater;5299;9191;0,90,50;Organisation von Finanzberater Nachname_1054
+70159;70942;Herr;FB;Vorname_1055;Nachname_1055;Finanzberater;19314;18323;150,54,52;Organisation von Finanzberater Nachname_1055
+31813;31828;Herr;FB;Vorname_1056;Nachname_1056;Finanzberater;6508;2863;150,54,52;Organisation von Finanzberater Nachname_1056
+80210;92164;Herr;MG;Vorname_1057;Nachname_1057;Manager;1456102;1264209;150,54,52;Organisation von Manager Nachname_1057
+79252;52288;Herr;BA;Vorname_1058;Nachname_1058;Beraterassistent;356;166;150,54,52;Organisation von Beraterassistent Nachname_1058
+72299;79203;Herr;FT;Vorname_1059;Nachname_1059;Finanzberater Trainee;35709;2;150,54,52;Organisation von Finanzberater Trainee Nachname_1059
+14066;14792;Herr;FB;Vorname_1060;Nachname_1060;Finanzberater;4622;5961;0,90,50;Organisation von Finanzberater Nachname_1060
+40192;52099;Herr;FB;Vorname_1061;Nachname_1061;Finanzberater;64710;66067;0,90,50;Organisation von Finanzberater Nachname_1061
+46655;40536;Herr;FB;Vorname_1062;Nachname_1062;Finanzberater;85010;68326;150,54,52;Organisation von Finanzberater Nachname_1062
+44199;45383;Herr;BAVM;Vorname_1063;Nachname_1063;Manager bAV;278089;159197;150,54,52;Organisation von Manager bAV Nachname_1063
+30318;13976;Herr;FB;Vorname_1064;Nachname_1064;Finanzberater;16037;16460;0,90,50;Organisation von Finanzberater Nachname_1064
+79381;79341;Frau;FB;Vorname_1065;Nachname_1065;Finanzberater;40681;39804;150,54,52;Organisation von Finanzberater Nachname_1065
+80210;89153;Herr;FB;Vorname_1066;Nachname_1066;Finanzberater;46257;40948;150,54,52;Organisation von Finanzberater Nachname_1066
+80210;89663;Herr;TM;Vorname_1067;Nachname_1067;Teammanager;177346;73127;150,54,52;Organisation von Teammanager Nachname_1067
+80210;84664;Frau;FB;Vorname_1068;Nachname_1068;Finanzberater;110371;78430;150,54,52;Organisation von Finanzberater Nachname_1068
+88455;50049;Herr;FT;Vorname_1069;Nachname_1069;Finanzberater Trainee;3705;1835;150,54,52;Organisation von Finanzberater Trainee Nachname_1069
+17837;47578;Herr;FB;Vorname_1070;Nachname_1070;Finanzberater;53354;59947;0,90,50;Organisation von Finanzberater Nachname_1070
+48095;48487;Herr;FB;Vorname_1071;Nachname_1071;Finanzberater;134220;113384;150,54,52;Organisation von Finanzberater Nachname_1071
+35151;37101;Herr;TL;Vorname_1072;Nachname_1072;Teamleiter;149162;104365;150,54,52;Organisation von Teamleiter Nachname_1072
+66823;66893;Herr;MG;Vorname_1073;Nachname_1073;Manager;1250312;1261113;0,90,50;Organisation von Manager Nachname_1073
+42050;41305;Herr;FINM;Vorname_1074;Nachname_1074;Finanzierungsmanager;77187;37988;150,54,52;Organisation von Finanzierungsmanager Nachname_1074
+58406;58434;Herr;FB;Vorname_1075;Nachname_1075;Finanzberater;22170;11204;150,54,52;Organisation von Finanzberater Nachname_1075
+40192;40501;Herr;FB;Vorname_1076;Nachname_1076;Finanzberater;126124;129600;0,90,50;Organisation von Finanzberater Nachname_1076
+80668;57342;Herr;TL;Vorname_1077;Nachname_1077;Teamleiter;22834;165;150,54,52;Organisation von Teamleiter Nachname_1077
+79270;50773;Herr;FB;Vorname_1078;Nachname_1078;Finanzberater;76084;110429;0,90,50;Organisation von Finanzberater Nachname_1078
+69102;79323;Herr;TL;Vorname_1079;Nachname_1079;Teamleiter;195102;126875;150,54,52;Organisation von Teamleiter Nachname_1079
+10854;64870;Herr;FB;Vorname_1080;Nachname_1080;Finanzberater;1198;441;150,54,52;Organisation von Finanzberater Nachname_1080
+40608;52379;Herr;FB;Vorname_1081;Nachname_1081;Finanzberater;28498;29904;0,90,50;Organisation von Finanzberater Nachname_1081
+44199;48012;Herr;FB;Vorname_1082;Nachname_1082;Finanzberater;10237;4583;150,54,52;Organisation von Finanzberater Nachname_1082
+64289;98614;Frau;FB;Vorname_1083;Nachname_1083;Finanzberater;36191;17055;150,54,52;Organisation von Finanzberater Nachname_1083
+96247;86384;Herr;TL;Vorname_1084;Nachname_1084;Teamleiter;65507;40609;150,54,52;Organisation von Teamleiter Nachname_1084
+74165;75927;Herr;FB;Vorname_1085;Nachname_1085;Finanzberater;22888;14644;150,54,52;Organisation von Finanzberater Nachname_1085
+79252;52507;Frau;BA;Vorname_1086;Nachname_1086;Beraterassistent;1143;9;150,54,52;Organisation von Beraterassistent Nachname_1086
+81674;93803;Herr;TL;Vorname_1087;Nachname_1087;Teamleiter;129741;70949;150,54,52;Organisation von Teamleiter Nachname_1087
+51821;51827;Herr;TL;Vorname_1088;Nachname_1088;Teamleiter;18395;9882;150,54,52;Organisation von Teamleiter Nachname_1088
+51822;51817;Herr;TL;Vorname_1089;Nachname_1089;Teamleiter;76658;70227;150,54,52;Organisation von Teamleiter Nachname_1089
+62597;62588;Herr;FB;Vorname_1090;Nachname_1090;Finanzberater;22570;31425;0,90,50;Organisation von Finanzberater Nachname_1090
+42036;18208;Herr;FB;Vorname_1091;Nachname_1091;Finanzberater;51310;29666;150,54,52;Organisation von Finanzberater Nachname_1091
+42350;43662;Herr;FB;Vorname_1092;Nachname_1092;Finanzberater;49432;26636;150,54,52;Organisation von Finanzberater Nachname_1092
+30331;31834;Frau;FB;Vorname_1093;Nachname_1093;Finanzberater;48295;33984;150,54,52;Organisation von Finanzberater Nachname_1093
+96247;90065;Herr;FB;Vorname_1094;Nachname_1094;Finanzberater;62581;56317;150,54,52;Organisation von Finanzberater Nachname_1094
+14349;14784;Herr;BA;Vorname_1095;Nachname_1095;Beraterassistent;167;5;150,54,52;Organisation von Beraterassistent Nachname_1095
+22054;22052;Herr;FB;Vorname_1096;Nachname_1096;Finanzberater;52031;51566;150,54,52;Organisation von Finanzberater Nachname_1096
+37116;31878;Herr;BAA;Vorname_1097;Nachname_1097;Beraterassistent in Ausbildung;7553;6076;150,54,52;Organisation von Beraterassistent in Ausbildung Nachname_1097
+36584;60129;Herr;FB;Vorname_1098;Nachname_1098;Finanzberater;47041;50027;0,90,50;Organisation von Finanzberater Nachname_1098
+17542;51587;Herr;FB;Vorname_1099;Nachname_1099;Finanzberater;2236;4588;0,90,50;Organisation von Finanzberater Nachname_1099
+37116;30331;Herr;TL;Vorname_1100;Nachname_1100;Teamleiter;144095;87986;150,54,52;Organisation von Teamleiter Nachname_1100
+45937;39447;Herr;FB;Vorname_1101;Nachname_1101;Finanzberater;3582;2227;150,54,52;Organisation von Finanzberater Nachname_1101
+64427;10588;Herr;FB;Vorname_1102;Nachname_1102;Finanzberater;38032;16587;150,54,52;Organisation von Finanzberater Nachname_1102
+62508;22054;Herr;TL;Vorname_1103;Nachname_1103;Teamleiter;118650;95769;150,54,52;Organisation von Teamleiter Nachname_1103
+95924;46745;Herr;FB;Vorname_1104;Nachname_1104;Finanzberater;56182;56047;150,54,52;Organisation von Finanzberater Nachname_1104
+95349;95325;Herr;FB;Vorname_1105;Nachname_1105;Finanzberater;76841;72918;150,54,52;Organisation von Finanzberater Nachname_1105
+81668;81710;Herr;TL;Vorname_1106;Nachname_1106;Teamleiter;111218;104746;150,54,52;Organisation von Teamleiter Nachname_1106
+48469;48492;Herr;FB;Vorname_1107;Nachname_1107;Finanzberater;45739;32288;150,54,52;Organisation von Finanzberater Nachname_1107
+44587;47294;Herr;FB;Vorname_1108;Nachname_1108;Finanzberater;15329;6659;150,54,52;Organisation von Finanzberater Nachname_1108
+35151;35787;Herr;TM;Vorname_1109;Nachname_1109;Teammanager;293059;225048;150,54,52;Organisation von Teammanager Nachname_1109
+65543;78425;Herr;FT;Vorname_1110;Nachname_1110;Finanzberater Trainee;21211;16705;150,54,52;Organisation von Finanzberater Trainee Nachname_1110
+11045;11195;Herr;TL;Vorname_1111;Nachname_1111;Teamleiter;136127;48362;150,54,52;Organisation von Teamleiter Nachname_1111
+70211;57464;Herr;FB;Vorname_1112;Nachname_1112;Finanzberater;8542;8205;150,54,52;Organisation von Finanzberater Nachname_1112
+41596;62477;Herr;FT;Vorname_1113;Nachname_1113;Finanzberater Trainee;13355;11527;150,54,52;Organisation von Finanzberater Trainee Nachname_1113
+14421;87813;Herr;FB;Vorname_1114;Nachname_1114;Finanzberater;135655;56254;150,54,52;Organisation von Finanzberater Nachname_1114
+72299;69633;Herr;FB;Vorname_1115;Nachname_1115;Finanzberater;42729;36973;150,54,52;Organisation von Finanzberater Nachname_1115
+96247;93786;Herr;TL;Vorname_1116;Nachname_1116;Teamleiter;104862;147269;0,90,50;Organisation von Teamleiter Nachname_1116
+72949;79270;Herr;TL;Vorname_1117;Nachname_1117;Teamleiter;200467;254109;0,90,50;Organisation von Teamleiter Nachname_1117
+20848;63054;Herr;TL;Vorname_1118;Nachname_1118;Teamleiter;66668;52411;150,54,52;Organisation von Teamleiter Nachname_1118
+36541;31832;Herr;FT;Vorname_1119;Nachname_1119;Finanzberater Trainee;44891;28786;150,54,52;Organisation von Finanzberater Trainee Nachname_1119
+75961;76615;Herr;BAA;Vorname_1120;Nachname_1120;Beraterassistent in Ausbildung;19640;9975;150,54,52;Organisation von Beraterassistent in Ausbildung Nachname_1120
+66850;14828;Frau;FB;Vorname_1121;Nachname_1121;Finanzberater;80933;73583;150,54,52;Organisation von Finanzberater Nachname_1121
+80309;80207;Herr;MG;Vorname_1122;Nachname_1122;Manager;634823;552027;150,54,52;Organisation von Manager Nachname_1122
+68241;69025;Herr;FB;Vorname_1123;Nachname_1123;Finanzberater;26928;24148;150,54,52;Organisation von Finanzberater Nachname_1123
+92164;79578;Herr;TL;Vorname_1124;Nachname_1124;Teamleiter;36268;43328;0,90,50;Organisation von Teamleiter Nachname_1124
+37101;36705;Frau;FB;Vorname_1125;Nachname_1125;Finanzberater;29769;27631;150,54,52;Organisation von Finanzberater Nachname_1125
+72379;72530;Herr;FB;Vorname_1126;Nachname_1126;Finanzberater;1151;123;150,54,52;Organisation von Finanzberater Nachname_1126
+92164;87973;Herr;TL;Vorname_1127;Nachname_1127;Teamleiter;163678;118275;150,54,52;Organisation von Teamleiter Nachname_1127
+87973;66231;Herr;FB;Vorname_1128;Nachname_1128;Finanzberater;40487;28196;150,54,52;Organisation von Finanzberater Nachname_1128
+62532;21489;Herr;FB;Vorname_1129;Nachname_1129;Finanzberater;179798;192866;0,90,50;Organisation von Finanzberater Nachname_1129
+37027;30667;Frau;FB;Vorname_1130;Nachname_1130;Finanzberater;44396;46097;0,90,50;Organisation von Finanzberater Nachname_1130
+96285;57583;Herr;FT;Vorname_1131;Nachname_1131;Finanzberater Trainee;7980;901;150,54,52;Organisation von Finanzberater Trainee Nachname_1131
+66823;60884;Herr;TM;Vorname_1132;Nachname_1132;Teammanager;373950;519996;0,90,50;Organisation von Teammanager Nachname_1132
+62726;62751;Herr;FB;Vorname_1133;Nachname_1133;Finanzberater;43895;29887;150,54,52;Organisation von Finanzberater Nachname_1133
+21580;15105;Herr;MG;Vorname_1134;Nachname_1134;Manager;1335676;1195587;150,54,52;Organisation von Manager Nachname_1134
+62707;62902;Frau;FB;Vorname_1135;Nachname_1135;Finanzberater;91390;77712;150,54,52;Organisation von Finanzberater Nachname_1135
+20347;62707;Herr;TL;Vorname_1136;Nachname_1136;Teamleiter;365153;293237;150,54,52;Organisation von Teamleiter Nachname_1136
+72949;71772;Herr;FB;Vorname_1137;Nachname_1137;Finanzberater;149501;182787;0,90,50;Organisation von Finanzberater Nachname_1137
+67021;63073;Herr;FB;Vorname_1138;Nachname_1138;Finanzberater;41410;32476;150,54,52;Organisation von Finanzberater Nachname_1138
+21509;22275;Herr;FB;Vorname_1139;Nachname_1139;Finanzberater;20398;19099;150,54,52;Organisation von Finanzberater Nachname_1139
+19196;65392;Frau;TL;Vorname_1140;Nachname_1140;Teamleiter;80943;36545;150,54,52;Organisation von Teamleiter Nachname_1140
+81737;88490;Herr;FB;Vorname_1141;Nachname_1141;Finanzberater;43578;32531;150,54,52;Organisation von Finanzberater Nachname_1141
+13254;78439;Herr;FT;Vorname_1142;Nachname_1142;Finanzberater Trainee;6362;4931;150,54,52;Organisation von Finanzberater Trainee Nachname_1142
+35151;36742;Herr;TL;Vorname_1143;Nachname_1143;Teamleiter;93532;129370;0,90,50;Organisation von Teamleiter Nachname_1143
+74452;74461;Herr;TM;Vorname_1144;Nachname_1144;Teammanager;358775;234085;150,54,52;Organisation von Teammanager Nachname_1144
+63422;50626;Herr;FB;Vorname_1145;Nachname_1145;Finanzberater;50642;61637;0,90,50;Organisation von Finanzberater Nachname_1145
+75249;72379;Herr;TL;Vorname_1146;Nachname_1146;Teamleiter;244172;277947;0,90,50;Organisation von Teamleiter Nachname_1146
+72379;72696;Frau;FB;Vorname_1147;Nachname_1147;Finanzberater;116637;150290;0,90,50;Organisation von Finanzberater Nachname_1147
+17655;17784;Herr;FB;Vorname_1148;Nachname_1148;Finanzberater;330328;281650;150,54,52;Organisation von Finanzberater Nachname_1148
+62584;21764;Herr;FB;Vorname_1149;Nachname_1149;Finanzberater;59497;54371;150,54,52;Organisation von Finanzberater Nachname_1149
+51400;52765;Herr;BA;Vorname_1150;Nachname_1150;Beraterassistent;1781;1950;0,90,50;Organisation von Beraterassistent Nachname_1150
+42350;41230;Herr;TL;Vorname_1151;Nachname_1151;Teamleiter;116731;111429;150,54,52;Organisation von Teamleiter Nachname_1151
+42121;42350;Herr;MG;Vorname_1152;Nachname_1152;Manager;859607;645760;150,54,52;Organisation von Manager Nachname_1152
+45040;45944;Herr;TM;Vorname_1153;Nachname_1153;Teammanager;389917;165412;150,54,52;Organisation von Teammanager Nachname_1153
+45841;45301;Herr;FB;Vorname_1154;Nachname_1154;Finanzberater;59894;42852;150,54,52;Organisation von Finanzberater Nachname_1154
+19196;19931;Herr;FB;Vorname_1155;Nachname_1155;Finanzberater;81907;71070;150,54,52;Organisation von Finanzberater Nachname_1155
+93928;65801;Frau;FB;Vorname_1156;Nachname_1156;Finanzberater;59994;55303;150,54,52;Organisation von Finanzberater Nachname_1156
+36744;31858;Herr;FB;Vorname_1157;Nachname_1157;Finanzberater;90297;74717;150,54,52;Organisation von Finanzberater Nachname_1157
+79323;69100;Frau;FB;Vorname_1158;Nachname_1158;Finanzberater;121630;94887;150,54,52;Organisation von Finanzberater Nachname_1158
+74360;69102;Herr;TM;Vorname_1159;Nachname_1159;Teammanager;311252;244121;150,54,52;Organisation von Teammanager Nachname_1159
+70159;93311;Herr;FB;Vorname_1160;Nachname_1160;Finanzberater;108206;80185;150,54,52;Organisation von Finanzberater Nachname_1160
+81712;92935;Frau;FB;Vorname_1161;Nachname_1161;Finanzberater;100259;109681;0,90,50;Organisation von Finanzberater Nachname_1161
+86671;78264;Herr;TL;Vorname_1162;Nachname_1162;Teamleiter;28953;51497;0,90,50;Organisation von Teamleiter Nachname_1162
+19715;99507;Herr;FB;Vorname_1163;Nachname_1163;Finanzberater;6342;3012;150,54,52;Organisation von Finanzberater Nachname_1163
+79472;79791;Herr;FB;Vorname_1164;Nachname_1164;Finanzberater;42140;13046;150,54,52;Organisation von Finanzberater Nachname_1164
+13937;16646;Herr;BA;Vorname_1165;Nachname_1165;Beraterassistent;5891;1977;150,54,52;Organisation von Beraterassistent Nachname_1165
+16092;22415;Herr;FT;Vorname_1166;Nachname_1166;Finanzberater Trainee;26683;24431;150,54,52;Organisation von Finanzberater Trainee Nachname_1166
+74000;69140;Herr;TM;Vorname_1167;Nachname_1167;Teammanager;123512;135009;0,90,50;Organisation von Teammanager Nachname_1167
+48352;48596;Herr;TL;Vorname_1168;Nachname_1168;Teamleiter;97793;132016;0,90,50;Organisation von Teamleiter Nachname_1168
+98253;52428;Frau;FT;Vorname_1169;Nachname_1169;Finanzberater Trainee;23549;7891;150,54,52;Organisation von Finanzberater Trainee Nachname_1169
+45040;61339;Herr;BAVM;Vorname_1170;Nachname_1170;Manager bAV;116375;103159;150,54,52;Organisation von Manager bAV Nachname_1170
+94263;60876;Herr;FB;Vorname_1171;Nachname_1171;Finanzberater;327;5;150,54,52;Organisation von Finanzberater Nachname_1171
+43016;40237;Herr;TL;Vorname_1172;Nachname_1172;Teamleiter;92970;140272;0,90,50;Organisation von Teamleiter Nachname_1172
+37027;31888;Frau;BA;Vorname_1173;Nachname_1173;Beraterassistent;6524;7401;0,90,50;Organisation von Beraterassistent Nachname_1173
+11045;11078;Herr;IMM;Vorname_1174;Nachname_1174;Manager I&K;68191;35406;150,54,52;Organisation von Manager I&K Nachname_1174
+56798;50527;Herr;FB;Vorname_1175;Nachname_1175;Finanzberater;38641;28235;150,54,52;Organisation von Finanzberater Nachname_1175
+46341;47601;Herr;FB;Vorname_1176;Nachname_1176;Finanzberater;80162;79235;150,54,52;Organisation von Finanzberater Nachname_1176
+15105;22142;Herr;TL;Vorname_1177;Nachname_1177;Teamleiter;105887;73689;150,54,52;Organisation von Teamleiter Nachname_1177
+95490;95283;Herr;FB;Vorname_1178;Nachname_1178;Finanzberater;134181;92563;150,54,52;Organisation von Finanzberater Nachname_1178
+19954;52458;Herr;FT;Vorname_1179;Nachname_1179;Finanzberater Trainee;25383;23370;150,54,52;Organisation von Finanzberater Trainee Nachname_1179
+20862;21651;Herr;FB;Vorname_1180;Nachname_1180;Finanzberater;38609;24869;150,54,52;Organisation von Finanzberater Nachname_1180
+75249;76558;Herr;TL;Vorname_1181;Nachname_1181;Teamleiter;149882;84440;150,54,52;Organisation von Teamleiter Nachname_1181
+15940;22327;Herr;FB;Vorname_1182;Nachname_1182;Finanzberater;26447;21227;150,54,52;Organisation von Finanzberater Nachname_1182
+16832;40473;Herr;FB;Vorname_1183;Nachname_1183;Finanzberater;7;3;150,54,52;Organisation von Finanzberater Nachname_1183
+81668;95763;Herr;FB;Vorname_1184;Nachname_1184;Finanzberater;38621;48509;0,90,50;Organisation von Finanzberater Nachname_1184
+49543;94049;Herr;TL;Vorname_1185;Nachname_1185;Teamleiter;75410;48870;150,54,52;Organisation von Teamleiter Nachname_1185
+67415;63104;Herr;FB;Vorname_1186;Nachname_1186;Finanzberater;112;387;0,90,50;Organisation von Finanzberater Nachname_1186
+36733;36789;Herr;FB;Vorname_1187;Nachname_1187;Finanzberater;22221;23788;0,90,50;Organisation von Finanzberater Nachname_1187
+47332;52177;Frau;FB;Vorname_1188;Nachname_1188;Finanzberater;11570;9599;150,54,52;Organisation von Finanzberater Nachname_1188
+40571;52367;Frau;FB;Vorname_1189;Nachname_1189;Finanzberater;10779;6805;150,54,52;Organisation von Finanzberater Nachname_1189
+72379;71038;Herr;FB;Vorname_1190;Nachname_1190;Finanzberater;89818;78534;150,54,52;Organisation von Finanzberater Nachname_1190
+42121;42475;Frau;TM;Vorname_1191;Nachname_1191;Teammanager;183618;98094;150,54,52;Organisation von Teammanager Nachname_1191
+42036;14721;Herr;FT;Vorname_1192;Nachname_1192;Finanzberater Trainee;17833;8191;150,54,52;Organisation von Finanzberater Trainee Nachname_1192
+79472;80613;Herr;FB;Vorname_1193;Nachname_1193;Finanzberater;48204;35893;150,54,52;Organisation von Finanzberater Nachname_1193
+51449;52393;Frau;FT;Vorname_1194;Nachname_1194;Finanzberater Trainee;32724;23943;150,54,52;Organisation von Finanzberater Trainee Nachname_1194
+20814;20862;Herr;TL;Vorname_1195;Nachname_1195;Teamleiter;139129;120193;150,54,52;Organisation von Teamleiter Nachname_1195
+81674;66811;Herr;FB;Vorname_1196;Nachname_1196;Finanzberater;66292;61351;150,54,52;Organisation von Finanzberater Nachname_1196
+72949;79266;Herr;FB;Vorname_1197;Nachname_1197;Finanzberater;15721;10666;150,54,52;Organisation von Finanzberater Nachname_1197
+70159;70508;Herr;FB;Vorname_1198;Nachname_1198;Finanzberater;22989;13166;150,54,52;Organisation von Finanzberater Nachname_1198
+86797;86762;Herr;FB;Vorname_1199;Nachname_1199;Finanzberater;36896;30524;150,54,52;Organisation von Finanzberater Nachname_1199
+62905;22323;Herr;FT;Vorname_1200;Nachname_1200;Finanzberater Trainee;6616;11525;0,90,50;Organisation von Finanzberater Trainee Nachname_1200
+95529;51704;Herr;FB;Vorname_1201;Nachname_1201;Finanzberater;21306;34123;0,90,50;Organisation von Finanzberater Nachname_1201
+48095;48521;Herr;FB;Vorname_1202;Nachname_1202;Finanzberater;35373;36760;0,90,50;Organisation von Finanzberater Nachname_1202
+14539;14560;Herr;FT;Vorname_1203;Nachname_1203;Finanzberater Trainee;47136;21231;150,54,52;Organisation von Finanzberater Trainee Nachname_1203
+61637;45063;Herr;FB;Vorname_1204;Nachname_1204;Finanzberater;35383;36241;0,90,50;Organisation von Finanzberater Nachname_1204
+50277;50466;Herr;BA;Vorname_1205;Nachname_1205;Beraterassistent;9680;9956;0,90,50;Organisation von Beraterassistent Nachname_1205
+62905;22435;Herr;FT;Vorname_1206;Nachname_1206;Finanzberater Trainee;9606;6952;150,54,52;Organisation von Finanzberater Trainee Nachname_1206
+36633;36746;Herr;FB;Vorname_1207;Nachname_1207;Finanzberater;54224;37909;150,54,52;Organisation von Finanzberater Nachname_1207
+73041;74548;Frau;TL;Vorname_1208;Nachname_1208;Teamleiter;42814;20704;150,54,52;Organisation von Teamleiter Nachname_1208
+42350;43588;Herr;FB;Vorname_1209;Nachname_1209;Finanzberater;196568;194455;150,54,52;Organisation von Finanzberater Nachname_1209
+43016;16987;Herr;FB;Vorname_1210;Nachname_1210;Finanzberater;110055;49368;150,54,52;Organisation von Finanzberater Nachname_1210
+51821;22349;Herr;TL;Vorname_1211;Nachname_1211;Teamleiter;179864;77601;150,54,52;Organisation von Teamleiter Nachname_1211
+44631;38250;Frau;FB;Vorname_1212;Nachname_1212;Finanzberater;64746;63049;150,54,52;Organisation von Finanzberater Nachname_1212
+40870;45841;Herr;TL;Vorname_1213;Nachname_1213;Teamleiter;200224;128155;150,54,52;Organisation von Teamleiter Nachname_1213
+74461;97886;Herr;FB;Vorname_1214;Nachname_1214;Finanzberater;67508;67615;0,90,50;Organisation von Finanzberater Nachname_1214
+63399;79654;Frau;FT;Vorname_1215;Nachname_1215;Finanzberater Trainee;57383;34431;150,54,52;Organisation von Finanzberater Trainee Nachname_1215
+62584;63051;Herr;TM;Vorname_1216;Nachname_1216;Teammanager;284381;167272;150,54,52;Organisation von Teammanager Nachname_1216
+83401;93999;Frau;FB;Vorname_1217;Nachname_1217;Finanzberater;15611;1617;150,54,52;Organisation von Finanzberater Nachname_1217
+77010;69190;Frau;FB;Vorname_1218;Nachname_1218;Finanzberater;31603;3075;150,54,52;Organisation von Finanzberater Nachname_1218
+36895;36907;Herr;FB;Vorname_1219;Nachname_1219;Finanzberater;30323;29981;150,54,52;Organisation von Finanzberater Nachname_1219
+81712;95946;Herr;FB;Vorname_1220;Nachname_1220;Finanzberater;42366;31517;150,54,52;Organisation von Finanzberater Nachname_1220
+48095;44999;Herr;FB;Vorname_1221;Nachname_1221;Finanzberater;105844;114049;0,90,50;Organisation von Finanzberater Nachname_1221
+60071;60084;Frau;TL;Vorname_1222;Nachname_1222;Teamleiter;41332;37841;150,54,52;Organisation von Teamleiter Nachname_1222
+45040;62368;Herr;TM;Vorname_1223;Nachname_1223;Teammanager;616169;631970;0,90,50;Organisation von Teammanager Nachname_1223
+86671;86673;Herr;FB;Vorname_1224;Nachname_1224;Finanzberater;54867;53848;150,54,52;Organisation von Finanzberater Nachname_1224
+20989;67081;Herr;FB;Vorname_1225;Nachname_1225;Finanzberater;5490;38;150,54,52;Organisation von Finanzberater Nachname_1225
+20928;21527;Frau;FB;Vorname_1226;Nachname_1226;Finanzberater;30749;37381;0,90,50;Organisation von Finanzberater Nachname_1226
+86696;86520;Herr;FB;Vorname_1227;Nachname_1227;Finanzberater;126174;42648;150,54,52;Organisation von Finanzberater Nachname_1227
+36584;31897;Herr;FT;Vorname_1228;Nachname_1228;Finanzberater Trainee;4855;4652;150,54,52;Organisation von Finanzberater Trainee Nachname_1228
+43016;43898;Herr;TL;Vorname_1229;Nachname_1229;Teamleiter;119919;91887;150,54,52;Organisation von Teamleiter Nachname_1229
+60824;16527;Herr;BAA;Vorname_1230;Nachname_1230;Beraterassistent in Ausbildung;206;4358;0,90,50;Organisation von Beraterassistent in Ausbildung Nachname_1230
+12973;13254;Herr;TL;Vorname_1231;Nachname_1231;Teamleiter;152400;191476;0,90,50;Organisation von Teamleiter Nachname_1231
+86681;78347;Herr;FB;Vorname_1232;Nachname_1232;Finanzberater;1677;2;150,54,52;Organisation von Finanzberater Nachname_1232
+21580;22083;Herr;FB;Vorname_1233;Nachname_1233;Finanzberater;45124;39945;150,54,52;Organisation von Finanzberater Nachname_1233
+88455;97515;Herr;TL;Vorname_1234;Nachname_1234;Teamleiter;150951;82040;150,54,52;Organisation von Teamleiter Nachname_1234
+41437;17464;Herr;TL;Vorname_1235;Nachname_1235;Teamleiter;167087;124626;150,54,52;Organisation von Teamleiter Nachname_1235
+20848;63097;Herr;TL;Vorname_1236;Nachname_1236;Teamleiter;270755;224858;150,54,52;Organisation von Teamleiter Nachname_1236
+63097;22334;Herr;BAA;Vorname_1237;Nachname_1237;Beraterassistent in Ausbildung;1031;20;150,54,52;Organisation von Beraterassistent in Ausbildung Nachname_1237
+45937;46791;Herr;FB;Vorname_1238;Nachname_1238;Finanzberater;104396;71645;150,54,52;Organisation von Finanzberater Nachname_1238
+43023;46626;Herr;TL;Vorname_1239;Nachname_1239;Teamleiter;242692;134792;150,54,52;Organisation von Teamleiter Nachname_1239
+72299;51517;Frau;TL;Vorname_1240;Nachname_1240;Teamleiter;6848;2733;150,54,52;Organisation von Teamleiter Nachname_1240
+13315;61107;Herr;FB;Vorname_1241;Nachname_1241;Finanzberater;541998;439188;150,54,52;Organisation von Finanzberater Nachname_1241
+68241;40608;Herr;TL;Vorname_1242;Nachname_1242;Teamleiter;139484;88683;150,54,52;Organisation von Teamleiter Nachname_1242
+63399;90364;Herr;FB;Vorname_1243;Nachname_1243;Finanzberater;240609;210052;150,54,52;Organisation von Finanzberater Nachname_1243
+36742;31829;Herr;FT;Vorname_1244;Nachname_1244;Finanzberater Trainee;10071;5057;150,54,52;Organisation von Finanzberater Trainee Nachname_1244
+41477;46277;Herr;FB;Vorname_1245;Nachname_1245;Finanzberater;55928;55412;150,54,52;Organisation von Finanzberater Nachname_1245
+86679;86737;Herr;FT;Vorname_1246;Nachname_1246;Finanzberater Trainee;37079;19663;150,54,52;Organisation von Finanzberater Trainee Nachname_1246
+79073;79554;Frau;FT;Vorname_1247;Nachname_1247;Finanzberater Trainee;56067;53891;150,54,52;Organisation von Finanzberater Trainee Nachname_1247
+1081;66401;Herr;TL;Vorname_1248;Nachname_1248;Teamleiter;172506;114820;150,54,52;Organisation von Teamleiter Nachname_1248
+36733;32256;Herr;FB;Vorname_1249;Nachname_1249;Finanzberater;3060;3649;0,90,50;Organisation von Finanzberater Nachname_1249
+80326;90622;Herr;TM;Vorname_1250;Nachname_1250;Teammanager;320408;234111;150,54,52;Organisation von Teammanager Nachname_1250
+99518;43849;Herr;FB;Vorname_1251;Nachname_1251;Finanzberater;25227;4649;150,54,52;Organisation von Finanzberater Nachname_1251
+86603;86635;Frau;TM;Vorname_1252;Nachname_1252;Teammanager;1165;7261;0,90,50;Organisation von Teammanager Nachname_1252
+86603;86608;Herr;FB;Vorname_1253;Nachname_1253;Finanzberater;68494;52953;150,54,52;Organisation von Finanzberater Nachname_1253
+81668;98876;Frau;BA;Vorname_1254;Nachname_1254;Beraterassistent;12;13;0,90,50;Organisation von Beraterassistent Nachname_1254
+9044;81668;Herr;MG;Vorname_1255;Nachname_1255;Manager;1445952;1026569;150,54,52;Organisation von Manager Nachname_1255
+17542;47063;Frau;TL;Vorname_1256;Nachname_1256;Teamleiter;69470;64481;150,54,52;Organisation von Teamleiter Nachname_1256
+50677;51614;Herr;FB;Vorname_1257;Nachname_1257;Finanzberater;34715;33899;150,54,52;Organisation von Finanzberater Nachname_1257
+42565;42481;Herr;FB;Vorname_1258;Nachname_1258;Finanzberater;156926;120475;150,54,52;Organisation von Finanzberater Nachname_1258
+42050;18864;Herr;FB;Vorname_1259;Nachname_1259;Finanzberater;86861;63347;150,54,52;Organisation von Finanzberater Nachname_1259
+80326;95434;Herr;TL;Vorname_1260;Nachname_1260;Teamleiter;83490;68651;150,54,52;Organisation von Teamleiter Nachname_1260
+42565;42132;Herr;FB;Vorname_1261;Nachname_1261;Finanzberater;2592;1040;150,54,52;Organisation von Finanzberater Nachname_1261
+49612;18703;Herr;FB;Vorname_1262;Nachname_1262;Finanzberater;46774;44639;150,54,52;Organisation von Finanzberater Nachname_1262
+60824;14836;Herr;FB;Vorname_1263;Nachname_1263;Finanzberater;39826;21639;150,54,52;Organisation von Finanzberater Nachname_1263
+81132;94139;Frau;FB;Vorname_1264;Nachname_1264;Finanzberater;29141;9105;150,54,52;Organisation von Finanzberater Nachname_1264
+62922;21865;Herr;FB;Vorname_1265;Nachname_1265;Finanzberater;31035;28818;150,54,52;Organisation von Finanzberater Nachname_1265
+42350;83319;Herr;TL;Vorname_1266;Nachname_1266;Teamleiter;55467;57251;0,90,50;Organisation von Teamleiter Nachname_1266
+75558;76186;Frau;FB;Vorname_1267;Nachname_1267;Finanzberater;37919;31720;150,54,52;Organisation von Finanzberater Nachname_1267
+90190;93874;Herr;FB;Vorname_1268;Nachname_1268;Finanzberater;3358;926;150,54,52;Organisation von Finanzberater Nachname_1268
+80326;83954;Herr;TL;Vorname_1269;Nachname_1269;Teamleiter;122799;85549;150,54,52;Organisation von Teamleiter Nachname_1269
+70211;55898;Herr;TL;Vorname_1270;Nachname_1270;Teamleiter;176808;125410;150,54,52;Organisation von Teamleiter Nachname_1270
+21580;84660;Herr;FB;Vorname_1271;Nachname_1271;Finanzberater;119720;157780;0,90,50;Organisation von Finanzberater Nachname_1271
+62539;63045;Herr;FB;Vorname_1272;Nachname_1272;Finanzberater;62070;51674;150,54,52;Organisation von Finanzberater Nachname_1272
+84681;20137;Herr;FB;Vorname_1273;Nachname_1273;Finanzberater;20829;29888;0,90,50;Organisation von Finanzberater Nachname_1273
+45414;38304;Frau;FB;Vorname_1274;Nachname_1274;Finanzberater;78232;63904;150,54,52;Organisation von Finanzberater Nachname_1274
+69102;62446;Herr;FB;Vorname_1275;Nachname_1275;Finanzberater;105908;97377;150,54,52;Organisation von Finanzberater Nachname_1275
+20928;51869;Herr;FB;Vorname_1276;Nachname_1276;Finanzberater;53275;55527;0,90,50;Organisation von Finanzberater Nachname_1276
+20989;62705;Herr;FT;Vorname_1277;Nachname_1277;Finanzberater Trainee;2542;1547;150,54,52;Organisation von Finanzberater Trainee Nachname_1277
+43827;16479;Herr;TL;Vorname_1278;Nachname_1278;Teamleiter;44531;5543;150,54,52;Organisation von Teamleiter Nachname_1278
+20848;22055;Herr;FB;Vorname_1279;Nachname_1279;Finanzberater;28044;8106;150,54,52;Organisation von Finanzberater Nachname_1279
+84046;15235;Herr;TL;Vorname_1280;Nachname_1280;Teamleiter;98036;71498;150,54,52;Organisation von Teamleiter Nachname_1280
+75249;71043;Herr;FB;Vorname_1281;Nachname_1281;Finanzberater;78434;35417;150,54,52;Organisation von Finanzberater Nachname_1281
+17542;51276;Frau;FT;Vorname_1282;Nachname_1282;Finanzberater Trainee;3594;1458;150,54,52;Organisation von Finanzberater Trainee Nachname_1282
+88378;67122;Frau;FB;Vorname_1283;Nachname_1283;Finanzberater;262239;203486;150,54,52;Organisation von Finanzberater Nachname_1283
+45040;61364;Herr;TM;Vorname_1284;Nachname_1284;Teammanager;269576;117034;150,54,52;Organisation von Teammanager Nachname_1284
+62707;21627;Herr;BA;Vorname_1285;Nachname_1285;Beraterassistent;4051;2193;150,54,52;Organisation von Beraterassistent Nachname_1285
+11045;12973;Herr;TM;Vorname_1286;Nachname_1286;Teammanager;461678;429269;150,54,52;Organisation von Teammanager Nachname_1286
+80309;44139;Herr;TL;Vorname_1287;Nachname_1287;Teamleiter;31233;39231;0,90,50;Organisation von Teamleiter Nachname_1287
+37116;35675;Herr;TL;Vorname_1288;Nachname_1288;Teamleiter;158886;96774;150,54,52;Organisation von Teamleiter Nachname_1288
+96092;92446;Herr;FB;Vorname_1289;Nachname_1289;Finanzberater;129655;126987;150,54,52;Organisation von Finanzberater Nachname_1289
+83468;96092;Herr;TL;Vorname_1290;Nachname_1290;Teamleiter;300147;204857;150,54,52;Organisation von Teamleiter Nachname_1290
+62232;62308;Herr;TL;Vorname_1291;Nachname_1291;Teamleiter;182231;205335;0,90,50;Organisation von Teamleiter Nachname_1291
+41477;17802;Herr;BAVM;Vorname_1292;Nachname_1292;Manager bAV;172868;179547;0,90,50;Organisation von Manager bAV Nachname_1292
+42036;41956;Herr;FB;Vorname_1293;Nachname_1293;Finanzberater;55250;34483;150,54,52;Organisation von Finanzberater Nachname_1293
+65356;46979;Herr;FB;Vorname_1294;Nachname_1294;Finanzberater;20232;12735;150,54,52;Organisation von Finanzberater Nachname_1294
+81469;79764;Herr;FT;Vorname_1295;Nachname_1295;Finanzberater Trainee;4851;2967;150,54,52;Organisation von Finanzberater Trainee Nachname_1295
+95924;47273;Herr;TL;Vorname_1296;Nachname_1296;Teamleiter;50488;37824;150,54,52;Organisation von Teamleiter Nachname_1296
+48095;48352;Herr;TM;Vorname_1297;Nachname_1297;Teammanager;356451;257807;150,54,52;Organisation von Teammanager Nachname_1297
+49049;19879;Herr;FB;Vorname_1298;Nachname_1298;Finanzberater;37815;39444;0,90,50;Organisation von Finanzberater Nachname_1298
+77778;55007;Herr;FB;Vorname_1299;Nachname_1299;Finanzberater;48353;79163;0,90,50;Organisation von Finanzberater Nachname_1299
+42050;47939;Herr;FB;Vorname_1300;Nachname_1300;Finanzberater;29851;16981;150,54,52;Organisation von Finanzberater Nachname_1300
+11045;77997;Herr;FB;Vorname_1301;Nachname_1301;Finanzberater;81645;43549;150,54,52;Organisation von Finanzberater Nachname_1301
+62308;14644;Herr;FB;Vorname_1302;Nachname_1302;Finanzberater;17661;19998;0,90,50;Organisation von Finanzberater Nachname_1302
+49049;52318;Herr;TL;Vorname_1303;Nachname_1303;Teamleiter;63286;41760;150,54,52;Organisation von Teamleiter Nachname_1303
+79472;79828;Herr;FB;Vorname_1304;Nachname_1304;Finanzberater;22092;13263;150,54,52;Organisation von Finanzberater Nachname_1304
+51802;22350;Frau;TL;Vorname_1305;Nachname_1305;Teamleiter;50538;56294;0,90,50;Organisation von Teamleiter Nachname_1305
+40237;59062;Herr;FB;Vorname_1306;Nachname_1306;Finanzberater;129936;42506;150,54,52;Organisation von Finanzberater Nachname_1306
+40788;47887;Herr;FB;Vorname_1307;Nachname_1307;Finanzberater;46482;68204;0,90,50;Organisation von Finanzberater Nachname_1307
+62508;62905;Herr;TL;Vorname_1308;Nachname_1308;Teamleiter;152630;107849;150,54,52;Organisation von Teamleiter Nachname_1308
+41437;46341;Herr;TM;Vorname_1309;Nachname_1309;Teammanager;923744;693157;150,54,52;Organisation von Teammanager Nachname_1309
+45040;77010;Herr;MG;Vorname_1310;Nachname_1310;Manager;1508694;944421;150,54,52;Organisation von Manager Nachname_1310
+88455;78775;Frau;BA;Vorname_1311;Nachname_1311;Beraterassistent;11504;616;150,54,52;Organisation von Beraterassistent Nachname_1311
+78361;78406;Herr;FT;Vorname_1312;Nachname_1312;Finanzberater Trainee;23160;64385;0,90,50;Organisation von Finanzberater Trainee Nachname_1312
+30331;30359;Herr;FB;Vorname_1313;Nachname_1313;Finanzberater;20188;27950;0,90,50;Organisation von Finanzberater Nachname_1313
+92164;85173;Herr;FB;Vorname_1314;Nachname_1314;Finanzberater;74889;44476;150,54,52;Organisation von Finanzberater Nachname_1314
+50608;79568;Herr;FB;Vorname_1315;Nachname_1315;Finanzberater;20512;24431;0,90,50;Organisation von Finanzberater Nachname_1315
+97515;50233;Frau;FB;Vorname_1316;Nachname_1316;Finanzberater;91407;32417;150,54,52;Organisation von Finanzberater Nachname_1316
+74461;97864;Herr;BAVM;Vorname_1317;Nachname_1317;Manager bAV;153375;105240;150,54,52;Organisation von Manager bAV Nachname_1317
+45937;47263;Herr;TL;Vorname_1318;Nachname_1318;Teamleiter;109022;75379;150,54,52;Organisation von Teamleiter Nachname_1318
+43827;95759;Frau;TL;Vorname_1319;Nachname_1319;Teamleiter;60088;16008;150,54,52;Organisation von Teamleiter Nachname_1319
+21580;20848;Herr;MG;Vorname_1320;Nachname_1320;Manager;1090132;914087;150,54,52;Organisation von Manager Nachname_1320
+20848;62539;Frau;TM;Vorname_1321;Nachname_1321;Teammanager;579507;516969;150,54,52;Organisation von Teammanager Nachname_1321
+86681;78233;Herr;TL;Vorname_1322;Nachname_1322;Teamleiter;114907;47050;150,54,52;Organisation von Teamleiter Nachname_1322
+66850;89502;Herr;FB;Vorname_1323;Nachname_1323;Finanzberater;79364;58299;150,54,52;Organisation von Finanzberater Nachname_1323
+18898;60836;Herr;FB;Vorname_1324;Nachname_1324;Finanzberater;11174;11400;0,90,50;Organisation von Finanzberater Nachname_1324
+80309;43319;Herr;FB;Vorname_1325;Nachname_1325;Finanzberater;121187;74679;150,54,52;Organisation von Finanzberater Nachname_1325
+44631;38062;Frau;BA;Vorname_1326;Nachname_1326;Beraterassistent;8489;2202;150,54,52;Organisation von Beraterassistent Nachname_1326
+21580;21834;Herr;FB;Vorname_1327;Nachname_1327;Finanzberater;83950;51556;150,54,52;Organisation von Finanzberater Nachname_1327
+56383;51117;Herr;TL;Vorname_1328;Nachname_1328;Teamleiter;89862;100311;0,90,50;Organisation von Teamleiter Nachname_1328
+43023;40650;Frau;FB;Vorname_1329;Nachname_1329;Finanzberater;73640;39368;150,54,52;Organisation von Finanzberater Nachname_1329
+49998;51647;Frau;FB;Vorname_1330;Nachname_1330;Finanzberater;33223;15212;150,54,52;Organisation von Finanzberater Nachname_1330
+45414;46543;Frau;FB;Vorname_1331;Nachname_1331;Finanzberater;38043;74432;0,90,50;Organisation von Finanzberater Nachname_1331
+72949;40575;Herr;TL;Vorname_1332;Nachname_1332;Teamleiter;96764;99800;0,90,50;Organisation von Teamleiter Nachname_1332
+13315;62046;Herr;TL;Vorname_1333;Nachname_1333;Teamleiter;144845;116398;150,54,52;Organisation von Teamleiter Nachname_1333
+50518;52662;Frau;BA;Vorname_1334;Nachname_1334;Beraterassistent;4022;3112;150,54,52;Organisation von Beraterassistent Nachname_1334
+83401;14345;Herr;FB;Vorname_1335;Nachname_1335;Finanzberater;49778;21223;150,54,52;Organisation von Finanzberater Nachname_1335
+65340;19716;Herr;FB;Vorname_1336;Nachname_1336;Finanzberater;30798;28291;150,54,52;Organisation von Finanzberater Nachname_1336
+95933;94449;Frau;FB;Vorname_1337;Nachname_1337;Finanzberater;2668;10016;0,90,50;Organisation von Finanzberater Nachname_1337
+79472;79826;Herr;BA;Vorname_1338;Nachname_1338;Beraterassistent;6884;274;150,54,52;Organisation von Beraterassistent Nachname_1338
+81469;79501;Herr;FB;Vorname_1339;Nachname_1339;Finanzberater;46156;23017;150,54,52;Organisation von Finanzberater Nachname_1339
+17464;46372;Herr;FB;Vorname_1340;Nachname_1340;Finanzberater;16083;15563;150,54,52;Organisation von Finanzberater Nachname_1340
+45562;46594;Herr;TL;Vorname_1341;Nachname_1341;Teamleiter;115242;96568;150,54,52;Organisation von Teamleiter Nachname_1341
+61818;15772;Frau;BAA;Vorname_1342;Nachname_1342;Beraterassistent in Ausbildung;4161;3125;150,54,52;Organisation von Beraterassistent in Ausbildung Nachname_1342
+20862;20999;Herr;FB;Vorname_1343;Nachname_1343;Finanzberater;20087;18622;150,54,52;Organisation von Finanzberater Nachname_1343
+17542;46180;Herr;TL;Vorname_1344;Nachname_1344;Teamleiter;93654;60291;150,54,52;Organisation von Teamleiter Nachname_1344
+81737;88410;Herr;TL;Vorname_1345;Nachname_1345;Teamleiter;126344;50451;150,54,52;Organisation von Teamleiter Nachname_1345
+93928;94608;Herr;FB;Vorname_1346;Nachname_1346;Finanzberater;18373;9260;150,54,52;Organisation von Finanzberater Nachname_1346
+42350;41291;Herr;FB;Vorname_1347;Nachname_1347;Finanzberater;43119;18000;150,54,52;Organisation von Finanzberater Nachname_1347
+66823;65367;Herr;FB;Vorname_1348;Nachname_1348;Finanzberater;60903;111093;0,90,50;Organisation von Finanzberater Nachname_1348
+14066;64921;Herr;FB;Vorname_1349;Nachname_1349;Finanzberater;17597;4713;150,54,52;Organisation von Finanzberater Nachname_1349
+11045;98720;Herr;FB;Vorname_1350;Nachname_1350;Finanzberater;34525;37227;0,90,50;Organisation von Finanzberater Nachname_1350
+36392;14266;Herr;TL;Vorname_1351;Nachname_1351;Teamleiter;43531;67576;0,90,50;Organisation von Teamleiter Nachname_1351
+96247;57346;Frau;FB;Vorname_1352;Nachname_1352;Finanzberater;3746;5205;0,90,50;Organisation von Finanzberater Nachname_1352
+46341;46474;Herr;TL;Vorname_1353;Nachname_1353;Teamleiter;84058;72987;150,54,52;Organisation von Teamleiter Nachname_1353
+74360;76247;Herr;FB;Vorname_1354;Nachname_1354;Finanzberater;28886;24240;150,54,52;Organisation von Finanzberater Nachname_1354
+89069;97098;Herr;FB;Vorname_1355;Nachname_1355;Finanzberater;56678;42176;150,54,52;Organisation von Finanzberater Nachname_1355
+63097;51794;Frau;FB;Vorname_1356;Nachname_1356;Finanzberater;58529;55002;150,54,52;Organisation von Finanzberater Nachname_1356
+51400;52453;Herr;BA;Vorname_1357;Nachname_1357;Beraterassistent;360;170;150,54,52;Organisation von Beraterassistent Nachname_1357
+74000;74431;Frau;FB;Vorname_1358;Nachname_1358;Finanzberater;8362;8932;0,90,50;Organisation von Finanzberater Nachname_1358
+79208;79287;Herr;TL;Vorname_1359;Nachname_1359;Teamleiter;131877;154797;0,90,50;Organisation von Teamleiter Nachname_1359
+60884;14916;Herr;TL;Vorname_1360;Nachname_1360;Teamleiter;72724;138519;0,90,50;Organisation von Teamleiter Nachname_1360
+96247;63369;Herr;FB;Vorname_1361;Nachname_1361;Finanzberater;36349;38732;0,90,50;Organisation von Finanzberater Nachname_1361
+66893;99514;Herr;TL;Vorname_1362;Nachname_1362;Teamleiter;236079;165745;150,54,52;Organisation von Teamleiter Nachname_1362
+35787;36646;Herr;FB;Vorname_1363;Nachname_1363;Finanzberater;71356;75181;0,90,50;Organisation von Finanzberater Nachname_1363
+80210;80230;Herr;FB;Vorname_1364;Nachname_1364;Finanzberater;123912;81682;150,54,52;Organisation von Finanzberater Nachname_1364
+86603;86765;Herr;FB;Vorname_1365;Nachname_1365;Finanzberater;144540;122364;150,54,52;Organisation von Finanzberater Nachname_1365
+36584;31771;Herr;FB;Vorname_1366;Nachname_1366;Finanzberater;98977;70615;150,54,52;Organisation von Finanzberater Nachname_1366
+36392;10854;Herr;TL;Vorname_1367;Nachname_1367;Teamleiter;300623;129499;150,54,52;Organisation von Teamleiter Nachname_1367
+86603;77918;Herr;FT;Vorname_1368;Nachname_1368;Finanzberater Trainee;4;0;150,54,52;Organisation von Finanzberater Trainee Nachname_1368
+78361;78298;Frau;FT;Vorname_1369;Nachname_1369;Finanzberater Trainee;13384;9817;150,54,52;Organisation von Finanzberater Trainee Nachname_1369
+96765;63526;Herr;FB;Vorname_1370;Nachname_1370;Finanzberater;132228;120082;150,54,52;Organisation von Finanzberater Nachname_1370
+37146;36671;Herr;FT;Vorname_1371;Nachname_1371;Finanzberater Trainee;11693;943;150,54,52;Organisation von Finanzberater Trainee Nachname_1371
+41437;47332;Herr;TL;Vorname_1372;Nachname_1372;Teamleiter;75124;58362;150,54,52;Organisation von Teamleiter Nachname_1372
+71934;79357;Herr;TL;Vorname_1373;Nachname_1373;Teamleiter;204294;111199;150,54,52;Organisation von Teamleiter Nachname_1373
+62232;62679;Herr;FB;Vorname_1374;Nachname_1374;Finanzberater;135132;118246;150,54,52;Organisation von Finanzberater Nachname_1374
+81674;98811;Herr;TL;Vorname_1375;Nachname_1375;Teamleiter;120927;59374;150,54,52;Organisation von Teamleiter Nachname_1375
+31813;31846;Herr;FB;Vorname_1376;Nachname_1376;Finanzberater;20973;14917;150,54,52;Organisation von Finanzberater Nachname_1376
+37027;37484;Herr;TL;Vorname_1377;Nachname_1377;Teamleiter;217953;126050;150,54,52;Organisation von Teamleiter Nachname_1377
+37484;31833;Frau;BA;Vorname_1378;Nachname_1378;Beraterassistent;1503;601;150,54,52;Organisation von Beraterassistent Nachname_1378
+35151;37027;Herr;TM;Vorname_1379;Nachname_1379;Teammanager;457376;318959;150,54,52;Organisation von Teammanager Nachname_1379
+80207;92264;Herr;FB;Vorname_1380;Nachname_1380;Finanzberater;28794;29460;0,90,50;Organisation von Finanzberater Nachname_1380
+61364;62348;Frau;FB;Vorname_1381;Nachname_1381;Finanzberater;14741;12566;150,54,52;Organisation von Finanzberater Nachname_1381
+17464;47174;Herr;FB;Vorname_1382;Nachname_1382;Finanzberater;19716;5519;150,54,52;Organisation von Finanzberater Nachname_1382
+78361;78372;Herr;FT;Vorname_1383;Nachname_1383;Finanzberater Trainee;29410;12508;150,54,52;Organisation von Finanzberater Trainee Nachname_1383
+66850;83229;Herr;TL;Vorname_1384;Nachname_1384;Teamleiter;85651;60453;150,54,52;Organisation von Teamleiter Nachname_1384
+52399;52599;Frau;FT;Vorname_1385;Nachname_1385;Finanzberater Trainee;7572;1075;150,54,52;Organisation von Finanzberater Trainee Nachname_1385
+65396;16507;Herr;FT;Vorname_1386;Nachname_1386;Finanzberater Trainee;7880;4421;150,54,52;Organisation von Finanzberater Trainee Nachname_1386
+36867;36969;Herr;FB;Vorname_1387;Nachname_1387;Finanzberater;25286;12902;150,54,52;Organisation von Finanzberater Nachname_1387
+45414;39326;Herr;TL;Vorname_1388;Nachname_1388;Teamleiter;87521;58150;150,54,52;Organisation von Teamleiter Nachname_1388
+51781;52555;Herr;FB;Vorname_1389;Nachname_1389;Finanzberater;96313;60489;150,54,52;Organisation von Finanzberater Nachname_1389
+1081;36733;Herr;TL;Vorname_1390;Nachname_1390;Teamleiter;87843;121538;0,90,50;Organisation von Teamleiter Nachname_1390
+72299;79252;Herr;MG;Vorname_1391;Nachname_1391;Manager;1112179;771572;150,54,52;Organisation von Manager Nachname_1391
+50094;50618;Herr;FB;Vorname_1392;Nachname_1392;Finanzberater;201620;141013;150,54,52;Organisation von Finanzberater Nachname_1392
+64427;98689;Herr;FB;Vorname_1393;Nachname_1393;Finanzberater;35382;21375;150,54,52;Organisation von Finanzberater Nachname_1393
+83954;79637;Herr;FB;Vorname_1394;Nachname_1394;Finanzberater;21681;12885;150,54,52;Organisation von Finanzberater Nachname_1394
+68224;52529;Frau;FT;Vorname_1395;Nachname_1395;Finanzberater Trainee;13569;7309;150,54,52;Organisation von Finanzberater Trainee Nachname_1395
+10854;14231;Herr;FB;Vorname_1396;Nachname_1396;Finanzberater;11400;10166;150,54,52;Organisation von Finanzberater Nachname_1396
+80210;82210;Herr;FB;Vorname_1397;Nachname_1397;Finanzberater;3486;141;150,54,52;Organisation von Finanzberater Nachname_1397
+80210;94954;Frau;FB;Vorname_1398;Nachname_1398;Finanzberater;9809;3153;150,54,52;Organisation von Finanzberater Nachname_1398
+51781;50422;Herr;TL;Vorname_1399;Nachname_1399;Teamleiter;80691;43985;150,54,52;Organisation von Teamleiter Nachname_1399
+43023;48481;Herr;FB;Vorname_1400;Nachname_1400;Finanzberater;36321;33644;150,54,52;Organisation von Finanzberater Nachname_1400
+86603;86744;Herr;FB;Vorname_1401;Nachname_1401;Finanzberater;38349;19070;150,54,52;Organisation von Finanzberater Nachname_1401
+43827;43395;Herr;TL;Vorname_1402;Nachname_1402;Teamleiter;31236;24169;150,54,52;Organisation von Teamleiter Nachname_1402
+88455;50608;Herr;TL;Vorname_1403;Nachname_1403;Teamleiter;238163;237918;150,54,52;Organisation von Teamleiter Nachname_1403
+21536;21658;Herr;FB;Vorname_1404;Nachname_1404;Finanzberater;12219;9014;150,54,52;Organisation von Finanzberater Nachname_1404
+72299;79208;Herr;TM;Vorname_1405;Nachname_1405;Teammanager;480944;470539;150,54,52;Organisation von Teammanager Nachname_1405
+72949;49231;Frau;FINM;Vorname_1406;Nachname_1406;Finanzierungsmanager;82143;2143;150,54,52;Organisation von Finanzierungsmanager Nachname_1406
+95933;57265;Herr;FB;Vorname_1407;Nachname_1407;Finanzberater;25928;37817;0,90,50;Organisation von Finanzberater Nachname_1407
+79342;76641;Frau;FB;Vorname_1408;Nachname_1408;Finanzberater;39692;19271;150,54,52;Organisation von Finanzberater Nachname_1408
+36649;31827;Herr;FB;Vorname_1409;Nachname_1409;Finanzberater;30632;38807;0,90,50;Organisation von Finanzberater Nachname_1409
+77010;75709;Herr;FB;Vorname_1410;Nachname_1410;Finanzberater;50535;37682;150,54,52;Organisation von Finanzberater Nachname_1410
+80207;83943;Herr;FINM;Vorname_1411;Nachname_1411;Finanzierungsmanager;15142;13043;150,54,52;Organisation von Finanzierungsmanager Nachname_1411
+70980;93219;Herr;TL;Vorname_1412;Nachname_1412;Teamleiter;236038;191928;150,54,52;Organisation von Teamleiter Nachname_1412
+40662;13779;Herr;FB;Vorname_1413;Nachname_1413;Finanzberater;51055;31227;150,54,52;Organisation von Finanzberater Nachname_1413
+37027;15017;Herr;FB;Vorname_1414;Nachname_1414;Finanzberater;56939;43425;150,54,52;Organisation von Finanzberater Nachname_1414
+;;;;;;;;;;

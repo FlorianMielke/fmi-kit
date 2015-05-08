@@ -1,0 +1,16 @@
+//
+//  NSObject+AutoDescription.h
+//
+//  Created by Andrew on 26/3/11.
+//  Copyright 2011 ATKit. All rights reserved.
+//
+
+@import Foundation;
+
+// Description based on Reflection, Format: [ClassName {prop1 = val1; prop2 = val2; }]., SuperClass' properties included (until NSObject).
+@interface NSObject (AutoDescription)
+
+// Reflects about self.
+- (NSString *)autoDescription;
+
+@end

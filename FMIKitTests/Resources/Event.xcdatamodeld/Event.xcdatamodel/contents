@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0"
+       lastSavedToolsVersion="3396" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic"
+       iOSVersion="Automatic">
+    <entity name="FMAttendee" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FMEvent"
+                      inverseName="attendees" inverseEntity="FMEvent" syncable="YES"/>
+    </entity>
+    <entity name="FMEvent" syncable="YES">
+        <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="attendees" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FMAttendee"
+                      inverseName="event" inverseEntity="FMAttendee" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="FMEvent" positionX="151" positionY="179" width="128" height="73"/>
+        <element name="FMAttendee" positionX="-45" positionY="156" width="128" height="73"/>
+    </elements>
+</model>

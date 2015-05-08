@@ -1,0 +1,26 @@
+﻿/* Used for button title */
+"Cancel" = "Abbrechen";
+
+/* Used for alert title */
+"Cannot Send Mail" = "E-Mail kann nicht gesendet werden";
+
+/* Used for button title: Choose an existing photo */
+"Choose Photo" = "Foto auswählen";
+
+/* Used for alert message */
+"Configure a mail account in your Settings to send mail." = "Um E-Mails versenden zu können, erstellen Sie in Ihren Einstellungen ein E-Mail Konto.";
+
+/* Used for button title: Delete current photo */
+"Delete Photo" = "Foto löschen";
+
+/* Used for word */
+"OK" = "OK";
+
+/* Used for alert message */
+"Please check your email settings and internet connection." = "Bitte prüfen Sie Ihre E-Mail Einstellungen und Internet Verbindung.";
+
+/* Used for alert title */
+"Sending Mail Failed" = "E-Mail konnte nicht versendet werden";
+
+/* Used for button title: Take a new photo */
+"Take Photo" = "Foto aufnehmen";
