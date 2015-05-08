@@ -41,6 +41,7 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/UIImage+Creation.h>
 #import <FMIKit/UIImage+Masking.h>
 #import <FMIKit/UIImage+Resizing.h>
+#import <FMIKit/UIImage+Scaling.h>
 #import <FMIKit/UILabel+Sizing.h>
 #import <FMIKit/UILabel+StateHandling.h>
 #import <FMIKit/UITableView+IndexPath.h>
