@@ -46,6 +46,9 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/UITableView+Selection.h>
 #import <FMIKit/UIScrollView+Scrolling.h>
 
+#import <FMIKit/FMIAlertView.h>
+#import <FMIKit/FMIKitFactory.h>
+
 #import <FMIKit/FMIAcceptedCell.h>
 #import <FMIKit/FMIBinding.h>
 #import <FMIKit/FMIBindingManager.h>

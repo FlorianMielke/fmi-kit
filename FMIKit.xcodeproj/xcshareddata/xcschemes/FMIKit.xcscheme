@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0630"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,20 +16,6 @@
                BlueprintIdentifier = "171CB9841AFB63C7002BE185"
                BuildableName = "FMIKit.framework"
                BlueprintName = "FMIKit"
-               ReferencedContainer = "container:FMIKit.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "171CB98F1AFB63C7002BE185"
-               BuildableName = "FMIKitTests.xctest"
-               BlueprintName = "FMIKitTests"
                ReferencedContainer = "container:FMIKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
