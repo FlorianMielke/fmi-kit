@@ -8,6 +8,6 @@
 @protocol FMIAlertView <NSObject>
 
 - (void)presentInViewController:(UIViewController *)viewController;
-- (void)dismiss;
+- (void)dismissWithCompletion:(void (^)(void))completion;
 
 @end

@@ -34,8 +34,8 @@
     [viewController presentViewController:self.alertController animated:YES completion:nil];
 }
 
-- (void)dismiss {
-    [self.alertController dismissViewControllerAnimated:YES completion:nil];
+- (void)dismissWithCompletion:(void (^)(void))completion {
+    [self.alertController dismissViewControllerAnimated:YES completion:completion];
 }
 
 - (void)setTitle:(NSString *)title {

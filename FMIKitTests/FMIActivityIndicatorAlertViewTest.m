@@ -73,8 +73,10 @@
 }
 
 - (void)testDismissAlertView_dismissesViewController {
-    [self.alertView dismiss];
-    OCMVerify([self.alertControllerMock dismissViewControllerAnimated:YES completion:nil]);
+    void (^completionBlockMock)(void) = ^{
+    };
+    [self.alertView dismissWithCompletion:completionBlockMock];
+    OCMVerify([self.alertControllerMock dismissViewControllerAnimated:YES completion:completionBlockMock]);
 }
 
 @end
