@@ -186,6 +186,7 @@
 		176F5D3D1AFE3F810004FCA6 /* FMIPhotoMenuActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 176F5D3B1AFE3F810004FCA6 /* FMIPhotoMenuActionSheet.h */; };
 		176F5D3E1AFE3F810004FCA6 /* FMIPhotoMenuActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 176F5D3C1AFE3F810004FCA6 /* FMIPhotoMenuActionSheet.m */; };
 		176F5D401AFE3F9C0004FCA6 /* FMIPhotoMenuActionSheetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 176F5D3F1AFE3F9C0004FCA6 /* FMIPhotoMenuActionSheetTest.m */; };
+		1771CC951B383C71004680B3 /* MFMailComposeViewController+AlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CBA0D1AFB6546002BE185 /* MFMailComposeViewController+AlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17DB10F41AFE08570040EB1E /* FMIActivityIndicatorAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DB10F21AFE08570040EB1E /* FMIActivityIndicatorAlertView.m */; };
 		17DB10F61AFE08E20040EB1E /* FMIActivityIndicatorAlertViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DB10F51AFE08E20040EB1E /* FMIActivityIndicatorAlertViewTest.m */; };
 		17DB10F71AFE0B260040EB1E /* FMIActivityIndicatorAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 17DB10F11AFE08560040EB1E /* FMIActivityIndicatorAlertView.h */; };
@@ -803,6 +804,7 @@
 				171CBA8B1AFB6546002BE185 /* UIImage+Creation.h in Headers */,
 				171CB9E41AFB652B002BE185 /* FMICSVFieldDeserializer.h in Headers */,
 				171CBA6D1AFB6546002BE185 /* NSManagedObjectContext+PersistentStoreAdditions.h in Headers */,
+				1771CC951B383C71004680B3 /* MFMailComposeViewController+AlertView.h in Headers */,
 				171CBA811AFB6546002BE185 /* NSUndoManager+Grouping.h in Headers */,
 				171CBA051AFB652B002BE185 /* FMINumericTextView.h in Headers */,
 				171CBA971AFB6546002BE185 /* UIScrollView+Scrolling.h in Headers */,
