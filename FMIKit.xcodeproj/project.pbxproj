@@ -183,6 +183,9 @@
 		1738D4521AFC948100B96929 /* TestImagePortraitSmallWidth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */; };
 		1738D4531AFC948100B96929 /* TestImageSquared.png in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44B1AFC948100B96929 /* TestImageSquared.png */; };
 		1738D4561AFC99A000B96929 /* FMIKitLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4541AFC99A000B96929 /* FMIKitLocalizable.strings */; };
+		176F5D3D1AFE3F810004FCA6 /* FMIPhotoMenuActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 176F5D3B1AFE3F810004FCA6 /* FMIPhotoMenuActionSheet.h */; };
+		176F5D3E1AFE3F810004FCA6 /* FMIPhotoMenuActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 176F5D3C1AFE3F810004FCA6 /* FMIPhotoMenuActionSheet.m */; };
+		176F5D401AFE3F9C0004FCA6 /* FMIPhotoMenuActionSheetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 176F5D3F1AFE3F9C0004FCA6 /* FMIPhotoMenuActionSheetTest.m */; };
 		17DB10F41AFE08570040EB1E /* FMIActivityIndicatorAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DB10F21AFE08570040EB1E /* FMIActivityIndicatorAlertView.m */; };
 		17DB10F61AFE08E20040EB1E /* FMIActivityIndicatorAlertViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DB10F51AFE08E20040EB1E /* FMIActivityIndicatorAlertViewTest.m */; };
 		17DB10F71AFE0B260040EB1E /* FMIActivityIndicatorAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 17DB10F11AFE08560040EB1E /* FMIActivityIndicatorAlertView.h */; };
@@ -202,6 +205,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1713F5611B330DF800F11E4F /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Warnings.xcconfig; path = Configurations/Warnings.xcconfig; sourceTree = "<group>"; };
 		17167B151AFC762500917BB8 /* FakeBindingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeBindingModel.h; sourceTree = "<group>"; };
 		17167B161AFC762500917BB8 /* FakeBindingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeBindingModel.m; sourceTree = "<group>"; };
 		17167B171AFC762500917BB8 /* FakeBindingObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeBindingObserver.h; sourceTree = "<group>"; };
@@ -396,6 +400,9 @@
 		1738D4571AFC99AC00B96929 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/FMIKitLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		1738D4581AFC99B100B96929 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/FMIKitLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		1738D45C1AFC99C800B96929 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/FMIKitLocalizable.strings; sourceTree = SOURCE_ROOT; };
+		176F5D3B1AFE3F810004FCA6 /* FMIPhotoMenuActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIPhotoMenuActionSheet.h; sourceTree = "<group>"; };
+		176F5D3C1AFE3F810004FCA6 /* FMIPhotoMenuActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIPhotoMenuActionSheet.m; sourceTree = "<group>"; };
+		176F5D3F1AFE3F9C0004FCA6 /* FMIPhotoMenuActionSheetTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIPhotoMenuActionSheetTest.m; path = FMIKitTests/FMIPhotoMenuActionSheetTest.m; sourceTree = SOURCE_ROOT; };
 		17DB10F11AFE08560040EB1E /* FMIActivityIndicatorAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIActivityIndicatorAlertView.h; sourceTree = "<group>"; };
 		17DB10F21AFE08570040EB1E /* FMIActivityIndicatorAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIActivityIndicatorAlertView.m; sourceTree = "<group>"; };
 		17DB10F51AFE08E20040EB1E /* FMIActivityIndicatorAlertViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIActivityIndicatorAlertViewTest.m; path = FMIKitTests/FMIActivityIndicatorAlertViewTest.m; sourceTree = SOURCE_ROOT; };
@@ -424,6 +431,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1713F5601B330DE700F11E4F /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				1713F5611B330DF800F11E4F /* Warnings.xcconfig */,
+			);
+			name = Configurations;
+			sourceTree = "<group>";
+		};
 		17167B141AFC761700917BB8 /* Test Doubles */ = {
 			isa = PBXGroup;
 			children = (
@@ -450,6 +465,7 @@
 				171CB9941AFB63C7002BE185 /* FMIKitTests */,
 				1738D43B1AFC8A8E00B96929 /* Libraries */,
 				171CB9861AFB63C7002BE185 /* Products */,
+				1713F5601B330DE700F11E4F /* Configurations */,
 			);
 			sourceTree = "<group>";
 		};
@@ -617,6 +633,9 @@
 				17DB10F11AFE08560040EB1E /* FMIActivityIndicatorAlertView.h */,
 				17DB10F21AFE08570040EB1E /* FMIActivityIndicatorAlertView.m */,
 				17DB10F51AFE08E20040EB1E /* FMIActivityIndicatorAlertViewTest.m */,
+				176F5D3B1AFE3F810004FCA6 /* FMIPhotoMenuActionSheet.h */,
+				176F5D3C1AFE3F810004FCA6 /* FMIPhotoMenuActionSheet.m */,
+				176F5D3F1AFE3F9C0004FCA6 /* FMIPhotoMenuActionSheetTest.m */,
 				171CB9A71AFB652B002BE185 /* FMIBinding.h */,
 				171CB9A81AFB652B002BE185 /* FMIBinding.m */,
 				171CB9A91AFB652B002BE185 /* FMIBindingManager.h */,
@@ -762,6 +781,7 @@
 				171CB9EA1AFB652B002BE185 /* FMIDuration.h in Headers */,
 				171CBA6B1AFB6546002BE185 /* NSIndexSet+Initialization.h in Headers */,
 				171CBA791AFB6546002BE185 /* NSString+FileName.h in Headers */,
+				176F5D3D1AFE3F810004FCA6 /* FMIPhotoMenuActionSheet.h in Headers */,
 				171CBA671AFB6546002BE185 /* NSFileManager+DirectoryAdditions.h in Headers */,
 				171CBA591AFB6546002BE185 /* NSArray+Querying.h in Headers */,
 				171CB9F21AFB652B002BE185 /* FMIFieldDescription.h in Headers */,
@@ -942,6 +962,7 @@
 				171CBA021AFB652B002BE185 /* FMINestedTableView.m in Sources */,
 				171CBA7A1AFB6546002BE185 /* NSString+FileName.m in Sources */,
 				171CBA8C1AFB6546002BE185 /* UIImage+Creation.m in Sources */,
+				176F5D3E1AFE3F810004FCA6 /* FMIPhotoMenuActionSheet.m in Sources */,
 				171CBA981AFB6546002BE185 /* UIScrollView+Scrolling.m in Sources */,
 				171CBA841AFB6546002BE185 /* SKProduct+LocalizedPrice.m in Sources */,
 				171CBA6A1AFB6546002BE185 /* NSIndexPath+Comparing.m in Sources */,
@@ -1005,6 +1026,7 @@
 				17167B441AFC766600917BB8 /* NSBundle+ConfigurationTest.m in Sources */,
 				17167B431AFC766600917BB8 /* NSArray+QueryingTests.m in Sources */,
 				17167B701AFC774A00917BB8 /* FMIBindingManagerTests.m in Sources */,
+				176F5D401AFE3F9C0004FCA6 /* FMIPhotoMenuActionSheetTest.m in Sources */,
 				17167B4D1AFC766600917BB8 /* NSManagedObjectContext+PersistentStoreAdditionsTests.m in Sources */,
 				17167B761AFC774A00917BB8 /* FMIDurationTests.m in Sources */,
 				17167B241AFC762500917BB8 /* FakeDatePickerControllerDelegate.m in Sources */,
@@ -1066,6 +1088,7 @@
 /* Begin XCBuildConfiguration section */
 		171CB9991AFB63C7002BE185 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1713F5611B330DF800F11E4F /* Warnings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1156,6 +1179,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1172,6 +1196,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

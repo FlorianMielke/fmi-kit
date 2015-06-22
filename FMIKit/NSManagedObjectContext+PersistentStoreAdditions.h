@@ -14,7 +14,7 @@
 
 /**
  * Checks whether the persistent store is emtpy.
- * @param entities A list of entities to check.
+ * @param entityNames A list of entities to check.
  * @return YES if no entities of given entities are found. Otherwise NO.
  */
 - (BOOL)persistentStoreIsEmtpyForEntities:(NSArray *)entityNames;

@@ -7,7 +7,6 @@
 
 @import Foundation;
 
-
 /**
  * Adds initialization methods to NSIndexSet.
  */
@@ -15,7 +14,7 @@
 
 /**
  * Creates and returns an index set containing indexes from a given array (objects have to be with type NSNumber).
- * @param An array.
+ * @param anArray The given array.
  */
 + (NSIndexSet *)indexSetWithArray:(NSArray *)anArray;
 

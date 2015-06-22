@@ -5,10 +5,7 @@
 
 @import UIKit;
 
-//! Project version number for FMIKit.
 FOUNDATION_EXPORT double FMIKitVersionNumber;
-
-//! Project version string for FMIKit.
 FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 
 #import <FMIKit/NSArray+Initialization.h>

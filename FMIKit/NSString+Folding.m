@@ -18,7 +18,7 @@
     }
     
     NSMutableString *foldedString = [NSMutableString string];
-    NSInteger convertedBytes = 0;
+    NSUInteger convertedBytes = 0;
     NSData *stringData = [self dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
     BOOL isFirstLine = YES;
     

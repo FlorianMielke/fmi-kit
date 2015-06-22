@@ -7,7 +7,6 @@
 
 @import Foundation;
 
-
 /**
  * This category adds methods to NSString to improve support for file and url operations
  */
@@ -30,7 +29,7 @@
 /**
  * Removes any invalid characters that are usually not accepted by Operating Systems with or without an extension
  * If extension is an empty string or nil, the extension is assumed not to exist and the file name returned exactly matches name.
- * @param extension
+ * @param extension File extension.
  * @return NSString The valid file name
  */
 - (NSString *)validFileNameWithType:(NSString *)extension;

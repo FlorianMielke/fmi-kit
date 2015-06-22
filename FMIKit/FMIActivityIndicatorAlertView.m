@@ -42,4 +42,8 @@
     self.alertController.title = title;
 }
 
+- (NSString *)title {
+    return self.alertController.title;
+}
+
 @end

@@ -26,7 +26,6 @@
 
 /**
  * Removes all items from the application inbox directory.
- * @return BOOL A flag that determins whether the operation was successful. Returns NO if directoryPath is nil or not a directory.
  */
 - (void)fm_removeApplicationInboxDirectory;
 

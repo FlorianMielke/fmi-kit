@@ -12,7 +12,7 @@
 
 /**
  * Returns a Boolean value that indicates whether a given object is an NSIndexPath object and exactly equal the receiver.
- * @param indexPath The index path to compare with the receiver.
+ * @param anotherIndexPath The index path to compare with the receiver.
  * @return YES if the anotherIndexPath is an NSIndexPath object and is exactly equal to the receiver, otherwise NO.
  */
 - (BOOL)fm_isEqualToIndexPath:(NSIndexPath *)anotherIndexPath;

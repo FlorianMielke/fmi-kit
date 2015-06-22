@@ -7,25 +7,22 @@
 
 #import "FMIFoundationAdditions.h"
 
-
-NSString *NSStringFromIvarInObj(id ivar, id obj)
-{
+NSString *NSStringFromIvarInObj(id ivar, id obj) {
     unsigned int numIvars = 0;
     NSString *key = nil;
 
     Ivar *ivars = class_copyIvarList([obj class], &numIvars);
-    
-    for (int i = 0; i < numIvars; i++)
-    {
+
+    for (unsigned int i = 0; i < numIvars; i++) {
         Ivar thisIvar = ivars[i];
-    
+
         if ((object_getIvar(obj, thisIvar) == ivar)) {
             key = [NSString stringWithUTF8String:ivar_getName(thisIvar)];
             break;
         }
-    } 
+    }
 
     free(ivars);
-    
+
     return key;
 }

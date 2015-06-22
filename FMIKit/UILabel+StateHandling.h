@@ -7,7 +7,6 @@
 
 @import UIKit;
 
-
 /**
  * Adds methods to UILabel to handle active and valid states.
  */
@@ -21,7 +20,7 @@
 
 /**
  * If YES, cancels the text, otherwise reverts canceled text.
- * @param active YES to cancel, otherwise NO.
+ * @param valid YES to cancel, otherwise NO.
  */
 - (void)fm_markAsValid:(BOOL)valid;
 
