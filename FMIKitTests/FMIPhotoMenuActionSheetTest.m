@@ -3,7 +3,7 @@
 //  Copyright (c) 2015 madeFM. All rights reserved.
 //
 
-@import XCTest;
+#import <XCTest/XCTest.h>
 #import "FMIPhotoMenuActionSheet.h"
 #import <OCMock/OCMock.h>
 

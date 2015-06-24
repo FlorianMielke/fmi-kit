@@ -5,7 +5,7 @@
 //  Copyright (c) 2014 madeFM. All rights reserved.
 //
 
-@import XCTest;
+#import <XCTest/XCTest.h>
 #import "NSDecimalNumber+Calulations.h"
 
 

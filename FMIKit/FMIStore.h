@@ -3,7 +3,7 @@
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //
 
-@import CoreData;
+#import <CoreData/CoreData.h>
 
 /**
  * The FMIStore class manages an application's core data stack.

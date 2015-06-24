@@ -3,7 +3,7 @@
 //  Copyright (c) 2015 madeFM. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 FOUNDATION_EXPORT double FMIKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];

@@ -5,7 +5,7 @@
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 /**
  *	FMIDuration objects represent a timeinterval. FMIDuration is a class cluster; its single public superclass, FMIDuration, declares the programmatic

@@ -3,7 +3,7 @@
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //
 
-@import XCTest;
+#import <XCTest/XCTest.h>
 #import "FMIEventParser.h"
 #import <EventKit/EventKit.h>
 

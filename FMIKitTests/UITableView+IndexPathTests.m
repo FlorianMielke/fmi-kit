@@ -5,7 +5,7 @@
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //
 
-@import XCTest;
+#import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 #import "UITableView+IndexPath.h"
 #import "FakeTableViewDataSource.h"

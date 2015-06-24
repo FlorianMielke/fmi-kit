@@ -3,7 +3,7 @@
 //  Copyright (c) 2013 Deutsche Messe Interactive GmbH. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface UIImage (Scaling)
 

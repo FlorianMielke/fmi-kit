@@ -5,7 +5,7 @@
 //  Copyright (c) 2015 madeFM. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 @interface NSBundle (Configuration)
 

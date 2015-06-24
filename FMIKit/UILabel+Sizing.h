@@ -5,7 +5,7 @@
 //  Copyright 2011 Florian Mielke. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 
 @interface UILabel (Sizing)

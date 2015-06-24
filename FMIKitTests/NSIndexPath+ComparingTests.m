@@ -5,8 +5,8 @@
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //
 
-@import XCTest;
-@import UIKit;
+#import <XCTest/XCTest.h>
+#import <UIKit/UIKit.h>
 #import "NSIndexPath+Comparing.h"
 
 

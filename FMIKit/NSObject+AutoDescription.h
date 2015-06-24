@@ -5,7 +5,7 @@
 //  Copyright 2011 ATKit. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 // Description based on Reflection, Format: [ClassName {prop1 = val1; prop2 = val2; }]., SuperClass' properties included (until NSObject).
 @interface NSObject (AutoDescription)

@@ -3,7 +3,7 @@
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //
 
-@import XCTest;
+#import <XCTest/XCTest.h>
 #import "FMIBindingManager.h"
 #import "FakeBindingModel.h"
 #import "FakeBindingObserver.h"

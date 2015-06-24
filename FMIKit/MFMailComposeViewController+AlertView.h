@@ -3,7 +3,7 @@
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //
 
-@import MessageUI;
+#import <MessageUI/MessageUI.h>
 
 /**
  * This category adds alert view methods to MFMailComposeViewController.

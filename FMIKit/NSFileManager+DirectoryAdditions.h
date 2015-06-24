@@ -5,7 +5,7 @@
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 /**
  * Adds directory methods to NSFileManager.

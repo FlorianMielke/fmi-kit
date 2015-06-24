@@ -5,7 +5,7 @@
 //  Copyright (c) 2014 madeFM. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 /**
  * Adds calculation methods to NSDecimalNumber.

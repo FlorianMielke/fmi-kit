@@ -3,7 +3,7 @@
 //  Copyright (c) 2015 madeFM. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @class FMIPhotoMenuActionSheet;
 

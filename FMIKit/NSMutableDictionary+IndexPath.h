@@ -5,7 +5,7 @@
 //  Copyright 2011 Florian Mielke. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 
 @interface NSMutableDictionary (NSIndexPath)

@@ -5,7 +5,7 @@
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 /**
  * This category adds methods to NSString to improve support for file and url operations

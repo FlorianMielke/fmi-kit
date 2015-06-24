@@ -5,8 +5,8 @@
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //
 
-@import Foundation;
-@import UIKit;
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 
 /**

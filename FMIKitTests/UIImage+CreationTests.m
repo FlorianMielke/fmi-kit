@@ -5,7 +5,7 @@
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //
 
-@import XCTest;
+#import <XCTest/XCTest.h>
 #import "UIImage+Creation.h"
 
 

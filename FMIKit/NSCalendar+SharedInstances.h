@@ -5,7 +5,7 @@
 //  Copyright (c) 2012 Florian Mielke. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 
 @interface NSCalendar (SharedInstances)
