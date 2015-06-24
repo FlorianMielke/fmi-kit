@@ -11,7 +11,7 @@
 
 @interface FMITableView ()
 
-@property (nonatomic) BOOL allRowsAreSelected;
+@property (NS_NONATOMIC_IOSONLY) BOOL allRowsAreSelected;
 
 @end
 

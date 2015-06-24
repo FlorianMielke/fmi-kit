@@ -13,18 +13,17 @@
 @interface NSString (FileName)
 
 /**
+ * Removes any invalid characters that are usually not accepted by Operating Systems
+ * and trims the name to 60 characters
+ */
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *validFileName;
+
+/**
  * Encodes a string to be used in an url
  * @param str The value that needs to be encoded
  * @return NSString The encoded str
  */
 + (NSString *)urlEncodeValue:(NSString *)str;
-
-/**
- * Removes any invalid characters that are usually not accepted by Operating Systems
- * and trims the name to 60 characters
- * @return NSString The valid file name
- */
-- (NSString *)validFileName;
 
 /**
  * Removes any invalid characters that are usually not accepted by Operating Systems with or without an extension

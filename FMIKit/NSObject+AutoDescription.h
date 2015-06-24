@@ -11,6 +11,6 @@
 @interface NSObject (AutoDescription)
 
 // Reflects about self.
-- (NSString *)autoDescription;
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *autoDescription;
 
 @end

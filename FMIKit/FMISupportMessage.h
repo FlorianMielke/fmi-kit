@@ -17,23 +17,23 @@
 /**
  *  Returns the support message message body.
  */
-- (NSString *)messageBody;
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *messageBody;
 
 /**
  *  Returns the support message subject.
  */
-- (NSString *)subject;
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *subject;
 
 /**
  *  Returns an NSArray containing all support recipients.
  */
-- (NSArray *)toRecipients;
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSArray *toRecipients;
 
 /**
  *	Creates a new support message.
  *	@param	bundle	The bundle to grab the app information from. If bundle is nil, mainBundle will be assigned.
  *	@return	A new support message object.
  */
-- (id)initWithBundle:(NSBundle *)bundle;
+- (instancetype)initWithBundle:(NSBundle *)bundle;
 
 @end

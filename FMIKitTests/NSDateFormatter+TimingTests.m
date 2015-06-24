@@ -11,9 +11,9 @@
 
 @interface NSDateFormatter_TimingTests : XCTestCase
 
-@property (nonatomic, strong) NSDateFormatter *sut;
-@property (nonatomic, strong) NSLocale *usLocale;
-@property (nonatomic, strong) NSLocale *germanLocale;
+@property (NS_NONATOMIC_IOSONLY) NSDateFormatter *sut;
+@property (NS_NONATOMIC_IOSONLY) NSLocale *usLocale;
+@property (NS_NONATOMIC_IOSONLY) NSLocale *germanLocale;
 
 @end
 
@@ -58,7 +58,6 @@
     // When
     [_sut setLocale:_usLocale];
     
-    // Then
     XCTAssertFalse([_sut is24HourStyle]);
 }
 
@@ -68,17 +67,15 @@
     // When
     [_sut setLocale:_germanLocale];
     
-    // Then
     XCTAssertTrue([_sut is24HourStyle]);
 }
 
 
 - (void)testCalendarDateAndTimeFormatShouldReturnCorrectFormatFor24HourStyle
 {
-    // Given
+
     [_sut setLocale:_germanLocale];
     
-    // Then
     NSString *format = [NSDateFormatter dateFormatFromTemplate:@"yyyyMMMdHHmmE" options:0 locale:_germanLocale];
     XCTAssertEqualObjects([_sut calendarDateAndTimeFormat], format);
 }
@@ -86,10 +83,9 @@
 
 - (void)testCalendarDateAndTimeFormatShouldReturnCorrectFormatFor12HourStyle
 {
-    // Given
+
     [_sut setLocale:_usLocale];
     
-    // Then
     NSString *format = [NSDateFormatter dateFormatFromTemplate:@"yyyyMMMdhmmEa" options:0 locale:_usLocale];
     XCTAssertEqualObjects([_sut calendarDateAndTimeFormat], format);
 }
@@ -97,7 +93,7 @@
 
 - (void)testCalendarDateFormatShouldReturnCorrectFormatFor24HourStyle
 {
-    // Given
+
     [_sut setLocale:_germanLocale];
 
     // Then
@@ -108,10 +104,9 @@
 
 - (void)testCalendarDateFormatShouldReturnCorrectFormatFor12HourStyle
 {
-    // Given
+
     [_sut setLocale:_usLocale];
     
-    // Then
     NSString *format = [NSDateFormatter dateFormatFromTemplate:@"yyyyMMMMdEa" options:0 locale:_usLocale];
     XCTAssertEqualObjects([_sut calendarDateFormat], format);
 }

@@ -11,9 +11,9 @@
 
 @interface FMINestedTableView ()
 
-@property (nonatomic, strong) NSMutableArray *indexPathsForNestedRows;
-@property (nonatomic, strong) NSIndexPath *indexPathForRootRow;
-@property (nonatomic, assign) UIEdgeInsets rootRowSeparatorInsets;
+@property (NS_NONATOMIC_IOSONLY) NSMutableArray *indexPathsForNestedRows;
+@property (NS_NONATOMIC_IOSONLY) NSIndexPath *indexPathForRootRow;
+@property (NS_NONATOMIC_IOSONLY) UIEdgeInsets rootRowSeparatorInsets;
 
 @end
 

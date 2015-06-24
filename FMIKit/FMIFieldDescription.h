@@ -27,16 +27,16 @@ typedef NS_ENUM(NSInteger, FMFieldType){
 /**
  * The default value for the receiver.
  */
-@property (nonatomic, strong) id defaultValue;
+@property (NS_NONATOMIC_IOSONLY) id defaultValue;
 
 /**
  * The name of the field the receiver describes.
  */
-@property (nonatomic, strong) NSString *name;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *name;
 
 /**
  * An FMFieldType constant that specifies the type for the receiver.
  */
-@property (nonatomic, assign) FMFieldType type;
+@property (NS_NONATOMIC_IOSONLY) FMFieldType type;
 
 @end

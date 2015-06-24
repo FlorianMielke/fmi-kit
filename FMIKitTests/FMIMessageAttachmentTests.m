@@ -9,10 +9,10 @@
 
 @interface FMIMessageAttachmentTests : XCTestCase
 
-@property (nonatomic, strong) FMIMessageAttachment *sut;
-@property (nonatomic, strong) NSData *sampleData;
-@property (nonatomic, strong) NSString *sampleFileName;
-@property (nonatomic, strong) NSString *sampleMIMEType;
+@property (NS_NONATOMIC_IOSONLY) FMIMessageAttachment *sut;
+@property (NS_NONATOMIC_IOSONLY) NSData *sampleData;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *sampleFileName;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *sampleMIMEType;
 
 @end
 

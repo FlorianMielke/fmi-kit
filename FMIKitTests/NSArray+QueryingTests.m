@@ -11,7 +11,7 @@
 
 @interface NSArray_QueryingTests : XCTestCase
 
-@property (nonatomic, strong) NSArray *sut;
+@property (NS_NONATOMIC_IOSONLY) NSArray *sut;
 
 @end
 
@@ -26,7 +26,7 @@
 {
     [super setUp];
     
-    _sut = [NSArray arrayWithObjects:@"Lorem", @"Ipsum", @"Is", nil];
+    _sut = @[@"Lorem", @"Ipsum", @"Is"];
 }
 
 
@@ -55,10 +55,9 @@
 
 - (void)testContainsStringIgnoresNonStringObjects
 {
-    // Given
-    NSArray *invalidArray = [NSArray arrayWithObjects:@1, @"Lorem", nil];
+
+    NSArray *invalidArray = @[@1, @"Lorem"];
     
-    // Then
     XCTAssertTrue([invalidArray containsString:@"Lorem"]);
 }
 

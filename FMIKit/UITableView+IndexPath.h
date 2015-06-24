@@ -13,22 +13,19 @@
 @interface UITableView (IndexPath)
 
 /**
- * Returns a Boolean that indcates whether the receiver has any sections containing any rows.
- * @return YES if the receiver has sections containing rows, otherwise NO.
+ * A Boolean that indcates whether the receiver has any sections containing any rows.
  */
-- (BOOL)fm_isEmpty;
+@property (readonly, NS_NONATOMIC_IOSONLY) BOOL fm_isEmpty;
 
 /**
- *	Returns the first index path of the receiver.
- *	@return	The first index path.
+ *	The first index path of the receiver.
  */
-- (NSIndexPath *)fm_firstIndexPath;
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSIndexPath *fm_firstIndexPath;
 
 /**
- *	Returns the last index path of the receiver.
- *	@return	The last index path.
+ *	The last index path of the receiver.
  */
-- (NSIndexPath *)fm_lastIndexPath;
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSIndexPath *fm_lastIndexPath;
 
 /**
  *	Returns the last index path in a given section.

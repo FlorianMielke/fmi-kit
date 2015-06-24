@@ -11,8 +11,8 @@
 
 @interface FMITableViewTests : XCTestCase
 
-@property (nonatomic) FMITableView *sut;
-@property (nonatomic) FakeTableViewDataSource *dataSource;
+@property (NS_NONATOMIC_IOSONLY) FMITableView *sut;
+@property (NS_NONATOMIC_IOSONLY) FakeTableViewDataSource *dataSource;
 
 @end
 
@@ -65,7 +65,7 @@
 
 - (void)testTableViewShouldSelectAllRows
 {
-    // Given
+
     id mockDelegate = [OCMockObject niceMockForProtocol:@protocol(FMITableViewDelegate)];
     [[[mockDelegate stub] andReturn:[OCMArg any]] tableView:_sut willSelectRowAtIndexPath:[OCMArg any]];
     [[mockDelegate expect] tableView:_sut didSelectRowAtIndexPath:[OCMArg any]];
@@ -73,11 +73,9 @@
 
     [_sut setDelegate:mockDelegate];
     
-    // When
     [_sut setEditing:YES];
     [_sut selectAllRows];
     
-    // Then
     XCTAssertEqual([[_sut indexPathsForSelectedRows] count], (NSUInteger)30);
     XCTAssertTrue([_sut hasSelectedAllRows]);
     XCTAssertNoThrow([mockDelegate verify]);
@@ -86,7 +84,7 @@
 
 - (void)testTableViewShouldDeselectAllRows
 {
-    // Given
+
     [_sut setEditing:YES];
     [_sut selectAllRows];
     
@@ -97,10 +95,8 @@
     
     [_sut setDelegate:mockDelegate];
     
-    // When
     [_sut deselectAllRows];
     
-    // Then
     XCTAssertEqual([[_sut indexPathsForSelectedRows] count], (NSUInteger)0);
     XCTAssertFalse([_sut hasSelectedAllRows]);
     XCTAssertNoThrow([mockDelegate verify]);
@@ -109,14 +105,12 @@
 
 - (void)testTableViewShouldResetSelectionAttributesWhenDisableEditMode
 {
-    // Given
+
     [_sut setEditing:YES];
     [_sut selectAllRows];
     
-    // When
     [_sut setEditing:NO];
     
-    // Then
     XCTAssertFalse([_sut hasSelectedAllRows]);
     XCTAssertEqual([[_sut indexPathsForSelectedRows] count], (NSUInteger)0);
 }
@@ -124,14 +118,12 @@
 
 - (void)testTableViewShouldResetSelectionAttributesWhenDisableEditModeAnimated
 {
-    // Given
+
     [_sut setEditing:YES animated:NO];
     [_sut selectAllRows];
     
-    // When
     [_sut setEditing:NO animated:NO];
     
-    // Then
     XCTAssertFalse([_sut hasSelectedAllRows]);
     XCTAssertEqual([[_sut indexPathsForSelectedRows] count], (NSUInteger)0);
 }

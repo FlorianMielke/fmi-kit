@@ -10,9 +10,9 @@
 
 @interface FMIEventParserTests : XCTestCase
 
-@property (nonatomic, strong) FMIEventParser *sut;
-@property (nonatomic, strong) EKEventStore *sampleEventStore;
-@property (nonatomic, strong) EKEvent *sampleEvent;
+@property (NS_NONATOMIC_IOSONLY) FMIEventParser *sut;
+@property (NS_NONATOMIC_IOSONLY) EKEventStore *sampleEventStore;
+@property (NS_NONATOMIC_IOSONLY) EKEvent *sampleEvent;
 
 @end
 

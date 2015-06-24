@@ -12,10 +12,10 @@
 
 @interface NSString_CSVTests : XCTestCase
 
-@property (nonatomic, strong) NSString *encloser;
-@property (nonatomic, strong) NSString *delimiter;
-@property (nonatomic, strong) NSString *stringWithoutComponents;
-@property (nonatomic, strong) NSString *stringWithComponents;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *encloser;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *delimiter;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *stringWithoutComponents;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *stringWithComponents;
 
 @end
 
@@ -57,7 +57,6 @@
     // When
     NSString *enclosedString = [[self stringWithoutComponents] stringByEnclosingWithString:[self encloser]];
     
-    // Then
     XCTAssertTrue([enclosedString hasPrefix:[self encloser]]);
     XCTAssertTrue([enclosedString hasSuffix:[self encloser]]);
 }
@@ -68,7 +67,6 @@
     // When
     NSString *enclosedString = [[self stringWithoutComponents] stringByEnclosingWithString:[self encloser]];
     
-    // Then
     XCTAssertTrue([enclosedString hasPrefix:[self encloser]]);
     XCTAssertTrue([enclosedString hasSuffix:[self encloser]]);
 }
@@ -83,7 +81,6 @@
     // When
     NSArray *components = [[self stringWithComponents] componentsSeparatedByDelimiter:[self delimiter] encloser:[self encloser]];
     
-    // Then
     XCTAssertEqual([components count], (NSUInteger)3);
 }
 
@@ -93,7 +90,6 @@
     // When
     NSArray *components = [[self stringWithComponents] componentsSeparatedByDelimiter:nil encloser:nil];
     
-    // Then
     XCTAssertEqualObjects([components lastObject], [self stringWithComponents]);
 }
 
@@ -103,7 +99,6 @@
     // When
     NSArray *components = [[self stringWithComponents] componentsSeparatedByDelimiter:nil encloser:[self encloser]];
     
-    // Then
     XCTAssertEqualObjects([components lastObject], [self stringWithComponents]);
 }
 
@@ -113,7 +108,6 @@
     // When
     NSArray *components = [[self stringWithComponents] componentsSeparatedByDelimiter:[self delimiter] encloser:nil];
     
-    // Then
     XCTAssertEqual([components count], (NSUInteger)3);
 }
 

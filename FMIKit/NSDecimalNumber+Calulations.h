@@ -16,13 +16,13 @@
  * Returns true whether the receiver is negative.
  * @return YES if the receiver is negative, otherwise NO.
  */
-- (BOOL)fm_isNegative;
+@property (readonly, NS_NONATOMIC_IOSONLY) BOOL fm_isNegative;
 
 /**
  * Inverts the receiver.
  * @return The inverted receiver.
  */
-- (NSDecimalNumber *)fm_invertedNumber;
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSDecimalNumber *fm_invertedNumber;
 
 /**
  * Calculates the modulo of the receiver by a given divisor.

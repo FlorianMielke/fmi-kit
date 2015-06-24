@@ -40,9 +40,9 @@
 
 @interface FMINestedTableView : UITableView
 
-@property (nonatomic, weak) id <FMINestedTableViewDataSource> dataSource;
-@property (nonatomic, weak) id <FMINestedTableViewDelegate> delegate;
-@property (nonatomic, assign) BOOL allowsNestedRows;
+@property (weak, NS_NONATOMIC_IOSONLY) id <FMINestedTableViewDataSource> dataSource;
+@property (weak, NS_NONATOMIC_IOSONLY) id <FMINestedTableViewDelegate> delegate;
+@property (NS_NONATOMIC_IOSONLY) BOOL allowsNestedRows;
 
 - (NSInteger)numberOfVisibleNestedRowsInSection:(NSInteger)section;
 - (UITableViewCell *)configuredCellForRowAtIndexPath:(NSIndexPath *)indexPath;

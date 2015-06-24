@@ -11,20 +11,20 @@
 
 @interface FMIDurationFormatterTests : XCTestCase
 
-@property (nonatomic) FMIDurationFormatter *formatter;
-@property (nonatomic) NSLocale *germanLocale;
-@property (nonatomic) NSTimeInterval duration0h00m;
-@property (nonatomic) NSTimeInterval duration0h15m;
-@property (nonatomic) NSTimeInterval durationMinus0h15m;
-@property (nonatomic) NSTimeInterval duration8h00m;
-@property (nonatomic) NSTimeInterval durationMinus8h00m;
-@property (nonatomic) NSTimeInterval duration8h30m;
-@property (nonatomic) NSTimeInterval durationMinus8h30m;
-@property (nonatomic) NSTimeInterval duration7h45m;
-@property (nonatomic) NSTimeInterval durationMinus7h45m;
-@property (nonatomic) NSTimeInterval duration7h46m;
-@property (nonatomic) NSTimeInterval durationMinus7h46m;
-@property (nonatomic) NSTimeInterval durationMinus0h34_96m;
+@property (NS_NONATOMIC_IOSONLY) FMIDurationFormatter *formatter;
+@property (NS_NONATOMIC_IOSONLY) NSLocale *germanLocale;
+@property (NS_NONATOMIC_IOSONLY) NSTimeInterval duration0h00m;
+@property (NS_NONATOMIC_IOSONLY) NSTimeInterval duration0h15m;
+@property (NS_NONATOMIC_IOSONLY) NSTimeInterval durationMinus0h15m;
+@property (NS_NONATOMIC_IOSONLY) NSTimeInterval duration8h00m;
+@property (NS_NONATOMIC_IOSONLY) NSTimeInterval durationMinus8h00m;
+@property (NS_NONATOMIC_IOSONLY) NSTimeInterval duration8h30m;
+@property (NS_NONATOMIC_IOSONLY) NSTimeInterval durationMinus8h30m;
+@property (NS_NONATOMIC_IOSONLY) NSTimeInterval duration7h45m;
+@property (NS_NONATOMIC_IOSONLY) NSTimeInterval durationMinus7h45m;
+@property (NS_NONATOMIC_IOSONLY) NSTimeInterval duration7h46m;
+@property (NS_NONATOMIC_IOSONLY) NSTimeInterval durationMinus7h46m;
+@property (NS_NONATOMIC_IOSONLY) NSTimeInterval durationMinus0h34_96m;
 
 @end
 

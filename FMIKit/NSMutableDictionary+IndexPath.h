@@ -16,6 +16,6 @@
 
 - (NSArray *)objectsForSection:(NSInteger)section;
 
-- (NSArray *)sections;
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSArray *sections;
 
 @end

@@ -16,17 +16,17 @@
 /**
  * The attehment data.
  */
-@property (nonatomic, strong, readonly) NSData *data;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSData *data;
 
 /**
  * The file name.
  */
-@property (nonatomic, copy, readonly) NSString *fileName;
+@property (copy, readonly, NS_NONATOMIC_IOSONLY) NSString *fileName;
 
 /**
  * The MIME type.
  */
-@property (nonatomic, copy, readonly) NSString *mimeType;
+@property (copy, readonly, NS_NONATOMIC_IOSONLY) NSString *mimeType;
 
 /**
  * Returns a new FMIMessageAttachment instance with the given parameter.
@@ -35,6 +35,6 @@
  * @param fileName The file name.
  * @note If one of the parameter is nil returns nil.
  */
-+ (id)messageAttachmentForData:(NSData *)data mimeType:(NSString *)mimeType fileName:(NSString *)fileName;
++ (instancetype)messageAttachmentForData:(NSData *)data mimeType:(NSString *)mimeType fileName:(NSString *)fileName;
 
 @end

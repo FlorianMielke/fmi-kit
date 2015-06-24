@@ -25,7 +25,7 @@
 
 @interface FMIImagePickerController : UIImagePickerController <UIActionSheetDelegate>
 
-@property (nonatomic, weak) id <FMIImagePickerControllerDelegate> delegate;
+@property (weak, NS_NONATOMIC_IOSONLY) id <FMIImagePickerControllerDelegate> delegate;
 
 - (UIActionSheet *)actionSheetForImage:(UIImage *)image;
 

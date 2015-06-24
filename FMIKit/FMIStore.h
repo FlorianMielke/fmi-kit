@@ -14,32 +14,52 @@
  * An array of entity names that are necessary to check if the persistent store is empty.
  * @see -persistentStoreIsEmpty
  */
-@property (nonatomic, strong) NSArray *baseEntityNames;
+@property (NS_NONATOMIC_IOSONLY) NSArray *baseEntityNames;
 
 /**
  * The name of the database file.
  */
-@property (nonatomic, copy) NSString *databaseName;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *databaseName;
 
 /**
  * The managed object context.
  */
-@property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSManagedObjectContext *managedObjectContext;
 
 /**
  * The managed object model.
  */
-@property (nonatomic, strong, readonly) NSManagedObjectModel *managedObjectModel;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSManagedObjectModel *managedObjectModel;
 
 /**
  * The name of the model.
  */
-@property (nonatomic, copy) NSString *modelName;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *modelName;
 
 /**
  * The persisent store coordinator.
  */
-@property (nonatomic, strong, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+/**
+ * A Boolean that indicates whether the persistent store contains any records of the given base entities.
+ */
+@property (readonly, getter=isPersistentStoreEmpty, NS_NONATOMIC_IOSONLY) BOOL persistentStoreIsEmpty;
+
+/**
+ * The iOS application documents directory.
+ */
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSURL *applicationDocumentsDirectory;
+
+/**
+ * The OS X application support directory.
+ */
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSURL *applicationSupportDirectory;
+
+/**
+ * The NSBundle object that corresponds to the directory where the current application executable is located.
+ */
+@property (readonly, NS_NONATOMIC_IOSONLY) NSBundle *bundle;
 
 /**
  * Returns a shared instance of the FMIStore class.
@@ -72,29 +92,5 @@
  * Deletes all managed objects from the persistent store.
  */
 - (void)deleteAllManagedObjects;
-
-/**
- * Returns a Boolean that indicates whether the persistent store contains any records of the given base entities.
- * @return YES if the store is empty, otherwise NO or if baseEntityNames is nil.
- */
-- (BOOL)persistentStoreIsEmpty;
-
-/**
- * The iOS application documents directory.
- * @return The URL to the application documents directory.
- */
-- (NSURL *)applicationDocumentsDirectory;
-
-/**
- * The OS X application support directory.
- * @return The URL to the application support directory.
- */
-- (NSURL *)applicationSupportDirectory;
-
-/**
- * Returns the NSBundle object that corresponds to the directory where the current application executable is located.
- * @return The NSBundle object that corresponds to the directory where the application executable is located, or nil if a bundle object could not be created.
- */
-- (NSBundle *)bundle;
 
 @end

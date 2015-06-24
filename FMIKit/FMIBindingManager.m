@@ -11,8 +11,8 @@
 
 @interface FMIBindingManager ()
 
-@property (nonatomic, strong) NSMutableArray *bindings;
-@property (nonatomic, assign) BOOL enabled;
+@property (NS_NONATOMIC_IOSONLY) NSMutableArray *bindings;
+@property (NS_NONATOMIC_IOSONLY) BOOL enabled;
 
 @end
 

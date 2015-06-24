@@ -44,37 +44,33 @@
 
 - (void)testFoldingTextReturnsNewString
 {
-    // Given
+
     NSString *longText = @"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
     
-    // When
     NSString *foldedText = [longText stringByFoldingToOctects:75];
     
-    // Then
     XCTAssertNotNil(foldedText);
 }
 
 
 - (void)testFoldingTextDoesNotAddALeadingWhitespaceInTheFirstLine
 {
-    // Given
+
     NSString *longText = @"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
 
     // When
     NSString *foldedText = [longText stringByFoldingToOctects:75];
     
-    // Then
     XCTAssertTrue([foldedText hasPrefix:@"Lorem"]);
 }
 
 
 - (void)testFoldingTextLineHaveLeadingWhitespaceExceptForTheFirstLine
 {
-    // Given
+
     NSString *longText = @"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
     NSString *foldedText = [longText stringByFoldingToOctects:75];
     
-    // When
     __block BOOL hasLeadingWhitespace = NO;
     __block BOOL isFirstLine = YES;
     
@@ -94,18 +90,16 @@
         
     }];
     
-    // Then
     XCTAssertTrue(hasLeadingWhitespace);
 }
 
 
 - (void)testFoldingTextLinesAreNotLongerThan75Octets
 {
-    // Given
+
     NSString *longText = @"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
     NSString *foldedText = [longText stringByFoldingToOctects:75];
     
-    // When
     __block BOOL longerThan75Octets = YES;
     
     [foldedText enumerateLinesUsingBlock:^(NSString *line, BOOL *stop) {
@@ -117,18 +111,16 @@
         
     }];
     
-    // Then
     XCTAssertFalse(longerThan75Octets);
 }
 
 
 - (void)testFoldingTextLinesCalculatesRemainderForLastLine
 {
-    // Given
+
     NSString *longText = @"Lorem ipsum dolor sit amet.";
     NSString *foldedText = [longText stringByFoldingToOctects:17];
     
-    // When
     __block BOOL isFirstLine = YES;
     __block NSString *lastLine = nil;
     
@@ -142,7 +134,6 @@
         
     }];
     
-    // Then
     XCTAssertEqualObjects(lastLine, @" r sit amet.");
 }
 
@@ -159,29 +150,27 @@
 
 - (void)testSubstringFromDataReturnsNilFor0RangeLength
 {
-    // Given
+
     NSString *sampleString = @"Lorem ipsum.";
     NSData *sampleStringData = [sampleString dataUsingEncoding:NSUTF8StringEncoding];
     
-    // Then
     XCTAssertNil([NSString substringFromData:sampleStringData inRange:NSMakeRange(5, 0) encoding:NSUTF8StringEncoding]);
 }
 
 
 - (void)testSubstringFromDataReturnsNilForOutOfRange
 {
-    // Given
+
     NSString *sampleString = @"Lorem ipsum.";
     NSData *sampleStringData = [sampleString dataUsingEncoding:NSUTF8StringEncoding];
     
-    // Then
     XCTAssertNil([NSString substringFromData:sampleStringData inRange:NSMakeRange(15, 5) encoding:NSUTF8StringEncoding]);
 }
 
 
 - (void)testSubstringFromDataReturnsCorrectSubstringForRange
 {
-    // Given
+
     NSString *sampleString = @"Lorem ipÁsum.";
     NSData *sampleStringData = [sampleString dataUsingEncoding:NSUTF8StringEncoding];
 

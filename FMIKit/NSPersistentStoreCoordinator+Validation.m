@@ -24,17 +24,17 @@
 	// 2. Validate the file is a pesristent store
 	if (!error)
 	{
-		NSDictionary *storeModelVersionHashes = [persistentStoreMetadata objectForKey:@"NSStoreModelVersionHashes"];
+		NSDictionary *storeModelVersionHashes = persistentStoreMetadata[@"NSStoreModelVersionHashes"];
 		
 		// 3. Validate the store type
-		if ([[persistentStoreMetadata objectForKey:@"NSStoreType"] isEqualToString:type]) 
+		if ([persistentStoreMetadata[@"NSStoreType"] isEqualToString:type]) 
 		{
 			// 4. Validate the entity name
 			if (!entityName) 
 			{
 				isValid = YES;
 			}
-			else if ([storeModelVersionHashes objectForKey:entityName])
+			else if (storeModelVersionHashes[entityName])
 			{
 				isValid = YES;
 			}

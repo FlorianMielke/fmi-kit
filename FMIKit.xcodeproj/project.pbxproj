@@ -173,7 +173,6 @@
 		171CBA9B1AFB6546002BE185 /* UITableView+Selection.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CBA531AFB6546002BE185 /* UITableView+Selection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		171CBA9C1AFB6546002BE185 /* UITableView+Selection.m in Sources */ = {isa = PBXBuildFile; fileRef = 171CBA541AFB6546002BE185 /* UITableView+Selection.m */; };
 		1738D43E1AFC8B0400B96929 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1738D43D1AFC8B0400B96929 /* libOCMock.a */; };
-		1738D4411AFC928C00B96929 /* FMIMessageMIMETypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4401AFC928C00B96929 /* FMIMessageMIMETypes.plist */; };
 		1738D44C1AFC948100B96929 /* Event.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1738D4431AFC948100B96929 /* Event.xcdatamodeld */; };
 		1738D44D1AFC948100B96929 /* TestFile.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4451AFC948100B96929 /* TestFile.csv */; };
 		1738D44E1AFC948100B96929 /* TestFileInvalid.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4461AFC948100B96929 /* TestFileInvalid.csv */; };
@@ -182,11 +181,12 @@
 		1738D4511AFC948100B96929 /* TestImagePortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4491AFC948100B96929 /* TestImagePortrait.png */; };
 		1738D4521AFC948100B96929 /* TestImagePortraitSmallWidth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */; };
 		1738D4531AFC948100B96929 /* TestImageSquared.png in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44B1AFC948100B96929 /* TestImageSquared.png */; };
-		1738D4561AFC99A000B96929 /* FMIKitLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4541AFC99A000B96929 /* FMIKitLocalizable.strings */; };
 		176F5D3D1AFE3F810004FCA6 /* FMIPhotoMenuActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 176F5D3B1AFE3F810004FCA6 /* FMIPhotoMenuActionSheet.h */; };
 		176F5D3E1AFE3F810004FCA6 /* FMIPhotoMenuActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 176F5D3C1AFE3F810004FCA6 /* FMIPhotoMenuActionSheet.m */; };
 		176F5D401AFE3F9C0004FCA6 /* FMIPhotoMenuActionSheetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 176F5D3F1AFE3F9C0004FCA6 /* FMIPhotoMenuActionSheetTest.m */; };
 		1771CC951B383C71004680B3 /* MFMailComposeViewController+AlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CBA0D1AFB6546002BE185 /* MFMailComposeViewController+AlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		178CE90D1B3AA3810049AD97 /* FMIMessageMIMETypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4401AFC928C00B96929 /* FMIMessageMIMETypes.plist */; };
+		178CE90E1B3AA3830049AD97 /* FMIKitLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4541AFC99A000B96929 /* FMIKitLocalizable.strings */; };
 		17DB10F41AFE08570040EB1E /* FMIActivityIndicatorAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DB10F21AFE08570040EB1E /* FMIActivityIndicatorAlertView.m */; };
 		17DB10F61AFE08E20040EB1E /* FMIActivityIndicatorAlertViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DB10F51AFE08E20040EB1E /* FMIActivityIndicatorAlertViewTest.m */; };
 		17DB10F71AFE0B260040EB1E /* FMIActivityIndicatorAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 17DB10F11AFE08560040EB1E /* FMIActivityIndicatorAlertView.h */; };
@@ -916,8 +916,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1738D4411AFC928C00B96929 /* FMIMessageMIMETypes.plist in Resources */,
-				1738D4561AFC99A000B96929 /* FMIKitLocalizable.strings in Resources */,
+				178CE90D1B3AA3810049AD97 /* FMIMessageMIMETypes.plist in Resources */,
+				178CE90E1B3AA3830049AD97 /* FMIKitLocalizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1181,7 +1181,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1199,7 +1198,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

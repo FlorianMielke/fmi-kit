@@ -32,25 +32,23 @@
 
 - (void)testReturnsEmptyIndexSetForInvalidArray
 {
-    // Given
-    NSArray *anArray = [NSArray arrayWithObjects:@"Lorem", @"Ipsum", @2, nil];
+
+    NSArray *anArray = @[@"Lorem", @"Ipsum", @2];
     NSIndexSet *indexes = [NSIndexSet indexSetWithIndex:2];
     
-    // Then
     XCTAssertTrue([[NSIndexSet indexSetWithArray:anArray] isEqualToIndexSet:indexes]);
 }
 
 
 - (void)testReturnsIndexSetWithIndexes
 {
-    // Given
-    NSArray *anArray = [NSArray arrayWithObjects:@1, @2, @4, nil];
+
+    NSArray *anArray = @[@1, @2, @4];
     NSMutableIndexSet *indexes = [NSMutableIndexSet indexSet];
     [indexes addIndex:1];
     [indexes addIndex:2];
     [indexes addIndex:4];
     
-    // Then
     XCTAssertTrue([[NSIndexSet indexSetWithArray:anArray] isEqualToIndexSet:indexes]);
 }
 

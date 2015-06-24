@@ -16,7 +16,7 @@
     __block NSMutableArray *anArray = [NSMutableArray arrayWithCapacity:[indexes count]];
     
     [indexes enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
-        [anArray addObject:[NSNumber numberWithInteger:idx]];
+        [anArray addObject:@(idx)];
     }];
     
     return anArray;

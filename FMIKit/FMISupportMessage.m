@@ -11,7 +11,7 @@
 
 @interface FMISupportMessage ()
 
-@property (nonatomic, strong) NSBundle *bundle;
+@property (NS_NONATOMIC_IOSONLY) NSBundle *bundle;
 
 @end
 
@@ -21,7 +21,7 @@
 
 #pragma mark - Initialization
 
-- (id)initWithBundle:(NSBundle *)bundle
+- (instancetype)initWithBundle:(NSBundle *)bundle
 {
     self = [super init];
     
@@ -34,7 +34,7 @@
 }
 
 
-- (id)init
+- (instancetype)init
 {
     return [self initWithBundle:[NSBundle mainBundle]];
 }
@@ -48,9 +48,9 @@
 
 - (NSString *)subject
 {
-    NSString *nameOfApp = [[[self bundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
-    NSString *versionOfAppRange = [[[self bundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-    NSString *buildVersionOfApp = [[[self bundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    NSString *nameOfApp = [[self bundle] infoDictionary][@"CFBundleDisplayName"];
+    NSString *versionOfAppRange = [[self bundle] infoDictionary][@"CFBundleShortVersionString"];
+    NSString *buildVersionOfApp = [[self bundle] infoDictionary][@"CFBundleVersion"];
     
     return [NSString stringWithFormat:@"%@ %@ (%@) Feedback", nameOfApp, versionOfAppRange, buildVersionOfApp];
 }

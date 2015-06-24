@@ -8,7 +8,7 @@
 
 @interface FMIActivityIndicatorAlertView : NSObject <FMIAlertView>
 
-@property (NS_NONATOMIC_IOSONLY) NSString *title;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *title;
 
 - (instancetype)initWithAlertController:(UIAlertController *)alertController activityIndicatorView:(UIActivityIndicatorView *)activitiyIndicatorView;
 

@@ -11,7 +11,7 @@
 
 @interface NSNumberFormatter_EditingTests : XCTestCase
 
-@property (nonatomic, strong) NSNumberFormatter *sut;
+@property (NS_NONATOMIC_IOSONLY) NSNumberFormatter *sut;
 
 @end
 
@@ -78,20 +78,18 @@
 
 - (void)verifyFormatterReturnsNumber:(NSNumber *)number fromEditingString:(NSString *)editingString usingFractionDigits:(NSUInteger)fractionDigits
 {
-    // Given
+
     [_sut setMinimumFractionDigits:fractionDigits];
     
-    // Then
     XCTAssertEqualObjects(number, [_sut fm_numberFromEditingString:editingString]);
 }
 
 
 - (void)verifyFormatterReturnsEditingString:(NSString *)editingString fromNumber:(NSNumber *)number usingFractionDigits:(NSUInteger)fractionDigits
 {
-    // Given
+
     [_sut setMinimumFractionDigits:fractionDigits];
     
-    // Then
     XCTAssertEqualObjects(editingString, [_sut fm_editingStringFromNumber:number]);
 }
 

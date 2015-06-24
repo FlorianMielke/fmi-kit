@@ -9,9 +9,9 @@
 
 @interface FakeBindingModel : NSObject
 
-@property (nonatomic, copy) NSString *stringValue;
-@property (nonatomic, copy) NSString *stringValue2;
-@property (nonatomic) NSInteger numericValue;
-@property (nonatomic) FakeBindingModel *submodel;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *stringValue;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *stringValue2;
+@property (NS_NONATOMIC_IOSONLY) NSInteger numericValue;
+@property (NS_NONATOMIC_IOSONLY) FakeBindingModel *submodel;
 
 @end

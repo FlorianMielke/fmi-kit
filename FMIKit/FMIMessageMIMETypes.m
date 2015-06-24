@@ -22,14 +22,14 @@
 + (NSString *)mimeTypeForFileExtension:(NSString *)fileExtension {
     NSDictionary *mimeTypes = [FMIMessageMIMETypes mimeTypes];
     fileExtension = [fileExtension lowercaseString];
-    NSString *mimeType = [mimeTypes objectForKey:fileExtension];
+    NSString *mimeType = mimeTypes[fileExtension];
     if (mimeType) {
         return mimeType;
     }
     for (NSString *multipleFileExtensions in [mimeTypes allKeys]) {
         NSArray *fileExtensionComponents = [multipleFileExtensions componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
         if ([fileExtensionComponents containsObject:fileExtension]) {
-            mimeType = [mimeTypes objectForKey:multipleFileExtensions];
+            mimeType = mimeTypes[multipleFileExtensions];
             if (mimeType) {
                 break;
             }

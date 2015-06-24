@@ -24,7 +24,7 @@
  * Returns a Boolean value that indicates whether the array has any objects.
  * @return YES if the array contains objects, otherwise NO.
  */
-- (BOOL)fm_isEmpty;
+@property (readonly, NS_NONATOMIC_IOSONLY) BOOL fm_isEmpty;
 
 /**
  * Returns a Boolean value that indicates whether a given index is in bounds of the array.

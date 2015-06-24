@@ -10,9 +10,9 @@
 
 @interface FMIStore ()
 
-@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, strong) NSManagedObjectModel *managedObjectModel;
-@property (nonatomic, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (NS_NONATOMIC_IOSONLY) NSManagedObjectContext *managedObjectContext;
+@property (NS_NONATOMIC_IOSONLY) NSManagedObjectModel *managedObjectModel;
+@property (NS_NONATOMIC_IOSONLY) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 @end
 
@@ -124,7 +124,7 @@
     _managedObjectModel = nil;
 }
 
-- (BOOL)persistentStoreIsEmpty {
+- (BOOL)isPersistentStoreEmpty {
     if ([self.baseEntityNames count] == 0) {
         return NO;
     }
@@ -180,7 +180,7 @@
 }
 
 - (NSString *)appName {
-    return [[[self bundle] infoDictionary] objectForKey:@"CFBundleName"];
+    return [[self bundle] infoDictionary][@"CFBundleName"];
 }
 
 - (NSURL *)sqliteStoreURL {

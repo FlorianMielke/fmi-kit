@@ -13,7 +13,7 @@ static NSDateFormatter *sDateFormatter;
 
 @interface FMIEventParser ()
 
-@property (nonatomic, strong) EKEvent *event;
+@property (NS_NONATOMIC_IOSONLY) EKEvent *event;
 
 @end
 
@@ -43,7 +43,7 @@ static NSDateFormatter *sDateFormatter;
 }
 
 
-- (id)initWithEvent:(EKEvent *)event
+- (instancetype)initWithEvent:(EKEvent *)event
 {
     if (event == nil) {
         [[NSException exceptionWithName:NSInvalidArgumentException reason:@"When initializing event parser the given event must not be nil" userInfo: nil] raise];

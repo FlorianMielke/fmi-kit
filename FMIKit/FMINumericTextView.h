@@ -49,28 +49,28 @@ typedef NS_ENUM (NSInteger, FMINumericTextViewAccessoryButtonType) {
 /**
  *	The receiver’s accessory button.
  */
-@property (nonatomic, strong, readonly) UIBarButtonItem *accessoryButton;
+@property (readonly, NS_NONATOMIC_IOSONLY) UIBarButtonItem *accessoryButton;
 
 /**
  *	The receiver’s delegate.
  *  @see FMINumericTextViewDelegate.
  */
-@property (nonatomic, weak) id <FMINumericTextViewDelegate> delegate;
+@property (weak, NS_NONATOMIC_IOSONLY) id <FMINumericTextViewDelegate> delegate;
 
 /**
  *	The duration style of the receiver.
  */
-@property (nonatomic, assign) FMIDurationFormatterStyle durationStyle;
+@property (NS_NONATOMIC_IOSONLY) FMIDurationFormatterStyle durationStyle;
 
 /**
  * The assigned button type.
  */
-@property (nonatomic, assign, readonly) FMINumericTextViewAccessoryButtonType accessoryButtonType;
+@property (readonly, NS_NONATOMIC_IOSONLY) FMINumericTextViewAccessoryButtonType accessoryButtonType;
 
 /**
  *	A Boolean that indicates whether the keyboard is shown or not.
  */
-@property (nonatomic, assign, readonly) BOOL showsKeyboard;
+@property (readonly, NS_NONATOMIC_IOSONLY) BOOL showsKeyboard;
 
 /**
  *	Returns a new FMINumericTextView object initialized with a accessory button type.
@@ -85,7 +85,7 @@ typedef NS_ENUM (NSInteger, FMINumericTextViewAccessoryButtonType) {
  * @param notificationCenter  The notification center to use for keyboard appearance notification.
  * @return A new FMINumericTextView object.
  */
-- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType notificationCenter:(NSNotificationCenter *)notificationCenter;
+- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType notificationCenter:(NSNotificationCenter *)notificationCenter NS_DESIGNATED_INITIALIZER;
 
 /**
  * Toggles the text view as first responder.

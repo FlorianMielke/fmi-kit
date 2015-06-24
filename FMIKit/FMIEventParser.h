@@ -16,7 +16,7 @@
 /**
  * The EKEvent object to parse.
  */
-@property (nonatomic, strong, readonly) EKEvent *event;
+@property (readonly, NS_NONATOMIC_IOSONLY) EKEvent *event;
 
 /**
  * Returns a data object from a given EKEvent instance confirming to iCalendar format (RFC 5545).
@@ -29,7 +29,7 @@
  * The designated initializer.
  * @param event The EKEvent to parse.
  */
-- (id)initWithEvent:(EKEvent *)event;
+- (instancetype)initWithEvent:(EKEvent *)event;
 
 /**
  * Returns a data object confirming to iCalendar format (RFC 5545).

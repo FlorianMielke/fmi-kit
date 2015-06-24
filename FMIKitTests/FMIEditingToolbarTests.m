@@ -9,7 +9,7 @@
 
 @interface FMIEditingToolbarTests : XCTestCase
 
-@property (nonatomic, strong) FMIEditingToolbar *sut;
+@property (NS_NONATOMIC_IOSONLY) FMIEditingToolbar *sut;
 
 @end
 
@@ -55,14 +55,12 @@
 
 - (void)testToolbarShouldShowDefaultItems
 {
-    // Given
+
     UIBarButtonItem *item = [[UIBarButtonItem alloc] init];
     self.sut.defaultItems = @[item];
     
-    // When
     [self.sut setEditing:NO animated:NO];
     
-    // Then
     XCTAssertEqualObjects(self.sut.defaultItems, self.sut.items);
     XCTAssertFalse(self.sut.isEditing);
 }
@@ -70,15 +68,13 @@
 
 - (void)testToolbarShouldShowEditingItems
 {
-    // Given
+
     UIBarButtonItem *item1 = [[UIBarButtonItem alloc] init];
     UIBarButtonItem *item2 = [[UIBarButtonItem alloc] init];
     self.sut.editingItems = @[item1, item2];
     
-    // When
     [self.sut setEditing:YES animated:NO];
     
-    // Then
     XCTAssertEqualObjects(self.sut.editingItems, self.sut.items);
     XCTAssertTrue(self.sut.isEditing);
 }
@@ -86,14 +82,12 @@
 
 - (void)testToolbarShouldAssignEditButtonItemOfViewControllerWhenAwakeFromNib
 {
-    // Given
+
     UIViewController *controller = [[UIViewController alloc] init];
     self.sut.viewController = controller;
     
-    // When
     [self.sut awakeFromNib];
     
-    // Then
     XCTAssertEqualObjects(self.sut.editButtonItem, controller.editButtonItem);
 }
 

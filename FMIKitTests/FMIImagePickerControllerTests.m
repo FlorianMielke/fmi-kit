@@ -10,8 +10,8 @@
 
 @interface FMImagePickerControllerTests : XCTestCase
 
-@property (nonatomic, strong) FMIImagePickerController *sut;
-@property (nonatomic, strong) UIActionSheet *actionSheet;
+@property (NS_NONATOMIC_IOSONLY) FMIImagePickerController *sut;
+@property (NS_NONATOMIC_IOSONLY) UIActionSheet *actionSheet;
 
 @end
 
@@ -69,27 +69,23 @@
 
 - (void)testNumberOfButtonIs4ForImage
 {
-    // Given
+
     UIImage *image = [[UIImage alloc] init];
     
-    // When
     UIActionSheet *actionSheet = [[self sut] actionSheetForImage:image];
     
-    // When
     XCTAssertEqual([actionSheet numberOfButtons], 3);
 }
 
 
 - (void)testNumberOfButtonsIs3ForImagePickerAvailable
 {
-    // Given
+
     id mockImagePickerController = [OCMockObject mockForClass:[UIImagePickerController class]];
     [[[mockImagePickerController stub] andReturnValue:@YES] isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
     
-    // When
     UIActionSheet *actionSheet = [[self sut] actionSheetForImage:nil];
     
-    // Then
     XCTAssertEqual([actionSheet numberOfButtons], 3);
     [mockImagePickerController stopMocking];
 }
@@ -97,16 +93,14 @@
 
 - (void)testNumberOfButtonIs4ForImageAndImagePickerAvailable
 {
-    // Given
+
     id mockImagePickerController = [OCMockObject mockForClass:[UIImagePickerController class]];
     [[[mockImagePickerController stub] andReturnValue:@YES] isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
 
     UIImage *image = [[UIImage alloc] init];
     
-    // When
     UIActionSheet *actionSheet = [[self sut] actionSheetForImage:image];
     
-    // When
     XCTAssertEqual([actionSheet numberOfButtons], 4);
     [mockImagePickerController stopMocking];
 }

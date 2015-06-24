@@ -16,27 +16,27 @@
 /**
  * The view controller the toolbar is assigned to.
  */
-@property (nonatomic, weak) IBOutlet UIViewController *viewController;
+@property (weak, NS_NONATOMIC_IOSONLY) IBOutlet UIViewController *viewController;
 
 /**
  * The editing button of the assigned view controller.
  */
-@property (nonatomic, weak) UIBarButtonItem *editButtonItem;
+@property (weak, NS_NONATOMIC_IOSONLY) UIBarButtonItem *editButtonItem;
 
 /**
  * The items displayed on the toolbar when not being in editing mode.
  */
-@property (nonatomic, strong) NSArray *defaultItems;
+@property (NS_NONATOMIC_IOSONLY) NSArray *defaultItems;
 
 /**
  * The items displayed on the toolbar when being in editing mode.
  */
-@property (nonatomic, strong) NSArray *editingItems;
+@property (NS_NONATOMIC_IOSONLY) NSArray *editingItems;
 
 /**
  * A Boolean value indicating whether the toolbar is currently in editing mode.
  */
-@property (nonatomic, getter = isEditing) BOOL editing;
+@property (getter = isEditing, NS_NONATOMIC_IOSONLY) BOOL editing;
 
 /**
  * Sets whether the toolbar shows the editable item.

@@ -10,13 +10,13 @@
 
 @interface FMIDatePickerController ()
 
-@property (nonatomic, weak) UITableView *tableView;
-@property (nonatomic, strong) NSIndexPath *indexPath;
-@property (nonatomic, strong) UIDatePicker *datePicker;
-@property (nonatomic, assign) BOOL showsDatePicker;
-@property (nonatomic, assign) UIDatePickerMode datePickerModeForDatePicker;
-@property (nonatomic, strong) NSTimeZone *timeZoneForDatePicker;
-@property (nonatomic, strong) NSDate *dateForDatePicker;
+@property (weak, NS_NONATOMIC_IOSONLY) UITableView *tableView;
+@property (NS_NONATOMIC_IOSONLY) NSIndexPath *indexPath;
+@property (NS_NONATOMIC_IOSONLY) UIDatePicker *datePicker;
+@property (NS_NONATOMIC_IOSONLY) BOOL showsDatePicker;
+@property (NS_NONATOMIC_IOSONLY) UIDatePickerMode datePickerModeForDatePicker;
+@property (NS_NONATOMIC_IOSONLY) NSTimeZone *timeZoneForDatePicker;
+@property (NS_NONATOMIC_IOSONLY) NSDate *dateForDatePicker;
 
 @end
 

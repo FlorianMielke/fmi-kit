@@ -18,7 +18,7 @@
  * @param fieldDescriptions A attribute descriptions object.
  * @return Returns an initialized components object, or nil if the attribute descriptions object is nil.
  */
-- (instancetype)initWithFieldDescriptions:(NSArray *)fieldDescriptions;
+- (instancetype)initWithFieldDescriptions:(NSArray *)fieldDescriptions NS_DESIGNATED_INITIALIZER;
 
 /**
  * Returns a dictionary of Foundation objects from given CSV fields.

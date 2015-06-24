@@ -9,6 +9,6 @@
 
 @interface FakeBindingObserver : NSObject
 
-@property (nonatomic, copy) NSString *text;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *text;
 
 @end

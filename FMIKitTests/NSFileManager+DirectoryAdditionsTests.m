@@ -11,8 +11,8 @@
 
 @interface NSFileManager_DirectoryAdditionsTests : XCTestCase
 
-@property (nonatomic, strong) NSFileManager *sut;
-@property (nonatomic, strong) NSURL *applicationDocumentsDirectory;
+@property (NS_NONATOMIC_IOSONLY) NSFileManager *sut;
+@property (NS_NONATOMIC_IOSONLY) NSURL *applicationDocumentsDirectory;
 
 @end
 
@@ -59,7 +59,7 @@
 
 - (void)testRemovingItemsRemovesAllItemsInDirectory
 {
-    // Given
+
     NSError *error = nil;
     NSString *testDirectoryPath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"/test/"];
     [self.sut createDirectoryAtPath:testDirectoryPath withIntermediateDirectories:NO attributes:nil error:&error];
@@ -74,10 +74,8 @@
     NSString *testFilePathTwo = [testDirectoryPath stringByAppendingPathComponent:testFileContentTwo];
     [testFileDataTwo writeToFile:testFilePathTwo atomically:YES];
     
-    // When
     [self.sut fm_removeItemsFromDirectoryAtPath:testDirectoryPath];
     
-    // Then
     NSArray *contentsOfDirectory = [self.sut contentsOfDirectoryAtPath:testDirectoryPath error:nil];
     XCTAssertEqual([contentsOfDirectory count], (NSUInteger)0);
 }
@@ -91,10 +89,9 @@
 
 - (void)testManagerShouldReturnApplicationInboxDirectory
 {
-    // Given
+
     NSURL *inboxDir = [self.applicationDocumentsDirectory URLByAppendingPathComponent:@"Inbox" isDirectory:YES];
     
-    // Then
     XCTAssertEqualObjects([self.sut fm_applicationInboxDirectory], inboxDir);
 }
 

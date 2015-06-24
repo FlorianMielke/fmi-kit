@@ -10,7 +10,7 @@
 
 @interface SLSCSVComponentsTests : XCTestCase
 
-@property (nonatomic, strong) FMICSVFieldDeserializer *sut;
+@property (NS_NONATOMIC_IOSONLY) FMICSVFieldDeserializer *sut;
 
 @end
 
@@ -48,7 +48,7 @@
 
 - (void)testFieldDeserializerShouldAssignDefaultValue
 {
-    // Given
+
     FMIFieldDescription *fieldDescription = [[FMIFieldDescription alloc] init];
     fieldDescription.name = @"myField";
     fieldDescription.defaultValue = @"Lorem";
@@ -56,27 +56,23 @@
     
     FMICSVFieldDeserializer *deserializer = [[FMICSVFieldDeserializer alloc] initWithFieldDescriptions:@[fieldDescription]];
     
-    // When
     NSDictionary *fieldObjects = [deserializer objectsFromFields:@[@""]];
     
-    // Then
     XCTAssertEqualObjects([fieldObjects valueForKey:@"myField"], @"Lorem");
 }
 
 
 - (void)testFieldDeserializerShouldConvertToNumber
 {
-    // Given
+
     FMIFieldDescription *fieldDescription = [[FMIFieldDescription alloc] init];
     fieldDescription.name = @"myField";
     fieldDescription.type = FMFieldTypeInteger64;
     
     FMICSVFieldDeserializer *deserializer = [[FMICSVFieldDeserializer alloc] initWithFieldDescriptions:@[fieldDescription]];
     
-    // When
     NSDictionary *fieldObjects = [deserializer objectsFromFields:@[@"103"]];
     
-    // Then
     XCTAssertEqualObjects([fieldObjects valueForKey:@"myField"], @103);
 }
 

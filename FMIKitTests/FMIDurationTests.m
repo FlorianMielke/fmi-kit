@@ -8,7 +8,7 @@
 
 @interface FMIDurationTests : XCTestCase
 
-@property (nonatomic, strong) FMIDuration *duration;
+@property (NS_NONATOMIC_IOSONLY) FMIDuration *duration;
 
 @end
 

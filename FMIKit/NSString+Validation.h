@@ -17,6 +17,6 @@
  * Checks whether the receiver is numeric or not
  * @return BOOL YES if receiver contains only numeric characters, NO if not
  */
-- (BOOL)isNumeric;
+@property (readonly, getter=isNumeric, NS_NONATOMIC_IOSONLY) BOOL numeric;
 
 @end

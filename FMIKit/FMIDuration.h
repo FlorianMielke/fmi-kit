@@ -66,9 +66,16 @@
 /**
  *	Returns an FMIDuration object initialized with a given number of seconds.
  *	@param	seconds	The number of seconds.
- *	@return	An FMIDuration object initialized with seconds.
+ *	@return	A new duration.
  */
-- (instancetype)initWithTimeInterval:(NSTimeInterval)seconds;
+- (instancetype)initWithTimeInterval:(NSTimeInterval)seconds NS_DESIGNATED_INITIALIZER;
+
+/**
+ *	Returns an FMIDuration object initialized from data in the given unarchiver.
+ *	@param	aDecoder	Coder from which to initialize the step.
+ *	@return	A new duration.
+ */
+- (instancetype)initWithCoder:(NSCoder *)aDecoder NS_DESIGNATED_INITIALIZER;
 
 /**
  *	Returns an NSComparisonResult value that indicates the temporal ordering of the receiver and another given duration.

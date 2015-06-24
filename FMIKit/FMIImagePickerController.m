@@ -18,7 +18,7 @@ typedef struct {
 
 @interface FMIImagePickerController ()
 
-@property (nonatomic, assign) FMImageButtonIndexes imageButtonIndexes;
+@property (NS_NONATOMIC_IOSONLY) FMImageButtonIndexes imageButtonIndexes;
 
 @end
 

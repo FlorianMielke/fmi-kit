@@ -11,7 +11,7 @@
 
 @interface FMISupportMessageTests : XCTestCase
 
-@property (nonatomic, strong) FMISupportMessage *sut;
+@property (NS_NONATOMIC_IOSONLY) FMISupportMessage *sut;
 
 @end
 
@@ -84,10 +84,9 @@
 
 - (void)testSubjectContainsNameOfApp
 {
-    // Given
-    NSString *nameOfApp = [[self infoDictionary] objectForKey:@"CFBundleDisplayName"];
+
+    NSString *nameOfApp = [self infoDictionary][@"CFBundleDisplayName"];
     
-    // Then
     NSRange nameOfAppRange = [[[self sut] subject] rangeOfString:nameOfApp];
     XCTAssertTrue(nameOfAppRange.location != NSNotFound);
 }
@@ -95,8 +94,8 @@
 
 - (void)testSubjectContainsVersionOfApp
 {
-    // Given
-    NSString *versionOfApp = [[self infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+
+    NSString *versionOfApp = [self infoDictionary][@"CFBundleShortVersionString"];
 
     // Then
     NSRange versionOfAppRange = [[[self sut] subject] rangeOfString:versionOfApp];
@@ -106,10 +105,9 @@
 
 - (void)testSubjectContainsBuildVersionOfApp
 {
-    // Given
-    NSString *buildVersionOfApp = [[self infoDictionary] objectForKey:@"CFBundleVersion"];
+
+    NSString *buildVersionOfApp = [self infoDictionary][@"CFBundleVersion"];
     
-    // Then
     NSRange buildVersionOfAppRange = [[[self sut] subject] rangeOfString:buildVersionOfApp];
     XCTAssertTrue(buildVersionOfAppRange.location != NSNotFound);
 }
@@ -126,10 +124,9 @@
 
 - (void)testBodyContainsIOSVersion
 {
-    // Given
+
     NSString *iOSVersion = [[UIDevice currentDevice] systemVersion];
     
-    // Then
     NSRange iOSVersionRange = [[[self sut] messageBody] rangeOfString:iOSVersion];
     XCTAssertTrue(iOSVersionRange.location != NSNotFound);
 }
@@ -137,10 +134,9 @@
 
 - (void)testBodyContainsIOSDevice
 {
-    // Given
+
     NSString *iOSDevice = [[UIDevice currentDevice] platform];
     
-    // Then
     NSRange iOSDeviceRange = [[[self sut] messageBody] rangeOfString:iOSDevice];
     XCTAssertTrue(iOSDeviceRange.location != NSNotFound);
 }
@@ -148,10 +144,9 @@
 
 - (void)testBodyContainsSystemLanguage
 {
-    // Given
+
     NSString *systemLanguage = [[NSLocale preferredLanguages] firstObject];
     
-    // Then
     NSRange systemLanguageRange = [[[self sut] messageBody] rangeOfString:systemLanguage];
     XCTAssertTrue(systemLanguageRange.location != NSNotFound);
 }

@@ -9,7 +9,7 @@
 
 @interface NSBundle (Configuration)
 
-@property (NS_NONATOMIC_IOSONLY, readonly, getter=isBeta) BOOL beta;
-@property (NS_NONATOMIC_IOSONLY, readonly, getter=isDebug) BOOL debug;
+@property (readonly, getter=isBeta, NS_NONATOMIC_IOSONLY) BOOL beta;
+@property (readonly, getter=isDebug, NS_NONATOMIC_IOSONLY) BOOL debug;
 
 @end

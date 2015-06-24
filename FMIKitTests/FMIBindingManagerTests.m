@@ -11,9 +11,9 @@
 
 @interface FMIBindingManagerTests : XCTestCase
 
-@property (nonatomic, strong) FMIBindingManager *bindingManager;
-@property (nonatomic, strong) FakeBindingObserver *testObserver;
-@property (nonatomic, strong) FakeBindingModel *testModel;
+@property (NS_NONATOMIC_IOSONLY) FMIBindingManager *bindingManager;
+@property (NS_NONATOMIC_IOSONLY) FakeBindingObserver *testObserver;
+@property (NS_NONATOMIC_IOSONLY) FakeBindingModel *testModel;
 
 @end
 
@@ -50,13 +50,11 @@
 
 - (void)testCopiesValuesOnEnable
 {
-    // Given
+
     _testModel.stringValue = @"Test Value";
     
-    // When
     [_bindingManager bindObserver:_testObserver keyPath:@"text" toSubject:_testModel keyPath:@"stringValue"];
     
-    // Then
     XCTAssertNil(_testObserver.text, @"Value should not change until activation");
     
     [_bindingManager enable];

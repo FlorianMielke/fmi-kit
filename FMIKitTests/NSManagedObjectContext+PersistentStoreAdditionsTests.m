@@ -11,7 +11,7 @@
 
 @interface NSManagedObjectContext_PersistentStoreAdditionsTests : XCTestCase
 
-@property (nonatomic, strong) NSManagedObjectContext *sut;
+@property (NS_NONATOMIC_IOSONLY) NSManagedObjectContext *sut;
 
 @end
 
@@ -25,7 +25,7 @@
 {
     [super setUp];
     
-    NSArray *bundles = [NSArray arrayWithObject:[NSBundle bundleForClass:[self class]]];
+    NSArray *bundles = @[[NSBundle bundleForClass:[self class]]];
     NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:bundles];
     NSPersistentStoreCoordinator *persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];
     
@@ -56,27 +56,25 @@
 
 - (void)testCheckForEmtpyStoreReturnsYesForUnkownEntity
 {
-    XCTAssertTrue([self.sut persistentStoreIsEmtpyForEntities:[NSArray arrayWithObject:@"Unkown"]]);
+    XCTAssertTrue([self.sut persistentStoreIsEmtpyForEntities:@[@"Unkown"]]);
 }
 
 
 - (void)testCheckForEmtpyStoreReturnsFalseForOneEntity
 {
-    // Given
+
     [NSEntityDescription insertNewObjectForEntityForName:@"FMEvent" inManagedObjectContext:self.sut];
     
-    // Then
-    XCTAssertFalse([self.sut persistentStoreIsEmtpyForEntities:[NSArray arrayWithObject:@"FMEvent"]]);
+    XCTAssertFalse([self.sut persistentStoreIsEmtpyForEntities:@[@"FMEvent"]]);
 }
 
 
 - (void)testCheckForEmtpyStoreReturnsFalseForTwoEntitiesWithOnlyOneEmtpy
 {
-    // Given
+
     [NSEntityDescription insertNewObjectForEntityForName:@"FMEvent" inManagedObjectContext:self.sut];
-    NSArray *entitiesToCheck = [NSArray arrayWithObjects:@"FMEvent", @"FMAttendee", nil];
+    NSArray *entitiesToCheck = @[@"FMEvent", @"FMAttendee"];
     
-    // Then
     XCTAssertFalse([self.sut persistentStoreIsEmtpyForEntities:entitiesToCheck]);
 }
 

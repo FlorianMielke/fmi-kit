@@ -10,7 +10,7 @@
 
 @interface FMICSVFieldDeserializer ()
 
-@property (nonatomic, strong) NSArray *fieldDescriptions;
+@property (NS_NONATOMIC_IOSONLY) NSArray *fieldDescriptions;
 
 @end
 
@@ -38,8 +38,8 @@
     NSMutableDictionary *fieldValues = [NSMutableDictionary dictionaryWithCapacity:[self.fieldDescriptions count]];
 
     for (NSUInteger fieldIndex = 0; fieldIndex < [self.fieldDescriptions count]; fieldIndex++) {
-        FMIFieldDescription *fieldDescription = [self.fieldDescriptions objectAtIndex:fieldIndex];
-        id fieldsValue = [fields objectAtIndex:fieldIndex];
+        FMIFieldDescription *fieldDescription = (self.fieldDescriptions)[fieldIndex];
+        id fieldsValue = fields[fieldIndex];
 
         if (fieldsValue != nil && ![fieldsValue isEqualToString:@""]) {
             fieldsValue = [fieldsValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
@@ -48,7 +48,7 @@
             fieldsValue = fieldDescription.defaultValue;
         }
 
-        [fieldValues setObject:fieldsValue forKey:fieldDescription.name];
+        fieldValues[fieldDescription.name] = fieldsValue;
     }
 
     return [fieldValues copy];

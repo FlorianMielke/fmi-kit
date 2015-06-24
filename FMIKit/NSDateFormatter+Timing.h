@@ -22,13 +22,13 @@
  *	Returns a date and time format like in the iOS calendar app.
  *	@return	NSString A date and time format string.
  */
-- (NSString *)calendarDateAndTimeFormat;
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *calendarDateAndTimeFormat;
 
 /**
  *	Returns a date format like in the iOS calendar app.
  *	@return	NSString A date format string.
  */
-- (NSString *)calendarDateFormat;
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *calendarDateFormat;
 
 /**
  * Retuns a date format compatible to ISO 8601 format

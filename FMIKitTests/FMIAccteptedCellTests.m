@@ -9,7 +9,7 @@
 
 @interface FMIAccteptedCellTests : XCTestCase
 
-@property (nonatomic, strong) FMIAcceptedCell *sut;
+@property (NS_NONATOMIC_IOSONLY) FMIAcceptedCell *sut;
 
 @end
 
@@ -50,7 +50,6 @@
     // When
     [[self sut] setAccepted:YES];
     
-    // Then
     XCTAssertEqual([[self sut] accessoryType], UITableViewCellAccessoryCheckmark);
 }
 
@@ -61,7 +60,6 @@
     [[self sut] setAccepted:YES];
     [[self sut] setAccepted:NO];
     
-    // Then
     XCTAssertEqual([[self sut] accessoryType], UITableViewCellAccessoryNone);
 }
 

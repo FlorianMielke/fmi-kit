@@ -40,21 +40,19 @@
 
 - (void)testNumberShouldInvertPositiveNumber
 {
-    // Given
+
     NSDecimalNumber *positiveOne = [NSDecimalNumber one];
     NSDecimalNumber *negativeOne = [NSDecimalNumber decimalNumberWithMantissa:1 exponent:0 isNegative:YES];
     
-    // Then
     XCTAssertEqualObjects([positiveOne fm_invertedNumber], negativeOne);
 }
 
 
 - (void)testNumberShouldInvertNegativeNumber
 {
-    // Given
+
     NSDecimalNumber *negativeOne = [NSDecimalNumber decimalNumberWithMantissa:1 exponent:0 isNegative:YES];
     
-    // Then
     XCTAssertEqualObjects([negativeOne fm_invertedNumber], [NSDecimalNumber one]);
 }
 
@@ -70,35 +68,30 @@
     // When
     NSDecimalNumber *modulo = [[NSDecimalNumber one] fm_moduloFor:[NSDecimalNumber one]];
     
-    // Then
     XCTAssertEqualObjects(modulo, [NSDecimalNumber zero]);
 }
 
 
 - (void)testNumberShouldCalculateModuloOfOneForThreeDevidedByTwo
 {
-    // Given
+
     NSDecimalNumber *three = [NSDecimalNumber decimalNumberWithMantissa:3 exponent:0 isNegative:NO];
     NSDecimalNumber *two = [NSDecimalNumber decimalNumberWithMantissa:2 exponent:0 isNegative:NO];
     
-    // When
     NSDecimalNumber *modulo = [three fm_moduloFor:two];
     
-    // Then
     XCTAssertEqualObjects(modulo, [NSDecimalNumber one]);
 }
 
 
 - (void)testNumberShouldCalculateModuloOfMinusOneForMinusThreeDevidedByTwo
 {
-    // Given
+
     NSDecimalNumber *three = [NSDecimalNumber decimalNumberWithMantissa:3 exponent:0 isNegative:YES];
     NSDecimalNumber *two = [NSDecimalNumber decimalNumberWithMantissa:2 exponent:0 isNegative:NO];
     
-    // When
     NSDecimalNumber *modulo = [three fm_moduloFor:two];
     
-    // Then
     NSDecimalNumber *expectedModulo = [NSDecimalNumber decimalNumberWithMantissa:1 exponent:0 isNegative:YES];
     XCTAssertEqualObjects(modulo, expectedModulo);
 }

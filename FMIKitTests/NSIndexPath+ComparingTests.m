@@ -12,7 +12,7 @@
 
 @interface NSIndexPath_ComparingTests : XCTestCase
 
-@property (nonatomic, strong) NSIndexPath *sut;
+@property (NS_NONATOMIC_IOSONLY) NSIndexPath *sut;
 
 @end
 
@@ -44,10 +44,9 @@
 
 - (void)testComparingIndexPathShouldSucceedForSameIndexPath
 {
-    // Given
+
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     
-    // Then
     XCTAssertTrue([self.sut fm_isEqualToIndexPath:indexPath]);
 }
 
@@ -60,10 +59,9 @@
 
 - (void)testComparingIndexPathShouldFailForDifferentIndexPath
 {
-    // Given
+
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:1 inSection:0];
     
-    // Then
     XCTAssertFalse([self.sut fm_isEqualToIndexPath:indexPath]);
 }
 

@@ -13,7 +13,7 @@
 
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath
 {
-	return [self objectForKey:indexPath];
+	return self[indexPath];
 }
 
 

@@ -10,9 +10,9 @@
 
 @interface FMIMessageAttachment ()
 
-@property (nonatomic, strong) NSData *data;
-@property (nonatomic, copy) NSString *fileName;
-@property (nonatomic, copy) NSString *mimeType;
+@property (NS_NONATOMIC_IOSONLY) NSData *data;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *fileName;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *mimeType;
 
 @end
 
@@ -24,7 +24,7 @@
 #pragma mark -
 #pragma mark Initialization
 
-+ (id)messageAttachmentForData:(NSData *)data mimeType:(NSString *)mimeType fileName:(NSString *)fileName
++ (instancetype)messageAttachmentForData:(NSData *)data mimeType:(NSString *)mimeType fileName:(NSString *)fileName
 {
     id messageAttachment = nil;
     

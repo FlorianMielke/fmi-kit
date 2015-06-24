@@ -9,6 +9,6 @@
 
 @interface FakeTextViewDelegate : NSObject  <FMINumericTextViewDelegate>
 
-@property (nonatomic, strong) NSArray *compoundTextViews;
+@property (NS_NONATOMIC_IOSONLY) NSArray *compoundTextViews;
 
 @end

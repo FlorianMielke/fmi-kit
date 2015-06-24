@@ -16,32 +16,32 @@
 /**
  * The delimiter. The default is , (comma).
  */
-@property (nonatomic, strong) NSString *delimiter;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *delimiter;
 
 /**
  * The encloser. The default is " (apostrophe).
  */
-@property (nonatomic, strong) NSString *encloser;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *encloser;
 
 /**
  * The string encoding. The default is NSUTF8StringEncoding
  */
-@property (nonatomic, assign) NSStringEncoding encoding;
+@property (NS_NONATOMIC_IOSONLY) NSStringEncoding encoding;
 
 /**
  * Returns an array containing the field descriptions.
  * @note The elements in the array are instances of NSAttributeDescription.
  */
-@property (nonatomic, strong) NSArray *fieldDescriptions;
+@property (NS_NONATOMIC_IOSONLY) NSArray *fieldDescriptions;
 
 /**
  * The line break. The default ist CRLF.
  */
-@property (nonatomic, strong) NSString *lineBreak;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *lineBreak;
 
 /**
  * A Boolean that indicate whether to skip the first line. The default is YES.
  */
-@property (nonatomic, assign) BOOL skipFirstLine;
+@property (NS_NONATOMIC_IOSONLY) BOOL skipFirstLine;
 
 @end

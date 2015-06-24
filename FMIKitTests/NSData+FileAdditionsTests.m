@@ -9,7 +9,7 @@
 
 @interface NSData_FileAdditionsTests : XCTestCase
 
-@property (nonatomic, strong) NSData *testData;
+@property (NS_NONATOMIC_IOSONLY) NSData *testData;
 
 @end
 

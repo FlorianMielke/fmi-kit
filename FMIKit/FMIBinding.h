@@ -12,11 +12,11 @@ typedef id (^FMTransformBlock)(id value);
 
 @interface FMIBinding : NSObject
 
-@property (nonatomic, retain) NSObject *observer;
-@property (nonatomic, copy) NSString *observerKeyPath;
-@property (nonatomic, retain) NSObject *subject;
-@property (nonatomic, copy) NSString *subjectKeyPath;
-@property (nonatomic, copy) FMTransformBlock transformBlock;
+@property (NS_NONATOMIC_IOSONLY) NSObject *observer;
+@property (NS_NONATOMIC_IOSONLY) NSObject *subject;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *observerKeyPath;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *subjectKeyPath;
+@property (copy, NS_NONATOMIC_IOSONLY) FMTransformBlock transformBlock;
 
 - (void)activate;
 

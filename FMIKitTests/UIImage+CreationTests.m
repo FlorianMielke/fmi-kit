@@ -22,7 +22,6 @@
     // When
     UIImage *image = [UIImage imageWithColor:[UIColor whiteColor]];
     
-    // Then
     XCTAssertNotNil(image);
     XCTAssertTrue(CGSizeEqualToSize([image size], CGSizeMake(1.0, 1.0)));
 }

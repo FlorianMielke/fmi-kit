@@ -11,7 +11,7 @@ static NSString *const FMIDurationEncodingTimeIntervalKey = @"timeInterval";
 
 @interface FMIDuration ()
 
-@property (nonatomic, assign) NSTimeInterval timeInterval;
+@property (NS_NONATOMIC_IOSONLY) NSTimeInterval timeInterval;
 
 @end
 

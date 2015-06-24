@@ -24,7 +24,6 @@
     // When
     id alertView = [MFMailComposeViewController cannotSendMailAlertView];
     
-    // Then
     XCTAssertTrue([alertView isKindOfClass:[UIAlertView class]]);
 }
 
@@ -46,7 +45,6 @@
     // When
     NSString *okButtonTitle = [[MFMailComposeViewController cannotSendMailAlertView] buttonTitleAtIndex:0];
     
-    // Then
     XCTAssertTrue([okButtonTitle isEqualToString:NSLocalizedStringFromTableInBundle(@"OK", @"FMIKitLocalizable", [FMIKitPrivates resourcesBundle], @"Used for word")]);
 }
 
@@ -60,7 +58,6 @@
     // When
     id alertView = [MFMailComposeViewController sendingMailFailedAlertView];
     
-    // Then
     XCTAssertTrue([alertView isKindOfClass:[UIAlertView class]]);
 }
 
@@ -82,7 +79,6 @@
     // When
     NSString *okButtonTitle = [[MFMailComposeViewController sendingMailFailedAlertView] buttonTitleAtIndex:0];
     
-    // Then
     XCTAssertTrue([okButtonTitle isEqualToString:NSLocalizedStringFromTableInBundle(@"OK", @"FMIKitLocalizable", [FMIKitPrivates resourcesBundle], @"Used for word")]);
 }
 

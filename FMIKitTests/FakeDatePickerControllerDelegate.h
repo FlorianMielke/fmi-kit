@@ -9,10 +9,10 @@
 
 @interface FakeDatePickerControllerDelegate : NSObject  <FMIDatePickerControllerDelegate>
 
-@property (nonatomic, strong) NSArray *compoundController;
-@property (nonatomic, assign) BOOL informedAboutWillHide;
-@property (nonatomic, assign) BOOL informedAboutDidHide;
-@property (nonatomic, assign) BOOL informedAboutWillShow;
-@property (nonatomic, assign) BOOL informedAboutDidShow;
+@property (NS_NONATOMIC_IOSONLY) NSArray *compoundController;
+@property (NS_NONATOMIC_IOSONLY) BOOL informedAboutWillHide;
+@property (NS_NONATOMIC_IOSONLY) BOOL informedAboutDidHide;
+@property (NS_NONATOMIC_IOSONLY) BOOL informedAboutWillShow;
+@property (NS_NONATOMIC_IOSONLY) BOOL informedAboutDidShow;
 
 @end

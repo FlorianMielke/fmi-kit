@@ -34,14 +34,13 @@
 
 - (void)testReturnsArrayWithIndexes
 {
-    // Given
-    NSArray *anArray = [NSArray arrayWithObjects:@1, @2, @4, nil];
+
+    NSArray *anArray = @[@1, @2, @4];
     NSMutableIndexSet *indexes = [NSMutableIndexSet indexSet];
     [indexes addIndex:1];
     [indexes addIndex:2];
     [indexes addIndex:4];
     
-    // Then
     XCTAssertTrue([[NSArray arrayWithIndexes:indexes] isEqualToArray:anArray]);
 }
 

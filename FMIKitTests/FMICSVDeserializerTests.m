@@ -10,9 +10,9 @@
 
 @interface SLSCSVDeserializerTests : XCTestCase
 
-@property (nonatomic, strong) FakeCSVFileDescription *fileDescription;
-@property (nonatomic, strong) NSURL *validTestFileURL;
-@property (nonatomic, strong) NSURL *invalidTestFileURL;
+@property (NS_NONATOMIC_IOSONLY) FakeCSVFileDescription *fileDescription;
+@property (NS_NONATOMIC_IOSONLY) NSURL *validTestFileURL;
+@property (NS_NONATOMIC_IOSONLY) NSURL *invalidTestFileURL;
 
 @end
 
@@ -72,13 +72,11 @@
 
 - (void)testValidationShouldReturnErrorForInvalidFileAtURL
 {
-    // Given
+
     NSError *error;
     
-    // When
     BOOL isValid = [FMICSVDeserializer isValidCSVFileAtURL:self.invalidTestFileURL fileDescription:self.fileDescription error:&error];
     
-    // Then
     XCTAssertFalse(isValid);
     XCTAssertNotNil(error);
     XCTAssertEqualObjects(error.domain, FMICSVDeserializerErrorDomain);
@@ -88,10 +86,9 @@
 
 - (void)testValidationShouldFailForInvalidLineBreak
 {
-    // Given
+
     self.fileDescription.lineBreak = @"\r";
     
-    // Then
     XCTAssertFalse([FMICSVDeserializer isValidCSVFileAtURL:self.invalidTestFileURL fileDescription:self.fileDescription error:NULL]);
 }
 
@@ -101,14 +98,13 @@
     // When
     NSArray *components = [FMICSVDeserializer objectsWithContentsOfFileAtURL:self.validTestFileURL fileDescription:self.fileDescription error:NULL];
     
-    // Then
     XCTAssertEqual([components count], (NSUInteger)1415);
 }
 
 
 - (void)testDeserializationShouldReturnComponentsForFirstRow
 {
-    // Given
+
     NSDictionary *referenceObject = @{@"caption" : @"Organisation von Finanzberater Nachname_1"
                                       , @"color" : @"150,54,52"
                                       , @"employeeNo" : @36975
@@ -121,17 +117,15 @@
                                       , @"unitValue" : @26873
                                       , @"unitValuePriorYear": @28940};
     
-    // When
     NSArray *components = [FMICSVDeserializer objectsWithContentsOfFileAtURL:self.validTestFileURL fileDescription:self.fileDescription error:NULL];
     
-    // Then
     XCTAssertEqualObjects([components firstObject], referenceObject);
 }
 
 
 - (void)testDeserializationShouldAssignDefaultValues
 {
-    // Given
+
     NSDictionary *defaultValuesObject = @{@"caption" : @""
                                           , @"color" : @"161,28,54"
                                           , @"employeeNo" : @1
@@ -144,10 +138,8 @@
                                           , @"unitValue" : @0
                                           , @"unitValuePriorYear": @0};
     
-    // When
     NSArray *components = [FMICSVDeserializer objectsWithContentsOfFileAtURL:self.validTestFileURL fileDescription:self.fileDescription error:NULL];
     
-    // Then
     XCTAssertEqualObjects([components lastObject], defaultValuesObject);
 }
 

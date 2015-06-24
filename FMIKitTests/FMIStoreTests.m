@@ -10,7 +10,7 @@
 
 @interface FMIStoreTests : XCTestCase
 
-@property (nonatomic, strong) FMIStore *sut;
+@property (NS_NONATOMIC_IOSONLY) FMIStore *sut;
 
 @end
 
@@ -68,10 +68,9 @@
 
 - (void)testStoreShouldConfigurePersistentStore
 {
-    // Given
+
     NSURL *storeURL = [[self.sut applicationDocumentsDirectory] URLByAppendingPathComponent:self.sut.databaseName];
     
-    // Then
     NSPersistentStore *store = [[self.sut.persistentStoreCoordinator persistentStores] firstObject];
     XCTAssertEqual([store type], NSSQLiteStoreType);
     XCTAssertTrue([[store options] isEqualToDictionary:@{NSSQLitePragmasOption: @{@"journal_mode": @"DELETE"}}]);
@@ -85,7 +84,6 @@
     // When
     [self.sut useInMemoryStore];
     
-    // Then
     NSPersistentStore *store = [[self.sut.persistentStoreCoordinator persistentStores] firstObject];
     XCTAssertEqual([store type], NSInMemoryStoreType);
 }
@@ -93,14 +91,12 @@
 
 - (void)testStoreShouldResetTheCoreDataStack
 {
-    // Given
+
     NSManagedObjectContext *managedObjectContext = self.sut.managedObjectContext;
     NSPersistentStoreCoordinator *persistentStoreCoordinator = self.sut.persistentStoreCoordinator;
     
-    // When
     [self.sut resetCoreDataStack];
     
-    // Then
     XCTAssertNotEqualObjects(managedObjectContext, self.sut.managedObjectContext);
     XCTAssertNotEqualObjects(persistentStoreCoordinator, self.sut.persistentStoreCoordinator);
 }
@@ -108,50 +104,47 @@
 
 - (void)testStoreShouldReturnTrueForEmptyPersistentStore
 {
-    // Given
+
     self.sut.baseEntityNames = @[@"FMEvent"];
     
-    // Then
-    XCTAssertTrue([self.sut persistentStoreIsEmpty]);
+    XCTAssertTrue(self.sut.isPersistentStoreEmpty);
 }
 
 
 - (void)testStoreShouldReturnFalseForMissingBaseEntityNamesWhenCheckingForEmptyPersistentStore
 {
-    XCTAssertFalse([self.sut persistentStoreIsEmpty]);
+    XCTAssertFalse(self.sut.isPersistentStoreEmpty);
 }
 
 
 - (void)testStoreShouldReturnFalseForNotEmptyPersistentStore
 {
-    // Given
+
     self.sut.baseEntityNames = @[@"FMEvent"];
     [NSEntityDescription insertNewObjectForEntityForName:@"FMEvent" inManagedObjectContext:self.sut.managedObjectContext];
 
     // Then
-    XCTAssertFalse([self.sut persistentStoreIsEmpty]);
+    XCTAssertFalse(self.sut.isPersistentStoreEmpty);
 }
 
 
 - (void)testStoreShouldRemovePersistentStoreFile
 {
-    // Given
+
     NSURL *storeURL = [[self.sut applicationDocumentsDirectory] URLByAppendingPathComponent:self.sut.databaseName];
     [self.sut managedObjectContext];
     
     XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]);
     
-    // When
     [self.sut resetPersistentStore];
     
-    // Then
     XCTAssertFalse([[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]);
 }
 
 
 - (void)testStoreShouldDeleteAllManagedObjects
 {
-    // Given
+
     NSManagedObject *event = [NSEntityDescription insertNewObjectForEntityForName:@"FMEvent" inManagedObjectContext:self.sut.managedObjectContext];
     NSManagedObject *attendee1 = [NSEntityDescription insertNewObjectForEntityForName:@"FMAttendee" inManagedObjectContext:self.sut.managedObjectContext];
     NSManagedObject *attendee2 = [NSEntityDescription insertNewObjectForEntityForName:@"FMAttendee" inManagedObjectContext:self.sut.managedObjectContext];
@@ -166,10 +159,8 @@
     NSArray *allAttendees = [self.sut.managedObjectContext executeFetchRequest:fetchAllAttendees error:NULL];
     XCTAssertEqual([allAttendees count], (NSUInteger)2);
     
-    // When
     [self.sut deleteAllManagedObjects];
     
-    // Then
     NSArray *eventsAfterDeletion = [self.sut.managedObjectContext executeFetchRequest:fetchAllEvents error:NULL];
     XCTAssertEqual([eventsAfterDeletion count], (NSUInteger)0);
 

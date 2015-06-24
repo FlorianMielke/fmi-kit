@@ -16,13 +16,13 @@
  * Returns the URL to the app documents directory.
  * @return The URL to the app documents directory.
  */
-- (NSURL *)fm_applicationDocumentsDirectory;
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSURL *fm_applicationDocumentsDirectory;
 
 /**
  * Returns the URL to the app inbox directory.
  * @return The URL to the app inbox directory.
  */
-- (NSURL *)fm_applicationInboxDirectory;
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSURL *fm_applicationInboxDirectory;
 
 /**
  * Removes all items from the application inbox directory.

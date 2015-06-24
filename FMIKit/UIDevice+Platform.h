@@ -18,19 +18,19 @@
  * The device platform identifier.
  * @note Possible examples are @"iPhone1,1" and @"iPod2,1".
  */
-- (NSString *)platformIdentifier;
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *platformIdentifier;
 
 /**
  * The name of the device's platform.
  * @note Possible examples are @”iPhone 4” and @”iPad 2 (WiFi)”.
  */
-- (NSString *)platform;
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *platform;
 
 /**
  *  Checks if the system version of the device is iOS8 or higher
  *
  *  @return YES if systen version is iOS8 or higher, otherwise NO.
  */
-- (BOOL)isIOS8;
+@property (readonly, getter=isIOS8, NS_NONATOMIC_IOSONLY) BOOL IOS8;
 
 @end

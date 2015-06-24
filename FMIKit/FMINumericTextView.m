@@ -12,11 +12,11 @@
 
 @interface FMINumericTextView () <UIToolbarDelegate>
 
-@property (nonatomic, assign) BOOL showsKeyboard;
-@property (nonatomic, assign) FMINumericTextViewAccessoryButtonType accessoryButtonType;
-@property (nonatomic, strong) UIBarButtonItem *accessoryButton;
-@property (nonatomic, strong) NSNotificationCenter *notificationCenter;
-@property (nonatomic, strong) UIToolbar *accessoryView;
+@property (NS_NONATOMIC_IOSONLY) BOOL showsKeyboard;
+@property (NS_NONATOMIC_IOSONLY) FMINumericTextViewAccessoryButtonType accessoryButtonType;
+@property (NS_NONATOMIC_IOSONLY) UIBarButtonItem *accessoryButton;
+@property (NS_NONATOMIC_IOSONLY) NSNotificationCenter *notificationCenter;
+@property (NS_NONATOMIC_IOSONLY) UIToolbar *accessoryView;
 
 @end
 

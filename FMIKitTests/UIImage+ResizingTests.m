@@ -11,9 +11,9 @@
 
 @interface UIImage_ResizeTests : XCTestCase
 
-@property (nonatomic, strong) UIImage *testImageLandscape;
-@property (nonatomic, strong) UIImage *testImagePortraitSmallWidth;
-@property (nonatomic, strong) UIImage *testImageBig;
+@property (NS_NONATOMIC_IOSONLY) UIImage *testImageLandscape;
+@property (NS_NONATOMIC_IOSONLY) UIImage *testImagePortraitSmallWidth;
+@property (NS_NONATOMIC_IOSONLY) UIImage *testImageBig;
 
 @end
 

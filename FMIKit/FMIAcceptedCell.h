@@ -10,6 +10,6 @@
 
 @interface FMIAcceptedCell : UITableViewCell
 
-@property (nonatomic, assign, getter = isAccepted) BOOL accepted;
+@property (getter = isAccepted, NS_NONATOMIC_IOSONLY) BOOL accepted;
 
 @end

@@ -12,9 +12,9 @@
 
 @interface NSCalendar_CalculationsTests : XCTestCase
 
-@property (nonatomic, strong) NSCalendar *sut;
-@property (nonatomic, strong) NSDateFormatter *dateFormatter;
-@property (nonatomic, assign) unsigned unitFlags;
+@property (NS_NONATOMIC_IOSONLY) NSCalendar *sut;
+@property (NS_NONATOMIC_IOSONLY) NSDateFormatter *dateFormatter;
+@property (NS_NONATOMIC_IOSONLY) unsigned unitFlags;
 
 @end
 
@@ -53,13 +53,11 @@
 
 - (void)testNoonForDayOfDateReturnsAnHourOf12
 {
-    // Given
+
     NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:0];
     
-    // When
     NSDate *noonOfDayForDate = [self.sut fm_noonOfDayForDate:date];
     
-    // Then
     NSDateComponents *noonOfDayDateComponents = [self.sut components:NSCalendarUnitHour fromDate:noonOfDayForDate];
     XCTAssertEqual([noonOfDayDateComponents hour], 12);
 }
@@ -67,13 +65,11 @@
 
 - (void)testCalendarShouldReturnDateOneYearAfterGivenDate
 {
-    // Given
+
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:0];
     
-    // When
     NSDate *newDate = [self.sut fm_dateForYearAfterDate:date];
     
-    // Then
     NSDateComponents *dateComponents = [self.sut components:self.unitFlags fromDate:date];
     NSDateComponents *newDateComponents = [self.sut components:self.unitFlags fromDate:newDate];
     
@@ -94,45 +90,40 @@
 
 - (void)testCalendarShouldReturnTrueForTheSameDates
 {
-    // Given
+
     NSDate *date = [self.dateFormatter dateFromString:@"2013-01-01 15:44:00"];
     
-    // Then
     XCTAssertTrue([self.sut fm_isDate:date inSameDayAsDate:date]);
 }
 
 
 - (void)testCalendarShouldReturnFalseForDifferentDates
 {
-    // Given
+
     NSDate *date1 = [self.dateFormatter dateFromString:@"2013-01-01 15:44:00"];
     NSDate *date2 = [self.dateFormatter dateFromString:@"2013-02-01 16:44:00"];
     
-    // Then
     XCTAssertFalse([self.sut fm_isDate:date1 inSameDayAsDate:date2]);
 }
 
 
 - (void)testCalendarShouldReturnTrueForDifferentDatesOnSameDay
 {
-    // Given
+
     NSDate *date1 = [self.dateFormatter dateFromString:@"2013-01-01 15:44:00"];
     NSDate *date2 = [self.dateFormatter dateFromString:@"2013-01-01 16:44:00"];
     
-    // Then
     XCTAssertTrue([self.sut fm_isDate:date1 inSameDayAsDate:date2]);
 }
 
 
 - (void)testCalendarShouldReturnTheStartOfAGivenDate
 {
-    // Given
+
     NSDate *date = [self.dateFormatter dateFromString:@"2013-01-01 15:44:00"];
     
-    // When
     NSDate *startOfDate = [self.sut fm_startOfDayForDate:date];
     
-    // Then
     NSDateComponents *dateComponents = [self.sut components:self.unitFlags fromDate:startOfDate];
     
     XCTAssertEqual([dateComponents year], 2013);
@@ -146,13 +137,11 @@
 
 - (void)testCalendarShouldReturnTheEndOfAGivenDate
 {
-    // Given
+
     NSDate *date = [self.dateFormatter dateFromString:@"2013-01-01 15:44:00"];
     
-    // When
     NSDate *startOfDate = [self.sut fm_endOfDayForDate:date];
     
-    // Then
     NSDateComponents *dateComponents = [self.sut components:self.unitFlags fromDate:startOfDate];
     
     XCTAssertEqual([dateComponents year], 2013);
