@@ -3,6 +3,18 @@
 //  Copyright (c) 2015 madeFM. All rights reserved.
 //
 
+#if !defined(FMI_INLINE)
+#  if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
+#    define FMI_INLINE static inline
+#  elif defined(__cplusplus)
+#    define FMI_INLINE static inline
+#  elif defined(__GNUC__)
+#    define FMI_INLINE static __inline__
+#  else
+#    define FMI_INLINE static
+#  endif
+#endif
+
 #define STRINGIFY2( x) #x
 #define STRINGIFY(x) STRINGIFY2(x)
 
@@ -45,3 +57,8 @@
 
 #define FMIDECODE_UIEDGEINSETS(d,x)  _ ## x = (__typeof(_ ## x))[d decodeUIEdgeInsetsForKey:@STRINGIFY(x)]
 #define FMIENCODE_UIEDGEINSETS(c,x)  [c encodeUIEdgeInsets:_ ## x forKey:@STRINGIFY(x)]
+
+FMI_INLINE bool
+FMIEqualObjects(id o1, id o2) {
+    return (o1 == o2) || (o1 && o2 && [o1 isEqual:o2]);
+}
