@@ -193,7 +193,7 @@
 {
     FMIDurationFormatter *durationFormatter = [[FMIDurationFormatter alloc] init];
     durationFormatter.style = self.durationStyle;
-    return [self accessoryButtonWithTitle:[durationFormatter stringFromDuration:[FMIDuration duration]] action:@selector(clearText:)];
+    return [self accessoryButtonWithTitle:[durationFormatter stringFromDuration:[FMIDuration zero]] action:@selector(clearText:)];
 }
 
 - (UIBarButtonItem *)invertButton

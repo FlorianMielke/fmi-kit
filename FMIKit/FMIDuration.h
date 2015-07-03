@@ -48,7 +48,7 @@
  *	Creates and returns an FMIDuration object set to 0 seconds.
  *	@return	An FMIDuration object initialized with 0 seconds.
  */
-+ (FMIDuration *)duration;
++ (FMIDuration *)zero;
 
 /**
  *	Creates and returns an FMIDuration object set to a given number of seconds.

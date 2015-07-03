@@ -34,7 +34,7 @@
 }
 
 - (void)testDurationInitializedViaFactoryMethodWithTimeIntervalOfZero {
-    XCTAssertEqual([[FMIDuration duration] timeInterval], (NSTimeInterval)0);
+    XCTAssertEqual([[FMIDuration zero] timeInterval], (NSTimeInterval)0);
 }
 
 - (void)testInitializeViaWithTimeIntervalOf1AssignesDuration {
@@ -52,7 +52,7 @@
 }
 
 - (void)testDurationShouldBeEqualToDurationWith0TimeInterval {
-    XCTAssertTrue([self.duration isEqual:[FMIDuration duration]]);
+    XCTAssertTrue([self.duration isEqual:[FMIDuration zero]]);
 }
 
 - (void)testDurationShouldNotBeEqualToDurationWith1TimeInterval {

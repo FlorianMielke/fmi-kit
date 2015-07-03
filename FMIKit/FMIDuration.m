@@ -17,7 +17,7 @@ static NSString *const FMIDurationEncodingTimeIntervalKey = @"timeInterval";
 
 @implementation FMIDuration
 
-+ (FMIDuration *)duration {
++ (FMIDuration *)zero {
     return [[FMIDuration alloc] initWithTimeInterval:0];
 }
 
