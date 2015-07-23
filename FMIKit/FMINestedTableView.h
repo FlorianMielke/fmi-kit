@@ -13,7 +13,7 @@
 - (BOOL)nestedTableView:(FMINestedTableView *)nestedTableView hasNestedRowsForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 - (UITableViewCell *)nestedTableView:(FMINestedTableView *)nestedTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
-- (UITableViewCell *)nestedTableView:(FMINestedTableView *)nestedTableView cellForNestedRowAtIndex:(NSInteger)index rootRowIndexPath:(NSIndexPath *)indexPath;
+- (UITableViewCell *)nestedTableView:(FMINestedTableView *)nestedTableView cellForNestedRowAtIndex:(NSUInteger)index rootRowIndexPath:(NSIndexPath *)indexPath;
 
 @optional
 - (BOOL)nestedTableView:(FMINestedTableView *)nestedTableView canEditRowAtIndexPath:(NSIndexPath *)indexPath;
