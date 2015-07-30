@@ -1,15 +1,14 @@
 //
-//  NSCalendar+Calculations.h
-//
-//  Created by Florian Mielek on 10.07.13.
+//  Created by Florian Mielke on 10.07.13.
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Adds calendrical calculation methods to NSCalendar.
+ * Adds calculation methods to NSCalendar.
  */
 @interface NSCalendar (Calculations)
 
@@ -92,3 +91,5 @@
 - (NSInteger)fm_yearForDate:(NSDate *)date;
 
 @end
+
+NS_ASSUME_NONNULL_END
