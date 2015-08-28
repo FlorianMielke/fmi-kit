@@ -4,7 +4,6 @@
 //
 
 #import "FMIMessageMIMETypes.h"
-#import "FMIKitPrivates.h"
 
 @implementation FMIMessageMIMETypes
 

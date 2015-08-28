@@ -5,7 +5,6 @@
 
 #import <XCTest/XCTest.h>
 #import "FMIEventParser.h"
-#import <EventKit/EventKit.h>
 
 
 @interface FMIEventParserTests : XCTestCase

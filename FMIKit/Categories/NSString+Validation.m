@@ -6,7 +6,6 @@
 //
 
 #import "NSString+Validation.h"
-#import <CommonCrypto/CommonDigest.h>
 
 
 @implementation NSString (Validation)

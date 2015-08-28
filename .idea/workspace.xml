@@ -1,7 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4151295-53bf-4fdd-8b7b-c15bc834bd54" name="Default" comment="">
+    <list default="true" id="d4151295-53bf-4fdd-8b7b-c15bc834bd54" name="Default" comment="Move files into folders">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMIImagePickerControllerTests.m" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FMIKitTests/FMIImagePickerControllerTests.m" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIAcceptedCell.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIAcceptedCell.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIAcceptedCell.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIAcceptedCell.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIActivityIndicatorAlertView.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIActivityIndicatorAlertView.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIActivityIndicatorAlertView.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIActivityIndicatorAlertView.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIAlertView.h" afterPath="$PROJECT_DIR$/FMIKit/Protocols/FMIAlertView.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIBinding.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIBinding.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIBinding.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIBinding.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIBindingManager.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIBindingManager.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIBindingManager.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIBindingManager.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMICSVDeserializer.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMICSVDeserializer.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMICSVDeserializer.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMICSVDeserializer.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMICSVFieldDeserializer.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMICSVFieldDeserializer.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMICSVFieldDeserializer.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMICSVFieldDeserializer.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMICSVFileDescription.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMICSVFileDescription.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMICSVFileDescription.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMICSVFileDescription.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIComparator.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIComparator.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIComparator.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIComparator.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIDatePickerController.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIDatePickerController.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIDatePickerController.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIDatePickerController.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIDuration.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIDuration.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIDuration.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIDuration.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIDurationFormatter.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIDurationFormatter.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIDurationFormatter.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIDurationFormatter.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIEditingToolbar.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIEditingToolbar.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIEditingToolbar.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIEditingToolbar.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIEventParser.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIEventParser.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIEventParser.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIEventParser.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIFieldDescription.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIFieldDescription.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIFieldDescription.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIFieldDescription.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIFoundationAdditions.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIFoundationAdditions.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIFoundationAdditions.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIFoundationAdditions.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIImagePickerController.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIImagePickerController.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIImagePickerController.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIImagePickerController.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIMessage.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIMessage.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIMessageAttachment.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIMessageAttachment.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIMessageAttachment.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIMessageAttachment.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIMessageMIMETypes.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIMessageMIMETypes.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIMessageMIMETypes.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIMessageMIMETypes.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMINestedTableView.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMINestedTableView.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMINestedTableView.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMINestedTableView.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMINonAminatedPushSegue.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMINonAminatedPushSegue.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMINonAminatedPushSegue.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMINonAminatedPushSegue.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMINumericTextView.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMINumericTextView.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMINumericTextView.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMINumericTextView.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIPhotoMenuActionSheet.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIPhotoMenuActionSheet.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIPhotoMenuActionSheet.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIPhotoMenuActionSheet.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIStore.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIStore.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMIStore.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMIStore.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMISupportMessage.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMISupportMessage.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMISupportMessage.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMISupportMessage.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMITableView.h" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMITableView.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/FMITableView.m" afterPath="$PROJECT_DIR$/FMIKit/Classes/FMITableView.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/MFMailComposeViewController+AlertView.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/MFMailComposeViewController+AlertView.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/MFMailComposeViewController+AlertView.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/MFMailComposeViewController+AlertView.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSArray+Initialization.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSArray+Initialization.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSArray+Initialization.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSArray+Initialization.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSArray+Querying.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSArray+Querying.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSArray+Querying.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSArray+Querying.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSBundle+Configuration.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSBundle+Configuration.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSBundle+Configuration.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSBundle+Configuration.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSCalendar+Calculations.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSCalendar+Calculations.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSCalendar+Calculations.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSCalendar+Calculations.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSCalendar+SharedInstances.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSCalendar+SharedInstances.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSCalendar+SharedInstances.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSCalendar+SharedInstances.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSData+FileAdditions.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSData+FileAdditions.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSData+FileAdditions.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSData+FileAdditions.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSDateFormatter+Timing.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSDateFormatter+Timing.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSDateFormatter+Timing.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSDateFormatter+Timing.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSDecimalNumber+Calulations.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSDecimalNumber+Calulations.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSDecimalNumber+Calulations.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSDecimalNumber+Calulations.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSFileManager+DirectoryAdditions.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSFileManager+DirectoryAdditions.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSFileManager+DirectoryAdditions.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSFileManager+DirectoryAdditions.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSIndexPath+Comparing.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSIndexPath+Comparing.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSIndexPath+Comparing.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSIndexPath+Comparing.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSIndexSet+Initialization.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSIndexSet+Initialization.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSIndexSet+Initialization.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSIndexSet+Initialization.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSManagedObjectContext+PersistentStoreAdditions.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSManagedObjectContext+PersistentStoreAdditions.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSManagedObjectContext+PersistentStoreAdditions.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSManagedObjectContext+PersistentStoreAdditions.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSMutableDictionary+IndexPath.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSMutableDictionary+IndexPath.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSMutableDictionary+IndexPath.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSMutableDictionary+IndexPath.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSNumberFormatter+Editing.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSNumberFormatter+Editing.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSNumberFormatter+Editing.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSNumberFormatter+Editing.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSObject+AutoDescription.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSObject+AutoDescription.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSObject+AutoDescription.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSObject+AutoDescription.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSPersistentStoreCoordinator+Validation.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSPersistentStoreCoordinator+Validation.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSPersistentStoreCoordinator+Validation.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSPersistentStoreCoordinator+Validation.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSString+CSV.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSString+CSV.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSString+CSV.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSString+CSV.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSString+FMIDrawing.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSString+FMIDrawing.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSString+FMIDrawing.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSString+FMIDrawing.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSString+FileName.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSString+FileName.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSString+FileName.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSString+FileName.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSString+Folding.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSString+Folding.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSString+Folding.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSString+Folding.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSString+Validation.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSString+Validation.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSString+Validation.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSString+Validation.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSUndoManager+Grouping.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSUndoManager+Grouping.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/NSUndoManager+Grouping.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSUndoManager+Grouping.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/SKProduct+LocalizedPrice.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/SKProduct+LocalizedPrice.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/SKProduct+LocalizedPrice.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/SKProduct+LocalizedPrice.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UIColor+SystemDefaults.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/UIColor+SystemDefaults.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UIColor+SystemDefaults.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/UIColor+SystemDefaults.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UIDevice+Platform.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/UIDevice+Platform.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UIDevice+Platform.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/UIDevice+Platform.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UIImage+Creation.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/UIImage+Creation.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UIImage+Creation.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/UIImage+Creation.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UIImage+Masking.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/UIImage+Masking.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UIImage+Masking.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/UIImage+Masking.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UIImage+Resizing.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/UIImage+Resizing.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UIImage+Resizing.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/UIImage+Resizing.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UIImage+Scaling.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/UIImage+Scaling.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UIImage+Scaling.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/UIImage+Scaling.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UILabel+Sizing.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/UILabel+Sizing.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UILabel+Sizing.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/UILabel+Sizing.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UILabel+StateHandling.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/UILabel+StateHandling.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UILabel+StateHandling.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/UILabel+StateHandling.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UIScrollView+Scrolling.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/UIScrollView+Scrolling.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UIScrollView+Scrolling.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/UIScrollView+Scrolling.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UITableView+IndexPath.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/UITableView+IndexPath.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UITableView+IndexPath.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/UITableView+IndexPath.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UITableView+Selection.h" afterPath="$PROJECT_DIR$/FMIKit/Categories/UITableView+Selection.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKit/UITableView+Selection.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/UITableView+Selection.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FMIAccteptedCellTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMIAccteptedCellTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FMIActivityIndicatorAlertViewTest.m" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMIActivityIndicatorAlertViewTest.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FMIBindingManagerTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMIBindingManagerTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FMICSVDeserializerTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMICSVDeserializerTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FMICSVFieldDeserializerTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMICSVFieldDeserializerTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FMIComparatorTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMIComparatorTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FMIDatePickerControllerTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMIDatePickerControllerTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FMIDurationFormatterTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMIDurationFormatterTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FMIDurationTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMIDurationTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FMIEditingToolbarTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMIEditingToolbarTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FMIEventPaserTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMIEventPaserTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FMIMessageAttachmentTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMIMessageAttachmentTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FMIMessageMIMETypesTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMIMessageMIMETypesTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FMINumericTextViewTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMINumericTextViewTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FMIPhotoMenuActionSheetTest.m" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMIPhotoMenuActionSheetTest.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FMIStoreTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMIStoreTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FMISupportMessageTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMISupportMessageTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FMITableViewTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Classes/FMITableViewTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FakeBindingModel.h" afterPath="$PROJECT_DIR$/FMIKitTests/Doubles/FakeBindingModel.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FakeBindingModel.m" afterPath="$PROJECT_DIR$/FMIKitTests/Doubles/FakeBindingModel.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FakeBindingObserver.h" afterPath="$PROJECT_DIR$/FMIKitTests/Doubles/FakeBindingObserver.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FakeBindingObserver.m" afterPath="$PROJECT_DIR$/FMIKitTests/Doubles/FakeBindingObserver.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FakeCSVFileDescription.h" afterPath="$PROJECT_DIR$/FMIKitTests/Doubles/FakeCSVFileDescription.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FakeCSVFileDescription.m" afterPath="$PROJECT_DIR$/FMIKitTests/Doubles/FakeCSVFileDescription.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FakeDatePickerControllerDelegate.h" afterPath="$PROJECT_DIR$/FMIKitTests/Doubles/FakeDatePickerControllerDelegate.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FakeDatePickerControllerDelegate.m" afterPath="$PROJECT_DIR$/FMIKitTests/Doubles/FakeDatePickerControllerDelegate.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FakeTableViewDataSource.h" afterPath="$PROJECT_DIR$/FMIKitTests/Doubles/FakeTableViewDataSource.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FakeTableViewDataSource.m" afterPath="$PROJECT_DIR$/FMIKitTests/Doubles/FakeTableViewDataSource.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FakeTextViewDelegate.h" afterPath="$PROJECT_DIR$/FMIKitTests/Doubles/FakeTextViewDelegate.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/FakeTextViewDelegate.m" afterPath="$PROJECT_DIR$/FMIKitTests/Doubles/FakeTextViewDelegate.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/MFMIailComposeViewController+AlertViewTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/MFMIailComposeViewController+AlertViewTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSArray+InitializationTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/NSArray+InitializationTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSArray+QueryingTests.m" afterPath="$PROJECT_DIR$/FMIKit/Categories/NSArray+QueryingTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSBundle+ConfigurationTest.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/NSBundle+ConfigurationTest.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSCalendar+CalculationsTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/NSCalendar+CalculationsTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSCalendar+SharedInstancesTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/NSCalendar+SharedInstancesTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSData+FileAdditionsTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/NSData+FileAdditionsTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSDateFormatter+TimingTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/NSDateFormatter+TimingTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSDecimalNumber+CalculationsTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/NSDecimalNumber+CalculationsTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSFileManager+DirectoryAdditionsTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/NSFileManager+DirectoryAdditionsTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSIndexPath+ComparingTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/NSIndexPath+ComparingTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSIndexSet+InitializationTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/NSIndexSet+InitializationTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSManagedObjectContext+PersistentStoreAdditionsTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/NSManagedObjectContext+PersistentStoreAdditionsTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSNumberFormatter+EditingTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/NSNumberFormatter+EditingTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSString+CSVTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/NSString+CSVTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSString+FMIDrawingTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/NSString+FMIDrawingTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSString+FileNameTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/NSString+FileNameTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSString+FoldingTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/NSString+FoldingTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSString+ValidationTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/NSString+ValidationTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/NSUndoManager+GroupingTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/NSUndoManager+GroupingTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/UIColor+SystemDefaultsTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/UIColor+SystemDefaultsTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/UIDevice+PlatformTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/UIDevice+PlatformTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/UIImage+CreationTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/UIImage+CreationTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/UIImage+ResizingTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/UIImage+ResizingTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/UILabel+StateHandlingTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/UILabel+StateHandlingTests.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/FMIKitTests/UITableView+IndexPathTests.m" afterPath="$PROJECT_DIR$/FMIKitTests/Categories/UITableView+IndexPathTests.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/FMIKit.iml" afterPath="$PROJECT_DIR$/.idea/FMIKit.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FMIKit.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/FMIKit.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FMIKit.iws" />
@@ -22,7 +204,38 @@
     <favorites_list name="FMIKit" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="FMIImagePickerController.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIImagePickerController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.59765625">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FMIImagePickerController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIImagePickerController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="19" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FMIImagePickerControllerTests.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FMIKitTests/Classes/FMIImagePickerControllerTests.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,6 +248,10 @@
         <option value="$PROJECT_DIR$/FMIKit/NSCalendar+Calculations.h" />
         <option value="$PROJECT_DIR$/FMIKit/NSCalendar+Calculations.m" />
         <option value="$PROJECT_DIR$/FMIKitTests/NSCalendar+CalculationsTests.m" />
+        <option value="$PROJECT_DIR$/FMIKit/FMIActivityIndicatorAlertView.m" />
+        <option value="$PROJECT_DIR$/FMIKit/Classes/FMIImagePickerController.h" />
+        <option value="$PROJECT_DIR$/FMIKitTests/Classes/FMIImagePickerControllerTests.m" />
+        <option value="$PROJECT_DIR$/FMIKit/Classes/FMIImagePickerController.m" />
       </list>
     </option>
   </component>
@@ -83,6 +300,52 @@
               <option name="myItemId" value="FMIKit" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Products" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FMIKit" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FMIKit" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FMIKitTests" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FMIKit" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FMIKitTests" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classes" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -116,24 +379,6 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FMIKit" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FMIKit" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Categories" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Cidr.FilesView" />
@@ -145,6 +390,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="FMIKit" />
   </component>
   <component name="RunManager" selected="XCTest/Kiwi.Unit Tests">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="FMIKit" TARGET_NAME="FMIKit" CONFIG_NAME="Debug" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -197,26 +443,26 @@
     <frame x="0" y="0" width="1440" height="896" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1952079" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.210199" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27445653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17970401" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -230,12 +476,16 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Move files into folders" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move files into folders" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FMIKit/NSCalendar+Calculations.h">
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMITableView.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -243,109 +493,402 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FMIKit/NSDateFormatter+Timing.m">
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIActivityIndicatorAlertView.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FMIKit/NSCalendar+Calculations.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FMIKit/NSCalendar+Calculations.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FMIKitTests/NSCalendar+CalculationsTests.m">
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIComparator.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FMIKit/NSDateFormatter+Timing.m">
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIActivityIndicatorAlertView.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FMIKit/FMIDuration.h">
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMINonAminatedPushSegue.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FMIKit/FMIDuration.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1160221">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FMIKit/FMINestedTableView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6910299">
-          <caret line="40" column="28" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FMIKit/FMINestedTableView.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62015504">
-          <caret line="34" column="42" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FMIKit/NSDecimalNumber+Calulations.m">
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIMessageAttachment.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FMIKit/NSDecimalNumber+Calulations.h">
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIDatePickerController.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FMIKitTests/NSCalendar+CalculationsTests.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.028729282">
-          <caret line="46" column="64" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FMIKit/NSCalendar+Calculations.m">
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIDurationFormatter.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FMIKit/NSDateFormatter+Timing.m">
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIPhotoMenuActionSheet.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16574585">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FMIKit/NSCalendar+Calculations.h">
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMICSVFileDescription.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30976865">
-          <caret line="69" column="31" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMINestedTableView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMICSVFieldDeserializer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0931436">
+          <caret line="4" column="60" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIMessageMIMETypes.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIBindingManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIEditingToolbar.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIDatePickerController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIDuration.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIBinding.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIEventParser.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMITableView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIStore.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMICSVDeserializer.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIAcceptedCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/FMIKitFactory.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1862872">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMINumericTextView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIFoundationAdditions.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMISupportMessage.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIBindingManager.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMISupportMessage.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIDurationFormatter.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMICSVFieldDeserializer.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIDuration.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMINumericTextView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKitTests/Doubles/FakeBindingObserver.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3260026">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKitTests/Doubles/FakeCSVFileDescription.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKitTests/Doubles/FakeCSVFileDescription.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKitTests/Doubles/FakeDatePickerControllerDelegate.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKitTests/Doubles/FakeBindingObserver.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKitTests/Doubles/FakeBindingModel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKitTests/Doubles/FakeTextViewDelegate.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKitTests/Doubles/FakeTableViewDataSource.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Protocols/FMIAlertView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/FMIKitFactory.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKitTests/Doubles/FakeDatePickerControllerDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13971539">
+          <caret line="7" column="62" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKitTests/Doubles/FakeTableViewDataSource.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKitTests/Doubles/FakeTextViewDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKitTests/Doubles/FakeBindingModel.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKitTests/Categories/NSUndoManager+GroupingTests.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27745664">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIImagePickerController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKitTests/Classes/FMIImagePickerControllerTests.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FMIKit/Classes/FMIImagePickerController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59765625">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>

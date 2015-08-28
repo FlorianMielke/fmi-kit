@@ -7,8 +7,8 @@
 
 @interface FMIActivityIndicatorAlertView ()
 
-@property (NS_NONATOMIC_IOSONLY) UIAlertController *alertController;
-@property (NS_NONATOMIC_IOSONLY) UIActivityIndicatorView *activityIndicatorView;
+@property(NS_NONATOMIC_IOSONLY) UIAlertController *alertController;
+@property(NS_NONATOMIC_IOSONLY) UIActivityIndicatorView *activityIndicatorView;
 
 @end
 

@@ -7,8 +7,15 @@
 
 #import <UIKit/UIKit.h>
 
-@class FMIImagePickerController;
+@protocol FMIImagePickerControllerDelegate;
 
+@interface FMIImagePickerController : UIImagePickerController <UIActionSheetDelegate>
+
+@property(weak, NS_NONATOMIC_IOSONLY) id <FMIImagePickerControllerDelegate> delegate;
+
+- (UIActionSheet *)actionSheetForImage:(UIImage *)image;
+
+@end
 
 @protocol FMIImagePickerControllerDelegate <NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -21,14 +28,3 @@
 - (void)imagePickerControllerDidChooseCancel:(FMIImagePickerController *)controller;
 
 @end
-
-
-@interface FMIImagePickerController : UIImagePickerController <UIActionSheetDelegate>
-
-@property (weak, NS_NONATOMIC_IOSONLY) id <FMIImagePickerControllerDelegate> delegate;
-
-- (UIActionSheet *)actionSheetForImage:(UIImage *)image;
-
-@end
-
-

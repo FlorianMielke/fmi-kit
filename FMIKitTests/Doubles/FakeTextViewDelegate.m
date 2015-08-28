@@ -4,7 +4,6 @@
 //
 
 #import "FakeTextViewDelegate.h"
-#import "FMINumericTextView.h"
 
 
 @implementation FakeTextViewDelegate

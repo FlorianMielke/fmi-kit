@@ -6,8 +6,6 @@
 //
 
 #import "FMINumericTextView.h"
-#import "UIImage+Creation.h"
-#import "FMIDurationFormatter.h"
 #import "FMIDuration.h"
 
 @interface FMINumericTextView () <UIToolbarDelegate>

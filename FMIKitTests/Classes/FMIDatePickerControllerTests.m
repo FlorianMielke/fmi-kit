@@ -6,7 +6,6 @@
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 #import "FMIDatePickerController.h"
-#import "FakeDatePickerControllerDelegate.h"
 
 @interface FMIDatePickerController (Test)
 

@@ -7,7 +7,6 @@
 
 #import "UIDevice+Platform.h"
 
-#include <sys/types.h>
 #include <sys/sysctl.h>
 
 @implementation UIDevice (Platform)
