@@ -56,7 +56,6 @@
 		17167B7F1AFC774A00917BB8 /* FMISupportMessageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17167B6C1AFC774A00917BB8 /* FMISupportMessageTests.m */; };
 		17167B801AFC774A00917BB8 /* FMITableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17167B6D1AFC774A00917BB8 /* FMITableViewTests.m */; };
 		171CB98B1AFB63C7002BE185 /* FMIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CB98A1AFB63C7002BE185 /* FMIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		171CB9911AFB63C7002BE185 /* FMIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171CB9851AFB63C7002BE185 /* FMIKit.framework */; };
 		171CB9D81AFB652B002BE185 /* FMIAcceptedCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CB9A31AFB652B002BE185 /* FMIAcceptedCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		171CB9D91AFB652B002BE185 /* FMIAcceptedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 171CB9A41AFB652B002BE185 /* FMIAcceptedCell.m */; };
 		171CB9DC1AFB652B002BE185 /* FMIBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CB9A71AFB652B002BE185 /* FMIBinding.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -172,7 +171,6 @@
 		171CBA9A1AFB6546002BE185 /* UITableView+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 171CBA521AFB6546002BE185 /* UITableView+IndexPath.m */; };
 		171CBA9B1AFB6546002BE185 /* UITableView+Selection.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CBA531AFB6546002BE185 /* UITableView+Selection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		171CBA9C1AFB6546002BE185 /* UITableView+Selection.m in Sources */ = {isa = PBXBuildFile; fileRef = 171CBA541AFB6546002BE185 /* UITableView+Selection.m */; };
-		1738D43E1AFC8B0400B96929 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1738D43D1AFC8B0400B96929 /* libOCMock.a */; };
 		1738D44C1AFC948100B96929 /* Event.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1738D4431AFC948100B96929 /* Event.xcdatamodeld */; };
 		1738D44D1AFC948100B96929 /* TestFile.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4451AFC948100B96929 /* TestFile.csv */; };
 		1738D44E1AFC948100B96929 /* TestFileInvalid.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4461AFC948100B96929 /* TestFileInvalid.csv */; };
@@ -191,6 +189,10 @@
 		17DB10F41AFE08570040EB1E /* FMIActivityIndicatorAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DB10F21AFE08570040EB1E /* FMIActivityIndicatorAlertView.m */; };
 		17DB10F61AFE08E20040EB1E /* FMIActivityIndicatorAlertViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DB10F51AFE08E20040EB1E /* FMIActivityIndicatorAlertViewTest.m */; };
 		17DB10F71AFE0B260040EB1E /* FMIActivityIndicatorAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 17DB10F11AFE08560040EB1E /* FMIActivityIndicatorAlertView.h */; };
+		17E00C711B90307500BA7024 /* FMIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171CB9851AFB63C7002BE185 /* FMIKit.framework */; };
+		17E00C751B90308500BA7024 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E00C721B90308500BA7024 /* Expecta.framework */; };
+		17E00C761B90308500BA7024 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E00C731B90308500BA7024 /* OCMock.framework */; };
+		17E00C771B90308500BA7024 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E00C741B90308500BA7024 /* Specta.framework */; };
 		17EE35701AFDE77800444DD5 /* FMIAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 17EE356F1AFDE77800444DD5 /* FMIAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17EE35751AFE013800444DD5 /* FMIKitFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 17EE35731AFE013800444DD5 /* FMIKitFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17EE35761AFE013800444DD5 /* FMIKitFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EE35741AFE013800444DD5 /* FMIKitFactory.m */; };
@@ -388,7 +390,6 @@
 		171CBA521AFB6546002BE185 /* UITableView+IndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+IndexPath.m"; sourceTree = "<group>"; };
 		171CBA531AFB6546002BE185 /* UITableView+Selection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Selection.h"; sourceTree = "<group>"; };
 		171CBA541AFB6546002BE185 /* UITableView+Selection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Selection.m"; sourceTree = "<group>"; };
-		1738D43D1AFC8B0400B96929 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = Libraries/OCMock/libOCMock.a; sourceTree = "<group>"; };
 		1738D4401AFC928C00B96929 /* FMIMessageMIMETypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FMIMessageMIMETypes.plist; path = Resources/FMIMessageMIMETypes.plist; sourceTree = SOURCE_ROOT; };
 		1738D4441AFC948100B96929 /* Event.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Event.xcdatamodel; sourceTree = "<group>"; };
 		1738D4451AFC948100B96929 /* TestFile.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TestFile.csv; path = Resources/TestFile.csv; sourceTree = "<group>"; };
@@ -409,6 +410,9 @@
 		17DB10F11AFE08560040EB1E /* FMIActivityIndicatorAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIActivityIndicatorAlertView.h; sourceTree = "<group>"; };
 		17DB10F21AFE08570040EB1E /* FMIActivityIndicatorAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIActivityIndicatorAlertView.m; sourceTree = "<group>"; };
 		17DB10F51AFE08E20040EB1E /* FMIActivityIndicatorAlertViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIActivityIndicatorAlertViewTest.m; path = FMIKitTests/FMIActivityIndicatorAlertViewTest.m; sourceTree = SOURCE_ROOT; };
+		17E00C721B90308500BA7024 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
+		17E00C731B90308500BA7024 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = Carthage/Build/iOS/OCMock.framework; sourceTree = "<group>"; };
+		17E00C741B90308500BA7024 /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/iOS/Specta.framework; sourceTree = "<group>"; };
 		17EE356F1AFDE77800444DD5 /* FMIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIAlertView.h; sourceTree = "<group>"; };
 		17EE35731AFE013800444DD5 /* FMIKitFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIKitFactory.h; sourceTree = "<group>"; };
 		17EE35741AFE013800444DD5 /* FMIKitFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIKitFactory.m; sourceTree = "<group>"; };
@@ -426,8 +430,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				171CB9911AFB63C7002BE185 /* FMIKit.framework in Frameworks */,
-				1738D43E1AFC8B0400B96929 /* libOCMock.a in Frameworks */,
+				17E00C711B90307500BA7024 /* FMIKit.framework in Frameworks */,
+				17E00C751B90308500BA7024 /* Expecta.framework in Frameworks */,
+				17E00C761B90308500BA7024 /* OCMock.framework in Frameworks */,
+				17E00C771B90308500BA7024 /* Specta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +472,7 @@
 			children = (
 				171CB9871AFB63C7002BE185 /* FMIKit */,
 				171CB9941AFB63C7002BE185 /* FMIKitTests */,
-				1738D43B1AFC8A8E00B96929 /* Libraries */,
+				17E00C791B9030A000BA7024 /* Frameworks */,
 				171CB9861AFB63C7002BE185 /* Products */,
 				1713F5601B330DE700F11E4F /* Configurations */,
 			);
@@ -705,22 +711,6 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		1738D43B1AFC8A8E00B96929 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				1738D43C1AFC8AF800B96929 /* OCMock */,
-			);
-			name = Libraries;
-			sourceTree = "<group>";
-		};
-		1738D43C1AFC8AF800B96929 /* OCMock */ = {
-			isa = PBXGroup;
-			children = (
-				1738D43D1AFC8B0400B96929 /* libOCMock.a */,
-			);
-			name = OCMock;
-			sourceTree = "<group>";
-		};
 		1738D43F1AFC928200B96929 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -743,6 +733,16 @@
 				1738D44B1AFC948100B96929 /* TestImageSquared.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		17E00C791B9030A000BA7024 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17E00C721B90308500BA7024 /* Expecta.framework */,
+				17E00C731B90308500BA7024 /* OCMock.framework */,
+				17E00C741B90308500BA7024 /* Specta.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		17EE35711AFDE7A800444DD5 /* Protocols */ = {
@@ -865,6 +865,7 @@
 				171CB98C1AFB63C7002BE185 /* Sources */,
 				171CB98D1AFB63C7002BE185 /* Frameworks */,
 				171CB98E1AFB63C7002BE185 /* Resources */,
+				17E00C7A1B9030B300BA7024 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -940,6 +941,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17E00C7A1B9030B300BA7024 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Specta.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Expecta.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/OCMock.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		171CB9801AFB63C7002BE185 /* Sources */ = {
@@ -1221,28 +1242,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(PROJECT_DIR)/Libraries/OCMock",
 				);
 				INFOPLIST_FILE = FMIKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Libraries/OCMock",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					XCTest,
-					"-ObjC",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.madefm.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1254,24 +1261,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(PROJECT_DIR)/Libraries/OCMock",
 				);
 				INFOPLIST_FILE = FMIKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Libraries/OCMock",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					XCTest,
-					"-ObjC",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.madefm.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
