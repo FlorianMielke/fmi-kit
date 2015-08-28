@@ -85,7 +85,7 @@ typedef NS_ENUM (NSInteger, FMINumericTextViewAccessoryButtonType) {
  * @param notificationCenter  The notification center to use for keyboard appearance notification.
  * @return A new FMINumericTextView object.
  */
-- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType notificationCenter:(NSNotificationCenter *)notificationCenter NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType notificationCenter:(NSNotificationCenter *)notificationCenter;
 
 /**
  * Toggles the text view as first responder.
