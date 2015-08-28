@@ -212,7 +212,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1713F5611B330DF800F11E4F /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Warnings.xcconfig; path = Configurations/Warnings.xcconfig; sourceTree = "<group>"; };
 		17167B661AFC774A00917BB8 /* FMIKitPrivatesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIKitPrivatesTests.m; path = FMIKitTests/FMIKitPrivatesTests.m; sourceTree = SOURCE_ROOT; };
 		171CB9851AFB63C7002BE185 /* FMIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		171CB9891AFB63C7002BE185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -299,6 +298,7 @@
 		359135AE1C725F33BD17E071 /* FMIEditingToolbarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIEditingToolbarTests.m; sourceTree = "<group>"; };
 		359135C082AE84D30E3D01AB /* NSMutableDictionary+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+IndexPath.h"; sourceTree = "<group>"; };
 		359135D71366557EF388D9F3 /* UITableView+IndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+IndexPath.m"; sourceTree = "<group>"; };
+		359135E92FA4E82BBAB23EC6 /* Warnings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
 		359136033CF6B87640F74F0F /* UIImage+Masking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Masking.h"; sourceTree = "<group>"; };
 		3591360A49C961DEA9BA5A76 /* NSData+FileAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+FileAdditions.m"; sourceTree = "<group>"; };
 		3591363741C36D403F5BBC18 /* FakeTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeTableViewDataSource.h; sourceTree = "<group>"; };
@@ -443,14 +443,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1713F5601B330DE700F11E4F /* Configurations */ = {
-			isa = PBXGroup;
-			children = (
-				1713F5611B330DF800F11E4F /* Warnings.xcconfig */,
-			);
-			name = Configurations;
-			sourceTree = "<group>";
-		};
 		171CB97B1AFB63C7002BE185 = {
 			isa = PBXGroup;
 			children = (
@@ -458,7 +450,7 @@
 				171CB9941AFB63C7002BE185 /* FMIKitTests */,
 				17E00C791B9030A000BA7024 /* Frameworks */,
 				171CB9861AFB63C7002BE185 /* Products */,
-				1713F5601B330DE700F11E4F /* Configurations */,
+				35913A5FB298FDC2BE7DE14A /* Configurations */,
 			);
 			sourceTree = "<group>";
 		};
@@ -763,6 +755,14 @@
 				35913AB9AE6EA9B8967B6E79 /* FakeDatePickerControllerDelegate.m */,
 			);
 			path = Doubles;
+			sourceTree = "<group>";
+		};
+		35913A5FB298FDC2BE7DE14A /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				359135E92FA4E82BBAB23EC6 /* Warnings.xcconfig */,
+			);
+			path = Configurations;
 			sourceTree = "<group>";
 		};
 		35913D4DB108FA5A81E4A3D9 /* Protocols */ = {
