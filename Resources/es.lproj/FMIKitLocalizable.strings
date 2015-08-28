@@ -1,17 +1,8 @@
-/* Used for button title */
-"Cancel" = "Cancelar";
-
 /* Used for alert title */
 "Cannot Send Mail" = "Error al enviar correo";
 
-/* Used for button title: Choose an existing photo */
-"Choose Photo" = "Seleccionar foto";
-
 /* Used for alert message */
 "Configure a mail account in your Settings to send mail." = "Configure una cuenta de correo en sus Ajustes para enviar un correo.";
-
-/* Used for button title: Delete current photo */
-"Delete Photo" = "Eliminiar foto";
 
 /* Used for word */
 "OK" = "OK";
@@ -21,6 +12,3 @@
 
 /* Used for alert title */
 "Sending Mail Failed" = "Error al enviar correo";
-
-/* Used for button title: Take a new photo */
-"Take Photo" = "Hacer foto";
