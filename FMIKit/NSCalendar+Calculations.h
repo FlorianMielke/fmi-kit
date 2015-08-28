@@ -17,28 +17,28 @@ NS_ASSUME_NONNULL_BEGIN
  * @param date A date object.
  * @return A new NSDate one week after the given date.
  */
-- (NSDate *)fm_dateForNextWeekOfDate:(NSDate *)date;
+- (nullable NSDate *)fm_dateForNextWeekOfDate:(NSDate *)date;
 
 /**
  * Returns a new NSDate with the last moment date of a given date.
  * @param date A date object.
  * @return A new NSDate with the last moment date of a given date.
  */
-- (NSDate *)fm_endOfDayForDate:(NSDate *)date;
+- (nullable NSDate *)fm_endOfDayForDate:(NSDate *)date;
 
 /**
  * Returns a new NSDate with the first moment date of a given date.
  * @param date A date object.
  * @return A new NSDate with the first moment date of a given date.
  */
-- (NSDate *)fm_startOfDayForDate:(NSDate *)date;
+- (nullable NSDate *)fm_startOfDayForDate:(NSDate *)date;
 
 /**
  * Returns a new NSDate by adding one year to the given date.
  * @param date A date object.
  * @return A new NSDate one year after the given date.
  */
-- (NSDate *)fm_dateForYearAfterDate:(NSDate *)date;
+- (nullable NSDate *)fm_dateForYearAfterDate:(NSDate *)date;
 
 /**
  * Returns a Boolean that indicate whether date1 is in the same day as date2.
@@ -53,28 +53,28 @@ NS_ASSUME_NONNULL_BEGIN
  * @param date A date object.
  * @return A new NSDate without seconds.
  */
-- (NSDate *)fm_dateWithoutSecondsForDate:(NSDate *)date;
+- (nullable NSDate *)fm_dateWithoutSecondsForDate:(NSDate *)date;
 
 /**
  * Returns the first day  of a given date.
  * @param date A date object.
  * @return The year of the given date.
  */
-- (NSDate *)fm_firstDayOfYearForDate:(NSDate *)date;
+- (nullable NSDate *)fm_firstDayOfYearForDate:(NSDate *)date;
 
 /**
  * Returns the noon of date of a given date.
  * @param date A date object.
  * @return A new NSDate object with the noon of the given date.
  */
-- (NSDate *)fm_noonOfDayForDate:(NSDate *)date;
+- (nullable NSDate *)fm_noonOfDayForDate:(NSDate *)date;
 
 /**
  * Returns a random date for a given year.
  * @param year A year.
  * @return A new NSDate object in the given year.
  */
-- (NSDate *)fm_randomDateForYear:(NSInteger)year;
+- (nullable NSDate *)fm_randomDateForYear:(NSInteger)year;
 
 /**
  *	Returns the weekday (1-7) for a given date.

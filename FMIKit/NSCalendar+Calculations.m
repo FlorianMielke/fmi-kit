@@ -7,13 +7,13 @@
 
 @implementation NSCalendar (Calculations)
 
-- (NSDate *)fm_dateForNextWeekOfDate:(NSDate *)date {
+- (nullable NSDate *)fm_dateForNextWeekOfDate:(NSDate *)date {
     NSDateComponents *dateComponents = [NSDateComponents new];
     dateComponents.weekOfYear = 1;
     return [self dateByAddingComponents:dateComponents toDate:date options:0];
 }
 
-- (NSDate *)fm_endOfDayForDate:(NSDate *)date {
+- (nullable NSDate *)fm_endOfDayForDate:(NSDate *)date {
     NSDateComponents *dateComponents = [self components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:date];
     dateComponents.hour = 23;
     dateComponents.minute = 59;
@@ -21,12 +21,12 @@
     return [self dateFromComponents:dateComponents];
 }
 
-- (NSDate *)fm_startOfDayForDate:(NSDate *)date {
+- (nullable NSDate *)fm_startOfDayForDate:(NSDate *)date {
     NSDateComponents *dateComponents = [self components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:date];
     return [self dateFromComponents:dateComponents];
 }
 
-- (NSDate *)fm_dateForYearAfterDate:(NSDate *)date {
+- (nullable NSDate *)fm_dateForYearAfterDate:(NSDate *)date {
     NSDateComponents *dateComponents = [NSDateComponents new];
     dateComponents.year = 1;
     return [self dateByAddingComponents:dateComponents toDate:date options:0];
@@ -42,14 +42,14 @@
     return (isEqualYear && isEqualMonth && isEqualDay);
 }
 
-- (NSDate *)fm_dateWithoutSecondsForDate:(NSDate *)date {
+- (nullable NSDate *)fm_dateWithoutSecondsForDate:(NSDate *)date {
     unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
     NSDateComponents *dateComponents = [self components:unitFlags fromDate:date];
     dateComponents.second = 0;
     return [self dateFromComponents:dateComponents];
 }
 
-- (NSDate *)fm_firstDayOfYearForDate:(NSDate *)date {
+- (nullable NSDate *)fm_firstDayOfYearForDate:(NSDate *)date {
     unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
     NSDateComponents *dateComponents = [self components:unitFlags fromDate:date];
     dateComponents.month = 1;
@@ -60,7 +60,7 @@
     return [self dateFromComponents:dateComponents];
 }
 
-- (NSDate *)fm_noonOfDayForDate:(NSDate *)date {
+- (nullable NSDate *)fm_noonOfDayForDate:(NSDate *)date {
     unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
     NSDateComponents *dateComponents = [self components:unitFlags fromDate:date];
     dateComponents.hour = 12;
@@ -69,7 +69,7 @@
     return [self dateFromComponents:dateComponents];
 }
 
-- (NSDate *)fm_randomDateForYear:(NSInteger)year {
+- (nullable NSDate *)fm_randomDateForYear:(NSInteger)year {
     NSDateComponents *dateComponents = [NSDateComponents new];
     dateComponents.month = 1;
     dateComponents.day = 15;
