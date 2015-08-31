@@ -64,11 +64,10 @@
 
 - (void)testPresentAlertViewTwice_doesNotAddActivityIndicatorToAlertControllerTwice {
     OCMStub([self.activityIndicatorViewMock superview]).andReturn(self.alertControllerViewMock);
-    OCMExpect([self.alertControllerViewMock addSubview:self.activityIndicatorViewMock]);
 
     [self.alertView presentInViewController:self.viewControllerMock];
 
-    XCTAssertThrows([self.alertControllerViewMock verify]);
+    [[self.alertControllerViewMock reject] addSubview:self.activityIndicatorViewMock];
     OCMVerify([self.viewControllerMock presentViewController:self.alertControllerMock animated:YES completion:nil]);
 }
 
