@@ -9,7 +9,6 @@ FOUNDATION_EXPORT double FMIKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 
 #import <FMIKit/FMIHelpers.h>
-#import <FMIKit/MFMailComposeViewController+AlertView.h>
 #import <FMIKit/NSArray+Initialization.h>
 #import <FMIKit/NSArray+Querying.h>
 #import <FMIKit/NSBundle+Configuration.h>
