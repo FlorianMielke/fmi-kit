@@ -8,231 +8,170 @@
 #import "FakeBindingModel.h"
 #import "FakeBindingObserver.h"
 
-
 @interface FMIBindingManagerTests : XCTestCase
 
-@property (NS_NONATOMIC_IOSONLY) FMIBindingManager *bindingManager;
-@property (NS_NONATOMIC_IOSONLY) FakeBindingObserver *testObserver;
-@property (NS_NONATOMIC_IOSONLY) FakeBindingModel *testModel;
+@property(NS_NONATOMIC_IOSONLY) FMIBindingManager *bindingManager;
+@property(NS_NONATOMIC_IOSONLY) FakeBindingObserver *testObserver;
+@property(NS_NONATOMIC_IOSONLY) FakeBindingModel *testModel;
 
 @end
 
-
-
 @implementation FMIBindingManagerTests
 
-
-#pragma mark - Fixture
-
-- (void)setUp
-{
+- (void)setUp {
     [super setUp];
-    
-    _bindingManager = [[FMIBindingManager alloc] init];
-    _testObserver = [[FakeBindingObserver alloc] init];
-    _testModel = [[FakeBindingModel alloc] init];
+    self.bindingManager = [[FMIBindingManager alloc] init];
+    self.testObserver = [[FakeBindingObserver alloc] init];
+    self.testModel = [[FakeBindingModel alloc] init];
 }
 
+- (void)testCopiesValuesOnEnable {
+    self.testModel.stringValue = @"Test Value";
+    [self.bindingManager bindObserver:self.testObserver keyPath:@"text" toSubject:self.testModel keyPath:@"stringValue"];
 
-- (void)tearDown
-{
-    [_bindingManager disable];
-    
-    _bindingManager = nil;
-    _testObserver = nil;
-    _testModel = nil;
-    
-    [super tearDown];
+    XCTAssertNil(self.testObserver.text);
+
+    [self.bindingManager enable];
+
+    XCTAssertTrue(self.bindingManager.isEnabled);
+    XCTAssertEqualObjects(@"Test Value", self.testObserver.text);
 }
 
+- (void)testCopiesValuesOnChange {
+    self.testModel.stringValue = @"Test Value";
+    [self.bindingManager bindObserver:self.testObserver keyPath:@"text" toSubject:self.testModel keyPath:@"stringValue"];
 
-#pragma mark - Binding
+    [self.bindingManager enable];
 
-- (void)testCopiesValuesOnEnable
-{
+    self.testModel.stringValue = @"Changed Value";
 
-    _testModel.stringValue = @"Test Value";
-    
-    [_bindingManager bindObserver:_testObserver keyPath:@"text" toSubject:_testModel keyPath:@"stringValue"];
-    
-    XCTAssertNil(_testObserver.text, @"Value should not change until activation");
-    
-    [_bindingManager enable];
-    
-    XCTAssertTrue([_bindingManager isEnabled]);
-    XCTAssertEqualObjects(@"Test Value", _testObserver.text, @"Value should have been copied from model to observer");
+    XCTAssertEqualObjects(@"Changed Value", self.testObserver.text);
+
+    self.testModel.stringValue = @"Changed Value Again";
+
+    XCTAssertEqualObjects(@"Changed Value Again", self.testObserver.text);
 }
 
+- (void)testDoesNotCopyAfterDeactivate {
+    self.testModel.stringValue = @"Test Value";
+    [self.bindingManager bindObserver:self.testObserver keyPath:@"text" toSubject:self.testModel keyPath:@"stringValue"];
 
-- (void)testCopiesValuesOnChange
-{
-    _testModel.stringValue = @"Test Value";
-    
-    [_bindingManager bindObserver:_testObserver keyPath:@"text" toSubject:_testModel keyPath:@"stringValue"];
-    
-    [_bindingManager enable];
-    
-    _testModel.stringValue = @"Changed Value";
-    
-    XCTAssertEqualObjects(@"Changed Value", _testObserver.text, @"New value should have been copied from model to observer");
-    
-    _testModel.stringValue = @"Changed Value Again";
-    
-    XCTAssertEqualObjects(@"Changed Value Again", _testObserver.text, @"Newer value should have been copied from model to observer");
+    XCTAssertNil(self.testObserver.text);
+
+    [self.bindingManager enable];
+    self.testModel.stringValue = @"First Value";
+
+    XCTAssertEqualObjects(@"First Value", self.testObserver.text);
+
+    [self.bindingManager disable];
+
+    XCTAssertFalse(self.bindingManager.isEnabled);
+
+    self.testModel.stringValue = @"Second Value";
+
+    XCTAssertEqualObjects(@"First Value", self.testObserver.text);
+
 }
 
+- (void)testAddBindingToEnabledBindingManager {
+    self.testModel.stringValue = @"Test Value";
+    [self.bindingManager enable];
 
-- (void)testDoesNotCopyAfterDeactivate
-{
-    _testModel.stringValue = @"Test Value";
-    
-    [_bindingManager bindObserver:_testObserver keyPath:@"text" toSubject:_testModel keyPath:@"stringValue"];
-    
-    XCTAssertNil(_testObserver.text, @"Value should not change until activation");
-    
-    [_bindingManager enable];
-    
-    _testModel.stringValue = @"First Value";
-    
-    XCTAssertEqualObjects(@"First Value", _testObserver.text, @"New value should have been copied from model to observer");
-    
-    [_bindingManager disable];
-    
-    XCTAssertFalse([_bindingManager isEnabled]);
-    
-    _testModel.stringValue = @"Second Value";
-    
-    XCTAssertEqualObjects(@"First Value", _testObserver.text, @"Value should not have been copied after -deactivateBindings");
-    
+    [self.bindingManager bindObserver:self.testObserver keyPath:@"text" toSubject:self.testModel keyPath:@"stringValue"];
+
+    XCTAssertEqualObjects(@"Test Value", self.testObserver.text);
+
+    self.testModel.stringValue = @"First Value";
+
+    XCTAssertEqualObjects(@"First Value", self.testObserver.text);
 }
 
+- (void)testRemoveBindings {
+    self.testModel.stringValue = @"Test Value";
+    [self.bindingManager bindObserver:self.testObserver keyPath:@"text" toSubject:self.testModel keyPath:@"stringValue"];
+    [self.bindingManager enable];
+    self.testModel.stringValue = @"Changed Value";
+    [self.bindingManager removeAllBindings];
+    self.testModel.stringValue = @"Changed Value Again";
 
-- (void)testAddBindingToEnabledBindingManager
-{
-    _testModel.stringValue = @"Test Value";
-    
-    [_bindingManager enable];
-    
-    [_bindingManager bindObserver:_testObserver keyPath:@"text" toSubject:_testModel keyPath:@"stringValue"];
-    
-    XCTAssertEqualObjects(@"Test Value", _testObserver.text, @"Value should change immediately");
-    
-    _testModel.stringValue = @"First Value";
-    
-    XCTAssertEqualObjects(@"First Value", _testObserver.text, @"New value should have been copied from model to observer");
+    XCTAssertEqualObjects(@"Changed Value", self.testObserver.text);
+
+    XCTAssertTrue(self.bindingManager.isEnabled);
+
+    [self.bindingManager bindObserver:self.testObserver keyPath:@"text" toSubject:self.testModel keyPath:@"stringValue"];
+
+    XCTAssertEqualObjects(@"Changed Value Again", self.testObserver.text);
 }
 
-
-- (void)testRemoveBindings
-{
-    _testModel.stringValue = @"Test Value";
-    
-    [_bindingManager bindObserver:_testObserver keyPath:@"text" toSubject:_testModel keyPath:@"stringValue"];
-    
-    [_bindingManager enable];
-    
-    _testModel.stringValue = @"Changed Value";
-
-    [_bindingManager removeAllBindings];
-    
-    _testModel.stringValue = @"Changed Value Again";
-    
-    XCTAssertEqualObjects(@"Changed Value", _testObserver.text, @"Newer value should not have been copied after bindings removed");
-    
-    XCTAssertTrue([_bindingManager isEnabled], @"Should still be enabled");
-    
-    [_bindingManager bindObserver:_testObserver keyPath:@"text" toSubject:_testModel keyPath:@"stringValue"];
-    
-    XCTAssertEqualObjects(@"Changed Value Again", _testObserver.text, @"Newer value should have been copied after re-bind");
-}
-
-
-- (void)testMultipleModelProperties
-{
-    _testModel.stringValue = @"String 1";
-    _testModel.stringValue2 = @"String 2";
-    
+- (void)testMultipleModelProperties {
+    self.testModel.stringValue = @"String 1";
+    self.testModel.stringValue2 = @"String 2";
     FakeBindingObserver *observer1 = [[FakeBindingObserver alloc] init];
     FakeBindingObserver *observer2 = [[FakeBindingObserver alloc] init];
-    
-    [_bindingManager bindObserver:observer1 keyPath:@"text" toSubject:_testModel keyPath:@"stringValue"];
-    [_bindingManager bindObserver:observer2 keyPath:@"text" toSubject:_testModel keyPath:@"stringValue2"];
-    
-    [_bindingManager enable];
-    
+    [self.bindingManager bindObserver:observer1 keyPath:@"text" toSubject:self.testModel keyPath:@"stringValue"];
+    [self.bindingManager bindObserver:observer2 keyPath:@"text" toSubject:self.testModel keyPath:@"stringValue2"];
+
+    [self.bindingManager enable];
+
     XCTAssertEqualObjects(@"String 1", observer1.text);
     XCTAssertEqualObjects(@"String 2", observer2.text);
-    
-    _testModel.stringValue = @"Changed String 1";
-    _testModel.stringValue2 = @"Changed String 2";
-    
+
+    self.testModel.stringValue = @"Changed String 1";
+    self.testModel.stringValue2 = @"Changed String 2";
+
     XCTAssertEqualObjects(@"Changed String 1", observer1.text);
     XCTAssertEqualObjects(@"Changed String 2", observer2.text);
 }
 
-
-- (void)testMultipleModels
-{
+- (void)testMultipleModels {
     FakeBindingModel *model1 = [[FakeBindingModel alloc] init];
     model1.stringValue = @"String 1";
-    
     FakeBindingModel *model2 = [[FakeBindingModel alloc] init];
     model2.stringValue = @"String 2";
-    
     FakeBindingObserver *observer1 = [[FakeBindingObserver alloc] init];
     FakeBindingObserver *observer2 = [[FakeBindingObserver alloc] init];
-    
-    [_bindingManager bindObserver:observer1 keyPath:@"text" toSubject:model1 keyPath:@"stringValue"];
-    [_bindingManager bindObserver:observer2 keyPath:@"text" toSubject:model2 keyPath:@"stringValue"];
-    
-    [_bindingManager enable];
-    
+    [self.bindingManager bindObserver:observer1 keyPath:@"text" toSubject:model1 keyPath:@"stringValue"];
+    [self.bindingManager bindObserver:observer2 keyPath:@"text" toSubject:model2 keyPath:@"stringValue"];
+
+    [self.bindingManager enable];
+
     XCTAssertEqualObjects(@"String 1", observer1.text);
     XCTAssertEqualObjects(@"String 2", observer2.text);
-    
+
     model1.stringValue = @"Changed String 1";
     model2.stringValue = @"Changed String 2";
-    
+
     XCTAssertEqualObjects(@"Changed String 1", observer1.text);
-    XCTAssertEqualObjects(@"Changed String 2", observer2.text);    
+    XCTAssertEqualObjects(@"Changed String 2", observer2.text);
 }
 
+- (void)testValueTransform {
+    self.testModel.numericValue = 33;
 
-- (void)testValueTransform
-{
-    _testModel.numericValue = 33;
-    
-    [_bindingManager bindObserver:_testObserver 
-                          keyPath:@"text"
-                        toSubject:_testModel
-                          keyPath:@"numericValue"
-               withValueTransform:^(id value) {
-                   return [value stringValue];
-               }];
-    
-    [_bindingManager enable];
-    
-    XCTAssertEqualObjects(@"33", _testObserver.text);
-    
-    _testModel.numericValue = 22;
-    XCTAssertEqualObjects(@"22", _testObserver.text);
+    [self.bindingManager bindObserver:self.testObserver keyPath:@"text" toSubject:self.testModel keyPath:@"numericValue" withValueTransform:^(id value) {
+        return [value stringValue];
+    }];
+
+    [self.bindingManager enable];
+
+    XCTAssertEqualObjects(@"33", self.testObserver.text);
+
+    self.testModel.numericValue = 22;
+    XCTAssertEqualObjects(@"22", self.testObserver.text);
 }
 
-
-- (void)testSubjectKeyPath
-{
+- (void)testSubjectKeyPath {
     FakeBindingModel *topModel = [[FakeBindingModel alloc] init];
     FakeBindingModel *subModel = [[FakeBindingModel alloc] init];
-    
+
     topModel.submodel = subModel;
-    
-    // Bind to topModel, but use a key path to actually bind to its submodel's stringValue
-    [_bindingManager bindObserver:_testObserver keyPath:@"text" toSubject:topModel keyPath:@"submodel.stringValue"];
-    [_bindingManager enable];
-    
+
+    [self.bindingManager bindObserver:self.testObserver keyPath:@"text" toSubject:topModel keyPath:@"submodel.stringValue"];
+    [self.bindingManager enable];
+
     subModel.stringValue = @"Submodel value";
-    
-    XCTAssertEqualObjects(@"Submodel value", _testObserver.text);
+
+    XCTAssertEqualObjects(@"Submodel value", self.testObserver.text);
 }
 
 @end

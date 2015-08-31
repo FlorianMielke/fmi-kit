@@ -8,127 +8,79 @@
 #import "FMITableView.h"
 #import "FakeTableViewDataSource.h"
 
-
 @interface FMITableViewTests : XCTestCase
 
-@property (NS_NONATOMIC_IOSONLY) FMITableView *sut;
-@property (NS_NONATOMIC_IOSONLY) FakeTableViewDataSource *dataSource;
+@property(NS_NONATOMIC_IOSONLY) FMITableView *subject;
+@property(NS_NONATOMIC_IOSONLY) FakeTableViewDataSource *dataSource;
 
 @end
 
-
-
 @implementation FMITableViewTests
 
-
-#pragma mark - Fixture
-
-- (void)setUp
-{
+- (void)setUp {
     [super setUp];
-
-    _sut = [[FMITableView alloc] init];
-    [_sut setAllowsAllRowsSelectionDuringEditing:YES];
-    
-    _dataSource = [[FakeTableViewDataSource alloc] init];
-    [_sut setDataSource:_dataSource];
+    self.subject = [[FMITableView alloc] init];
+    [self.subject setAllowsAllRowsSelectionDuringEditing:YES];
+    self.dataSource = [[FakeTableViewDataSource alloc] init];
+    [self.subject setDataSource:self.dataSource];
 }
 
-
-- (void)tearDown
-{
-    _sut = nil;
-    _dataSource = nil;
-    
-    [super tearDown];
+- (void)testTableShouldBeInitialized {
+    XCTAssertNotNil(self.subject);
 }
 
-
-
-#pragma mark - Initialization
-
-- (void)testTableShouldBeInitialized
-{
-    XCTAssertNotNil(_sut);
+- (void)testTableViewShouldBeConfigured {
+    XCTAssertTrue([self.subject allowsAllRowsSelectionDuringEditing]);
+    XCTAssertTrue([self.subject allowsMultipleSelectionDuringEditing]);
 }
 
+- (void)testTableViewShouldSelectAllRows {
+    id delegate = OCMProtocolMock(@protocol(FMITableViewDelegate));
+    OCMStub([delegate tableView:self.subject willSelectRowAtIndexPath:[OCMArg any]]).andReturn([OCMArg any]);
+    self.subject.delegate = delegate;
+    self.subject.editing = YES;
 
-- (void)testTableViewShouldBeConfigured
-{
-    XCTAssertTrue([_sut allowsAllRowsSelectionDuringEditing]);
-    XCTAssertTrue([_sut allowsMultipleSelectionDuringEditing]);
+    [self.subject selectAllRows];
+
+    XCTAssertEqual((NSUInteger) 30, self.subject.indexPathsForSelectedRows.count);
+    XCTAssertTrue(self.subject.hasSelectedAllRows);
+    OCMVerify([delegate tableView:self.subject didSelectRowAtIndexPath:[OCMArg any]]);
+    OCMVerify([delegate tableViewDidSelectAllRows:self.subject]);
 }
 
+- (void)testTableViewShouldDeselectAllRows {
+    id delegate = OCMProtocolMock(@protocol(FMITableViewDelegate));
+    OCMStub([delegate tableView:self.subject willSelectRowAtIndexPath:[OCMArg any]]).andReturn([OCMArg any]);
+    self.subject.editing = YES;
+    [self.subject selectAllRows];
+    self.subject.delegate = delegate;
 
+    [self.subject deselectAllRows];
 
-#pragma mark - Selection
-
-- (void)testTableViewShouldSelectAllRows
-{
-
-    id mockDelegate = [OCMockObject niceMockForProtocol:@protocol(FMITableViewDelegate)];
-    [[[mockDelegate stub] andReturn:[OCMArg any]] tableView:_sut willSelectRowAtIndexPath:[OCMArg any]];
-    [[mockDelegate expect] tableView:_sut didSelectRowAtIndexPath:[OCMArg any]];
-    [[mockDelegate expect] tableViewDidSelectAllRows:_sut];
-
-    [_sut setDelegate:mockDelegate];
-    
-    [_sut setEditing:YES];
-    [_sut selectAllRows];
-    
-    XCTAssertEqual([[_sut indexPathsForSelectedRows] count], (NSUInteger)30);
-    XCTAssertTrue([_sut hasSelectedAllRows]);
-    XCTAssertNoThrow([mockDelegate verify]);
+    XCTAssertEqual((NSUInteger) 0, self.subject.indexPathsForSelectedRows.count);
+    XCTAssertFalse(self.subject.hasSelectedAllRows);
+    OCMVerify([delegate tableView:self.subject didDeselectRowAtIndexPath:[OCMArg any]]);
+    OCMVerify([delegate tableViewDidDeselectAllRows:self.subject]);
 }
 
+- (void)testTableViewShouldResetSelectionAttributesWhenDisableEditMode {
+    self.subject.editing = YES;
+    [self.subject selectAllRows];
 
-- (void)testTableViewShouldDeselectAllRows
-{
+    self.subject.editing = NO;
 
-    [_sut setEditing:YES];
-    [_sut selectAllRows];
-    
-    id mockDelegate = [OCMockObject niceMockForProtocol:@protocol(FMITableViewDelegate)];
-    [[[mockDelegate stub] andReturn:[OCMArg any]] tableView:_sut willSelectRowAtIndexPath:[OCMArg any]];
-    [[mockDelegate expect] tableView:_sut didDeselectRowAtIndexPath:[OCMArg any]];
-    [[mockDelegate expect] tableViewDidDeselectAllRows:_sut];
-    
-    [_sut setDelegate:mockDelegate];
-    
-    [_sut deselectAllRows];
-    
-    XCTAssertEqual([[_sut indexPathsForSelectedRows] count], (NSUInteger)0);
-    XCTAssertFalse([_sut hasSelectedAllRows]);
-    XCTAssertNoThrow([mockDelegate verify]);
+    XCTAssertFalse(self.subject.hasSelectedAllRows);
+    XCTAssertEqual(self.subject.indexPathsForSelectedRows.count, (NSUInteger) 0);
 }
 
+- (void)testTableViewShouldResetSelectionAttributesWhenDisableEditModeAnimated {
+    [self.subject setEditing:YES animated:NO];
+    [self.subject selectAllRows];
 
-- (void)testTableViewShouldResetSelectionAttributesWhenDisableEditMode
-{
+    [self.subject setEditing:NO animated:NO];
 
-    [_sut setEditing:YES];
-    [_sut selectAllRows];
-    
-    [_sut setEditing:NO];
-    
-    XCTAssertFalse([_sut hasSelectedAllRows]);
-    XCTAssertEqual([[_sut indexPathsForSelectedRows] count], (NSUInteger)0);
+    XCTAssertFalse(self.subject.hasSelectedAllRows);
+    XCTAssertEqual(self.subject.indexPathsForSelectedRows.count, (NSUInteger) 0);
 }
-
-
-- (void)testTableViewShouldResetSelectionAttributesWhenDisableEditModeAnimated
-{
-
-    [_sut setEditing:YES animated:NO];
-    [_sut selectAllRows];
-    
-    [_sut setEditing:NO animated:NO];
-    
-    XCTAssertFalse([_sut hasSelectedAllRows]);
-    XCTAssertEqual([[_sut indexPathsForSelectedRows] count], (NSUInteger)0);
-}
-
-
-
 
 @end

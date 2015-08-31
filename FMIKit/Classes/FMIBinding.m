@@ -7,35 +7,24 @@
 
 #import "FMIBinding.h"
 
-
 @implementation FMIBinding
 
-
-- (void)activate
-{
-    [[self subject] addObserver:self forKeyPath:[self subjectKeyPath] options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial) context:NULL];
+- (void)activate {
+    [self.subject addObserver:self forKeyPath:self.subjectKeyPath options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial) context:NULL];
 }
 
-
-- (void)deactivate
-{
-    [[self subject] removeObserver:self forKeyPath:[self subjectKeyPath]];
+- (void)deactivate {
+    [self.subject removeObserver:self forKeyPath:self.subjectKeyPath];
 }
 
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     id newValue = [change valueForKey:NSKeyValueChangeNewKey];
-    
-    if (newValue != [NSNull null])
-    {
-        if ([self transformBlock] != nil) {
+    if (newValue != [NSNull null]) {
+        if (self.transformBlock) {
             newValue = [self transformBlock](newValue);
         }
-        
-        [[self observer] setValue:newValue forKeyPath:[self observerKeyPath]];
+        [self.observer setValue:newValue forKeyPath:self.observerKeyPath];
     }
 }
-
 
 @end

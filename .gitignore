@@ -15,6 +15,6 @@ xcuserdata
 profile
 *.moved-aside
 DerivedData
-.idea/
 UserInterfaceState.xcuserstate
 .idea/workspace.xml
+.idea/tasks.xml

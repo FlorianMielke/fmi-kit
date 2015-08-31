@@ -9,7 +9,6 @@
 
 @class FMITableView;
 
-
 @protocol FMITableViewDelegate <NSObject, UITableViewDelegate>
 
 /**
@@ -26,26 +25,24 @@
 
 @end
 
-
-
 @interface FMITableView : UITableView
 
 /**
  * A Boolean value that controls whether users can select all rows simultaneously in editing mode.
  * @note Enabling this property will also enable allowsMultipleSelectionDuringEditing.
  */
-@property (NS_NONATOMIC_IOSONLY) BOOL allowsAllRowsSelectionDuringEditing;
+@property(NS_NONATOMIC_IOSONLY) BOOL allowsAllRowsSelectionDuringEditing;
 
 /**
  * The object that acts as the delegate of the receiving table view.
  */
-@property (weak, NS_NONATOMIC_IOSONLY) id <FMITableViewDelegate> delegate;
+@property(weak, NS_NONATOMIC_IOSONLY) id <FMITableViewDelegate> delegate;
 
 /**
  * Returns a Boolean that indicates whether all rows are selected.
  * @return YES if all rows are selected, otherwise NO.
  */
-@property (readonly, NS_NONATOMIC_IOSONLY) BOOL hasSelectedAllRows;
+@property(readonly, NS_NONATOMIC_IOSONLY) BOOL hasSelectedAllRows;
 
 /**
  * Selects all rows of the receiver.

@@ -7,7 +7,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 /**
  *  Maintains a set of KVO observers, automatically copying values when they change.
  */
