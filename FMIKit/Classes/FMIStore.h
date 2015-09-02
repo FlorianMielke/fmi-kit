@@ -14,52 +14,52 @@
  * An array of entity names that are necessary to check if the persistent store is empty.
  * @see -persistentStoreIsEmpty
  */
-@property (NS_NONATOMIC_IOSONLY) NSArray *baseEntityNames;
+@property(NS_NONATOMIC_IOSONLY) NSArray *baseEntityNames;
 
 /**
  * The name of the database file.
  */
-@property (copy, NS_NONATOMIC_IOSONLY) NSString *databaseName;
+@property(copy, NS_NONATOMIC_IOSONLY) NSString *databaseName;
 
 /**
  * The managed object context.
  */
-@property (readonly, NS_NONATOMIC_IOSONLY) NSManagedObjectContext *managedObjectContext;
+@property(readonly, NS_NONATOMIC_IOSONLY) NSManagedObjectContext *managedObjectContext;
 
 /**
  * The managed object model.
  */
-@property (readonly, NS_NONATOMIC_IOSONLY) NSManagedObjectModel *managedObjectModel;
+@property(readonly, NS_NONATOMIC_IOSONLY) NSManagedObjectModel *managedObjectModel;
 
 /**
  * The name of the model.
  */
-@property (copy, NS_NONATOMIC_IOSONLY) NSString *modelName;
+@property(copy, NS_NONATOMIC_IOSONLY) NSString *modelName;
 
 /**
- * The persisent store coordinator.
+ * The persistent store coordinator.
  */
-@property (readonly, NS_NONATOMIC_IOSONLY) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property(readonly, NS_NONATOMIC_IOSONLY) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 /**
  * A Boolean that indicates whether the persistent store contains any records of the given base entities.
  */
-@property (readonly, getter=isPersistentStoreEmpty, NS_NONATOMIC_IOSONLY) BOOL persistentStoreIsEmpty;
+@property(readonly, getter=isPersistentStoreEmpty, NS_NONATOMIC_IOSONLY) BOOL persistentStoreIsEmpty;
 
 /**
  * The iOS application documents directory.
  */
-@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSURL *applicationDocumentsDirectory;
+@property(readonly, copy, NS_NONATOMIC_IOSONLY) NSURL *applicationDocumentsDirectory;
 
 /**
  * The OS X application support directory.
  */
-@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSURL *applicationSupportDirectory;
+@property(readonly, copy, NS_NONATOMIC_IOSONLY) NSURL *applicationSupportDirectory;
 
 /**
  * The NSBundle object that corresponds to the directory where the current application executable is located.
  */
-@property (readonly, NS_NONATOMIC_IOSONLY) NSBundle *bundle;
+@property(readonly, NS_NONATOMIC_IOSONLY) NSBundle *bundle;
 
 /**
  * Returns a shared instance of the FMIStore class.
