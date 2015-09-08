@@ -92,6 +92,7 @@
     if ([self isNestedRowAtIndexPath:indexPath]) {
         NSInteger index = [self indexForNestedRowAtIndexPath:indexPath];
         [self.dataSource nestedTableView:self commitEditingStyle:editingStyle forNestedRowAtIndexPath:indexPath nestedItemIndex:index rootRowIndexPath:self.indexPathForRootRow];
+        [self prepareNestedIndexPathsForIndexPath:self.indexPathForRootRow];
     } else {
         indexPath = [self adjustedIndexPathForIndexPath:indexPath];
         [self.dataSource nestedTableView:self commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
@@ -152,6 +153,7 @@
 #pragma mark - Utilities
 
 - (void)prepareNestedIndexPathsForIndexPath:(NSIndexPath *)indexPath {
+    [self.indexPathsForNestedRows removeAllObjects];
     NSInteger numberOfNestedRows = [self numberOfNestedRowsForRowAtIndexPath:indexPath];
     NSInteger firstRow = indexPath.row + 1;
 
