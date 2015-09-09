@@ -37,6 +37,18 @@
     return [self.dataSource nestedTableView:self cellForRowAtIndexPath:adjustedIndexPath];
 }
 
+- (BOOL)isEditableRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (!self.allowsNestedRows) {
+        return [self.dataSource nestedTableView:self canEditRowAtIndexPath:indexPath];
+    }
+    if ([self isNestedRowAtIndexPath:indexPath]) {
+        NSInteger index = [self indexForNestedRowAtIndexPath:indexPath];
+        return [self.dataSource nestedTableView:self canEditNestedRowAtIndex:index rootRowIndexPath:self.indexPathForRootRow];
+    }
+    NSIndexPath *adjustedIndexPath = [self adjustedIndexPathForIndexPath:indexPath];
+    return [self.dataSource nestedTableView:self canEditRowAtIndexPath:adjustedIndexPath];
+}
+
 - (void)passSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (!self.allowsNestedRows) {
         [self.delegate nestedTableView:self didSelectRowAtIndexPath:indexPath];
