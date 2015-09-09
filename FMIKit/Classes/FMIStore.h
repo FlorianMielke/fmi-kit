@@ -19,22 +19,12 @@
 /**
  * The name of the database file.
  */
-@property(copy, NS_NONATOMIC_IOSONLY) NSString *databaseName;
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *databaseName;
 
 /**
  * The managed object context.
  */
 @property(readonly, NS_NONATOMIC_IOSONLY) NSManagedObjectContext *managedObjectContext;
-
-/**
- * The managed object model.
- */
-@property(readonly, NS_NONATOMIC_IOSONLY) NSManagedObjectModel *managedObjectModel;
-
-/**
- * The name of the model.
- */
-@property(copy, NS_NONATOMIC_IOSONLY) NSString *modelName;
 
 /**
  * The persistent store coordinator.
@@ -52,23 +42,25 @@
 @property(readonly, copy, NS_NONATOMIC_IOSONLY) NSURL *applicationDocumentsDirectory;
 
 /**
- * The OS X application support directory.
- */
-@property(readonly, copy, NS_NONATOMIC_IOSONLY) NSURL *applicationSupportDirectory;
-
-/**
  * The NSBundle object that corresponds to the directory where the current application executable is located.
  */
 @property(readonly, NS_NONATOMIC_IOSONLY) NSBundle *bundle;
 
 /**
+ * The name of the model.
+ */
+@property (copy, NS_NONATOMIC_IOSONLY) NSString *modelName;
+
+/**
  * Returns a shared instance of the FMIStore class.
+ *
  * @return A shared instance of the FMIStore class.
  */
 + (instancetype)sharedStore;
 
 /**
  * Attempts the managed object context to perform a save.
+ *
  * @return YES if the save succeeds, otherwise NO.
  */
 - (BOOL)saveContext;
@@ -92,5 +84,12 @@
  * Deletes all managed objects from the persistent store.
  */
 - (void)deleteAllManagedObjects;
+
+/**
+ * Creates a new \cNSManagedObjectContext with the current \cpersistenStoreCoordinator
+ *
+ * @return A new \cNSManagedObjectContext.
+ */
+- (NSManagedObjectContext *)createNewManagedObjectContext;
 
 @end

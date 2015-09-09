@@ -11,8 +11,8 @@
 @interface FMIStore ()
 
 @property (NS_NONATOMIC_IOSONLY) NSManagedObjectContext *managedObjectContext;
-@property (NS_NONATOMIC_IOSONLY) NSManagedObjectModel *managedObjectModel;
 @property (NS_NONATOMIC_IOSONLY) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (NS_NONATOMIC_IOSONLY) NSManagedObjectModel *managedObjectModel;
 
 @end
 
@@ -22,7 +22,7 @@
     static FMIStore *singleton;
     static dispatch_once_t singletonToken;
     dispatch_once(&singletonToken, ^{
-      singleton = [[self alloc] init];
+        singleton = [[self alloc] init];
     });
     return singleton;
 }
@@ -31,7 +31,7 @@
     if (_databaseName) {
         return _databaseName;
     }
-    _databaseName = [[self.appName stringByAppendingString:@".sqlite"] copy];
+    _databaseName = [[self.defaultDatabaseFileName stringByAppendingString:@".sqlite"] copy];
     return _databaseName;
 }
 
@@ -39,9 +39,10 @@
     if (_modelName) {
         return _modelName;
     }
-    _modelName = [self.appName copy];
+    _modelName = [self.defaultDatabaseFileName copy];
     return _modelName;
 }
+
 - (NSManagedObjectContext *)managedObjectContext {
     if (_managedObjectContext) {
         return _managedObjectContext;
@@ -112,6 +113,12 @@
     [self deleteAllObjectsInManagedObjectContext:self.managedObjectContext model:self.managedObjectModel];
 }
 
+- (NSManagedObjectContext *)createNewManagedObjectContext {
+    NSManagedObjectContext *managedObjectContext = [[NSManagedObjectContext alloc] init];
+    managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
+    return managedObjectContext;
+}
+
 - (void)deleteAllObjectsInManagedObjectContext:(NSManagedObjectContext *)managedObjectContext model:(NSManagedObjectModel *)model {
     for (NSEntityDescription *entityDescription in model.entities) {
         [self deleteAllObjectsWithEntityName:entityDescription.name inManagedObjectContext:managedObjectContext];
@@ -133,14 +140,9 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
-- (NSURL *)applicationSupportDirectory {
-    NSURL *appSupportURL = [[[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
-    return [appSupportURL URLByAppendingPathComponent:self.appName];
-}
-
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinatorWithStoreType:(NSString *const)storeType storeURL:(NSURL *)storeURL {
     NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
-    NSDictionary *options = @{ NSSQLitePragmasOption : @{@"journal_mode" : @"DELETE"} };
+    NSDictionary *options = @{NSSQLitePragmasOption : @{@"journal_mode" : @"DELETE"}};
     NSError *error = nil;
     if (![coordinator addPersistentStoreWithType:storeType configuration:nil URL:storeURL options:options error:&error]) {
         NSLog(@"ERROR WHILE CREATING PERSISTENT STORE COORDINATOR! %@, %@", error, error.userInfo);
@@ -148,19 +150,14 @@
     return coordinator;
 }
 
-- (NSString *)appName {
+- (NSString *)defaultDatabaseFileName {
     return self.bundle.infoDictionary[@"CFBundleName"];
 }
 
 - (NSURL *)sqliteStoreURL {
-    NSURL *directory = self.isOSX ? self.applicationSupportDirectory : self.applicationDocumentsDirectory;
-    NSURL *databaseDir = [directory URLByAppendingPathComponent:self.databaseName];
+    NSURL *directory = self.applicationDocumentsDirectory;
     [self createApplicationSupportDirIfNeeded:directory];
-    return databaseDir;
-}
-
-- (BOOL)isOSX {
-    return !(NSClassFromString(@"UIDevice"));
+    return [directory URLByAppendingPathComponent:self.databaseName];
 }
 
 - (void)createApplicationSupportDirIfNeeded:(NSURL *)url {
