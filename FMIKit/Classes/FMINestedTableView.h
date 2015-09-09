@@ -5,9 +5,11 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class FMINestedTableView;
 
-@protocol FMINestedTableViewDataSource <NSObject, UITableViewDataSource>
+@protocol FMINestedTableViewDataSource <UITableViewDataSource>
 
 - (NSInteger)nestedTableView:(FMINestedTableView *)nestedTableView numberOfNestedRowsForRowAtIndexPath:(NSIndexPath *)indexPath;
 
@@ -28,7 +30,7 @@
 
 @end
 
-@protocol FMINestedTableViewDelegate <NSObject, UITableViewDelegate>
+@protocol FMINestedTableViewDelegate <UITableViewDelegate>
 
 - (void)nestedTableView:(FMINestedTableView *)nestedTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 
@@ -40,13 +42,11 @@
 
 @property (weak, NS_NONATOMIC_IOSONLY) id <FMINestedTableViewDataSource> dataSource;
 @property (weak, NS_NONATOMIC_IOSONLY) id <FMINestedTableViewDelegate> delegate;
-@property (assign, NS_NONATOMIC_IOSONLY) BOOL allowsNestedRows;
+@property (NS_NONATOMIC_IOSONLY) BOOL allowsNestedRows;
 
 - (NSInteger)numberOfVisibleNestedRowsInSection:(NSInteger)section;
 
 - (UITableViewCell *)configuredCellForRowAtIndexPath:(NSIndexPath *)indexPath;
-
-- (BOOL)editableRowAtIndexPath:(NSIndexPath *)indexPath;
 
 - (BOOL)isNestedRowAtIndexPath:(NSIndexPath *)indexPath;
 
@@ -57,3 +57,5 @@
 - (void)hideNestedRows;
 
 @end
+
+NS_ASSUME_NONNULL_END

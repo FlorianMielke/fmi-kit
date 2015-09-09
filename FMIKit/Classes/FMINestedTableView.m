@@ -7,9 +7,9 @@
 
 @interface FMINestedTableView ()
 
-@property (strong, NS_NONATOMIC_IOSONLY) NSMutableArray *indexPathsForNestedRows;
-@property (strong, NS_NONATOMIC_IOSONLY) NSIndexPath *indexPathForRootRow;
-@property (assign, NS_NONATOMIC_IOSONLY) UIEdgeInsets rootRowSeparatorInsets;
+@property (NS_NONATOMIC_IOSONLY) NSMutableArray *indexPathsForNestedRows;
+@property (NS_NONATOMIC_IOSONLY) NSIndexPath *indexPathForRootRow;
+@property (NS_NONATOMIC_IOSONLY) UIEdgeInsets rootRowSeparatorInsets;
 
 @end
 
@@ -18,21 +18,10 @@
 @dynamic delegate;
 @dynamic dataSource;
 
-#pragma mark - Table view lifecycle
-
 - (NSInteger)numberOfVisibleNestedRowsInSection:(NSInteger)section {
-    if (!self.allowsNestedRows) {
+    if (!self.allowsNestedRows || !self.showsNestedRows || ![self isRootRowSectionEqualToSection:section]) {
         return 0;
     }
-
-    if (![self showsNestedRows]) {
-        return 0;
-    }
-
-    if (![self isRootRowSectionEqualToSection:section]) {
-        return 0;
-    }
-
     return [self numberOfNestedRowsForRowAtIndexPath:self.indexPathForRootRow];
 }
 
@@ -40,46 +29,28 @@
     if (!self.allowsNestedRows) {
         return nil;
     }
-
     if ([self isNestedRowAtIndexPath:indexPath]) {
         NSInteger index = [self indexForNestedRowAtIndexPath:indexPath];
         return [self.dataSource nestedTableView:self cellForNestedRowAtIndex:index rootRowIndexPath:self.indexPathForRootRow];
     }
-
-    indexPath = [self adjustedIndexPathForIndexPath:indexPath];
-    return [self.dataSource nestedTableView:self cellForRowAtIndexPath:indexPath];
-}
-
-- (BOOL)editableRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (!self.allowsNestedRows) {
-        return [self.dataSource nestedTableView:self canEditRowAtIndexPath:indexPath];
-    }
-
-    if ([self isNestedRowAtIndexPath:indexPath]) {
-        NSInteger index = [self indexForNestedRowAtIndexPath:indexPath];
-        return [self.dataSource nestedTableView:self canEditNestedRowAtIndex:index rootRowIndexPath:self.indexPathForRootRow];
-    }
-
-    indexPath = [self adjustedIndexPathForIndexPath:indexPath];
-    return [self.dataSource nestedTableView:self canEditRowAtIndexPath:indexPath];
+    NSIndexPath *adjustedIndexPath = [self adjustedIndexPathForIndexPath:indexPath];
+    return [self.dataSource nestedTableView:self cellForRowAtIndexPath:adjustedIndexPath];
 }
 
 - (void)passSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (!self.allowsNestedRows) {
         [self.delegate nestedTableView:self didSelectRowAtIndexPath:indexPath];
     }
-
     if ([self isNestedRowAtIndexPath:indexPath]) {
         NSInteger index = [self indexForNestedRowAtIndexPath:indexPath];
         [self.delegate nestedTableView:self didSelectNestedRowAtIndex:index rootRowIndexPath:self.indexPathForRootRow];
     } else {
-        indexPath = [self adjustedIndexPathForIndexPath:indexPath];
-
-        if ([self hasNestedRowsForRowAtIndexPath:indexPath]) {
-            [self toggleNestedRowsForRowAtIndexPath:indexPath];
+        NSIndexPath *adjustedIndexPath = [self adjustedIndexPathForIndexPath:indexPath];
+        if ([self hasNestedRowsForRowAtIndexPath:adjustedIndexPath]) {
+            [self toggleNestedRowsForRowAtIndexPath:adjustedIndexPath];
         } else {
             [self hideNestedRows];
-            [self.delegate nestedTableView:self didSelectRowAtIndexPath:indexPath];
+            [self.delegate nestedTableView:self didSelectRowAtIndexPath:adjustedIndexPath];
         }
     }
 }
@@ -88,14 +59,13 @@
     if (!self.allowsNestedRows) {
         [self.dataSource nestedTableView:self commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
     }
-
     if ([self isNestedRowAtIndexPath:indexPath]) {
         NSInteger index = [self indexForNestedRowAtIndexPath:indexPath];
         [self.dataSource nestedTableView:self commitEditingStyle:editingStyle forNestedRowAtIndexPath:indexPath nestedItemIndex:index rootRowIndexPath:self.indexPathForRootRow];
         [self prepareNestedIndexPathsForIndexPath:self.indexPathForRootRow];
     } else {
-        indexPath = [self adjustedIndexPathForIndexPath:indexPath];
-        [self.dataSource nestedTableView:self commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
+        NSIndexPath *adjustedIndexPath = [self adjustedIndexPathForIndexPath:indexPath];
+        [self.dataSource nestedTableView:self commitEditingStyle:editingStyle forRowAtIndexPath:adjustedIndexPath];
     }
 }
 
@@ -107,27 +77,20 @@
     [self hideNestedRowsForRowAtIndexPath:self.indexPathForRootRow];
 }
 
-#pragma mark - Operations
-
 - (void)toggleNestedRowsForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (!self.allowsNestedRows) {
         return;
     }
-
     [self deselectRowAtIndexPath:indexPath animated:YES];
-
     [self beginUpdates];
-
     if ([self isRootRowAtIndexPath:indexPath]) {
         [self hideNestedRowsForRowAtIndexPath:indexPath];
     } else {
         [self hideNestedRowsForRowAtIndexPath:self.indexPathForRootRow];
-
         if ([self hasNestedRowsForRowAtIndexPath:indexPath]) {
             [self showNestedRowsForRowAtIndexPath:indexPath];
         }
     }
-
     [self endUpdates];
 }
 
@@ -135,58 +98,37 @@
     self.indexPathForRootRow = indexPath;
     [self prepareNestedIndexPathsForIndexPath:self.indexPathForRootRow];
     [self insertRowsAtIndexPaths:self.indexPathsForNestedRows withRowAnimation:UITableViewRowAnimationTop];
-
     self.rootRowSeparatorInsets = [self cellForRootRow].separatorInset;
     [self cellForRootRow].separatorInset = UIEdgeInsetsZero;
-
     [self scrollToRowAtIndexPath:self.indexPathForRootRow atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
 - (void)hideNestedRowsForRowAtIndexPath:(NSIndexPath *)indexPath {
     [self cellForRootRow].separatorInset = self.rootRowSeparatorInsets;
-
     self.indexPathForRootRow = nil;
-    [self deleteRowsAtIndexPaths:self.indexPathsForNestedRows withRowAnimation:UITableViewRowAnimationTop];
+    NSArray *nestedRowsIndexPaths = [self.indexPathsForNestedRows copy];
     [self.indexPathsForNestedRows removeAllObjects];
+    [self deleteRowsAtIndexPaths:nestedRowsIndexPaths withRowAnimation:UITableViewRowAnimationTop];
 }
-
-#pragma mark - Utilities
 
 - (void)prepareNestedIndexPathsForIndexPath:(NSIndexPath *)indexPath {
     [self.indexPathsForNestedRows removeAllObjects];
     NSInteger numberOfNestedRows = [self numberOfNestedRowsForRowAtIndexPath:indexPath];
     NSInteger firstRow = indexPath.row + 1;
-
     for (NSInteger row = firstRow; row < firstRow + numberOfNestedRows; row++) {
         [self.indexPathsForNestedRows addObject:[NSIndexPath indexPathForRow:row inSection:indexPath.section]];
     }
 }
 
 - (NSIndexPath *)adjustedIndexPathForIndexPath:(NSIndexPath *)indexPath {
-    if (!self.allowsNestedRows) {
+    if (!self.allowsNestedRows
+            || !self.showsNestedRows
+            || ![self isRootRowSectionEqualToSection:indexPath.section]
+            || [self isRootRowIndexPathAfterIndexPath:indexPath]
+            || [self isRootRowAtIndexPath:indexPath]
+            || [self isNestedRowAtIndexPath:indexPath]) {
         return indexPath;
     }
-
-    if (![self showsNestedRows]) {
-        return indexPath;
-    }
-
-    if (![self isRootRowSectionEqualToSection:indexPath.section]) {
-        return indexPath;
-    }
-
-    if ([self isRootRowIndexPathAfterIndexPath:indexPath]) {
-        return indexPath;
-    }
-
-    if ([self isRootRowAtIndexPath:indexPath]) {
-        return indexPath;
-    }
-
-    if ([self isNestedRowAtIndexPath:indexPath]) {
-        return indexPath;
-    }
-
     NSInteger row = indexPath.row - [self numberOfVisibleNestedRowsInSection:indexPath.section];
     return [NSIndexPath indexPathForRow:row inSection:indexPath.section];
 }
@@ -195,7 +137,6 @@
     if (![self isNestedRowAtIndexPath:indexPath]) {
         return NSNotFound;
     }
-
     return indexPath.row - self.indexPathForRootRow.row - 1;
 }
 
@@ -212,7 +153,7 @@
 }
 
 - (UITableViewCell *)cellForRootRow {
-    return ([self showsNestedRows]) ? [self cellForRowAtIndexPath:self.indexPathForRootRow] : nil;
+    return self.showsNestedRows ? [self cellForRowAtIndexPath:self.indexPathForRootRow] : nil;
 }
 
 - (BOOL)isRootRowSectionEqualToSection:(NSInteger)section {
@@ -227,12 +168,9 @@
     return ([self.indexPathForRootRow compare:indexPath] == NSOrderedDescending);
 }
 
-#pragma mark - Global setting
-
 - (void)setAllowsNestedRows:(BOOL)allowsNestedRows {
     if (_allowsNestedRows != allowsNestedRows) {
         _allowsNestedRows = allowsNestedRows;
-
         if (_allowsNestedRows) {
             self.indexPathsForNestedRows = [[NSMutableArray alloc] init];
         } else {
@@ -241,5 +179,6 @@
         }
     }
 }
+
 
 @end
