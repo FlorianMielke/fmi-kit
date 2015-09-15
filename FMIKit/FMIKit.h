@@ -14,6 +14,7 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/NSBundle+Configuration.h>
 #import <FMIKit/NSCalendar+Calculations.h>
 #import <FMIKit/NSCalendar+SharedInstances.h>
+#import <FMIKit/NSCoder+SecureCoding.h>
 #import <FMIKit/NSData+FileAdditions.h>
 #import <FMIKit/NSDateFormatter+Timing.h>
 #import <FMIKit/NSDecimalNumber+Calulations.h>
