@@ -18,21 +18,32 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/NSDateFormatter+Timing.h>
 #import <FMIKit/NSDecimalNumber+Calulations.h>
 #import <FMIKit/NSFileManager+DirectoryAdditions.h>
-#import <FMIKit/NSIndexPath+Comparing.h>
 #import <FMIKit/NSIndexSet+Initialization.h>
-#import <FMIKit/NSManagedObjectContext+PersistentStoreAdditions.h>
 #import <FMIKit/NSMutableDictionary+IndexPath.h>
 #import <FMIKit/NSNumberFormatter+Editing.h>
 #import <FMIKit/NSObject+AutoDescription.h>
-#import <FMIKit/NSPersistentStoreCoordinator+Validation.h>
 #import <FMIKit/NSString+CSV.h>
 #import <FMIKit/NSString+Validation.h>
 #import <FMIKit/NSString+FileName.h>
 #import <FMIKit/NSString+FMIDrawing.h>
 #import <FMIKit/NSString+Folding.h>
+#import <FMIKit/UIColor+SystemDefaults.h>
+
+#import <FMIKit/FMIBinding.h>
+#import <FMIKit/FMIBindingManager.h>
+#import <FMIKit/FMIComparator.h>
+#import <FMIKit/FMICSVDeserializer.h>
+#import <FMIKit/FMICSVFieldDeserializer.h>
+#import <FMIKit/FMICSVFileDescription.h>
+#import <FMIKit/FMIDuration.h>
+#import <FMIKit/FMIDurationFormatter.h>
+#import <FMIKit/FMIFieldDescription.h>
+#import <FMIKit/FMIFoundationAdditions.h>
+
+#if !TARGET_OS_WATCH
+
 #import <FMIKit/NSUndoManager+Grouping.h>
 #import <FMIKit/SKProduct+LocalizedPrice.h>
-#import <FMIKit/UIColor+SystemDefaults.h>
 #import <FMIKit/UIDevice+Platform.h>
 #import <FMIKit/UIImage+Creation.h>
 #import <FMIKit/UIImage+Masking.h>
@@ -43,24 +54,16 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/UITableView+IndexPath.h>
 #import <FMIKit/UITableView+Selection.h>
 #import <FMIKit/UIScrollView+Scrolling.h>
+#import <FMIKit/NSIndexPath+Comparing.h>
+#import <FMIKit/NSManagedObjectContext+PersistentStoreAdditions.h>
+#import <FMIKit/NSPersistentStoreCoordinator+Validation.h>
 
 #import <FMIKit/FMIAlertView.h>
 #import <FMIKit/FMIKitFactory.h>
-
 #import <FMIKit/FMIAcceptedCell.h>
-#import <FMIKit/FMIBinding.h>
-#import <FMIKit/FMIBindingManager.h>
-#import <FMIKit/FMIComparator.h>
-#import <FMIKit/FMICSVDeserializer.h>
-#import <FMIKit/FMICSVFieldDeserializer.h>
-#import <FMIKit/FMICSVFileDescription.h>
 #import <FMIKit/FMIDatePickerController.h>
-#import <FMIKit/FMIDuration.h>
-#import <FMIKit/FMIDurationFormatter.h>
 #import <FMIKit/FMIEditingToolbar.h>
 #import <FMIKit/FMIEventParser.h>
-#import <FMIKit/FMIFieldDescription.h>
-#import <FMIKit/FMIFoundationAdditions.h>
 #import <FMIKit/FMIMessageMIMETypes.h>
 #import <FMIKit/FMIMessageAttachment.h>
 #import <FMIKit/FMINestedTableView.h>
@@ -69,3 +72,5 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIStore.h>
 #import <FMIKit/FMISupportMessage.h>
 #import <FMIKit/FMITableView.h>
+
+#endif
