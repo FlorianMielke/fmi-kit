@@ -83,7 +83,6 @@
 		174471701BA85641000C48E6 /* NSCoder+SecureCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913679C2780C3AABE90F4E /* NSCoder+SecureCoding.m */; settings = {ASSET_TAGS = (); }; };
 		1763D0481BA81F3E008B9AB4 /* UIColor+SystemDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913A3ACF0CA203242C3200 /* UIColor+SystemDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		178CE90D1B3AA3810049AD97 /* FMIMessageMIMETypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4401AFC928C00B96929 /* FMIMessageMIMETypes.plist */; };
-		178CE90E1B3AA3830049AD97 /* FMIKitLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4541AFC99A000B96929 /* FMIKitLocalizable.strings */; };
 		17A2094D1B3FFF6800327BA7 /* FMIHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 17A2094C1B3FFF6800327BA7 /* FMIHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17E00C711B90307500BA7024 /* FMIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171CB9851AFB63C7002BE185 /* FMIKit.framework */; };
 		17E00C751B90308500BA7024 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E00C721B90308500BA7024 /* Expecta.framework */; };
@@ -298,10 +297,6 @@
 		1738D4491AFC948100B96929 /* TestImagePortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TestImagePortrait.png; path = Resources/TestImagePortrait.png; sourceTree = "<group>"; };
 		1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TestImagePortraitSmallWidth.jpg; path = Resources/TestImagePortraitSmallWidth.jpg; sourceTree = "<group>"; };
 		1738D44B1AFC948100B96929 /* TestImageSquared.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TestImageSquared.png; path = Resources/TestImageSquared.png; sourceTree = "<group>"; };
-		1738D4551AFC99A000B96929 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/FMIKitLocalizable.strings; sourceTree = SOURCE_ROOT; };
-		1738D4571AFC99AC00B96929 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/FMIKitLocalizable.strings; sourceTree = SOURCE_ROOT; };
-		1738D4581AFC99B100B96929 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/FMIKitLocalizable.strings; sourceTree = SOURCE_ROOT; };
-		1738D45C1AFC99C800B96929 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/FMIKitLocalizable.strings; sourceTree = SOURCE_ROOT; };
 		17A2094C1B3FFF6800327BA7 /* FMIHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMIHelpers.h; path = FMIKit/FMIHelpers.h; sourceTree = "<group>"; };
 		17E00C721B90308500BA7024 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
 		17E00C731B90308500BA7024 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = Carthage/Build/iOS/OCMock.framework; sourceTree = "<group>"; };
@@ -607,7 +602,6 @@
 		1738D43F1AFC928200B96929 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1738D4541AFC99A000B96929 /* FMIKitLocalizable.strings */,
 				1738D4401AFC928C00B96929 /* FMIMessageMIMETypes.plist */,
 			);
 			name = Resources;
@@ -1098,7 +1092,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				178CE90D1B3AA3810049AD97 /* FMIMessageMIMETypes.plist in Resources */,
-				178CE90E1B3AA3830049AD97 /* FMIKitLocalizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1322,20 +1315,6 @@
 			targetProxy = 171CB9921AFB63C7002BE185 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		1738D4541AFC99A000B96929 /* FMIKitLocalizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1738D4551AFC99A000B96929 /* en */,
-				1738D4571AFC99AC00B96929 /* de */,
-				1738D4581AFC99B100B96929 /* es */,
-				1738D45C1AFC99C800B96929 /* fr */,
-			);
-			name = FMIKitLocalizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		171CB9991AFB63C7002BE185 /* Debug */ = {
