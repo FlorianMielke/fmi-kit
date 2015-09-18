@@ -17,11 +17,6 @@
 @property(NS_NONATOMIC_IOSONLY) NSArray *baseEntityNames;
 
 /**
- * The name of the database file.
- */
-@property (copy, NS_NONATOMIC_IOSONLY) NSString *databaseName;
-
-/**
  * The managed object context.
  */
 @property(readonly, NS_NONATOMIC_IOSONLY) NSManagedObjectContext *managedObjectContext;
@@ -37,19 +32,14 @@
 @property(readonly, getter=isPersistentStoreEmpty, NS_NONATOMIC_IOSONLY) BOOL persistentStoreIsEmpty;
 
 /**
- * The iOS application documents directory.
+ * The URL to the managed object model.
  */
-@property(readonly, copy, NS_NONATOMIC_IOSONLY) NSURL *applicationDocumentsDirectory;
+@property (strong, NS_NONATOMIC_IOSONLY) NSURL *managedObjectModelURL;
 
 /**
- * The NSBundle object that corresponds to the directory where the current application executable is located.
+ * The URL to the sqlite store.
  */
-@property(readonly, NS_NONATOMIC_IOSONLY) NSBundle *bundle;
-
-/**
- * The name of the model.
- */
-@property (copy, NS_NONATOMIC_IOSONLY) NSString *modelName;
+@property (strong, NS_NONATOMIC_IOSONLY) NSURL *sqliteStoreURL;
 
 /**
  * Returns a shared instance of the FMIStore class.
@@ -81,14 +71,9 @@
 - (void)resetCoreDataStack;
 
 /**
- * Deletes all managed objects from the persistent store.
- */
-- (void)deleteAllManagedObjects;
-
-/**
- * Creates a new \cNSManagedObjectContext with the current \cpersistenStoreCoordinator
+ * Creates a new \c NSManagedObjectContext with the current \c persistentStoreCoordinator
  *
- * @return A new \cNSManagedObjectContext.
+ * @return A new \c NSManagedObjectContext.
  */
 - (NSManagedObjectContext *)createNewManagedObjectContext;
 

@@ -10,6 +10,7 @@
 @interface FMIStoreTests : XCTestCase
 
 @property (NS_NONATOMIC_IOSONLY) FMIStore *subject;
+@property (NS_NONATOMIC_IOSONLY) NSURL *storeURL;
 
 @end
 
@@ -17,17 +18,12 @@
 
 - (void)setUp {
     [super setUp];
+    NSString *storePath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"Event.sqlite"];
+    self.storeURL = [NSURL fileURLWithPath:storePath];
     self.subject = [[FMIStore alloc] init];
-    self.subject.databaseName = @"Event.sqlite";
-    self.subject.modelName = @"Event";
-    id subjectStub = OCMPartialMock(self.subject);
-    OCMStub([subjectStub bundle]).andReturn([NSBundle bundleForClass:[self class]]);
-}
-
-- (void)testStoreShouldBeConfigured {
-    XCTAssertEqualObjects(self.subject.databaseName, @"Event.sqlite");
-    XCTAssertEqualObjects(self.subject.modelName, @"Event");
-    XCTAssertNotNil(self.subject.managedObjectContext);
+    self.subject.sqliteStoreURL = self.storeURL;
+    NSString *modelPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"Event" ofType:@"momd"];
+    self.subject.managedObjectModelURL = [NSURL fileURLWithPath:modelPath];
 }
 
 - (void)testSharedStoreShouldAlwaysReturnTheSameObject {
@@ -35,14 +31,12 @@
 }
 
 - (void)testStoreShouldConfigurePersistentStore {
-    NSURL *storeURL = [[self.subject applicationDocumentsDirectory] URLByAppendingPathComponent:self.subject.databaseName];
-
-    NSPersistentStore *store = [[self.subject.persistentStoreCoordinator persistentStores] firstObject];
+    NSPersistentStore *store = self.subject.persistentStoreCoordinator.persistentStores.firstObject;
 
     XCTAssertEqual(store.type, NSSQLiteStoreType);
     XCTAssertTrue([store.options isEqualToDictionary:@{NSSQLitePragmasOption : @{@"journal_mode" : @"DELETE"}}]);
-    XCTAssertEqualObjects(store.URL, storeURL);
-    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:storeURL.path]);
+    XCTAssertEqualObjects(store.URL, self.storeURL);
+    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:self.storeURL.path]);
 }
 
 - (void)testStoreShouldConfigureInMemoryStore {
@@ -78,36 +72,12 @@
 }
 
 - (void)testStoreShouldRemovePersistentStoreFile {
-    NSURL *storeURL = [self.subject.applicationDocumentsDirectory URLByAppendingPathComponent:self.subject.databaseName];
     (void) self.subject.managedObjectContext;
-    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:storeURL.path]);
+    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:self.storeURL.path]);
 
     [self.subject resetPersistentStore];
 
-    XCTAssertFalse([[NSFileManager defaultManager] fileExistsAtPath:storeURL.path]);
-}
-
-- (void)testStoreShouldDeleteAllManagedObjects {
-    NSManagedObject *event = [NSEntityDescription insertNewObjectForEntityForName:@"FMEvent" inManagedObjectContext:self.subject.managedObjectContext];
-    NSManagedObject *attendee1 = [NSEntityDescription insertNewObjectForEntityForName:@"FMAttendee" inManagedObjectContext:self.subject.managedObjectContext];
-    NSManagedObject *attendee2 = [NSEntityDescription insertNewObjectForEntityForName:@"FMAttendee" inManagedObjectContext:self.subject.managedObjectContext];
-    [attendee1 setValue:event forKey:@"event"];
-    [attendee2 setValue:event forKey:@"event"];
-    NSFetchRequest *fetchAllEvents = [NSFetchRequest fetchRequestWithEntityName:@"FMEvent"];
-    NSArray *allEvents = [self.subject.managedObjectContext executeFetchRequest:fetchAllEvents error:NULL];
-    XCTAssertEqual(allEvents.count, (NSUInteger) 1);
-
-    NSFetchRequest *fetchAllAttendees = [NSFetchRequest fetchRequestWithEntityName:@"FMAttendee"];
-    NSArray *allAttendees = [self.subject.managedObjectContext executeFetchRequest:fetchAllAttendees error:NULL];
-    XCTAssertEqual(allAttendees.count, (NSUInteger) 2);
-
-    [self.subject deleteAllManagedObjects];
-
-    NSArray *eventsAfterDeletion = [self.subject.managedObjectContext executeFetchRequest:fetchAllEvents error:NULL];
-    XCTAssertEqual(eventsAfterDeletion.count, (NSUInteger) 0);
-
-    NSArray *attendeesAfterDeletion = [self.subject.managedObjectContext executeFetchRequest:fetchAllAttendees error:NULL];
-    XCTAssertEqual(attendeesAfterDeletion.count, (NSUInteger) 0);
+    XCTAssertFalse([[NSFileManager defaultManager] fileExistsAtPath:self.storeURL.path]);
 }
 
 - (void)testItCreatesANewManagedObjectContext {
