@@ -1,6 +1,6 @@
-#import "WKTUUIDHelper.h"
+#import "FMIUUIDHelper.h"
 
-@implementation WKTUUIDHelper
+@implementation FMIUUIDHelper
 
 - (NSString *)generateUUIDString {
     return [NSUUID UUID].UUIDString;
