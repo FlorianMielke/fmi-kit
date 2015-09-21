@@ -649,6 +649,7 @@
 				35913ECB077EF6A87C7F30D4 /* FMIComparatorTests.m */,
 				3591352080CD9B8307DB237B /* FMICSVDeserializerTests.m */,
 				359132D8308F05805BC0AF30 /* FMICSVFieldDeserializerTests.m */,
+				35913323980749D5EBFF588D /* FMIDateHelperGMTTest.m */,
 				35913977818F8153CBD43AEF /* FMIDatePickerControllerTests.m */,
 				359138A25910DADB47454C8A /* FMIDurationFormatterTests.m */,
 				359136EE737E3825A29B4D5E /* FMIDurationTests.m */,
@@ -660,7 +661,6 @@
 				3591352786EAC1FBDA9511D0 /* FMIStoreTests.m */,
 				35913756A4E424F57E9B02A6 /* FMISupportMessageTests.m */,
 				359138C8F98C77D51BFA597F /* FMITableViewTests.m */,
-				35913323980749D5EBFF588D /* FMIDateHelperGMTTest.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
