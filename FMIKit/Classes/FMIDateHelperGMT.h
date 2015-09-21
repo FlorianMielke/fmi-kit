@@ -2,7 +2,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WKTDateHelper : NSObject
+@interface FMIDateHelperGMT : NSObject
 
 @property (readonly, NS_NONATOMIC_IOSONLY) NSCalendar *gmtCalendar;
 

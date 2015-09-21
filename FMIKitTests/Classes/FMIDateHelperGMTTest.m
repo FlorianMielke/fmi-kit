@@ -1,22 +1,22 @@
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
-#import "WKTDateHelper.h"
+#import "FMIDateHelperGMT.h"
 
-@interface WKTDateHelperTest : XCTestCase
+@interface FMIDateHelperGMTTest : XCTestCase
 
-@property (NS_NONATOMIC_IOSONLY) WKTDateHelper *subject;
+@property (NS_NONATOMIC_IOSONLY) FMIDateHelperGMT *subject;
 @property (NS_NONATOMIC_IOSONLY) NSDate *date;
 @property (NS_NONATOMIC_IOSONLY) NSTimeZone *timeZone;
 
 @end
 
-@implementation WKTDateHelperTest
+@implementation FMIDateHelperGMTTest
 
 - (void)setUp {
     [super setUp];
     self.date = [NSDate dateWithTimeIntervalSinceReferenceDate:43200];
     self.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
-    self.subject = [[WKTDateHelper alloc] init];
+    self.subject = [[FMIDateHelperGMT alloc] init];
 }
 
 - (void)testGMTCalendar_hasGMTTimeZone {
