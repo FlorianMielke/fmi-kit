@@ -19,16 +19,12 @@
     self.subject = [[FMIGMTDateHelper alloc] init];
 }
 
-- (void)testGMTCalendar_hasGMTTimeZone {
-    XCTAssertEqual(0, self.subject.gmtCalendar.timeZone.secondsFromGMT);
-}
-
 - (void)testItComputesNoonOfToday {
     NSDateComponents *referenceDateComponents = [[NSCalendar currentCalendar] componentsInTimeZone:self.timeZone fromDate:self.date];
 
     NSDate *noonOfDate = [self.subject dateForNoonOfDateInGMT:self.date];
 
-    NSDateComponents *dateComponents = [self.subject.gmtCalendar componentsInTimeZone:self.timeZone fromDate:noonOfDate];
+    NSDateComponents *dateComponents = [[NSCalendar currentCalendar] componentsInTimeZone:self.timeZone fromDate:noonOfDate];
     XCTAssertEqual(12, dateComponents.hour);
     XCTAssertEqual(0, dateComponents.minute);
     XCTAssertEqual(0, dateComponents.second);
@@ -57,32 +53,6 @@
     XCTAssertEqual(0, dateComponents.second);
 }
 
-- (void)testItTrimsTheSecondsOfADate {
-    NSDateComponents *referenceDateComponents = [[NSCalendar currentCalendar] componentsInTimeZone:self.timeZone fromDate:self.date];
-
-    NSDate *dateWithoutSeconds = [self.subject dateWithoutSecondsFromDate:self.date];
-
-    NSDateComponents *dateComponents = [self.subject.gmtCalendar componentsInTimeZone:self.timeZone fromDate:dateWithoutSeconds];
-    XCTAssertEqual(0, dateComponents.second);
-    XCTAssertEqual(0, dateComponents.nanosecond);
-    XCTAssertEqual(referenceDateComponents.hour, dateComponents.hour);
-    XCTAssertEqual(referenceDateComponents.minute, dateComponents.minute);
-    XCTAssertEqual(referenceDateComponents.year, dateComponents.year);
-    XCTAssertEqual(referenceDateComponents.month, dateComponents.month);
-    XCTAssertEqual(referenceDateComponents.day, dateComponents.day);
-}
-
-- (void)testItProvidesNameOfTheDefaultTimeZone {
-    id mockTimeZone = OCMClassMock([NSTimeZone class]);
-    OCMStub([mockTimeZone defaultTimeZone]).andReturn(mockTimeZone);
-    OCMStub([mockTimeZone name]).andReturn(@"TimeZoneName");
-
-    NSString *timeZoneName = [self.subject nameOfDefaultTimeZone];
-
-    XCTAssertEqualObjects(@"TimeZoneName", timeZoneName);
-    [mockTimeZone stopMocking];
-}
-
 - (void)testItProvidesTheWeekdayForADate {
     NSInteger weekday = [self.subject weekdayOfDateInGMT:[NSDate dateWithTimeIntervalSinceReferenceDate:60]];
     NSInteger monday = 2;
@@ -102,15 +72,6 @@
 
     XCTAssertEqual(1, timeComponents.hour);
     XCTAssertEqual(2, timeComponents.minute);
-}
-
-- (void)testItAddsHourAndMinuteToADateInTimeZone {
-    NSTimeZone *berlinTimeZone = [NSTimeZone timeZoneForSecondsFromGMT:3600];
-    NSDate *noonWithFixedStartTime = [NSDate dateWithTimeIntervalSinceReferenceDate:120];
-
-    NSDate *startTime = [self.subject dateBySettingHour:1 minute:2 ofDate:self.date inTimeZone:berlinTimeZone];
-
-    XCTAssertEqualObjects(noonWithFixedStartTime, startTime);
 }
 
 @end

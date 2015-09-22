@@ -2,9 +2,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FMIUUIDHelper : NSObject
+@interface FMITimeZoneHelper : NSObject
 
-+ (NSString *)generateUUIDString;
++ (NSString *)nameOfDefaultTimeZone;
 
 @end
 

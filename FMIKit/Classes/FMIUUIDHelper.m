@@ -2,7 +2,7 @@
 
 @implementation FMIUUIDHelper
 
-- (NSString *)generateUUIDString {
++ (NSString *)generateUUIDString {
     return [NSUUID UUID].UUIDString;
 }
 
