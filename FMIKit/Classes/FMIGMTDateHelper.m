@@ -1,12 +1,12 @@
-#import "FMIDateHelperGMT.h"
+#import "FMIGMTDateHelper.h"
 
-@interface FMIDateHelperGMT ()
+@interface FMIGMTDateHelper ()
 
 @property (NS_NONATOMIC_IOSONLY) NSCalendar *gmtCalendar;
 
 @end
 
-@implementation FMIDateHelperGMT
+@implementation FMIGMTDateHelper
 
 - (instancetype)init {
     self = [super init];

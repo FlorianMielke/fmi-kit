@@ -40,7 +40,7 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIDurationFormatter.h>
 #import <FMIKit/FMIFieldDescription.h>
 #import <FMIKit/FMIFoundationAdditions.h>
-#import <FMIKit/FMIDateHelperGMT.h>
+#import "FMIGMTDateHelper.h"
 #import <FMIKit/FMIUUIDHelper.h>
 
 #if !TARGET_OS_WATCH
