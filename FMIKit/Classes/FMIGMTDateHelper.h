@@ -4,17 +4,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FMIGMTDateHelper : NSObject
 
-- (NSDate *)dateForNoonOfTodayInGMT;
++ (NSDate *)dateForNoonOfTodayInGMT;
 
-- (NSDate *)dateForNoonOfDateInGMT:(NSDate *)date;
++ (NSDate *)dateForNoonOfDateInGMT:(NSDate *)date;
 
-- (NSDate *)dateForNoonOfDayInGMTFromDate:(NSDate *)date inTimeZone:(NSTimeZone *)timeZone;
++ (NSDate *)dateForNoonOfDayInGMTFromDate:(NSDate *)date inTimeZone:(NSTimeZone *)timeZone;
 
-- (NSInteger)weekdayOfDateInGMT:(NSDate *)date;
++ (NSInteger)weekdayOfDateInGMT:(NSDate *)date;
 
-- (NSUInteger)weekdayIndexOfDateInGMT:(NSDate *)date;
++ (NSUInteger)weekdayIndexOfDateInGMT:(NSDate *)date;
 
-- (NSDateComponents *)timeComponentsOfDateInGMT:(NSDate *)date;
++ (NSDateComponents *)timeComponentsOfDateInGMT:(NSDate *)date;
 
 @end
 

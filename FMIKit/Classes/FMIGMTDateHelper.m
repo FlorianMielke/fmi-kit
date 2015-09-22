@@ -3,11 +3,11 @@
 
 @implementation FMIGMTDateHelper
 
-- (NSDate *)dateForNoonOfTodayInGMT {
++ (NSDate *)dateForNoonOfTodayInGMT {
     return [self dateForNoonOfDateInGMT:[NSDate date]];
 }
 
-- (NSDate *)dateForNoonOfDateInGMT:(NSDate *)date {
++ (NSDate *)dateForNoonOfDateInGMT:(NSDate *)date {
     NSDateComponents *dateComponents = [[NSCalendar sharedGMTCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:date];
     dateComponents.hour = 12;
     dateComponents.minute = 0;
@@ -15,7 +15,7 @@
     return [[NSCalendar sharedGMTCalendar] dateFromComponents:dateComponents];
 }
 
-- (NSDate *)dateForNoonOfDayInGMTFromDate:(NSDate *)date inTimeZone:(NSTimeZone *)timeZone {
++ (NSDate *)dateForNoonOfDayInGMTFromDate:(NSDate *)date inTimeZone:(NSTimeZone *)timeZone {
     NSDateComponents *dayComponents = [[NSCalendar sharedGMTCalendar] componentsInTimeZone:timeZone fromDate:date];
     NSDateComponents *noonOfDateComponents = [[NSDateComponents alloc] init];
     noonOfDateComponents.year = dayComponents.year;
@@ -27,16 +27,16 @@
     return [[NSCalendar sharedGMTCalendar] dateFromComponents:noonOfDateComponents];
 }
 
-- (NSInteger)weekdayOfDateInGMT:(NSDate *)date {
++ (NSInteger)weekdayOfDateInGMT:(NSDate *)date {
     NSDateComponents *dateComponents = [[NSCalendar sharedGMTCalendar] components:NSCalendarUnitWeekday fromDate:date];
     return dateComponents.weekday;
 }
 
-- (NSUInteger)weekdayIndexOfDateInGMT:(NSDate *)date {
++ (NSUInteger)weekdayIndexOfDateInGMT:(NSDate *)date {
     return (NSUInteger) (([self weekdayOfDateInGMT:date] - 1));
 }
 
-- (NSDateComponents *)timeComponentsOfDateInGMT:(NSDate *)date {
++ (NSDateComponents *)timeComponentsOfDateInGMT:(NSDate *)date {
     return [[NSCalendar sharedGMTCalendar] components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:date];
 }
 

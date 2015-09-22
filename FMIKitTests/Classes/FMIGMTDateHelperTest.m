@@ -4,7 +4,6 @@
 
 @interface FMIGMTDateHelperTest : XCTestCase
 
-@property (NS_NONATOMIC_IOSONLY) FMIGMTDateHelper *subject;
 @property (NS_NONATOMIC_IOSONLY) NSDate *date;
 @property (NS_NONATOMIC_IOSONLY) NSTimeZone *timeZone;
 
@@ -16,13 +15,12 @@
     [super setUp];
     self.date = [NSDate dateWithTimeIntervalSinceReferenceDate:43200];
     self.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
-    self.subject = [[FMIGMTDateHelper alloc] init];
 }
 
 - (void)testItComputesNoonOfToday {
     NSDateComponents *referenceDateComponents = [[NSCalendar currentCalendar] componentsInTimeZone:self.timeZone fromDate:self.date];
 
-    NSDate *noonOfDate = [self.subject dateForNoonOfDateInGMT:self.date];
+    NSDate *noonOfDate = [FMIGMTDateHelper dateForNoonOfDateInGMT:self.date];
 
     NSDateComponents *dateComponents = [[NSCalendar currentCalendar] componentsInTimeZone:self.timeZone fromDate:noonOfDate];
     XCTAssertEqual(12, dateComponents.hour);
@@ -42,7 +40,7 @@
     gmtCalendar.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
     NSDate *sampleDate = [calendar dateWithEra:1 year:2015 month:8 day:4 hour:23 minute:55 second:0 nanosecond:0];
 
-    NSDate *noonDate = [self.subject dateForNoonOfDayInGMTFromDate:sampleDate inTimeZone:timeZone];
+    NSDate *noonDate = [FMIGMTDateHelper dateForNoonOfDayInGMTFromDate:sampleDate inTimeZone:timeZone];
 
     NSDateComponents *dateComponents = [gmtCalendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:noonDate];
     XCTAssertEqual(2015, dateComponents.year);
@@ -54,13 +52,13 @@
 }
 
 - (void)testItProvidesTheWeekdayForADate {
-    NSInteger weekday = [self.subject weekdayOfDateInGMT:[NSDate dateWithTimeIntervalSinceReferenceDate:60]];
+    NSInteger weekday = [FMIGMTDateHelper weekdayOfDateInGMT:[NSDate dateWithTimeIntervalSinceReferenceDate:60]];
     NSInteger monday = 2;
     XCTAssertEqual(monday, weekday);
 }
 
 - (void)testItProvidesTheWeekdayIndexForADate {
-    NSInteger weekdayIndex = [self.subject weekdayIndexOfDateInGMT:[NSDate dateWithTimeIntervalSinceReferenceDate:60]];
+    NSInteger weekdayIndex = [FMIGMTDateHelper weekdayIndexOfDateInGMT:[NSDate dateWithTimeIntervalSinceReferenceDate:60]];
     NSInteger monday = 2;
     XCTAssertEqual((monday - 1), weekdayIndex);
 }
@@ -68,7 +66,7 @@
 - (void)testItProvidesTimeComponentsForADate {
     NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:3720];
 
-    NSDateComponents *timeComponents = [self.subject timeComponentsOfDateInGMT:date];
+    NSDateComponents *timeComponents = [FMIGMTDateHelper timeComponentsOfDateInGMT:date];
 
     XCTAssertEqual(1, timeComponents.hour);
     XCTAssertEqual(2, timeComponents.minute);
