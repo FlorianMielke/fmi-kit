@@ -3,6 +3,10 @@
 
 @implementation FMIDateHelper
 
++ (NSDate *)dateForCurrentTime {
+    return [NSDate date];
+}
+
 + (NSDate *)dateForCurrentTimeWithoutSeconds {
     return [FMIDateHelper dateWithoutSecondsFromDate:[NSDate date]];
 }
@@ -19,6 +23,16 @@
     NSDate *newDate = [[NSCalendar sharedCurrentCalendar] dateBySettingHour:hour minute:minute second:0 ofDate:date options:0];
     [NSCalendar sharedCurrentCalendar].timeZone = previousTimeZone;
     return newDate;
+}
+
++ (NSTimeInterval)timeIntervalFromDateToNow:(NSDate *)date {
+    NSDate *now = [FMIDateHelper dateForCurrentTime];
+    return [FMIDateHelper timeIntervalFromDate:date toDate:now];
+}
+
++ (NSTimeInterval)timeIntervalFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate {
+    NSDateComponents *components = [[NSCalendar sharedCurrentCalendar] components:NSCalendarUnitSecond fromDate:fromDate toDate:toDate options:0];
+    return components.second;
 }
 
 @end

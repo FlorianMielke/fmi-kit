@@ -1,4 +1,5 @@
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
 #import "FMIDateHelper.h"
 
 @interface FMIDateHelperTest : XCTestCase
@@ -14,6 +15,13 @@
     [super setUp];
     self.date = [NSDate dateWithTimeIntervalSinceReferenceDate:43200];
     self.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+}
+
+- (void)testItReturnTheCurrentTime {
+    id date = OCMClassMock([NSDate class]);
+    OCMStub([date date]).andReturn([NSDate dateWithTimeIntervalSinceReferenceDate:120]);
+
+    XCTAssertEqualObjects([NSDate dateWithTimeIntervalSinceReferenceDate:120], [FMIDateHelper dateForCurrentTime]);
 }
 
 - (void)testItTrimsTheSecondsOfADate {
@@ -38,6 +46,20 @@
     NSDate *startTime = [FMIDateHelper dateBySettingHour:1 minute:2 ofDate:self.date inTimeZone:berlinTimeZone];
     
     XCTAssertEqualObjects(noonWithFixedStartTime, startTime);
+}
+
+- (void)testItCalculatesTheTimeIntervalFromADateToADate {
+    NSDate *fromDate = [NSDate dateWithTimeIntervalSinceReferenceDate:120];
+    NSDate *toDate = [NSDate dateWithTimeIntervalSinceReferenceDate:240];
+    XCTAssertEqual(120, [FMIDateHelper timeIntervalFromDate:fromDate toDate:toDate]);
+}
+
+- (void)testItCalculatesTheTimeIntervalFromAGivenDateToNow {
+    id date = OCMClassMock([NSDate class]);
+    OCMStub([date date]).andReturn([NSDate dateWithTimeIntervalSinceReferenceDate:360]);
+    NSDate *fromDate = [NSDate dateWithTimeIntervalSinceReferenceDate:120];
+
+    XCTAssertEqual(240, [FMIDateHelper timeIntervalFromDateToNow:fromDate]);
 }
 
 @end

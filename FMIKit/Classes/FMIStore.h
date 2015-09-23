@@ -46,7 +46,7 @@
  *
  * @return A shared instance of the FMIStore class.
  */
-+ (instancetype)sharedStore;
++ (FMIStore *)sharedStore;
 
 /**
  * Attempts the managed object context to perform a save.

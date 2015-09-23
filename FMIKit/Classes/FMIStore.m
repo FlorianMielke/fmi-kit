@@ -18,7 +18,7 @@
 
 @implementation FMIStore
 
-+ (instancetype)sharedStore {
++ (FMIStore *)sharedStore {
     static FMIStore *singleton;
     static dispatch_once_t singletonToken;
     dispatch_once(&singletonToken, ^{
