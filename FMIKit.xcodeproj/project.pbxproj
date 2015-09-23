@@ -85,9 +85,7 @@
 		178CE90D1B3AA3810049AD97 /* FMIMessageMIMETypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4401AFC928C00B96929 /* FMIMessageMIMETypes.plist */; };
 		17A2094D1B3FFF6800327BA7 /* FMIHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 17A2094C1B3FFF6800327BA7 /* FMIHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17E00C711B90307500BA7024 /* FMIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171CB9851AFB63C7002BE185 /* FMIKit.framework */; };
-		17E00C751B90308500BA7024 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E00C721B90308500BA7024 /* Expecta.framework */; };
 		17E00C761B90308500BA7024 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E00C731B90308500BA7024 /* OCMock.framework */; };
-		17E00C771B90308500BA7024 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E00C741B90308500BA7024 /* Specta.framework */; };
 		3591300540DF93992C544CC2 /* NSManagedObjectContext+PersistentStoreAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591396B367717A78D54055C /* NSManagedObjectContext+PersistentStoreAdditionsTests.m */; };
 		3591302DCDE02B7AC1B56000 /* NSIndexPath+Comparing.h in Headers */ = {isa = PBXBuildFile; fileRef = 359131177B57B95A18EF1CA2 /* NSIndexPath+Comparing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913064EBA08797237D0C1D /* FMITimeZoneHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913D5DBA05C5DBFB46A0CF /* FMITimeZoneHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -307,9 +305,7 @@
 		1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TestImagePortraitSmallWidth.jpg; path = Resources/TestImagePortraitSmallWidth.jpg; sourceTree = "<group>"; };
 		1738D44B1AFC948100B96929 /* TestImageSquared.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TestImageSquared.png; path = Resources/TestImageSquared.png; sourceTree = "<group>"; };
 		17A2094C1B3FFF6800327BA7 /* FMIHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMIHelpers.h; path = FMIKit/FMIHelpers.h; sourceTree = "<group>"; };
-		17E00C721B90308500BA7024 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
 		17E00C731B90308500BA7024 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = Carthage/Build/iOS/OCMock.framework; sourceTree = "<group>"; };
-		17E00C741B90308500BA7024 /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/iOS/Specta.framework; sourceTree = "<group>"; };
 		359130097DB873EBBAACF004 /* NSFileManager+DirectoryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+DirectoryAdditions.h"; sourceTree = "<group>"; };
 		35913050E950C02348FF90A6 /* UIImage+Masking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Masking.m"; sourceTree = "<group>"; };
 		3591305AAE54686AE19B8FE2 /* FMISupportMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMISupportMessage.h; sourceTree = "<group>"; };
@@ -511,9 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17E00C711B90307500BA7024 /* FMIKit.framework in Frameworks */,
-				17E00C751B90308500BA7024 /* Expecta.framework in Frameworks */,
 				17E00C761B90308500BA7024 /* OCMock.framework in Frameworks */,
-				17E00C771B90308500BA7024 /* Specta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,9 +633,7 @@
 		17E00C791B9030A000BA7024 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				17E00C721B90308500BA7024 /* Expecta.framework */,
 				17E00C731B90308500BA7024 /* OCMock.framework */,
-				17E00C741B90308500BA7024 /* Specta.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1148,8 +1140,6 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Specta.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Expecta.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/OCMock.framework",
 			);
 			name = Carthage;

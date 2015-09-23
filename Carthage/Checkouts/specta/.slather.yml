@@ -1,4 +1,0 @@
-coverage_service: coveralls
-xcodeproj: Specta/Specta.xcodeproj
-source_directory: Specta/Specta/
-
