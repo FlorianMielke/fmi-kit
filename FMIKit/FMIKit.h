@@ -44,6 +44,7 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIGMTDateHelper.h>
 #import <FMIKit/FMITimeZoneHelper.h>
 #import <FMIKit/FMIUUIDHelper.h>
+#import <FMIKit/FMIFileCoordinator.h>
 
 #if !TARGET_OS_WATCH
 
