@@ -10,7 +10,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)removeFileAtURL:(NSURL *)url withCompletionHandler:(void (^)(NSError *error))completionHandler;
 
-- (void)findFilesOfDirectoryAtURL:(NSURL *)url matchingPredicate:(NSPredicate *)predicate withCompletionHandler:(void (^)(NSArray *files, NSError *error))completionHandler;
+- (void)findFilesOfDirectoryAtURL:(NSURL *)url matchingPredicate:(NSPredicate *)predicate withCompletionHandler:(void (^)(NSArray *urls, NSError *error))completionHandler;
 
 @end
 

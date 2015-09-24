@@ -78,14 +78,14 @@
     }];
 }
 
-- (void)findFilesOfDirectoryAtURL:(NSURL *)url matchingPredicate:(NSPredicate *)predicate withCompletionHandler:(void (^)(NSArray *files, NSError *error))completionHandler {
+- (void)findFilesOfDirectoryAtURL:(NSURL *)url matchingPredicate:(NSPredicate *)predicate withCompletionHandler:(void (^)(NSArray *urls, NSError *error))completionHandler {
     dispatch_queue_t defaultQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
     dispatch_async(defaultQueue, ^{
         NSFileManager *fileManager = [NSFileManager defaultManager];
-        NSArray *files = [fileManager contentsOfDirectoryAtURL:url includingPropertiesForKeys:nil options:NSDirectoryEnumerationSkipsPackageDescendants error:nil];
-        NSArray *matchedFiles = [files filteredArrayUsingPredicate:predicate];
+        NSArray *allURLs = [fileManager contentsOfDirectoryAtURL:url includingPropertiesForKeys:nil options:NSDirectoryEnumerationSkipsPackageDescendants error:nil];
+        NSArray *matchedURLs = [allURLs filteredArrayUsingPredicate:predicate];
         if (completionHandler) {
-            completionHandler(matchedFiles, nil);
+            completionHandler(matchedURLs, nil);
         }
     });
 }
