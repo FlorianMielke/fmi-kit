@@ -4,8 +4,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FMIDateHelper : NSObject
 
-+ (NSDate *)dateForCurrentTime;
-
 + (NSDate *)dateForCurrentTimeWithoutSeconds;
 
 + (NSDate *)dateWithoutSecondsFromDate:(NSDate *)date;

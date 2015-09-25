@@ -17,13 +17,6 @@
     self.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
 }
 
-- (void)testItReturnTheCurrentTime {
-    id date = OCMClassMock([NSDate class]);
-    OCMStub([date date]).andReturn([NSDate dateWithTimeIntervalSinceReferenceDate:120]);
-
-    XCTAssertEqualObjects([NSDate dateWithTimeIntervalSinceReferenceDate:120], [FMIDateHelper dateForCurrentTime]);
-}
-
 - (void)testItTrimsTheSecondsOfADate {
     NSDateComponents *referenceDateComponents = [[NSCalendar currentCalendar] componentsInTimeZone:self.timeZone fromDate:self.date];
 
@@ -56,7 +49,7 @@
 
 - (void)testItCalculatesTheTimeIntervalFromAGivenDateToNow {
     id date = OCMClassMock([NSDate class]);
-    OCMStub([date date]).andReturn([NSDate dateWithTimeIntervalSinceReferenceDate:360]);
+    OCMStub([date date]).andReturn([NSDate dateWithTimeIntervalSinceReferenceDate:362]);
     NSDate *fromDate = [NSDate dateWithTimeIntervalSinceReferenceDate:120];
 
     XCTAssertEqual(240, [FMIDateHelper timeIntervalFromDateToNow:fromDate]);

@@ -3,10 +3,6 @@
 
 @implementation FMIDateHelper
 
-+ (NSDate *)dateForCurrentTime {
-    return [NSDate date];
-}
-
 + (NSDate *)dateForCurrentTimeWithoutSeconds {
     return [FMIDateHelper dateWithoutSecondsFromDate:[NSDate date]];
 }
@@ -26,7 +22,7 @@
 }
 
 + (NSTimeInterval)timeIntervalFromDateToNow:(NSDate *)date {
-    NSDate *now = [FMIDateHelper dateForCurrentTime];
+    NSDate *now = [FMIDateHelper dateForCurrentTimeWithoutSeconds];
     return [FMIDateHelper timeIntervalFromDate:date toDate:now];
 }
 
