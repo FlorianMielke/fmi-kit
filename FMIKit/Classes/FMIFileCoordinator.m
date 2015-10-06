@@ -32,13 +32,13 @@
     }];
 }
 
-- (void)archiveObject:(id <NSSecureCoding>)anObject atURL:(NSURL *)url withCompletionHandler:(void (^)(NSError *))completionHandler {
+- (void)archiveObject:(id <NSSecureCoding>)anObject atURL:(NSURL *)url withCompletionHandler:(void (^)(BOOL success, NSError *error))completionHandler {
     NSFileCoordinator *fileCoordinator = [[NSFileCoordinator alloc] init];
     NSFileAccessIntent *writingIntent = [NSFileAccessIntent writingIntentWithURL:url options:NSFileCoordinatorWritingForReplacing];
     [fileCoordinator coordinateAccessWithIntents:@[writingIntent] queue:self.queue byAccessor:^(NSError *accessError) {
         if (accessError) {
             if (completionHandler) {
-                completionHandler(accessError);
+                completionHandler(NO, accessError);
             }
             return;
         }
@@ -50,7 +50,7 @@
             [[NSFileManager defaultManager] setAttributes:fileAttributes ofItemAtPath:writingIntent.URL.path error:nil];
         }
         if (completionHandler) {
-            completionHandler(error);
+            completionHandler(success, error);
         }
     }];
 }
