@@ -6,7 +6,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSDate *)dateForCurrentTimeWithoutSeconds;
 
-+ (NSDate *)dateForNextMinuteWithoutSeconds;
++ (NSDate *)dateForNextMinuteAndOneSecond;
 
 + (NSDate *)dateWithoutSecondsFromDate:(NSDate *)date;
 

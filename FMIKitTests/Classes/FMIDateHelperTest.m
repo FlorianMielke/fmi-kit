@@ -32,17 +32,15 @@
     XCTAssertEqual(referenceDateComponents.year, dateComponents.year);
 }
 
-- (void)testItTrimsTheSecondsOfTimeForNextMinute {
-    NSDate *now = [NSDate dateWithTimeIntervalSinceReferenceDate:60];
-    id subjectStub = OCMClassMock([FMIDateHelper class]);
-    OCMStub([subjectStub dateForCurrentTimeWithoutSeconds]).andReturn(now);
+- (void)testItCalculatesTheTimeByAddingOneMinuteAnOneSecond {
+    NSDate *now = [NSDate date];
     NSDateComponents *nowDateComponents = [[NSCalendar currentCalendar] componentsInTimeZone:self.timeZone fromDate:now];
 
-    NSDate *nextMinuteWithoutSeconds = [FMIDateHelper dateForNextMinuteWithoutSeconds];
+    NSDate *nextMinuteWithoutSeconds = [FMIDateHelper dateForNextMinuteAndOneSecond];
 
     NSDateComponents *nextMinuteDateComponents = [[NSCalendar currentCalendar] componentsInTimeZone:self.timeZone fromDate:nextMinuteWithoutSeconds];
     XCTAssertEqual(0, nextMinuteDateComponents.nanosecond);
-    XCTAssertEqual(0, nextMinuteDateComponents.second);
+    XCTAssertEqual(1, nextMinuteDateComponents.second);
     XCTAssertEqual(nowDateComponents.minute + 1, nextMinuteDateComponents.minute);
     XCTAssertEqual(nowDateComponents.hour, nextMinuteDateComponents.hour);
     XCTAssertEqual(nowDateComponents.day, nextMinuteDateComponents.day);
