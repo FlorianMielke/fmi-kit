@@ -3,6 +3,11 @@
 
 @implementation FMIDateHelper
 
++ (NSDate *)dateForNextMinuteWithoutSeconds {
+    NSDate *nowWithoutSeconds = [FMIDateHelper dateForCurrentTimeWithoutSeconds];
+    return [[NSCalendar currentCalendar] dateByAddingUnit:NSCalendarUnitMinute value:1 toDate:nowWithoutSeconds options:0];
+}
+
 + (NSDate *)dateForCurrentTimeWithoutSeconds {
     return [FMIDateHelper dateWithoutSecondsFromDate:[NSDate date]];
 }

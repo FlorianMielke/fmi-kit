@@ -23,13 +23,31 @@
     NSDate *dateWithoutSeconds = [FMIDateHelper dateWithoutSecondsFromDate:self.date];
 
     NSDateComponents *dateComponents = [[NSCalendar currentCalendar] componentsInTimeZone:self.timeZone fromDate:dateWithoutSeconds];
-    XCTAssertEqual(0, dateComponents.second);
     XCTAssertEqual(0, dateComponents.nanosecond);
+    XCTAssertEqual(0, dateComponents.second);
     XCTAssertEqual(referenceDateComponents.hour, dateComponents.hour);
     XCTAssertEqual(referenceDateComponents.minute, dateComponents.minute);
-    XCTAssertEqual(referenceDateComponents.year, dateComponents.year);
-    XCTAssertEqual(referenceDateComponents.month, dateComponents.month);
     XCTAssertEqual(referenceDateComponents.day, dateComponents.day);
+    XCTAssertEqual(referenceDateComponents.month, dateComponents.month);
+    XCTAssertEqual(referenceDateComponents.year, dateComponents.year);
+}
+
+- (void)testItTrimsTheSecondsOfTimeForNextMinute {
+    NSDate *now = [NSDate dateWithTimeIntervalSinceReferenceDate:60];
+    id subjectStub = OCMClassMock([FMIDateHelper class]);
+    OCMStub([subjectStub dateForCurrentTimeWithoutSeconds]).andReturn(now);
+    NSDateComponents *nowDateComponents = [[NSCalendar currentCalendar] componentsInTimeZone:self.timeZone fromDate:now];
+
+    NSDate *nextMinuteWithoutSeconds = [FMIDateHelper dateForNextMinuteWithoutSeconds];
+
+    NSDateComponents *nextMinuteDateComponents = [[NSCalendar currentCalendar] componentsInTimeZone:self.timeZone fromDate:nextMinuteWithoutSeconds];
+    XCTAssertEqual(0, nextMinuteDateComponents.nanosecond);
+    XCTAssertEqual(0, nextMinuteDateComponents.second);
+    XCTAssertEqual(nowDateComponents.minute + 1, nextMinuteDateComponents.minute);
+    XCTAssertEqual(nowDateComponents.hour, nextMinuteDateComponents.hour);
+    XCTAssertEqual(nowDateComponents.day, nextMinuteDateComponents.day);
+    XCTAssertEqual(nowDateComponents.month, nextMinuteDateComponents.month);
+    XCTAssertEqual(nowDateComponents.year, nextMinuteDateComponents.year);
 }
 
 - (void)testItAddsHourAndMinuteToADateInTimeZone {

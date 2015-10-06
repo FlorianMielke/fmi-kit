@@ -6,6 +6,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSDate *)dateForCurrentTimeWithoutSeconds;
 
++ (NSDate *)dateForNextMinuteWithoutSeconds;
+
 + (NSDate *)dateWithoutSecondsFromDate:(NSDate *)date;
 
 + (NSDate *)dateBySettingHour:(NSInteger)hour minute:(NSInteger)minute ofDate:(NSDate *)date inTimeZone:(NSTimeZone *)timeZone;
