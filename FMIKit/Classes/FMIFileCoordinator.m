@@ -55,14 +55,14 @@
     }];
 }
 
-- (void)removeFileAtURL:(NSURL *)url withCompletionHandler:(void (^)(NSError *error))completionHandler {
+- (void)removeFileAtURL:(NSURL *)url withCompletionHandler:(void (^)(BOOL success, NSError *error))completionHandler {
     NSFileCoordinator *fileCoordinator = [[NSFileCoordinator alloc] init];
     BOOL successfulSecurityScopedResourceAccess = [url startAccessingSecurityScopedResource];
     NSFileAccessIntent *writingIntent = [NSFileAccessIntent writingIntentWithURL:url options:NSFileCoordinatorWritingForDeleting];
     [fileCoordinator coordinateAccessWithIntents:@[writingIntent] queue:self.queue byAccessor:^(NSError *accessError) {
         if (accessError) {
             if (completionHandler) {
-                completionHandler(accessError);
+                completionHandler(NO, accessError);
             }
             return;
         }
@@ -73,12 +73,12 @@
             [url stopAccessingSecurityScopedResource];
         }
         if (completionHandler) {
-            completionHandler(error);
+            completionHandler(YES, error);
         }
     }];
 }
 
-- (void)copyFromURL:(NSURL *)fromURL toURL:(NSURL *)toURL {
+- (void)copyFromURL:(NSURL *)fromURL toURL:(NSURL *)toURL withCompletionHandler:(void (^)(BOOL success, NSError *error))completionHandler {
     NSFileCoordinator *fileCoordinator = [[NSFileCoordinator alloc] init];
     __block NSError *error;
     BOOL successfulSecurityScopedResourceAccess = [fromURL startAccessingSecurityScopedResource];
@@ -89,14 +89,22 @@
     if (!success) {
         NSLog(@"Couldn't create temp file from: %@ at: %@ error: %@.", fromURL.absoluteString, tempURL.absoluteString, error.localizedDescription);
         NSLog(@"Error\nCode: %ld\nDomain: %@\nDescription: %@\nReason: %@\nUser Info: %@\n", (long) error.code, error.domain, error.localizedDescription, error.localizedFailureReason, error.userInfo);
-        return;
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            if (completionHandler) {
+                completionHandler(NO, error);
+            }
+        }];
     }
     NSFileAccessIntent *movingIntent = [NSFileAccessIntent writingIntentWithURL:tempURL options:NSFileCoordinatorWritingForMoving];
     NSFileAccessIntent *mergingIntent = [NSFileAccessIntent writingIntentWithURL:toURL options:NSFileCoordinatorWritingForMerging];
     [fileCoordinator coordinateAccessWithIntents:@[movingIntent, mergingIntent] queue:self.queue byAccessor:^(NSError *accessError) {
         if (accessError) {
             NSLog(@"Couldn't move file: %@ to: %@ error: %@.", fromURL.absoluteString, toURL.absoluteString, accessError.localizedDescription);
-            return;
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                if (completionHandler) {
+                    completionHandler(NO, accessError);
+                }
+            }];
         }
         BOOL success = NO;
         NSFileManager *fileManager = [[NSFileManager alloc] init];
@@ -113,6 +121,11 @@
             NSLog(@"Error\nCode: %ld\nDomain: %@\nDescription: %@\nReason: %@\nUser Info: %@\n", (long) error.code, error.domain, error.localizedDescription, error.localizedFailureReason, error.userInfo);
         }
         [fileManager removeItemAtURL:tempDirectory error:&error];
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            if (completionHandler) {
+                completionHandler(success, error);
+            }
+        }];
     }];
 }
 
