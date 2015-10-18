@@ -93,6 +93,7 @@
 		17E00C761B90308500BA7024 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E00C731B90308500BA7024 /* OCMock.framework */; };
 		3591300540DF93992C544CC2 /* NSManagedObjectContext+PersistentStoreAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591396B367717A78D54055C /* NSManagedObjectContext+PersistentStoreAdditionsTests.m */; };
 		3591301093173E26E35BBDD2 /* FMIFileCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913B52C87B95BA45423514 /* FMIFileCoordinator.m */; };
+		35913011A6148CBD10DDAD5F /* MMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 359132E3B26463D1B3DD0A5C /* MMActionSheet.m */; };
 		3591302DCDE02B7AC1B56000 /* NSIndexPath+Comparing.h in Headers */ = {isa = PBXBuildFile; fileRef = 359131177B57B95A18EF1CA2 /* NSIndexPath+Comparing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913064EBA08797237D0C1D /* FMITimeZoneHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913D5DBA05C5DBFB46A0CF /* FMITimeZoneHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913065659DD458EFDD4F72 /* NSString+FMIDrawingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913B56CBF6909DEA0E4D3D /* NSString+FMIDrawingTests.m */; };
@@ -279,6 +280,7 @@
 		35913F780C003FBB71CB63ED /* FMIEventPaserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913F35C088CA3C7310607A /* FMIEventPaserTests.m */; };
 		35913F7E1A762693260E1DF8 /* FMIStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913AC8D4130B6F05859A0A /* FMIStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913F80E54C288DCAD25424 /* NSString+CSV.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913A674A6CEBCA943F1D95 /* NSString+CSV.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35913F8237EED944593300F5 /* MMActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 359131A581CF7367DB294E18 /* MMActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913F8D19025A3900CB0C79 /* UIScrollView+Scrolling.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913E1F5B69C4F1A82F7F00 /* UIScrollView+Scrolling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913F92D3B8206DDC0A7006 /* NSDecimalNumber+Calulations.h in Headers */ = {isa = PBXBuildFile; fileRef = 3591375DD220C864C9443707 /* NSDecimalNumber+Calulations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913F9DAB35A556A7A561C8 /* NSIndexSet+Initialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 3591317729663012AFCFCAAC /* NSIndexSet+Initialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -341,6 +343,7 @@
 		3591317729663012AFCFCAAC /* NSIndexSet+Initialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet+Initialization.h"; sourceTree = "<group>"; };
 		359131798DBDC69F0912B52C /* FMINonAminatedPushSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMINonAminatedPushSegue.m; sourceTree = "<group>"; };
 		3591317FF4F801AE62C69CE9 /* NSString+FMIDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FMIDrawing.h"; sourceTree = "<group>"; };
+		359131A581CF7367DB294E18 /* MMActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMActionSheet.h; sourceTree = "<group>"; };
 		359131BE67B5368CE46B8F01 /* NSIndexPath+Comparing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+Comparing.m"; sourceTree = "<group>"; };
 		359131CE69A58ECD566E732B /* FMIFoundationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIFoundationAdditions.m; sourceTree = "<group>"; };
 		359131D778AF50FD0DE7B87A /* NSDecimalNumber+CalculationsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+CalculationsTests.m"; sourceTree = "<group>"; };
@@ -356,6 +359,7 @@
 		359132B9E6717F09DA408DE0 /* NSString+FileNameTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FileNameTests.m"; sourceTree = "<group>"; };
 		359132BE65AFD27D85C2573A /* FMINestedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMINestedTableView.h; sourceTree = "<group>"; };
 		359132D8308F05805BC0AF30 /* FMICSVFieldDeserializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMICSVFieldDeserializerTests.m; sourceTree = "<group>"; };
+		359132E3B26463D1B3DD0A5C /* MMActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMActionSheet.m; sourceTree = "<group>"; };
 		359132EB88FEA292359F3987 /* FMIMessageMIMETypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIMessageMIMETypes.m; sourceTree = "<group>"; };
 		359132EDC026CA9160C74ECB /* FakeCSVFileDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeCSVFileDescription.h; sourceTree = "<group>"; };
 		35913306DF44825231BF7532 /* FakeTextViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeTextViewDelegate.m; sourceTree = "<group>"; };
@@ -765,6 +769,8 @@
 				359131425AF3EF48E3CEA873 /* FMITimeZoneHelper.m */,
 				359132AD551572D200148327 /* FMIUUIDHelper.h */,
 				35913E52CB287AC32FDA17D2 /* FMIUUIDHelper.m */,
+				359131A581CF7367DB294E18 /* MMActionSheet.h */,
+				359132E3B26463D1B3DD0A5C /* MMActionSheet.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -993,6 +999,7 @@
 				359137B8229495F787046069 /* FMIFileCoordinator.h in Headers */,
 				3591321AB4F3EEEC5CC453E6 /* FMIKitConstants.h in Headers */,
 				359133715967DC8EF2C071E2 /* NSBundle+FMIKit.h in Headers */,
+				35913F8237EED944593300F5 /* MMActionSheet.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1266,6 +1273,7 @@
 				3591306C93115D58EF6F9686 /* FMITimeZoneHelper.m in Sources */,
 				3591301093173E26E35BBDD2 /* FMIFileCoordinator.m in Sources */,
 				3591347CB57645F10EBDC82C /* NSBundle+FMIKit.m in Sources */,
+				35913011A6148CBD10DDAD5F /* MMActionSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

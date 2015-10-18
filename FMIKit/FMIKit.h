@@ -79,5 +79,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIStore.h>
 #import <FMIKit/FMISupportMessage.h>
 #import <FMIKit/FMITableView.h>
+#import <FMIKit/MMActionSheet.h>
 
 #endif
