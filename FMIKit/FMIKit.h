@@ -64,6 +64,7 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/NSManagedObjectContext+PersistentStoreAdditions.h>
 #import <FMIKit/NSPersistentStoreCoordinator+Validation.h>
 
+#import <FMIKit/FMIActionSheet.h>
 #import <FMIKit/FMIAlertController.h>
 #import <FMIKit/FMIAlertView.h>
 #import <FMIKit/FMIKitFactory.h>
@@ -79,6 +80,5 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIStore.h>
 #import <FMIKit/FMISupportMessage.h>
 #import <FMIKit/FMITableView.h>
-#import <FMIKit/MMActionSheet.h>
 
 #endif

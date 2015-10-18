@@ -1,6 +1,6 @@
-#import "MMActionSheet.h"
+#import "FMIActionSheet.h"
 
-@implementation MMActionSheet
+@implementation FMIActionSheet
 
 - (void)presentWithTitle:(NSString *)title style:(UIAlertActionStyle)style fromBarButtonItem:(UIBarButtonItem *)fromBarButtonItem popoverArrowDirectionDown:(UIPopoverArrowDirection)popoverArrowDirection viewController:(UIViewController *)viewController actionHandler:(void (^)(UIAlertAction *))actionHandler {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
