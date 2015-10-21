@@ -3,6 +3,10 @@
 
 @implementation FMIGMTDateHelper
 
++ (BOOL)isDateInToday:(NSDate *)date {
+    return [[NSCalendar sharedGMTCalendar] isDateInToday:date];
+}
+
 + (NSDate *)dateForNoonOfTodayInGMT {
     return [self dateForNoonOfDateInGMT:[NSDate date]];
 }

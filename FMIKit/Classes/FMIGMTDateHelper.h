@@ -4,6 +4,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FMIGMTDateHelper : NSObject
 
++ (BOOL)isDateInToday:(NSDate *)date;
+
 + (NSDate *)dateForNoonOfTodayInGMT;
 
 + (NSDate *)dateForNoonOfDateInGMT:(NSDate *)date;
