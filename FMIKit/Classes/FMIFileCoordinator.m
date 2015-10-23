@@ -89,22 +89,20 @@
     if (!success) {
         NSLog(@"Couldn't create temp file from: %@ at: %@ error: %@.", fromURL.absoluteString, tempURL.absoluteString, error.localizedDescription);
         NSLog(@"Error\nCode: %ld\nDomain: %@\nDescription: %@\nReason: %@\nUser Info: %@\n", (long) error.code, error.domain, error.localizedDescription, error.localizedFailureReason, error.userInfo);
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            if (completionHandler) {
-                completionHandler(NO, error);
-            }
-        }];
+        if (completionHandler) {
+            completionHandler(NO, error);
+        }
+        return;
     }
     NSFileAccessIntent *movingIntent = [NSFileAccessIntent writingIntentWithURL:tempURL options:NSFileCoordinatorWritingForMoving];
     NSFileAccessIntent *mergingIntent = [NSFileAccessIntent writingIntentWithURL:toURL options:NSFileCoordinatorWritingForMerging];
     [fileCoordinator coordinateAccessWithIntents:@[movingIntent, mergingIntent] queue:self.queue byAccessor:^(NSError *accessError) {
         if (accessError) {
             NSLog(@"Couldn't move file: %@ to: %@ error: %@.", fromURL.absoluteString, toURL.absoluteString, accessError.localizedDescription);
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                if (completionHandler) {
-                    completionHandler(NO, accessError);
-                }
-            }];
+            if (completionHandler) {
+                completionHandler(NO, accessError);
+            }
+            return;
         }
         BOOL success = NO;
         NSFileManager *fileManager = [[NSFileManager alloc] init];
@@ -121,11 +119,9 @@
             NSLog(@"Error\nCode: %ld\nDomain: %@\nDescription: %@\nReason: %@\nUser Info: %@\n", (long) error.code, error.domain, error.localizedDescription, error.localizedFailureReason, error.userInfo);
         }
         [fileManager removeItemAtURL:tempDirectory error:&error];
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            if (completionHandler) {
-                completionHandler(success, error);
-            }
-        }];
+        if (completionHandler) {
+            completionHandler(success, error);
+        }
     }];
 }
 
