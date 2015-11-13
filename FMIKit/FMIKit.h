@@ -55,11 +55,13 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/UIImage+Masking.h>
 #import <FMIKit/UIImage+Resizing.h>
 #import <FMIKit/UIImage+Scaling.h>
+#import <FMIKit/UILabel+Animating.h>
 #import <FMIKit/UILabel+Sizing.h>
 #import <FMIKit/UILabel+StateHandling.h>
 #import <FMIKit/UITableView+IndexPath.h>
 #import <FMIKit/UITableView+Selection.h>
 #import <FMIKit/UIScrollView+Scrolling.h>
+#import <FMIKit/UIView+I7ShakeAnimation.h>
 #import <FMIKit/NSIndexPath+Comparing.h>
 #import <FMIKit/NSManagedObjectContext+PersistentStoreAdditions.h>
 #import <FMIKit/NSPersistentStoreCoordinator+Validation.h>
