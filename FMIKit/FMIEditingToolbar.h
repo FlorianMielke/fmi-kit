@@ -46,7 +46,7 @@
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated;
 
 /**
- * Prepares the toolbar's items. Subclasses should overwrite this method to prepare it's defaultsItems and editingItems.
+ * Prepares the toolbar's items. Subclasses should overwrite this method to reset it's defaultsItems and editingItems.
  */
 - (void)prepareItems;
 
