@@ -18,6 +18,8 @@
 		1738D4521AFC948100B96929 /* TestImagePortraitSmallWidth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */; };
 		1738D4531AFC948100B96929 /* TestImageSquared.png in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44B1AFC948100B96929 /* TestImageSquared.png */; };
 		178CE90D1B3AA3810049AD97 /* FMIMessageMIMETypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4401AFC928C00B96929 /* FMIMessageMIMETypes.plist */; };
+		17B39B2A1C05FF580012BB49 /* FMIBorderedButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 17B39B281C05FF580012BB49 /* FMIBorderedButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17B39B2B1C05FF580012BB49 /* FMIBorderedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B39B291C05FF580012BB49 /* FMIBorderedButton.m */; };
 		17CBD6101BCC3A9000681FD9 /* FMIKitLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17CBD6121BCC3A9000681FD9 /* FMIKitLocalizable.strings */; };
 		17E00C711B90307500BA7024 /* FMIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171CB9851AFB63C7002BE185 /* FMIKit.framework */; };
 		17E00C761B90308500BA7024 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E00C731B90308500BA7024 /* OCMock.framework */; };
@@ -320,6 +322,8 @@
 		1738D4491AFC948100B96929 /* TestImagePortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TestImagePortrait.png; path = Resources/TestImagePortrait.png; sourceTree = "<group>"; };
 		1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TestImagePortraitSmallWidth.jpg; path = Resources/TestImagePortraitSmallWidth.jpg; sourceTree = "<group>"; };
 		1738D44B1AFC948100B96929 /* TestImageSquared.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TestImageSquared.png; path = Resources/TestImageSquared.png; sourceTree = "<group>"; };
+		17B39B281C05FF580012BB49 /* FMIBorderedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIBorderedButton.h; sourceTree = "<group>"; };
+		17B39B291C05FF580012BB49 /* FMIBorderedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIBorderedButton.m; sourceTree = "<group>"; };
 		17CBD6111BCC3A9000681FD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FMIKitLocalizable.strings; sourceTree = "<group>"; };
 		17CBD6131BCC3A9200681FD9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/FMIKitLocalizable.strings; sourceTree = "<group>"; };
 		17CBD6141BCC3A9300681FD9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/FMIKitLocalizable.strings; sourceTree = "<group>"; };
@@ -807,6 +811,8 @@
 		35913E3154B3A61B735D302A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				17B39B281C05FF580012BB49 /* FMIBorderedButton.h */,
+				17B39B291C05FF580012BB49 /* FMIBorderedButton.m */,
 				359137E38C993AFFB4D560BE /* FMIAcceptedCell.h */,
 				359138E5F329478811A92C93 /* FMIAcceptedCell.m */,
 				359139FBFCB67B82666068B7 /* FMIAccteptedCellTests.m */,
@@ -988,6 +994,7 @@
 				35913634C0E38984501F2CEF /* UIImage+Scaling.h in Headers */,
 				3591386E42C2F3262BA510B4 /* NSString+CSV.h in Headers */,
 				359134342E1E01BD305BD428 /* UILabel+Animating.h in Headers */,
+				17B39B2A1C05FF580012BB49 /* FMIBorderedButton.h in Headers */,
 				35913F79C2A6166935ABCBAF /* UIView+I7ShakeAnimation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1261,6 +1268,7 @@
 				35913D3AE468362FEAA3FB36 /* NSMutableDictionary+IndexPath.m in Sources */,
 				3591373F2386830FC3A7077D /* NSCalendar+Calculations.m in Sources */,
 				3591341FFC9F810113531CDA /* NSIndexPath+Comparing.m in Sources */,
+				17B39B2B1C05FF580012BB49 /* FMIBorderedButton.m in Sources */,
 				359136FDA73C0D620C0B6A1F /* NSUndoManager+Grouping.m in Sources */,
 				35913B8D4E8D93139118198F /* NSManagedObjectContext+PersistentStoreAdditions.m in Sources */,
 				359133EDA4E2DD229AB4CB8A /* UILabel+Animating.m in Sources */,
