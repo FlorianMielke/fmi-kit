@@ -8,9 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-
 @class FMIDatePickerController;
-
 
 /**
  *	The delegate of a FMIDatePickerController object must adopt the FMIDatePickerControllerDelegate protocol.
@@ -23,7 +21,6 @@
  *	@param	date	The new date of the date picker.
  */
 - (void)datePickerController:(FMIDatePickerController *)controller didChangeDate:(NSDate *)date;
-
 
 @optional
 
@@ -60,8 +57,6 @@
 
 @end
 
-
-
 /**
  *	An instance of FMIDatePickerController handles the appearancs of an inline UIDatePicker within an UITableView.
  */
@@ -97,6 +92,11 @@
  *	A floating-point value that specifies the height (in points) that row should be.
  */
 @property (readonly, NS_NONATOMIC_IOSONLY) CGFloat estimatedHeightForDatePickerRow;
+
+/**
+ *	Unavailable. Please use initWithTableView:forIndexPath:.
+ */
+- (instancetype)init NS_UNAVAILABLE;
 
 /**
  *	Creates and returns a new FMIDatePickerController instance.
