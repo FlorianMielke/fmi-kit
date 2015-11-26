@@ -83,12 +83,16 @@
         [self loadDatePickerIfNeeded];
         UITableViewCell *datePickerCell = [self.tableView cellForRowAtIndexPath:self.indexPath];
         [datePickerCell.contentView addSubview:self.datePicker];
+        NSLayoutConstraint *rightConstraint = [NSLayoutConstraint constraintWithItem:self.datePicker attribute:NSLayoutAttributeRight relatedBy:0 toItem:datePickerCell.contentView attribute:NSLayoutAttributeRight multiplier:1.0 constant:0.0];
+        NSLayoutConstraint *leftConstraint = [NSLayoutConstraint constraintWithItem:self.datePicker attribute:NSLayoutAttributeLeft relatedBy:0 toItem:datePickerCell.contentView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0];
+        [datePickerCell.contentView addConstraints:@[leftConstraint, rightConstraint]];
     }
 }
 
 - (void)loadDatePickerIfNeeded {
     if (!self.datePicker) {
         UIDatePicker *datePicker = [[UIDatePicker alloc] init];
+        datePicker.translatesAutoresizingMaskIntoConstraints = NO;
         [self updateDatePicker:datePicker withDatePickerMode:self.datePickerModeForDatePicker];
         [self updateDatePicker:datePicker withTimeZone:self.timeZoneForDatePicker];
         [self updateDatePicker:datePicker withDate:self.dateForDatePicker];
