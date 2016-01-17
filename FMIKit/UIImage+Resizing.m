@@ -15,7 +15,7 @@
 {
     CGSize newSize = [self proportionalSizeForSize:size];
 
-    UIGraphicsBeginImageContextWithOptions(newSize, NO, [[UIScreen mainScreen] scale]);
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, [UIScreen mainScreen].scale);
     [self drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();

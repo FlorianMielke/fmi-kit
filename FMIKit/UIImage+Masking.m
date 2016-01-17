@@ -14,7 +14,7 @@
 {
     CGImageRef mask = [self newImageMaskFromImage:maskImage];
     CGImageRef maskedImageRef = CGImageCreateWithMask([self CGImage], mask);
-    UIImage *maskedImage = [UIImage imageWithCGImage:maskedImageRef scale:[[UIScreen mainScreen] scale] orientation:UIImageOrientationUp];
+    UIImage *maskedImage = [UIImage imageWithCGImage:maskedImageRef scale:[UIScreen mainScreen].scale orientation:self.imageOrientation];
     
     CGImageRelease(mask);  
     CGImageRelease(maskedImageRef);  

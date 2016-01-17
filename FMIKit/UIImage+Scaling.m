@@ -20,7 +20,7 @@
     CGFloat newWidth = oldWidth * scaleFactor;
     CGSize newSize = CGSizeMake(newWidth, newHeight);
 
-    if ([[UIScreen mainScreen] scale] == 2.0) {
+    if ([UIScreen mainScreen].scale == 2.0) {
 		UIGraphicsBeginImageContextWithOptions(newSize, NO, 2.0);
 	} else {
 		UIGraphicsBeginImageContext(newSize);
