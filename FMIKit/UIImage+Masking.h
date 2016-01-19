@@ -7,7 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 @interface UIImage (Masking)
 
 - (UIImage *)imageMaskedWithImage:(UIImage *)maskImage;

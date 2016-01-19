@@ -19,4 +19,6 @@
  */
 - (UIImage *)scaledImageToFitSize:(CGSize)size;
 
+- (UIImage *)cropImageToSize:(CGSize)size;
+
 @end

@@ -48,6 +48,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (UITableViewCell *)configuredCellForRowAtIndexPath:(NSIndexPath *)indexPath;
 
+- (NSIndexPath *)adjustedIndexPathForIndexPath:(NSIndexPath *)indexPath;
+
 - (BOOL)isEditableRowAtIndexPath:(NSIndexPath *)indexPath;
 
 - (BOOL)isNestedRowAtIndexPath:(NSIndexPath *)indexPath;

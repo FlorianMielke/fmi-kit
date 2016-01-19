@@ -10,30 +10,24 @@
 @implementation UIImage (Masking)
 
 
-- (UIImage *)imageMaskedWithImage:(UIImage *)maskImage
-{
+- (UIImage *)imageMaskedWithImage:(UIImage *)maskImage {
     CGImageRef mask = [self newImageMaskFromImage:maskImage];
     CGImageRef maskedImageRef = CGImageCreateWithMask([self CGImage], mask);
     UIImage *maskedImage = [UIImage imageWithCGImage:maskedImageRef scale:[UIScreen mainScreen].scale orientation:self.imageOrientation];
-    
     CGImageRelease(mask);  
-    CGImageRelease(maskedImageRef);  
-    
+    CGImageRelease(maskedImageRef);
     return maskedImage;  
 }
 
-
-- (CGImageRef)newImageMaskFromImage:(UIImage *)maskImage
-{
+- (CGImageRef)newImageMaskFromImage:(UIImage *)maskImage {
     CGImageRef maskRef = maskImage.CGImage;
     CGImageRef mask = CGImageMaskCreate(CGImageGetWidth(maskRef),
                                         CGImageGetHeight(maskRef),
                                         CGImageGetBitsPerComponent(maskRef),
                                         CGImageGetBitsPerPixel(maskRef),
                                         CGImageGetBytesPerRow(maskRef),
-                                        CGImageGetDataProvider(maskRef), NULL, false);
+                                        CGImageGetDataProvider(maskRef), NULL, YES);
     return mask;
 }
-
 
 @end

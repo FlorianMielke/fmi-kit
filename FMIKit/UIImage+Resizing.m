@@ -7,35 +7,36 @@
 
 #import "UIImage+Resizing.h"
 
-
 @implementation UIImage (Resizing)
 
-
-- (UIImage *)scaledImageToFitSize:(CGSize)size
-{
+- (UIImage *)scaledImageToFitSize:(CGSize)size {
     CGSize newSize = [self proportionalSizeForSize:size];
-
     UIGraphicsBeginImageContextWithOptions(newSize, NO, [UIScreen mainScreen].scale);
     [self drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
     return newImage;
 }
 
-
-- (CGSize)proportionalSizeForSize:(CGSize)size
-{
+- (CGSize)proportionalSizeForSize:(CGSize)size {
     float hfactor = self.size.width / size.width;
     float vfactor = self.size.height / size.height;
-    
     float factor = fmax(hfactor, vfactor);
-    
     float newWidth = roundf(self.size.width / factor);
     float newHeight = roundf(self.size.height / factor);
-    
     return CGSizeMake(newWidth, newHeight);
 }
 
+- (UIImage *)cropImageToSize:(CGSize)size {
+    if ([UIScreen mainScreen].scale == 2.0) {
+        UIGraphicsBeginImageContextWithOptions(size, NO, 2.0);
+    } else {
+        UIGraphicsBeginImageContext(size);
+    }
+    [self drawInRect:CGRectMake(0.0, 0.0, size.width, size.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
 
 @end

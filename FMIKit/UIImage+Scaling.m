@@ -10,27 +10,20 @@
 
 @implementation UIImage (Scaling)
 
-
-+ (UIImage *)imageWithImage:(UIImage *)sourceImage scaledToWidth:(CGFloat)width
-{
++ (UIImage *)imageWithImage:(UIImage *)sourceImage scaledToWidth:(CGFloat)width {
     CGFloat oldWidth = [sourceImage size].width;
     CGFloat scaleFactor = width / oldWidth;
-
     CGFloat newHeight = [sourceImage size].height * scaleFactor;
     CGFloat newWidth = oldWidth * scaleFactor;
     CGSize newSize = CGSizeMake(newWidth, newHeight);
-
     if ([UIScreen mainScreen].scale == 2.0) {
 		UIGraphicsBeginImageContextWithOptions(newSize, NO, 2.0);
 	} else {
 		UIGraphicsBeginImageContext(newSize);
 	}
-    
     [sourceImage drawInRect:CGRectMake(0.0, 0.0, newWidth, newHeight)];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    
     UIGraphicsEndImageContext();
-    
     return newImage;
 }
 
