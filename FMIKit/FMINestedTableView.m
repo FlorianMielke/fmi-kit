@@ -86,7 +86,9 @@
 }
 
 - (void)hideNestedRows {
-    [self hideNestedRowsForRowAtIndexPath:self.indexPathForRootRow];
+    if (self.showsNestedRows) {
+        [self hideNestedRowsForRowAtIndexPath:self.indexPathForRootRow];
+    }
 }
 
 - (void)toggleNestedRowsForRowAtIndexPath:(NSIndexPath *)indexPath {

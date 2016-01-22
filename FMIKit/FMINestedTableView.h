@@ -50,6 +50,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSIndexPath *)adjustedIndexPathForIndexPath:(NSIndexPath *)indexPath;
 
+- (BOOL)showsNestedRows;
+
 - (BOOL)isEditableRowAtIndexPath:(NSIndexPath *)indexPath;
 
 - (BOOL)isNestedRowAtIndexPath:(NSIndexPath *)indexPath;
