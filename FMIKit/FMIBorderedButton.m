@@ -30,7 +30,7 @@
 - (void)tintColorDidChange {
     UIColor *titleColor = (self.tintAdjustmentMode == UIViewTintAdjustmentModeNormal) ? self.tintColor : [UIColor lightGrayColor];
     [self setTitleColor:titleColor forState:UIControlStateNormal];
-    self.layer.borderColor = (self.tintAdjustmentMode == UIViewTintAdjustmentModeNormal) ? self.tintColor.CGColor : [UIColor lightGrayColor].CGColor;
+    self.layer.borderColor = (self.isEnabled && self.tintAdjustmentMode == UIViewTintAdjustmentModeNormal) ? self.tintColor.CGColor : [UIColor lightGrayColor].CGColor;
 }
 
 @end
