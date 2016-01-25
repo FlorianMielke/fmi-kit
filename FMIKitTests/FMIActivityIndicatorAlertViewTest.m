@@ -49,7 +49,7 @@
 
 - (void)testSetTitle_setsAlertControllerTitle {
     self.alertView.title = @"Title";
-    OCMVerify([self.alertControllerMock setName:@"Title"]);
+    OCMVerify([self.alertControllerMock setTitle:@"Title"]);
 }
 
 - (void)testPresentAlertViewWithoutViewController_fails {
