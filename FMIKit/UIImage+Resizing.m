@@ -28,11 +28,7 @@
 }
 
 - (UIImage *)cropImageToSize:(CGSize)size {
-    if ([UIScreen mainScreen].scale == 2.0) {
-        UIGraphicsBeginImageContextWithOptions(size, NO, 2.0);
-    } else {
-        UIGraphicsBeginImageContext(size);
-    }
+    UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
     [self drawInRect:CGRectMake(0.0, 0.0, size.width, size.height)];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();

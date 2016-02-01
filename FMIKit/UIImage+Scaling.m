@@ -16,11 +16,7 @@
     CGFloat newHeight = [sourceImage size].height * scaleFactor;
     CGFloat newWidth = oldWidth * scaleFactor;
     CGSize newSize = CGSizeMake(newWidth, newHeight);
-    if ([UIScreen mainScreen].scale == 2.0) {
-		UIGraphicsBeginImageContextWithOptions(newSize, NO, 2.0);
-	} else {
-		UIGraphicsBeginImageContext(newSize);
-	}
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, [UIScreen mainScreen].scale);
     [sourceImage drawInRect:CGRectMake(0.0, 0.0, newWidth, newHeight)];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
