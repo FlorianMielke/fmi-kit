@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2004-2015 Erik Doernenburg and contributors
+ *  Copyright (c) 2004-2016 Erik Doernenburg and contributors
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use these files except in compliance with the License. You may obtain
@@ -21,10 +21,6 @@
 // --------------------------------------------------------------------------------------
 //	Helper classes and protocols for testing
 // --------------------------------------------------------------------------------------
-
-@interface OCMBoxedReturnValueProvider (Private)
-- (BOOL)isMethodReturnType:(const char *)returnType compatibleWithValueType:(const char *)valueType;
-@end
 
 @interface TestClassWithSelectorMethod : NSObject
 
@@ -94,6 +90,41 @@ TestOpaque myOpaque;
 @end
 
 
+@interface TestClassWithBlockArgMethod : NSObject
+
+- (void)doStuffWithBlock:(void (^)())block andString:(id)aString;
+
+@end
+
+@implementation TestClassWithBlockArgMethod
+
+- (void)doStuffWithBlock:(void (^)())block andString:(id)aString;
+{
+    // stubbed out anyway
+}
+
+@end
+
+
+@interface TestClassWithByReferenceMethod : NSObject
+
+- (void)returnValuesInObjectPointer:(id *)objectPointer booleanPointer:(BOOL *)booleanPointer;
+
+@end
+
+@implementation TestClassWithByReferenceMethod
+
+- (void)returnValuesInObjectPointer:(id *)objectPointer booleanPointer:(BOOL *)booleanPointer
+{
+    if(objectPointer != NULL)
+        *objectPointer = [[NSObject alloc] init];
+    if(booleanPointer != NULL)
+        *booleanPointer = NO;
+}
+
+@end
+
+
 @interface NotificationRecorderForTesting : NSObject
 {
 	@public
@@ -115,6 +146,7 @@ TestOpaque myOpaque;
 }
 
 @end
+
 
 static NSString *TestNotification = @"TestNotification";
 
@@ -190,8 +222,8 @@ static NSString *TestNotification = @"TestNotification";
 
 - (void)testAcceptsStubbedMethodWithNilArgument
 {
-	[[mock stub] hasSuffix:nil];
-	[mock hasSuffix:nil];
+	[[mock stub] uppercaseStringWithLocale:nil];
+	[mock uppercaseStringWithLocale:nil];
 }
 
 - (void)testRaisesExceptionWhenMethodWithWrongArgumentIsCalled
@@ -296,9 +328,10 @@ static NSString *TestNotification = @"TestNotification";
 
 - (void)testAcceptsStubbedMethodWithVoidPointerArgument
 {
+    char bytes[8];
 	mock = [OCMockObject mockForClass:[NSMutableData class]];
-	[[mock stub] appendBytes:NULL length:0];
-	[mock appendBytes:NULL length:0];
+	[[mock stub] appendBytes:bytes length:8];
+	[mock appendBytes:bytes length:8];
 }
 
 
@@ -383,6 +416,16 @@ static NSString *TestNotification = @"TestNotification";
 {
     [[[mock stub] ignoringNonObjectArgs] rangeOfString:@"foo" options:0];
     XCTAssertThrows([mock rangeOfString:@"bar" options:NSRegularExpressionSearch], @"Should have raised an exception.");
+}
+
+- (void)testBlocksAreNotConsideredNonObjectArguments
+{
+    [[[mock stub] ignoringNonObjectArgs] enumerateLinesUsingBlock:[OCMArg invokeBlock]];
+    __block BOOL blockWasInvoked = NO;
+    [mock enumerateLinesUsingBlock:^(NSString * _Nonnull line, BOOL * _Nonnull stop) {
+        blockWasInvoked = YES;
+    }];
+    XCTAssertTrue(blockWasInvoked, @"Should not have ignored the block argument.");
 }
 
 
@@ -471,37 +514,6 @@ static NSString *TestNotification = @"TestNotification";
     [[[mockVal stub] andReturnValue:OCMOCK_VALUE(val)] opaquePtrValue];
     OpaquePtr val2 = [obj opaquePtrValue];
     XCTAssertEqual(val, val2);
-
-    // from https://github.com/erikdoe/ocmock/pull/97
-    const char *type1 =
-    "r^{GURL={basic_string<char, std::__1::char_traits<char>, std::__1::alloca"
-    "tor<char> >={__compressed_pair<std::__1::basic_string<char, std::__1::cha"
-    "r_traits<char>, std::__1::allocator<char> >::__rep, std::__1::allocator<c"
-    "har> >={__rep}}}B{Parsed={Component=ii}{Component=ii}{Component=ii}{Compo"
-    "nent=ii}{Component=ii}{Component=ii}{Component=ii}{Component=ii}^{Parsed}"
-    "}{scoped_ptr<GURL, base::DefaultDeleter<GURL> >={scoped_ptr_impl<GURL, ba"
-    "se::DefaultDeleter<GURL> >={Data=^{GURL}}}}}";
-
-    const char *type2 =
-    "r^{GURL={basic_string<char, std::__1::char_traits<char>, std::__1::alloca"
-    "tor<char> >={__compressed_pair<std::__1::basic_string<char, std::__1::cha"
-    "r_traits<char>, std::__1::allocator<char> >::__rep, std::__1::allocator<c"
-    "har> >={__rep=(?={__long=II*}{__short=(?=Cc)[11c]}{__raw=[3L]})}}}B{Parse"
-    "d={Component=ii}{Component=ii}{Component=ii}{Component=ii}{Component=ii}{"
-    "Component=ii}{Component=ii}{Component=ii}^{Parsed}}{scoped_ptr<GURL, base"
-    "::DefaultDeleter<GURL> >={scoped_ptr_impl<GURL, base::DefaultDeleter<GURL"
-    "> >={Data=^{GURL}}}}}";
-
-    const char *type3 =
-    "r^{GURL}";
-
-    OCMBoxedReturnValueProvider *boxed = [OCMBoxedReturnValueProvider new];
-    XCTAssertTrue([boxed isMethodReturnType:type1 compatibleWithValueType:type2]);
-    XCTAssertTrue([boxed isMethodReturnType:type1 compatibleWithValueType:type3]);
-    XCTAssertTrue([boxed isMethodReturnType:type2 compatibleWithValueType:type1]);
-    XCTAssertTrue([boxed isMethodReturnType:type2 compatibleWithValueType:type3]);
-    XCTAssertTrue([boxed isMethodReturnType:type3 compatibleWithValueType:type1]);
-    XCTAssertTrue([boxed isMethodReturnType:type3 compatibleWithValueType:type2]);
 }
 
 - (void)testReturnsStubbedNilReturnValue
@@ -643,6 +655,124 @@ static NSString *TestNotification = @"TestNotification";
 
 }
 
+
+- (void)testReturnsValuesInNullPassByReferenceArguments
+{
+    mock = OCMClassMock([TestClassWithByReferenceMethod class]);
+    OCMStub([mock returnValuesInObjectPointer:[OCMArg setTo:nil] booleanPointer:[OCMArg setToValue:@NO]]);
+    [mock returnValuesInObjectPointer:NULL booleanPointer:NULL];
+    OCMVerify([mock returnValuesInObjectPointer:NULL booleanPointer:NULL]);
+}
+
+
+// --------------------------------------------------------------------------------------
+//	invoking block arguments
+// --------------------------------------------------------------------------------------
+
+- (void)testInvokesBlockWithArgs
+{
+    
+    BOOL bVal = YES, *bPtr = &bVal;
+    [[mock stub] enumerateLinesUsingBlock:[OCMArg invokeBlockWithArgs:@"First param", OCMOCK_VALUE(bPtr), nil]];
+    
+    __block BOOL wasCalled = NO;
+    __block NSString *firstParam;
+    __block BOOL *secondParam;
+    void (^block)(NSString *, BOOL *) = ^(NSString *line, BOOL *stop)
+    {
+        wasCalled = YES;
+        firstParam = line;
+        secondParam = stop;
+    };
+    [mock enumerateLinesUsingBlock:block];
+
+    XCTAssertTrue(wasCalled, @"Should have invoked block.");
+    XCTAssertEqualObjects(firstParam, @"First param", @"First param not passed to the block");
+    XCTAssertEqual(secondParam, bPtr, @"Second params don't match");
+}
+
+- (void)testThrowsIfBoxedValueNotFound
+{
+    [[mock stub] enumerateLinesUsingBlock:[OCMArg invokeBlockWithArgs:@"123", @"Not an NSValue", nil]];
+
+    XCTAssertThrowsSpecificNamed([mock enumerateLinesUsingBlock:^(NSString *line, BOOL *stop) {}], NSException, NSInvalidArgumentException, @"Should have raised an exception.");
+}
+
+- (void)testThrowsIfArgTypesMismatch
+{
+    [[mock stub] enumerateLinesUsingBlock:[OCMArg invokeBlockWithArgs:@"123", @YES, nil]];
+
+    XCTAssertThrowsSpecificNamed([mock enumerateLinesUsingBlock:^(NSString *line, BOOL *stop) {}], NSException, NSInvalidArgumentException, @"Should have raised an exception.");
+}
+
+- (void)testThrowsIfArgsLengthMismatch
+{
+    [[mock stub] enumerateLinesUsingBlock:[OCMArg invokeBlockWithArgs:@"First but no second", nil]];
+    
+    XCTAssertThrowsSpecificNamed([mock enumerateLinesUsingBlock:^(NSString *line, BOOL *stop) {}], NSException, NSInvalidArgumentException, @"Should have raised an exception.");
+}
+
+- (void)testThrowsForUnknownDefaults
+{
+    /// @note Should throw because we don't construct default values for the NSRange struct
+    /// arguments.
+    [[mock stub] enumerateSubstringsInRange:NSMakeRange(0, 10) options:NSStringEnumerationByLines usingBlock:[OCMArg invokeBlock]];
+ 
+    XCTAssertThrowsSpecificNamed([mock enumerateSubstringsInRange:NSMakeRange(0, 10) options:NSStringEnumerationByLines usingBlock:^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {}], NSException, NSInvalidArgumentException, @"No exception occurred");
+}
+
+- (void)testThrowsForIndividualUnknownDefault
+{
+    /// @note Should throw because of the third argument (we don't construct a default for struct
+    /// values).
+    [[mock stub] enumerateSubstringsInRange:NSMakeRange(0, 10) options:NSStringEnumerationByLines usingBlock:[OCMArg invokeBlockWithArgs:@"String 1", OCMOCK_VALUE(NSMakeRange(0, 10)), [OCMArg defaultValue], [OCMArg defaultValue], nil]];
+    
+    XCTAssertThrowsSpecificNamed([mock enumerateSubstringsInRange:NSMakeRange(0, 10) options:NSStringEnumerationByLines usingBlock:^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {}], NSException, NSInvalidArgumentException, @"No exception occurred");
+}
+
+- (void)testInvokesBlockWithDefaultArgs
+{
+    [[mock stub] enumerateLinesUsingBlock:[OCMArg invokeBlockWithArgs:[OCMArg defaultValue], [OCMArg defaultValue], nil]];
+    
+    __block NSString *firstParam;
+    __block BOOL *secondParam;
+    void (^block)(NSString *, BOOL *) = ^(NSString *line, BOOL *stop)
+    {
+        firstParam = line;
+        secondParam = stop;
+    };
+    [mock enumerateLinesUsingBlock:block];
+    
+    XCTAssertNil(firstParam, @"First param does not default to nil");
+    XCTAssertEqual(secondParam, NULL, @"Second param does not default to NULL");
+}
+
+- (void)testInvokesBlockWithAllDefaultArgs
+{
+    [[mock stub] enumerateLinesUsingBlock:[OCMArg invokeBlock]];
+    
+    __block NSString *firstParam;
+    __block BOOL *secondParam;
+    void (^block)(NSString *, BOOL *) = ^(NSString *line, BOOL *stop)
+    {
+        firstParam = line;
+        secondParam = stop;
+    };
+    [mock enumerateLinesUsingBlock:block];
+    
+    XCTAssertNil(firstParam, @"First param does not default to nil");
+    XCTAssertEqual(secondParam, NULL, @"Second param does not default to NULL");
+}
+
+- (void)testOnlyInvokesBlockWhenInvocationMatches
+{
+    mock = [OCMockObject mockForClass:[TestClassWithBlockArgMethod class]];
+    [[mock stub] doStuffWithBlock:[OCMArg invokeBlock] andString:@"foo"];
+    [[mock stub] doStuffWithBlock:[OCMArg any] andString:@"bar"];
+    __block BOOL blockWasInvoked = NO;
+    [mock doStuffWithBlock:^() { blockWasInvoked = YES; } andString:@"bar"];
+    XCTAssertFalse(blockWasInvoked, @"Should not have invoked block.");
+}
 
 // --------------------------------------------------------------------------------------
 //	accepting expected methods
@@ -796,16 +926,6 @@ static NSString *TestNotification = @"TestNotification";
 	XCTAssertThrows([mock verifyWithDelay:0.1], @"Should have raised an exception because method was not called.");
 }
 
-- (void)testAcceptsAndVerifiesExpectedMethodsWithDelayBlockTimeout
-{
-    dispatch_async(dispatch_queue_create("mockqueue", nil), ^{
-        [NSThread sleepForTimeInterval:1];
-        [mock lowercaseString];
-    });
-    
-	[[mock expect] lowercaseString];
-	XCTAssertThrows([mock verifyWithDelay:0.1], @"Should have raised an exception because method was not called.");
-}
 
 // --------------------------------------------------------------------------------------
 //	ordered expectations
@@ -898,6 +1018,22 @@ static NSString *TestNotification = @"TestNotification";
 	XCTAssertThrows([mock verify], @"Should have reraised the exception.");
 }
 
+
+- (void)testDoesNotReRaiseStubbedExceptions
+{
+	[[[mock expect] andThrow:[NSException exceptionWithName:@"ExceptionForTest" reason:@"test" userInfo:nil]] lowercaseString];
+	@try
+	{
+		[mock lowercaseString];
+	}
+	@catch(NSException *exception)
+	{
+		// expected
+	}
+	XCTAssertNoThrow([mock verify], @"Should not have reraised stubbed exception.");
+
+}
+
 - (void)testReRaisesRejectExceptionsOnVerify
 {
 	mock = [OCMockObject niceMockForClass:[NSString class]];
@@ -933,7 +1069,6 @@ static NSString *TestNotification = @"TestNotification";
 
     XCTAssertEqual(2, count, @"Should have evaluated constraint only twice");
 }
-
 
 @end
 

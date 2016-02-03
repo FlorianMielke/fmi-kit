@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2014-2015 Erik Doernenburg and contributors
+ *  Copyright (c) 2014-2016 Erik Doernenburg and contributors
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use these files except in compliance with the License. You may obtain
@@ -302,7 +302,7 @@
 
     // have not found a way to report the error; it seems we must throw an
     // exception to get out of the forwarding machinery
-    XCTAssertThrowsSpecificNamed(OCMVerify([mock arrayByAddingObject:nil]),
+    XCTAssertThrowsSpecificNamed(OCMVerify([mock arrayByAddingObject:@"foo"]),
                     NSException,
                     NSInvalidArgumentException,
                     @"should throw NSInvalidArgumentException exception");

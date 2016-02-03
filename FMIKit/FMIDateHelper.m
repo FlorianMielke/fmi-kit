@@ -39,4 +39,9 @@
     return components.second;
 }
 
+- (NSDate *)dateForTodayWithTimeFromDate:(NSDate *)date {
+    NSDateComponents *dateComponents = [[NSCalendar sharedCurrentCalendar] components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:date];
+    return [[NSCalendar sharedCurrentCalendar] dateBySettingHour:dateComponents.hour minute:dateComponents.minute second:0 ofDate:[NSDate date] options:0];
+}
+
 @end
