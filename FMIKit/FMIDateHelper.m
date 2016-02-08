@@ -40,8 +40,12 @@
 }
 
 - (NSDate *)dateForTodayWithTimeFromDate:(NSDate *)date {
+    NSDate *now = [NSDate date];
+    NSDateComponents *nowDateComponents = [[NSCalendar sharedCurrentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitSecond | NSCalendarUnitNanosecond) fromDate:now];
     NSDateComponents *dateComponents = [[NSCalendar sharedCurrentCalendar] components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:date];
-    return [[NSCalendar sharedCurrentCalendar] dateBySettingHour:dateComponents.hour minute:dateComponents.minute second:0 ofDate:[NSDate date] options:0];
+    nowDateComponents.hour = dateComponents.hour;
+    nowDateComponents.minute = dateComponents.minute;
+    return [[NSCalendar sharedCurrentCalendar] dateFromComponents:nowDateComponents];
 }
 
 @end
