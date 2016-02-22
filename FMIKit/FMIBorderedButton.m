@@ -19,7 +19,7 @@
 
 - (void)setHighlighted:(BOOL)highlighted {
     [super setHighlighted:highlighted];
-    self.layer.borderColor = (highlighted) ? self.tintColor.CGColor : self.tintColor.CGColor;
+    self.layer.borderColor = (highlighted) ? [[self.tintColor colorWithAlphaComponent:0.2] CGColor] : self.tintColor.CGColor;
 }
 
 - (void)setEnabled:(BOOL)enabled {
