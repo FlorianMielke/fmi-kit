@@ -7,18 +7,14 @@
 
 #import "SKProduct+LocalizedPrice.h"
 
-
 @implementation SKProduct (LocalizedPrice)
 
-
-- (NSString *)localizedPrice
-{
+- (NSString *)fmi_localizedPrice {
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
-    [numberFormatter setFormatterBehavior:NSNumberFormatterBehavior10_4];
-    [numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
-    [numberFormatter setLocale:self.priceLocale];
+    numberFormatter.formatterBehavior = NSNumberFormatterBehavior10_4;
+    numberFormatter.numberStyle = NSNumberFormatterCurrencyStyle;
+    numberFormatter.locale = self.priceLocale;
     return [numberFormatter stringFromNumber:self.price];
 }
-
 
 @end

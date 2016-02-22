@@ -17,6 +17,6 @@
  * The price of the product.
  * @return The price is localized based on the priceLocale property.
  */
-@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *localizedPrice;
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *fmi_localizedPrice;
 
 @end
