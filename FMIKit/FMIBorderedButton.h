@@ -7,6 +7,9 @@
 
 #import <UIKit/UIKit.h>
 
+IB_DESIGNABLE
 @interface FMIBorderedButton : UIButton
+
+@property (NS_NONATOMIC_IOSONLY) IBInspectable BOOL hasInvertedColors;
 
 @end

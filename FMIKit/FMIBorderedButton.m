@@ -9,6 +9,14 @@
 
 @implementation FMIBorderedButton
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.hasInvertedColors = NO;
+    }
+    return self;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
@@ -28,7 +36,13 @@
 }
 
 - (void)tintColorDidChange {
-    UIColor *titleColor = (self.tintAdjustmentMode == UIViewTintAdjustmentModeNormal) ? self.tintColor : [UIColor lightGrayColor];
+    UIColor *titleColor;
+    if (self.hasInvertedColors) {
+        titleColor = [UIColor whiteColor];
+        self.backgroundColor = (self.tintAdjustmentMode == UIViewTintAdjustmentModeNormal) ? self.tintColor : [UIColor lightGrayColor];
+    } else {
+        titleColor = (self.tintAdjustmentMode == UIViewTintAdjustmentModeNormal) ? self.tintColor : [UIColor lightGrayColor];
+    }
     [self setTitleColor:titleColor forState:UIControlStateNormal];
     self.layer.borderColor = (self.isEnabled && self.tintAdjustmentMode == UIViewTintAdjustmentModeNormal) ? self.tintColor.CGColor : [UIColor lightGrayColor].CGColor;
 }
