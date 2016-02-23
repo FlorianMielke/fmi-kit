@@ -66,15 +66,17 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/NSManagedObjectContext+PersistentStoreAdditions.h>
 #import <FMIKit/NSPersistentStoreCoordinator+Validation.h>
 
-#import <FMIKit/FMIBorderedButton.h>
 #import <FMIKit/FMIActionSheet.h>
 #import <FMIKit/FMIAlertController.h>
 #import <FMIKit/FMIAlertView.h>
-#import <FMIKit/FMIKitFactory.h>
 #import <FMIKit/FMIAcceptedCell.h>
+#import <FMIKit/FMIBlurredView.h>
+#import <FMIKit/FMIBorderedButton.h>
 #import <FMIKit/FMIDatePickerController.h>
 #import <FMIKit/FMIEditingToolbar.h>
 #import <FMIKit/FMIEventParser.h>
+#import <FMIKit/FMIHairlineView.h>
+#import <FMIKit/FMIKitFactory.h>
 #import <FMIKit/FMIMessageMIMETypes.h>
 #import <FMIKit/FMIMessageAttachment.h>
 #import <FMIKit/FMIMultilevelList.h>
