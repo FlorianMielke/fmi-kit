@@ -6,6 +6,7 @@
 @property (NS_NONATOMIC_IOSONLY) UIVisualEffectView *blurredView;
 @property (NS_NONATOMIC_IOSONLY) FMIHairlineView *topHairline;
 @property (NS_NONATOMIC_IOSONLY) FMIHairlineView *bottomHairline;
+@property (NS_NONATOMIC_IOSONLY) UIColor *initialBackgroundColor;
 
 @end
 
@@ -14,11 +15,11 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
+        self.translatesAutoresizingMaskIntoConstraints = NO;
+        self.initialBackgroundColor = self.backgroundColor;
         self.showBlurredBackground = YES;
         self.showTopHairline = NO;
         self.showBottomHairline = NO;
-        self.translatesAutoresizingMaskIntoConstraints = NO;
-        self.backgroundColor = [UIColor clearColor];
         self.blurredView = [self prepareVisualEffectView];
         [self insertSubview:self.blurredView atIndex:0];
         UIVisualEffectView *blurredView = self.blurredView;
@@ -61,6 +62,7 @@
 - (void)setShowBlurredBackground:(BOOL)showBlurredBackground {
     _showBlurredBackground = showBlurredBackground;
     self.blurredView.hidden = !_showBlurredBackground;
+    self.backgroundColor = (_showBlurredBackground) ? [UIColor clearColor] : self.initialBackgroundColor;
 }
 
 - (void)setShowTopHairline:(BOOL)showTopHairline {
