@@ -27,6 +27,11 @@
 @property(readonly, NS_NONATOMIC_IOSONLY) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 /**
+ * The persistent store options.
+ */
+@property (readonly, NS_NONATOMIC_IOSONLY) NSDictionary *persistentStoreOptions;
+
+/**
  * A Boolean that indicates whether the persistent store contains any records of the given base entities.
  */
 @property(readonly, getter=isPersistentStoreEmpty, NS_NONATOMIC_IOSONLY) BOOL persistentStoreIsEmpty;

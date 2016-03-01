@@ -60,6 +60,11 @@
     return [self.managedObjectContext persistentStoreIsEmtpyForEntities:self.baseEntityNames];
 }
 
+- (NSDictionary *)persistentStoreOptions {
+    NSPersistentStore *persistentStore = self.persistentStoreCoordinator.persistentStores.firstObject;
+    return [persistentStore.options copy];
+}
+
 - (NSManagedObjectContext *)createNewManagedObjectContext {
     NSManagedObjectContext *managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
