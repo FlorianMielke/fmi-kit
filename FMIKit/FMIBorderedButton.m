@@ -27,12 +27,16 @@
 
 - (void)setHighlighted:(BOOL)highlighted {
     [super setHighlighted:highlighted];
-    self.layer.borderColor = (highlighted) ? [[self.tintColor colorWithAlphaComponent:0.2] CGColor] : self.tintColor.CGColor;
+    if (self.isEnabled && self.tintAdjustmentMode == UIViewTintAdjustmentModeNormal) {
+        self.layer.borderColor = (highlighted) ? [[self.tintColor colorWithAlphaComponent:0.2] CGColor] : self.tintColor.CGColor;
+    }
 }
 
 - (void)setEnabled:(BOOL)enabled {
     [super setEnabled:enabled];
-    self.layer.borderColor = (enabled) ? self.tintColor.CGColor : [UIColor lightGrayColor].CGColor;
+    if (self.tintAdjustmentMode == UIViewTintAdjustmentModeNormal) {
+        self.layer.borderColor = (enabled) ? self.tintColor.CGColor : [UIColor lightGrayColor].CGColor;
+    }
 }
 
 - (void)tintColorDidChange {
