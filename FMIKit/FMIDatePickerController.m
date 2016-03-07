@@ -125,7 +125,7 @@
     if (_timeZoneForDatePicker) {
         return _timeZoneForDatePicker;
     }
-    _timeZoneForDatePicker = [NSTimeZone systemTimeZone];
+    _timeZoneForDatePicker = [NSTimeZone defaultTimeZone];
     return _timeZoneForDatePicker;
 }
 
