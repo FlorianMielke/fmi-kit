@@ -46,6 +46,10 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIUUIDHelper.h>
 #import <FMIKit/FMIFileCoordinator.h>
 
+#import <FMIKit/FMIYear.h>
+#import <FMIKit/FMIMonth.h>
+#import <FMIKit/FMIWeek.h>
+
 #if !TARGET_OS_WATCH
 
 #import <FMIKit/NSUndoManager+Grouping.h>
