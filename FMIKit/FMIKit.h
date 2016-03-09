@@ -36,8 +36,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMICSVDeserializer.h>
 #import <FMIKit/FMICSVFieldDeserializer.h>
 #import <FMIKit/FMICSVFileDescription.h>
-#import <FMIKit/FMIDuration.h>
-#import <FMIKit/FMIDurationFormatter.h>
 #import <FMIKit/FMIFieldDescription.h>
 #import <FMIKit/FMIFoundationAdditions.h>
 #import <FMIKit/FMIDateHelper.h>
@@ -49,6 +47,9 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIYear.h>
 #import <FMIKit/FMIMonth.h>
 #import <FMIKit/FMIWeek.h>
+#import <FMIKit/FMIPeriod.h>
+#import <FMIKit/FMIDuration.h>
+#import <FMIKit/FMIDurationFormatter.h>
 
 #if !TARGET_OS_WATCH
 
