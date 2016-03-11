@@ -60,7 +60,7 @@
 
 - (void)testComposerConformsToProtocols
 {
-    XCTAssertTrue([[self sut] conformsToProtocol:@protocol(FMMessage)]);
+    XCTAssertTrue([[self sut] conformsToProtocol:@protocol(FMIMessage)]);
 }
 
 
