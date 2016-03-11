@@ -1,8 +1,10 @@
 #import <Foundation/Foundation.h>
 
+@class FMIMessageAttachment;
+
 @protocol FMIMessage <NSObject>
 
-@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *message;
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *messageBody;
 @property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *subject;
 @property (readonly, copy, NS_NONATOMIC_IOSONLY) NSArray *toRecipients;
 
