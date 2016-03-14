@@ -25,11 +25,12 @@ static NSString *const FMIDurationFormatterFormatWithNumericPrefixForNegativeDur
     if (self) {
         self.style = FMIDurationFormatterStyleTime;
         self.locale = [NSLocale autoupdatingCurrentLocale];
-        self.numberFormatter = [NSNumberFormatter new];
-        [self.numberFormatter setLocale:self.locale];
-        [self.numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
-        [self.numberFormatter setMaximumFractionDigits:2];
-        [self.numberFormatter setMinimumFractionDigits:2];
+        self.numberFormatter = [[NSNumberFormatter alloc] init];
+        self.numberFormatter.locale = self.locale;
+        self.numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
+        self.numberFormatter.roundingMode = NSNumberFormatterRoundHalfUp;
+        self.numberFormatter.maximumFractionDigits = 2;
+        self.numberFormatter.minimumFractionDigits = 2;
     }
     return self;
 }
