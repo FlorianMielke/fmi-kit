@@ -87,6 +87,8 @@
  */
 - (NSComparisonResult)compare:(FMIDuration *)anotherDuration;
 
+- (NSDecimal)decimalValue;
+
 /**
  *  Returns a Boolean value that indicates whether the receiver’s time interval and a given duration's time intervals are equal.
  *

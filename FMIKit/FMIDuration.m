@@ -61,6 +61,10 @@ static NSString *const FMIDurationEncodingTimeIntervalKey = @"timeInterval";
     return roundl(fabs(self.timeInterval) / 60);
 }
 
+- (NSDecimal)decimalValue {
+    return [@(self.timeInterval) decimalValue];
+}
+
 - (BOOL)isEqual:(id)object {
     if (self == object) {
         return YES;
