@@ -5,7 +5,7 @@
 
 @implementation FMIAlertController
 
-+ (UIAlertController *)okAlertControllerWithTitle:(NSString *)title message:(NSString *)message {
++ (UIAlertController *)okAlertControllerWithTitle:(nullable NSString *)title message:(nullable NSString *)message {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:[FMIAlertAction okAlertAction]];
     return alertController;
