@@ -69,7 +69,7 @@
 
 - (void)testToRecipientsReturnsCorrectSupportMail
 {
-    XCTAssertEqualObjects([[[self sut] toRecipients] lastObject], @"support@madefm.com");
+    XCTAssertEqualObjects([[[self sut] toRecipients] lastObject], @"feedback@madefm.com");
 }
 
 
