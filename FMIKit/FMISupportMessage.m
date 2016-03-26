@@ -29,7 +29,7 @@
 }
 
 - (NSArray *)toRecipients {
-    return @[@"support@madefm.com"];
+    return @[@"feedback@madefm.com"];
 }
 
 - (NSString *)subject {
