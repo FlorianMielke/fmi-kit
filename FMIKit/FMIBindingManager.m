@@ -50,11 +50,10 @@
 
 - (void)enable {
     if (!self.isEnabled) {
-        for (FMIBinding *binding in [self bindings]) {
+        for (FMIBinding *binding in self.bindings) {
             [binding activate];
         }
-    }
-    else {
+    } else {
         NSLog(@"WARNING: FMIBindingManger: attempted to enable already-enabled instance");
     }
     self.enabled = YES;
@@ -62,28 +61,21 @@
 
 - (void)disable {
     if (self.isEnabled) {
-        for (FMIBinding *binding in [self bindings]) {
+        for (FMIBinding *binding in self.bindings) {
             [binding deactivate];
         }
-    }
-    else {
+    } else {
         NSLog(@"WARNING: FMIBindingManger: attempted to disable already-disabled instance");
     }
     self.enabled = NO;
 }
 
-- (BOOL)isEnabled {
-    return self.enabled;
-}
-
-
 - (void)removeAllBindings {
-    if ([self isEnabled]) {
+    if (self.isEnabled) {
         for (FMIBinding *binding in self.bindings) {
             [binding deactivate];
         }
     }
-
     [self.bindings removeAllObjects];
 }
 
