@@ -39,13 +39,22 @@
     return components.second;
 }
 
-- (NSDate *)dateForTodayWithTimeFromDate:(NSDate *)date {
+- (NSDate *)dateForTodayWithSameTimeAndRandomSecondFromDate:(NSDate *)date {
     NSDate *now = [NSDate date];
-    NSDateComponents *nowDateComponents = [[NSCalendar sharedCurrentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitSecond | NSCalendarUnitNanosecond) fromDate:now];
-    NSDateComponents *dateComponents = [[NSCalendar sharedCurrentCalendar] components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:date];
+    NSDateComponents *nowDateComponents = [[NSCalendar sharedCurrentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:now];
+    NSDateComponents *dateComponents = [[NSCalendar sharedCurrentCalendar] components:(NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:date];
     nowDateComponents.hour = dateComponents.hour;
     nowDateComponents.minute = dateComponents.minute;
+    nowDateComponents.second = [self randomSecondExceptSecond:dateComponents.second];
     return [[NSCalendar sharedCurrentCalendar] dateFromComponents:nowDateComponents];
+}
+
+- (NSInteger)randomSecondExceptSecond:(NSInteger)second {
+    NSInteger randomSecond = arc4random_uniform(61);
+    if (randomSecond == second) {
+        [self randomSecondExceptSecond:second];
+    }
+    return randomSecond;
 }
 
 @end

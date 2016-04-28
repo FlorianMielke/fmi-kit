@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSTimeInterval)timeIntervalFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate;
 
-- (NSDate *)dateForTodayWithTimeFromDate:(NSDate *)date;
+- (NSDate *)dateForTodayWithSameTimeAndRandomSecondFromDate:(NSDate *)date;
 
 @end
 

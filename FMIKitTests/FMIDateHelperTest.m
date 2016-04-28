@@ -1,6 +1,7 @@
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 #import "FMIDateHelper.h"
+#import "NSCalendar+SharedInstances.h"
 
 @interface FMIDateHelperTest : XCTestCase
 
@@ -69,6 +70,27 @@
     NSDate *fromDate = [NSDate dateWithTimeIntervalSinceReferenceDate:120];
 
     XCTAssertEqual(240, [FMIDateHelper timeIntervalFromDateToNow:fromDate]);
+
+    [date stopMocking];
+}
+
+- (void)testItGeneratesANewDateForTodayWithTimeFromDateWithRandomSecond {
+    NSDate *referenceDate = [NSDate dateWithTimeIntervalSince1970:3723];
+    id date = OCMClassMock([NSDate class]);
+    OCMStub([date date]).andReturn([NSDate dateWithTimeIntervalSinceReferenceDate:60]);
+    FMIDateHelper *subject = [[FMIDateHelper alloc] init];
+
+    NSDate *newDate = [subject dateForTodayWithSameTimeAndRandomSecondFromDate:referenceDate];
+
+    NSDateComponents *dateComponents = [[NSCalendar sharedCurrentCalendar] componentsInTimeZone:self.timeZone fromDate:newDate];
+    XCTAssertEqual(2001, dateComponents.year);
+    XCTAssertEqual(1, dateComponents.month);
+    XCTAssertEqual(1, dateComponents.day);
+    XCTAssertEqual(1, dateComponents.hour);
+    XCTAssertEqual(2, dateComponents.minute);
+    XCTAssertNotEqual(3, dateComponents.second);
+
+    [date stopMocking];
 }
 
 @end
