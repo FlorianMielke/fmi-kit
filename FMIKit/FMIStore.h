@@ -32,6 +32,11 @@
 @property (readonly, NS_NONATOMIC_IOSONLY) NSDictionary *persistentStoreOptions;
 
 /**
+ * A Boolean that indicates whether iCloud sync is enabled or not.
+ */
+@property (getter=isICloudEnabled, NS_NONATOMIC_IOSONLY) BOOL enableICloud;
+
+/**
  * A Boolean that indicates whether the persistent store contains any records of the given base entities.
  */
 @property(readonly, getter=isPersistentStoreEmpty, NS_NONATOMIC_IOSONLY) BOOL persistentStoreIsEmpty;
@@ -39,12 +44,12 @@
 /**
  * The URL to the managed object model.
  */
-@property (strong, NS_NONATOMIC_IOSONLY) NSURL *managedObjectModelURL;
+@property (NS_NONATOMIC_IOSONLY) NSURL *managedObjectModelURL;
 
 /**
  * The URL to the sqlite store.
  */
-@property (strong, NS_NONATOMIC_IOSONLY) NSURL *sqliteStoreURL;
+@property (NS_NONATOMIC_IOSONLY) NSURL *sqliteStoreURL;
 
 /**
  * Returns a shared instance of the FMIStore class.

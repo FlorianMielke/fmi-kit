@@ -73,12 +73,19 @@
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinatorWithStoreType:(NSString *const)storeType storeURL:(NSURL *)storeURL {
     NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
-    NSDictionary *options = @{NSSQLitePragmasOption : @{@"journal_mode" : @"DELETE"}};
+    NSDictionary *options = [self buildPersistentStoreOptions];
     NSError *error;
     if (![coordinator addPersistentStoreWithType:storeType configuration:nil URL:storeURL options:options error:&error]) {
         NSLog(@"Error while creating persistent store coordinator: %@\n%@", error.localizedDescription, error.userInfo);
     }
     return coordinator;
+}
+
+- (NSDictionary *)buildPersistentStoreOptions {
+    if (self.isICloudEnabled) {
+        return @{NSPersistentStoreUbiquitousContentNameKey : @"WorkTimes", NSMigratePersistentStoresAutomaticallyOption : @YES, NSInferMappingModelAutomaticallyOption : @YES, @"journal_mode" : @"DELETE"};
+    }
+    return @{NSMigratePersistentStoresAutomaticallyOption : @YES, NSInferMappingModelAutomaticallyOption : @YES, @"journal_mode" : @"DELETE"};
 }
 
 - (void)useInMemoryStore {
@@ -109,7 +116,61 @@
         return _persistentStoreCoordinator;
     }
     _persistentStoreCoordinator = [self persistentStoreCoordinatorWithStoreType:NSSQLiteStoreType storeURL:self.sqliteStoreURL];
+    if (self.isICloudEnabled) {
+        [self registerForICloudNotifications];
+    }
     return _persistentStoreCoordinator;
+}
+
+#pragma mark - iCloud
+
+- (void)registerForICloudNotifications {
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter addObserver:self selector:@selector(storesWillChange:) name:NSPersistentStoreCoordinatorStoresWillChangeNotification object:self.persistentStoreCoordinator];
+    [notificationCenter addObserver:self selector:@selector(storesDidChange:) name:NSPersistentStoreCoordinatorStoresDidChangeNotification object:self.persistentStoreCoordinator];
+    [notificationCenter addObserver:self selector:@selector(persistentStoreDidImportUbiquitousContentChanges:) name:NSPersistentStoreDidImportUbiquitousContentChangesNotification object:self.persistentStoreCoordinator];
+}
+
+- (void)persistentStoreDidImportUbiquitousContentChanges:(NSNotification *)changeNotification {
+    NSManagedObjectContext *context = self.managedObjectContext;
+    [context performBlock:^{
+        [context mergeChangesFromContextDidSaveNotification:changeNotification];
+    }];
+}
+
+- (void)storesWillChange:(NSNotification *)notification {
+    NSManagedObjectContext *context = self.managedObjectContext;
+    [context performBlockAndWait:^{
+        NSError *error;
+        if (context.hasChanges) {
+            BOOL success = [context save:&error];
+            if (!success && error) {
+                NSLog(@"Failed saving context after NSPersistentStoreCoordinatorStores change. Error: %@\n%@", error.localizedDescription, error.userInfo);
+            }
+        }
+        [context reset];
+    }];
+    [self storesDidChange:nil];
+}
+
+- (void)storesDidChange:(nullable NSNotification *)notification {
+    NSLog(@"(%s): %@", __PRETTY_FUNCTION__, notification.userInfo);
+}
+
+- (void)migrateiCloudStoreToLocalStore {
+    self.enableICloud = NO;
+    NSPersistentStore *store = self.persistentStoreCoordinator.persistentStores.firstObject;
+    NSMutableDictionary *localStoreOptions = [self.persistentStoreOptions mutableCopy];
+    localStoreOptions[NSPersistentStoreRemoveUbiquitousMetadataOption] = @YES;
+    NSPersistentStore *newStore =  [self.persistentStoreCoordinator migratePersistentStore:store toURL:self.sqliteStoreURL options:localStoreOptions withType:NSSQLiteStoreType error:nil];
+    [self reloadStore:newStore];
+}
+
+- (void)reloadStore:(NSPersistentStore *)store {
+    if (store) {
+        [self.persistentStoreCoordinator removePersistentStore:store error:nil];
+    }
+    [self.persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:self.sqliteStoreURL options:[self buildPersistentStoreOptions] error:nil];
 }
 
 @end
