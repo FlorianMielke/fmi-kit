@@ -21,7 +21,7 @@
     NSString *storePath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"Event.sqlite"];
     self.storeURL = [NSURL fileURLWithPath:storePath];
     self.subject = [[FMIStore alloc] init];
-    self.subject.sqliteStoreURL = self.storeURL;
+    self.subject.localStoreURL = self.storeURL;
     NSString *modelPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"Event" ofType:@"momd"];
     self.subject.managedObjectModelURL = [NSURL fileURLWithPath:modelPath];
 }

@@ -8,11 +8,14 @@
 #import "FMIStore.h"
 #import "NSManagedObjectContext+PersistentStoreAdditions.h"
 
+NSString *const FMIStoreDidUpdateFromCloudNotification = @"FMIStoreDidUpdateFromCloudNotification";
+
 @interface FMIStore ()
 
 @property (NS_NONATOMIC_IOSONLY) NSManagedObjectContext *managedObjectContext;
 @property (NS_NONATOMIC_IOSONLY) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (NS_NONATOMIC_IOSONLY) NSManagedObjectModel *managedObjectModel;
+@property (NS_NONATOMIC_IOSONLY) NSNotificationCenter *notificationCenter;
 
 @end
 
@@ -27,6 +30,15 @@
     return singleton;
 }
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.enableICloud = NO;
+        self.notificationCenter = [NSNotificationCenter defaultCenter];
+    }
+    return self;
+}
+
 - (BOOL)saveContext {
     if (!self.managedObjectContext || !self.managedObjectContext.hasChanges) {
         return NO;
@@ -39,18 +51,20 @@
     return YES;
 }
 
-- (void)resetPersistentStore {
-    [self resetCoreDataStack];
-    NSError *error;
-    if (![[NSFileManager defaultManager] removeItemAtURL:self.sqliteStoreURL error:&error]) {
-        NSLog(@"Failed to remove persistent store: %@\n%@", error.localizedDescription, error.userInfo);
-    }
+- (void)resetCoreDataStack {
+    [self deregisterFromICloudNotifications];
+    [self.managedObjectContext reset];
+    [self removePersistentStoresFromCoordinator];
 }
 
-- (void)resetCoreDataStack {
-    self.managedObjectContext = nil;
-    self.persistentStoreCoordinator = nil;
-    self.managedObjectModel = nil;
+- (void)removePersistentStoresFromCoordinator {
+    NSError *error;
+    for (NSPersistentStore *store in self.persistentStoreCoordinator.persistentStores) {
+        BOOL removed = [self.persistentStoreCoordinator removePersistentStore:store error:&error];
+        if (!removed) {
+            NSLog(@"Failed to remove persistent store. Error: %@\n%@", error.localizedDescription, error.userInfo);
+        }
+    }
 }
 
 - (BOOL)isPersistentStoreEmpty {
@@ -60,47 +74,48 @@
     return [self.managedObjectContext persistentStoreIsEmtpyForEntities:self.baseEntityNames];
 }
 
-- (NSDictionary *)persistentStoreOptions {
-    NSPersistentStore *persistentStore = self.persistentStoreCoordinator.persistentStores.firstObject;
-    return [persistentStore.options copy];
-}
-
 - (NSManagedObjectContext *)createNewManagedObjectContext {
     NSManagedObjectContext *managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
     return managedObjectContext;
 }
 
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinatorWithStoreType:(NSString *const)storeType storeURL:(NSURL *)storeURL {
-    NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
-    NSDictionary *options = [self buildPersistentStoreOptions];
-    NSError *error;
-    if (![coordinator addPersistentStoreWithType:storeType configuration:nil URL:storeURL options:options error:&error]) {
-        NSLog(@"Error while creating persistent store coordinator: %@\n%@", error.localizedDescription, error.userInfo);
-    }
-    return coordinator;
-}
-
-- (NSDictionary *)buildPersistentStoreOptions {
+- (void)useSQLiteStore {
+    self.persistentStoreCoordinator = [self persistentStoreCoordinatorWithStoreType:NSSQLiteStoreType storeURL:self.localStoreURL];
     if (self.isICloudEnabled) {
-        return @{NSPersistentStoreUbiquitousContentNameKey : @"WorkTimes", NSMigratePersistentStoresAutomaticallyOption : @YES, NSInferMappingModelAutomaticallyOption : @YES, @"journal_mode" : @"DELETE"};
+        [self registerForICloudNotifications];
     }
-    return @{NSMigratePersistentStoresAutomaticallyOption : @YES, NSInferMappingModelAutomaticallyOption : @YES, @"journal_mode" : @"DELETE"};
 }
 
 - (void)useInMemoryStore {
     self.persistentStoreCoordinator = [self persistentStoreCoordinatorWithStoreType:NSInMemoryStoreType storeURL:nil];
 }
 
+#pragma mark - Core Data stack
+
 - (NSManagedObjectContext *)managedObjectContext {
     if (_managedObjectContext) {
         return _managedObjectContext;
     }
-    if (self.persistentStoreCoordinator) {
-        _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
-        _managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
-    }
+    _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    _managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
     return _managedObjectContext;
+}
+
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinatorWithStoreType:(NSString *const)storeType storeURL:(NSURL *)storeURL {
+    NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
+    NSError *error;
+    if (![coordinator addPersistentStoreWithType:storeType configuration:nil URL:storeURL options:self.persistentStoreOptions error:&error]) {
+        NSLog(@"Error while creating persistent store coordinator: %@\n%@", error.localizedDescription, error.userInfo);
+    }
+    return coordinator;
+}
+
+- (nullable NSDictionary *)persistentStoreOptions {
+    if (self.isICloudEnabled) {
+        return @{NSPersistentStoreUbiquitousContentNameKey : @"WorkTimes"};
+    }
+    return nil;
 }
 
 - (NSManagedObjectModel *)managedObjectModel {
@@ -111,66 +126,65 @@
     return _managedObjectModel;
 }
 
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
-    if (_persistentStoreCoordinator) {
-        return _persistentStoreCoordinator;
-    }
-    _persistentStoreCoordinator = [self persistentStoreCoordinatorWithStoreType:NSSQLiteStoreType storeURL:self.sqliteStoreURL];
-    if (self.isICloudEnabled) {
-        [self registerForICloudNotifications];
-    }
-    return _persistentStoreCoordinator;
-}
-
 #pragma mark - iCloud
 
 - (void)registerForICloudNotifications {
-    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-    [notificationCenter addObserver:self selector:@selector(storesWillChange:) name:NSPersistentStoreCoordinatorStoresWillChangeNotification object:self.persistentStoreCoordinator];
-    [notificationCenter addObserver:self selector:@selector(storesDidChange:) name:NSPersistentStoreCoordinatorStoresDidChangeNotification object:self.persistentStoreCoordinator];
-    [notificationCenter addObserver:self selector:@selector(persistentStoreDidImportUbiquitousContentChanges:) name:NSPersistentStoreDidImportUbiquitousContentChangesNotification object:self.persistentStoreCoordinator];
+    [self.notificationCenter addObserver:self selector:@selector(storesWillChange:) name:NSPersistentStoreCoordinatorStoresWillChangeNotification object:self.persistentStoreCoordinator];
+    [self.notificationCenter addObserver:self selector:@selector(storesDidChange:) name:NSPersistentStoreCoordinatorStoresDidChangeNotification object:self.persistentStoreCoordinator];
+    [self.notificationCenter addObserver:self selector:@selector(persistentStoreDidImportUbiquitousContentChanges:) name:NSPersistentStoreDidImportUbiquitousContentChangesNotification object:self.persistentStoreCoordinator];
+}
+
+- (void)deregisterFromICloudNotifications {
+    [self.notificationCenter removeObserver:self name:NSPersistentStoreCoordinatorStoresWillChangeNotification object:self.persistentStoreCoordinator];
+    [self.notificationCenter removeObserver:self name:NSPersistentStoreCoordinatorStoresDidChangeNotification object:self.persistentStoreCoordinator];
+    [self.notificationCenter removeObserver:self name:NSPersistentStoreDidImportUbiquitousContentChangesNotification object:self.persistentStoreCoordinator];
 }
 
 - (void)persistentStoreDidImportUbiquitousContentChanges:(NSNotification *)changeNotification {
     NSManagedObjectContext *context = self.managedObjectContext;
     [context performBlock:^{
         [context mergeChangesFromContextDidSaveNotification:changeNotification];
+        [self.notificationCenter postNotificationName:FMIStoreDidUpdateFromCloudNotification object:self.managedObjectContext userInfo:changeNotification.userInfo];
     }];
 }
 
 - (void)storesWillChange:(NSNotification *)notification {
+    NSLog(@"(%s): %@", __PRETTY_FUNCTION__, notification.userInfo);
     NSManagedObjectContext *context = self.managedObjectContext;
     [context performBlockAndWait:^{
         NSError *error;
         if (context.hasChanges) {
-            BOOL success = [context save:&error];
-            if (!success && error) {
+            if (![context save:&error]) {
                 NSLog(@"Failed saving context after NSPersistentStoreCoordinatorStores change. Error: %@\n%@", error.localizedDescription, error.userInfo);
             }
         }
         [context reset];
     }];
-    [self storesDidChange:nil];
 }
 
 - (void)storesDidChange:(nullable NSNotification *)notification {
     NSLog(@"(%s): %@", __PRETTY_FUNCTION__, notification.userInfo);
 }
 
-- (void)migrateiCloudStoreToLocalStore {
-    self.enableICloud = NO;
+- (void)migrateICloudStoreToLocalStore {
+    NSError *error;
     NSPersistentStore *store = self.persistentStoreCoordinator.persistentStores.firstObject;
-    NSMutableDictionary *localStoreOptions = [self.persistentStoreOptions mutableCopy];
-    localStoreOptions[NSPersistentStoreRemoveUbiquitousMetadataOption] = @YES;
-    NSPersistentStore *newStore =  [self.persistentStoreCoordinator migratePersistentStore:store toURL:self.sqliteStoreURL options:localStoreOptions withType:NSSQLiteStoreType error:nil];
-    [self reloadStore:newStore];
+    NSDictionary *resetStoreOptions = @{NSPersistentStoreRemoveUbiquitousMetadataOption : @YES};
+    NSPersistentStore *localStore = [self.persistentStoreCoordinator migratePersistentStore:store toURL:self.localStoreURL options:resetStoreOptions withType:NSSQLiteStoreType error:&error];
+    if (!localStore) {
+        NSLog(@"Failed to migrate iCloud to local store. Error: %@\n%@", error.localizedDescription, error.userInfo);
+    }
+    [self reloadStore:localStore];
+}
+
+- (void)migrateLocalStoreToICloudStore {
+    [self resetCoreDataStack];
+    [self useSQLiteStore];
 }
 
 - (void)reloadStore:(NSPersistentStore *)store {
-    if (store) {
-        [self.persistentStoreCoordinator removePersistentStore:store error:nil];
-    }
-    [self.persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:self.sqliteStoreURL options:[self buildPersistentStoreOptions] error:nil];
+    [self.persistentStoreCoordinator removePersistentStore:store error:nil];
+    [self.persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:self.localStoreURL options:self.persistentStoreOptions error:nil];
 }
 
 @end

@@ -5,6 +5,10 @@
 
 #import <CoreData/CoreData.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
+OBJC_EXTERN NSString *const FMIStoreDidUpdateFromCloudNotification;
+
 /**
  * The FMIStore class manages an application's core data stack.
  */
@@ -14,22 +18,22 @@
  * An array of entity names that are necessary to check if the persistent store is empty.
  * @see -persistentStoreIsEmpty
  */
-@property(NS_NONATOMIC_IOSONLY) NSArray *baseEntityNames;
+@property (NS_NONATOMIC_IOSONLY) NSArray *baseEntityNames;
 
 /**
  * The managed object context.
  */
-@property(readonly, NS_NONATOMIC_IOSONLY) NSManagedObjectContext *managedObjectContext;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSManagedObjectContext *managedObjectContext;
 
 /**
  * The persistent store coordinator.
  */
-@property(readonly, NS_NONATOMIC_IOSONLY) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 /**
  * The persistent store options.
  */
-@property (readonly, NS_NONATOMIC_IOSONLY) NSDictionary *persistentStoreOptions;
+@property (nullable, readonly, NS_NONATOMIC_IOSONLY) NSDictionary *persistentStoreOptions;
 
 /**
  * A Boolean that indicates whether iCloud sync is enabled or not.
@@ -39,7 +43,7 @@
 /**
  * A Boolean that indicates whether the persistent store contains any records of the given base entities.
  */
-@property(readonly, getter=isPersistentStoreEmpty, NS_NONATOMIC_IOSONLY) BOOL persistentStoreIsEmpty;
+@property (readonly, getter=isPersistentStoreEmpty, NS_NONATOMIC_IOSONLY) BOOL persistentStoreIsEmpty;
 
 /**
  * The URL to the managed object model.
@@ -47,9 +51,9 @@
 @property (NS_NONATOMIC_IOSONLY) NSURL *managedObjectModelURL;
 
 /**
- * The URL to the sqlite store.
+ * The URL to the local store.
  */
-@property (NS_NONATOMIC_IOSONLY) NSURL *sqliteStoreURL;
+@property (NS_NONATOMIC_IOSONLY) NSURL *localStoreURL;
 
 /**
  * Returns a shared instance of the FMIStore class.
@@ -66,14 +70,18 @@
 - (BOOL)saveContext;
 
 /**
- * Forces the manager to use an in memory store.
+ * Forces the store to use a SQLite store.
+ */
+- (void)useSQLiteStore;
+
+/**
+ * Forces the store to use an in memory store.
  */
 - (void)useInMemoryStore;
 
-/**
- * Removes the database file from the file system.
- */
-- (void)resetPersistentStore;
+- (void)migrateICloudStoreToLocalStore;
+
+- (void)migrateLocalStoreToICloudStore;
 
 /**
  * Resets the whole Core Data stack.
@@ -88,3 +96,5 @@
 - (NSManagedObjectContext *)createNewManagedObjectContext;
 
 @end
+
+NS_ASSUME_NONNULL_END
