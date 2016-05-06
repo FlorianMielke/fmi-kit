@@ -24,6 +24,7 @@
     self.subject.localStoreURL = self.storeURL;
     NSString *modelPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"Event" ofType:@"momd"];
     self.subject.managedObjectModelURL = [NSURL fileURLWithPath:modelPath];
+    [self.subject useSQLiteStore];
 }
 
 - (void)testSharedStoreShouldAlwaysReturnTheSameObject {
@@ -34,7 +35,6 @@
     NSPersistentStore *store = self.subject.persistentStoreCoordinator.persistentStores.firstObject;
 
     XCTAssertEqual(store.type, NSSQLiteStoreType);
-    XCTAssertTrue([store.options isEqualToDictionary:@{NSSQLitePragmasOption : @{@"journal_mode" : @"DELETE"}}]);
     XCTAssertEqualObjects(store.URL, self.storeURL);
     XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:self.storeURL.path]);
 }
@@ -44,16 +44,6 @@
 
     NSPersistentStore *store = self.subject.persistentStoreCoordinator.persistentStores.firstObject;
     XCTAssertEqual(store.type, NSInMemoryStoreType);
-}
-
-- (void)testStoreShouldResetTheCoreDataStack {
-    NSManagedObjectContext *managedObjectContext = self.subject.managedObjectContext;
-    NSPersistentStoreCoordinator *persistentStoreCoordinator = self.subject.persistentStoreCoordinator;
-
-    [self.subject resetCoreDataStack];
-
-    XCTAssertNotEqualObjects(managedObjectContext, self.subject.managedObjectContext);
-    XCTAssertNotEqualObjects(persistentStoreCoordinator, self.subject.persistentStoreCoordinator);
 }
 
 - (void)testStoreShouldReturnTrueForEmptyPersistentStore {
@@ -69,15 +59,6 @@
     self.subject.baseEntityNames = @[@"FMEvent"];
     [NSEntityDescription insertNewObjectForEntityForName:@"FMEvent" inManagedObjectContext:self.subject.managedObjectContext];
     XCTAssertFalse(self.subject.isPersistentStoreEmpty);
-}
-
-- (void)testStoreShouldRemovePersistentStoreFile {
-    (void) self.subject.managedObjectContext;
-    XCTAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:self.storeURL.path]);
-
-    [self.subject resetPersistentStore];
-
-    XCTAssertFalse([[NSFileManager defaultManager] fileExistsAtPath:self.storeURL.path]);
 }
 
 - (void)testItCreatesANewManagedObjectContext {
