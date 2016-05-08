@@ -46,21 +46,6 @@
     XCTAssertEqual(store.type, NSInMemoryStoreType);
 }
 
-- (void)testStoreShouldReturnTrueForEmptyPersistentStore {
-    self.subject.baseEntityNames = @[@"FMEvent"];
-    XCTAssertTrue(self.subject.isPersistentStoreEmpty);
-}
-
-- (void)testStoreShouldReturnFalseForMissingBaseEntityNamesWhenCheckingForEmptyPersistentStore {
-    XCTAssertFalse(self.subject.isPersistentStoreEmpty);
-}
-
-- (void)testStoreShouldReturnFalseForNotEmptyPersistentStore {
-    self.subject.baseEntityNames = @[@"FMEvent"];
-    [NSEntityDescription insertNewObjectForEntityForName:@"FMEvent" inManagedObjectContext:self.subject.managedObjectContext];
-    XCTAssertFalse(self.subject.isPersistentStoreEmpty);
-}
-
 - (void)testItCreatesANewManagedObjectContext {
     NSManagedObjectContext *managedObjectContext = [self.subject createNewManagedObjectContext];
 

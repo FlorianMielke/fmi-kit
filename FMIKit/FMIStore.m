@@ -9,6 +9,7 @@
 #import "NSManagedObjectContext+PersistentStoreAdditions.h"
 
 NSString *const FMIStoreDidUpdateFromCloudNotification = @"FMIStoreDidUpdateFromCloudNotification";
+NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNotification";
 
 @interface FMIStore ()
 
@@ -67,13 +68,6 @@ NSString *const FMIStoreDidUpdateFromCloudNotification = @"FMIStoreDidUpdateFrom
     }
 }
 
-- (BOOL)isPersistentStoreEmpty {
-    if (self.baseEntityNames.count == 0) {
-        return NO;
-    }
-    return [self.managedObjectContext persistentStoreIsEmtpyForEntities:self.baseEntityNames];
-}
-
 - (NSManagedObjectContext *)createNewManagedObjectContext {
     NSManagedObjectContext *managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
@@ -81,34 +75,26 @@ NSString *const FMIStoreDidUpdateFromCloudNotification = @"FMIStoreDidUpdateFrom
 }
 
 - (void)useSQLiteStore {
-    self.persistentStoreCoordinator = [self persistentStoreCoordinatorWithStoreType:NSSQLiteStoreType storeURL:self.localStoreURL];
-    if (self.isICloudEnabled) {
-        [self registerForICloudNotifications];
-    }
+    [self preparePersistentStoreCoordinatorWithStoreType:NSSQLiteStoreType storeURL:self.localStoreURL];
 }
 
 - (void)useInMemoryStore {
-    self.persistentStoreCoordinator = [self persistentStoreCoordinatorWithStoreType:NSInMemoryStoreType storeURL:nil];
+    [self preparePersistentStoreCoordinatorWithStoreType:NSInMemoryStoreType storeURL:nil];
 }
 
-#pragma mark - Core Data stack
-
-- (NSManagedObjectContext *)managedObjectContext {
-    if (_managedObjectContext) {
-        return _managedObjectContext;
+- (void)preparePersistentStoreCoordinatorWithStoreType:(NSString *const)storeType storeURL:(NSURL *)storeURL {
+    self.managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:self.managedObjectModelURL];
+    self.persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
+    if (self.isICloudEnabled) {
+        [self registerForICloudNotifications];
     }
-    _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
-    _managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
-    return _managedObjectContext;
-}
-
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinatorWithStoreType:(NSString *const)storeType storeURL:(NSURL *)storeURL {
-    NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
     NSError *error;
-    if (![coordinator addPersistentStoreWithType:storeType configuration:nil URL:storeURL options:self.persistentStoreOptions error:&error]) {
+    if (![self.persistentStoreCoordinator addPersistentStoreWithType:storeType configuration:nil URL:storeURL options:self.persistentStoreOptions error:&error]) {
         NSLog(@"Error while creating persistent store coordinator: %@\n%@", error.localizedDescription, error.userInfo);
+        return;
     }
-    return coordinator;
+    self.managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    self.managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
 }
 
 - (nullable NSDictionary *)persistentStoreOptions {
@@ -116,14 +102,6 @@ NSString *const FMIStoreDidUpdateFromCloudNotification = @"FMIStoreDidUpdateFrom
         return @{NSPersistentStoreUbiquitousContentNameKey : @"WorkTimes"};
     }
     return nil;
-}
-
-- (NSManagedObjectModel *)managedObjectModel {
-    if (_managedObjectModel) {
-        return _managedObjectModel;
-    }
-    _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:self.managedObjectModelURL];
-    return _managedObjectModel;
 }
 
 #pragma mark - iCloud
@@ -163,6 +141,7 @@ NSString *const FMIStoreDidUpdateFromCloudNotification = @"FMIStoreDidUpdateFrom
 }
 
 - (void)storesDidChange:(nullable NSNotification *)notification {
+    [self.notificationCenter postNotificationName:FMIStoreDidChangeStoreNotification object:self];
     NSLog(@"(%s): %@", __PRETTY_FUNCTION__, notification.userInfo);
 }
 

@@ -8,17 +8,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 OBJC_EXTERN NSString *const FMIStoreDidUpdateFromCloudNotification;
+OBJC_EXTERN NSString *const FMIStoreDidChangeStoreNotification;
 
 /**
  * The FMIStore class manages an application's core data stack.
  */
 @interface FMIStore : NSObject
-
-/**
- * An array of entity names that are necessary to check if the persistent store is empty.
- * @see -persistentStoreIsEmpty
- */
-@property (NS_NONATOMIC_IOSONLY) NSArray *baseEntityNames;
 
 /**
  * The managed object context.
@@ -39,11 +34,6 @@ OBJC_EXTERN NSString *const FMIStoreDidUpdateFromCloudNotification;
  * A Boolean that indicates whether iCloud sync is enabled or not.
  */
 @property (getter=isICloudEnabled, NS_NONATOMIC_IOSONLY) BOOL enableICloud;
-
-/**
- * A Boolean that indicates whether the persistent store contains any records of the given base entities.
- */
-@property (readonly, getter=isPersistentStoreEmpty, NS_NONATOMIC_IOSONLY) BOOL persistentStoreIsEmpty;
 
 /**
  * The URL to the managed object model.
@@ -79,8 +69,14 @@ OBJC_EXTERN NSString *const FMIStoreDidUpdateFromCloudNotification;
  */
 - (void)useInMemoryStore;
 
+/**
+ * Migrates the iCloud store to the locale store.
+ */
 - (void)migrateICloudStoreToLocalStore;
 
+/**
+ * Migrates the locale store to an iCloud store.
+ */
 - (void)migrateLocalStoreToICloudStore;
 
 /**
