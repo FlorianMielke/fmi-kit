@@ -9,6 +9,7 @@
 #import "NSManagedObjectContext+PersistentStoreAdditions.h"
 
 NSString *const FMIStoreDidUpdateFromCloudNotification = @"FMIStoreDidUpdateFromCloudNotification";
+NSString *const FMIStoreWillChangeStoreNotification = @"FMIStoreWillChangeStoreNotification";
 NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNotification";
 
 @interface FMIStore ()
@@ -122,7 +123,9 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
     NSManagedObjectContext *context = self.managedObjectContext;
     [context performBlock:^{
         [context mergeChangesFromContextDidSaveNotification:changeNotification];
-        [self.notificationCenter postNotificationName:FMIStoreDidUpdateFromCloudNotification object:self.managedObjectContext userInfo:changeNotification.userInfo];
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [self.notificationCenter postNotificationName:FMIStoreDidUpdateFromCloudNotification object:self.managedObjectContext userInfo:changeNotification.userInfo];
+        }];
     }];
 }
 
@@ -137,11 +140,16 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
             }
         }
         [context reset];
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [self.notificationCenter postNotificationName:FMIStoreWillChangeStoreNotification object:self];
+        }];
     }];
 }
 
 - (void)storesDidChange:(nullable NSNotification *)notification {
-    [self.notificationCenter postNotificationName:FMIStoreDidChangeStoreNotification object:self];
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        [self.notificationCenter postNotificationName:FMIStoreDidChangeStoreNotification object:self];
+    }];
     NSLog(@"(%s): %@", __PRETTY_FUNCTION__, notification.userInfo);
 }
 
