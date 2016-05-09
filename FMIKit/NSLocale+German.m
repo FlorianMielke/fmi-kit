@@ -9,7 +9,7 @@
 
 + (BOOL)fmi_isGermanLanguage {
     NSString *preferredLanguage = [NSLocale preferredLanguages].firstObject;
-    return [preferredLanguage isEqualToString:@"de-DE"];
+    return [preferredLanguage hasPrefix:@"de-"];
 }
 
 @end
