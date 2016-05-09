@@ -20,6 +20,7 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/NSDecimalNumber+Calulations.h>
 #import <FMIKit/NSFileManager+DirectoryAdditions.h>
 #import <FMIKit/NSIndexSet+Initialization.h>
+#import <FMIKit/NSLocale+German.h>
 #import <FMIKit/NSMutableDictionary+IndexPath.h>
 #import <FMIKit/NSNumberFormatter+Editing.h>
 #import <FMIKit/NSObject+AutoDescription.h>
