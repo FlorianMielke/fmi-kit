@@ -7,7 +7,7 @@
 
 #import "FMIStore.h"
 #import "NSManagedObjectContext+PersistentStoreAdditions.h"
-
+ 
 NSString *const FMIStoreDidUpdateFromCloudNotification = @"FMIStoreDidUpdateFromCloudNotification";
 NSString *const FMIStoreWillChangeStoreNotification = @"FMIStoreWillChangeStoreNotification";
 NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNotification";
@@ -130,7 +130,9 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
 }
 
 - (void)storesWillChange:(NSNotification *)notification {
-    NSLog(@"(%s): %@", __PRETTY_FUNCTION__, notification.userInfo);
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        [self.notificationCenter postNotificationName:FMIStoreWillChangeStoreNotification object:self];
+    }];
     NSManagedObjectContext *context = self.managedObjectContext;
     [context performBlockAndWait:^{
         NSError *error;
@@ -140,9 +142,6 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
             }
         }
         [context reset];
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [self.notificationCenter postNotificationName:FMIStoreWillChangeStoreNotification object:self];
-        }];
     }];
 }
 
@@ -150,10 +149,10 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         [self.notificationCenter postNotificationName:FMIStoreDidChangeStoreNotification object:self];
     }];
-    NSLog(@"(%s): %@", __PRETTY_FUNCTION__, notification.userInfo);
 }
 
 - (void)migrateICloudStoreToLocalStore {
+    self.enableICloud = NO;
     NSError *error;
     NSPersistentStore *store = self.persistentStoreCoordinator.persistentStores.firstObject;
     NSDictionary *resetStoreOptions = @{NSPersistentStoreRemoveUbiquitousMetadataOption : @YES};
@@ -161,17 +160,16 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
     if (!localStore) {
         NSLog(@"Failed to migrate iCloud to local store. Error: %@\n%@", error.localizedDescription, error.userInfo);
     }
-    [self reloadStore:localStore];
 }
 
 - (void)migrateLocalStoreToICloudStore {
-    [self resetCoreDataStack];
-    [self useSQLiteStore];
-}
-
-- (void)reloadStore:(NSPersistentStore *)store {
-    [self.persistentStoreCoordinator removePersistentStore:store error:nil];
-    [self.persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:self.localStoreURL options:self.persistentStoreOptions error:nil];
+    self.enableICloud = YES;
+    NSError *error;
+    NSPersistentStore *store = self.persistentStoreCoordinator.persistentStores.firstObject;
+    NSPersistentStore *iCloudStore = [self.persistentStoreCoordinator migratePersistentStore:store toURL:self.localStoreURL options:self.persistentStoreOptions withType:NSSQLiteStoreType error:&error];
+    if (!iCloudStore) {
+        NSLog(@"Failed to migrate local to iCloud store. Error: %@\n%@", error.localizedDescription, error.userInfo);
+    }
 }
 
 @end
