@@ -100,9 +100,9 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
 
 - (nullable NSDictionary *)persistentStoreOptions {
     if (self.isICloudEnabled) {
-        return @{NSPersistentStoreUbiquitousContentNameKey : @"WorkTimes"};
+        return @{NSPersistentStoreUbiquitousContentNameKey : @"WorkTimes", NSSQLitePragmasOption : @{@"journal_mode" : @"DELETE"}};
     }
-    return nil;
+    return @{NSSQLitePragmasOption : @{@"journal_mode" : @"DELETE"}};
 }
 
 #pragma mark - iCloud
