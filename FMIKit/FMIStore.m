@@ -124,7 +124,7 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
     [context performBlock:^{
         [context mergeChangesFromContextDidSaveNotification:changeNotification];
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [self.notificationCenter postNotificationName:FMIStoreDidUpdateFromCloudNotification object:self.managedObjectContext userInfo:changeNotification.userInfo];
+            [self.notificationCenter postNotificationName:FMIStoreDidUpdateFromCloudNotification object:self];
         }];
     }];
 }
