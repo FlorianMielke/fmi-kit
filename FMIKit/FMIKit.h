@@ -90,6 +90,7 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMINonAminatedPushSegue.h>
 #import <FMIKit/FMINumericTextView.h>
 #import <FMIKit/FMIStore.h>
+#import <FMIKit/FMIStoreConfiguration.h>
 #import <FMIKit/FMISupportMessage.h>
 #import <FMIKit/FMITableView.h>
 

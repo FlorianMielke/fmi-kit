@@ -14,6 +14,8 @@
 		170C7E441C900D69000B5574 /* FMIWeek.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913598DD77E67B459BE40D /* FMIWeek.m */; };
 		170C7E451C900D69000B5574 /* FMIYear.m in Sources */ = {isa = PBXBuildFile; fileRef = 359133AD3EED17EBCFFC829C /* FMIYear.m */; };
 		171CB98B1AFB63C7002BE185 /* FMIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CB98A1AFB63C7002BE185 /* FMIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		173625881CE2038700151CBD /* FMIStoreConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 173625861CE2038700151CBD /* FMIStoreConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		173625891CE2038700151CBD /* FMIStoreConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 173625871CE2038700151CBD /* FMIStoreConfiguration.m */; };
 		1736E4761BA815B30095227A /* FMIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CB98A1AFB63C7002BE185 /* FMIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1738D44C1AFC948100B96929 /* Event.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1738D4431AFC948100B96929 /* Event.xcdatamodeld */; };
 		1738D44D1AFC948100B96929 /* TestFile.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4451AFC948100B96929 /* TestFile.csv */; };
@@ -338,6 +340,8 @@
 		171CB98A1AFB63C7002BE185 /* FMIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMIKit.h; sourceTree = "<group>"; };
 		171CB9901AFB63C7002BE185 /* FMIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		171CB9961AFB63C7002BE185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		173625861CE2038700151CBD /* FMIStoreConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIStoreConfiguration.h; sourceTree = "<group>"; };
+		173625871CE2038700151CBD /* FMIStoreConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIStoreConfiguration.m; sourceTree = "<group>"; };
 		1736E46D1BA815400095227A /* FMIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1736E4711BA815400095227A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1738D4401AFC928C00B96929 /* FMIMessageMIMETypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FMIMessageMIMETypes.plist; path = Resources/FMIMessageMIMETypes.plist; sourceTree = SOURCE_ROOT; };
@@ -953,6 +957,8 @@
 				359132065B540D98A2C06090 /* FMINumericTextViewTests.m */,
 				359136E3984C8A5B9ED12A31 /* FMIStore.h */,
 				359134FEB69A5B4D59405022 /* FMIStore.m */,
+				173625861CE2038700151CBD /* FMIStoreConfiguration.h */,
+				173625871CE2038700151CBD /* FMIStoreConfiguration.m */,
 				35913C6B31705497C1439FBB /* FMIStoreTests.m */,
 				35913BBE2A42E159D31FEBB9 /* FMISupportMessage.h */,
 				359132C43CF50DADD2FC3E19 /* FMISupportMessage.m */,
@@ -1044,6 +1050,7 @@
 				35913FB83625AA5CD7A6A708 /* NSFileManager+DirectoryAdditions.h in Headers */,
 				3591373644FB08E25901CCB7 /* NSCalendar+Calculations.h in Headers */,
 				3591387734EB3501DF79CE79 /* UIColor+SystemDefaults.h in Headers */,
+				173625881CE2038700151CBD /* FMIStoreConfiguration.h in Headers */,
 				359139AD422AB1B841037F5E /* NSString+FileName.h in Headers */,
 				359137389738409C49FB6487 /* UIImage+Masking.h in Headers */,
 				359137B84B76D7A65245AEE8 /* NSUndoManager+Grouping.h in Headers */,
@@ -1286,6 +1293,7 @@
 				3591321463E89B71E597849E /* FMIKitFactory.m in Sources */,
 				359131E1F6DFEAB7B0D68AEB /* FMIKitPrivates.m in Sources */,
 				35913C039AB5275BAA877B31 /* NSBundle+FMIKit.m in Sources */,
+				173625891CE2038700151CBD /* FMIStoreConfiguration.m in Sources */,
 				3591319D833C05DFA795B045 /* FMIActivityIndicatorAlertView.m in Sources */,
 				35913A3927A7E8BE41A7D30D /* FMINonAminatedPushSegue.m in Sources */,
 				35913B4FB9CABCFE02466025 /* FMIBindingManager.m in Sources */,

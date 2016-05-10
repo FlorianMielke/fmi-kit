@@ -6,11 +6,13 @@
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 #import "FMIStore.h"
+#import "FMIStoreConfiguration.h"
 
 @interface FMIStoreTests : XCTestCase
 
 @property (NS_NONATOMIC_IOSONLY) FMIStore *subject;
 @property (NS_NONATOMIC_IOSONLY) NSURL *storeURL;
+@property (NS_NONATOMIC_IOSONLY) FMIStoreConfiguration *configuration;
 
 @end
 
@@ -20,11 +22,11 @@
     [super setUp];
     NSString *storePath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"Event.sqlite"];
     self.storeURL = [NSURL fileURLWithPath:storePath];
-    self.subject = [[FMIStore alloc] init];
-    self.subject.localStoreURL = self.storeURL;
     NSString *modelPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"Event" ofType:@"momd"];
-    self.subject.managedObjectModelURL = [NSURL fileURLWithPath:modelPath];
-    [self.subject useSQLiteStore];
+    NSURL *managedObjectModelURL = [NSURL fileURLWithPath:modelPath];
+    self.subject = [[FMIStore alloc] init];
+    self.configuration = [[FMIStoreConfiguration alloc] initWithManagedObjectModelURL:managedObjectModelURL localeStoreURL:self.storeURL cloudStoreURL:nil cloudStoreName:nil cloudEnabled:NO];
+    [self.subject useSQLiteStoreWithConfiguration:self.configuration];
 }
 
 - (void)testSharedStoreShouldAlwaysReturnTheSameObject {
@@ -40,7 +42,7 @@
 }
 
 - (void)testStoreShouldConfigureInMemoryStore {
-    [self.subject useInMemoryStore];
+    [self.subject useInMemoryStoreWithConfiguration:self.configuration];
 
     NSPersistentStore *store = self.subject.persistentStoreCoordinator.persistentStores.firstObject;
     XCTAssertEqual(store.type, NSInMemoryStoreType);

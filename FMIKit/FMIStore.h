@@ -5,6 +5,8 @@
 
 #import <CoreData/CoreData.h>
 
+@class FMIStoreConfiguration;
+
 NS_ASSUME_NONNULL_BEGIN
 
 OBJC_EXTERN NSString *const FMIStoreDidUpdateFromCloudNotification;
@@ -29,22 +31,22 @@ OBJC_EXTERN NSString *const FMIStoreDidChangeStoreNotification;
 /**
  * The persistent store options.
  */
-@property (nullable, readonly, NS_NONATOMIC_IOSONLY) NSDictionary *persistentStoreOptions;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSDictionary *persistentStoreOptions;
 
 /**
  * A Boolean that indicates whether iCloud sync is enabled or not.
  */
-@property (getter=isICloudEnabled, NS_NONATOMIC_IOSONLY) BOOL enableICloud;
+@property (readonly, getter=isICloudEnabled, NS_NONATOMIC_IOSONLY) BOOL enableICloud;
 
 /**
  * The URL to the managed object model.
  */
-@property (NS_NONATOMIC_IOSONLY) NSURL *managedObjectModelURL;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSURL *managedObjectModelURL;
 
 /**
  * The URL to the local store.
  */
-@property (NS_NONATOMIC_IOSONLY) NSURL *localStoreURL;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSURL *localStoreURL;
 
 /**
  * Returns a shared instance of the FMIStore class.
@@ -62,13 +64,17 @@ OBJC_EXTERN NSString *const FMIStoreDidChangeStoreNotification;
 
 /**
  * Forces the store to use a SQLite store.
+ *
+ * @param configuration The stores configuration.
  */
-- (void)useSQLiteStore;
+- (void)useSQLiteStoreWithConfiguration:(FMIStoreConfiguration *)configuration;
 
 /**
  * Forces the store to use an in memory store.
+ *
+ * @param configuration The stores configuration.
  */
-- (void)useInMemoryStore;
+- (void)useInMemoryStoreWithConfiguration:(FMIStoreConfiguration *)configuration;
 
 /**
  * Migrates the iCloud store to the locale store.
@@ -84,6 +90,11 @@ OBJC_EXTERN NSString *const FMIStoreDidChangeStoreNotification;
  * Resets the whole Core Data stack.
  */
 - (void)resetCoreDataStack;
+
+/**
+ * Resets the iCloud store.
+ */
+- (BOOL)resetICloudStoreIfNeeded;
 
 /**
  * Creates a new \c NSManagedObjectContext with the current \c persistentStoreCoordinator
