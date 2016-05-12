@@ -75,7 +75,7 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
 
 - (NSManagedObjectContext *)createNewManagedObjectContext {
     NSManagedObjectContext *managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
-//    managedObjectContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy;;
+    managedObjectContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy;;
     managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
     return managedObjectContext;
 }
@@ -128,7 +128,7 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
 - (void)persistentStoreDidImportUbiquitousContentChanges:(NSNotification *)changeNotification {
     NSManagedObjectContext *context = self.managedObjectContext;
     [context performBlock:^{
-        [context mergeChangesFromContextDidSaveNotification:changeNotification];
+         [context mergeChangesFromContextDidSaveNotification:changeNotification];
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [self.notificationCenter postNotificationName:FMIStoreDidUpdateFromCloudNotification object:self];
         }];
@@ -163,13 +163,22 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
     self.enableICloud = NO;
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     [queue addOperationWithBlock:^{
+        NSPersistentStore *cloudStore = self.persistentStoreCoordinator.persistentStores.firstObject;
+        NSDictionary *cloudStoreOptions = [cloudStore.options copy];
         NSError *error;
-        NSPersistentStore *store = self.persistentStoreCoordinator.persistentStores.firstObject;
-        NSMutableDictionary *resetStoreOptions = [store.options mutableCopy];
-        [resetStoreOptions addEntriesFromDictionary:@{NSPersistentStoreRemoveUbiquitousMetadataOption : @YES}];
-        NSPersistentStore *localStore = [self.persistentStoreCoordinator migratePersistentStore:store toURL:self.configuration.localStoreURL options:resetStoreOptions withType:NSSQLiteStoreType error:&error];
+        NSMutableDictionary *localStoreOptions = [cloudStore.options mutableCopy];
+        [localStoreOptions addEntriesFromDictionary:@{NSPersistentStoreRemoveUbiquitousMetadataOption : @YES}];
+        NSPersistentStore *localStore = [self.persistentStoreCoordinator migratePersistentStore:cloudStore toURL:self.configuration.localStoreURL options:localStoreOptions withType:NSSQLiteStoreType error:&error];
         if (!localStore) {
-            NSLog(@"Failed to migrate iCloud to local store. Error: %@\n%@", error.localizedDescription, error.userInfo);
+            NSLog(@"Failed to migrate cloud to local store. Error: %@\n%@", error.localizedDescription, error.userInfo);
+        } else {
+            NSError *removingError;
+            BOOL isDestroyed = [self.persistentStoreCoordinator destroyPersistentStoreAtURL:self.configuration.cloudStoreURL withType:NSSQLiteStoreType options:cloudStoreOptions error:&removingError];
+            if (!isDestroyed) {
+                NSLog(@"Failed to destroy cloud store file. Error: %@\n%@", error.localizedDescription, error.userInfo);
+            } else {
+                NSLog(@"Migrated to local store and destroyed cloud store");
+            }
         }
     }];
 }
@@ -183,14 +192,14 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
         NSError *error;
         NSPersistentStore *iCloudStore = [self.persistentStoreCoordinator migratePersistentStore:localeStore toURL:self.configuration.cloudStoreURL options:self.persistentStoreOptions withType:NSSQLiteStoreType error:&error];
         if (!iCloudStore) {
-            NSLog(@"Failed to migrate local to iCloud store. Error: %@\n%@", error.localizedDescription, error.userInfo);
+            NSLog(@"Failed to migrate local to cloud store. Error: %@\n%@", error.localizedDescription, error.userInfo);
         } else {
             NSError *removingError;
             BOOL isDestroyed = [self.persistentStoreCoordinator destroyPersistentStoreAtURL:self.configuration.localStoreURL withType:NSSQLiteStoreType options:localStoreOptions error:&removingError];
             if (!isDestroyed) {
                 NSLog(@"Failed to destroy locale store file. Error: %@\n%@", error.localizedDescription, error.userInfo);
             } else {
-                NSLog(@"Migrated to iCloud and destroyed locale store file");
+                NSLog(@"Migrated to cloud and destroyed legacy locale store");
             }
         }
     }];
@@ -206,7 +215,7 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
         BOOL success = [NSPersistentStoreCoordinator removeUbiquitousContentAndPersistentStoreAtURL:cloudStore.URL options:cloudStore.options error:&error];
         dispatch_async(dispatch_get_main_queue(), ^{
             if (!success) {
-                NSLog(@"Failed to reset iCloud store. Error: %@\n%@", error.localizedDescription, error.userInfo);
+                NSLog(@"Failed to reset cloud store. Error: %@\n%@", error.localizedDescription, error.userInfo);
             } else {
                 self.enableICloud = NO;
                 NSLog(@"Finished");
