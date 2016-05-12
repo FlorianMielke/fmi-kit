@@ -39,16 +39,6 @@ OBJC_EXTERN NSString *const FMIStoreDidChangeStoreNotification;
 @property (readonly, getter=isICloudEnabled, NS_NONATOMIC_IOSONLY) BOOL enableICloud;
 
 /**
- * The URL to the managed object model.
- */
-@property (readonly, NS_NONATOMIC_IOSONLY) NSURL *managedObjectModelURL;
-
-/**
- * The URL to the local store.
- */
-@property (readonly, NS_NONATOMIC_IOSONLY) NSURL *localStoreURL;
-
-/**
  * Returns a shared instance of the FMIStore class.
  *
  * @return A shared instance of the FMIStore class.

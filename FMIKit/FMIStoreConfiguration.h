@@ -11,14 +11,16 @@
 
 @interface FMIStoreConfiguration : NSObject
 
-@property (readonly, NS_NONATOMIC_IOSONLY) NSURL *localeStoreURL;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSURL *localStoreURL;
 @property (readonly, NS_NONATOMIC_IOSONLY) NSURL *cloudStoreURL;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSDictionary *localStoreOptions;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSDictionary *cloudStoreOptions;
 @property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *cloudStoreName;
 @property (readonly, NS_NONATOMIC_IOSONLY) NSURL *managedObjectModelURL;
 @property (readonly, NS_NONATOMIC_IOSONLY) FMICloudStatus cloudStatus;
 
 - (instancetype)init NS_UNAVAILABLE;
 
-- (instancetype)initWithManagedObjectModelURL:(NSURL *)managedObjectModelURL localeStoreURL:(NSURL *)localeStoreURL cloudStoreURL:(NSURL *)cloudStoreURL cloudStoreName:(NSString *)cloudStoreName cloudStatus:(FMICloudStatus)cloudStatus;
+- (instancetype)initWithManagedObjectModelURL:(NSURL *)managedObjectModelURL localStoreURL:(NSURL *)localStoreURL localStoreOptions:(NSDictionary *)localStoreOptions cloudStoreURL:(NSURL *)cloudStoreURL cloudStoreName:(NSString *)cloudStoreName cloudStoreOptions:(NSDictionary *)cloudStoreOptions cloudStatus:(FMICloudStatus)cloudStatus;
 
 @end
