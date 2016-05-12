@@ -15,7 +15,7 @@
 @property (readonly, NS_NONATOMIC_IOSONLY) NSURL *cloudStoreURL;
 @property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *cloudStoreName;
 @property (readonly, NS_NONATOMIC_IOSONLY) NSURL *managedObjectModelURL;
-@property (readonly, NS_NONATOMIC_IOSONLY) BOOL cloudEnabled;
+@property (readonly, NS_NONATOMIC_IOSONLY) FMICloudStatus cloudStatus;
 
 - (instancetype)init NS_UNAVAILABLE;
 

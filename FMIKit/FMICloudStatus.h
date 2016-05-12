@@ -2,6 +2,6 @@
 
 typedef NS_ENUM(NSInteger, FMICloudStatus) {
     FMICloudStatusUnknown,
-    FMICloudStatusActive,
-    FMICloudStatusInactive,
+    FMICloudStatusEnabled,
+    FMICloudStatusDisabled,
 };

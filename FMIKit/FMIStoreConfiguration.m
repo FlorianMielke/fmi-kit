@@ -17,7 +17,7 @@
         _cloudStoreURL = cloudStoreURL;
         _cloudStoreName = [cloudStoreName copy];
         _managedObjectModelURL = managedObjectModelURL;
-        _cloudEnabled = cloudStatus;
+        _cloudStatus = cloudStatus;
     }
     return self;
 }

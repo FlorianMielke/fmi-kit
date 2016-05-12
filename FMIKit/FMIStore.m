@@ -89,7 +89,7 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
     self.cloudStoreURL = configuration.cloudStoreURL;
     self.cloudStoreName = configuration.cloudStoreName;
     self.managedObjectModelURL = configuration.managedObjectModelURL;
-    self.enableICloud = configuration.cloudEnabled;
+    self.enableICloud = (configuration.cloudStatus == FMICloudStatusEnabled);
     [self preparePersistentStoreCoordinatorWithStoreType:NSSQLiteStoreType storeURL:self.localStoreURL];
 }
 
