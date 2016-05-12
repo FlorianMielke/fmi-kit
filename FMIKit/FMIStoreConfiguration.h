@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FMICloudStatus.h"
 
 @interface FMIStoreConfiguration : NSObject
 
@@ -18,6 +19,6 @@
 
 - (instancetype)init NS_UNAVAILABLE;
 
-- (instancetype)initWithManagedObjectModelURL:(NSURL *)managedObjectModelURL localeStoreURL:(NSURL *)localeStoreURL cloudStoreURL:(NSURL *)cloudStoreURL cloudStoreName:(NSString *)cloudStoreName cloudEnabled:(BOOL)cloudEnabled;
+- (instancetype)initWithManagedObjectModelURL:(NSURL *)managedObjectModelURL localeStoreURL:(NSURL *)localeStoreURL cloudStoreURL:(NSURL *)cloudStoreURL cloudStoreName:(NSString *)cloudStoreName cloudStatus:(FMICloudStatus)cloudStatus;
 
 @end

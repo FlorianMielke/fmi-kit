@@ -1,13 +1,21 @@
 #import <UIKit/UIKit.h>
 
-#import "FMIAlertView.h"
-
 @class FMIDateHelper;
+@class FMIStore;
+@class FMIModifyCloudStatus;
+@class FMIFetchCloudStatus;
+@protocol FMIAlertView;
 
 @interface FMIKitFactory : NSObject
 
 + (FMIDateHelper *)createDateHelper;
 
-- (id <FMIAlertView>)createActivitiyIndicatorAlertViewWithTitle:(NSString *)title;
+- (id <FMIAlertView>)createActivityIndicatorAlertViewWithTitle:(NSString *)title;
+
++ (FMIFetchCloudStatus *)createFetchCloudStatus;
+
++ (FMIModifyCloudStatus *)createModifyCloudStatus;
+
++ (NSUserDefaults *)createUserDefaults;
 
 @end

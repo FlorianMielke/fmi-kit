@@ -34,16 +34,11 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIBinding.h>
 #import <FMIKit/FMIBindingManager.h>
 #import <FMIKit/FMIComparator.h>
-#import <FMIKit/FMICSVDeserializer.h>
-#import <FMIKit/FMICSVFieldDeserializer.h>
-#import <FMIKit/FMICSVFileDescription.h>
-#import <FMIKit/FMIFieldDescription.h>
 #import <FMIKit/FMIFoundationAdditions.h>
 #import <FMIKit/FMIDateHelper.h>
 #import <FMIKit/FMIGMTDateHelper.h>
 #import <FMIKit/FMITimeZoneHelper.h>
 #import <FMIKit/FMIUUIDHelper.h>
-#import <FMIKit/FMIFileCoordinator.h>
 
 #import <FMIKit/FMIYear.h>
 #import <FMIKit/FMIMonth.h>
@@ -52,7 +47,17 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIDuration.h>
 #import <FMIKit/FMIDurationFormatter.h>
 
+#pragma mark - Persistence
+
+#import <FMIKit/FMICSVDeserializer.h>
+#import <FMIKit/FMICSVFieldDeserializer.h>
+#import <FMIKit/FMICSVFileDescription.h>
+#import <FMIKit/FMIFieldDescription.h>
+#import <FMIKit/FMIFileCoordinator.h>
+
 #if !TARGET_OS_WATCH
+
+#import <FMIKit/FMIKitFactory.h>
 
 #import <FMIKit/NSUndoManager+Grouping.h>
 #import <FMIKit/SKProduct+LocalizedPrice.h>
@@ -80,7 +85,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIEditingToolbar.h>
 #import <FMIKit/FMIEventParser.h>
 #import <FMIKit/FMIHairlineView.h>
-#import <FMIKit/FMIKitFactory.h>
 #import <FMIKit/FMIMessageMIMETypes.h>
 #import <FMIKit/FMIMessageAttachment.h>
 #import <FMIKit/FMIMultilevelList.h>
@@ -89,9 +93,15 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMINestedTableView.h>
 #import <FMIKit/FMINonAminatedPushSegue.h>
 #import <FMIKit/FMINumericTextView.h>
-#import <FMIKit/FMIStore.h>
-#import <FMIKit/FMIStoreConfiguration.h>
 #import <FMIKit/FMISupportMessage.h>
 #import <FMIKit/FMITableView.h>
+
+#pragma mark - Persistence
+
+#import <FMIKit/FMIFetchCloudStatus.h>
+#import <FMIKit/FMIModifyCloudStatus.h>
+#import <FMIKit/FMICloudStatus.h>
+#import <FMIKit/FMIStore.h>
+#import <FMIKit/FMIStoreConfiguration.h>
 
 #endif
