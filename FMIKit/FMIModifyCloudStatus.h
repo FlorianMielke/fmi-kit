@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithCloudStatusGateway:(id <FMICloudStatusGateway>)cloudStatusGateway store:(FMIStore *)store;
 
-- (void)modifyCloudStatus:(FMICloudStatus)newCloudState;
+- (void)modifyCloudStatus:(FMICloudStatus)newCloudStatus;
 
 @end
 

@@ -18,7 +18,7 @@ NSString *const FMIUserDefaultsCloudStateGatewayCloudStatusKey = @"FMIUserDefaul
     return self;
 }
 
-- (FMICloudStatus)findCloudStatus {
+- (FMICloudStatus)fetchCloudStatus {
     return (FMICloudStatus) [self.userDefaults integerForKey:FMIUserDefaultsCloudStateGatewayCloudStatusKey];
 }
 

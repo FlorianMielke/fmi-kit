@@ -18,7 +18,7 @@
 }
 
 - (FMICloudStatus)fetchCloudStatus {
-    return [self.cloudStateGateway findCloudStatus];
+    return [self.cloudStateGateway fetchCloudStatus];
 }
 
 @end

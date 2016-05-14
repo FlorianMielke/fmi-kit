@@ -25,7 +25,7 @@
     NSString *modelPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"Event" ofType:@"momd"];
     NSURL *managedObjectModelURL = [NSURL fileURLWithPath:modelPath];
     self.subject = [[FMIStore alloc] init];
-    self.configuration = [[FMIStoreConfiguration alloc] initWithManagedObjectModelURL:managedObjectModelURL localStoreURL:self.storeURL localStoreOptions:nil cloudStoreURL:nil cloudStoreName:nil cloudStoreOptions:nil cloudStatus:NO];
+    self.configuration = [[FMIStoreConfiguration alloc] initWithManagedObjectModelURL:managedObjectModelURL localStoreURL:self.storeURL localStoreOptions:nil cloudStoreURL:nil cloudStoreOptions:nil];
     [self.subject useSQLiteStoreWithConfiguration:self.configuration];
 }
 

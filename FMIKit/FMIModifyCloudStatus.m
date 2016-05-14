@@ -20,16 +20,17 @@
     return self;
 }
 
-- (void)modifyCloudStatus:(FMICloudStatus)newCloudState {
-    switch (newCloudState) {
+- (void)modifyCloudStatus:(FMICloudStatus)newCloudStatus {
+    switch (newCloudStatus) {
         case FMICloudStatusEnabled: {
-            [self.store migrateLocalStoreToICloudStore];
-            [self.cloudStatusGateway saveCloudStatus:newCloudState];
+            FMICloudStatus oldCloudStatus = [self.cloudStatusGateway fetchCloudStatus];
+            [self.store migrateLocalStoreToICloudStoreWithOldCloudStatus:oldCloudStatus];
+            [self.cloudStatusGateway saveCloudStatus:newCloudStatus];
             break;
         }
         case FMICloudStatusDisabled: {
             [self.store migrateICloudStoreToLocalStore];
-            [self.cloudStatusGateway saveCloudStatus:newCloudState];
+            [self.cloudStatusGateway saveCloudStatus:newCloudStatus];
             break;
         }
         case FMICloudStatusUnknown:break;

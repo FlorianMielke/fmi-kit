@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, FMICloudStatus) {
-    FMICloudStatusUnknown,
+    FMICloudStatusUnknown = 0,
     FMICloudStatusEnabled,
     FMICloudStatusDisabled,
 };

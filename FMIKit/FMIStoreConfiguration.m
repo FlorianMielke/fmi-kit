@@ -10,14 +10,12 @@
 
 @implementation FMIStoreConfiguration
 
-- (instancetype)initWithManagedObjectModelURL:(NSURL *)managedObjectModelURL localStoreURL:(NSURL *)localStoreURL localStoreOptions:(NSDictionary *)localStoreOptions cloudStoreURL:(NSURL *)cloudStoreURL cloudStoreName:(NSString *)cloudStoreName cloudStoreOptions:(NSDictionary *)cloudStoreOptions cloudStatus:(FMICloudStatus)cloudStatus {
+- (instancetype)initWithManagedObjectModelURL:(NSURL *)managedObjectModelURL localStoreURL:(NSURL *)localStoreURL localStoreOptions:(NSDictionary *)localStoreOptions cloudStoreURL:(NSURL *)cloudStoreURL cloudStoreOptions:(NSDictionary *)cloudStoreOptions {
     self = [super init];
     if (self) {
         _localStoreURL = localStoreURL;
         _cloudStoreURL = cloudStoreURL;
-        _cloudStoreName = [cloudStoreName copy];
         _managedObjectModelURL = managedObjectModelURL;
-        _cloudStatus = cloudStatus;
         _cloudStoreOptions = cloudStoreOptions;
         _localStoreOptions = localStoreOptions;
     }

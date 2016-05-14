@@ -4,6 +4,7 @@
 //
 
 #import <CoreData/CoreData.h>
+#import "FMICloudStatus.h"
 
 @class FMIStoreConfiguration;
 
@@ -74,7 +75,7 @@ OBJC_EXTERN NSString *const FMIStoreDidChangeStoreNotification;
 /**
  * Migrates the locale store to an iCloud store.
  */
-- (void)migrateLocalStoreToICloudStore;
+- (void)migrateLocalStoreToICloudStoreWithOldCloudStatus:(FMICloudStatus)oldCloudStatus;
 
 /**
  * Resets the whole Core Data stack.

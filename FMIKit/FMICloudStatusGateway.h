@@ -5,7 +5,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol FMICloudStatusGateway <NSObject>
 
-- (FMICloudStatus)findCloudStatus;
+- (FMICloudStatus)fetchCloudStatus;
 
 - (void)saveCloudStatus:(FMICloudStatus)cloudStatus;
 
