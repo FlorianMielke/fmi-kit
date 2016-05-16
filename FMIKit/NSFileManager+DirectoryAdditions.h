@@ -36,4 +36,11 @@
  */
 - (BOOL)fm_removeItemsFromDirectoryAtPath:(NSString *)directoryPath;
 
+/**
+ * Removes all cloud store items
+ * @param cloudStoreURL The URL to the cloud store
+ * @return BOOL A flag that determines whether the operation was successful. Otherwise returns NO.
+ */
+- (BOOL)fmi_removeCloudStoresAtURL:(NSURL *)cloudStoreURL;
+
 @end

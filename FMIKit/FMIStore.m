@@ -177,20 +177,8 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
             if (!isDestroyed) {
                 NSLog(@"Failed to destroy cloud store file. Error: %@\n%@", destroyingError.localizedDescription, destroyingError.userInfo);
             } else {
-                NSURL *cloudStoreURL = self.configuration.cloudStoreURL;
-                NSError *removingCloudStoreError;
-                NSError *removingCloudDirectoryError;
-                NSURL *cloudDirectoryURL = [[[NSFileManager defaultManager] fm_applicationDocumentsDirectory] URLByAppendingPathComponent:@"CoreDataUbiquitySupport" isDirectory:YES];
-                BOOL removedCloudDirectory = [[NSFileManager defaultManager] removeItemAtURL:cloudDirectoryURL error:&removingCloudDirectoryError];
-                BOOL removedCloudStore = [[NSFileManager defaultManager] removeItemAtURL:cloudStoreURL error:&removingCloudStoreError];
-                if (!removedCloudStore) {
-                    NSLog(@"Failed to remove cloud store. Error: %@\n%@", removingCloudStoreError.localizedDescription, removingCloudStoreError.userInfo);
-                } 
-                if (!removedCloudDirectory) {
-                    NSLog(@"Failed to remove cloud directory. Error: %@\n%@", removingCloudDirectoryError.localizedDescription, removingCloudDirectoryError.userInfo);
-                }
-                BOOL removedCloudStores = removedCloudDirectory && removedCloudStore;
-                if (removedCloudStores){
+                BOOL removedCloudStores = [[NSFileManager defaultManager] fmi_removeCloudStoresAtURL:self.configuration.cloudStoreURL];
+                if (removedCloudStores) {
                     NSLog(@"Migrated to local and destroyed (removed) cloud store.");
                 }
             }
