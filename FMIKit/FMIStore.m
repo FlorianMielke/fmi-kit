@@ -126,6 +126,7 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
 }
 
 - (void)persistentStoreDidImportUbiquitousContentChanges:(NSNotification *)changeNotification {
+    NSLog(@"%s: %@", __PRETTY_FUNCTION__, changeNotification.userInfo);
     NSManagedObjectContext *context = self.managedObjectContext;
     [context performBlock:^{
         [context mergeChangesFromContextDidSaveNotification:changeNotification];
@@ -136,7 +137,7 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
 }
 
 - (void)storesWillChange:(nullable NSNotification *)notification {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"%s: %@", __PRETTY_FUNCTION__, notification.userInfo);
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         [self.notificationCenter postNotificationName:FMIStoreWillChangeStoreNotification object:self];
     }];
@@ -153,7 +154,7 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
 }
 
 - (void)storesDidChange:(nullable NSNotification *)notification {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"%s: %@", __PRETTY_FUNCTION__, notification.userInfo);
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         [self.notificationCenter postNotificationName:FMIStoreDidChangeStoreNotification object:self];
     }];
