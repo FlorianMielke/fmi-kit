@@ -32,7 +32,7 @@
 /**
  * Removes all items from a given directory
  * @param directoryPath The directory path
- * @return BOOL A flag that determins whether the operation was successful. Returns NO if directoryPath is nil or not a directory.
+ * @return BOOL A flag that determines whether the operation was successful. Returns NO if directoryPath is nil or not a directory.
  */
 - (BOOL)fm_removeItemsFromDirectoryAtPath:(NSString *)directoryPath;
 
