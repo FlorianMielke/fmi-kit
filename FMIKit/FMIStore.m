@@ -49,12 +49,15 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
     if (!self.managedObjectContext || !self.managedObjectContext.hasChanges) {
         return NO;
     }
-    NSError *error;
-    if (![self.managedObjectContext save:&error]) {
-        NSLog(@"Unresolved error in saving context: %@\n%@", error.localizedDescription, error.userInfo);
-        return NO;
-    }
-    return YES;
+    __block BOOL saved = YES;
+    [self.managedObjectContext performBlockAndWait:^{
+        NSError *error;
+        if (![self.managedObjectContext save:&error]) {
+            NSLog(@"Unresolved error in saving context: %@\n%@", error.localizedDescription, error.userInfo);
+            saved = NO;
+        }
+    }];
+    return saved;
 }
 
 - (void)resetCoreDataStack {
