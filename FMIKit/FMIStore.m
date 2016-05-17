@@ -218,15 +218,14 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
 }
 
 - (BOOL)resetICloudStoreIfNeeded {
-    NSPersistentStore *cloudStore = self.persistentStoreCoordinator.persistentStores.firstObject;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSError *error;
-        BOOL success = [NSPersistentStoreCoordinator removeUbiquitousContentAndPersistentStoreAtURL:cloudStore.URL options:cloudStore.options error:&error];
+        BOOL success = [NSPersistentStoreCoordinator removeUbiquitousContentAndPersistentStoreAtURL:self.configuration.cloudStoreURL options:self.configuration.cloudStoreOptions error:&error];
         dispatch_async(dispatch_get_main_queue(), ^{
             if (!success) {
                 NSLog(@"Failed to reset cloud store. Error: %@\n%@", error.localizedDescription, error.userInfo);
             } else {
-                NSLog(@"Finished");
+                NSLog(@"Finished reseting cloud store");
             }
         });
     });
