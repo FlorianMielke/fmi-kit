@@ -85,7 +85,7 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
 
 - (void)useSQLiteStoreWithConfiguration:(FMIStoreConfiguration *)configuration {
     self.configuration = configuration;
-    [self preparePersistentStoreCoordinatorWithStoreType:NSSQLiteStoreType storeURL:self.configuration.localStoreURL];
+    [self preparePersistentStoreCoordinatorWithStoreType:NSSQLiteStoreType storeURL:self.persistentStoreURL];
 }
 
 - (void)useInMemoryStoreWithConfiguration:(FMIStoreConfiguration *)configuration {
@@ -107,13 +107,6 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
     self.managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
 }
 
-- (NSDictionary *)persistentStoreOptions {
-    if ([self determineCloudStatus] == FMICloudStatusEnabled) {
-        return self.configuration.cloudStoreOptions;
-    }
-    return self.configuration.localStoreOptions;
-}
-
 #pragma mark - iCloud
 
 - (void)registerForICloudNotifications {
@@ -130,9 +123,8 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
 
 - (void)persistentStoreDidImportUbiquitousContentChanges:(NSNotification *)changeNotification {
     NSLog(@"%s: %@", __PRETTY_FUNCTION__, changeNotification.userInfo);
-    NSManagedObjectContext *context = self.managedObjectContext;
-    [context performBlock:^{
-        [context mergeChangesFromContextDidSaveNotification:changeNotification];
+    [self.managedObjectContext performBlock:^{
+        [self.managedObjectContext mergeChangesFromContextDidSaveNotification:changeNotification];
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [self.notificationCenter postNotificationName:FMIStoreDidUpdateFromCloudNotification object:self];
         }];
@@ -144,15 +136,14 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         [self.notificationCenter postNotificationName:FMIStoreWillChangeStoreNotification object:self];
     }];
-    NSManagedObjectContext *context = self.managedObjectContext;
-    [context performBlockAndWait:^{
+    [self.managedObjectContext performBlockAndWait:^{
         NSError *error;
-        if (context.hasChanges) {
-            if (![context save:&error]) {
+        if (self.managedObjectContext.hasChanges) {
+            if (![self.managedObjectContext save:&error]) {
                 NSLog(@"Failed saving context after NSPersistentStoreCoordinatorStores change. Error: %@\n%@", error.localizedDescription, error.userInfo);
             }
         }
-        [context reset];
+        [self.managedObjectContext reset];
     }];
 }
 
@@ -230,6 +221,20 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
         });
     });
     return YES;
+}
+
+- (NSURL *)persistentStoreURL {
+    if ([self determineCloudStatus] == FMICloudStatusEnabled) {
+        return self.configuration.cloudStoreURL;
+    }
+    return self.configuration.localStoreURL;
+}
+
+- (NSDictionary *)persistentStoreOptions {
+    if ([self determineCloudStatus] == FMICloudStatusEnabled) {
+        return self.configuration.cloudStoreOptions;
+    }
+    return self.configuration.localStoreOptions;
 }
 
 - (FMICloudStatus)determineCloudStatus {
