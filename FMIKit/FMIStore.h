@@ -20,6 +20,11 @@ OBJC_EXTERN NSString *const FMIStoreDidChangeStoreNotification;
 @interface FMIStore : NSObject
 
 /**
+ * The assigned store configuration.
+ */
+@property (readonly, NS_NONATOMIC_IOSONLY) FMIStoreConfiguration *configuration;
+
+/**
  * The managed object context.
  */
 @property (readonly, NS_NONATOMIC_IOSONLY) NSManagedObjectContext *managedObjectContext;
