@@ -5,6 +5,7 @@
 #import "FMIStore.h"
 #import "FMIUserDefaultsCloudStatusGateway.h"
 #import "FMIModifyCloudStatus.h"
+#import "FMIFileCoordinator.h"
 
 @implementation FMIKitFactory
 
@@ -44,4 +45,7 @@
     return [NSUserDefaults standardUserDefaults];
 }
 
++ (FMIFileCoordinator *)createFileCoordinator {
+    return [[FMIFileCoordinator alloc] init];
+}
 @end

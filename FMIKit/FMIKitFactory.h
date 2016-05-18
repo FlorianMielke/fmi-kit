@@ -4,6 +4,7 @@
 @class FMIStore;
 @class FMIModifyCloudStatus;
 @class FMIFetchCloudStatus;
+@class FMIFileCoordinator;
 @protocol FMIAlertView;
 
 @interface FMIKitFactory : NSObject
@@ -17,5 +18,7 @@
 + (FMIModifyCloudStatus *)createModifyCloudStatus;
 
 + (NSUserDefaults *)createUserDefaults;
+
++ (FMIFileCoordinator *)createFileCoordinator;
 
 @end
