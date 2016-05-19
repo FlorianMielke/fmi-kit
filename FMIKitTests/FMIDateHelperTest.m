@@ -66,7 +66,7 @@
 
 - (void)testItCalculatesTheTimeIntervalFromAGivenDateToNow {
     id date = OCMClassMock([NSDate class]);
-    OCMStub([date date]).andReturn([NSDate dateWithTimeIntervalSinceReferenceDate:362]);
+    OCMStub([date creationDate]).andReturn([NSDate dateWithTimeIntervalSinceReferenceDate:362]);
     NSDate *fromDate = [NSDate dateWithTimeIntervalSinceReferenceDate:120];
 
     XCTAssertEqual(240, [FMIDateHelper timeIntervalFromDateToNow:fromDate]);
@@ -77,7 +77,7 @@
 - (void)testItGeneratesANewDateForTodayWithTimeFromDateWithRandomSecond {
     NSDate *referenceDate = [NSDate dateWithTimeIntervalSince1970:3723];
     id date = OCMClassMock([NSDate class]);
-    OCMStub([date date]).andReturn([NSDate dateWithTimeIntervalSinceReferenceDate:60]);
+    OCMStub([date creationDate]).andReturn([NSDate dateWithTimeIntervalSinceReferenceDate:60]);
     FMIDateHelper *subject = [[FMIDateHelper alloc] init];
 
     NSDate *newDate = [subject dateForTodayWithSameTimeAndRandomSecondFromDate:referenceDate];

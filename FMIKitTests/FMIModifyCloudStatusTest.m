@@ -26,7 +26,7 @@
 
     [self.subject modifyCloudStatus:FMICloudStatusEnabled];
 
-    OCMVerify([self.store migrateLocalStoreToICloudStoreWithOldCloudStatus:FMICloudStatusUnknown]);
+    OCMVerify([self.store migrateLocalStoreToICloudStore]);
     OCMVerify([self.gateway saveCloudStatus:FMICloudStatusEnabled]);
 }
 

@@ -180,7 +180,7 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
     }];
 }
 
-- (void)migrateLocalStoreToICloudStoreWithOldCloudStatus:(FMICloudStatus)oldCloudStatus {
+- (void)migrateLocalStoreToICloudStore {
     [self storesWillChange:nil];
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
     [queue addOperationWithBlock:^{
@@ -235,6 +235,10 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
         return self.configuration.cloudStoreOptions;
     }
     return self.configuration.localStoreOptions;
+}
+
+- (NSPersistentStore *)currentPersistentStore {
+    return self.persistentStoreCoordinator.persistentStores.firstObject;
 }
 
 - (FMICloudStatus)determineCloudStatus {

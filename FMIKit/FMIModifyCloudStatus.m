@@ -23,9 +23,8 @@
 - (void)modifyCloudStatus:(FMICloudStatus)newCloudStatus {
     switch (newCloudStatus) {
         case FMICloudStatusEnabled: {
-            FMICloudStatus oldCloudStatus = [self.cloudStatusGateway fetchCloudStatus];
             [self.cloudStatusGateway saveCloudStatus:newCloudStatus];
-            [self.store migrateLocalStoreToICloudStoreWithOldCloudStatus:oldCloudStatus];
+            [self.store migrateLocalStoreToICloudStore];
             break;
         }
         case FMICloudStatusDisabled: {

@@ -40,6 +40,11 @@ OBJC_EXTERN NSString *const FMIStoreDidChangeStoreNotification;
 @property (readonly, NS_NONATOMIC_IOSONLY) NSDictionary *persistentStoreOptions;
 
 /**
+ * The current persistent store.
+ */
+@property (readonly, NS_NONATOMIC_IOSONLY) NSPersistentStore *currentPersistentStore;
+
+/**
  * A Boolean that indicates whether iCloud sync is enabled or not.
  */
 @property (readonly, getter=isICloudEnabled, NS_NONATOMIC_IOSONLY) BOOL enableICloud;
@@ -80,7 +85,7 @@ OBJC_EXTERN NSString *const FMIStoreDidChangeStoreNotification;
 /**
  * Migrates the locale store to an iCloud store.
  */
-- (void)migrateLocalStoreToICloudStoreWithOldCloudStatus:(FMICloudStatus)oldCloudStatus;
+- (void)migrateLocalStoreToICloudStore;
 
 /**
  * Resets the whole Core Data stack.
