@@ -18,8 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSDate *)dateForTodayWithSameTimeAndRandomSecondFromDate:(NSDate *)date;
 
-- (NSDate *)now;
-
 @end
 
 NS_ASSUME_NONNULL_END

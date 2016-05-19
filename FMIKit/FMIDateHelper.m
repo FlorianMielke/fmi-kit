@@ -57,8 +57,4 @@
     return randomSecond;
 }
 
-- (NSDate *)now {
-    return [NSDate date];
-}
-
 @end
