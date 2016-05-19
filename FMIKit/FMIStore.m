@@ -85,7 +85,7 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
 
 - (void)useSQLiteStoreWithConfiguration:(FMIStoreConfiguration *)configuration {
     self.configuration = configuration;
-    [self preparePersistentStoreCoordinatorWithStoreType:NSSQLiteStoreType storeURL:self.persistentStoreURL];
+    [self preparePersistentStoreCoordinatorWithStoreType:NSSQLiteStoreType storeURL:self.configuration.currentStoreURL];
 }
 
 - (void)useInMemoryStoreWithConfiguration:(FMIStoreConfiguration *)configuration {
@@ -98,7 +98,7 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
     self.persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
     [self registerForICloudNotifications];
     NSError *error;
-    if (![self.persistentStoreCoordinator addPersistentStoreWithType:storeType configuration:nil URL:storeURL options:self.persistentStoreOptions error:&error]) {
+    if (![self.persistentStoreCoordinator addPersistentStoreWithType:storeType configuration:nil URL:storeURL options:self.configuration.currentStoreOptions error:&error]) {
         NSLog(@"Error while creating persistent store coordinator: %@\n%@", error.localizedDescription, error.userInfo);
         return;
     }
@@ -223,26 +223,8 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
     return YES;
 }
 
-- (NSURL *)persistentStoreURL {
-    if ([self determineCloudStatus] == FMICloudStatusEnabled) {
-        return self.configuration.cloudStoreURL;
-    }
-    return self.configuration.localStoreURL;
-}
-
-- (NSDictionary *)persistentStoreOptions {
-    if ([self determineCloudStatus] == FMICloudStatusEnabled) {
-        return self.configuration.cloudStoreOptions;
-    }
-    return self.configuration.localStoreOptions;
-}
-
 - (NSPersistentStore *)currentPersistentStore {
     return self.persistentStoreCoordinator.persistentStores.firstObject;
-}
-
-- (FMICloudStatus)determineCloudStatus {
-    return [[FMIKitFactory createFetchCloudStatus] fetchCloudStatus];
 }
 
 @end
