@@ -216,7 +216,7 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
             if (!success) {
                 NSLog(@"Failed to reset cloud store. Error: %@\n%@", error.localizedDescription, error.userInfo);
             } else {
-                NSLog(@"Finished reseting cloud store");
+                NSLog(@"Finished resetting cloud store");
             }
         });
     });
