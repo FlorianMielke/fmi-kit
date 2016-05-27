@@ -55,10 +55,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIFieldDescription.h>
 #import <FMIKit/FMIFileCoordinator.h>
 
-#pragma mark - Review
-
-#import <FMIKit/FMIReviewNotificationCoordinator.h>
-
 #if !TARGET_OS_WATCH
 
 #import <FMIKit/FMIKitFactory.h>
@@ -107,5 +103,10 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMICloudStatus.h>
 #import <FMIKit/FMIStore.h>
 #import <FMIKit/FMIStoreConfiguration.h>
+
+#pragma mark - Review
+
+#import <FMIKit/FMIReviewNotificationCoordinator.h>
+#import <FMIKit/FMIReviewNotificationViewController.h>
 
 #endif
