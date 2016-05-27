@@ -35,16 +35,6 @@ OBJC_EXTERN NSString *const FMIStoreDidChangeStoreNotification;
 @property (readonly, NS_NONATOMIC_IOSONLY) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 /**
- * The persistent store options.
- */
-@property (readonly, NS_NONATOMIC_IOSONLY) NSDictionary *persistentStoreOptions;
-
-/**
- * The current persistent store.
- */
-@property (readonly, NS_NONATOMIC_IOSONLY) NSPersistentStore *currentPersistentStore;
-
-/**
  * A Boolean that indicates whether iCloud sync is enabled or not.
  */
 @property (readonly, getter=isICloudEnabled, NS_NONATOMIC_IOSONLY) BOOL enableICloud;

@@ -223,8 +223,4 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
     return YES;
 }
 
-- (NSPersistentStore *)currentPersistentStore {
-    return self.persistentStoreCoordinator.persistentStores.firstObject;
-}
-
 @end
