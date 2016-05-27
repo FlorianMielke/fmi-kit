@@ -35,11 +35,6 @@ OBJC_EXTERN NSString *const FMIStoreDidChangeStoreNotification;
 @property (readonly, NS_NONATOMIC_IOSONLY) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 /**
- * A Boolean that indicates whether iCloud sync is enabled or not.
- */
-@property (readonly, getter=isICloudEnabled, NS_NONATOMIC_IOSONLY) BOOL enableICloud;
-
-/**
  * Returns a shared instance of the FMIStore class.
  *
  * @return A shared instance of the FMIStore class.
