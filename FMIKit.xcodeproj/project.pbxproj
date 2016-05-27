@@ -80,6 +80,7 @@
 		3591329C03F11E4771C940F7 /* FMINonAminatedPushSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913788E9482FA82280B7FC /* FMINonAminatedPushSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359132D4F477821D6DBA7C60 /* FMIModifyCloudStatusTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 359130FF8EF5D562D5E73887 /* FMIModifyCloudStatusTest.m */; };
 		359132E39EB8CAA02F7903FC /* NSData+FileAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913CA0841864C15B1F5630 /* NSData+FileAdditionsTests.m */; };
+		359133218E8001C69E100B08 /* FMIWhatsNewCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = 359139C2BB26E5BA8FA54A1A /* FMIWhatsNewCoordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3591332F7A0D8F1CE5B1EC1B /* FakeCSVFileDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913287200CA2EDFD76F045 /* FakeCSVFileDescription.m */; };
 		35913333EE3DE170F8E88B1A /* NSDateFormatter+TimingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913B205FA4C90F8E45CDC4 /* NSDateFormatter+TimingTests.m */; };
 		3591335A7F8709405761964D /* FMIMessageAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 359136636934566508C7A91A /* FMIMessageAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -167,6 +168,7 @@
 		359137422710C5150AC5FBCF /* FMIMultilevelList.m in Sources */ = {isa = PBXBuildFile; fileRef = 359139A988F63FC2C176157F /* FMIMultilevelList.m */; };
 		3591374825151F83A6EF6EC6 /* NSString+FMIDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913D078EE58243885A9973 /* NSString+FMIDrawing.m */; };
 		3591375B530CF00CBD0A8E30 /* NSArray+Querying.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913D913A0265DE490F85FC /* NSArray+Querying.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		359137618633DFA24219C25D /* FMIWhatsNewCoordinatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591320BB074769565423F8F /* FMIWhatsNewCoordinatorTest.m */; };
 		3591376782D9B622BBD6C6DF /* FMIMessageAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591326AE24EAE73559EF17D /* FMIMessageAttachment.m */; };
 		3591377CAC2FE187324D799A /* NSIndexSet+Initialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913405C2405456DD622BEC /* NSIndexSet+Initialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359137970CE79813A1CE056D /* NSDecimalNumber+CalculationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 359135885D9C9FF477269A8B /* NSDecimalNumber+CalculationsTests.m */; };
@@ -335,6 +337,7 @@
 		35913F973552707C9D90B972 /* FMIBlurredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913B071455934120E45D3B /* FMIBlurredView.m */; };
 		35913F9D3483403CDE293BA2 /* FMIHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 3591323DC8B663841012BD82 /* FMIHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913FADB3C41A956866051D /* FMIAcceptedCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 359137E38C993AFFB4D560BE /* FMIAcceptedCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35913FAFC8E28568BD5D3C38 /* FMIWhatsNewCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913FA74AF9AA5A1B290817 /* FMIWhatsNewCoordinator.m */; };
 		35913FC1B718497124AE0177 /* NSBundle+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591358170D9EC419DFC70E8 /* NSBundle+Configuration.m */; };
 		35913FF467073536607AD797 /* NSManagedObjectContext+PersistentStoreAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591377E045A1B4526527FDB /* NSManagedObjectContext+PersistentStoreAdditions.m */; };
 /* End PBXBuildFile section */
@@ -398,6 +401,7 @@
 		359132065B540D98A2C06090 /* FMINumericTextViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMINumericTextViewTests.m; path = FMIKitTests/FMINumericTextViewTests.m; sourceTree = SOURCE_ROOT; };
 		3591320840F7FCB4F0118D79 /* NSArray+Initialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Initialization.m"; sourceTree = "<group>"; };
 		3591320A24AF7C3C0DF96AE6 /* FakeTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeTableViewDataSource.h; sourceTree = "<group>"; };
+		3591320BB074769565423F8F /* FMIWhatsNewCoordinatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIWhatsNewCoordinatorTest.m; path = FMIKitTests/FMIWhatsNewCoordinatorTest.m; sourceTree = SOURCE_ROOT; };
 		3591323AA293A01C6A8A4913 /* FMIMessageMIMETypesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIMessageMIMETypesTests.m; path = FMIKitTests/FMIMessageMIMETypesTests.m; sourceTree = SOURCE_ROOT; };
 		3591323DC8B663841012BD82 /* FMIHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIHelpers.h; sourceTree = "<group>"; };
 		3591325650AC8762E19391B4 /* NSDateFormatter+Timing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Timing.m"; sourceTree = "<group>"; };
@@ -514,6 +518,7 @@
 		35913989661501AF09A85018 /* NSData+FileAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+FileAdditions.m"; sourceTree = "<group>"; };
 		359139A832DE54E59DA264F8 /* FMIUUIDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIUUIDHelper.h; sourceTree = "<group>"; };
 		359139A988F63FC2C176157F /* FMIMultilevelList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIMultilevelList.m; sourceTree = "<group>"; };
+		359139C2BB26E5BA8FA54A1A /* FMIWhatsNewCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIWhatsNewCoordinator.h; sourceTree = "<group>"; };
 		359139CC19A5AB72BA911B77 /* FMIMultilevelListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIMultilevelListItem.h; sourceTree = "<group>"; };
 		359139CE81A2F5587B019FAC /* FMIKitPrivatesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIKitPrivatesTests.m; path = FMIKitTests/FMIKitPrivatesTests.m; sourceTree = SOURCE_ROOT; };
 		359139E70A4FE941C76BD2CA /* FMICSVFileDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMICSVFileDescription.h; sourceTree = "<group>"; };
@@ -609,6 +614,7 @@
 		35913F96CE17A3187641AAF6 /* NSCalendar+SharedInstances.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+SharedInstances.m"; sourceTree = "<group>"; };
 		35913F9AF2CBEA14A658B15B /* FMIEventParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIEventParser.m; sourceTree = "<group>"; };
 		35913FA137230747CDAAF19D /* SKProduct+LocalizedPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKProduct+LocalizedPrice.m"; sourceTree = "<group>"; };
+		35913FA74AF9AA5A1B290817 /* FMIWhatsNewCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIWhatsNewCoordinator.m; sourceTree = "<group>"; };
 		35913FA870D304FE1539ECBA /* FMIDateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIDateHelper.h; sourceTree = "<group>"; };
 		35913FF3B778C393F6262E72 /* FakeBindingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeBindingModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -677,6 +683,7 @@
 				359137C367164A0BB7D46C0A /* Review */,
 				171CB9881AFB63C7002BE185 /* Supporting Files */,
 				35913936811D3AC35F6D804E /* Value Types */,
+				359139DDAF0A58C04228D624 /* Whats New */,
 			);
 			path = FMIKit;
 			sourceTree = "<group>";
@@ -821,6 +828,16 @@
 				359133AD3EED17EBCFFC829C /* FMIYear.m */,
 			);
 			name = "Value Types";
+			sourceTree = "<group>";
+		};
+		359139DDAF0A58C04228D624 /* Whats New */ = {
+			isa = PBXGroup;
+			children = (
+				359139C2BB26E5BA8FA54A1A /* FMIWhatsNewCoordinator.h */,
+				35913FA74AF9AA5A1B290817 /* FMIWhatsNewCoordinator.m */,
+				3591320BB074769565423F8F /* FMIWhatsNewCoordinatorTest.m */,
+			);
+			name = "Whats New";
 			sourceTree = "<group>";
 		};
 		35913A5FB298FDC2BE7DE14A /* Configurations */ = {
@@ -1148,6 +1165,7 @@
 				35913CE903A26853E61440DB /* NSCoder+SecureCoding.h in Headers */,
 				35913F4C672C05F0E8A0A08E /* FMIReviewNotificationCoordinator.h in Headers */,
 				359135192101720B4A7195DA /* FMIReviewNotificationViewController.h in Headers */,
+				359133218E8001C69E100B08 /* FMIWhatsNewCoordinator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1443,6 +1461,7 @@
 				359139E0F8F92C1C0D642FFC /* NSCoder+SecureCoding.m in Sources */,
 				35913B8A059897B0C9D1A7A4 /* FMIReviewNotificationCoordinator.m in Sources */,
 				359137C40B64B377FFAD554C /* FMIReviewNotificationViewController.m in Sources */,
+				35913FAFC8E28568BD5D3C38 /* FMIWhatsNewCoordinator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1507,6 +1526,7 @@
 				359130B4BDA3DB7A6CE1EE69 /* NSManagedObjectContext+PersistentStoreAdditionsTests.m in Sources */,
 				35913B66558C5182BBE31203 /* FMIStoreConfigurationTest.m in Sources */,
 				359131731EBDCBB8E1C8432A /* FMIReviewNotificationCoordinatorTest.m in Sources */,
+				359137618633DFA24219C25D /* FMIWhatsNewCoordinatorTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

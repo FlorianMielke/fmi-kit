@@ -7,6 +7,8 @@
 @class FMIFileCoordinator;
 @protocol FMIAlertView;
 @class FMIReviewNotificationCoordinator;
+@class FMIWhatsNewCoordinator;
+@class FMIWhatsNewCoordinator;
 
 @interface FMIKitFactory : NSObject
 
@@ -23,5 +25,7 @@
 + (FMIFileCoordinator *)createFileCoordinator;
 
 + (FMIReviewNotificationCoordinator *)createReviewNotificationCoordinatorForAppStoreID:(NSString *)appStoreID;
+
++ (FMIWhatsNewCoordinator *)createWhatsNewCoordinator;
 
 @end

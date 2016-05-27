@@ -104,9 +104,10 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIStore.h>
 #import <FMIKit/FMIStoreConfiguration.h>
 
-#pragma mark - Review
+#pragma mark - Review& What's New
 
 #import <FMIKit/FMIReviewNotificationCoordinator.h>
 #import <FMIKit/FMIReviewNotificationViewController.h>
+#import <FMIKit/FMIWhatsNewCoordinator.h>
 
 #endif

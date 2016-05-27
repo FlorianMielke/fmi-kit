@@ -7,6 +7,7 @@
 #import "FMIModifyCloudStatus.h"
 #import "FMIFileCoordinator.h"
 #import "FMIReviewNotificationCoordinator.h"
+#import "FMIWhatsNewCoordinator.h"
 
 @implementation FMIKitFactory
 
@@ -46,6 +47,12 @@
     NSUserDefaults *userDefaults = [FMIKitFactory createUserDefaults];
     NSCalendar *calendar = [FMIKitFactory createCalendar];
     return [[FMIReviewNotificationCoordinator alloc] initWithAppStoreID:appStoreID userDefaults:userDefaults calendar:calendar];
+}
+
++ (FMIWhatsNewCoordinator *)createWhatsNewCoordinator {
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSUserDefaults *userDefaults = [FMIKitFactory createUserDefaults];
+    return [[FMIWhatsNewCoordinator alloc] initWithBundle:bundle userDefaults:userDefaults];
 }
 
 + (NSUserDefaults *)createUserDefaults {
