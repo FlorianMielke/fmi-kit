@@ -6,6 +6,7 @@
 @class FMIFetchCloudStatus;
 @class FMIFileCoordinator;
 @protocol FMIAlertView;
+@class FMIReviewNotificationCoordinator;
 
 @interface FMIKitFactory : NSObject
 
@@ -20,5 +21,7 @@
 + (NSUserDefaults *)createUserDefaults;
 
 + (FMIFileCoordinator *)createFileCoordinator;
+
++ (FMIReviewNotificationCoordinator *)createReviewNotificationCoordinatorForAppStoreID:(NSString *)appStoreID;
 
 @end

@@ -6,6 +6,7 @@
 #import "FMIUserDefaultsCloudStatusGateway.h"
 #import "FMIModifyCloudStatus.h"
 #import "FMIFileCoordinator.h"
+#import "FMIReviewNotificationCoordinator.h"
 
 @implementation FMIKitFactory
 
@@ -41,6 +42,12 @@
     return [FMIStore sharedStore];
 }
 
++ (FMIReviewNotificationCoordinator *)createReviewNotificationCoordinatorForAppStoreID:(NSString *)appStoreID {
+    NSUserDefaults *userDefaults = [FMIKitFactory createUserDefaults];
+    NSCalendar *calendar = [FMIKitFactory createCalendar];
+    return [[FMIReviewNotificationCoordinator alloc] initWithAppStoreID:appStoreID userDefaults:userDefaults calendar:calendar];
+}
+
 + (NSUserDefaults *)createUserDefaults {
     return [NSUserDefaults standardUserDefaults];
 }
@@ -48,4 +55,9 @@
 + (FMIFileCoordinator *)createFileCoordinator {
     return [[FMIFileCoordinator alloc] init];
 }
+
++ (NSCalendar *)createCalendar {
+    return [NSCalendar currentCalendar];
+}
+
 @end
