@@ -26,6 +26,6 @@
 
 + (FMIReviewNotificationCoordinator *)createReviewNotificationCoordinatorForAppStoreID:(NSString *)appStoreID;
 
-+ (FMIWhatsNewCoordinator *)createWhatsNewCoordinator;
++ (FMIWhatsNewCoordinator *)createWhatsNewCoordinatorWithBaseURL:(NSURL *)whatsNewBaseURL;
 
 @end

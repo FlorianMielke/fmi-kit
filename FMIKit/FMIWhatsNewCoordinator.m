@@ -1,4 +1,5 @@
 #import "FMIWhatsNewCoordinator.h"
+#import "NSLocale+German.h"
 
 NSString *const FMIWhatsNewLastViewedVersionKey = @"FMIWhatsNewLastViewedVersionKey";
 
@@ -6,18 +7,29 @@ NSString *const FMIWhatsNewLastViewedVersionKey = @"FMIWhatsNewLastViewedVersion
 
 @property (NS_NONATOMIC_IOSONLY) NSBundle *bundle;
 @property (NS_NONATOMIC_IOSONLY) NSUserDefaults *userDefaults;
+@property (NS_NONATOMIC_IOSONLY) NSURL *whatsNewBaseURL;
 
 @end
 
 @implementation FMIWhatsNewCoordinator
 
-- (instancetype)initWithBundle:(NSBundle *)bundle userDefaults:(NSUserDefaults *)userDefaults {
+- (instancetype)initWithBundle:(NSBundle *)bundle userDefaults:(NSUserDefaults *)userDefaults whatsNewBaseURL:(NSURL *)whatsNewBaseURL {
     self = [super init];
     if (self) {
         self.bundle = bundle;
         self.userDefaults = userDefaults;
+        self.whatsNewBaseURL = whatsNewBaseURL;
     }
     return self;
+}
+
+- (NSURL *)localizedWhatsNewURL {
+    if ([NSLocale fmi_isGermanLanguage]) {
+        NSString *path = self.whatsNewBaseURL.absoluteString;
+        NSString *localizedPath = [path stringByReplacingOccurrencesOfString:@"/en/" withString:@"/de/"];
+        return [NSURL URLWithString:localizedPath];
+    }
+    return self.whatsNewBaseURL;
 }
 
 - (BOOL)shouldShow {
