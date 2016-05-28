@@ -156,8 +156,7 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
 
 - (void)migrateICloudStoreToLocalStore {
     [self storesWillChange:nil];
-    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-    [queue addOperationWithBlock:^{
+    [self.persistentStoreCoordinator performBlock:^{
         NSPersistentStore *cloudStore = self.persistentStoreCoordinator.persistentStores.firstObject;
         NSError *error;
         NSMutableDictionary *localStoreOptions = [self.configuration.localStoreOptions mutableCopy];
@@ -182,8 +181,7 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
 
 - (void)migrateLocalStoreToICloudStore {
     [self storesWillChange:nil];
-    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-    [queue addOperationWithBlock:^{
+    [self.persistentStoreCoordinator performBlock:^{
         NSPersistentStore *localStore = self.persistentStoreCoordinator.persistentStores.firstObject;
         NSDictionary *localStoreOptions = [localStore.options copy];
         NSError *error;

@@ -18,8 +18,7 @@
     [super setUp];
     self.bundle = OCMClassMock([NSBundle class]);
     self.userDefaults = OCMClassMock([NSUserDefaults class]);
-    NSString *path = [NSTemporaryDirectory() stringByAppendingPathComponent:@"/en/product.php"];
-    self.whatsNewBaseURL = [NSURL fileURLWithPath:path];
+    self.whatsNewBaseURL = [NSURL URLWithString:@"https://madefm.com/en/product.php"];
     self.subject = [[FMIWhatsNewCoordinator alloc] initWithBundle:self.bundle userDefaults:self.userDefaults whatsNewBaseURL:self.whatsNewBaseURL];
 }
 
@@ -68,8 +67,7 @@
 - (void)testItLocalizesWhatsNewURLForGerman {
     id locale = OCMClassMock([NSLocale class]);
     OCMStub([locale fmi_isGermanLanguage]).andReturn(YES);
-    NSString *path = [NSTemporaryDirectory() stringByAppendingPathComponent:@"/de/product.php"];
-    NSURL *germanURL = [NSURL fileURLWithPath:path];
+    NSURL *germanURL = [NSURL URLWithString:@"https://madefm.com/de/product.php"];
 
     NSURL *url = self.subject.localizedWhatsNewURL;
     
