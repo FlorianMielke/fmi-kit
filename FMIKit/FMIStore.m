@@ -189,27 +189,29 @@ NSString *const FMIStoreCloudEnabledKey = @"FMIStoreCloudEnabledKey";
         [self storesWillChange:nil];
         if ([[NSUbiquitousKeyValueStore defaultStore] boolForKey:FMIStoreCloudEnabledKey]) {
             [self destroyLocalStore];
-        }
-        NSPersistentStore *localStore = self.persistentStoreCoordinator.persistentStores.firstObject;
-        NSDictionary *localStoreOptions = [localStore.options copy];
-        NSError *error;
-        NSPersistentStore *iCloudStore = [self.persistentStoreCoordinator migratePersistentStore:localStore toURL:self.configuration.cloudStoreURL options:self.configuration.cloudStoreOptions withType:NSSQLiteStoreType error:&error];
-        if (!iCloudStore) {
-            NSLog(@"Failed to migrate local to cloud store. Error: %@\n%@", error.localizedDescription, error.userInfo);
+            [self useSQLiteStoreWithConfiguration:self.configuration];
         } else {
-            [[NSUbiquitousKeyValueStore defaultStore] setBool:YES forKey:FMIStoreCloudEnabledKey];
-            [[NSUbiquitousKeyValueStore defaultStore] synchronize];
-            NSError *destroyingError;
-            BOOL isDestroyed = [self.persistentStoreCoordinator destroyPersistentStoreAtURL:self.configuration.localStoreURL withType:NSSQLiteStoreType options:localStoreOptions error:&destroyingError];
-            if (!isDestroyed) {
-                NSLog(@"Failed to destroy local store file. Error: %@\n%@", destroyingError.localizedDescription, destroyingError.userInfo);
+            NSPersistentStore *localStore = self.persistentStoreCoordinator.persistentStores.firstObject;
+            NSDictionary *localStoreOptions = [localStore.options copy];
+            NSError *error;
+            NSPersistentStore *iCloudStore = [self.persistentStoreCoordinator migratePersistentStore:localStore toURL:self.configuration.cloudStoreURL options:self.configuration.cloudStoreOptions withType:NSSQLiteStoreType error:&error];
+            if (!iCloudStore) {
+                NSLog(@"Failed to migrate local to cloud store. Error: %@\n%@", error.localizedDescription, error.userInfo);
             } else {
-                NSError *removingError;
-                BOOL removed = [[NSFileManager defaultManager] removeItemAtURL:self.configuration.localStoreURL error:&removingError];
-                if (!removed) {
-                    NSLog(@"Failed to remove local store. Error: %@\n%@", removingError.localizedDescription, removingError.userInfo);
+                [[NSUbiquitousKeyValueStore defaultStore] setBool:YES forKey:FMIStoreCloudEnabledKey];
+                [[NSUbiquitousKeyValueStore defaultStore] synchronize];
+                NSError *destroyingError;
+                BOOL isDestroyed = [self.persistentStoreCoordinator destroyPersistentStoreAtURL:self.configuration.localStoreURL withType:NSSQLiteStoreType options:localStoreOptions error:&destroyingError];
+                if (!isDestroyed) {
+                    NSLog(@"Failed to destroy local store file. Error: %@\n%@", destroyingError.localizedDescription, destroyingError.userInfo);
                 } else {
-                    NSLog(@"Migrated to cloud and destroyed (removed) local store.");
+                    NSError *removingError;
+                    BOOL removed = [[NSFileManager defaultManager] removeItemAtURL:self.configuration.localStoreURL error:&removingError];
+                    if (!removed) {
+                        NSLog(@"Failed to remove local store. Error: %@\n%@", removingError.localizedDescription, removingError.userInfo);
+                    } else {
+                        NSLog(@"Migrated to cloud and destroyed (removed) local store.");
+                    }
                 }
             }
         }
