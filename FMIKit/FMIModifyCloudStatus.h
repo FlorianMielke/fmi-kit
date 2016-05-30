@@ -1,7 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "FMICloudStatus.h"
 
-@class FMIStore;
 @protocol FMICloudStatusGateway;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -10,7 +9,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init NS_UNAVAILABLE;
 
-- (instancetype)initWithCloudStatusGateway:(id <FMICloudStatusGateway>)cloudStatusGateway store:(nullable FMIStore *)store;
+- (instancetype)initWithCloudStatusGateway:(id <FMICloudStatusGateway>)cloudStatusGateway;
 
 - (void)modifyCloudStatus:(FMICloudStatus)newCloudStatus;
 

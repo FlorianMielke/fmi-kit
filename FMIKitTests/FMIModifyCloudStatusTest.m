@@ -18,7 +18,7 @@
     [super setUp];
     self.store = OCMClassMock([FMIStore class]);
     self.gateway = OCMProtocolMock(@protocol(FMICloudStatusGateway));
-    self.subject = [[FMIModifyCloudStatus alloc] initWithCloudStatusGateway:self.gateway store:self.store];
+    self.subject = [[FMIModifyCloudStatus alloc] initWithCloudStatusGateway:self.gateway];
 }
 
 - (void)testItModifiesCloudStatusToEnabled {

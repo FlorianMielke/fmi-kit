@@ -36,13 +36,12 @@
 
 + (FMIModifyCloudStatus *)createModifyCloudStatus {
     id <FMICloudStatusGateway> cloudStateGateway = [FMIKitFactory createUserDefaultsCloudStatusGateway];
-    FMIStore *store = [FMIKitFactory createStore];
-    return [[FMIModifyCloudStatus alloc] initWithCloudStatusGateway:cloudStateGateway store:store];
+    return [[FMIModifyCloudStatus alloc] initWithCloudStatusGateway:cloudStateGateway];
 }
 
 + (FMIModifyCloudStatus *)createModifyInitialCloudStatus {
     id <FMICloudStatusGateway> cloudStateGateway = [FMIKitFactory createUbiquitousCloudStatusGateway];
-    return [[FMIModifyCloudStatus alloc] initWithCloudStatusGateway:cloudStateGateway store:nil];
+    return [[FMIModifyCloudStatus alloc] initWithCloudStatusGateway:cloudStateGateway];
 }
 
 + (id <FMICloudStatusGateway>)createUbiquitousCloudStatusGateway {

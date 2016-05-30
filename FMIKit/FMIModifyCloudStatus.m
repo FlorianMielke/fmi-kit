@@ -5,17 +5,15 @@
 @interface FMIModifyCloudStatus ()
 
 @property (NS_NONATOMIC_IOSONLY) id <FMICloudStatusGateway> cloudStatusGateway;
-@property (NS_NONATOMIC_IOSONLY) FMIStore *store;
 
 @end
 
 @implementation FMIModifyCloudStatus
 
-- (instancetype)initWithCloudStatusGateway:(id <FMICloudStatusGateway>)cloudStatusGateway store:(nullable FMIStore *)store {
+- (instancetype)initWithCloudStatusGateway:(id <FMICloudStatusGateway>)cloudStatusGateway {
     self = [super init];
     if (self) {
         self.cloudStatusGateway = cloudStatusGateway;
-        self.store = store;
     }
     return self;
 }
@@ -24,12 +22,10 @@
     switch (newCloudStatus) {
         case FMICloudStatusEnabled: {
             [self.cloudStatusGateway saveCloudStatus:newCloudStatus];
-            [self.store migrateLocalStoreToICloudStore];
             break;
         }
         case FMICloudStatusDisabled: {
             [self.cloudStatusGateway saveCloudStatus:newCloudStatus];
-            [self.store migrateICloudStoreToLocalStore];
             break;
         }
         case FMICloudStatusUnknown:break;
