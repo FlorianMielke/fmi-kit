@@ -7,6 +7,8 @@
 #import "FMICloudStatus.h"
 
 @class FMIStoreConfiguration;
+@class FMIFetchCloudStatus;
+@class FMIModifyCloudStatus;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -47,6 +49,8 @@ OBJC_EXTERN NSString *const FMIStoreDidChangeStoreNotification;
  * @return YES if the save succeeds, otherwise NO.
  */
 - (BOOL)saveContext;
+
+- (void)configureWithFetchCloudStatus:(FMIFetchCloudStatus *)fetchCloudStatus modifyCloudStatus:(FMIModifyCloudStatus *)modifyCloudStatus;
 
 /**
  * Forces the store to use a SQLite store.

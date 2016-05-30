@@ -21,4 +21,8 @@
     return [self.cloudStateGateway fetchCloudStatus];
 }
 
+- (BOOL)isCloudStatusEnabled {
+    return [self fetchCloudStatus] == FMICloudStatusEnabled;
+}
+
 @end

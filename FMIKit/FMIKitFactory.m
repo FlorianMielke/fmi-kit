@@ -8,6 +8,7 @@
 #import "FMIFileCoordinator.h"
 #import "FMIReviewNotificationCoordinator.h"
 #import "FMIWhatsNewCoordinator.h"
+#import "FMIUbiquitousCloudStatusGateway.h"
 
 @implementation FMIKitFactory
 
@@ -24,23 +25,47 @@
 }
 
 + (FMIFetchCloudStatus *)createFetchCloudStatus {
-    id <FMICloudStatusGateway> cloudStateGateway = [FMIKitFactory createCloudStatusGateway];
+    id <FMICloudStatusGateway> cloudStateGateway = [FMIKitFactory createUserDefaultsCloudStatusGateway];
+    return [[FMIFetchCloudStatus alloc] initWithCloudStateGateway:cloudStateGateway];
+}
+
++ (FMIFetchCloudStatus *)createFetchInitialCloudStatus {
+    id <FMICloudStatusGateway> cloudStateGateway = [FMIKitFactory createUbiquitousCloudStatusGateway];
     return [[FMIFetchCloudStatus alloc] initWithCloudStateGateway:cloudStateGateway];
 }
 
 + (FMIModifyCloudStatus *)createModifyCloudStatus {
-    id <FMICloudStatusGateway> cloudStateGateway = [FMIKitFactory createCloudStatusGateway];
+    id <FMICloudStatusGateway> cloudStateGateway = [FMIKitFactory createUserDefaultsCloudStatusGateway];
     FMIStore *store = [FMIKitFactory createStore];
     return [[FMIModifyCloudStatus alloc] initWithCloudStatusGateway:cloudStateGateway store:store];
 }
 
-+ (id <FMICloudStatusGateway>)createCloudStatusGateway {
++ (FMIModifyCloudStatus *)createModifyInitialCloudStatus {
+    id <FMICloudStatusGateway> cloudStateGateway = [FMIKitFactory createUbiquitousCloudStatusGateway];
+    FMIStore *store = [FMIKitFactory createStore];
+    return [[FMIModifyCloudStatus alloc] initWithCloudStatusGateway:cloudStateGateway store:store];
+}
+
++ (id <FMICloudStatusGateway>)createUbiquitousCloudStatusGateway {
+    NSUbiquitousKeyValueStore *keyValueStore = [self createUbiquitousKeyValueStore];
+    return [[FMIUbiquitousCloudStatusGateway alloc] initWithKeyValueStore:keyValueStore];
+}
+
++ (NSUbiquitousKeyValueStore *)createUbiquitousKeyValueStore {
+    return [NSUbiquitousKeyValueStore defaultStore];
+}
+
++ (id <FMICloudStatusGateway>)createUserDefaultsCloudStatusGateway {
     NSUserDefaults *userDefaults = [FMIKitFactory createUserDefaults];
     return [[FMIUserDefaultsCloudStatusGateway alloc] initWithUserDefaults:userDefaults];
 }
 
 + (FMIStore *)createStore {
-    return [FMIStore sharedStore];
+    FMIStore *store = [FMIStore sharedStore];
+    FMIFetchCloudStatus *fetchInitialCloudStatus = [FMIKitFactory createFetchInitialCloudStatus];
+    FMIModifyCloudStatus *modifyInitialCloudStatus = [FMIKitFactory createModifyInitialCloudStatus];
+    [store configureWithFetchCloudStatus:fetchInitialCloudStatus modifyCloudStatus:modifyInitialCloudStatus];
+    return store;
 }
 
 + (FMIReviewNotificationCoordinator *)createReviewNotificationCoordinatorForAppStoreID:(NSString *)appStoreID {

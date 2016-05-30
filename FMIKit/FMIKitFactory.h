@@ -24,6 +24,8 @@
 
 + (FMIFileCoordinator *)createFileCoordinator;
 
++ (FMIStore *)createStore;
+
 + (FMIReviewNotificationCoordinator *)createReviewNotificationCoordinatorForAppStoreID:(NSString *)appStoreID;
 
 + (FMIWhatsNewCoordinator *)createWhatsNewCoordinatorWithBaseURL:(NSURL *)whatsNewBaseURL;

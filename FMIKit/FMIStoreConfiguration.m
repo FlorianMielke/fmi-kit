@@ -6,6 +6,7 @@
 //  Copyright © 2016 madeFM. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
 #import "FMIStoreConfiguration.h"
 #import "FMIFetchCloudStatus.h"
 
@@ -41,6 +42,12 @@
 
 - (NSDictionary *)currentStoreOptions {
     return ([self.fetchCloudStatus fetchCloudStatus] == FMICloudStatusEnabled) ? [self.cloudStoreOptions copy] : [self.localStoreOptions copy];
+}
+
+- (NSDictionary *)localStoreOptionsForCloudRemoval {
+    NSMutableDictionary *localStoreOptions = [self.localStoreOptions mutableCopy];
+    localStoreOptions[NSPersistentStoreRemoveUbiquitousMetadataOption] = @YES;
+    return [localStoreOptions copy];
 }
 
 @end
