@@ -8,7 +8,6 @@
 
 @property (NS_NONATOMIC_IOSONLY) FMIModifyCloudStatus *subject;
 @property (NS_NONATOMIC_IOSONLY) id gateway;
-@property (NS_NONATOMIC_IOSONLY) id store;
 
 @end
 
@@ -16,7 +15,6 @@
 
 - (void)setUp {
     [super setUp];
-    self.store = OCMClassMock([FMIStore class]);
     self.gateway = OCMProtocolMock(@protocol(FMICloudStatusGateway));
     self.subject = [[FMIModifyCloudStatus alloc] initWithCloudStatusGateway:self.gateway];
 }
@@ -26,7 +24,6 @@
 
     [self.subject modifyCloudStatus:FMICloudStatusEnabled];
 
-    OCMVerify([self.store migrateLocalStoreToICloudStore]);
     OCMVerify([self.gateway saveCloudStatus:FMICloudStatusEnabled]);
 }
 
@@ -34,7 +31,6 @@
     [self.subject modifyCloudStatus:FMICloudStatusDisabled];
 
     OCMVerify([self.gateway saveCloudStatus:FMICloudStatusDisabled]);
-    OCMVerify([self.store migrateICloudStoreToLocalStore]);
 }
 
 @end
