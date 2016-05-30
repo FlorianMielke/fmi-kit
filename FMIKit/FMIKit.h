@@ -103,6 +103,7 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMICloudStatus.h>
 #import <FMIKit/FMIStore.h>
 #import <FMIKit/FMIStoreConfiguration.h>
+#import <FMIKit/NSPersistentStoreCoordinator+Migration.h>
 
 #pragma mark - Review& What's New
 
