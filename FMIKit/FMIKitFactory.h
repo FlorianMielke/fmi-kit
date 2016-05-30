@@ -18,7 +18,11 @@
 
 + (FMIFetchCloudStatus *)createFetchCloudStatus;
 
++ (FMIFetchCloudStatus *)createFetchInitialCloudStatus;
+
 + (FMIModifyCloudStatus *)createModifyCloudStatus;
+
++ (FMIModifyCloudStatus *)createModifyInitialCloudStatus;
 
 + (NSUserDefaults *)createUserDefaults;
 

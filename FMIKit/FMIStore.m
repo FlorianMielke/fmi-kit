@@ -132,10 +132,11 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
 
 - (void)persistentStoreDidImportUbiquitousContentChanges:(NSNotification *)changeNotification {
     NSLog(@"%s: %@", __PRETTY_FUNCTION__, changeNotification.userInfo);
+    NSDictionary *changedObjectIDs = [changeNotification.userInfo copy];
     [self.managedObjectContext performBlock:^{
         [self.managedObjectContext mergeChangesFromContextDidSaveNotification:changeNotification];
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [self.notificationCenter postNotificationName:FMIStoreDidUpdateFromCloudNotification object:self];
+            [self.notificationCenter postNotificationName:FMIStoreDidUpdateFromCloudNotification object:self.managedObjectContext userInfo:changedObjectIDs];
         }];
     }];
 }
@@ -180,7 +181,6 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
     [self storesWillChange:nil];
     [self.persistentStoreCoordinator performBlock:^{
         if (![self destroyLocalStoreIfCloudAlreadyEnabled]) {
-            NSLog(@"Failed to destroy local store.");
             return;
         }
         NSError *error;
@@ -190,7 +190,7 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
         } else {
             [self.modifyInitialCloudStatus modifyCloudStatus:FMICloudStatusEnabled];
             if ([self destroyLocalStore]) {
-                NSLog(@"Migrated to cloud and destroyed local store.");
+                NSLog(@"Migrated to cloud store.");
             }
         }
     }];
@@ -209,6 +209,7 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
         NSLog(@"Failed to add local store after destroying it. Error: %@\n%@", error.localizedDescription, error.userInfo);
         return NO;
     }
+    NSLog(@"Destroyed and re-add local store");
     return YES;
 }
 
@@ -218,7 +219,7 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
     if (!isDestroyed) {
         NSLog(@"Failed to destroy local store file. Error: %@\n%@", destroyingError.localizedDescription, destroyingError.userInfo);
     } else {
-        NSLog(@"Destroyed (removed) local store.");
+        NSLog(@"Destroyed local store.");
     }
     return isDestroyed;
 }

@@ -42,8 +42,7 @@
 
 + (FMIModifyCloudStatus *)createModifyInitialCloudStatus {
     id <FMICloudStatusGateway> cloudStateGateway = [FMIKitFactory createUbiquitousCloudStatusGateway];
-    FMIStore *store = [FMIKitFactory createStore];
-    return [[FMIModifyCloudStatus alloc] initWithCloudStatusGateway:cloudStateGateway store:store];
+    return [[FMIModifyCloudStatus alloc] initWithCloudStatusGateway:cloudStateGateway store:nil];
 }
 
 + (id <FMICloudStatusGateway>)createUbiquitousCloudStatusGateway {
@@ -61,11 +60,7 @@
 }
 
 + (FMIStore *)createStore {
-    FMIStore *store = [FMIStore sharedStore];
-    FMIFetchCloudStatus *fetchInitialCloudStatus = [FMIKitFactory createFetchInitialCloudStatus];
-    FMIModifyCloudStatus *modifyInitialCloudStatus = [FMIKitFactory createModifyInitialCloudStatus];
-    [store configureWithFetchCloudStatus:fetchInitialCloudStatus modifyCloudStatus:modifyInitialCloudStatus];
-    return store;
+    return [FMIStore sharedStore];
 }
 
 + (FMIReviewNotificationCoordinator *)createReviewNotificationCoordinatorForAppStoreID:(NSString *)appStoreID {
