@@ -15,6 +15,8 @@
 NSString *const FMIStoreDidUpdateFromCloudNotification = @"FMIStoreDidUpdateFromCloudNotification";
 NSString *const FMIStoreWillChangeStoreNotification = @"FMIStoreWillChangeStoreNotification";
 NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNotification";
+NSString *const FMIStoreDidMigrateToCloudStoreNotification = @"FMIStoreDidMigrateToCloudStoreNotification";
+NSString *const FMIStoreDidMigrateToLocalStoreNotification = @"FMIStoreDidMigrateToLocalStoreNotification";
 
 @interface FMIStore ()
 
@@ -164,20 +166,21 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
     }];
 }
 
-- (void)migrateICloudStoreToLocalStore {
+- (void)migrateCloudStoreToLocalStore {
     [self storesWillChange:nil];
     [self.persistentStoreCoordinator performBlock:^{
         NSError *error;
         NSPersistentStore *localStore = [self.persistentStoreCoordinator migratePersistentStore:self.persistentStoreCoordinator.fmi_currentPersistentStore toURL:self.configuration.localStoreURL options:self.configuration.localStoreOptionsForCloudRemoval withType:NSSQLiteStoreType error:&error];
-        if (!localStore) {
-            NSLog(@"Failed to migrate cloud to local store. Error: %@\n%@", error.localizedDescription, error.userInfo);
-        } else {
+        if (localStore) {
+            [self.notificationCenter postNotificationName:FMIStoreDidMigrateToCloudStoreNotification object:self];
             NSLog(@"Migrated to local store.");
+        } else {
+            NSLog(@"Failed to migrate cloud to local store. Error: %@\n%@", error.localizedDescription, error.userInfo);
         }
     }];
 }
 
-- (void)migrateLocalStoreToICloudStore {
+- (void)migrateLocalStoreToCloudStore {
     [self storesWillChange:nil];
     [self.persistentStoreCoordinator performBlock:^{
         if (![self destroyLocalStoreIfCloudAlreadyEnabled]) {
@@ -185,13 +188,14 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
         }
         NSError *error;
         NSPersistentStore *iCloudStore = [self.persistentStoreCoordinator migratePersistentStore:self.persistentStoreCoordinator.fmi_currentPersistentStore toURL:self.configuration.cloudStoreURL options:self.configuration.cloudStoreOptions withType:NSSQLiteStoreType error:&error];
-        if (!iCloudStore) {
-            NSLog(@"Failed to migrate local to cloud store. Error: %@\n%@", error.localizedDescription, error.userInfo);
-        } else {
+        if (iCloudStore) {
             [self.modifyInitialCloudStatus modifyCloudStatus:FMICloudStatusEnabled];
+            [self.notificationCenter postNotificationName:FMIStoreDidMigrateToCloudStoreNotification object:self];
             if ([self destroyLocalStore]) {
                 NSLog(@"Migrated to cloud store.");
             }
+        } else {
+            NSLog(@"Failed to migrate local to cloud store. Error: %@\n%@", error.localizedDescription, error.userInfo);
         }
     }];
 }

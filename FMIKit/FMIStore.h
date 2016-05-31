@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 OBJC_EXTERN NSString *const FMIStoreDidUpdateFromCloudNotification;
 OBJC_EXTERN NSString *const FMIStoreWillChangeStoreNotification;
 OBJC_EXTERN NSString *const FMIStoreDidChangeStoreNotification;
+OBJC_EXTERN NSString *const FMIStoreDidMigrateToCloudStoreNotification;
+OBJC_EXTERN NSString *const FMIStoreDidMigrateToLocalStoreNotification;
 
 /**
  * The FMIStore class manages an application's core data stack.
@@ -67,14 +69,14 @@ OBJC_EXTERN NSString *const FMIStoreDidChangeStoreNotification;
 - (void)useInMemoryStoreWithConfiguration:(FMIStoreConfiguration *)configuration;
 
 /**
- * Migrates the iCloud store to the locale store.
+ * Migrates the cloud store to the locale store.
  */
-- (void)migrateICloudStoreToLocalStore;
+- (void)migrateCloudStoreToLocalStore;
 
 /**
- * Migrates the locale store to an iCloud store.
+ * Migrates the locale store to an cloud store.
  */
-- (void)migrateLocalStoreToICloudStore;
+- (void)migrateLocalStoreToCloudStore;
 
 /**
  * Resets the whole Core Data stack.
