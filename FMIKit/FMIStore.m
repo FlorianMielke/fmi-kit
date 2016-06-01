@@ -173,8 +173,8 @@ NS_ENUM(NSInteger) {
         NSError *coordinatorError;
         NSError *error;
         BOOL migrated = NO;
-        NSPersistentStore *localStore = [self.persistentStoreCoordinator migratePersistentStore:self.persistentStoreCoordinator.fmi_currentPersistentStore toURL:self.configuration.localStoreURL options:self.configuration.localStoreOptionsForCloudRemoval withType:NSSQLiteStoreType error:&coordinatorError];
-        if (localStore) {
+        NSPersistentStore *migratedStore = [self.persistentStoreCoordinator migratePersistentStore:self.persistentStoreCoordinator.fmi_currentPersistentStore toURL:self.configuration.localStoreURL options:self.configuration.localStoreOptionsForCloudRemoval withType:NSSQLiteStoreType error:&coordinatorError];
+        if (migratedStore) {
             migrated = YES;
             NSLog(@"Migrated to local store.");
         } else {
@@ -196,8 +196,8 @@ NS_ENUM(NSInteger) {
         NSError *coordinatorError;
         NSError *error;
         BOOL migrated = NO;
-        NSPersistentStore *iCloudStore = [self.persistentStoreCoordinator migratePersistentStore:self.persistentStoreCoordinator.fmi_currentPersistentStore toURL:self.configuration.cloudStoreURL options:self.configuration.cloudStoreOptions withType:NSSQLiteStoreType error:&coordinatorError];
-        if (iCloudStore) {
+        NSPersistentStore *migratedStore = [self.persistentStoreCoordinator migratePersistentStore:self.persistentStoreCoordinator.fmi_currentPersistentStore toURL:self.configuration.cloudStoreURL options:self.configuration.cloudStoreOptions withType:NSSQLiteStoreType error:&coordinatorError];
+        if (migratedStore) {
             if ([self destroyLocalStoreWithError:&error]) {
                 migrated = YES;
                 NSLog(@"Migrated to cloud store.");
