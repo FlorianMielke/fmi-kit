@@ -791,6 +791,8 @@
 				3591396BC9481554FE6BA9CE /* FMIStoreConfiguration.m */,
 				359130ED0CEC7A726EC2B071 /* FMIStoreConfigurationTest.m */,
 				35913AAE65B14D777593872B /* FMIStoreTests.m */,
+				35913AB7D9E4242E1FA946F0 /* FMIUbiquitousCloudStatusGateway.h */,
+				359137CB7D0F0754412FA52C /* FMIUbiquitousCloudStatusGateway.m */,
 				3591388C38F4CC06E3E9893A /* FMIUserDefaultsCloudStatusGateway.h */,
 				35913E4AB19DFF676387A2FA /* FMIUserDefaultsCloudStatusGateway.m */,
 				359132E3502FEAC679FD6F53 /* NSCoder+SecureCoding.h */,
@@ -803,8 +805,6 @@
 				35913D92E110282542642246 /* NSManagedObjectContext+PersistentStoreAdditionsTests.m */,
 				35913726FA90F81083096904 /* NSPersistentStoreCoordinator+Migration.h */,
 				35913B3B73AD7F75A04FCE27 /* NSPersistentStoreCoordinator+Migration.m */,
-				359137CB7D0F0754412FA52C /* FMIUbiquitousCloudStatusGateway.m */,
-				35913AB7D9E4242E1FA946F0 /* FMIUbiquitousCloudStatusGateway.h */,
 			);
 			name = Persistence;
 			sourceTree = "<group>";
