@@ -66,13 +66,17 @@ OBJC_EXTERN NSString *const FMIStoreDidMigrateToLocalStoreNotification;
 
 /**
  * Migrates the cloud store to the locale store.
+ *
+ * @param completionHandler A block object to be executed when the migration ends.
  */
-- (void)migrateCloudStoreToLocalStore;
+- (void)migrateCloudStoreToLocalStoreWithCompletion:(void (^)(BOOL migrated, NSError *error))completionHandler;
 
 /**
  * Migrates the locale store to an cloud store.
+ *
+ * @param completionHandler A block object to be executed when the migration ends.
  */
-- (void)migrateLocalStoreToCloudStore;
+- (void)migrateLocalStoreToCloudStoreWithCompletion:(void (^)(BOOL migrated, NSError *error))completionHandler;
 
 /**
  * Resets the whole Core Data stack.
