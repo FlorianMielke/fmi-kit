@@ -4,4 +4,5 @@ typedef NS_ENUM(NSInteger, FMICloudStatus) {
     FMICloudStatusUnknown = 0,
     FMICloudStatusEnabled,
     FMICloudStatusDisabled,
+    FMICloudStatusChanging,
 };

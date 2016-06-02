@@ -21,6 +21,7 @@ NS_ENUM(NSInteger) {
     FMIStoreErrorCannotMigrateToCloudStore = -10,
     FMIStoreErrorCannotDestroyLocalStore = -20,
     FMIStoreErrorCannotMigrateToLocalStore = -30,
+    FMIStoreErrorCannotDestroyCloudStore = -40,
 };
 
 /**
@@ -91,9 +92,11 @@ NS_ENUM(NSInteger) {
 - (void)resetCoreDataStack;
 
 /**
- * Resets the iCloud store.
+ * Destroys the cloud store.
+ *
+ * @param completionHandler A block object to be executed when the reset ends.
  */
-- (BOOL)resetICloudStoreIfNeeded;
+- (void)destroyCloudStoreWithCompletion:(void (^)(BOOL reset, NSError *error))completionHandler;
 
 /**
  * Creates a new \c NSManagedObjectContext with the current \c persistentStoreCoordinator

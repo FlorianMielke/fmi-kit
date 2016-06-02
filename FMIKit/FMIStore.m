@@ -228,19 +228,23 @@ NSString *const FMIStoreErrorDomain = @"FMIStoreErrorDomain";
     return destroyed;
 }
 
-- (BOOL)resetICloudStoreIfNeeded {
+- (void)destroyCloudStoreWithCompletion:(void (^)(BOOL reset, NSError *error))completionHandler {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSError *error;
-        BOOL success = [NSPersistentStoreCoordinator removeUbiquitousContentAndPersistentStoreAtURL:self.configuration.cloudStoreURL options:self.configuration.cloudStoreOptions error:&error];
-        dispatch_async(dispatch_get_main_queue(), ^{
+        NSError *coordinatorError;
+        BOOL success = [NSPersistentStoreCoordinator removeUbiquitousContentAndPersistentStoreAtURL:self.configuration.cloudStoreURL options:self.configuration.cloudStoreOptions error:&coordinatorError];
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            NSError *error;
             if (!success) {
+                error = [NSError errorWithDomain:FMIStoreErrorDomain code:FMIStoreErrorCannotDestroyCloudStore userInfo:@{NSLocalizedDescriptionKey : @"Failed to reset cloud store.", NSUnderlyingErrorKey : coordinatorError}];
                 NSLog(@"Failed to reset cloud store. Error: %@\n%@", error.localizedDescription, error.userInfo);
             } else {
                 NSLog(@"Finished resetting cloud store");
             }
-        });
+            if (completionHandler) {
+                completionHandler(success, error);
+            }
+        }];
     });
-    return YES;
 }
 
 @end

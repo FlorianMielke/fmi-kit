@@ -20,11 +20,9 @@
 
 - (void)modifyCloudStatus:(FMICloudStatus)newCloudStatus {
     switch (newCloudStatus) {
-        case FMICloudStatusEnabled: {
-            [self.cloudStatusGateway saveCloudStatus:newCloudStatus];
-            break;
-        }
-        case FMICloudStatusDisabled: {
+        case FMICloudStatusEnabled:
+        case FMICloudStatusDisabled:
+        case FMICloudStatusChanging: {
             [self.cloudStatusGateway saveCloudStatus:newCloudStatus];
             break;
         }

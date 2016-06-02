@@ -25,4 +25,12 @@
     return [self fetchCloudStatus] == FMICloudStatusEnabled;
 }
 
+- (BOOL)isCloudStatusUnkown {
+    return [self fetchCloudStatus] == FMICloudStatusUnknown;
+}
+
+- (BOOL)isCloudStatusChanging {
+    return [self fetchCloudStatus] == FMICloudStatusChanging;
+}
+
 @end
