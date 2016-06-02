@@ -1,6 +1,6 @@
 #import "FMIMessage.h"
 
-@protocol FMILogFile;
+@protocol FMIAttachment;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -8,7 +8,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init NS_UNAVAILABLE;
 
-- (instancetype)initWithLogFile:(id <FMILogFile>)logFile bundle:(NSBundle *)bundle;
+- (instancetype)initWithLogFile:(id <FMIAttachment>)logFile bundle:(NSBundle *)bundle;
 
 @end
 

@@ -1,18 +1,18 @@
 #import "FMIErrorMessage.h"
-#import "FMILogFile.h"
+#import "FMIAttachment.h"
 #import "NSBundle+FMIAppInfo.h"
 #import "UIDevice+Platform.h"
 
 @interface FMIErrorMessage ()
 
 @property (NS_NONATOMIC_IOSONLY) NSBundle *bundle;
-@property (NS_NONATOMIC_IOSONLY) id <FMILogFile> logFile;
+@property (NS_NONATOMIC_IOSONLY) id <FMIAttachment> logFile;
 
 @end
 
 @implementation FMIErrorMessage
 
-- (instancetype)initWithLogFile:(id <FMILogFile>)logFile bundle:(NSBundle *)bundle {
+- (instancetype)initWithLogFile:(id <FMIAttachment>)logFile bundle:(NSBundle *)bundle {
     self = [super init];
     if (self) {
         self.bundle = bundle ?: [NSBundle mainBundle];

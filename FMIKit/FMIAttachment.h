@@ -2,7 +2,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol FMILogFile <NSObject>
+@protocol FMIAttachment <NSObject>
 
 @property (readonly, NS_NONATOMIC_IOSONLY) NSString *fileName;
 @property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *mimeType;

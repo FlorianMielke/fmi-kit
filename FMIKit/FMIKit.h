@@ -113,7 +113,7 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 
 #pragma mark - Error handling
 
-#import <FMIKit/FMILogFile.h>
+#import <FMIKit/FMIAttachment.h>
 #import <FMIKit/FMIErrorMessage.h>
 
 #endif

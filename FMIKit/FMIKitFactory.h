@@ -9,7 +9,7 @@
 @class FMIReviewNotificationCoordinator;
 @class FMIWhatsNewCoordinator;
 @class FMIWhatsNewCoordinator;
-@protocol FMILogFile;
+@protocol FMIAttachment;
 @protocol FMIMessage;
 
 @interface FMIKitFactory : NSObject

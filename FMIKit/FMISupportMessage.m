@@ -45,4 +45,8 @@
     return [messageBody copy];
 }
 
+- (NSArray *)attachments {
+    return @[];
+}
+
 @end

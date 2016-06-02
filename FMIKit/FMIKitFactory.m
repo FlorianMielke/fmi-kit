@@ -9,7 +9,7 @@
 #import "FMIReviewNotificationCoordinator.h"
 #import "FMIWhatsNewCoordinator.h"
 #import "FMIUbiquitousCloudStatusGateway.h"
-#import "FMILogFile.h"
+#import "FMIAttachment.h"
 #import "FMIErrorLogFile.h"
 #import "FMIMessage.h"
 #import "FMIErrorMessage.h"
@@ -79,11 +79,11 @@
 }
 
 + (id <FMIMessage>)createErrorMessageForError:(NSError *)error bundle:(NSBundle *)bundle {
-    id <FMILogFile> logFile = [FMIKitFactory createLogFileFromError:error bundle:bundle];
+    id <FMIAttachment> logFile = [FMIKitFactory createLogFileFromError:error bundle:bundle];
     return [[FMIErrorMessage alloc] initWithLogFile:logFile bundle:bundle];
 }
 
-+ (id <FMILogFile>)createLogFileFromError:(NSError *)error bundle:(NSBundle *)bundle {
++ (id <FMIAttachment>)createLogFileFromError:(NSError *)error bundle:(NSBundle *)bundle {
     return [[FMIErrorLogFile alloc] initWithError:error bundle:bundle];
 }
 
