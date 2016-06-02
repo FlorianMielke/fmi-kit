@@ -9,6 +9,8 @@
 @class FMIReviewNotificationCoordinator;
 @class FMIWhatsNewCoordinator;
 @class FMIWhatsNewCoordinator;
+@protocol FMILogFile;
+@protocol FMIMessage;
 
 @interface FMIKitFactory : NSObject
 
@@ -33,5 +35,7 @@
 + (FMIReviewNotificationCoordinator *)createReviewNotificationCoordinatorForAppStoreID:(NSString *)appStoreID;
 
 + (FMIWhatsNewCoordinator *)createWhatsNewCoordinatorWithBaseURL:(NSURL *)whatsNewBaseURL;
+
++ (id <FMIMessage>)createErrorMessageForError:(NSError *)error bundle:(NSBundle *)bundle;
 
 @end

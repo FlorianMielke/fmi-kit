@@ -105,10 +105,15 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIStoreConfiguration.h>
 #import <FMIKit/NSPersistentStoreCoordinator+Migration.h>
 
-#pragma mark - Review& What's New
+#pragma mark - Review & What's New
 
 #import <FMIKit/FMIReviewNotificationCoordinator.h>
 #import <FMIKit/FMIReviewNotificationViewController.h>
 #import <FMIKit/FMIWhatsNewCoordinator.h>
+
+#pragma mark - Error handling
+
+#import <FMIKit/FMILogFile.h>
+#import <FMIKit/FMIErrorMessage.h>
 
 #endif

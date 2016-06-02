@@ -1,30 +1,22 @@
-//
-//  FMISupportMessage.m
-//
-//  Created by Florian Mielke on 10.04.13.
-//  Copyright (c) 2013 Florian Mielke. All rights reserved.
-//
-
-#import "FMISupportMessage.h"
-#import "UIDevice+Platform.h"
+#import "FMIErrorMessage.h"
+#import "FMILogFile.h"
 #import "NSBundle+FMIAppInfo.h"
+#import "UIDevice+Platform.h"
 
-@interface FMISupportMessage ()
+@interface FMIErrorMessage ()
 
 @property (NS_NONATOMIC_IOSONLY) NSBundle *bundle;
+@property (NS_NONATOMIC_IOSONLY) id <FMILogFile> logFile;
 
 @end
 
-@implementation FMISupportMessage
+@implementation FMIErrorMessage
 
-- (instancetype)init {
-    return [self initWithBundle:[NSBundle mainBundle]];
-}
-
-- (instancetype)initWithBundle:(NSBundle *)bundle {
+- (instancetype)initWithLogFile:(id <FMILogFile>)logFile bundle:(NSBundle *)bundle {
     self = [super init];
     if (self) {
-        _bundle = bundle ?: [NSBundle mainBundle];
+        self.bundle = bundle ?: [NSBundle mainBundle];
+        self.logFile = logFile;
     }
     return self;
 }
@@ -34,7 +26,7 @@
 }
 
 - (NSString *)subject {
-    return [NSString stringWithFormat:@"%@ %@ Feedback", self.bundle.fmi_appName, self.bundle.fmi_presentableVersionNumber];
+    return [NSString stringWithFormat:@"%@ %@ Log Files", self.bundle.fmi_appName, self.bundle.fmi_presentableVersionNumber];
 }
 
 - (NSString *)messageBody {
@@ -43,6 +35,10 @@
     [messageBody appendFormat:@"iOS Device: %@\n", [UIDevice currentDevice].platform];
     [messageBody appendFormat:@"System language: %@\n", [NSLocale preferredLanguages].firstObject];
     return [messageBody copy];
+}
+
+- (NSArray *)attachments {
+    return @[self.logFile];
 }
 
 @end
