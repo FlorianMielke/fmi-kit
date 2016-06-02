@@ -6,6 +6,7 @@
 //
 
 #import "NSFileManager+DirectoryAdditions.h"
+#import "FMIKitConstants.h"
 
 @implementation NSFileManager (DirectoryAdditions)
 
@@ -48,20 +49,14 @@
     return (!error);
 }
 
-- (BOOL)fmi_removeCloudStoresAtURL:(NSURL *)cloudStoreURL {
-    NSError *removingCloudStoreError;
+- (BOOL)fmi_removeCloudDirectoryWithError:(NSError **)error {
     NSError *removingCloudDirectoryError;
-    NSURL *cloudDirectoryURL = [[self fm_applicationDocumentsDirectory] URLByAppendingPathComponent:@"CoreDataUbiquitySupport" isDirectory:YES];
+    NSURL *cloudDirectoryURL = [self.fm_applicationDocumentsDirectory URLByAppendingPathComponent:@"CoreDataUbiquitySupport" isDirectory:YES];
     BOOL removedCloudDirectory = [self removeItemAtURL:cloudDirectoryURL error:&removingCloudDirectoryError];
-    BOOL removedCloudStore = [self removeItemAtURL:cloudStoreURL error:&removingCloudStoreError];
-    if (!removedCloudStore) {
-        NSLog(@"Failed to remove cloud store. Error: %@\n%@", removingCloudStoreError.localizedDescription, removingCloudStoreError.userInfo);
-    }
     if (!removedCloudDirectory) {
-        NSLog(@"Failed to remove cloud directory. Error: %@\n%@", removingCloudDirectoryError.localizedDescription, removingCloudDirectoryError.userInfo);
+        *error = removingCloudDirectoryError;
     }
-    return removedCloudDirectory && removedCloudStore;
+    return removedCloudDirectory;
 }
-
 
 @end

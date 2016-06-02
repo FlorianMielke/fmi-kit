@@ -16,6 +16,13 @@ OBJC_EXTERN NSString *const FMIStoreDidChangeStoreNotification;
 OBJC_EXTERN NSString *const FMIStoreDidMigrateToCloudStoreNotification;
 OBJC_EXTERN NSString *const FMIStoreDidMigrateToLocalStoreNotification;
 
+NS_ENUM(NSInteger) {
+    FMIStoreErrorUnknown = -1,
+    FMIStoreErrorCannotMigrateToCloudStore = -10,
+    FMIStoreErrorCannotDestroyLocalStore = -20,
+    FMIStoreErrorCannotMigrateToLocalStore = -30,
+};
+
 /**
  * The FMIStore class manages an application's core data stack.
  */

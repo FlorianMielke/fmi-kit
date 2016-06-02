@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  * Adds directory methods to NSFileManager.
  */
@@ -41,6 +43,8 @@
  * @param cloudStoreURL The URL to the cloud store
  * @return BOOL A flag that determines whether the operation was successful. Otherwise returns NO.
  */
-- (BOOL)fmi_removeCloudStoresAtURL:(NSURL *)cloudStoreURL;
+- (BOOL)fmi_removeCloudDirectoryWithError:(NSError **)error;
 
 @end
+
+NS_ASSUME_NONNULL_END

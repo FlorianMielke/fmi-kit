@@ -11,6 +11,7 @@
 #import "FMIFetchCloudStatus.h"
 #import "NSPersistentStoreCoordinator+Migration.h"
 #import "FMIModifyCloudStatus.h"
+#import "NSFileManager+DirectoryAdditions.h"
 
 NSString *const FMIStoreDidUpdateFromCloudNotification = @"FMIStoreDidUpdateFromCloudNotification";
 NSString *const FMIStoreWillChangeStoreNotification = @"FMIStoreWillChangeStoreNotification";
@@ -18,13 +19,6 @@ NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNot
 NSString *const FMIStoreDidMigrateToCloudStoreNotification = @"FMIStoreDidMigrateToCloudStoreNotification";
 NSString *const FMIStoreDidMigrateToLocalStoreNotification = @"FMIStoreDidMigrateToLocalStoreNotification";
 NSString *const FMIStoreErrorDomain = @"FMIStoreErrorDomain";
-
-NS_ENUM(NSInteger) {
-    FMIStoreErrorUnknown = -1,
-    FMIStoreErrorCannotMigrateToCloudStore = -10,
-    FMIStoreErrorCannotDestroyLocalStore = -20,
-    FMIStoreErrorCannotMigrateToLocalStore = -30,
-};
 
 @interface FMIStore ()
 
@@ -168,18 +162,22 @@ NS_ENUM(NSInteger) {
 }
 
 - (void)migrateCloudStoreToLocalStoreWithCompletion:(void (^)(BOOL migrated, NSError *error))completionHandler {
-    [self storesWillChange:nil] ;
+    [self storesWillChange:nil];
     [self.persistentStoreCoordinator performBlock:^{
-        NSError *coordinatorError;
+        NSError *migrationError;
         NSError *error;
         BOOL migrated = NO;
-        NSPersistentStore *migratedStore = [self.persistentStoreCoordinator migratePersistentStore:self.persistentStoreCoordinator.fmi_currentPersistentStore toURL:self.configuration.localStoreURL options:self.configuration.localStoreOptionsForCloudRemoval withType:NSSQLiteStoreType error:&coordinatorError];
+        NSPersistentStore *migratedStore = [self.persistentStoreCoordinator migratePersistentStore:self.persistentStoreCoordinator.fmi_currentPersistentStore toURL:self.configuration.localStoreURL options:self.configuration.localStoreOptionsForCloudRemoval withType:NSSQLiteStoreType error:&migrationError];
         if (migratedStore) {
-            migrated = YES;
-            NSLog(@"Migrated to local store.");
+            BOOL removed = [[NSFileManager defaultManager] fmi_removeCloudDirectoryWithError:&migrationError];
+            if (removed) {
+                migrated = YES;
+                NSLog(@"Migrated to local store.");
+            } else {
+                error = [self prepareMigrationErrorWithUnderlyingError:migrationError];
+            }
         } else {
-            error = [NSError errorWithDomain:FMIStoreErrorDomain code:FMIStoreErrorCannotMigrateToLocalStore userInfo:@{NSLocalizedDescriptionKey : @"Failed to migrate to local store.", NSLocalizedRecoverySuggestionErrorKey : @"Please contact me at feedback@madefm.com", NSUnderlyingErrorKey : coordinatorError}];
-            NSLog(@"Failed to migrate cloud to local store. Error: %@\n%@", coordinatorError.localizedDescription, coordinatorError.userInfo);
+            error = [self prepareMigrationErrorWithUnderlyingError:migrationError];
         }
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             if (completionHandler) {
@@ -188,6 +186,11 @@ NS_ENUM(NSInteger) {
             [self.notificationCenter postNotificationName:FMIStoreDidMigrateToCloudStoreNotification object:self];
         }];
     }];
+}
+
+- (NSError *)prepareMigrationErrorWithUnderlyingError:(NSError *)migrationError {
+    NSLog(@"Failed to migrate cloud to local store. Error: %@\n%@", migrationError.localizedDescription, migrationError.userInfo);
+    return [NSError errorWithDomain:FMIStoreErrorDomain code:FMIStoreErrorCannotMigrateToLocalStore userInfo:@{NSLocalizedDescriptionKey : @"Failed to migrate to local store.", NSLocalizedRecoverySuggestionErrorKey : @"Please contact me at feedback@madefm.com", NSUnderlyingErrorKey : migrationError}];
 }
 
 - (void)migrateLocalStoreToCloudStoreWithCompletion:(void (^)(BOOL migrated, NSError *error))completionHandler {

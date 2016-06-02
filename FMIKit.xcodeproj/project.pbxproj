@@ -377,8 +377,6 @@
 		17B39B291C05FF580012BB49 /* FMIBorderedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIBorderedButton.m; sourceTree = "<group>"; };
 		17CBD6111BCC3A9000681FD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FMIKitLocalizable.strings; sourceTree = "<group>"; };
 		17CBD6131BCC3A9200681FD9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/FMIKitLocalizable.strings; sourceTree = "<group>"; };
-		17CBD6141BCC3A9300681FD9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/FMIKitLocalizable.strings; sourceTree = "<group>"; };
-		17CBD6151BCC3A9300681FD9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/FMIKitLocalizable.strings; sourceTree = "<group>"; };
 		17E00C731B90308500BA7024 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = Carthage/Build/iOS/OCMock.framework; sourceTree = "<group>"; };
 		359130076AB9B3937D318FE5 /* FMIFieldDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIFieldDescription.m; sourceTree = "<group>"; };
 		3591302B55363F40E9CF35C6 /* FMIYear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIYear.h; sourceTree = "<group>"; };
@@ -1610,8 +1608,6 @@
 			children = (
 				17CBD6111BCC3A9000681FD9 /* en */,
 				17CBD6131BCC3A9200681FD9 /* de */,
-				17CBD6151BCC3A9300681FD9 /* fr */,
-				17CBD6141BCC3A9300681FD9 /* es */,
 			);
 			name = FMIKitLocalizable.strings;
 			sourceTree = "<group>";
