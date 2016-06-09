@@ -152,6 +152,7 @@
 		3591367C85AE22AC87936050 /* NSCalendar+Calculations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591389713098B71689829D1 /* NSCalendar+Calculations.m */; };
 		35913688CD23334177B4FA7B /* FMICSVFieldDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 359133E62950FB68F0CBE396 /* FMICSVFieldDeserializer.m */; };
 		3591368C148DE0BF2514DF10 /* FMIGMTDateHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 359132711A56643B56BB2621 /* FMIGMTDateHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		359136978B0C634026DE1807 /* FMIURLProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913B64511B4BABA540BC2A /* FMIURLProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359136A2FE3E70BF6B1B5D2B /* NSString+FMIDrawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913C9EC81962E60C997423 /* NSString+FMIDrawing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359136A4DB723AE1921B1A7F /* NSFileManager+DirectoryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913D0713E94520C0CBB8E9 /* NSFileManager+DirectoryAdditions.m */; };
 		359136C1709732FAE3E10719 /* UITableView+IndexPathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913CD19B8A724944010728 /* UITableView+IndexPathTests.m */; };
@@ -563,6 +564,7 @@
 		35913B432283B46A2A4ADEE0 /* NSIndexPath+ComparingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSIndexPath+ComparingTests.m"; path = "FMIKitTests/NSIndexPath+ComparingTests.m"; sourceTree = SOURCE_ROOT; };
 		35913B604CD3D2BB77BC9EBA /* FMITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMITableView.m; sourceTree = "<group>"; };
 		35913B6100371BF2067CC340 /* UIImage+Creation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Creation.m"; sourceTree = "<group>"; };
+		35913B64511B4BABA540BC2A /* FMIURLProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIURLProvider.h; sourceTree = "<group>"; };
 		35913B64F30251D3C1C155E0 /* FMIPeriod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIPeriod.m; sourceTree = "<group>"; };
 		35913B680C286D5E9DD609A6 /* FMIErrorMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIErrorMessage.h; sourceTree = "<group>"; };
 		35913B9243E49E3BA7E919C3 /* FMIDatePickerControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIDatePickerControllerTests.m; path = FMIKitTests/FMIDatePickerControllerTests.m; sourceTree = SOURCE_ROOT; };
@@ -699,6 +701,7 @@
 				3591397574B621C3A45E372D /* FMIKitFactory.h */,
 				35913D8C1BEB03116DFA284F /* FMIKitFactory.m */,
 				35913DE3A15D2FEA51B93AB8 /* Foundation */,
+				359139DF29C742B1FAFE4C51 /* Messages */,
 				35913289D82054F3183139DB /* Persistence */,
 				35913B8FC6161FF8458C657B /* Protocols */,
 				1738D43F1AFC928200B96929 /* Resources */,
@@ -706,7 +709,6 @@
 				171CB9881AFB63C7002BE185 /* Supporting Files */,
 				35913936811D3AC35F6D804E /* Value Types */,
 				359139DDAF0A58C04228D624 /* Whats New */,
-				359139DF29C742B1FAFE4C51 /* Messages */,
 			);
 			path = FMIKit;
 			sourceTree = "<group>";
@@ -1111,6 +1113,7 @@
 				35913D42B24217B3787F33AB /* FMIKitPrivates.h */,
 				35913A05AC811C8207D6C975 /* FMIKitPrivates.m */,
 				359139CE81A2F5587B019FAC /* FMIKitPrivatesTests.m */,
+				35913B64511B4BABA540BC2A /* FMIURLProvider.h */,
 				35913544F49739A75AB0C2C8 /* NSBundle+FMIAppInfo.h */,
 				3591364580F7582863F6E061 /* NSBundle+FMIAppInfo.m */,
 				35913762DEFCE14348F4DB8D /* NSBundle+FMIKit.h */,
@@ -1226,6 +1229,7 @@
 				35913FC963CA72928A65E849 /* FMIMessageMIMETypes.h in Headers */,
 				359131D2DE6460C28F7BAD39 /* FMIMessageAttachment.h in Headers */,
 				359130BFB47F831CB252FB0D /* FMISupportMessage.h in Headers */,
+				359136978B0C634026DE1807 /* FMIURLProvider.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

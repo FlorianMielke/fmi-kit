@@ -96,6 +96,10 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMISupportMessage.h>
 #import <FMIKit/FMITableView.h>
 
+#pragma mark - Common
+
+#import <FMIKit/FMIURLProvider.h>
+
 #pragma mark - Persistence
 
 #import <FMIKit/FMIFetchCloudStatus.h>
