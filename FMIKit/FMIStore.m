@@ -190,7 +190,7 @@ NSString *const FMIStoreErrorDomain = @"FMIStoreErrorDomain";
 
 - (NSError *)prepareMigrationErrorWithUnderlyingError:(NSError *)migrationError {
     NSLog(@"Failed to migrate cloud to local store. Error: %@\n%@", migrationError.localizedDescription, migrationError.userInfo);
-    return [NSError errorWithDomain:FMIStoreErrorDomain code:FMIStoreErrorCannotMigrateToLocalStore userInfo:@{NSLocalizedDescriptionKey : @"Failed to migrate to local store.", NSLocalizedRecoverySuggestionErrorKey : @"Please contact me at feedback@madefm.com", NSUnderlyingErrorKey : migrationError}];
+    return [NSError errorWithDomain:FMIStoreErrorDomain code:FMIStoreErrorCannotMigrateToLocalStore userInfo:@{NSLocalizedDescriptionKey : @"Failed to migrate to local store.", NSLocalizedRecoverySuggestionErrorKey : @"Please contact me at feedback@systemweit.de", NSUnderlyingErrorKey : migrationError}];
 }
 
 - (void)migrateLocalStoreToCloudStoreWithCompletion:(void (^)(BOOL migrated, NSError *error))completionHandler {
@@ -206,7 +206,7 @@ NSString *const FMIStoreErrorDomain = @"FMIStoreErrorDomain";
                 NSLog(@"Migrated to cloud store.");
             }
         } else {
-            error = [NSError errorWithDomain:FMIStoreErrorDomain code:FMIStoreErrorCannotMigrateToCloudStore userInfo:@{NSLocalizedDescriptionKey : @"Failed to migrate to cloud store.", NSLocalizedRecoverySuggestionErrorKey : @"Please contact me at feedback@madefm.com", NSUnderlyingErrorKey : coordinatorError}];
+            error = [NSError errorWithDomain:FMIStoreErrorDomain code:FMIStoreErrorCannotMigrateToCloudStore userInfo:@{NSLocalizedDescriptionKey : @"Failed to migrate to cloud store.", NSLocalizedRecoverySuggestionErrorKey : @"Please contact me at feedback@systemweit.de", NSUnderlyingErrorKey : coordinatorError}];
             NSLog(@"Failed to migrate local to cloud store. Error: %@\n%@", coordinatorError.localizedDescription, coordinatorError.userInfo);
         }
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
