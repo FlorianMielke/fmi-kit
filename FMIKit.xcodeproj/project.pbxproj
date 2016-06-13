@@ -138,7 +138,7 @@
 		359135ABDD0EEBE3A85FB61D /* FMIEventPaserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913507D5DF4DF31A199114 /* FMIEventPaserTests.m */; };
 		359135BB9EC783A8278B4D6E /* FMIErrorLogFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 359138BFDD7A292979CBA6C9 /* FMIErrorLogFile.m */; };
 		359135CDA52154BA486DA53E /* NSIndexPath+Comparing.h in Headers */ = {isa = PBXBuildFile; fileRef = 359133E7571F163D6A741D72 /* NSIndexPath+Comparing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3591360DCC52DC874B9EB1B3 /* NSBundle+FMIAppInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913544F49739A75AB0C2C8 /* NSBundle+FMIAppInfo.h */; };
+		3591360DCC52DC874B9EB1B3 /* NSBundle+FMIAppInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913544F49739A75AB0C2C8 /* NSBundle+FMIAppInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3591361017274FE977BFBD82 /* NSString+Validation.h in Headers */ = {isa = PBXBuildFile; fileRef = 359136E199339CB945C7EB24 /* NSString+Validation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359136236DC968D6CDE9DF03 /* NSMutableDictionary+IndexPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 3591397A5EFCC5D5DE8A28FD /* NSMutableDictionary+IndexPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913634C0E38984501F2CEF /* UIImage+Scaling.h in Headers */ = {isa = PBXBuildFile; fileRef = 3591325DEA3CC6EEE2D96D3E /* UIImage+Scaling.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -222,7 +222,7 @@
 		359139A2F16784EBF5047CD6 /* FMIDatePickerControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913B9243E49E3BA7E919C3 /* FMIDatePickerControllerTests.m */; };
 		359139A4F3773DDB4E4E5339 /* FMIHairlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 359136233CAD7967907A9FAF /* FMIHairlineView.m */; };
 		359139AD422AB1B841037F5E /* NSString+FileName.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913F382E22B5CEEA0C232D /* NSString+FileName.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		359139BB3728A7C5DB8DA1A7 /* NSBundle+FMIAppInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913544F49739A75AB0C2C8 /* NSBundle+FMIAppInfo.h */; };
+		359139BB3728A7C5DB8DA1A7 /* NSBundle+FMIAppInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913544F49739A75AB0C2C8 /* NSBundle+FMIAppInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359139BBD425E134F709AD1C /* NSIndexSet+Initialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913405C2405456DD622BEC /* NSIndexSet+Initialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359139C16537036E8326A59C /* FMIBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 359136A1128DEF3389D6AE88 /* FMIBinding.m */; };
 		359139C9234892B2C026D5F8 /* FMIAcceptedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 359138E5F329478811A92C93 /* FMIAcceptedCell.m */; };
@@ -885,14 +885,14 @@
 			children = (
 				35913EB997235D23138D0F7C /* FMIAttachment.h */,
 				3591375B589044CC844CAA13 /* FMIMessage.h */,
-				3591381C00A56BA1EFDC6B29 /* FMIMessageMIMETypes.h */,
-				35913600BE1B4B352B210062 /* FMIMessageMIMETypesTests.m */,
-				359137572DFEAB2C4B63BC31 /* FMIMessageAttachment.m */,
-				359137687B26CF6DA3F0C35A /* FMIMessageMIMETypes.m */,
-				35913CD721EF13030A8B024B /* FMIMessageAttachmentTests.m */,
 				359138E216A89E7801EC34A1 /* FMIMessageAttachment.h */,
-				35913BED376AEE9CF670B873 /* FMISupportMessage.m */,
+				359137572DFEAB2C4B63BC31 /* FMIMessageAttachment.m */,
+				35913CD721EF13030A8B024B /* FMIMessageAttachmentTests.m */,
+				3591381C00A56BA1EFDC6B29 /* FMIMessageMIMETypes.h */,
+				359137687B26CF6DA3F0C35A /* FMIMessageMIMETypes.m */,
+				35913600BE1B4B352B210062 /* FMIMessageMIMETypesTests.m */,
 				359137EB375C11BCD8641B59 /* FMISupportMessage.h */,
+				35913BED376AEE9CF670B873 /* FMISupportMessage.m */,
 			);
 			name = Messages;
 			sourceTree = "<group>";
