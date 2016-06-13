@@ -1,5 +1,6 @@
 #import "FMIWhatsNewCoordinator.h"
 #import "NSLocale+German.h"
+#import "FMIURLProvider.h"
 
 NSString *const FMIWhatsNewLastViewedVersionKey = @"FMIWhatsNewLastViewedVersionKey";
 
@@ -7,29 +8,24 @@ NSString *const FMIWhatsNewLastViewedVersionKey = @"FMIWhatsNewLastViewedVersion
 
 @property (NS_NONATOMIC_IOSONLY) NSBundle *bundle;
 @property (NS_NONATOMIC_IOSONLY) NSUserDefaults *userDefaults;
-@property (NS_NONATOMIC_IOSONLY) NSURL *whatsNewBaseURL;
+@property (NS_NONATOMIC_IOSONLY) id <FMIURLProvider> URLProvider;
 
 @end
 
 @implementation FMIWhatsNewCoordinator
 
-- (instancetype)initWithBundle:(NSBundle *)bundle userDefaults:(NSUserDefaults *)userDefaults whatsNewBaseURL:(NSURL *)whatsNewBaseURL {
+- (instancetype)initWithBundle:(NSBundle *)bundle userDefaults:(NSUserDefaults *)userDefaults URLProvider:(id <FMIURLProvider>)URLProvider {
     self = [super init];
     if (self) {
         self.bundle = bundle;
         self.userDefaults = userDefaults;
-        self.whatsNewBaseURL = whatsNewBaseURL;
+        self.URLProvider = URLProvider;
     }
     return self;
 }
 
 - (NSURL *)localizedWhatsNewURL {
-    if ([NSLocale fmi_isGermanLanguage]) {
-        NSString *path = self.whatsNewBaseURL.absoluteString;
-        NSString *localizedPath = [path stringByReplacingOccurrencesOfString:@"/en/" withString:@"/de/"];
-        return [NSURL URLWithString:localizedPath];
-    }
-    return self.whatsNewBaseURL;
+    return [self.URLProvider provideURL];
 }
 
 - (BOOL)shouldShow {

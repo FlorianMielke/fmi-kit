@@ -1,5 +1,7 @@
 #import <Foundation/Foundation.h>
 
+@protocol FMIURLProvider;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FMIWhatsNewCoordinator : NSObject
@@ -9,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init NS_UNAVAILABLE;
 
-- (instancetype)initWithBundle:(NSBundle *)bundle userDefaults:(NSUserDefaults *)userDefaults whatsNewBaseURL:(NSURL *)whatsNewBaseURL;
+- (instancetype)initWithBundle:(NSBundle *)bundle userDefaults:(NSUserDefaults *)userDefaults URLProvider:(id <FMIURLProvider>)URLProvider;
 
 - (void)viewed;
 

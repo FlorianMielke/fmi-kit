@@ -72,10 +72,10 @@
     return [[FMIReviewNotificationCoordinator alloc] initWithAppStoreID:appStoreID userDefaults:userDefaults calendar:calendar];
 }
 
-+ (FMIWhatsNewCoordinator *)createWhatsNewCoordinatorWithBaseURL:(NSURL *)whatsNewBaseURL {
++ (FMIWhatsNewCoordinator *)createWhatsNewCoordinatorWithURLProvider:(id <FMIURLProvider>)URLProvider {
     NSBundle *bundle = [NSBundle mainBundle];
     NSUserDefaults *userDefaults = [FMIKitFactory createUserDefaults];
-    return [[FMIWhatsNewCoordinator alloc] initWithBundle:bundle userDefaults:userDefaults whatsNewBaseURL:whatsNewBaseURL];
+    return [[FMIWhatsNewCoordinator alloc] initWithBundle:bundle userDefaults:userDefaults URLProvider:URLProvider];
 }
 
 + (id <FMIMessage>)createErrorMessageForError:(NSError *)error bundle:(NSBundle *)bundle {

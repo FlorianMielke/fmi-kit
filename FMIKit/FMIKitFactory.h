@@ -5,12 +5,13 @@
 @class FMIModifyCloudStatus;
 @class FMIFetchCloudStatus;
 @class FMIFileCoordinator;
-@protocol FMIAlertView;
 @class FMIReviewNotificationCoordinator;
 @class FMIWhatsNewCoordinator;
 @class FMIWhatsNewCoordinator;
 @protocol FMIAttachment;
 @protocol FMIMessage;
+@protocol FMIAlertView;
+@protocol FMIURLProvider;
 
 @interface FMIKitFactory : NSObject
 
@@ -34,7 +35,7 @@
 
 + (FMIReviewNotificationCoordinator *)createReviewNotificationCoordinatorForAppStoreID:(NSString *)appStoreID;
 
-+ (FMIWhatsNewCoordinator *)createWhatsNewCoordinatorWithBaseURL:(NSURL *)whatsNewBaseURL;
++ (FMIWhatsNewCoordinator *)createWhatsNewCoordinatorWithURLProvider:(id <FMIURLProvider>)URLProvider;
 
 + (id <FMIMessage>)createErrorMessageForError:(NSError *)error bundle:(NSBundle *)bundle;
 

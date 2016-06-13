@@ -2,13 +2,14 @@
 #import <OCMock/OCMock.h>
 #import "FMIWhatsNewCoordinator.h"
 #import "NSLocale+German.h"
+#import "FMIURLProvider.h"
 
 @interface FMIWhatsNewCoordinatorTest : XCTestCase
 
 @property (NS_NONATOMIC_IOSONLY) FMIWhatsNewCoordinator *subject;
 @property (NS_NONATOMIC_IOSONLY) id userDefaults;
 @property (NS_NONATOMIC_IOSONLY) id bundle;
-@property (NS_NONATOMIC_IOSONLY) NSURL *whatsNewBaseURL;
+@property (NS_NONATOMIC_IOSONLY) id URLProvider;
 
 @end
 
@@ -18,8 +19,8 @@
     [super setUp];
     self.bundle = OCMClassMock([NSBundle class]);
     self.userDefaults = OCMClassMock([NSUserDefaults class]);
-    self.whatsNewBaseURL = [NSURL URLWithString:@"https://madefm.com/en/product.php"];
-    self.subject = [[FMIWhatsNewCoordinator alloc] initWithBundle:self.bundle userDefaults:self.userDefaults whatsNewBaseURL:self.whatsNewBaseURL];
+    self.URLProvider = OCMProtocolMock(@protocol(FMIURLProvider));
+    self.subject = [[FMIWhatsNewCoordinator alloc] initWithBundle:self.bundle userDefaults:self.userDefaults URLProvider:self.URLProvider];
 }
 
 - (void)testItReturnsTrueIfItsANewVersionAndTheUserHasNotViewedAnyVersionYet {
@@ -65,15 +66,12 @@
 }
 
 - (void)testItLocalizesWhatsNewURLForGerman {
-    id locale = OCMClassMock([NSLocale class]);
-    OCMStub([locale fmi_isGermanLanguage]).andReturn(YES);
-    NSURL *germanURL = [NSURL URLWithString:@"https://madefm.com/de/product.php"];
-
+    NSURL *sampleURL = [NSURL URLWithString:@"http://sample.com/helpcenter"];
+    OCMStub([self.URLProvider provideURL]).andReturn(sampleURL);
+    
     NSURL *url = self.subject.localizedWhatsNewURL;
     
-    XCTAssertEqualObjects(germanURL.absoluteString, url.absoluteString);
-
-    [locale stopMocking];
+    XCTAssertEqualObjects(sampleURL.absoluteString, url.absoluteString);
 }
 
 @end
