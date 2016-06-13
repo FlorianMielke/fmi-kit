@@ -99,7 +99,7 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #pragma mark - Common
 
 #import <FMIKit/FMIURLProvider.h>
-#import <FMIKit/NSBundle+AppInfo.h>
+#import <FMIKit/NSBundle+FMIAppInfo.h>
 
 #pragma mark - Persistence
 
