@@ -47,6 +47,10 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIDuration.h>
 #import <FMIKit/FMIDurationFormatter.h>
 
+#pragma mark - Common
+
+#import <FMIKit/NSBundle+FMIAppInfo.h>
+
 #pragma mark - Persistence
 
 #import <FMIKit/FMICSVDeserializer.h>
@@ -99,7 +103,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #pragma mark - Common
 
 #import <FMIKit/FMIURLProvider.h>
-#import <FMIKit/NSBundle+FMIAppInfo.h>
 
 #pragma mark - Persistence
 
