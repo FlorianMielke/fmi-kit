@@ -13,6 +13,7 @@
 #import "FMIErrorLogFile.h"
 #import "FMIMessage.h"
 #import "FMIErrorMessage.h"
+#import "FMINullCloudStatusGateway.h"
 
 @implementation FMIKitFactory
 
@@ -49,8 +50,7 @@
 }
 
 + (id <FMICloudStatusGateway>)createUbiquitousCloudStatusGateway {
-    NSUbiquitousKeyValueStore *keyValueStore = [self createUbiquitousKeyValueStore];
-    return [[FMIUbiquitousCloudStatusGateway alloc] initWithKeyValueStore:keyValueStore];
+    return [[FMINullCloudStatusGateway alloc] init];
 }
 
 + (NSUbiquitousKeyValueStore *)createUbiquitousKeyValueStore {

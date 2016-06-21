@@ -83,6 +83,7 @@
 		3591329C03F11E4771C940F7 /* FMINonAminatedPushSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913788E9482FA82280B7FC /* FMINonAminatedPushSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359132D4F477821D6DBA7C60 /* FMIModifyCloudStatusTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 359130FF8EF5D562D5E73887 /* FMIModifyCloudStatusTest.m */; };
 		359132E39EB8CAA02F7903FC /* NSData+FileAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913CA0841864C15B1F5630 /* NSData+FileAdditionsTests.m */; };
+		359132FA88A757E748259EED /* FMINullCloudStatusGateway.h in Headers */ = {isa = PBXBuildFile; fileRef = 3591319E45D46776C2320E2F /* FMINullCloudStatusGateway.h */; };
 		359133218E8001C69E100B08 /* FMIWhatsNewCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = 359139C2BB26E5BA8FA54A1A /* FMIWhatsNewCoordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3591332F7A0D8F1CE5B1EC1B /* FakeCSVFileDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913287200CA2EDFD76F045 /* FakeCSVFileDescription.m */; };
 		35913333EE3DE170F8E88B1A /* NSDateFormatter+TimingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913B205FA4C90F8E45CDC4 /* NSDateFormatter+TimingTests.m */; };
@@ -245,6 +246,7 @@
 		35913A7B428E31E8E7F8545D /* NSNumberFormatter+Editing.h in Headers */ = {isa = PBXBuildFile; fileRef = 359130B04AC7C0B171B2C775 /* NSNumberFormatter+Editing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913A7B89992CA2E4E5FEE0 /* FMIUUIDHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 359139A832DE54E59DA264F8 /* FMIUUIDHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913A7D20E44E93982E67E7 /* NSCalendar+Calculations.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913CC1589B139F1C36DA34 /* NSCalendar+Calculations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35913A9FD7149CB28256FF4F /* FMINullCloudStatusGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913B6EB16007B0C2AA0FAD /* FMINullCloudStatusGateway.m */; };
 		35913AA172D1269CB8A08ADB /* FMIBlurredView.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913C5D3B2BADB32376449B /* FMIBlurredView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913ADEC415291322BB2DF2 /* FMIEditingToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 359134F6A691844281EE4851 /* FMIEditingToolbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913AE614EE3874906AD5F8 /* FMIAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913A666EC95E1D148B78FC /* FMIAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -404,6 +406,7 @@
 		3591317C8AD6D1BA6F6AE821 /* NSUndoManager+Grouping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUndoManager+Grouping.m"; sourceTree = "<group>"; };
 		35913191490ECD45DBF6648E /* UITableView+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+IndexPath.h"; sourceTree = "<group>"; };
 		359131924BCFD7F22CA2DE26 /* NSString+Folding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Folding.m"; sourceTree = "<group>"; };
+		3591319E45D46776C2320E2F /* FMINullCloudStatusGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMINullCloudStatusGateway.h; sourceTree = "<group>"; };
 		359131B30BC957B02B1DA5D3 /* FMIReviewNotificationCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIReviewNotificationCoordinator.m; sourceTree = "<group>"; };
 		359131C359888AA203101259 /* FMIModifyCloudStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIModifyCloudStatus.h; sourceTree = "<group>"; };
 		359131DB11F88016DF0FC1B7 /* FMIFoundationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIFoundationAdditions.h; sourceTree = "<group>"; };
@@ -567,6 +570,7 @@
 		35913B64511B4BABA540BC2A /* FMIURLProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIURLProvider.h; sourceTree = "<group>"; };
 		35913B64F30251D3C1C155E0 /* FMIPeriod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIPeriod.m; sourceTree = "<group>"; };
 		35913B680C286D5E9DD609A6 /* FMIErrorMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIErrorMessage.h; sourceTree = "<group>"; };
+		35913B6EB16007B0C2AA0FAD /* FMINullCloudStatusGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMINullCloudStatusGateway.m; sourceTree = "<group>"; };
 		35913B9243E49E3BA7E919C3 /* FMIDatePickerControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIDatePickerControllerTests.m; path = FMIKitTests/FMIDatePickerControllerTests.m; sourceTree = SOURCE_ROOT; };
 		35913BA4154558C6B6811DCE /* NSIndexSet+InitializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSIndexSet+InitializationTests.m"; path = "FMIKitTests/NSIndexSet+InitializationTests.m"; sourceTree = SOURCE_ROOT; };
 		35913BCE9444EA36FECA745C /* FMIErrorMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIErrorMessage.m; sourceTree = "<group>"; };
@@ -833,6 +837,8 @@
 				35913D92E110282542642246 /* NSManagedObjectContext+PersistentStoreAdditionsTests.m */,
 				35913726FA90F81083096904 /* NSPersistentStoreCoordinator+Migration.h */,
 				35913B3B73AD7F75A04FCE27 /* NSPersistentStoreCoordinator+Migration.m */,
+				35913B6EB16007B0C2AA0FAD /* FMINullCloudStatusGateway.m */,
+				3591319E45D46776C2320E2F /* FMINullCloudStatusGateway.h */,
 			);
 			name = Persistence;
 			sourceTree = "<group>";
@@ -1230,6 +1236,7 @@
 				359131D2DE6460C28F7BAD39 /* FMIMessageAttachment.h in Headers */,
 				359130BFB47F831CB252FB0D /* FMISupportMessage.h in Headers */,
 				359136978B0C634026DE1807 /* FMIURLProvider.h in Headers */,
+				359132FA88A757E748259EED /* FMINullCloudStatusGateway.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1532,6 +1539,7 @@
 				35913C92E30326F916509E7F /* FMIMessageAttachment.m in Sources */,
 				3591366E697A6FCF2F862A15 /* FMIMessageMIMETypes.m in Sources */,
 				359138570A0179985FA29656 /* FMISupportMessage.m in Sources */,
+				35913A9FD7149CB28256FF4F /* FMINullCloudStatusGateway.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
