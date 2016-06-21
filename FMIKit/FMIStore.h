@@ -10,7 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-OBJC_EXTERN NSString *const FMIStoreDidUpdateFromCloudNotification;
 OBJC_EXTERN NSString *const FMIStoreWillChangeStoreNotification;
 OBJC_EXTERN NSString *const FMIStoreDidChangeStoreNotification;
 OBJC_EXTERN NSString *const FMIStoreDidMigrateToCloudStoreNotification;
@@ -73,30 +72,9 @@ NS_ENUM(NSInteger) {
 - (void)useInMemoryStoreWithConfiguration:(FMIStoreConfiguration *)configuration;
 
 /**
- * Migrates the cloud store to the locale store.
- *
- * @param completionHandler A block object to be executed when the migration ends.
- */
-- (void)migrateCloudStoreToLocalStoreWithCompletion:(void (^)(BOOL migrated, NSError *error))completionHandler;
-
-/**
- * Migrates the locale store to an cloud store.
- *
- * @param completionHandler A block object to be executed when the migration ends.
- */
-- (void)migrateLocalStoreToCloudStoreWithCompletion:(void (^)(BOOL migrated, NSError *error))completionHandler;
-
-/**
  * Resets the whole Core Data stack.
  */
 - (void)resetCoreDataStack;
-
-/**
- * Destroys the cloud store.
- *
- * @param completionHandler A block object to be executed when the reset ends.
- */
-- (void)destroyCloudStoreWithCompletion:(void (^)(BOOL reset, NSError *error))completionHandler;
 
 /**
  * Creates a new \c NSManagedObjectContext with the current \c persistentStoreCoordinator

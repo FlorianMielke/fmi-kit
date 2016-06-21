@@ -13,7 +13,6 @@
 #import "FMIModifyCloudStatus.h"
 #import "NSFileManager+DirectoryAdditions.h"
 
-NSString *const FMIStoreDidUpdateFromCloudNotification = @"FMIStoreDidUpdateFromCloudNotification";
 NSString *const FMIStoreWillChangeStoreNotification = @"FMIStoreWillChangeStoreNotification";
 NSString *const FMIStoreDidChangeStoreNotification = @"FMIStoreDidChangeStoreNotification";
 NSString *const FMIStoreDidMigrateToCloudStoreNotification = @"FMIStoreDidMigrateToCloudStoreNotification";
@@ -118,24 +117,11 @@ NSString *const FMIStoreErrorDomain = @"FMIStoreErrorDomain";
 - (void)registerForICloudNotifications {
     [self.notificationCenter addObserver:self selector:@selector(storesWillChange:) name:NSPersistentStoreCoordinatorStoresWillChangeNotification object:self.persistentStoreCoordinator];
     [self.notificationCenter addObserver:self selector:@selector(storesDidChange:) name:NSPersistentStoreCoordinatorStoresDidChangeNotification object:self.persistentStoreCoordinator];
-    [self.notificationCenter addObserver:self selector:@selector(persistentStoreDidImportUbiquitousContentChanges:) name:NSPersistentStoreDidImportUbiquitousContentChangesNotification object:self.persistentStoreCoordinator];
 }
 
 - (void)deregisterFromICloudNotifications {
     [self.notificationCenter removeObserver:self name:NSPersistentStoreCoordinatorStoresWillChangeNotification object:self.persistentStoreCoordinator];
     [self.notificationCenter removeObserver:self name:NSPersistentStoreCoordinatorStoresDidChangeNotification object:self.persistentStoreCoordinator];
-    [self.notificationCenter removeObserver:self name:NSPersistentStoreDidImportUbiquitousContentChangesNotification object:self.persistentStoreCoordinator];
-}
-
-- (void)persistentStoreDidImportUbiquitousContentChanges:(NSNotification *)changeNotification {
-    NSLog(@"%s: %@", __PRETTY_FUNCTION__, changeNotification.userInfo);
-    NSDictionary *changedObjectIDs = [changeNotification.userInfo copy];
-    [self.managedObjectContext performBlock:^{
-        [self.managedObjectContext mergeChangesFromContextDidSaveNotification:changeNotification];
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [self.notificationCenter postNotificationName:FMIStoreDidUpdateFromCloudNotification object:self.managedObjectContext userInfo:changedObjectIDs];
-        }];
-    }];
 }
 
 - (void)storesWillChange:(nullable NSNotification *)notification {
@@ -161,63 +147,6 @@ NSString *const FMIStoreErrorDomain = @"FMIStoreErrorDomain";
     }];
 }
 
-- (void)migrateCloudStoreToLocalStoreWithCompletion:(void (^)(BOOL migrated, NSError *error))completionHandler {
-    [self storesWillChange:nil];
-    [self.persistentStoreCoordinator performBlock:^{
-        NSError *migrationError;
-        NSError *error;
-        BOOL migrated = NO;
-        NSPersistentStore *migratedStore = [self.persistentStoreCoordinator migratePersistentStore:self.persistentStoreCoordinator.fmi_currentPersistentStore toURL:self.configuration.localStoreURL options:self.configuration.localStoreOptionsForCloudRemoval withType:NSSQLiteStoreType error:&migrationError];
-        if (migratedStore) {
-            BOOL removed = [[NSFileManager defaultManager] fmi_removeCloudDirectoryWithError:&migrationError];
-            if (removed) {
-                migrated = YES;
-                NSLog(@"Migrated to local store.");
-            } else {
-                error = [self prepareMigrationErrorWithUnderlyingError:migrationError];
-            }
-        } else {
-            error = [self prepareMigrationErrorWithUnderlyingError:migrationError];
-        }
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            if (completionHandler) {
-                completionHandler(migrated, error);
-            }
-            [self.notificationCenter postNotificationName:FMIStoreDidMigrateToCloudStoreNotification object:self];
-        }];
-    }];
-}
-
-- (NSError *)prepareMigrationErrorWithUnderlyingError:(NSError *)migrationError {
-    NSLog(@"Failed to migrate cloud to local store. Error: %@\n%@", migrationError.localizedDescription, migrationError.userInfo);
-    return [NSError errorWithDomain:FMIStoreErrorDomain code:FMIStoreErrorCannotMigrateToLocalStore userInfo:@{NSLocalizedDescriptionKey : @"Failed to migrate to local store.", NSLocalizedRecoverySuggestionErrorKey : @"Please contact me at feedback@systemweit.de", NSUnderlyingErrorKey : migrationError}];
-}
-
-- (void)migrateLocalStoreToCloudStoreWithCompletion:(void (^)(BOOL migrated, NSError *error))completionHandler {
-    [self storesWillChange:nil];
-    [self.persistentStoreCoordinator performBlock:^{
-        NSError *coordinatorError;
-        NSError *error;
-        BOOL migrated = NO;
-        NSPersistentStore *migratedStore = [self.persistentStoreCoordinator migratePersistentStore:self.persistentStoreCoordinator.fmi_currentPersistentStore toURL:self.configuration.cloudStoreURL options:self.configuration.cloudStoreOptions withType:NSSQLiteStoreType error:&coordinatorError];
-        if (migratedStore) {
-            if ([self destroyLocalStoreWithError:&error]) {
-                migrated = YES;
-                NSLog(@"Migrated to cloud store.");
-            }
-        } else {
-            error = [NSError errorWithDomain:FMIStoreErrorDomain code:FMIStoreErrorCannotMigrateToCloudStore userInfo:@{NSLocalizedDescriptionKey : @"Failed to migrate to cloud store.", NSLocalizedRecoverySuggestionErrorKey : @"Please contact me at feedback@systemweit.de", NSUnderlyingErrorKey : coordinatorError}];
-            NSLog(@"Failed to migrate local to cloud store. Error: %@\n%@", coordinatorError.localizedDescription, coordinatorError.userInfo);
-        }
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            if (completionHandler) {
-                completionHandler(migrated, error);
-            }
-            [self.notificationCenter postNotificationName:FMIStoreDidMigrateToCloudStoreNotification object:self];
-        }];
-    }];
-}
-
 - (BOOL)destroyLocalStoreWithError:(NSError **)error {
     NSError *coordinatorError;
     BOOL destroyed = [self.persistentStoreCoordinator destroyPersistentStoreAtURL:self.configuration.localStoreURL withType:NSSQLiteStoreType options:self.configuration.localStoreOptions error:&coordinatorError];
@@ -226,25 +155,6 @@ NSString *const FMIStoreErrorDomain = @"FMIStoreErrorDomain";
         NSLog(@"Failed to destroy local store. Error: %@\n%@", coordinatorError.localizedDescription, coordinatorError.userInfo);
     }
     return destroyed;
-}
-
-- (void)destroyCloudStoreWithCompletion:(void (^)(BOOL reset, NSError *error))completionHandler {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSError *coordinatorError;
-        BOOL success = [NSPersistentStoreCoordinator removeUbiquitousContentAndPersistentStoreAtURL:self.configuration.cloudStoreURL options:self.configuration.cloudStoreOptions error:&coordinatorError];
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            NSError *error;
-            if (!success) {
-                error = [NSError errorWithDomain:FMIStoreErrorDomain code:FMIStoreErrorCannotDestroyCloudStore userInfo:@{NSLocalizedDescriptionKey : @"Failed to reset cloud store.", NSUnderlyingErrorKey : coordinatorError}];
-                NSLog(@"Failed to reset cloud store. Error: %@\n%@", error.localizedDescription, error.userInfo);
-            } else {
-                NSLog(@"Finished resetting cloud store");
-            }
-            if (completionHandler) {
-                completionHandler(success, error);
-            }
-        }];
-    });
 }
 
 @end
