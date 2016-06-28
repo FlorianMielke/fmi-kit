@@ -26,7 +26,7 @@ NS_ENUM(NSInteger) {
 /**
  * The FMIStore class manages an application's core data stack.
  */
-@interface FMIStore : NSObject
+@interface FMICoreDataStore : NSObject
 
 /**
  * The assigned store configuration.
@@ -48,7 +48,7 @@ NS_ENUM(NSInteger) {
  *
  * @return A shared instance of the FMIStore class.
  */
-+ (FMIStore *)sharedStore;
++ (FMICoreDataStore *)sharedStore;
 
 /**
  * Attempts the managed object context to perform a save.

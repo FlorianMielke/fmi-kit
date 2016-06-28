@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
 
 @class FMIDateHelper;
-@class FMIStore;
+@class FMICoreDataStore;
 @class FMIModifyCloudStatus;
 @class FMIFetchCloudStatus;
 @class FMIFileCoordinator;
@@ -31,7 +31,7 @@
 
 + (FMIFileCoordinator *)createFileCoordinator;
 
-+ (FMIStore *)createStore;
++ (FMICoreDataStore *)createStore;
 
 + (FMIReviewNotificationCoordinator *)createReviewNotificationCoordinatorForAppStoreID:(NSString *)appStoreID;
 

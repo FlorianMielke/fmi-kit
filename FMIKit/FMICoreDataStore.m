@@ -1,11 +1,11 @@
 //
-//  FMIStore.m
+//  FMICoreDataStore.m
 //
 //  Created by Florian Mielke on 15.10.13.
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //
 
-#import "FMIStore.h"
+#import "FMICoreDataStore.h"
 #import "FMIStoreConfiguration.h"
 #import "FMIKitFactory.h"
 #import "FMIFetchCloudStatus.h"
@@ -19,7 +19,7 @@ NSString *const FMIStoreDidMigrateToCloudStoreNotification = @"FMIStoreDidMigrat
 NSString *const FMIStoreDidMigrateToLocalStoreNotification = @"FMIStoreDidMigrateToLocalStoreNotification";
 NSString *const FMIStoreErrorDomain = @"FMIStoreErrorDomain";
 
-@interface FMIStore ()
+@interface FMICoreDataStore ()
 
 @property (NS_NONATOMIC_IOSONLY) NSManagedObjectContext *managedObjectContext;
 @property (NS_NONATOMIC_IOSONLY) NSPersistentStoreCoordinator *persistentStoreCoordinator;
@@ -29,10 +29,10 @@ NSString *const FMIStoreErrorDomain = @"FMIStoreErrorDomain";
 
 @end
 
-@implementation FMIStore
+@implementation FMICoreDataStore
 
-+ (FMIStore *)sharedStore {
-    static FMIStore *singleton;
++ (FMICoreDataStore *)sharedStore {
+    static FMICoreDataStore *singleton;
     static dispatch_once_t singletonToken;
     dispatch_once(&singletonToken, ^{
         singleton = [[self alloc] init];

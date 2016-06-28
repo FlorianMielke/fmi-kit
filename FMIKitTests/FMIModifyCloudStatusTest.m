@@ -2,7 +2,7 @@
 #import <OCMock/OCMock.h>
 #import "FMIModifyCloudStatus.h"
 #import "FMICloudStatusGateway.h"
-#import "FMIStore.h"
+#import "FMICoreDataStore.h"
 
 @interface FMIModifyCloudStatusTest : XCTestCase
 

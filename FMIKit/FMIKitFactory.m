@@ -2,7 +2,7 @@
 #import "FMIActivityIndicatorAlertView.h"
 #import "FMIDateHelper.h"
 #import "FMIFetchCloudStatus.h"
-#import "FMIStore.h"
+#import "FMICoreDataStore.h"
 #import "FMIUserDefaultsCloudStatusGateway.h"
 #import "FMIModifyCloudStatus.h"
 #import "FMIFileCoordinator.h"
@@ -62,8 +62,8 @@
     return [[FMIUserDefaultsCloudStatusGateway alloc] initWithUserDefaults:userDefaults];
 }
 
-+ (FMIStore *)createStore {
-    return [FMIStore sharedStore];
++ (FMICoreDataStore *)createStore {
+    return [FMICoreDataStore sharedStore];
 }
 
 + (FMIReviewNotificationCoordinator *)createReviewNotificationCoordinatorForAppStoreID:(NSString *)appStoreID {

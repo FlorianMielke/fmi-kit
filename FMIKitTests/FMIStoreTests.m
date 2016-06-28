@@ -5,12 +5,12 @@
 
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
-#import "FMIStore.h"
+#import "FMICoreDataStore.h"
 #import "FMIStoreConfiguration.h"
 
 @interface FMIStoreTests : XCTestCase
 
-@property (NS_NONATOMIC_IOSONLY) FMIStore *subject;
+@property (NS_NONATOMIC_IOSONLY) FMICoreDataStore *subject;
 @property (NS_NONATOMIC_IOSONLY) NSURL *storeURL;
 @property (NS_NONATOMIC_IOSONLY) FMIStoreConfiguration *configuration;
 
@@ -24,13 +24,13 @@
     self.storeURL = [NSURL fileURLWithPath:storePath];
     NSString *modelPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"Event" ofType:@"momd"];
     NSURL *managedObjectModelURL = [NSURL fileURLWithPath:modelPath];
-    self.subject = [[FMIStore alloc] init];
+    self.subject = [[FMICoreDataStore alloc] init];
     self.configuration = [[FMIStoreConfiguration alloc] initWithManagedObjectModelURL:managedObjectModelURL fetchCloudStatus:nil localStoreURL:self.storeURL localStoreOptions:nil cloudStoreURL:nil cloudStoreOptions:nil];
     [self.subject useSQLiteStoreWithConfiguration:self.configuration];
 }
 
 - (void)testSharedStoreShouldAlwaysReturnTheSameObject {
-    XCTAssertEqualObjects([FMIStore sharedStore], [FMIStore sharedStore]);
+    XCTAssertEqualObjects([FMICoreDataStore sharedStore], [FMICoreDataStore sharedStore]);
 }
 
 - (void)testStoreShouldConfigurePersistentStore {
