@@ -2,11 +2,11 @@
 #import <OCMock/OCMock.h>
 #import <CoreData/CoreData.h>
 #import "FMIFetchCloudStatus.h"
-#import "FMIStoreConfiguration.h"
+#import "FMICoreDataStoreConfiguration.h"
 
-@interface FMIStoreConfigurationTest : XCTestCase
+@interface FMICoreDataStoreConfigurationTest : XCTestCase
 
-@property (NS_NONATOMIC_IOSONLY) FMIStoreConfiguration *subject;
+@property (NS_NONATOMIC_IOSONLY) FMICoreDataStoreConfiguration *subject;
 @property (NS_NONATOMIC_IOSONLY) FMIFetchCloudStatus *fetchCloudStatus;
 
 @property (nonatomic, strong) NSURL *localStoreURL;
@@ -15,7 +15,7 @@
 @property (nonatomic, strong) NSDictionary *cloudStoreOptions;
 @end
 
-@implementation FMIStoreConfigurationTest
+@implementation FMICoreDataStoreConfigurationTest
 
 - (void)setUp {
     [super setUp];
@@ -25,7 +25,7 @@
     self.cloudStoreURL = [[NSURL alloc] initFileURLWithPath:@"::cloudPath::"];
     self.cloudStoreOptions = @{@"::option::": @"::cloud::"};
     self.fetchCloudStatus = OCMClassMock([FMIFetchCloudStatus class]);
-    self.subject = [[FMIStoreConfiguration alloc] initWithManagedObjectModelURL:managedObjectModelURL fetchCloudStatus:self.fetchCloudStatus localStoreURL:self.localStoreURL localStoreOptions:self.localStoreOptions cloudStoreURL:self.cloudStoreURL cloudStoreOptions:self.cloudStoreOptions];
+    self.subject = [[FMICoreDataStoreConfiguration alloc] initWithManagedObjectModelURL:managedObjectModelURL fetchCloudStatus:self.fetchCloudStatus localStoreURL:self.localStoreURL localStoreOptions:self.localStoreOptions cloudStoreURL:self.cloudStoreURL cloudStoreOptions:self.cloudStoreOptions];
 }
 
 - (void)testItReturnsTheCurrentLocalStoreURL {

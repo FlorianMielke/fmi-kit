@@ -5,8 +5,9 @@
 
 #import <CoreData/CoreData.h>
 #import "FMICloudStatus.h"
+#import "FMIStore.h"
 
-@class FMIStoreConfiguration;
+@class FMICoreDataStoreConfiguration;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -26,12 +27,12 @@ NS_ENUM(NSInteger) {
 /**
  * The FMIStore class manages an application's core data stack.
  */
-@interface FMICoreDataStore : NSObject
+@interface FMICoreDataStore : NSObject <FMIStore>
 
 /**
  * The assigned store configuration.
  */
-@property (readonly, NS_NONATOMIC_IOSONLY) FMIStoreConfiguration *configuration;
+@property (readonly, NS_NONATOMIC_IOSONLY) FMICoreDataStoreConfiguration *configuration;
 
 /**
  * The managed object context.
@@ -51,25 +52,18 @@ NS_ENUM(NSInteger) {
 + (FMICoreDataStore *)sharedStore;
 
 /**
- * Attempts the managed object context to perform a save.
- *
- * @return YES if the save succeeds, otherwise NO.
- */
-- (BOOL)saveContext;
-
-/**
  * Forces the store to use a SQLite store.
  *
  * @param configuration The stores configuration.
  */
-- (void)useSQLiteStoreWithConfiguration:(FMIStoreConfiguration *)configuration;
+- (void)useSQLiteStoreWithConfiguration:(FMICoreDataStoreConfiguration *)configuration;
 
 /**
  * Forces the store to use an in memory store.
  *
  * @param configuration The stores configuration.
  */
-- (void)useInMemoryStoreWithConfiguration:(FMIStoreConfiguration *)configuration;
+- (void)useInMemoryStoreWithConfiguration:(FMICoreDataStoreConfiguration *)configuration;
 
 /**
  * Resets the whole Core Data stack.

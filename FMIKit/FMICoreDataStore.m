@@ -6,7 +6,7 @@
 //
 
 #import "FMICoreDataStore.h"
-#import "FMIStoreConfiguration.h"
+#import "FMICoreDataStoreConfiguration.h"
 #import "FMIKitFactory.h"
 #import "FMIFetchCloudStatus.h"
 #import "NSPersistentStoreCoordinator+Migration.h"
@@ -25,7 +25,7 @@ NSString *const FMIStoreErrorDomain = @"FMIStoreErrorDomain";
 @property (NS_NONATOMIC_IOSONLY) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (NS_NONATOMIC_IOSONLY) NSManagedObjectModel *managedObjectModel;
 @property (NS_NONATOMIC_IOSONLY) NSNotificationCenter *notificationCenter;
-@property (NS_NONATOMIC_IOSONLY) FMIStoreConfiguration *configuration;
+@property (NS_NONATOMIC_IOSONLY) FMICoreDataStoreConfiguration *configuration;
 
 @end
 
@@ -48,7 +48,7 @@ NSString *const FMIStoreErrorDomain = @"FMIStoreErrorDomain";
     return self;
 }
 
-- (BOOL)saveContext {
+- (BOOL)save {
     if (!self.managedObjectContext || !self.managedObjectContext.hasChanges) {
         return NO;
     }
@@ -88,12 +88,12 @@ NSString *const FMIStoreErrorDomain = @"FMIStoreErrorDomain";
     return managedObjectContext;
 }
 
-- (void)useSQLiteStoreWithConfiguration:(FMIStoreConfiguration *)configuration {
+- (void)useSQLiteStoreWithConfiguration:(FMICoreDataStoreConfiguration *)configuration {
     self.configuration = configuration;
     [self preparePersistentStoreCoordinatorWithStoreType:NSSQLiteStoreType storeURL:self.configuration.currentStoreURL];
 }
 
-- (void)useInMemoryStoreWithConfiguration:(FMIStoreConfiguration *)configuration {
+- (void)useInMemoryStoreWithConfiguration:(FMICoreDataStoreConfiguration *)configuration {
     self.configuration = configuration;
     [self preparePersistentStoreCoordinatorWithStoreType:NSInMemoryStoreType storeURL:nil];
 }

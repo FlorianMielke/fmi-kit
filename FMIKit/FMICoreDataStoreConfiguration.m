@@ -1,5 +1,5 @@
 //
-//  FMIStoreConfiguration.m
+//  FMICoreDataStoreConfiguration.m
 //  FMIKit
 //
 //  Created by Florian Mielke on 10.05.16.
@@ -7,10 +7,10 @@
 //
 
 #import <CoreData/CoreData.h>
-#import "FMIStoreConfiguration.h"
+#import "FMICoreDataStoreConfiguration.h"
 #import "FMIFetchCloudStatus.h"
 
-@interface FMIStoreConfiguration ()
+@interface FMICoreDataStoreConfiguration ()
 
 @property (NS_NONATOMIC_IOSONLY) NSURL *localStoreURL;
 @property (NS_NONATOMIC_IOSONLY) NSURL *cloudStoreURL;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation FMIStoreConfiguration
+@implementation FMICoreDataStoreConfiguration
 
 - (instancetype)initWithManagedObjectModelURL:(NSURL *)managedObjectModelURL fetchCloudStatus:(FMIFetchCloudStatus *)fetchCloudStatus localStoreURL:(NSURL *)localStoreURL localStoreOptions:(NSDictionary *)localStoreOptions cloudStoreURL:(NSURL *)cloudStoreURL cloudStoreOptions:(NSDictionary *)cloudStoreOptions {
     self = [super init];

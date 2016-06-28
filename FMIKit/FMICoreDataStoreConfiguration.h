@@ -1,5 +1,5 @@
 //
-//  FMIStoreConfiguration.h
+//  FMICoreDataStoreConfiguration.h
 //  FMIKit
 //
 //  Created by Florian Mielke on 10.05.16.
@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FMIStoreConfiguration : NSObject
+@interface FMICoreDataStoreConfiguration : NSObject
 
 @property (readonly, NS_NONATOMIC_IOSONLY) NSURL *localStoreURL;
 @property (readonly, copy, NS_NONATOMIC_IOSONLY) NSDictionary *localStoreOptions;

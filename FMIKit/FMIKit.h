@@ -38,6 +38,7 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIFoundationAdditions.h>
 #import <FMIKit/FMIDateHelper.h>
 #import <FMIKit/FMIGMTDateHelper.h>
+#import <FMIKit/FMIStore.h>
 #import <FMIKit/FMITimeZoneHelper.h>
 #import <FMIKit/FMIUUIDHelper.h>
 
@@ -111,7 +112,7 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIModifyCloudStatus.h>
 #import <FMIKit/FMICloudStatus.h>
 #import <FMIKit/FMICoreDataStore.h>
-#import <FMIKit/FMIStoreConfiguration.h>
+#import <FMIKit/FMICoreDataStoreConfiguration.h>
 #import <FMIKit/NSPersistentStoreCoordinator+Migration.h>
 
 #pragma mark - Review & What's New
