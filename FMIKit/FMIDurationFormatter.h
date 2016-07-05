@@ -26,12 +26,12 @@ typedef NS_ENUM(NSInteger, FMIDurationFormatterStyle) {
 /**
  *	The duration style of the receiver.
  */
-@property (NS_NONATOMIC_IOSONLY) FMIDurationFormatterStyle style;
+@property (nonatomic) FMIDurationFormatterStyle style;
 
 /**
  *	The locale for the receiver.
  */
-@property (NS_NONATOMIC_IOSONLY) NSLocale *locale;
+@property (nonatomic) NSLocale *locale;
 
 /**
  *	Returns a string representation of a given duration used for editing.
