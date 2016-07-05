@@ -3,6 +3,8 @@
 //  Copyright (c) 2015 madeFM. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 #if !defined(FMI_INLINE)
 #  if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
 #    define FMI_INLINE static inline

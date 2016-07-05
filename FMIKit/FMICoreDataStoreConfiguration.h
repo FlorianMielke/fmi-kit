@@ -17,8 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readonly, NS_NONATOMIC_IOSONLY) NSURL *localStoreURL;
 @property (readonly, copy, NS_NONATOMIC_IOSONLY) NSDictionary *localStoreOptions;
-@property (readonly, nullable, NS_NONATOMIC_IOSONLY) NSURL *cloudStoreURL;
-@property (readonly, nullable, copy, NS_NONATOMIC_IOSONLY) NSDictionary *cloudStoreOptions;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSURL *cloudStoreURL;
+@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSDictionary *cloudStoreOptions;
 @property (readonly, NS_NONATOMIC_IOSONLY) NSURL *managedObjectModelURL;
 @property (readonly, copy, NS_NONATOMIC_IOSONLY) NSDictionary *currentStoreOptions;
 @property (readonly, NS_NONATOMIC_IOSONLY) NSURL *currentStoreURL;
@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init NS_UNAVAILABLE;
 
-- (instancetype)initWithManagedObjectModelURL:(NSURL *)managedObjectModelURL fetchCloudStatus:(nullable FMIFetchCloudStatus *)fetchCloudStatus localStoreURL:(NSURL *)localStoreURL localStoreOptions:(NSDictionary *)localStoreOptions cloudStoreURL:(nullable NSURL *)cloudStoreURL cloudStoreOptions:(nullable NSDictionary *)cloudStoreOptions;
+- (instancetype)initWithManagedObjectModelURL:(NSURL *)managedObjectModelURL fetchCloudStatus:(FMIFetchCloudStatus *)fetchCloudStatus localStoreURL:(NSURL *)localStoreURL localStoreOptions:(NSDictionary *)localStoreOptions cloudStoreURL:(NSURL *)cloudStoreURL cloudStoreOptions:(NSDictionary *)cloudStoreOptions;
 
 @end
 

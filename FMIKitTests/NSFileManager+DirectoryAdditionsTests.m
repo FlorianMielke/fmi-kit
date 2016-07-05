@@ -44,6 +44,12 @@
 
 #pragma mark - Tests
 
+- (void)testRemovingItemsReturnsNoForNilURL
+{
+    XCTAssertFalse([self.sut fm_removeItemsFromDirectoryAtPath:nil]);
+}
+
+
 - (void)testRemovingItemsReturnsNoForNonDirectoryURL
 {
     NSString *nonDirectoryPath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"file.txt"];

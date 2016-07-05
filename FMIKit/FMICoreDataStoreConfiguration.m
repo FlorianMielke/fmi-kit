@@ -13,9 +13,9 @@
 @interface FMICoreDataStoreConfiguration ()
 
 @property (NS_NONATOMIC_IOSONLY) NSURL *localStoreURL;
-@property (nullable, NS_NONATOMIC_IOSONLY) NSURL *cloudStoreURL;
+@property (NS_NONATOMIC_IOSONLY) NSURL *cloudStoreURL;
 @property (NS_NONATOMIC_IOSONLY) NSURL *managedObjectModelURL;
-@property (nullable, copy, NS_NONATOMIC_IOSONLY) NSDictionary *cloudStoreOptions;
+@property (copy, NS_NONATOMIC_IOSONLY) NSDictionary *cloudStoreOptions;
 @property (copy, NS_NONATOMIC_IOSONLY) NSDictionary *localStoreOptions;
 @property (NS_NONATOMIC_IOSONLY) FMIFetchCloudStatus *fetchCloudStatus;
 
@@ -23,7 +23,7 @@
 
 @implementation FMICoreDataStoreConfiguration
 
-- (instancetype)initWithManagedObjectModelURL:(NSURL *)managedObjectModelURL fetchCloudStatus:(nullable FMIFetchCloudStatus *)fetchCloudStatus localStoreURL:(NSURL *)localStoreURL localStoreOptions:(NSDictionary *)localStoreOptions cloudStoreURL:(nullable NSURL *)cloudStoreURL cloudStoreOptions:(nullable NSDictionary *)cloudStoreOptions {
+- (instancetype)initWithManagedObjectModelURL:(NSURL *)managedObjectModelURL fetchCloudStatus:(FMIFetchCloudStatus *)fetchCloudStatus localStoreURL:(NSURL *)localStoreURL localStoreOptions:(NSDictionary *)localStoreOptions cloudStoreURL:(NSURL *)cloudStoreURL cloudStoreOptions:(NSDictionary *)cloudStoreOptions {
     self = [super init];
     if (self) {
         self.localStoreURL = localStoreURL;
