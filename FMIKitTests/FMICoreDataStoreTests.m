@@ -7,6 +7,7 @@
 #import <OCMock/OCMock.h>
 #import "FMICoreDataStore.h"
 #import "FMICoreDataStoreConfiguration.h"
+#import "FMIFetchCloudStatus.h"
 
 @interface FMICoreDataStoreTests : XCTestCase
 
@@ -25,7 +26,8 @@
     NSString *modelPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"Event" ofType:@"momd"];
     NSURL *managedObjectModelURL = [NSURL fileURLWithPath:modelPath];
     self.subject = [[FMICoreDataStore alloc] init];
-    self.configuration = [[FMICoreDataStoreConfiguration alloc] initWithManagedObjectModelURL:managedObjectModelURL fetchCloudStatus:nil localStoreURL:self.storeURL localStoreOptions:nil cloudStoreURL:nil cloudStoreOptions:nil];
+    NSDictionary *localStoreOptions = @{};
+    self.configuration = [[FMICoreDataStoreConfiguration alloc] initWithManagedObjectModelURL:managedObjectModelURL fetchCloudStatus:nil localStoreURL:self.storeURL localStoreOptions:localStoreOptions cloudStoreURL:nil cloudStoreOptions:nil];
     [self.subject useSQLiteStoreWithConfiguration:self.configuration];
 }
 
