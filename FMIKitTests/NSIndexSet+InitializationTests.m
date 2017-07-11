@@ -1,56 +1,43 @@
-//
-//  Created by Florian Mielke on 15.04.13.
-//  Copyright (c) 2013 Florian Mielke. All rights reserved.
-//
-
 #import <XCTest/XCTest.h>
 #import "NSIndexSet+Initialization.h"
-
 
 @interface NSIndexSetInitializationAdditionsTests : XCTestCase
 
 @end
 
-
 @implementation NSIndexSetInitializationAdditionsTests
 
+- (void)testReturnsEmptyIndexSetForNilArray {
+    NSIndexSet *indexes = [NSIndexSet fmi_indexSetFromNumbersInArray:nil];
 
-#pragma mark -
-#pragma mark Creation
-
-- (void)testReturnsEmptyIndexSetForNilArray
-{
-    XCTAssertEqual([[NSIndexSet indexSetWithArray:nil] count], (NSUInteger)0);
+    XCTAssertEqual(0, indexes.count);
 }
 
+- (void)testReturnsEmptyIndexSetForEmptyArray {
+    NSIndexSet *indexes = [NSIndexSet fmi_indexSetFromNumbersInArray:@[]];
 
-- (void)testReturnsEmptyIndexSetForEmtptyArray
-{
-    XCTAssertEqual([[NSIndexSet indexSetWithArray:[NSArray array]] count], (NSUInteger)0);
+    XCTAssertEqual(0, indexes.count);
 }
 
+- (void)testReturnsEmptyIndexSetForInvalidArray {
+    NSArray *array = @[@"Lorem", @"Ipsum", @2];
 
-- (void)testReturnsEmptyIndexSetForInvalidArray
-{
+    NSIndexSet *indexes = [NSIndexSet fmi_indexSetFromNumbersInArray:array];
 
-    NSArray *anArray = @[@"Lorem", @"Ipsum", @2];
-    NSIndexSet *indexes = [NSIndexSet indexSetWithIndex:2];
-    
-    XCTAssertTrue([[NSIndexSet indexSetWithArray:anArray] isEqualToIndexSet:indexes]);
+    NSIndexSet *expected = [NSIndexSet indexSetWithIndex:2];
+    XCTAssertEqualObjects(expected, indexes);
 }
 
+- (void)testReturnsIndexSetWithIndexes {
+    NSArray *array = @[@1, @2, @4];
 
-- (void)testReturnsIndexSetWithIndexes
-{
+    NSIndexSet *indexes = [NSIndexSet fmi_indexSetFromNumbersInArray:array];
 
-    NSArray *anArray = @[@1, @2, @4];
-    NSMutableIndexSet *indexes = [NSMutableIndexSet indexSet];
-    [indexes addIndex:1];
-    [indexes addIndex:2];
-    [indexes addIndex:4];
-    
-    XCTAssertTrue([[NSIndexSet indexSetWithArray:anArray] isEqualToIndexSet:indexes]);
+    NSMutableIndexSet *expected = [NSMutableIndexSet indexSet];
+    [expected addIndex:1];
+    [expected addIndex:2];
+    [expected addIndex:4];
+    XCTAssertEqualObjects(expected, indexes);
 }
-
 
 @end
