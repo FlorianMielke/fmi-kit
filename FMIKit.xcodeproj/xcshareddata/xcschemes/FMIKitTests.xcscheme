@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "171CB9841AFB63C7002BE185"
-               BuildableName = "FMIKit.framework"
-               BlueprintName = "FMIKit"
+               BlueprintIdentifier = "171CB98F1AFB63C7002BE185"
+               BuildableName = "FMIKitTests.xctest"
+               BlueprintName = "FMIKitTests"
                ReferencedContainer = "container:FMIKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,15 +40,6 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "171CB9841AFB63C7002BE185"
-            BuildableName = "FMIKit.framework"
-            BlueprintName = "FMIKit"
-            ReferencedContainer = "container:FMIKit.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -66,9 +57,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "171CB9841AFB63C7002BE185"
-            BuildableName = "FMIKit.framework"
-            BlueprintName = "FMIKit"
+            BlueprintIdentifier = "171CB98F1AFB63C7002BE185"
+            BuildableName = "FMIKitTests.xctest"
+            BlueprintName = "FMIKitTests"
             ReferencedContainer = "container:FMIKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -81,15 +72,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "171CB9841AFB63C7002BE185"
-            BuildableName = "FMIKit.framework"
-            BlueprintName = "FMIKit"
-            ReferencedContainer = "container:FMIKit.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
