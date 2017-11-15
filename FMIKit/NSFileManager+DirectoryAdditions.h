@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Removes all cloud store items
- * @param cloudStoreURL The URL to the cloud store
+ * @param error If an error occurs, upon return contains an NSError object that describes the problem. Pass NULL if you don’t want error information.
  * @return BOOL A flag that determines whether the operation was successful. Otherwise returns NO.
  */
 - (BOOL)fmi_removeCloudDirectoryWithError:(NSError **)error;
