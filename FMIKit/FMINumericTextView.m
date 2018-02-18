@@ -201,8 +201,7 @@
 
 - (UIBarButtonItem *)accessoryButtonWithTitle:(NSString *)title action:(SEL)selector
 {
-    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:selector];
-    return button;
+    return [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:selector];
 }
 
 @end
