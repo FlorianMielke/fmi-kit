@@ -147,4 +147,37 @@
     XCTAssertEqualObjects(@[], list.items);
 }
 
+- (void)testListInsertsNewItemInEmptyList {
+    FMIMultilevelList *subject = [[FMIMultilevelList alloc] initWithItems:@[]];
+
+    [subject insertItem:self.fakeListItemThree atIndex:0];
+
+    NSArray *expected = @[self.fakeListItemThree];
+    XCTAssertEqualObjects(expected, subject.items);
+    XCTAssertEqualObjects([FMIMultilevelListNumber listNumberFromStringValue:@"1"], self.fakeListItemThree.listNumber);
+}
+
+- (void)testListInsertsNewItemInListWithOneItem {
+    FMIMultilevelList *subject = [[FMIMultilevelList alloc] initWithItems:@[self.fakeListItemOne]];
+
+    [subject insertItem:self.fakeListItemThree atIndex:1];
+
+    NSArray *expected = @[self.fakeListItemOne, self.fakeListItemThree];
+    XCTAssertEqualObjects(expected, subject.items);
+    XCTAssertEqualObjects([FMIMultilevelListNumber listNumberFromStringValue:@"2"], self.fakeListItemThree.listNumber);
+}
+
+- (void)testListInsertsNewItemInListWithManyItems {
+    FakeMultilevelListItem *listItemFour = [[FakeMultilevelListItem alloc] init];
+    listItemFour.listNumber = [FMIMultilevelListNumber listNumberFromStringValue:@"3"];
+    FMIMultilevelList *subject = [[FMIMultilevelList alloc] initWithItems:@[self.fakeListItemOne, self.fakeListItemTwo, listItemFour]];
+    
+    [subject insertItem:self.fakeListItemThree atIndex:2];
+    
+    NSArray *expected = @[self.fakeListItemOne, self.fakeListItemTwo, self.fakeListItemThree, listItemFour];
+    XCTAssertEqualObjects(expected, subject.items);
+    XCTAssertEqualObjects([FMIMultilevelListNumber listNumberFromStringValue:@"3"], self.fakeListItemThree.listNumber);
+    XCTAssertEqualObjects([FMIMultilevelListNumber listNumberFromStringValue:@"4"], listItemFour.listNumber);
+}
+
 @end

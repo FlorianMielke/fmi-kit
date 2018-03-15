@@ -10,6 +10,8 @@
 
 - (instancetype)initWithItems:(NSArray *)items NS_DESIGNATED_INITIALIZER;
 
+- (BOOL)insertItem:(id <FMIMultilevelListItem>)listItem atIndex:(NSUInteger)index;
+
 - (void)removeItemAtIndex:(NSUInteger)index;
 
 - (void)removeItem:(id <FMIMultilevelListItem>)item;

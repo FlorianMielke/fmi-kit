@@ -24,6 +24,18 @@
     }
 }
 
+- (BOOL)insertItem:(id <FMIMultilevelListItem>)listItem atIndex:(NSUInteger)index {
+    BOOL isValidIndex = index <= self.items.count;
+    if (!isValidIndex) {
+        return NO;
+    }
+    NSMutableArray *mutableItems = [self.items mutableCopy];
+    [mutableItems insertObject:listItem atIndex:index];
+    self.items = [mutableItems copy];
+    [self updateListNoMovingItemFromIndex:0 toIndex:index indentationLevel:0];
+    return YES;
+}
+
 - (void)removeItem:(id <FMIMultilevelListItem>)item {
     NSUInteger currentIndex = [self.items indexOfObject:item];
     if (currentIndex == NSNotFound)
@@ -88,5 +100,4 @@
     NSArray *components = (isListNoIndented) ? @[@(firstComponent), @([listNo.components[1] integerValue] + 1)] : @[@(firstComponent), @1];
     return [FMIMultilevelListNumber listNumberFromComponents:components];
 }
-
 @end
