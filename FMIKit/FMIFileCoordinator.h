@@ -4,15 +4,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FMIFileCoordinator : NSObject
 
-- (void)unarchiveObjectAtURL:(NSURL *)url withCompletionHandler:(void (^)(id unarchivedObject, NSError *error))completionHandler;
+- (nullable id)unarchiveObjectAtURL:(NSURL *)url error:(NSError **)error;
 
-- (void)archiveObject:(id <NSSecureCoding>)anObject atURL:(NSURL *)url withCompletionHandler:(void (^)(BOOL success, NSError *error))completionHandler;
+- (BOOL)archiveObject:(id <NSSecureCoding>)anObject atURL:(NSURL *)url error:(NSError **)error;
 
-- (void)removeFileAtURL:(NSURL *)url withCompletionHandler:(void (^)(BOOL success, NSError *error))completionHandler;
+- (BOOL)removeFileAtURL:(NSURL *)url error:(NSError **)error;
 
-- (void)copyFromURL:(NSURL *)fromURL toURL:(NSURL *)toURL withCompletionHandler:(void (^)(BOOL success, NSError *error))completionHandler;
+- (nullable NSURL *)copyFromURL:(NSURL *)fromURL toURL:(NSURL *)toURL error:(NSError **)error;
 
-- (void)findFilesOfDirectoryAtURL:(NSURL *)url matchingPredicate:(nullable NSPredicate *)predicate withCompletionHandler:(void (^)(NSArray<NSURL *> *urls, NSError *error))completionHandler;
+- (NSArray<NSURL *> *)findFilesOfDirectoryAtURL:(NSURL *)url matchingPredicate:(nullable NSPredicate *)predicate error:(NSError **)error;
 
 @end
 
