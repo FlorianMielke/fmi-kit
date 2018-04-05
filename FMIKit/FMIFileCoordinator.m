@@ -1,5 +1,9 @@
 #import "FMIFileCoordinator.h"
 
+@interface FMIFileCoordinator () <NSFileManagerDelegate>
+
+@end
+
 @implementation FMIFileCoordinator
 
 - (nullable id)unarchiveObjectAtURL:(NSURL *)url error:(NSError **)error {
@@ -26,7 +30,14 @@
 }
 
 - (nullable NSURL *)copyFromURL:(NSURL *)fromURL toURL:(NSURL *)toURL error:(NSError **)error {
-    BOOL copied = [[NSFileManager defaultManager] copyItemAtURL:fromURL toURL:toURL error:error];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:toURL.path]) {
+        BOOL removed = [fileManager removeItemAtURL:toURL error:error];
+        if (!removed) {
+            return nil;
+        }
+    }
+    BOOL copied = [fileManager copyItemAtURL:fromURL toURL:toURL error:error];
     if (copied) {
         return toURL;
     }
