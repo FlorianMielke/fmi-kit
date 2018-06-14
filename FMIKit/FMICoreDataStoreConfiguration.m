@@ -44,10 +44,4 @@
     return ([self.fetchCloudStatus fetchCloudStatus] == FMICloudStatusEnabled) ? [self.cloudStoreOptions copy] : [self.localStoreOptions copy];
 }
 
-- (NSDictionary *)localStoreOptionsForCloudRemoval {
-    NSMutableDictionary *localStoreOptions = [self.localStoreOptions mutableCopy];
-    localStoreOptions[NSPersistentStoreRemoveUbiquitousMetadataOption] = @YES;
-    return [localStoreOptions copy];
-}
-
 @end
