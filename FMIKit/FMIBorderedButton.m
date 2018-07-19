@@ -13,16 +13,12 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         self.hasInvertedColors = NO;
+        [self setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
+        self.layer.borderWidth = 1.0;
+        self.layer.borderColor = self.tintColor.CGColor;
+        self.layer.cornerRadius = 3.0;
     }
     return self;
-}
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    [self setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
-    self.layer.borderWidth = 1.0;
-    self.layer.borderColor = self.tintColor.CGColor;
-    self.layer.cornerRadius = 3.0;
 }
 
 - (void)setHighlighted:(BOOL)highlighted {
