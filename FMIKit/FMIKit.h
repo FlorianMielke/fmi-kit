@@ -77,6 +77,7 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/UILabel+StateHandling.h>
 #import <FMIKit/UITableView+IndexPath.h>
 #import <FMIKit/UITableView+Selection.h>
+#import <FMIKit/UITableView+FMIScrolling.h>
 #import <FMIKit/UIScrollView+Scrolling.h>
 #import <FMIKit/UIView+I7ShakeAnimation.h>
 #import <FMIKit/NSIndexPath+Comparing.h>

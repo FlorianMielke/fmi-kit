@@ -7,17 +7,12 @@
 
 #import "UIScrollView+Scrolling.h"
 
-
-
 @implementation UIScrollView (Scrolling)
 
-
-- (void)fm_stopScrolling
-{
-    if ([self isDecelerating]) {
-		[self setContentOffset:[self contentOffset] animated:NO];
-	}
+- (void)fm_stopScrolling {
+    if (self.decelerating) {
+        [self setContentOffset:self.contentOffset animated:NO];
+    }
 }
-
 
 @end

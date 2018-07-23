@@ -361,6 +361,8 @@
 		35913FC1B718497124AE0177 /* NSBundle+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591358170D9EC419DFC70E8 /* NSBundle+Configuration.m */; };
 		35913FC963CA72928A65E849 /* FMIMessageMIMETypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3591381C00A56BA1EFDC6B29 /* FMIMessageMIMETypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913FF467073536607AD797 /* NSManagedObjectContext+PersistentStoreAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591377E045A1B4526527FDB /* NSManagedObjectContext+PersistentStoreAdditions.m */; };
+		D25892B84EC0E7570B770C27 /* UITableView+FMIScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = D2589EC480DA22370AC4FF44 /* UITableView+FMIScrolling.m */; };
+		D2589EF1DC977677805FF0EA /* UITableView+FMIScrolling.h in Headers */ = {isa = PBXBuildFile; fileRef = D258991116127B47F8569479 /* UITableView+FMIScrolling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -652,6 +654,8 @@
 		35913FA74AF9AA5A1B290817 /* FMIWhatsNewCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIWhatsNewCoordinator.m; sourceTree = "<group>"; };
 		35913FA870D304FE1539ECBA /* FMIDateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIDateHelper.h; sourceTree = "<group>"; };
 		35913FF3B778C393F6262E72 /* FakeBindingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeBindingModel.h; sourceTree = "<group>"; };
+		D258991116127B47F8569479 /* UITableView+FMIScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FMIScrolling.h"; sourceTree = "<group>"; };
+		D2589EC480DA22370AC4FF44 /* UITableView+FMIScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FMIScrolling.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1010,6 +1014,8 @@
 				3591347CEEA6D2E863E678B7 /* UILabel+StateHandlingTests.m */,
 				3591331A56E24C5520BE02B2 /* UIScrollView+Scrolling.h */,
 				3591394E87D61298EF5FA2DE /* UIScrollView+Scrolling.m */,
+				D258991116127B47F8569479 /* UITableView+FMIScrolling.h */,
+				D2589EC480DA22370AC4FF44 /* UITableView+FMIScrolling.m */,
 				35913191490ECD45DBF6648E /* UITableView+IndexPath.h */,
 				35913D93A22C9932A027B731 /* UITableView+IndexPath.m */,
 				35913CD19B8A724944010728 /* UITableView+IndexPathTests.m */,
@@ -1251,6 +1257,7 @@
 				359136978B0C634026DE1807 /* FMIURLProvider.h in Headers */,
 				359132FA88A757E748259EED /* FMINullCloudStatusGateway.h in Headers */,
 				35913620CC503B91C55791CB /* FMIStore.h in Headers */,
+				D2589EF1DC977677805FF0EA /* UITableView+FMIScrolling.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1555,6 +1562,7 @@
 				3591366E697A6FCF2F862A15 /* FMIMessageMIMETypes.m in Sources */,
 				359138570A0179985FA29656 /* FMISupportMessage.m in Sources */,
 				35913A9FD7149CB28256FF4F /* FMINullCloudStatusGateway.m in Sources */,
+				D25892B84EC0E7570B770C27 /* UITableView+FMIScrolling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
