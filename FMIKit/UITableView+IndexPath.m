@@ -37,8 +37,8 @@
 }
 
 - (BOOL)fmi_hasIndexPath:(NSIndexPath *)indexPath {
-    BOOL isValidSection = self.numberOfSections < indexPath.section;
-    BOOL isValidRow = [self numberOfRowsInSection:indexPath.section] < indexPath.row;
+    BOOL isValidSection = indexPath.section < self.numberOfSections;
+    BOOL isValidRow = indexPath.row < [self numberOfRowsInSection:indexPath.section];
     return (isValidSection && isValidRow);
 }
 
