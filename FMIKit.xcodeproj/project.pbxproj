@@ -317,7 +317,7 @@
 		35913DC786B99EBB80B04BEE /* FMIAlertAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 3591365D28A3BD06A9D6DE99 /* FMIAlertAction.h */; };
 		35913DD6DCA0ACF3D7FD5C66 /* NSDateFormatter+Timing.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913759679894BE70F70D1C /* NSDateFormatter+Timing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913DDB04F3F71AF3E1D670 /* NSString+Folding.m in Sources */ = {isa = PBXBuildFile; fileRef = 359131924BCFD7F22CA2DE26 /* NSString+Folding.m */; };
-		35913DDE5A9A4FFC54D63C75 /* FMIAccteptedCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 359139FBFCB67B82666068B7 /* FMIAccteptedCellTests.m */; };
+		35913DDE5A9A4FFC54D63C75 /* FMIAcceptedCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 359139FBFCB67B82666068B7 /* FMIAcceptedCellTests.m */; };
 		35913DF850A2A033BA88C54A /* NSArray+Initialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591320840F7FCB4F0118D79 /* NSArray+Initialization.m */; };
 		35913E08AD91D4640ADFB81B /* FMIMessageAttachmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913CD721EF13030A8B024B /* FMIMessageAttachmentTests.m */; };
 		35913E0A0D265D924423003A /* FMIDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 359135B46D0291D94213149D /* FMIDateHelper.m */; };
@@ -552,7 +552,7 @@
 		359139CC19A5AB72BA911B77 /* FMIMultilevelListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIMultilevelListItem.h; sourceTree = "<group>"; };
 		359139CE81A2F5587B019FAC /* FMIKitPrivatesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIKitPrivatesTests.m; path = FMIKitTests/FMIKitPrivatesTests.m; sourceTree = SOURCE_ROOT; };
 		359139E70A4FE941C76BD2CA /* FMICSVFileDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMICSVFileDescription.h; sourceTree = "<group>"; };
-		359139FBFCB67B82666068B7 /* FMIAccteptedCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIAccteptedCellTests.m; path = FMIKitTests/FMIAccteptedCellTests.m; sourceTree = SOURCE_ROOT; };
+		359139FBFCB67B82666068B7 /* FMIAcceptedCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIAcceptedCellTests.m; path = FMIKitTests/FMIAcceptedCellTests.m; sourceTree = SOURCE_ROOT; };
 		35913A05AC811C8207D6C975 /* FMIKitPrivates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIKitPrivates.m; sourceTree = "<group>"; };
 		35913A27EB3146523963164E /* UITableView+Selection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Selection.h"; sourceTree = "<group>"; };
 		35913A4AED9C8154B25BDEDD /* UILabel+StateHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+StateHandling.h"; sourceTree = "<group>"; };
@@ -1066,7 +1066,7 @@
 			children = (
 				359137E38C993AFFB4D560BE /* FMIAcceptedCell.h */,
 				359138E5F329478811A92C93 /* FMIAcceptedCell.m */,
-				359139FBFCB67B82666068B7 /* FMIAccteptedCellTests.m */,
+				359139FBFCB67B82666068B7 /* FMIAcceptedCellTests.m */,
 				35913D82783F1208BEE1DCBA /* FMIActivityIndicatorAlertView.h */,
 				35913C13365C512DC194C519 /* FMIActivityIndicatorAlertView.m */,
 				35913DD7724327793CB51CE5 /* FMIActivityIndicatorAlertViewTest.m */,
@@ -1600,7 +1600,7 @@
 				359135ABDD0EEBE3A85FB61D /* FMIEventPaserTests.m in Sources */,
 				3591387333257D86D6F26683 /* FMIGMTDateHelperTest.m in Sources */,
 				35913DB2F031FE21D1AF6BF9 /* FMIDurationTests.m in Sources */,
-				35913DDE5A9A4FFC54D63C75 /* FMIAccteptedCellTests.m in Sources */,
+				35913DDE5A9A4FFC54D63C75 /* FMIAcceptedCellTests.m in Sources */,
 				3591390603055D1708F9622B /* FMIActivityIndicatorAlertViewTest.m in Sources */,
 				359139A2F16784EBF5047CD6 /* FMIDatePickerControllerTests.m in Sources */,
 				35913BCBBC4C3B02DB293B92 /* FMINumericTextViewTests.m in Sources */,

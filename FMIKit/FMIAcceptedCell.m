@@ -7,18 +7,13 @@
 
 #import "FMIAcceptedCell.h"
 
-
 @implementation FMIAcceptedCell
 
-
-- (void)setAccepted:(BOOL)accepted
-{
-    if (_accepted != accepted)
-    {
+- (void)setAccepted:(BOOL)accepted {
+    if (_accepted != accepted) {
         _accepted = accepted;
         self.accessoryType = (_accepted) ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
     }
 }
-
 
 @end

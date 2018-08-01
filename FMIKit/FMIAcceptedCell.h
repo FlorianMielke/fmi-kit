@@ -7,7 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 @interface FMIAcceptedCell : UITableViewCell
 
 @property (getter = isAccepted, NS_NONATOMIC_IOSONLY) BOOL accepted;
