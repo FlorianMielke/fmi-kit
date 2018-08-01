@@ -7,7 +7,6 @@
 
 #import <EventKit/EventKit.h>
 
-
 /**
  * A FMIEventParser object provides methods to parse calendar events to confirm to the iCalendar format (RFC 5545).
  */
