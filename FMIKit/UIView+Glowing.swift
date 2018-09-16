@@ -5,7 +5,7 @@ import UIKit
         let animation = CABasicAnimation.init(keyPath: "opacity")
         animation.autoreverses = true
         animation.repeatCount = .infinity
-        animation.duration = 0.8
+        animation.duration = 0.9
         animation.fromValue = 1.0
         animation.toValue = 0.2
         animation.timingFunction = CAMediaTimingFunction.init(name: .easeInEaseOut)
