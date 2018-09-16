@@ -27,6 +27,8 @@
 		1738D4511AFC948100B96929 /* TestImagePortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4491AFC948100B96929 /* TestImagePortrait.png */; };
 		1738D4521AFC948100B96929 /* TestImagePortraitSmallWidth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */; };
 		1738D4531AFC948100B96929 /* TestImageSquared.png in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44B1AFC948100B96929 /* TestImageSquared.png */; };
+		17749241214E9F8900336F3F /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17749240214E9F8900336F3F /* Sample.swift */; };
+		17749242214E9FB000336F3F /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17749240214E9F8900336F3F /* Sample.swift */; };
 		178584051C90112C0036A83A /* FMIPeriod.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913DAE3872A469ADCFF700 /* FMIPeriod.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		178584061C9011330036A83A /* FMIPeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913B64F30251D3C1C155E0 /* FMIPeriod.m */; };
 		178CE90D1B3AA3810049AD97 /* FMIMessageMIMETypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4401AFC928C00B96929 /* FMIMessageMIMETypes.plist */; };
@@ -394,6 +396,7 @@
 		1738D4491AFC948100B96929 /* TestImagePortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TestImagePortrait.png; path = Resources/TestImagePortrait.png; sourceTree = "<group>"; };
 		1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TestImagePortraitSmallWidth.jpg; path = Resources/TestImagePortraitSmallWidth.jpg; sourceTree = "<group>"; };
 		1738D44B1AFC948100B96929 /* TestImageSquared.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TestImageSquared.png; path = Resources/TestImageSquared.png; sourceTree = "<group>"; };
+		17749240214E9F8900336F3F /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		17B39B281C05FF580012BB49 /* FMIBorderedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIBorderedButton.h; sourceTree = "<group>"; };
 		17B39B291C05FF580012BB49 /* FMIBorderedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIBorderedButton.m; sourceTree = "<group>"; };
 		17CBD6111BCC3A9000681FD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FMIKitLocalizable.strings; sourceTree = "<group>"; };
@@ -734,6 +737,7 @@
 			isa = PBXGroup;
 			children = (
 				171CB9891AFB63C7002BE185 /* Info.plist */,
+				17749240214E9F8900336F3F /* Sample.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1384,6 +1388,7 @@
 				TargetAttributes = {
 					171CB9841AFB63C7002BE185 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 1000;
 					};
 					171CB98F1AFB63C7002BE185 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -1479,6 +1484,7 @@
 				1700A1B81D1D564B0035EFB0 /* NSArray+FMIValidation.m in Sources */,
 				359137BA45A017A3F6FE6347 /* FMINestedTableView.m in Sources */,
 				359134B0B028435C7AFC52DD /* FMITableView.m in Sources */,
+				17749241214E9F8900336F3F /* Sample.swift in Sources */,
 				35913BBC1AE97717D7C85A62 /* FMIFoundationAdditions.m in Sources */,
 				359138FFFBA9CFA258651610 /* FMINumericTextView.m in Sources */,
 				3591327BD9BBEC4D26E628A1 /* FMITimeZoneHelper.m in Sources */,
@@ -1643,6 +1649,7 @@
 				35913B5F5EBF628CDB2CF268 /* FMIUUIDHelper.m in Sources */,
 				35913EF5EA8C0033D2A5BAFB /* FMIGMTDateHelper.m in Sources */,
 				178584061C9011330036A83A /* FMIPeriod.m in Sources */,
+				17749242214E9FB000336F3F /* Sample.swift in Sources */,
 				35913C1FF167A167B96D4A32 /* FMIDateHelper.m in Sources */,
 				35913ED44B8288907BC4A620 /* FMIBinding.m in Sources */,
 				359138A33936031E93902713 /* FMIComparator.m in Sources */,
@@ -1766,6 +1773,7 @@
 		170017821C99651F0029B88A /* IAPTesting */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1777,12 +1785,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.madefm.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = IAPTesting;
 		};
 		170017831C99651F0029B88A /* IAPTesting */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = FMIKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1928,6 +1939,7 @@
 		171CB99C1AFB63C7002BE185 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1939,12 +1951,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.madefm.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		171CB99D1AFB63C7002BE185 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1956,12 +1971,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.madefm.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
 		171CB99F1AFB63C7002BE185 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = FMIKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1973,6 +1990,7 @@
 		171CB9A01AFB63C7002BE185 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = FMIKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2078,6 +2096,7 @@
 		17B469981BCE5372000C5281 /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -2089,12 +2108,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.madefm.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Beta;
 		};
 		17B469991BCE5372000C5281 /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = FMIKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
