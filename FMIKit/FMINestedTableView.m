@@ -9,7 +9,6 @@
 
 @property (NS_NONATOMIC_IOSONLY) NSMutableArray *indexPathsForNestedRows;
 @property (NS_NONATOMIC_IOSONLY) NSIndexPath *indexPathForRootRow;
-@property (NS_NONATOMIC_IOSONLY) UIEdgeInsets rootRowSeparatorInsets;
 
 @end
 
@@ -112,13 +111,10 @@
     self.indexPathForRootRow = indexPath;
     [self prepareNestedIndexPathsForIndexPath:self.indexPathForRootRow];
     [self insertRowsAtIndexPaths:self.indexPathsForNestedRows withRowAnimation:UITableViewRowAnimationTop];
-    self.rootRowSeparatorInsets = [self cellForRootRow].separatorInset;
-    [self cellForRootRow].separatorInset = UIEdgeInsetsZero;
     [self scrollToRowAtIndexPath:self.indexPathForRootRow atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
 - (void)hideNestedRowsForRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self cellForRootRow].separatorInset = self.rootRowSeparatorInsets;
     self.indexPathForRootRow = nil;
     NSArray *nestedRowsIndexPaths = [self.indexPathsForNestedRows copy];
     [self.indexPathsForNestedRows removeAllObjects];
