@@ -9,14 +9,14 @@
 
 @implementation NSBundle (Configuration)
 
-- (BOOL)isBeta
-{
-    return ([self.bundleIdentifier hasSuffix:@".beta"]);
+- (BOOL)isBeta {
+    return [self.bundleIdentifier hasSuffix:@".beta"];
 }
 
-- (BOOL)isDebug
-{
-    return ([self.bundleIdentifier hasSuffix:@".debug"]);
+- (BOOL)isDebug {
+    return [self.bundleIdentifier hasSuffix:@".debug"];
 }
+
+
 
 @end

@@ -15,29 +15,25 @@
 
 @implementation NSBundle_ConfigurationTest
 
-- (void)testIsNotBeta
-{
+- (void)testIsNotBeta {
     id bundleMock = [OCMockObject partialMockForObject:[NSBundle mainBundle]];
     [[[bundleMock stub] andReturn:@"bundleIdentifier"] bundleIdentifier];
     XCTAssertFalse([NSBundle mainBundle].isBeta);
 }
 
-- (void)testIsBeta
-{
+- (void)testIsBeta {
     id bundleMock = [OCMockObject partialMockForObject:[NSBundle mainBundle]];
     [[[bundleMock stub] andReturn:@"bundleIdentifier.beta"] bundleIdentifier];
     XCTAssertTrue([NSBundle mainBundle].isBeta);
 }
 
-- (void)testIsNotDebug
-{
+- (void)testIsNotDebug {
     id bundleMock = [OCMockObject partialMockForObject:[NSBundle mainBundle]];
     [[[bundleMock stub] andReturn:@"bundleIdentifier"] bundleIdentifier];
     XCTAssertFalse([NSBundle mainBundle].isDebug);
 }
 
-- (void)testIsDebug
-{
+- (void)testIsDebug {
     id bundleMock = [OCMockObject partialMockForObject:[NSBundle mainBundle]];
     [[[bundleMock stub] andReturn:@"bundleIdentifier.debug"] bundleIdentifier];
     XCTAssertTrue([NSBundle mainBundle].isDebug);
