@@ -489,7 +489,6 @@
 		359135C561E1C704074B1BE5 /* NSString+CSV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CSV.h"; sourceTree = "<group>"; };
 		359135CFD7FA7EF1C2209755 /* NSCoder+SecureCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCoder+SecureCoding.m"; sourceTree = "<group>"; };
 		359135E4773D0271FE61736C /* FMIDurationFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIDurationFormatter.m; sourceTree = "<group>"; };
-		359135E92FA4E82BBAB23EC6 /* Warnings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
 		35913600BE1B4B352B210062 /* FMIMessageMIMETypesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIMessageMIMETypesTests.m; path = FMIKitTests/FMIMessageMIMETypesTests.m; sourceTree = SOURCE_ROOT; };
 		35913616D0FD2B3E483960A9 /* NSArray+QueryingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+QueryingTests.m"; path = "FMIKitTests/NSArray+QueryingTests.m"; sourceTree = SOURCE_ROOT; };
 		359136233CAD7967907A9FAF /* FMIHairlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIHairlineView.m; sourceTree = "<group>"; };
@@ -693,7 +692,6 @@
 		171CB97B1AFB63C7002BE185 = {
 			isa = PBXGroup;
 			children = (
-				35913A5FB298FDC2BE7DE14A /* Configurations */,
 				171CB9871AFB63C7002BE185 /* FMIKit */,
 				1736E46E1BA815400095227A /* FMIKit (watchOS) */,
 				171CB9941AFB63C7002BE185 /* FMIKitTests */,
@@ -921,14 +919,6 @@
 				35913BED376AEE9CF670B873 /* FMISupportMessage.m */,
 			);
 			name = Messages;
-			sourceTree = "<group>";
-		};
-		35913A5FB298FDC2BE7DE14A /* Configurations */ = {
-			isa = PBXGroup;
-			children = (
-				359135E92FA4E82BBAB23EC6 /* Warnings.xcconfig */,
-			);
-			path = Configurations;
 			sourceTree = "<group>";
 		};
 		35913B38A4FF03091A89C925 /* Categories */ = {
