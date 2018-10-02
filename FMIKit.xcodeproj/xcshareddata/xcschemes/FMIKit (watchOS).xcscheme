@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1736E46C1BA815400095227A"
                BuildableName = "FMIKit.framework"
-               BlueprintName = "FMIKit (watchOS)"
+               BlueprintName = "FMIKitWatch"
                ReferencedContainer = "container:FMIKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,7 +47,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1736E46C1BA815400095227A"
             BuildableName = "FMIKit.framework"
-            BlueprintName = "FMIKit (watchOS)"
+            BlueprintName = "FMIKitWatch"
             ReferencedContainer = "container:FMIKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,7 +65,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1736E46C1BA815400095227A"
             BuildableName = "FMIKit.framework"
-            BlueprintName = "FMIKit (watchOS)"
+            BlueprintName = "FMIKitWatch"
             ReferencedContainer = "container:FMIKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
