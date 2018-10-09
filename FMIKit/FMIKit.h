@@ -88,7 +88,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIAcceptedCell.h>
 #import <FMIKit/FMIBlurredView.h>
 #import <FMIKit/FMIBorderedButton.h>
-#import <FMIKit/FMIDatePickerController.h>
 #import <FMIKit/FMIEditingToolbar.h>
 #import <FMIKit/FMIEventParser.h>
 #import <FMIKit/FMIHairlineView.h>

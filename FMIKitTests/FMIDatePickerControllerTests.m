@@ -1,8 +1,3 @@
-//
-//  Created by Florian Mielke on 14.08.13.
-//  Copyright (c) 2013 Florian Mielke. All rights reserved.
-//
-
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
 #import "FMIDatePickerController.h"
