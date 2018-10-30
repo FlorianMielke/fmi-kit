@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  *	FMIDuration objects represent a timeinterval. FMIDuration is a class cluster; its single public superclass, FMIDuration, declares the programmatic
  *  interface for specific and relative timeinterval values. The objects you create using FMIDuration are referred to as timeinterval objects. They 
@@ -99,3 +101,5 @@
 - (BOOL)isEqualToDuration:(FMIDuration *)aDuration;
 
 @end
+
+NS_ASSUME_NONNULL_END
