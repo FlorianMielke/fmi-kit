@@ -21,6 +21,7 @@
 #define STRINGIFY(x) STRINGIFY2(x)
 
 #define FMI_DECODE_OBJ(d,x)  _ ## x = [d decodeObjectForKey:@STRINGIFY(x)]
+#define FMI_DECODE_OBJ_DEFAULT(d,x,df) { if ([d containsValueForKey:@STRINGIFY(x)]) { FMI_DECODE_OBJ(d,x); } else { _ ## x = df; } }
 #define FMI_ENCODE_OBJ(c,x)  [c encodeObject:_ ## x forKey:@STRINGIFY(x)]
 
 #define FMI_DECODE_OBJ_CLASS(d,x,cl)  _ ## x = (cl *)[d decodeObjectOfClass:[cl class] forKey:@STRINGIFY(x)]
@@ -40,6 +41,7 @@
 #define FMI_ENCODE_DOUBLE(c,x)  [c encodeDouble:_ ## x forKey:@STRINGIFY(x)]
 
 #define FMI_DECODE_INTEGER(d,x)  _ ## x = [d decodeIntegerForKey:@STRINGIFY(x)]
+#define FMI_DECODE_INTEGER_DEFAULT(d,x,df) { if ([d containsValueForKey:@STRINGIFY(x)]) { FMI_DECODE_INTEGER(d,x); } else { _ ## x = df; } }
 #define FMI_ENCODE_INTEGER(c,x)  [c encodeInteger:_ ## x forKey:@STRINGIFY(x)]
 
 #define FMI_ENCODE_UINT32(c,x)  [c encodeObject:[NSNumber numberWithUnsignedLongLong:_ ## x] forKey:@STRINGIFY(x)]
