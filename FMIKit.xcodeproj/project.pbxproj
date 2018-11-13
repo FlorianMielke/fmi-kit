@@ -27,6 +27,12 @@
 		1738D4511AFC948100B96929 /* TestImagePortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4491AFC948100B96929 /* TestImagePortrait.png */; };
 		1738D4521AFC948100B96929 /* TestImagePortraitSmallWidth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */; };
 		1738D4531AFC948100B96929 /* TestImageSquared.png in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44B1AFC948100B96929 /* TestImageSquared.png */; };
+		176F0390219AE01D000FCFDC /* CellMarkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F038F219AE01D000FCFDC /* CellMarkable.swift */; };
+		176F0396219AE108000FCFDC /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F0395219AE108000FCFDC /* Identifiable.swift */; };
+		176F0397219AE108000FCFDC /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F0395219AE108000FCFDC /* Identifiable.swift */; };
+		176F0399219AE10C000FCFDC /* IndexPath+Zero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F0398219AE10C000FCFDC /* IndexPath+Zero.swift */; };
+		176F039B219AE4C0000FCFDC /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F039A219AE4C0000FCFDC /* String+Localized.swift */; };
+		176F039C219AE4C0000FCFDC /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F039A219AE4C0000FCFDC /* String+Localized.swift */; };
 		17749241214E9F8900336F3F /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17749240214E9F8900336F3F /* Sample.swift */; };
 		17749242214E9FB000336F3F /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17749240214E9F8900336F3F /* Sample.swift */; };
 		1774924B214EA17C00336F3F /* UIView+Glowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1774924A214EA17C00336F3F /* UIView+Glowing.swift */; };
@@ -393,6 +399,10 @@
 		1738D4491AFC948100B96929 /* TestImagePortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TestImagePortrait.png; path = Resources/TestImagePortrait.png; sourceTree = "<group>"; };
 		1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TestImagePortraitSmallWidth.jpg; path = Resources/TestImagePortraitSmallWidth.jpg; sourceTree = "<group>"; };
 		1738D44B1AFC948100B96929 /* TestImageSquared.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TestImageSquared.png; path = Resources/TestImageSquared.png; sourceTree = "<group>"; };
+		176F038F219AE01D000FCFDC /* CellMarkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMarkable.swift; sourceTree = "<group>"; };
+		176F0395219AE108000FCFDC /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		176F0398219AE10C000FCFDC /* IndexPath+Zero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexPath+Zero.swift"; sourceTree = "<group>"; };
+		176F039A219AE4C0000FCFDC /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		17749240214E9F8900336F3F /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		1774924A214EA17C00336F3F /* UIView+Glowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Glowing.swift"; sourceTree = "<group>"; };
 		17B39B281C05FF580012BB49 /* FMIBorderedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIBorderedButton.h; sourceTree = "<group>"; };
@@ -718,6 +728,7 @@
 				1738D43F1AFC928200B96929 /* Resources */,
 				359137C367164A0BB7D46C0A /* Review */,
 				171CB9881AFB63C7002BE185 /* Supporting Files */,
+				176F038E219AE00C000FCFDC /* UI */,
 				35913936811D3AC35F6D804E /* Value Types */,
 				359139DDAF0A58C04228D624 /* Whats New */,
 			);
@@ -782,6 +793,15 @@
 				1738D44B1AFC948100B96929 /* TestImageSquared.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		176F038E219AE00C000FCFDC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				176F038F219AE01D000FCFDC /* CellMarkable.swift */,
+				176F0398219AE10C000FCFDC /* IndexPath+Zero.swift */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		17E00C791B9030A000BA7024 /* Frameworks */ = {
@@ -1043,6 +1063,8 @@
 		35913DE3A15D2FEA51B93AB8 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				176F0395219AE108000FCFDC /* Identifiable.swift */,
+				176F039A219AE4C0000FCFDC /* String+Localized.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -1461,6 +1483,7 @@
 				359134203497349F826EA01D /* FMIDurationFormatter.m in Sources */,
 				1700A1B81D1D564B0035EFB0 /* NSArray+FMIValidation.m in Sources */,
 				359137BA45A017A3F6FE6347 /* FMINestedTableView.m in Sources */,
+				176F039B219AE4C0000FCFDC /* String+Localized.swift in Sources */,
 				359134B0B028435C7AFC52DD /* FMITableView.m in Sources */,
 				17749241214E9F8900336F3F /* Sample.swift in Sources */,
 				35913BBC1AE97717D7C85A62 /* FMIFoundationAdditions.m in Sources */,
@@ -1487,6 +1510,7 @@
 				35913BDBF723544B4F57E026 /* UIImage+Scaling.m in Sources */,
 				3591347156946D1DD5D4765F /* NSDateFormatter+Timing.m in Sources */,
 				35913FC1B718497124AE0177 /* NSBundle+Configuration.m in Sources */,
+				176F0399219AE10C000FCFDC /* IndexPath+Zero.swift in Sources */,
 				359136E54E9A3AF0FE3006A6 /* UIImage+Creation.m in Sources */,
 				35913C6AE0B91A0BD84FD5AF /* NSIndexSet+Initialization.m in Sources */,
 				3591374825151F83A6EF6EC6 /* NSString+FMIDrawing.m in Sources */,
@@ -1522,12 +1546,14 @@
 				35913863748C6793F5BF1D5C /* FMIPeriod.m in Sources */,
 				35913CCA67DABA21973D27B3 /* NSLocale+German.m in Sources */,
 				359136DA030E37EBC910FED8 /* FMIModifyCloudStatus.m in Sources */,
+				176F0396219AE108000FCFDC /* Identifiable.swift in Sources */,
 				3591370B30F0A3F0759E9393 /* FMIFetchCloudStatus.m in Sources */,
 				35913EDB3B3C6229E5500A1E /* FMIUserDefaultsCloudStatusGateway.m in Sources */,
 				3591345535873DA9F2A1ABD3 /* FMICoreDataStoreConfiguration.m in Sources */,
 				35913C27F6F4CA18BD799A75 /* FMICoreDataStore.m in Sources */,
 				35913688CD23334177B4FA7B /* FMICSVFieldDeserializer.m in Sources */,
 				35913422D3F167AACE6ADBD4 /* FMICSVDeserializer.m in Sources */,
+				176F0390219AE01D000FCFDC /* CellMarkable.swift in Sources */,
 				3591345A2136C2A5E56746E1 /* FMICSVFileDescription.m in Sources */,
 				359135926CF596F256A1E7BD /* FMIFileCoordinator.m in Sources */,
 				359133E2BFAD7E2B2B7156C3 /* FMIFieldDescription.m in Sources */,
@@ -1629,6 +1655,7 @@
 				35913C1FF167A167B96D4A32 /* FMIDateHelper.m in Sources */,
 				35913ED44B8288907BC4A620 /* FMIBinding.m in Sources */,
 				359138A33936031E93902713 /* FMIComparator.m in Sources */,
+				176F0397219AE108000FCFDC /* Identifiable.swift in Sources */,
 				35913852A6133DB91905702E /* FMIDuration.m in Sources */,
 				3591337C093B454CA7AD9DF1 /* NSString+CSV.m in Sources */,
 				35913D93DC5AECAF5EE44382 /* NSNumberFormatter+Editing.m in Sources */,
@@ -1653,6 +1680,7 @@
 				3591336F2B32A45E86895A13 /* NSMutableDictionary+IndexPath.m in Sources */,
 				3591367C85AE22AC87936050 /* NSCalendar+Calculations.m in Sources */,
 				359135A0B57D73B404A6D4E5 /* FMICSVFieldDeserializer.m in Sources */,
+				176F039C219AE4C0000FCFDC /* String+Localized.swift in Sources */,
 				35913E8D7042808E7D526083 /* FMICSVDeserializer.m in Sources */,
 				35913B0687B5CDD7A150E51F /* FMICSVFileDescription.m in Sources */,
 				35913464001FDD3EB6AB45B5 /* FMIFileCoordinator.m in Sources */,
