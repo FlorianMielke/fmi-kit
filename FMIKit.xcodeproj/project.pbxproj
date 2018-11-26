@@ -18,6 +18,7 @@
 		170C7E441C900D69000B5574 /* FMIWeek.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913598DD77E67B459BE40D /* FMIWeek.m */; };
 		170C7E451C900D69000B5574 /* FMIYear.m in Sources */ = {isa = PBXBuildFile; fileRef = 359133AD3EED17EBCFFC829C /* FMIYear.m */; };
 		171CB98B1AFB63C7002BE185 /* FMIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CB98A1AFB63C7002BE185 /* FMIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1722257E21AC6DFF0036D109 /* UI+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1722257D21AC6DFF0036D109 /* UI+Identifier.swift */; };
 		1736E4761BA815B30095227A /* FMIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CB98A1AFB63C7002BE185 /* FMIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1738D44C1AFC948100B96929 /* Event.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1738D4431AFC948100B96929 /* Event.xcdatamodeld */; };
 		1738D44D1AFC948100B96929 /* TestFile.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4451AFC948100B96929 /* TestFile.csv */; };
@@ -388,6 +389,7 @@
 		171CB98A1AFB63C7002BE185 /* FMIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIKit.h; sourceTree = "<group>"; };
 		171CB9901AFB63C7002BE185 /* FMIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		171CB9961AFB63C7002BE185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1722257D21AC6DFF0036D109 /* UI+Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI+Identifier.swift"; sourceTree = "<group>"; };
 		1736E46D1BA815400095227A /* FMIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1736E4711BA815400095227A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1738D4401AFC928C00B96929 /* FMIMessageMIMETypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FMIMessageMIMETypes.plist; path = Resources/FMIMessageMIMETypes.plist; sourceTree = SOURCE_ROOT; };
@@ -800,6 +802,7 @@
 			children = (
 				176F038F219AE01D000FCFDC /* CellMarkable.swift */,
 				176F0398219AE10C000FCFDC /* IndexPath+Zero.swift */,
+				1722257D21AC6DFF0036D109 /* UI+Identifier.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -1497,6 +1500,7 @@
 				35913EBF2CAC745DE3BFEDC5 /* FMIAlertAction.m in Sources */,
 				35913E0A0D265D924423003A /* FMIDateHelper.m in Sources */,
 				35913A644E32EDA55DE2390D /* FMIEditingToolbar.m in Sources */,
+				1722257E21AC6DFF0036D109 /* UI+Identifier.swift in Sources */,
 				359139C16537036E8326A59C /* FMIBinding.m in Sources */,
 				35913062B7C65EA99F02DCBD /* FMIComparator.m in Sources */,
 				359130B48477B0641D63A51A /* FMIDuration.m in Sources */,
