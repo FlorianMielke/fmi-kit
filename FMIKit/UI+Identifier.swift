@@ -11,3 +11,9 @@ import UIKit
     return String(describing: self)
   }
 }
+
+@objc public extension UIViewController {
+  @objc static var identifier: String {
+    return String(describing: self)
+  }
+}

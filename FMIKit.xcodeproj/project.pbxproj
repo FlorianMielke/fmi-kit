@@ -11,6 +11,7 @@
 		1700A1B81D1D564B0035EFB0 /* NSArray+FMIValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1700A1B61D1D564B0035EFB0 /* NSArray+FMIValidation.m */; };
 		1700A1B91D1D564F0035EFB0 /* NSArray+FMIValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1700A1B51D1D564B0035EFB0 /* NSArray+FMIValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1700A1BA1D1D56540035EFB0 /* NSArray+FMIValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1700A1B61D1D564B0035EFB0 /* NSArray+FMIValidation.m */; };
+		170565FB21EE127000F77AAB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170565FA21EE127000F77AAB /* Result.swift */; };
 		170C7E401C900D3C000B5574 /* FMIMonth.h in Headers */ = {isa = PBXBuildFile; fileRef = 359137DA236A1CED2510FB9C /* FMIMonth.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		170C7E411C900D3C000B5574 /* FMIWeek.h in Headers */ = {isa = PBXBuildFile; fileRef = 3591352CA48C13A170581A82 /* FMIWeek.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		170C7E421C900D3C000B5574 /* FMIYear.h in Headers */ = {isa = PBXBuildFile; fileRef = 3591302B55363F40E9CF35C6 /* FMIYear.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -384,6 +385,7 @@
 /* Begin PBXFileReference section */
 		1700A1B51D1D564B0035EFB0 /* NSArray+FMIValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FMIValidation.h"; sourceTree = "<group>"; };
 		1700A1B61D1D564B0035EFB0 /* NSArray+FMIValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FMIValidation.m"; sourceTree = "<group>"; };
+		170565FA21EE127000F77AAB /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		171CB9851AFB63C7002BE185 /* FMIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		171CB9891AFB63C7002BE185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		171CB98A1AFB63C7002BE185 /* FMIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIKit.h; sourceTree = "<group>"; };
@@ -904,6 +906,7 @@
 				35913598DD77E67B459BE40D /* FMIWeek.m */,
 				3591302B55363F40E9CF35C6 /* FMIYear.h */,
 				359133AD3EED17EBCFFC829C /* FMIYear.m */,
+				170565FA21EE127000F77AAB /* Result.swift */,
 			);
 			name = "Value Types";
 			sourceTree = "<group>";
@@ -1522,6 +1525,7 @@
 				359130C3C5024F329A04621D /* UILabel+Sizing.m in Sources */,
 				35913035116DA7197F430FCD /* SKProduct+LocalizedPrice.m in Sources */,
 				1774924B214EA17C00336F3F /* UIView+Glowing.swift in Sources */,
+				170565FB21EE127000F77AAB /* Result.swift in Sources */,
 				35913E77642250F96FBE105C /* NSArray+Querying.m in Sources */,
 				359133D9C1B762C349A3D19E /* NSObject+AutoDescription.m in Sources */,
 				35913DAAA91E9E88E5571AD5 /* UIColor+SystemDefaults.m in Sources */,
