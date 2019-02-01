@@ -7,6 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  *	Adds methods to UITableView for handling NSIndexPaths;
  */
@@ -68,7 +70,7 @@
  *	@param	indexPath	An index path.
  *	@return	The reuse identifier of the of at a given index path.
  */
-- (NSString *)fm_reuseIdentifierForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (nullable NSString *)fm_reuseIdentifierForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 /**
  * Executes a given block using each index path in the table view, starting with the first index path and continuing through to the last index path.
@@ -77,3 +79,5 @@
 - (void)fm_enumerateIndexPathsUsingBlock:(void (^)(NSIndexPath *indexPath, BOOL *stop))block;
 
 @end
+
+NS_ASSUME_NONNULL_END
