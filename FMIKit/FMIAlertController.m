@@ -23,4 +23,10 @@
     return alertController;
 }
 
++ (UIAlertController *)alertControllerForError:(NSError *)error {
+  UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+  [alertController addAction:[FMIAlertAction okAlertAction]];
+  return alertController;
+}
+
 @end
