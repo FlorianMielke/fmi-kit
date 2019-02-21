@@ -20,6 +20,10 @@
 		170C7E451C900D69000B5574 /* FMIYear.m in Sources */ = {isa = PBXBuildFile; fileRef = 359133AD3EED17EBCFFC829C /* FMIYear.m */; };
 		171CB98B1AFB63C7002BE185 /* FMIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CB98A1AFB63C7002BE185 /* FMIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1722257E21AC6DFF0036D109 /* UI+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1722257D21AC6DFF0036D109 /* UI+Identifier.swift */; };
+		17360A6D221EB2BF00A7131B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17360A6C221EB2BF00A7131B /* File.swift */; };
+		17360A6E221EB2BF00A7131B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17360A6C221EB2BF00A7131B /* File.swift */; };
+		17360A76221EB2ED00A7131B /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17360A75221EB2ED00A7131B /* PropertyList.swift */; };
+		17360A77221EB2ED00A7131B /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17360A75221EB2ED00A7131B /* PropertyList.swift */; };
 		1736E4761BA815B30095227A /* FMIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CB98A1AFB63C7002BE185 /* FMIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1738D44C1AFC948100B96929 /* Event.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1738D4431AFC948100B96929 /* Event.xcdatamodeld */; };
 		1738D44D1AFC948100B96929 /* TestFile.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4451AFC948100B96929 /* TestFile.csv */; };
@@ -392,6 +396,8 @@
 		171CB9901AFB63C7002BE185 /* FMIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		171CB9961AFB63C7002BE185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1722257D21AC6DFF0036D109 /* UI+Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI+Identifier.swift"; sourceTree = "<group>"; };
+		17360A6C221EB2BF00A7131B /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		17360A75221EB2ED00A7131B /* PropertyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
 		1736E46D1BA815400095227A /* FMIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1736E4711BA815400095227A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1738D4401AFC928C00B96929 /* FMIMessageMIMETypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FMIMessageMIMETypes.plist; path = Resources/FMIMessageMIMETypes.plist; sourceTree = SOURCE_ROOT; };
@@ -1144,6 +1150,7 @@
 		35913EAD244E44080E1D9AC6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				17360A6C221EB2BF00A7131B /* File.swift */,
 				3591323DC8B663841012BD82 /* FMIHelpers.h */,
 				35913D42B24217B3787F33AB /* FMIKitPrivates.h */,
 				35913A05AC811C8207D6C975 /* FMIKitPrivates.m */,
@@ -1153,6 +1160,7 @@
 				3591364580F7582863F6E061 /* NSBundle+FMIAppInfo.m */,
 				35913762DEFCE14348F4DB8D /* NSBundle+FMIKit.h */,
 				359132B38EDA405B10D43539 /* NSBundle+FMIKit.m */,
+				17360A75221EB2ED00A7131B /* PropertyList.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -1559,6 +1567,7 @@
 				35913EDB3B3C6229E5500A1E /* FMIUserDefaultsCloudStatusGateway.m in Sources */,
 				3591345535873DA9F2A1ABD3 /* FMICoreDataStoreConfiguration.m in Sources */,
 				35913C27F6F4CA18BD799A75 /* FMICoreDataStore.m in Sources */,
+				17360A6D221EB2BF00A7131B /* File.swift in Sources */,
 				35913688CD23334177B4FA7B /* FMICSVFieldDeserializer.m in Sources */,
 				35913422D3F167AACE6ADBD4 /* FMICSVDeserializer.m in Sources */,
 				176F0390219AE01D000FCFDC /* CellMarkable.swift in Sources */,
@@ -1575,6 +1584,7 @@
 				3591344BF827E2763B5FE2DE /* FMIUbiquitousCloudStatusGateway.m in Sources */,
 				359135BB9EC783A8278B4D6E /* FMIErrorLogFile.m in Sources */,
 				359130A7410D0233FDEA2625 /* FMIErrorMessage.m in Sources */,
+				17360A76221EB2ED00A7131B /* PropertyList.swift in Sources */,
 				35913C3C87D212B377485C66 /* NSBundle+FMIAppInfo.m in Sources */,
 				35913C92E30326F916509E7F /* FMIMessageAttachment.m in Sources */,
 				3591366E697A6FCF2F862A15 /* FMIMessageMIMETypes.m in Sources */,
@@ -1664,6 +1674,7 @@
 				35913ED44B8288907BC4A620 /* FMIBinding.m in Sources */,
 				359138A33936031E93902713 /* FMIComparator.m in Sources */,
 				176F0397219AE108000FCFDC /* Identifiable.swift in Sources */,
+				17360A77221EB2ED00A7131B /* PropertyList.swift in Sources */,
 				35913852A6133DB91905702E /* FMIDuration.m in Sources */,
 				3591337C093B454CA7AD9DF1 /* NSString+CSV.m in Sources */,
 				35913D93DC5AECAF5EE44382 /* NSNumberFormatter+Editing.m in Sources */,
@@ -1672,6 +1683,7 @@
 				1700A1BA1D1D56540035EFB0 /* NSArray+FMIValidation.m in Sources */,
 				35913DF850A2A033BA88C54A /* NSArray+Initialization.m in Sources */,
 				3591384204E1951D9A8ADFE6 /* NSString+FileName.m in Sources */,
+				17360A6E221EB2BF00A7131B /* File.swift in Sources */,
 				359139D9BCDFDDC9EF8369BB /* NSDateFormatter+Timing.m in Sources */,
 				179EBEA31CE079A800479BCA /* NSLocale+German.m in Sources */,
 				170C7E451C900D69000B5574 /* FMIYear.m in Sources */,
