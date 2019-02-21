@@ -23,8 +23,12 @@
     return alertController;
 }
 
-+ (UIAlertController *)alertControllerForError:(NSError *)error {
-  UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
++ (UIAlertController *)alertControllerForError:(NSError *)error withLocalizedTitle:(NSString *)title {
+  NSString *message = [NSString stringWithFormat:@"%@ (Code: %li)", error.localizedDescription, (long)error.code];
+  if (error.localizedRecoverySuggestion != nil && ![error.localizedRecoverySuggestion isEqualToString:@""]) {
+    message = [message stringByAppendingFormat:@"\n\n%@", error.localizedRecoverySuggestion];
+  }
+  UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
   [alertController addAction:[FMIAlertAction okAlertAction]];
   return alertController;
 }

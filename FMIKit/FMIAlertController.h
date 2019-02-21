@@ -10,7 +10,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIAlertController *)alertControllerForCannotSendMail;
 
-+ (UIAlertController *)alertControllerForError:(NSError *)error;
++ (UIAlertController *)alertControllerForError:(NSError *)error withLocalizedTitle:(NSString *)title;
 
 @end
 
