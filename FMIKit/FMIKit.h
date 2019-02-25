@@ -91,16 +91,22 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIEditingToolbar.h>
 #import <FMIKit/FMIEventParser.h>
 #import <FMIKit/FMIHairlineView.h>
-#import <FMIKit/FMIMessageMIMETypes.h>
-#import <FMIKit/FMIMessageAttachment.h>
 #import <FMIKit/FMIMultilevelList.h>
 #import <FMIKit/FMIMultilevelListItem.h>
 #import <FMIKit/FMIMultilevelListNumber.h>
 #import <FMIKit/FMINestedTableView.h>
 #import <FMIKit/FMINonAminatedPushSegue.h>
 #import <FMIKit/FMINumericTextView.h>
-#import <FMIKit/FMISupportMessage.h>
 #import <FMIKit/FMITableView.h>
+
+#pragma mark - Messages
+
+#import <FMIKit/FMIMessageMIMETypes.h>
+#import <FMIKit/FMIMessageAttachment.h>
+#import <FMIKit/FMISupportMessage.h>
+#import <FMIKit/FMIAttachment.h>
+#import <FMIKit/FMIErrorMessage.h>
+#import <FMIKit/FMIMailer.h>
 
 #pragma mark - Common
 
@@ -120,10 +126,5 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIReviewNotificationCoordinator.h>
 #import <FMIKit/FMIReviewNotificationViewController.h>
 #import <FMIKit/FMIWhatsNewCoordinator.h>
-
-#pragma mark - Error handling
-
-#import <FMIKit/FMIAttachment.h>
-#import <FMIKit/FMIErrorMessage.h>
 
 #endif

@@ -8,7 +8,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-
 /**
  * This category adds methods to UIDevice to determine more information about the current device.
  */

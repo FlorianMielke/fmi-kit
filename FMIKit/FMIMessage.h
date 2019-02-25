@@ -9,7 +9,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *messageBody;
 @property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *subject;
 @property (readonly, copy, NS_NONATOMIC_IOSONLY) NSArray *toRecipients;
-@property (readonly, NS_NONATOMIC_IOSONLY) NSArray <id <FMIAttachment>> *attachments;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSArray <id<FMIAttachment>> *attachments;
 
 @end
 

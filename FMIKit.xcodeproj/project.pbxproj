@@ -51,6 +51,8 @@
 		17B39B2B1C05FF580012BB49 /* FMIBorderedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B39B291C05FF580012BB49 /* FMIBorderedButton.m */; };
 		17CBD6101BCC3A9000681FD9 /* FMIKitLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17CBD6121BCC3A9000681FD9 /* FMIKitLocalizable.strings */; };
 		17CEC6EC1D22FAB90054895E /* FMIStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913905530E10E71AE0B13C /* FMIStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17D859D222243761004F95BA /* FMIMailer.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D859D022243761004F95BA /* FMIMailer.m */; };
+		17D859D322243761004F95BA /* FMIMailer.h in Headers */ = {isa = PBXBuildFile; fileRef = 17D859D122243761004F95BA /* FMIMailer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17E00C711B90307500BA7024 /* FMIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171CB9851AFB63C7002BE185 /* FMIKit.framework */; };
 		17E00C761B90308500BA7024 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E00C731B90308500BA7024 /* OCMock.framework */; };
 		3591302604C9C26A4A1EDA69 /* FMIMultilevelListNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 359132662D65BD3C57852CF4 /* FMIMultilevelListNumberTest.m */; };
@@ -419,6 +421,8 @@
 		17B39B291C05FF580012BB49 /* FMIBorderedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIBorderedButton.m; sourceTree = "<group>"; };
 		17CBD6111BCC3A9000681FD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FMIKitLocalizable.strings; sourceTree = "<group>"; };
 		17CBD6131BCC3A9200681FD9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/FMIKitLocalizable.strings; sourceTree = "<group>"; };
+		17D859D022243761004F95BA /* FMIMailer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIMailer.m; sourceTree = "<group>"; };
+		17D859D122243761004F95BA /* FMIMailer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIMailer.h; sourceTree = "<group>"; };
 		17E00C731B90308500BA7024 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = Carthage/Build/iOS/OCMock.framework; sourceTree = "<group>"; };
 		359130076AB9B3937D318FE5 /* FMIFieldDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIFieldDescription.m; sourceTree = "<group>"; };
 		3591302B55363F40E9CF35C6 /* FMIYear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIYear.h; sourceTree = "<group>"; };
@@ -931,6 +935,8 @@
 			isa = PBXGroup;
 			children = (
 				35913EB997235D23138D0F7C /* FMIAttachment.h */,
+				17D859D122243761004F95BA /* FMIMailer.h */,
+				17D859D022243761004F95BA /* FMIMailer.m */,
 				3591375B589044CC844CAA13 /* FMIMessage.h */,
 				359138E216A89E7801EC34A1 /* FMIMessageAttachment.h */,
 				359137572DFEAB2C4B63BC31 /* FMIMessageAttachment.m */,
@@ -1179,6 +1185,7 @@
 				359133C23269D029A75404D7 /* FMIKitPrivates.h in Headers */,
 				35913A496D71B8214E3401CC /* NSBundle+FMIKit.h in Headers */,
 				359139FD611EB373D9CF9F07 /* FMIKitFactory.h in Headers */,
+				17D859D322243761004F95BA /* FMIMailer.h in Headers */,
 				3591368C148DE0BF2514DF10 /* FMIGMTDateHelper.h in Headers */,
 				35913FADB3C41A956866051D /* FMIAcceptedCell.h in Headers */,
 				359130519D7FE93B0DDA4DC5 /* FMIActivityIndicatorAlertView.h in Headers */,
@@ -1564,6 +1571,7 @@
 				359136DA030E37EBC910FED8 /* FMIModifyCloudStatus.m in Sources */,
 				176F0396219AE108000FCFDC /* Identifiable.swift in Sources */,
 				3591370B30F0A3F0759E9393 /* FMIFetchCloudStatus.m in Sources */,
+				17D859D222243761004F95BA /* FMIMailer.m in Sources */,
 				35913EDB3B3C6229E5500A1E /* FMIUserDefaultsCloudStatusGateway.m in Sources */,
 				3591345535873DA9F2A1ABD3 /* FMICoreDataStoreConfiguration.m in Sources */,
 				35913C27F6F4CA18BD799A75 /* FMICoreDataStore.m in Sources */,
