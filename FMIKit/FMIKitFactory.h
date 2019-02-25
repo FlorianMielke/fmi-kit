@@ -13,6 +13,8 @@
 @protocol FMIAlertView;
 @protocol FMIURLProvider;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FMIKitFactory : NSObject
 
 + (FMIDateHelper *)createDateHelper;
@@ -40,3 +42,5 @@
 + (id <FMIMessage>)createErrorMessageForError:(NSError *)error bundle:(NSBundle *)bundle;
 
 @end
+
+NS_ASSUME_NONNULL_END
