@@ -1,16 +1,15 @@
 #import <UIKit/UIKit.h>
-#import <MessageUI/MessageUI.h>
 
 @protocol FMIMessage;
 @protocol FMIMailerDelegate;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FMIMailer : NSObject <MFMailComposeViewControllerDelegate>
+@interface FMIMailer : NSObject
 
 - (BOOL)canMail;
 
-- (void)mail:(id<FMIMessage>)message withPresentingViewController:(UIViewController *)viewController mailComposeViewController:(MFMailComposeViewController *)mailComposeViewController delegate:(id<FMIMailerDelegate>)delegate;
+- (void)mail:(id<FMIMessage>)message withPresentingViewController:(UIViewController *)viewController delegate:(id<FMIMailerDelegate>)delegate;
 
 @end
 
