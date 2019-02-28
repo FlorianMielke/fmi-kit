@@ -7,9 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FMICloudStatus.h"
-
-@class FMIFetchCloudStatus;
 
 NS_ASSUME_NONNULL_BEGIN
 

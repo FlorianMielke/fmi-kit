@@ -2,8 +2,6 @@
 
 @class FMIDateHelper;
 @class FMICoreDataStore;
-@class FMIModifyCloudStatus;
-@class FMIFetchCloudStatus;
 @class FMIFileCoordinator;
 @class FMIReviewNotificationCoordinator;
 @class FMIWhatsNewCoordinator;
@@ -20,14 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (FMIDateHelper *)createDateHelper;
 
 - (id <FMIAlertView>)createActivityIndicatorAlertViewWithTitle:(NSString *)title;
-
-+ (FMIFetchCloudStatus *)createFetchCloudStatus;
-
-+ (FMIFetchCloudStatus *)createFetchInitialCloudStatus;
-
-+ (FMIModifyCloudStatus *)createModifyCloudStatus;
-
-+ (FMIModifyCloudStatus *)createModifyInitialCloudStatus;
 
 + (NSUserDefaults *)createUserDefaults;
 
