@@ -29,12 +29,4 @@
   return self;
 }
 
-- (NSURL *)currentStoreURL {
-  return self.localStoreURL;
-}
-
-- (NSDictionary *)currentStoreOptions {
-  return [self.localStoreOptions copy];
-}
-
 @end

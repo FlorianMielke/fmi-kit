@@ -15,8 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (readonly, NS_NONATOMIC_IOSONLY) NSURL *localStoreURL;
 @property (readonly, copy, NS_NONATOMIC_IOSONLY) NSDictionary *localStoreOptions;
 @property (readonly, NS_NONATOMIC_IOSONLY) NSURL *managedObjectModelURL;
-@property (readonly, copy, NS_NONATOMIC_IOSONLY) NSDictionary *currentStoreOptions;
-@property (readonly, NS_NONATOMIC_IOSONLY) NSURL *currentStoreURL;
 
 - (instancetype)init NS_UNAVAILABLE;
 

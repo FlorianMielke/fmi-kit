@@ -86,7 +86,7 @@ NSString *const FMIStoreErrorDomain = @"FMIStoreErrorDomain";
 
 - (void)useSQLiteStoreWithConfiguration:(FMICoreDataStoreConfiguration *)configuration {
   self.configuration = configuration;
-  [self preparePersistentStoreCoordinatorWithStoreType:NSSQLiteStoreType storeURL:self.configuration.currentStoreURL];
+  [self preparePersistentStoreCoordinatorWithStoreType:NSSQLiteStoreType storeURL:self.configuration.localStoreURL];
 }
 
 - (void)useInMemoryStoreWithConfiguration:(FMICoreDataStoreConfiguration *)configuration {
@@ -99,7 +99,7 @@ NSString *const FMIStoreErrorDomain = @"FMIStoreErrorDomain";
   self.persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
   [self registerForICloudNotifications];
   NSError *error;
-  if (![self.persistentStoreCoordinator addPersistentStoreWithType:storeType configuration:nil URL:storeURL options:self.configuration.currentStoreOptions error:&error]) {
+  if (![self.persistentStoreCoordinator addPersistentStoreWithType:storeType configuration:nil URL:storeURL options:self.configuration.localStoreOptions error:&error]) {
     NSLog(@"Error while creating persistent store coordinator: %@\n%@", error.localizedDescription, error.userInfo);
     return;
   }
