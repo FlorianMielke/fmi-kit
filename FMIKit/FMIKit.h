@@ -114,9 +114,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 
 #pragma mark - Persistence
 
-#import <FMIKit/FMIFetchCloudStatus.h>
-#import <FMIKit/FMIModifyCloudStatus.h>
-#import <FMIKit/FMICloudStatus.h>
 #import <FMIKit/FMICoreDataStore.h>
 #import <FMIKit/FMICoreDataStoreConfiguration.h>
 #import <FMIKit/NSPersistentStoreCoordinator+Migration.h>

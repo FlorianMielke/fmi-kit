@@ -4,7 +4,6 @@
 //
 
 #import <CoreData/CoreData.h>
-#import "FMICloudStatus.h"
 #import "FMIStore.h"
 
 @class FMICoreDataStoreConfiguration;
@@ -13,15 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 OBJC_EXTERN NSString *const FMIStoreWillChangeStoreNotification;
 OBJC_EXTERN NSString *const FMIStoreDidChangeStoreNotification;
-OBJC_EXTERN NSString *const FMIStoreDidMigrateToCloudStoreNotification;
-OBJC_EXTERN NSString *const FMIStoreDidMigrateToLocalStoreNotification;
 
 NS_ENUM(NSInteger) {
-    FMIStoreErrorUnknown = -1,
-    FMIStoreErrorCannotMigrateToCloudStore = -10,
-    FMIStoreErrorCannotDestroyLocalStore = -20,
-    FMIStoreErrorCannotMigrateToLocalStore = -30,
-    FMIStoreErrorCannotDestroyCloudStore = -40,
+  FMIStoreErrorUnknown = -1,
+  FMIStoreErrorCannotDestroyLocalStore = -20,
+  FMIStoreErrorCannotMigrateToLocalStore = -30,
 };
 
 /**
