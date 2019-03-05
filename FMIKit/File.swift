@@ -16,7 +16,8 @@
 
   @objc public func copy(to destinationURL: URL) throws {
     _ = url.startAccessingSecurityScopedResource()
-    try fileManager.copyItem(at: try load(), to: destinationURL)
+    let safeURL = try load()
+    try fileManager.copyItem(at: safeURL, to: destinationURL)
     _ = url.stopAccessingSecurityScopedResource()
   }
 
