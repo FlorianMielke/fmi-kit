@@ -1,12 +1,28 @@
-public struct File {
-  static var coordinator: NSFileCoordinator = {
-    return NSFileCoordinator()
-  }()
+@objc public class File: NSObject {
+  private var coordinator = NSFileCoordinator()
+  private var fileManager = FileManager.default
+  private let url: URL
   
-  public static func open(at url: URL) throws -> Data {
+  @objc init(url: URL) {
+    self.url = url
+  }
+
+  public func open() throws -> Data {
+    _ = url.startAccessingSecurityScopedResource()
+    let data = try Data.init(contentsOf: load())
+    _ = url.stopAccessingSecurityScopedResource()
+    return data
+  }
+
+  @objc public func copy(to destinationURL: URL) throws {
+    _ = url.startAccessingSecurityScopedResource()
+    try fileManager.copyItem(at: url, to: destinationURL)
+    _ = url.stopAccessingSecurityScopedResource()
+  }
+
+  private func load() throws -> URL {
     var safeURL: URL!
     var error: NSError?
-    _ = url.startAccessingSecurityScopedResource()
     coordinator.coordinate(readingItemAt: url, options: .withoutChanges, error: &error) { fileURL in
       safeURL = fileURL
     }
@@ -14,8 +30,6 @@ public struct File {
       _ = url.stopAccessingSecurityScopedResource()
       throw error
     }
-    let data = try Data.init(contentsOf: safeURL)
-    _ = url.stopAccessingSecurityScopedResource()
-    return data
+    return safeURL
   }
 }
