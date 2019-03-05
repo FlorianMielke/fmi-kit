@@ -1372,7 +1372,7 @@
 			};
 			buildConfigurationList = 171CB97F1AFB63C7002BE185 /* Build configuration list for PBXProject "FMIKit" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
