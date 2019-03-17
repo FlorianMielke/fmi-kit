@@ -1,5 +1,3 @@
-import UIKit
-
 @objc public extension UIStoryboardSegue {
     @objc static var identifier: String {
         return String(describing: self)
@@ -17,3 +15,10 @@ import UIKit
     return String(describing: self)
   }
 }
+
+@objc public extension UITableViewHeaderFooterView {
+  @objc static var identifier: String {
+    return String(describing: self)
+  }
+}
+
