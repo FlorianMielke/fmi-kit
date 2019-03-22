@@ -8,6 +8,7 @@
 #import "FMIAttachment.h"
 #import "FMIErrorLogFile.h"
 #import "FMIMessage.h"
+#import "FMIMailer.h"
 #import "FMIErrorMessage.h"
 
 @implementation FMIKitFactory
@@ -43,6 +44,10 @@
 + (id <FMIMessage>)createErrorMessageForError:(NSError *)error bundle:(NSBundle *)bundle {
   id <FMIAttachment> logFile = [FMIKitFactory createLogFileFromError:error bundle:bundle];
   return [[FMIErrorMessage alloc] initWithLogFile:logFile bundle:bundle];
+}
+
++ (FMIMailer *)makeMailer {
+  return [[FMIMailer alloc] init];
 }
 
 + (id <FMIAttachment>)createLogFileFromError:(NSError *)error bundle:(NSBundle *)bundle {

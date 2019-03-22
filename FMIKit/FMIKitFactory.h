@@ -6,6 +6,7 @@
 @class FMIReviewNotificationCoordinator;
 @class FMIWhatsNewCoordinator;
 @class FMIWhatsNewCoordinator;
+@class FMIMailer;
 @protocol FMIAttachment;
 @protocol FMIMessage;
 @protocol FMIAlertView;
@@ -30,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (FMIWhatsNewCoordinator *)createWhatsNewCoordinatorWithURLProvider:(id <FMIURLProvider>)URLProvider;
 
 + (id <FMIMessage>)createErrorMessageForError:(NSError *)error bundle:(NSBundle *)bundle;
+
++ (FMIMailer *)makeMailer;
 
 @end
 
