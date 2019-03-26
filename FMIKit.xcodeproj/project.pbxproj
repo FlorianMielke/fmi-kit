@@ -1363,13 +1363,14 @@
 				TargetAttributes = {
 					171CB9841AFB63C7002BE185 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 					171CB98F1AFB63C7002BE185 = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
 					1736E46C1BA815400095227A = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -1824,6 +1825,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1843,6 +1845,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.madefm.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1886,6 +1889,7 @@
 				PRODUCT_NAME = FMIKit;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
@@ -1907,6 +1911,7 @@
 				PRODUCT_NAME = FMIKit;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
@@ -1983,6 +1988,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.madefm.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Beta;
 		};
@@ -2013,6 +2019,7 @@
 				PRODUCT_NAME = FMIKit;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
