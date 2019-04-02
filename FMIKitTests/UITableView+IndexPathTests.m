@@ -98,4 +98,49 @@
   XCTAssertTrue([stoppedIndexPath compare:stoppingIndexPath] == NSOrderedSame);
 }
 
+#pragma mark - Next Index Path
+
+- (void)testItReturnsTheNextAvailableIndexPath {
+  NSIndexPath *indexPath = [self.subject fm_indexPathForRowAfterIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+  XCTAssertEqualObjects([NSIndexPath indexPathForRow:1 inSection:0], indexPath);
+}
+
+- (void)testItReturnsTheNextAvailableIndexPathInNextSection {
+  NSIndexPath *indexPath = [self.subject fm_indexPathForRowAfterIndexPath:[NSIndexPath indexPathForRow:9 inSection:0]];
+  XCTAssertEqualObjects([NSIndexPath indexPathForRow:0 inSection:1], indexPath);
+}
+
+- (void)testItReturnsNilIfNoNextIndexPathIsAvailable {
+  NSIndexPath *indexPath = [self.subject fm_indexPathForRowAfterIndexPath:[NSIndexPath indexPathForRow:9 inSection:2]];
+  XCTAssertNil(indexPath);
+}
+
+- (void)testItReturnsNilIfInvalidIndexPathIsGivenForNextRow {
+  NSIndexPath *indexPath = [self.subject fm_indexPathForRowAfterIndexPath:[NSIndexPath indexPathForRow:9 inSection:12]];
+  XCTAssertNil(indexPath);
+}
+
+
+#pragma mark - Previous Index Path
+
+- (void)testItReturnsThePreviousAvailableIndexPath {
+  NSIndexPath *indexPath = [self.subject fm_indexPathForRowBeforeIndexPath:[NSIndexPath indexPathForRow:3 inSection:1]];
+  XCTAssertEqualObjects([NSIndexPath indexPathForRow:2 inSection:1], indexPath);
+}
+
+- (void)testItReturnsThePreviousAvailableIndexPathInPreviousSection {
+  NSIndexPath *indexPath = [self.subject fm_indexPathForRowBeforeIndexPath:[NSIndexPath indexPathForRow:0 inSection:2]];
+  XCTAssertEqualObjects([NSIndexPath indexPathForRow:9 inSection:1], indexPath);
+}
+
+- (void)testItReturnsNilIfNoPreviousIndexPathIsAvailable {
+  NSIndexPath *indexPath = [self.subject fm_indexPathForRowBeforeIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+  XCTAssertNil(indexPath);
+}
+
+- (void)testItReturnsNilIfInvalidIndexPathIsGivenForPreviousRow {
+  NSIndexPath *indexPath = [self.subject fm_indexPathForRowBeforeIndexPath:[NSIndexPath indexPathForRow:12 inSection:20]];
+  XCTAssertNil(indexPath);
+}
+
 @end
