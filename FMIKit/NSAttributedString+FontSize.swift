@@ -16,4 +16,18 @@ extension NSAttributedString {
     output.endEditing()
     return output
   }
+
+  @objc public func resetTo(font newFont: UIFont) -> NSAttributedString {
+    guard let output = self.mutableCopy() as? NSMutableAttributedString else {
+      return self
+    }
+    let range = NSRange(location: 0, length: self.length)
+    output.beginEditing()
+    output.fixAttributes(in: range)
+    output.enumerateAttribute(NSAttributedString.Key.font, in: range, options: []) { (value, range, stop) -> Void in
+      output.addAttribute(NSAttributedString.Key.font, value: newFont, range: range)
+    }
+    output.endEditing()
+    return output
+  }
 }
