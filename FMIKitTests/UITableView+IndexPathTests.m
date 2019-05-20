@@ -1,158 +1,146 @@
-//
-//  UITableView+IndexPathTests.m
-//
-//  Created by Florian Mielke on 29.07.13.
-//  Copyright (c) 2013 Florian Mielke. All rights reserved.
-//
-
 #import <XCTest/XCTest.h>
 #import "UITableView+IndexPath.h"
 #import "FakeTableViewDataSource.h"
 
-
 @interface UITableView_IndexPathTests : XCTestCase
 
-@property (NS_NONATOMIC_IOSONLY) UITableView *sut;
+@property (NS_NONATOMIC_IOSONLY) UITableView *subject;
 @property (NS_NONATOMIC_IOSONLY) FakeTableViewDataSource *dataSource;
 
 @end
 
-
-
 @implementation UITableView_IndexPathTests
 
-
-#pragma mark - Fixture
-
-- (void)setUp
-{
-    [super setUp];
-
-    self.sut = [[UITableView alloc] init];
-    
-    self.dataSource = [[FakeTableViewDataSource alloc] init];
-    [self.sut setDataSource:self.dataSource];
+- (void)setUp {
+  [super setUp];
+  self.subject = [[UITableView alloc] init];
+  self.dataSource = [[FakeTableViewDataSource alloc] init];
+  [self.subject setDataSource:self.dataSource];
 }
 
-- (void)tearDown
-{
-    self.sut = nil;
-    self.dataSource = nil;
-
-    [super tearDown];
+- (void)tearDown {
+  self.subject = nil;
+  self.dataSource = nil;
+  [super tearDown];
 }
 
-
-
-#pragma mark - Tests
-
-- (void)testTableShouldReturnFalseForIsEmtpy
-{
-    XCTAssertFalse([self.sut fm_isEmpty]);
+- (void)testTableShouldReturnFalseForIsEmtpy {
+  XCTAssertFalse([self.subject fm_isEmpty]);
 }
 
-
-- (void)testEmtpyTableShouldReturnTrueForEmptyTable
-{
-
-    UITableView *table = [[UITableView alloc] init];
-    
-    XCTAssertTrue([table fm_isEmpty]);
+- (void)testEmtpyTableShouldReturnTrueForEmptyTable {
+  UITableView *table = [[UITableView alloc] init];
+  
+  XCTAssertTrue([table fm_isEmpty]);
 }
 
-
-- (void)testTableShouldReturnFirstIndexPath
-{
-
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    
-    XCTAssertEqual([[self.sut fm_firstIndexPath] compare:indexPath], NSOrderedSame);
+- (void)testTableShouldReturnFirstIndexPath {
+  NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+  
+  XCTAssertEqual([[self.subject fm_firstIndexPath] compare:indexPath], NSOrderedSame);
 }
 
-
-- (void)testEmtpyTableShouldReturnNilForFirstIndexPath
-{
-
-    UITableView *table = [[UITableView alloc] init];
-    
-    XCTAssertNil([table fm_firstIndexPath]);
+- (void)testEmtpyTableShouldReturnNilForFirstIndexPath {
+  UITableView *table = [[UITableView alloc] init];
+  
+  XCTAssertNil([table fm_firstIndexPath]);
 }
 
-
-- (void)testTableShouldReturnLastIndexPath
-{
-
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:9 inSection:2];
-    
-    XCTAssertEqual([[self.sut fm_lastIndexPath] compare:indexPath], NSOrderedSame);
+- (void)testTableShouldReturnLastIndexPath {
+  NSIndexPath *indexPath = [NSIndexPath indexPathForRow:9 inSection:2];
+  
+  XCTAssertEqual([[self.subject fm_lastIndexPath] compare:indexPath], NSOrderedSame);
 }
 
-
-- (void)testEmtpyTableShouldReturnNilForLastIndexPath
-{
-
-    UITableView *table = [[UITableView alloc] init];
-    
-    XCTAssertNil([table fm_lastIndexPath]);
+- (void)testEmtpyTableShouldReturnNilForLastIndexPath {
+  UITableView *table = [[UITableView alloc] init];
+  
+  XCTAssertNil([table fm_lastIndexPath]);
 }
 
-
-- (void)testTableShouldReturnLastIndexPathOfFirstSection
-{
-
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:9 inSection:0];
-    
-    XCTAssertEqual([[self.sut fm_lastIndexPathInSection:0] compare:indexPath], NSOrderedSame);
+- (void)testTableShouldReturnLastIndexPathOfFirstSection {
+  NSIndexPath *indexPath = [NSIndexPath indexPathForRow:9 inSection:0];
+  
+  XCTAssertEqual([[self.subject fm_lastIndexPathInSection:0] compare:indexPath], NSOrderedSame);
 }
 
-
-
-#pragma mark - Enumeration
-
-- (void)testTableViewShouldEnumerateIndexPaths
-{
-
-    __block NSInteger numberOfRows = 0;
-    
-    [self.sut fm_enumerateIndexPathsUsingBlock:^(NSIndexPath *indexPath, BOOL *stop) {
-        numberOfRows++;
-    }];
-    
-    XCTAssertEqual(numberOfRows, 30);
+- (void)testTableViewShouldEnumerateIndexPaths {
+  __block NSInteger numberOfRows = 0;
+  
+  [self.subject fm_enumerateIndexPathsUsingBlock:^(NSIndexPath *indexPath, BOOL *stop) {
+    numberOfRows++;
+  }];
+  
+  XCTAssertEqual(numberOfRows, 30);
 }
 
+- (void)testTableViewShouldPassIndexPathsDuringEnumeration {
+  __block NSIndexPath *lastIndexPath = nil;
+  
+  [self.subject fm_enumerateIndexPathsUsingBlock:^(NSIndexPath *indexPath, BOOL *stop) {
+    lastIndexPath = indexPath;
+  }];
+  
+  XCTAssertTrue([lastIndexPath compare:[NSIndexPath indexPathForRow:9 inSection:2]] == NSOrderedSame);
+}
 
-- (void)testTableViewShouldPassIndexPathsDuringEnumeration
-{
+- (void)testTableViewShouldStopEnumeration {
+  __block NSIndexPath *stoppedIndexPath = nil;
+  NSIndexPath *stoppingIndexPath = [NSIndexPath indexPathForRow:4 inSection:1];
+  
+  [self.subject fm_enumerateIndexPathsUsingBlock:^(NSIndexPath *indexPath, BOOL *stop) {
+    stoppedIndexPath = indexPath;
+    if ([stoppedIndexPath compare:stoppingIndexPath] == NSOrderedSame) {
+      *stop = YES;
+    }
+  }];
+  
+  XCTAssertTrue([stoppedIndexPath compare:stoppingIndexPath] == NSOrderedSame);
+}
 
-    __block NSIndexPath *lastIndexPath = nil;
-    
-    [self.sut fm_enumerateIndexPathsUsingBlock:^(NSIndexPath *indexPath, BOOL *stop) {
-        lastIndexPath = indexPath;
-    }];
-    
-    XCTAssertTrue([lastIndexPath compare:[NSIndexPath indexPathForRow:9 inSection:2]] == NSOrderedSame);
+#pragma mark - Next Index Path
+
+- (void)testItReturnsTheNextAvailableIndexPath {
+  NSIndexPath *indexPath = [self.subject fm_indexPathForRowAfterIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+  XCTAssertEqualObjects([NSIndexPath indexPathForRow:1 inSection:0], indexPath);
+}
+
+- (void)testItReturnsTheNextAvailableIndexPathInNextSection {
+  NSIndexPath *indexPath = [self.subject fm_indexPathForRowAfterIndexPath:[NSIndexPath indexPathForRow:9 inSection:0]];
+  XCTAssertEqualObjects([NSIndexPath indexPathForRow:0 inSection:1], indexPath);
+}
+
+- (void)testItReturnsNilIfNoNextIndexPathIsAvailable {
+  NSIndexPath *indexPath = [self.subject fm_indexPathForRowAfterIndexPath:[NSIndexPath indexPathForRow:9 inSection:2]];
+  XCTAssertNil(indexPath);
+}
+
+- (void)testItReturnsNilIfInvalidIndexPathIsGivenForNextRow {
+  NSIndexPath *indexPath = [self.subject fm_indexPathForRowAfterIndexPath:[NSIndexPath indexPathForRow:9 inSection:12]];
+  XCTAssertNil(indexPath);
 }
 
 
-- (void)testTableViewShouldStopEnumeration
-{
+#pragma mark - Previous Index Path
 
-    __block NSIndexPath *stoppedIndexPath = nil;
-    NSIndexPath *stoppingIndexPath = [NSIndexPath indexPathForRow:4 inSection:1];
-    
-    [self.sut fm_enumerateIndexPathsUsingBlock:^(NSIndexPath *indexPath, BOOL *stop) {
-        
-        stoppedIndexPath = indexPath;
-        
-        if ([stoppedIndexPath compare:stoppingIndexPath] == NSOrderedSame) {
-            *stop = YES;
-        }
-        
-    }];
-    
-    XCTAssertTrue([stoppedIndexPath compare:stoppingIndexPath] == NSOrderedSame);
+- (void)testItReturnsThePreviousAvailableIndexPath {
+  NSIndexPath *indexPath = [self.subject fm_indexPathForRowBeforeIndexPath:[NSIndexPath indexPathForRow:3 inSection:1]];
+  XCTAssertEqualObjects([NSIndexPath indexPathForRow:2 inSection:1], indexPath);
 }
 
+- (void)testItReturnsThePreviousAvailableIndexPathInPreviousSection {
+  NSIndexPath *indexPath = [self.subject fm_indexPathForRowBeforeIndexPath:[NSIndexPath indexPathForRow:0 inSection:2]];
+  XCTAssertEqualObjects([NSIndexPath indexPathForRow:9 inSection:1], indexPath);
+}
+
+- (void)testItReturnsNilIfNoPreviousIndexPathIsAvailable {
+  NSIndexPath *indexPath = [self.subject fm_indexPathForRowBeforeIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+  XCTAssertNil(indexPath);
+}
+
+- (void)testItReturnsNilIfInvalidIndexPathIsGivenForPreviousRow {
+  NSIndexPath *indexPath = [self.subject fm_indexPathForRowBeforeIndexPath:[NSIndexPath indexPathForRow:12 inSection:20]];
+  XCTAssertNil(indexPath);
+}
 
 @end

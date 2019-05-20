@@ -16,7 +16,7 @@
         [self setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
         self.layer.borderWidth = 1.0;
         self.layer.borderColor = self.tintColor.CGColor;
-        self.layer.cornerRadius = 3.0;
+        self.layer.cornerRadius = 6.0;
     }
     return self;
 }
