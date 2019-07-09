@@ -37,9 +37,7 @@
 }
 
 - (BOOL)fmi_hasIndexPath:(NSIndexPath *)indexPath {
-  BOOL isValidSection = indexPath.section < self.numberOfSections;
-  BOOL isValidRow = indexPath.row < [self numberOfRowsInSection:indexPath.section];
-  return (isValidSection && isValidRow);
+  return ([self cellForRowAtIndexPath:indexPath] != nil)
 }
 
 - (nullable NSIndexPath *)fm_lastIndexPathInSection:(NSInteger)section {
