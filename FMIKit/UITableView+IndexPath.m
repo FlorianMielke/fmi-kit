@@ -37,7 +37,7 @@
 }
 
 - (BOOL)fmi_hasIndexPath:(NSIndexPath *)indexPath {
-  return ([self cellForRowAtIndexPath:indexPath] != nil)
+  return ([self cellForRowAtIndexPath:indexPath] != nil);
 }
 
 - (nullable NSIndexPath *)fm_lastIndexPathInSection:(NSInteger)section {
