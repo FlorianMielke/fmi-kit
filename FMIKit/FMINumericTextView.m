@@ -55,8 +55,13 @@
     {
         _accessoryView = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0, 0.0, 0.0, 44.0)];
         _accessoryView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        _accessoryView.barTintColor = [UIColor colorWithRed:0.608 green:0.639 blue:0.690 alpha:1.000];
+      if (@available(iOS 13.0, *)) {
+        _accessoryView.tintColor = [UIColor labelColor];
+        _accessoryView.barTintColor = [UIColor systemBackgroundColor];
+      } else {
         _accessoryView.tintColor = [UIColor whiteColor];
+        _accessoryView.barTintColor = [UIColor colorWithRed:0.608 green:0.639 blue:0.690 alpha:1.0];
+      }
         _accessoryView.delegate = self;
         
         UIBarButtonItem *fixedButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
