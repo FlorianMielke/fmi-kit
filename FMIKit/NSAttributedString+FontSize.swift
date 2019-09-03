@@ -30,4 +30,36 @@ extension NSAttributedString {
     output.endEditing()
     return output
   }
+  
+  @objc public func editable(using newColor: UIColor) -> NSAttributedString {
+     guard let output = self.mutableCopy() as? NSMutableAttributedString else {
+       return self
+     }
+     var replacedColor = false
+     output.beginEditing()
+     output.enumerateAttribute(NSAttributedString.Key.foregroundColor, in: range, options: []) { (value, range, stop) -> Void in
+       output.removeAttribute(NSAttributedString.Key.foregroundColor, range: range)
+       output.addAttribute(NSAttributedString.Key.foregroundColor, value: newColor, range: range)
+       replacedColor = true
+     }
+     if !replacedColor {
+       output.addAttribute(NSAttributedString.Key.foregroundColor, value: newColor, range: range)
+     }
+     output.endEditing()
+     return output
+   }
+
+   @objc public func resetColor() -> NSAttributedString {
+     guard let output = self.mutableCopy() as? NSMutableAttributedString else {
+       return self
+     }
+     output.beginEditing()
+     output.enumerateAttribute(NSAttributedString.Key.foregroundColor, in: range, options: []) { (value, range, stop) -> Void in
+       output.removeAttribute(NSAttributedString.Key.foregroundColor, range: range)
+     }
+     output.endEditing()
+     return output
+   }
+
+   private var range: NSRange { NSRange(location: 0, length: self.length) }
 }
