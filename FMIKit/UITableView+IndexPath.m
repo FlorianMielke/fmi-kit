@@ -37,7 +37,12 @@
 }
 
 - (BOOL)fmi_hasIndexPath:(NSIndexPath *)indexPath {
-  return ([self cellForRowAtIndexPath:indexPath] != nil);
+  BOOL isValidSection = indexPath.section < self.numberOfSections;
+  if (!isValidSection) {
+    return NO;
+  }
+  BOOL isValidRow = indexPath.row < [self numberOfRowsInSection:indexPath.section];
+  return isValidRow;
 }
 
 - (nullable NSIndexPath *)fm_lastIndexPathInSection:(NSInteger)section {
