@@ -58,5 +58,5 @@ extension NSAttributedString {
     return output
   }
   
-  private var range: NSRange { NSRange(location: 0, length: self.length) }
+  private var range: NSRange { return NSRange(location: 0, length: self.length) }
 }
