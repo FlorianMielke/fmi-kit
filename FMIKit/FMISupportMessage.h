@@ -9,4 +9,6 @@
 
 - (instancetype)initWithBundle:(NSBundle *)bundle;
 
+- (instancetype)initWithBundle:(NSBundle *)bundle emailAddress:(NSString *)emailAddress;
+
 @end
