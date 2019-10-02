@@ -32,6 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (id <FMIMessage>)createErrorMessageForError:(NSError *)error bundle:(NSBundle *)bundle;
 
++ (id <FMIMessage>)createErrorMessageForError:(NSError *)error bundle:(NSBundle *)bundle emailAddress:(NSString *)emailAddress;
+
 + (FMIMailer *)makeMailer;
 
 @end
