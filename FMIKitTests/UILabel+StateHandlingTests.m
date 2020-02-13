@@ -28,28 +28,28 @@
 
 - (void)setUp
 {
-    [super setUp];
-
-    self.textColor = [UIColor cellDefaultStyleDetailLabelColor];
-    self.tintColor = [UIColor blueColor];
-    
-    self.sut = [[UILabel alloc] init];
-    self.sut.text = @"Lorem ipsum";
-    self.sut.textColor = self.textColor;
-    self.sut.tintColor = self.tintColor;
-    
-    self.defaultAttributes = [self.sut.attributedText attributesAtIndex:0 effectiveRange:NULL];
+  [super setUp];
+  
+  self.textColor = [UIColor cellDefaultStyleDetailLabelColor];
+  self.tintColor = [UIColor blueColor];
+  
+  self.sut = [[UILabel alloc] init];
+  self.sut.text = @"Lorem ipsum";
+  self.sut.textColor = self.textColor;
+  self.sut.tintColor = self.tintColor;
+  
+  self.defaultAttributes = [self.sut.attributedText attributesAtIndex:0 effectiveRange:NULL];
 }
 
 
 - (void)tearDown
 {
-    self.sut = nil;
-    self.textColor = nil;
-    self.tintColor = nil;
-    self.defaultAttributes = nil;
-    
-    [super tearDown];
+  self.sut = nil;
+  self.textColor = nil;
+  self.tintColor = nil;
+  self.defaultAttributes = nil;
+  
+  [super tearDown];
 }
 
 
@@ -58,91 +58,89 @@
 
 - (void)testLabelShouldBeInitialized
 {
-    XCTAssertNotNil(self.sut);
+  XCTAssertNotNil(self.sut);
 }
 
 
 - (void)testLabelShouldBeConfigured
 {
-    XCTAssertEqualObjects(self.sut.text, @"Lorem ipsum");
-    XCTAssertTrue(CGColorEqualToColor(self.sut.textColor.CGColor, self.textColor.CGColor));
-    XCTAssertTrue(CGColorEqualToColor(self.sut.tintColor.CGColor, self.tintColor.CGColor));
+  XCTAssertEqualObjects(self.sut.text, @"Lorem ipsum");
+  XCTAssertTrue(CGColorEqualToColor(self.sut.textColor.CGColor, self.textColor.CGColor));
+  XCTAssertTrue(CGColorEqualToColor(self.sut.tintColor.CGColor, self.tintColor.CGColor));
 }
 
 
 - (void)testLabelShouldUseTintColorWhenMarkAsActive
 {
-    // When
-    [self.sut fm_markAsActive:YES];
-    
-    XCTAssertTrue(CGColorEqualToColor(self.sut.textColor.CGColor, self.tintColor.CGColor));
+  // When
+  [self.sut fm_markAsActive:YES];
+  
+  XCTAssertTrue(CGColorEqualToColor(self.sut.textColor.CGColor, self.tintColor.CGColor));
 }
 
 
 - (void)testLabelShouldUseTextColorWhenResetColoringActive
 {
-
-    [self.sut fm_markAsActive:YES];
-    
-    [self.sut fm_markAsActive:NO];
-    
-    XCTAssertTrue(CGColorEqualToColor(self.sut.textColor.CGColor, self.textColor.CGColor));
+  
+  [self.sut fm_markAsActive:YES];
+  
+  [self.sut fm_markAsActive:NO];
+  
+  XCTAssertTrue(CGColorEqualToColor(self.sut.textColor.CGColor, self.textColor.CGColor));
 }
 
 
 - (void)testLabelShouldStrikethroughTextWhenMarkingAsInvalid
 {
-
-    NSMutableDictionary *invalidAttributes = [self.defaultAttributes mutableCopy];
-    [invalidAttributes setValue:@(NSUnderlineStyleSingle) forKey:NSStrikethroughStyleAttributeName];
-    
-    [self.sut fm_markAsValid:NO];
-    
-    NSDictionary *attributes = [self.sut.attributedText attributesAtIndex:0 effectiveRange:NULL];
-    XCTAssertTrue([attributes isEqualToDictionary:[invalidAttributes copy]]);
+  
+  NSMutableDictionary *invalidAttributes = [self.defaultAttributes mutableCopy];
+  [invalidAttributes setValue:@(NSUnderlineStyleSingle) forKey:NSStrikethroughStyleAttributeName];
+  
+  [self.sut fm_markAsValid:NO];
+  
+  NSDictionary *attributes = [self.sut.attributedText attributesAtIndex:0 effectiveRange:NULL];
+  XCTAssertTrue([attributes isEqualToDictionary:[invalidAttributes copy]]);
 }
 
 
-- (void)testLabelShouldRemoveStrikethroughTextWhenRemarkingAsValid
-{
+- (void)testLabelShouldRemoveStrikethroughTextWhenRemarkingAsValid {
+  [self.sut fm_markAsValid:NO];
+  [self.sut fm_markAsValid:YES];
 
-    NSMutableDictionary *invalidAttributes = [self.defaultAttributes mutableCopy];
-    [invalidAttributes setValue:self.textColor forKey:NSForegroundColorAttributeName];
- 
-    [self.sut fm_markAsValid:NO];
-    
-    [self.sut fm_markAsValid:YES];
-    
-    NSDictionary *attributes = [self.sut.attributedText attributesAtIndex:0 effectiveRange:NULL];
-    XCTAssertTrue([attributes isEqualToDictionary:[invalidAttributes copy]]);
+  NSDictionary *result = [self.sut.attributedText attributesAtIndex:0 effectiveRange:NULL];
+
+  NSMutableDictionary *expected = [self.defaultAttributes mutableCopy];
+  [expected setValue:self.textColor forKey:NSForegroundColorAttributeName];
+  [expected setValue:@(NSUnderlineStyleNone) forKey:NSStrikethroughStyleAttributeName];
+  XCTAssertTrue([result isEqualToDictionary:[expected copy]]);
 }
 
 
 - (void)testLabelShouldStrikethroughTextWhenMarkingActiveAsValid
 {
-
-    NSMutableDictionary *invalidAttributes = [self.defaultAttributes mutableCopy];
-    [invalidAttributes setValue:@(NSUnderlineStyleSingle) forKey:NSStrikethroughStyleAttributeName];
-    [invalidAttributes setValue:self.tintColor forKey:NSForegroundColorAttributeName];
-    
-    [self.sut fm_markAsActive:YES];
-    
-    [self.sut fm_markAsValid:NO];
-    
-    NSDictionary *attributes = [self.sut.attributedText attributesAtIndex:0 effectiveRange:NULL];
-    XCTAssertTrue([attributes isEqualToDictionary:[invalidAttributes copy]]);
+  
+  NSMutableDictionary *invalidAttributes = [self.defaultAttributes mutableCopy];
+  [invalidAttributes setValue:@(NSUnderlineStyleSingle) forKey:NSStrikethroughStyleAttributeName];
+  [invalidAttributes setValue:self.tintColor forKey:NSForegroundColorAttributeName];
+  
+  [self.sut fm_markAsActive:YES];
+  
+  [self.sut fm_markAsValid:NO];
+  
+  NSDictionary *attributes = [self.sut.attributedText attributesAtIndex:0 effectiveRange:NULL];
+  XCTAssertTrue([attributes isEqualToDictionary:[invalidAttributes copy]]);
 }
 
 
 - (void)testLabelShouldUpdateAttributedTextWhenUsingHelperMethod
 {
-
-    NSDictionary *attributes = [self.sut.attributedText attributesAtIndex:0 effectiveRange:NULL];
-    NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:@"Hello" attributes:attributes];
-    
-    [self.sut fm_setAttributedText:@"Hello"];
-    
-    XCTAssertEqualObjects(self.sut.attributedText, attributedText);
+  
+  NSDictionary *attributes = [self.sut.attributedText attributesAtIndex:0 effectiveRange:NULL];
+  NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:@"Hello" attributes:attributes];
+  
+  [self.sut fm_setAttributedText:@"Hello"];
+  
+  XCTAssertEqualObjects(self.sut.attributedText, attributedText);
 }
 
 
