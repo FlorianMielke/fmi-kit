@@ -26,6 +26,7 @@
 
 #define FMI_DECODE_OBJ_CLASS(d,x,cl)  _ ## x = (cl *)[d decodeObjectOfClass:[cl class] forKey:@STRINGIFY(x)]
 #define FMI_DECODE_OBJ_ARRAY(d,x,cl)  _ ## x = (NSArray *)[d decodeObjectOfClasses:[NSSet setWithObjects:[NSArray class],[cl class],nil] forKey:@STRINGIFY(x)]
+#define FMI_DECODE_OBJ_ARRAY_DEFAULT(d,x,cl,df) { if ([d containsValueForKey:@STRINGIFY(x)]) { FMI_DECODE_OBJ_ARRAY(d,x,cl); }  else { _ ## x = df; } }
 #define FMI_DECODE_OBJ_MUTABLE_ORDERED_SET(d,x,cl)  _ ## x = [(NSOrderedSet *)[d decodeObjectOfClasses:[NSSet setWithObjects:[NSOrderedSet class],[cl class],nil] forKey:@STRINGIFY(x)] mutableCopy]
 #define FMI_DECODE_OBJ_MUTABLE_DICTIONARY(d,x,kcl,cl)  _ ## x = [(NSDictionary *)[d decodeObjectOfClasses:[NSSet setWithObjects:[NSDictionary class],[kcl class],[cl class],nil] forKey:@STRINGIFY(x)] mutableCopy]
 
@@ -38,6 +39,7 @@
 #define FMI_ENCODE_BOOL(c,x)  [c encodeBool:_ ## x forKey:@STRINGIFY(x)]
 
 #define FMI_DECODE_DOUBLE(d,x)  _ ## x = [d decodeDoubleForKey:@STRINGIFY(x)]
+#define FMI_DECODE_DOUBLE_DEFAULT(d,x,df) { if ([d containsValueForKey:@STRINGIFY(x)]) { FMI_DECODE_DOUBLE(d,x); } else { _ ## x = df; } }
 #define FMI_ENCODE_DOUBLE(c,x)  [c encodeDouble:_ ## x forKey:@STRINGIFY(x)]
 
 #define FMI_DECODE_INTEGER(d,x)  _ ## x = [d decodeIntegerForKey:@STRINGIFY(x)]
