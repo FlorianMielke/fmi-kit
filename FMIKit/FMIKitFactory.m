@@ -48,7 +48,7 @@
 
 + (id <FMIMessage>)createErrorMessageForError:(NSError *)error bundle:(NSBundle *)bundle emailAddress:(NSString *)emailAddress {
   id <FMIAttachment> logFile = [FMIKitFactory createLogFileFromError:error bundle:bundle];
-  return [[FMIErrorMessage alloc] initWithLogFile:logFile bundle:bundle];
+  return [[FMIErrorMessage alloc] initWithLogFile:logFile bundle:bundle emailAddress:emailAddress];
 }
 
 + (FMIMailer *)makeMailer {
