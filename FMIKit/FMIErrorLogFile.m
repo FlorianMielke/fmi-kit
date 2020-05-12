@@ -30,7 +30,11 @@ NSString *const FMIErrorLogFileExtension = @"log";
 }
 
 - (NSData *)dataRepresentation {
-    return [self.error.description dataUsingEncoding:NSUTF8StringEncoding];
+    NSMutableString *content = [self.error.localizedDescription mutableCopy];
+    if (self.error.localizedFailureReason != nil) {
+        [content appendFormat:@"\n%@", self.error.localizedFailureReason];
+    }
+    return [content dataUsingEncoding:NSUTF8StringEncoding];
 }
 
 @end
