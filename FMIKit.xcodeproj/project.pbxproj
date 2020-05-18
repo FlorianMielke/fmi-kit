@@ -17,6 +17,7 @@
 		170C7E431C900D69000B5574 /* FMIMonth.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913EBB315C867FE089DA01 /* FMIMonth.m */; };
 		170C7E441C900D69000B5574 /* FMIWeek.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913598DD77E67B459BE40D /* FMIWeek.m */; };
 		170C7E451C900D69000B5574 /* FMIYear.m in Sources */ = {isa = PBXBuildFile; fileRef = 359133AD3EED17EBCFFC829C /* FMIYear.m */; };
+		171B97E4246AB47400AC36AB /* FMIMailer+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171B97E3246AB47400AC36AB /* FMIMailer+Error.swift */; };
 		171CB98B1AFB63C7002BE185 /* FMIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CB98A1AFB63C7002BE185 /* FMIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1722257E21AC6DFF0036D109 /* UI+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1722257D21AC6DFF0036D109 /* UI+Identifier.swift */; };
 		17360A6D221EB2BF00A7131B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17360A6C221EB2BF00A7131B /* File.swift */; };
@@ -378,6 +379,9 @@
 /* Begin PBXFileReference section */
 		1700A1B51D1D564B0035EFB0 /* NSArray+FMIValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FMIValidation.h"; sourceTree = "<group>"; };
 		1700A1B61D1D564B0035EFB0 /* NSArray+FMIValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FMIValidation.m"; sourceTree = "<group>"; };
+		1719EAF42472688C001BCCEF /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
+		1719EAF52472688D001BCCEF /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		171B97E3246AB47400AC36AB /* FMIMailer+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FMIMailer+Error.swift"; sourceTree = "<group>"; };
 		171CB9851AFB63C7002BE185 /* FMIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		171CB9891AFB63C7002BE185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		171CB98A1AFB63C7002BE185 /* FMIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIKit.h; sourceTree = "<group>"; };
@@ -796,6 +800,8 @@
 		17E00C791B9030A000BA7024 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1719EAF42472688C001BCCEF /* Cartfile.private */,
+				1719EAF52472688D001BCCEF /* Cartfile.resolved */,
 				17E00C731B90308500BA7024 /* OCMock.framework */,
 			);
 			name = Frameworks;
@@ -808,6 +814,7 @@
 				359138BFDD7A292979CBA6C9 /* FMIErrorLogFile.m */,
 				35913B680C286D5E9DD609A6 /* FMIErrorMessage.h */,
 				35913BCE9444EA36FECA745C /* FMIErrorMessage.m */,
+				171B97E3246AB47400AC36AB /* FMIMailer+Error.swift */,
 			);
 			name = "Error Handling";
 			sourceTree = "<group>";
@@ -1514,6 +1521,7 @@
 				17B39B2B1C05FF580012BB49 /* FMIBorderedButton.m in Sources */,
 				359136FDA73C0D620C0B6A1F /* NSUndoManager+Grouping.m in Sources */,
 				359133EDA4E2DD229AB4CB8A /* UILabel+Animating.m in Sources */,
+				171B97E4246AB47400AC36AB /* FMIMailer+Error.swift in Sources */,
 				35913F50A8D79B06E57210DC /* UIView+I7ShakeAnimation.m in Sources */,
 				35913D80754D8EB9FF6F080C /* FMIMultilevelListNumber.m in Sources */,
 				359137422710C5150AC5FBCF /* FMIMultilevelList.m in Sources */,
