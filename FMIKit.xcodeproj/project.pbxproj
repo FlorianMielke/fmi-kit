@@ -379,6 +379,8 @@
 /* Begin PBXFileReference section */
 		1700A1B51D1D564B0035EFB0 /* NSArray+FMIValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FMIValidation.h"; sourceTree = "<group>"; };
 		1700A1B61D1D564B0035EFB0 /* NSArray+FMIValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FMIValidation.m"; sourceTree = "<group>"; };
+		1719EAF42472688C001BCCEF /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
+		1719EAF52472688D001BCCEF /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		171B97E3246AB47400AC36AB /* FMIMailer+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FMIMailer+Error.swift"; sourceTree = "<group>"; };
 		171CB9851AFB63C7002BE185 /* FMIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		171CB9891AFB63C7002BE185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -798,6 +800,8 @@
 		17E00C791B9030A000BA7024 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1719EAF42472688C001BCCEF /* Cartfile.private */,
+				1719EAF52472688D001BCCEF /* Cartfile.resolved */,
 				17E00C731B90308500BA7024 /* OCMock.framework */,
 			);
 			name = Frameworks;
