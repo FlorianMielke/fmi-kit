@@ -8,4 +8,6 @@
 
 "alert_action.ok_action.title" = "OK";
 
+"alert-controller.error.action.contact-support" = "Contact Support";
+
 "file-mananger.error.failed-remove-cloud-directory.description" = "Failed to remove cloud directory.";
