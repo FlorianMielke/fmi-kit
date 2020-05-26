@@ -11,6 +11,12 @@ public extension UIAlertController {
             }
             addAction(mailAction)
         }
-        addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil))
+        addAction(UIAlertAction(title: NSLocalizedString("Cancel", tableName: "FMIKitLocalizable", bundle: Bundle.fmiKit(), comment: ""), style: .cancel, handler: nil))
+    }
+    
+    @objc convenience init(_ error: NSError, preferredStyle: UIAlertController.Style = .alert) {
+        let message = [error.localizedFailureReason, error.localizedRecoverySuggestion].compactMap { $0 }.joined(separator: "\n\n")
+        self.init(title: error.localizedDescription, message: message, preferredStyle: preferredStyle)
+        addAction(UIAlertAction(title: NSLocalizedString("OK", tableName: "FMIKitLocalizable", bundle: Bundle.fmiKit(), comment: ""), style: .cancel, handler: nil))
     }
 }
