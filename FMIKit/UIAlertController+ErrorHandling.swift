@@ -1,5 +1,5 @@
 public extension UIAlertController {
-    @objc convenience init(_ error: NSError, errorHandler: ErrorHandler, emailAddress: String, preferredStyle: UIAlertController.Style = .alert, retryHandler: (() -> Void)?) {
+    @objc convenience init(_ error: NSError, errorHandler: ErrorHandler, emailAddress: String, preferredStyle: UIAlertController.Style = .alert, retryHandler: (() -> Void)?, cancelHandler: (() -> Void)?) {
         let message = [error.localizedFailureReason, error.localizedRecoverySuggestion].compactMap { $0 }.joined(separator: "\n\n")
         self.init(title: error.localizedDescription, message: message, preferredStyle: preferredStyle)
         if let retryHandler = retryHandler {
@@ -11,7 +11,11 @@ public extension UIAlertController {
             }
             addAction(mailAction)
         }
-        addAction(UIAlertAction(title: NSLocalizedString("Cancel", tableName: "FMIKitLocalizable", bundle: Bundle.fmiKit(), comment: ""), style: .cancel, handler: nil))
+        if let cancelHandler = cancelHandler {
+            addAction(UIAlertAction(title: NSLocalizedString("Cancel", tableName: "FMIKitLocalizable", bundle: Bundle.fmiKit(), comment: ""), style: .cancel, handler: { _ in cancelHandler() }))
+        } else {
+            addAction(UIAlertAction(title: NSLocalizedString("Cancel", tableName: "FMIKitLocalizable", bundle: Bundle.fmiKit(), comment: ""), style: .cancel, handler: nil))
+        }
     }
     
     @objc convenience init(_ error: NSError, preferredStyle: UIAlertController.Style = .alert) {
