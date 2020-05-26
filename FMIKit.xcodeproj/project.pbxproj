@@ -42,6 +42,7 @@
 		1774924B214EA17C00336F3F /* UIView+Glowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1774924A214EA17C00336F3F /* UIView+Glowing.swift */; };
 		178584051C90112C0036A83A /* FMIPeriod.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913DAE3872A469ADCFF700 /* FMIPeriod.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		178584061C9011330036A83A /* FMIPeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913B64F30251D3C1C155E0 /* FMIPeriod.m */; };
+		178C91EA247D53220055A38C /* UIViewController+ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178C91E9247D53220055A38C /* UIViewController+ErrorHandling.swift */; };
 		178CE90D1B3AA3810049AD97 /* FMIMessageMIMETypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4401AFC928C00B96929 /* FMIMessageMIMETypes.plist */; };
 		179EBEA21CE079A300479BCA /* NSLocale+German.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913DC40BE4C0F145C58281 /* NSLocale+German.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		179EBEA31CE079A800479BCA /* NSLocale+German.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913D084DA320A8060787E0 /* NSLocale+German.m */; };
@@ -408,6 +409,7 @@
 		176F0398219AE10C000FCFDC /* IndexPath+Zero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexPath+Zero.swift"; sourceTree = "<group>"; };
 		176F039A219AE4C0000FCFDC /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		1774924A214EA17C00336F3F /* UIView+Glowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Glowing.swift"; sourceTree = "<group>"; };
+		178C91E9247D53220055A38C /* UIViewController+ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ErrorHandling.swift"; sourceTree = "<group>"; };
 		17B39B281C05FF580012BB49 /* FMIBorderedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIBorderedButton.h; sourceTree = "<group>"; };
 		17B39B291C05FF580012BB49 /* FMIBorderedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIBorderedButton.m; sourceTree = "<group>"; };
 		17BC2D4C22411DD600ADA4A1 /* NSAttributedString+FontSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+FontSize.swift"; sourceTree = "<group>"; };
@@ -831,6 +833,7 @@
 				171B97E3246AB47400AC36AB /* FMIMailer+Error.swift */,
 				17CCFAB4247D3A9600BD5C0A /* UIAlertController+ErrorHandling.swift */,
 				17CCFAB3247D3A9600BD5C0A /* UIResponder+ErrorHandling.swift */,
+				178C91E9247D53220055A38C /* UIViewController+ErrorHandling.swift */,
 			);
 			name = "Error Handling";
 			sourceTree = "<group>";
@@ -1508,6 +1511,7 @@
 				17CCFAB9247D3B3200BD5C0A /* Bundle+FMIKit.swift in Sources */,
 				35913DDB04F3F71AF3E1D670 /* NSString+Folding.m in Sources */,
 				35913275D874453C547DB25C /* NSCalendar+SharedInstances.m in Sources */,
+				178C91EA247D53220055A38C /* UIViewController+ErrorHandling.swift in Sources */,
 				359138CB45740B5E32405B3C /* NSArray+Initialization.m in Sources */,
 				359139411EA4695CB5F870FF /* NSString+FileName.m in Sources */,
 				35913BDBF723544B4F57E026 /* UIImage+Scaling.m in Sources */,

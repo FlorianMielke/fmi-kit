@@ -10,4 +10,6 @@
 
 "alert-controller.error.action.contact-support" = "Contact Support";
 
+"alert-controller.error.action.retry" = "Retry";
+
 "file-mananger.error.failed-remove-cloud-directory.description" = "Failed to remove cloud directory.";

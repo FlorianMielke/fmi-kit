@@ -1,11 +1,11 @@
 extension UIResponder {
-    @objc open func handle(_ error: NSError, errorHandler: ErrorHandler, retryHandler: @escaping () -> Void) {
+    @objc open func handle(_ error: NSError, from viewController: UIViewController, retryHandler: (() -> Void)?) {
         // This assertion will help us identify errors that were either emitted by a view controller *before* it was added to the responder chain, or never handled at all:
         guard let nextResponder = next else {
             return assertionFailure("""
-                Unhandled error \(error) from \(errorHandler)
+                Unhandled error \(error) from \(viewController)
                 """)
         }
-        nextResponder.handle(error, errorHandler: errorHandler, retryHandler: retryHandler)
+        nextResponder.handle(error, from: viewController, retryHandler: retryHandler)
     }
 }

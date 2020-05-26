@@ -10,4 +10,6 @@
 
 "alert-controller.error.action.contact-support" = "Support kontaktieren";
 
+"alert-controller.error.action.retry" = "Erneut versuchen";
+
 "file-mananger.error.failed-remove-cloud-directory.description" = "Cloud Verzeichnis konnte nicht entfernt werden.";
