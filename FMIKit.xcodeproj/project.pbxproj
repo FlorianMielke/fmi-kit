@@ -17,7 +17,9 @@
 		170C7E431C900D69000B5574 /* FMIMonth.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913EBB315C867FE089DA01 /* FMIMonth.m */; };
 		170C7E441C900D69000B5574 /* FMIWeek.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913598DD77E67B459BE40D /* FMIWeek.m */; };
 		170C7E451C900D69000B5574 /* FMIYear.m in Sources */ = {isa = PBXBuildFile; fileRef = 359133AD3EED17EBCFFC829C /* FMIYear.m */; };
-		171B97E4246AB47400AC36AB /* FMIMailer+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171B97E3246AB47400AC36AB /* FMIMailer+Error.swift */; };
+		1717200A247FC03200A54240 /* NSError+Messaged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17172009247FC03200A54240 /* NSError+Messaged.swift */; };
+		1717200F247FC0C400A54240 /* NSError+MessagedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1717200E247FC0C400A54240 /* NSError+MessagedTest.m */; };
+		171B97E4246AB47400AC36AB /* Mailer+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171B97E3246AB47400AC36AB /* Mailer+Error.swift */; };
 		171CB98B1AFB63C7002BE185 /* FMIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CB98A1AFB63C7002BE185 /* FMIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1722257E21AC6DFF0036D109 /* UI+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1722257D21AC6DFF0036D109 /* UI+Identifier.swift */; };
 		17360A6D221EB2BF00A7131B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17360A6C221EB2BF00A7131B /* File.swift */; };
@@ -51,13 +53,12 @@
 		17BC2D4D22411DD700ADA4A1 /* NSAttributedString+FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BC2D4C22411DD600ADA4A1 /* NSAttributedString+FontSize.swift */; };
 		17BDFD1322784D87002B4F47 /* Array+Accessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDFD1222784D87002B4F47 /* Array+Accessing.swift */; };
 		17CBD6101BCC3A9000681FD9 /* FMIKitLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17CBD6121BCC3A9000681FD9 /* FMIKitLocalizable.strings */; };
-		17CCFAB5247D3A9600BD5C0A /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CCFAB2247D3A9500BD5C0A /* ErrorHandler.swift */; };
 		17CCFAB6247D3A9600BD5C0A /* UIResponder+ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CCFAB3247D3A9600BD5C0A /* UIResponder+ErrorHandling.swift */; };
 		17CCFAB7247D3A9600BD5C0A /* UIAlertController+ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CCFAB4247D3A9600BD5C0A /* UIAlertController+ErrorHandling.swift */; };
 		17CCFAB9247D3B3200BD5C0A /* Bundle+FMIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CCFAB8247D3B3200BD5C0A /* Bundle+FMIKit.swift */; };
 		17CEC6EC1D22FAB90054895E /* FMIStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913905530E10E71AE0B13C /* FMIStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		17D859D222243761004F95BA /* FMIMailer.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D859D022243761004F95BA /* FMIMailer.m */; };
-		17D859D322243761004F95BA /* FMIMailer.h in Headers */ = {isa = PBXBuildFile; fileRef = 17D859D122243761004F95BA /* FMIMailer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17D878D1247E8A6B00C1B35F /* UIViewController+Mailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D878D0247E8A6B00C1B35F /* UIViewController+Mailer.swift */; };
+		17D878D3247E901D00C1B35F /* Mailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D878D2247E901D00C1B35F /* Mailer.swift */; };
 		17E00C711B90307500BA7024 /* FMIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171CB9851AFB63C7002BE185 /* FMIKit.framework */; };
 		17E00C761B90308500BA7024 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E00C731B90308500BA7024 /* OCMock.framework */; };
 		3591302604C9C26A4A1EDA69 /* FMIMultilevelListNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 359132662D65BD3C57852CF4 /* FMIMultilevelListNumberTest.m */; };
@@ -382,9 +383,12 @@
 /* Begin PBXFileReference section */
 		1700A1B51D1D564B0035EFB0 /* NSArray+FMIValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FMIValidation.h"; sourceTree = "<group>"; };
 		1700A1B61D1D564B0035EFB0 /* NSArray+FMIValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FMIValidation.m"; sourceTree = "<group>"; };
+		17172009247FC03200A54240 /* NSError+Messaged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Messaged.swift"; sourceTree = "<group>"; };
+		1717200B247FC07900A54240 /* FMIKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FMIKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		1717200E247FC0C400A54240 /* NSError+MessagedTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSError+MessagedTest.m"; path = "FMIKitTests/NSError+MessagedTest.m"; sourceTree = SOURCE_ROOT; };
 		1719EAF42472688C001BCCEF /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
 		1719EAF52472688D001BCCEF /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
-		171B97E3246AB47400AC36AB /* FMIMailer+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FMIMailer+Error.swift"; sourceTree = "<group>"; };
+		171B97E3246AB47400AC36AB /* Mailer+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mailer+Error.swift"; sourceTree = "<group>"; };
 		171CB9851AFB63C7002BE185 /* FMIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		171CB9891AFB63C7002BE185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		171CB98A1AFB63C7002BE185 /* FMIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIKit.h; sourceTree = "<group>"; };
@@ -416,12 +420,11 @@
 		17BDFD1222784D87002B4F47 /* Array+Accessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Accessing.swift"; sourceTree = "<group>"; };
 		17CBD6111BCC3A9000681FD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FMIKitLocalizable.strings; sourceTree = "<group>"; };
 		17CBD6131BCC3A9200681FD9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/FMIKitLocalizable.strings; sourceTree = "<group>"; };
-		17CCFAB2247D3A9500BD5C0A /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		17CCFAB3247D3A9600BD5C0A /* UIResponder+ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+ErrorHandling.swift"; sourceTree = "<group>"; };
 		17CCFAB4247D3A9600BD5C0A /* UIAlertController+ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+ErrorHandling.swift"; sourceTree = "<group>"; };
 		17CCFAB8247D3B3200BD5C0A /* Bundle+FMIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+FMIKit.swift"; sourceTree = "<group>"; };
-		17D859D022243761004F95BA /* FMIMailer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIMailer.m; sourceTree = "<group>"; };
-		17D859D122243761004F95BA /* FMIMailer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIMailer.h; sourceTree = "<group>"; };
+		17D878D0247E8A6B00C1B35F /* UIViewController+Mailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Mailer.swift"; sourceTree = "<group>"; };
+		17D878D2247E901D00C1B35F /* Mailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mailer.swift; sourceTree = "<group>"; };
 		17E00C731B90308500BA7024 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = Carthage/Build/iOS/OCMock.framework; sourceTree = "<group>"; };
 		359130076AB9B3937D318FE5 /* FMIFieldDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIFieldDescription.m; sourceTree = "<group>"; };
 		3591302B55363F40E9CF35C6 /* FMIYear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIYear.h; sourceTree = "<group>"; };
@@ -825,12 +828,14 @@
 		3591301B78D122E2104C8A32 /* Error Handling */ = {
 			isa = PBXGroup;
 			children = (
-				17CCFAB2247D3A9500BD5C0A /* ErrorHandler.swift */,
 				35913C8709977D154A7F2F7A /* FMIErrorLogFile.h */,
 				359138BFDD7A292979CBA6C9 /* FMIErrorLogFile.m */,
 				35913B680C286D5E9DD609A6 /* FMIErrorMessage.h */,
 				35913BCE9444EA36FECA745C /* FMIErrorMessage.m */,
-				171B97E3246AB47400AC36AB /* FMIMailer+Error.swift */,
+				1717200B247FC07900A54240 /* FMIKitTests-Bridging-Header.h */,
+				171B97E3246AB47400AC36AB /* Mailer+Error.swift */,
+				17172009247FC03200A54240 /* NSError+Messaged.swift */,
+				1717200E247FC0C400A54240 /* NSError+MessagedTest.m */,
 				17CCFAB4247D3A9600BD5C0A /* UIAlertController+ErrorHandling.swift */,
 				17CCFAB3247D3A9600BD5C0A /* UIResponder+ErrorHandling.swift */,
 				178C91E9247D53220055A38C /* UIViewController+ErrorHandling.swift */,
@@ -920,8 +925,6 @@
 			isa = PBXGroup;
 			children = (
 				35913EB997235D23138D0F7C /* FMIAttachment.h */,
-				17D859D122243761004F95BA /* FMIMailer.h */,
-				17D859D022243761004F95BA /* FMIMailer.m */,
 				3591375B589044CC844CAA13 /* FMIMessage.h */,
 				359138E216A89E7801EC34A1 /* FMIMessageAttachment.h */,
 				359137572DFEAB2C4B63BC31 /* FMIMessageAttachment.m */,
@@ -931,6 +934,8 @@
 				35913600BE1B4B352B210062 /* FMIMessageMIMETypesTests.m */,
 				359137EB375C11BCD8641B59 /* FMISupportMessage.h */,
 				35913BED376AEE9CF670B873 /* FMISupportMessage.m */,
+				17D878D2247E901D00C1B35F /* Mailer.swift */,
+				17D878D0247E8A6B00C1B35F /* UIViewController+Mailer.swift */,
 			);
 			name = Messages;
 			sourceTree = "<group>";
@@ -1172,7 +1177,6 @@
 				359133C23269D029A75404D7 /* FMIKitPrivates.h in Headers */,
 				35913A496D71B8214E3401CC /* NSBundle+FMIKit.h in Headers */,
 				359139FD611EB373D9CF9F07 /* FMIKitFactory.h in Headers */,
-				17D859D322243761004F95BA /* FMIMailer.h in Headers */,
 				3591368C148DE0BF2514DF10 /* FMIGMTDateHelper.h in Headers */,
 				35913FADB3C41A956866051D /* FMIAcceptedCell.h in Headers */,
 				359130519D7FE93B0DDA4DC5 /* FMIActivityIndicatorAlertView.h in Headers */,
@@ -1393,6 +1397,7 @@
 					};
 					171CB98F1AFB63C7002BE185 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 1150;
 					};
 					1736E46C1BA815400095227A = {
 						CreatedOnToolsVersion = 7.0;
@@ -1482,6 +1487,7 @@
 				35913C039AB5275BAA877B31 /* NSBundle+FMIKit.m in Sources */,
 				3591319D833C05DFA795B045 /* FMIActivityIndicatorAlertView.m in Sources */,
 				17CCFAB7247D3A9600BD5C0A /* UIAlertController+ErrorHandling.swift in Sources */,
+				1717200A247FC03200A54240 /* NSError+Messaged.swift in Sources */,
 				35913A3927A7E8BE41A7D30D /* FMINonAminatedPushSegue.m in Sources */,
 				35913B4FB9CABCFE02466025 /* FMIBindingManager.m in Sources */,
 				359134203497349F826EA01D /* FMIDurationFormatter.m in Sources */,
@@ -1489,6 +1495,7 @@
 				359137BA45A017A3F6FE6347 /* FMINestedTableView.m in Sources */,
 				176F039B219AE4C0000FCFDC /* String+Localized.swift in Sources */,
 				359134B0B028435C7AFC52DD /* FMITableView.m in Sources */,
+				17D878D1247E8A6B00C1B35F /* UIViewController+Mailer.swift in Sources */,
 				35913BBC1AE97717D7C85A62 /* FMIFoundationAdditions.m in Sources */,
 				359138FFFBA9CFA258651610 /* FMINumericTextView.m in Sources */,
 				3591327BD9BBEC4D26E628A1 /* FMITimeZoneHelper.m in Sources */,
@@ -1537,14 +1544,13 @@
 				3591307580804850E5ED7DAB /* NSString+Validation.m in Sources */,
 				35913CB5385F01E2F387F1A4 /* UITableView+Selection.m in Sources */,
 				35913E221AFE3E0309F6CCE0 /* UILabel+StateHandling.m in Sources */,
-				17CCFAB5247D3A9600BD5C0A /* ErrorHandler.swift in Sources */,
 				35913D3AE468362FEAA3FB36 /* NSMutableDictionary+IndexPath.m in Sources */,
 				3591373F2386830FC3A7077D /* NSCalendar+Calculations.m in Sources */,
 				3591341FFC9F810113531CDA /* NSIndexPath+Comparing.m in Sources */,
 				17B39B2B1C05FF580012BB49 /* FMIBorderedButton.m in Sources */,
 				359136FDA73C0D620C0B6A1F /* NSUndoManager+Grouping.m in Sources */,
 				359133EDA4E2DD229AB4CB8A /* UILabel+Animating.m in Sources */,
-				171B97E4246AB47400AC36AB /* FMIMailer+Error.swift in Sources */,
+				171B97E4246AB47400AC36AB /* Mailer+Error.swift in Sources */,
 				35913F50A8D79B06E57210DC /* UIView+I7ShakeAnimation.m in Sources */,
 				35913D80754D8EB9FF6F080C /* FMIMultilevelListNumber.m in Sources */,
 				359137422710C5150AC5FBCF /* FMIMultilevelList.m in Sources */,
@@ -1557,7 +1563,6 @@
 				35913863748C6793F5BF1D5C /* FMIPeriod.m in Sources */,
 				35913CCA67DABA21973D27B3 /* NSLocale+German.m in Sources */,
 				176F0396219AE108000FCFDC /* Identifiable.swift in Sources */,
-				17D859D222243761004F95BA /* FMIMailer.m in Sources */,
 				3591345535873DA9F2A1ABD3 /* FMICoreDataStoreConfiguration.m in Sources */,
 				35913C27F6F4CA18BD799A75 /* FMICoreDataStore.m in Sources */,
 				17360A6D221EB2BF00A7131B /* File.swift in Sources */,
@@ -1568,6 +1573,7 @@
 				359135926CF596F256A1E7BD /* FMIFileCoordinator.m in Sources */,
 				359133E2BFAD7E2B2B7156C3 /* FMIFieldDescription.m in Sources */,
 				35913FF467073536607AD797 /* NSManagedObjectContext+PersistentStoreAdditions.m in Sources */,
+				17D878D3247E901D00C1B35F /* Mailer.swift in Sources */,
 				359136A4DB723AE1921B1A7F /* NSFileManager+DirectoryAdditions.m in Sources */,
 				359139E0F8F92C1C0D642FFC /* NSCoder+SecureCoding.m in Sources */,
 				35913B8A059897B0C9D1A7A4 /* FMIReviewNotificationCoordinator.m in Sources */,
@@ -1615,6 +1621,7 @@
 				3591337D846CCAAAB2699E97 /* UIColor+SystemDefaultsTests.m in Sources */,
 				35913DB59C547ADE0F0566E3 /* FMIEditingToolbarTests.m in Sources */,
 				3591317D6BE22119739FDA24 /* FMIDateHelperTest.m in Sources */,
+				1717200F247FC0C400A54240 /* NSError+MessagedTest.m in Sources */,
 				35913037FE5DFDEE65F717D3 /* FMIComparatorTests.m in Sources */,
 				359135ABDD0EEBE3A85FB61D /* FMIEventPaserTests.m in Sources */,
 				3591387333257D86D6F26683 /* FMIGMTDateHelperTest.m in Sources */,
@@ -1883,11 +1890,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = FMIKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.madefm.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FMIKit/FMIKitTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1895,11 +1906,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = FMIKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.madefm.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FMIKit/FMIKitTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -2026,11 +2040,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = FMIKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.madefm.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FMIKit/FMIKitTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Beta;
 		};

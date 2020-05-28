@@ -106,7 +106,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMISupportMessage.h>
 #import <FMIKit/FMIAttachment.h>
 #import <FMIKit/FMIErrorMessage.h>
-#import <FMIKit/FMIMailer.h>
 
 #pragma mark - Common
 
