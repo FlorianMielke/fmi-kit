@@ -2,10 +2,10 @@ public extension UIAlertController {
     @objc convenience init(_ error: NSError, from viewController: UIViewController, emailAddress: String, preferredStyle: UIAlertController.Style = .alert, retryHandler: (() -> Void)?, cancelHandler: (() -> Void)?) {
         self.init(title: error.localizedDescription, message: error.messaged, preferredStyle: preferredStyle)
         if let retryHandler = retryHandler {
-            addAction(UIAlertAction(title: NSLocalizedString("alert-controller.error.action.retry", tableName: "FMIKitLocalizable", bundle: Bundle.fmiKit(), comment: ""), style: .default, handler: { _ in retryHandler() } ))
+            addAction(UIAlertAction(title: NSLocalizedString("alert.error.action.retry", tableName: "FMIKitLocalizable", bundle: Bundle.fmiKit(), comment: ""), style: .default, handler: { _ in retryHandler() } ))
         }
         if mailer.canMail {
-            let mailAction = UIAlertAction(title: NSLocalizedString("alert-controller.error.action.contact-support", tableName: "FMIKitLocalizable", bundle: Bundle.fmiKit(), comment: ""), style: .default) { (action) in
+            let mailAction = UIAlertAction(title: NSLocalizedString("alert.error.action.contact-support", tableName: "FMIKitLocalizable", bundle: Bundle.fmiKit(), comment: ""), style: .default) { (action) in
                 viewController.mailer.mail(error: error, from: viewController, emailAddress: emailAddress)
             }
             addAction(mailAction)

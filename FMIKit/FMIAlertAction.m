@@ -4,7 +4,7 @@
 @implementation FMIAlertAction
 
 + (UIAlertAction *)okAlertAction {
-    return [UIAlertAction actionWithTitle:FMILocalizedStringForKey(@"alert_action.ok_action.title") style:UIAlertActionStyleDefault handler:NULL];
+    return [UIAlertAction actionWithTitle:FMILocalizedStringForKey(@"OK") style:UIAlertActionStyleDefault handler:NULL];
 }
 
 @end
