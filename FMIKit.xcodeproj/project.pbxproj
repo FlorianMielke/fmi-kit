@@ -39,8 +39,6 @@
 		176F0396219AE108000FCFDC /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F0395219AE108000FCFDC /* Identifiable.swift */; };
 		176F0397219AE108000FCFDC /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F0395219AE108000FCFDC /* Identifiable.swift */; };
 		176F0399219AE10C000FCFDC /* IndexPath+Zero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F0398219AE10C000FCFDC /* IndexPath+Zero.swift */; };
-		176F039B219AE4C0000FCFDC /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F039A219AE4C0000FCFDC /* String+Localized.swift */; };
-		176F039C219AE4C0000FCFDC /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F039A219AE4C0000FCFDC /* String+Localized.swift */; };
 		1774924B214EA17C00336F3F /* UIView+Glowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1774924A214EA17C00336F3F /* UIView+Glowing.swift */; };
 		178584051C90112C0036A83A /* FMIPeriod.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913DAE3872A469ADCFF700 /* FMIPeriod.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		178584061C9011330036A83A /* FMIPeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913B64F30251D3C1C155E0 /* FMIPeriod.m */; };
@@ -411,7 +409,6 @@
 		176F038F219AE01D000FCFDC /* CellMarkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMarkable.swift; sourceTree = "<group>"; };
 		176F0395219AE108000FCFDC /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		176F0398219AE10C000FCFDC /* IndexPath+Zero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexPath+Zero.swift"; sourceTree = "<group>"; };
-		176F039A219AE4C0000FCFDC /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		1774924A214EA17C00336F3F /* UIView+Glowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Glowing.swift"; sourceTree = "<group>"; };
 		178C91E9247D53220055A38C /* UIViewController+ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ErrorHandling.swift"; sourceTree = "<group>"; };
 		17B39B281C05FF580012BB49 /* FMIBorderedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIBorderedButton.h; sourceTree = "<group>"; };
@@ -1074,7 +1071,6 @@
 				17BDFD1222784D87002B4F47 /* Array+Accessing.swift */,
 				176F0395219AE108000FCFDC /* Identifiable.swift */,
 				17BC2D4C22411DD600ADA4A1 /* NSAttributedString+FontSize.swift */,
-				176F039A219AE4C0000FCFDC /* String+Localized.swift */,
 			);
 			name = Foundation;
 			sourceTree = "<group>";
@@ -1493,7 +1489,6 @@
 				359134203497349F826EA01D /* FMIDurationFormatter.m in Sources */,
 				1700A1B81D1D564B0035EFB0 /* NSArray+FMIValidation.m in Sources */,
 				359137BA45A017A3F6FE6347 /* FMINestedTableView.m in Sources */,
-				176F039B219AE4C0000FCFDC /* String+Localized.swift in Sources */,
 				359134B0B028435C7AFC52DD /* FMITableView.m in Sources */,
 				17D878D1247E8A6B00C1B35F /* UIViewController+Mailer.swift in Sources */,
 				35913BBC1AE97717D7C85A62 /* FMIFoundationAdditions.m in Sources */,
@@ -1695,7 +1690,6 @@
 				3591336F2B32A45E86895A13 /* NSMutableDictionary+IndexPath.m in Sources */,
 				3591367C85AE22AC87936050 /* NSCalendar+Calculations.m in Sources */,
 				359135A0B57D73B404A6D4E5 /* FMICSVFieldDeserializer.m in Sources */,
-				176F039C219AE4C0000FCFDC /* String+Localized.swift in Sources */,
 				35913E8D7042808E7D526083 /* FMICSVDeserializer.m in Sources */,
 				35913B0687B5CDD7A150E51F /* FMICSVFileDescription.m in Sources */,
 				35913464001FDD3EB6AB45B5 /* FMIFileCoordinator.m in Sources */,
