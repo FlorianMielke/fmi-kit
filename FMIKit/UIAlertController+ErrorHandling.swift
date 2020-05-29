@@ -6,7 +6,7 @@ public extension UIAlertController {
         }
         if mailer.canMail {
             let mailAction = UIAlertAction(title: NSLocalizedString("alert.error.action.contact-support", tableName: "FMIKitLocalizable", bundle: Bundle.fmiKit(), comment: ""), style: .default) { (action) in
-                viewController.mailer.mail(error: error, from: viewController, emailAddress: emailAddress)
+                viewController.mailer.mail(error: error, from: viewController, delegate: viewController, emailAddress: emailAddress)
             }
             addAction(mailAction)
         }

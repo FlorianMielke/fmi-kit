@@ -3,14 +3,14 @@ import MessageUI
 @objc public class Mailer: NSObject {
     @objc public static let shared = Mailer()
     
-    private var delegate: MailerDelegate?
+    private weak var delegate: MailerDelegate?
     private var composer: MFMailComposeViewController?
     
     @objc public var canMail: Bool {
         return MFMailComposeViewController.canSendMail()
     }
     
-    @objc public func mail(_ message: FMIMessage, delegate: MailerDelegate) {
+    @objc public func mail(_ message: FMIMessage, from viewController: UIViewController, delegate: MailerDelegate) {
         guard canMail else { return }
         self.delegate = delegate
         composer = MFMailComposeViewController()
@@ -21,7 +21,7 @@ import MessageUI
         message.attachments.forEach { attachment in
             composer?.addAttachmentData(attachment.dataRepresentation, mimeType: attachment.mimeType, fileName: attachment.fileName)
         }
-        delegate.present(composer!, animated: true, completion: nil)
+        viewController.present(composer!, animated: true, completion: nil)
     }
     
 }
@@ -29,17 +29,11 @@ import MessageUI
 extension Mailer: MFMailComposeViewControllerDelegate {
     public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true) {
-            self.delegate?.mailerDidFinishSending(self)
+            self.delegate?.mailerDidFinishSending?(self)
         }
     }
 }
 
-@objc public protocol MailerDelegate where Self: UIViewController {
+@objc public protocol MailerDelegate: AnyObject {
     @objc optional func mailerDidFinishSending(_ mailer: Mailer)
-}
-
-extension MailerDelegate {
-    public func mailerDidFinishSending(_ mailer: Mailer) {
-        
-    }
 }
