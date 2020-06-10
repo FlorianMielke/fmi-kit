@@ -1,6 +1,6 @@
 public extension UIAlertController {
     @objc convenience init(_ error: NSError, from viewController: UIViewController, emailAddress: String, preferredStyle: UIAlertController.Style = .alert, retryHandler: (() -> Void)?, cancelHandler: (() -> Void)?) {
-        self.init(title: error.localizedDescription, message: error.messaged, preferredStyle: preferredStyle)
+        self.init(title: error.localizedDescription, message: error.shortMessaged, preferredStyle: preferredStyle)
         if let retryHandler = retryHandler {
             addAction(UIAlertAction(title: NSLocalizedString("alert.error.action.retry", tableName: "FMIKitLocalizable", bundle: Bundle.fmiKit(), comment: ""), style: .default, handler: { _ in retryHandler() } ))
         }
