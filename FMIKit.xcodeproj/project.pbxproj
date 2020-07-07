@@ -1347,7 +1347,6 @@
 				171CB98C1AFB63C7002BE185 /* Sources */,
 				171CB98D1AFB63C7002BE185 /* Frameworks */,
 				171CB98E1AFB63C7002BE185 /* Resources */,
-				17E00C7A1B9030B300BA7024 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -1454,24 +1453,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		17E00C7A1B9030B300BA7024 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/OCMock.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		171CB9801AFB63C7002BE185 /* Sources */ = {
