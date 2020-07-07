@@ -1,5 +1,4 @@
-#import <Foundation/Foundation.h>
-#import "FMIMessage.h"
+#import <FMIKit/FMIMessage.h>
 
 @interface FMISupportMessage : NSObject <FMIMessage>
 
