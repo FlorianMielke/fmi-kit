@@ -1,4 +1,4 @@
-#import "FMIMessage.h"
+#import <FMIKit/FMIMessage.h>
 
 @protocol FMIAttachment;
 
