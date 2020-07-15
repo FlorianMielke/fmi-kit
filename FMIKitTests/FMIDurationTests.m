@@ -4,7 +4,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "FMIDuration.h"
+#import <FMIKit/FMIDuration.h>
 
 @interface FMIDurationTests : XCTestCase
 
