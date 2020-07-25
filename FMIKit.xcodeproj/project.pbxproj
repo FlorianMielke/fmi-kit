@@ -36,8 +36,8 @@
 		1738D4521AFC948100B96929 /* TestImagePortraitSmallWidth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */; };
 		1738D4531AFC948100B96929 /* TestImageSquared.png in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44B1AFC948100B96929 /* TestImageSquared.png */; };
 		176F0390219AE01D000FCFDC /* CellMarkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F038F219AE01D000FCFDC /* CellMarkable.swift */; };
-		176F0396219AE108000FCFDC /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F0395219AE108000FCFDC /* Identifiable.swift */; };
-		176F0397219AE108000FCFDC /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F0395219AE108000FCFDC /* Identifiable.swift */; };
+		176F0396219AE108000FCFDC /* Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F0395219AE108000FCFDC /* Named.swift */; };
+		176F0397219AE108000FCFDC /* Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F0395219AE108000FCFDC /* Named.swift */; };
 		176F0399219AE10C000FCFDC /* IndexPath+Zero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F0398219AE10C000FCFDC /* IndexPath+Zero.swift */; };
 		1774924B214EA17C00336F3F /* UIView+Glowing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1774924A214EA17C00336F3F /* UIView+Glowing.swift */; };
 		178584051C90112C0036A83A /* FMIPeriod.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913DAE3872A469ADCFF700 /* FMIPeriod.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -400,7 +400,7 @@
 		1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TestImagePortraitSmallWidth.jpg; path = Resources/TestImagePortraitSmallWidth.jpg; sourceTree = "<group>"; };
 		1738D44B1AFC948100B96929 /* TestImageSquared.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TestImageSquared.png; path = Resources/TestImageSquared.png; sourceTree = "<group>"; };
 		176F038F219AE01D000FCFDC /* CellMarkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMarkable.swift; sourceTree = "<group>"; };
-		176F0395219AE108000FCFDC /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		176F0395219AE108000FCFDC /* Named.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Named.swift; sourceTree = "<group>"; };
 		176F0398219AE10C000FCFDC /* IndexPath+Zero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexPath+Zero.swift"; sourceTree = "<group>"; };
 		1774924A214EA17C00336F3F /* UIView+Glowing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Glowing.swift"; sourceTree = "<group>"; };
 		178C91E9247D53220055A38C /* UIViewController+ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ErrorHandling.swift"; sourceTree = "<group>"; };
@@ -1055,7 +1055,7 @@
 			isa = PBXGroup;
 			children = (
 				17BDFD1222784D87002B4F47 /* Array+Accessing.swift */,
-				176F0395219AE108000FCFDC /* Identifiable.swift */,
+				176F0395219AE108000FCFDC /* Named.swift */,
 				17BC2D4C22411DD600ADA4A1 /* NSAttributedString+FontSize.swift */,
 			);
 			name = Foundation;
@@ -1512,7 +1512,7 @@
 				3591366D12BA22312C6BA742 /* FMIWeek.m in Sources */,
 				35913863748C6793F5BF1D5C /* FMIPeriod.m in Sources */,
 				35913CCA67DABA21973D27B3 /* NSLocale+German.m in Sources */,
-				176F0396219AE108000FCFDC /* Identifiable.swift in Sources */,
+				176F0396219AE108000FCFDC /* Named.swift in Sources */,
 				3591345535873DA9F2A1ABD3 /* FMICoreDataStoreConfiguration.m in Sources */,
 				35913C27F6F4CA18BD799A75 /* FMICoreDataStore.m in Sources */,
 				17360A6D221EB2BF00A7131B /* File.swift in Sources */,
@@ -1616,7 +1616,7 @@
 				35913C1FF167A167B96D4A32 /* FMIDateHelper.m in Sources */,
 				35913ED44B8288907BC4A620 /* FMIBinding.m in Sources */,
 				359138A33936031E93902713 /* FMIComparator.m in Sources */,
-				176F0397219AE108000FCFDC /* Identifiable.swift in Sources */,
+				176F0397219AE108000FCFDC /* Named.swift in Sources */,
 				17360A77221EB2ED00A7131B /* PropertyList.swift in Sources */,
 				35913852A6133DB91905702E /* FMIDuration.m in Sources */,
 				3591337C093B454CA7AD9DF1 /* NSString+CSV.m in Sources */,
