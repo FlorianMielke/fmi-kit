@@ -14,14 +14,14 @@
 
 @implementation FMIActivityIndicatorAlertView
 
-- (instancetype)initWithAlertController:(UIAlertController *)alertController activityIndicatorView:(UIActivityIndicatorView *)activitiyIndicatorView {
-    if (!alertController || !activitiyIndicatorView || alertController.preferredStyle != UIAlertControllerStyleAlert) {
+- (instancetype)initWithAlertController:(UIAlertController *)alertController activityIndicatorView:(UIActivityIndicatorView *)activityIndicatorView {
+    if (!alertController || !activityIndicatorView || alertController.preferredStyle != UIAlertControllerStyleAlert) {
         return nil;
     }
     self = [super init];
     if (self) {
         self.alertController = alertController;
-        self.activityIndicatorView = activitiyIndicatorView;
+        self.activityIndicatorView = activityIndicatorView;
     }
     return self;
 }

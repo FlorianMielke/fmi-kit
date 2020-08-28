@@ -12,13 +12,13 @@
 }
 
 + (UIAlertController *)alertControllerForSendingMailFailed {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:FMILocalizedStringForKey(@"alert_controller.sending_mail_failed.title") message:FMILocalizedStringForKey(@"alert_controller.sending_mail_failed.message") preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:FMILocalizedStringForKey(@"alert.sending-mail-failed.title") message:FMILocalizedStringForKey(@"alert.sending-mail-failed.message") preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:[FMIAlertAction okAlertAction]];
     return alertController;
 }
 
 + (UIAlertController *)alertControllerForCannotSendMail {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:FMILocalizedStringForKey(@"alert_controller.cannot_send_mail.title") message:FMILocalizedStringForKey(@"alert_controller.cannot_send_mail.message") preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:FMILocalizedStringForKey(@"alert.cannot-send-mail.title") message:FMILocalizedStringForKey(@"alert.cannot-send-mail.message") preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:[FMIAlertAction okAlertAction]];
     return alertController;
 }

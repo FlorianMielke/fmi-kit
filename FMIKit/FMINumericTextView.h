@@ -5,8 +5,8 @@
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "FMIDurationFormatter.h"
+@import UIKit;
+#import <FMIKit/FMIDurationFormatter.h>
 
 @class FMINumericTextView;
 

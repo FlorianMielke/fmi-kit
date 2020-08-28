@@ -1,11 +1,17 @@
-"alert_controller.sending_mail_failed.title" = "E-Mail konnte nicht versendet werden";
+"alert.sending-mail-failed.title" = "E-Mail konnte nicht versendet werden";
 
-"alert_controller.sending_mail_failed.message" = "Bitte prüfen Sie Ihre E-Mail Einstellungen und Internet Verbindung.";
+"alert.sending-mail-failed.message" = "Bitte prüfen Sie Ihre E-Mail Einstellungen und Internet Verbindung.";
 
-"alert_controller.cannot_send_mail.title" = "E-Mail kann nicht gesendet werden";
+"alert.cannot-send-mail.title" = "E-Mail kann nicht gesendet werden";
 
-"alert_controller.cannot_send_mail.message" = "Um E-Mails versenden zu können, erstellen Sie in Ihren Einstellungen ein E-Mail Konto.";
+"alert.cannot-send-mail.message" = "Um E-Mails versenden zu können, erstellen Sie in Ihren Einstellungen ein E-Mail Konto.";
 
-"alert_action.ok_action.title" = "OK";
+"alert.error.action.contact-support" = "Support kontaktieren";
+
+"alert.error.action.retry" = "Erneut versuchen";
 
 "file-mananger.error.failed-remove-cloud-directory.description" = "Cloud Verzeichnis konnte nicht entfernt werden.";
+
+"OK" = "Ok";
+
+"Cancel" = "Abbrechen";

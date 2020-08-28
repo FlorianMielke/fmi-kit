@@ -1,4 +1,4 @@
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @class FMIDateHelper;
 @class FMICoreDataStore;
@@ -6,7 +6,6 @@
 @class FMIReviewNotificationCoordinator;
 @class FMIWhatsNewCoordinator;
 @class FMIWhatsNewCoordinator;
-@class FMIMailer;
 @protocol FMIAttachment;
 @protocol FMIMessage;
 @protocol FMIAlertView;
@@ -33,8 +32,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (id <FMIMessage>)createErrorMessageForError:(NSError *)error bundle:(NSBundle *)bundle;
 
 + (id <FMIMessage>)createErrorMessageForError:(NSError *)error bundle:(NSBundle *)bundle emailAddress:(NSString *)emailAddress;
-
-+ (FMIMailer *)makeMailer;
 
 @end
 

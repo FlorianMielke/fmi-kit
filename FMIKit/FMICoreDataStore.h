@@ -3,8 +3,8 @@
 //  Copyright (c) 2013 Florian Mielke. All rights reserved.
 //
 
-#import <CoreData/CoreData.h>
-#import "FMIStore.h"
+@import CoreData;
+#import <FMIKit/FMIStore.h>
 
 @class FMICoreDataStoreConfiguration;
 

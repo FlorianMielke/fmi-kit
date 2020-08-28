@@ -1,5 +1,6 @@
 #import "FMIErrorLogFile.h"
 #import "NSBundle+FMIAppInfo.h"
+#import <FMIKit/FMIKit-Swift.h>
 
 NSString *const FMIErrorLogFileExtension = @"log";
 
@@ -30,11 +31,7 @@ NSString *const FMIErrorLogFileExtension = @"log";
 }
 
 - (NSData *)dataRepresentation {
-    NSMutableString *content = [self.error.localizedDescription mutableCopy];
-    if (self.error.localizedFailureReason != nil) {
-        [content appendFormat:@"\n%@", self.error.localizedFailureReason];
-    }
-    return [content dataUsingEncoding:NSUTF8StringEncoding];
+    return [self.error.completeMessaged dataUsingEncoding:NSUTF8StringEncoding];
 }
 
 @end
