@@ -1,5 +1,5 @@
-extension UIViewController: MailerDelegate {
-    @objc public var mailer: Mailer {
+extension UIViewController: MailControllerDelegate {
+    @objc public var mailer: MailController {
         return .shared
     }
 }

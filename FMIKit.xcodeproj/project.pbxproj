@@ -56,7 +56,7 @@
 		17CCFAB9247D3B3200BD5C0A /* Bundle+FMIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CCFAB8247D3B3200BD5C0A /* Bundle+FMIKit.swift */; };
 		17CEC6EC1D22FAB90054895E /* FMIStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913905530E10E71AE0B13C /* FMIStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17D878D1247E8A6B00C1B35F /* UIViewController+Mailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D878D0247E8A6B00C1B35F /* UIViewController+Mailer.swift */; };
-		17D878D3247E901D00C1B35F /* Mailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D878D2247E901D00C1B35F /* Mailer.swift */; };
+		17D878D3247E901D00C1B35F /* MailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D878D2247E901D00C1B35F /* MailController.swift */; };
 		17E00C711B90307500BA7024 /* FMIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171CB9851AFB63C7002BE185 /* FMIKit.framework */; };
 		17E00C761B90308500BA7024 /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E00C731B90308500BA7024 /* OCMock.framework */; };
 		3591302640A563A871070208 /* FMIComparator.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913DE59FA2BDAC428AA9F6 /* FMIComparator.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -414,7 +414,7 @@
 		17CCFAB4247D3A9600BD5C0A /* UIAlertController+ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+ErrorHandling.swift"; sourceTree = "<group>"; };
 		17CCFAB8247D3B3200BD5C0A /* Bundle+FMIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+FMIKit.swift"; sourceTree = "<group>"; };
 		17D878D0247E8A6B00C1B35F /* UIViewController+Mailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Mailer.swift"; sourceTree = "<group>"; };
-		17D878D2247E901D00C1B35F /* Mailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mailer.swift; sourceTree = "<group>"; };
+		17D878D2247E901D00C1B35F /* MailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailController.swift; sourceTree = "<group>"; };
 		17E00C731B90308500BA7024 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = Carthage/Build/iOS/OCMock.framework; sourceTree = "<group>"; };
 		359130076AB9B3937D318FE5 /* FMIFieldDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIFieldDescription.m; sourceTree = "<group>"; };
 		3591302B55363F40E9CF35C6 /* FMIYear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIYear.h; sourceTree = "<group>"; };
@@ -917,7 +917,7 @@
 				35913600BE1B4B352B210062 /* FMIMessageMIMETypesTests.m */,
 				359137EB375C11BCD8641B59 /* FMISupportMessage.h */,
 				35913BED376AEE9CF670B873 /* FMISupportMessage.m */,
-				17D878D2247E901D00C1B35F /* Mailer.swift */,
+				17D878D2247E901D00C1B35F /* MailController.swift */,
 				17D878D0247E8A6B00C1B35F /* UIViewController+Mailer.swift */,
 			);
 			name = Messages;
@@ -1523,7 +1523,7 @@
 				359135926CF596F256A1E7BD /* FMIFileCoordinator.m in Sources */,
 				359133E2BFAD7E2B2B7156C3 /* FMIFieldDescription.m in Sources */,
 				35913FF467073536607AD797 /* NSManagedObjectContext+PersistentStoreAdditions.m in Sources */,
-				17D878D3247E901D00C1B35F /* Mailer.swift in Sources */,
+				17D878D3247E901D00C1B35F /* MailController.swift in Sources */,
 				359136A4DB723AE1921B1A7F /* NSFileManager+DirectoryAdditions.m in Sources */,
 				359139E0F8F92C1C0D642FFC /* NSCoder+SecureCoding.m in Sources */,
 				35913B8A059897B0C9D1A7A4 /* FMIReviewNotificationCoordinator.m in Sources */,
