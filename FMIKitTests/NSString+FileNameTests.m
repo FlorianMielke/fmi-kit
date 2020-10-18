@@ -8,146 +8,97 @@
 #import <XCTest/XCTest.h>
 #import "NSString+FileName.h"
 
-
 @interface NSString_FileNameTests : XCTestCase
 
-@property (strong, NS_NONATOMIC_IOSONLY) NSString *invalidFileName;
-@property (strong, NS_NONATOMIC_IOSONLY) NSString *validFileName;
+@property (NS_NONATOMIC_IOSONLY) NSString *invalidFileName;
+@property (NS_NONATOMIC_IOSONLY) NSString *validFileName;
 
 @end
 
-
-
 @implementation NSString_FileNameTests
 
-
-#pragma mark -
-#pragma mark Fixture
-
-- (void)setUp
-{
+- (void)setUp {
     [super setUp];
-    
-    _invalidFileName = @"Fi'leFron/t";
-    _validFileName = @"FileFront.jpg";
+    self.invalidFileName = @"Fi'leFron/t";
+    self.validFileName = @"FileFront.jpg";
 }
 
-
-- (void)tearDown
-{
-    [self setInvalidFileName:nil];
-    [self setValidFileName:nil];
-    
+- (void)tearDown {
+    self.invalidFileName = nil;
+    self.validFileName = nil;
     [super tearDown];
 }
 
+#pragma mark - Valid file name
 
-
-#pragma mark -
-#pragma mark Valid file name
-
-- (void)testInvalidCharactersAreRemovedForValidFileName
-{
+- (void)testInvalidCharactersAreRemovedForValidFileName {
     XCTAssertEqualObjects([[self invalidFileName] validFileName], @"FileFront");
 }
 
-
-- (void)testComputedFileNameContainsNameAndExtension
-{
-
+- (void)testComputedFileNameContainsNameAndExtension {
     NSString *fileName = @"Dummy";
-    
     XCTAssertEqualObjects([fileName validFileNameWithType:@"ext"], @"Dummy.ext");
 }
 
-
-- (void)testComputedFileNameOnlyContainsNameWhenHavingNilExtension
-{
-
+- (void)testComputedFileNameOnlyContainsNameWhenHavingNilExtension {
     NSString *fileName = @"Dummy";
-    
     XCTAssertEqualObjects([fileName validFileNameWithType:nil], @"Dummy");
 }
 
-
-- (void)testValidFileNameIsClippedWhenLongerThan150Characters
-{
-
+- (void)testValidFileNameIsClippedWhenLongerThan150Characters {
     NSString *longFileName = @"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea taki";
     NSString *clippedFileName = @"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea tak";
     
     XCTAssertEqualObjects([longFileName validFileName], clippedFileName);
 }
 
+#pragma mark - Unique file name
 
-
-#pragma mark -
-#pragma mark Unique file name
-
-- (void)testUniqueFileNameReturnsReceiverForEmptyListOfFileNames
-{
-    // When
-    NSString *uniqueFileName = [[self validFileName] uniqueFileNameInFileNames:nil];
-    
-    XCTAssertTrue([uniqueFileName isEqualToString:[self validFileName]]);
+- (void)testUniqueFileNameReturnsReceiverForEmptyListOfFileNames {
+    NSString *uniqueFileName = [self.validFileName uniqueFileNameInFileNames:nil];
+    XCTAssertEqualObjects(self.validFileName, uniqueFileName);
 }
 
-
-- (void)testUniqueFileNameReturnsReceiverIfFileNameIsAlreadyUnique
-{
-
+- (void)testUniqueFileNameReturnsReceiverIfFileNameIsAlreadyUnique {
     NSArray *fileNames = @[@"Lorem", @"Ipsum"];
+
+    NSString *uniqueFileName = [self.validFileName uniqueFileNameInFileNames:fileNames];
     
-    NSString *uniqueFileName = [[self validFileName] uniqueFileNameInFileNames:fileNames];
-    
-    XCTAssertTrue([uniqueFileName isEqualToString:[self validFileName]]);
+    XCTAssertEqualObjects(self.validFileName, uniqueFileName);
 }
 
-
-- (void)testUniqueFileNameRetursReceiverWhenHavingNoPathExtension
-{
-
+- (void)testUniqueFileNameRetursReceiverWhenHavingNoPathExtension {
     NSString *fileName = @"Lorem";
     NSArray *fileNames = @[@"Lorem.jpg", @"Ipsum.jpg"];
-    
+
     NSString *uniqueFileName = [fileName uniqueFileNameInFileNames:fileNames];
     
-    XCTAssertTrue([uniqueFileName isEqualToString:fileName]);
+    XCTAssertEqualObjects(fileName, uniqueFileName);
 }
 
-
-- (void)testUniqueFileNameReturnsReceiverWithSuffixWhenHavingNoPathExtension
-{
-
+- (void)testUniqueFileNameReturnsReceiverWithSuffixWhenHavingNoPathExtension {
     NSString *fileName = @"FileFront";
     NSArray *fileNames = @[@"FileFront", @"Ipsum"];
     
     NSString *uniqueFileName = [fileName uniqueFileNameInFileNames:fileNames];
     
-    XCTAssertTrue([uniqueFileName isEqualToString:@"FileFront 1"]);
+    XCTAssertEqualObjects(@"FileFront 1", uniqueFileName);
 }
 
-
-- (void)testUniqueFileNameReturnsReceiverWithSuffix
-{
-
+- (void)testUniqueFileNameReturnsReceiverWithSuffix {
     NSArray *fileNames = @[@"FileFront.jpg", @"Ipsum.jpg"];
     
-    NSString *uniqueFileName = [[self validFileName] uniqueFileNameInFileNames:fileNames];
+    NSString *uniqueFileName = [self.validFileName uniqueFileNameInFileNames:fileNames];
     
-    XCTAssertTrue([uniqueFileName isEqualToString:@"FileFront 1.jpg"]);
+    XCTAssertEqualObjects(@"FileFront 1.jpg", uniqueFileName);
 }
 
-
-- (void)testUniqueFileNameReturnsReceiverWithIncreasedSuffix
-{
-
+- (void)testUniqueFileNameReturnsReceiverWithIncreasedSuffix {
     NSArray *fileNames = @[@"FileFront.jpg", @"FileFront 1.jpg"];
     
-    NSString *uniqueFileName = [[self validFileName] uniqueFileNameInFileNames:fileNames];
+    NSString *uniqueFileName = [self.validFileName uniqueFileNameInFileNames:fileNames];
     
-    XCTAssertTrue([uniqueFileName isEqualToString:@"FileFront 2.jpg"]);
+    XCTAssertEqualObjects(@"FileFront 2.jpg", uniqueFileName);
 }
-
 
 @end
