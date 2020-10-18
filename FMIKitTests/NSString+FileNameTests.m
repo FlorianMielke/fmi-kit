@@ -60,45 +60,34 @@
 }
 
 - (void)testUniqueFileNameReturnsReceiverIfFileNameIsAlreadyUnique {
-    NSArray *fileNames = @[@"Lorem", @"Ipsum"];
-
-    NSString *uniqueFileName = [self.validFileName uniqueFileNameInFileNames:fileNames];
-    
+    NSString *uniqueFileName = [self.validFileName uniqueFileNameInFileNames:@[@"Lorem", @"Ipsum"]];
     XCTAssertEqualObjects(self.validFileName, uniqueFileName);
 }
 
-- (void)testUniqueFileNameRetursReceiverWhenHavingNoPathExtension {
-    NSString *fileName = @"Lorem";
-    NSArray *fileNames = @[@"Lorem.jpg", @"Ipsum.jpg"];
-
-    NSString *uniqueFileName = [fileName uniqueFileNameInFileNames:fileNames];
-    
-    XCTAssertEqualObjects(fileName, uniqueFileName);
+- (void)testUniqueFileNameReturnsReceiverWhenHavingNoPathExtension {
+    NSString *uniqueFileName = [@"Lorem" uniqueFileNameInFileNames:@[@"Lorem.jpg", @"Ipsum.jpg"]];
+    XCTAssertEqualObjects(@"Lorem", uniqueFileName);
 }
 
 - (void)testUniqueFileNameReturnsReceiverWithSuffixWhenHavingNoPathExtension {
-    NSString *fileName = @"FileFront";
-    NSArray *fileNames = @[@"FileFront", @"Ipsum"];
-    
-    NSString *uniqueFileName = [fileName uniqueFileNameInFileNames:fileNames];
-    
+    NSString *uniqueFileName = [@"FileFront" uniqueFileNameInFileNames:@[@"FileFront", @"Ipsum"]];
     XCTAssertEqualObjects(@"FileFront 1", uniqueFileName);
 }
 
 - (void)testUniqueFileNameReturnsReceiverWithSuffix {
-    NSArray *fileNames = @[@"FileFront.jpg", @"Ipsum.jpg"];
-    
-    NSString *uniqueFileName = [self.validFileName uniqueFileNameInFileNames:fileNames];
-    
+    NSString *uniqueFileName = [self.validFileName uniqueFileNameInFileNames:@[@"FileFront.jpg", @"Ipsum.jpg"]];
     XCTAssertEqualObjects(@"FileFront 1.jpg", uniqueFileName);
 }
 
 - (void)testUniqueFileNameReturnsReceiverWithIncreasedSuffix {
-    NSArray *fileNames = @[@"FileFront.jpg", @"FileFront 1.jpg"];
-    
-    NSString *uniqueFileName = [self.validFileName uniqueFileNameInFileNames:fileNames];
-    
+    NSString *uniqueFileName = [self.validFileName uniqueFileNameInFileNames:@[@"FileFront.jpg", @"FileFront 1.jpg"]];
     XCTAssertEqualObjects(@"FileFront 2.jpg", uniqueFileName);
+
+    uniqueFileName = [self.validFileName uniqueFileNameInFileNames:@[@"FileFront.jpg", @"FileFront 1.jpg", @"FileFront 3.jpg"]];
+    XCTAssertEqualObjects(@"FileFront 2.jpg", uniqueFileName);
+
+    uniqueFileName = [@"A.jpg" uniqueFileNameInFileNames:@[@"A.jpg", @"A 1.jpg", @"A 2.jpg", @"A 3.jpg", @"A 4.jpg", @"A 5.jpg", @"A 6.jpg", @"A 7.jpg", @"A 8.jpg", @"A 9.jpg", @"A 10.jpg"]];
+    XCTAssertEqualObjects(@"A 11.jpg", uniqueFileName);
 }
 
 @end
