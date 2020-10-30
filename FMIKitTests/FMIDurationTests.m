@@ -123,17 +123,6 @@
     XCTAssertEqual([duration seconds], seconds);
 }
 
-- (void)testEncode {
-    NSData *archivedObject = [NSKeyedArchiver archivedDataWithRootObject:self.duration];
-    XCTAssertTrue(archivedObject.length > 0);
-}
-
-- (void)testDecode {
-    NSData *archivedObject = [NSKeyedArchiver archivedDataWithRootObject:self.duration];
-    FMIDuration *unarchivedObject = [NSKeyedUnarchiver unarchiveObjectWithData:archivedObject];
-    XCTAssertEqualObjects(unarchivedObject, self.duration);
-}
-
 - (void)testCopying {
     FMIDuration *copy = [self.duration copy];
 
