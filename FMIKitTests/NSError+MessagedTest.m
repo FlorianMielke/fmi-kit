@@ -7,14 +7,14 @@
 
 @implementation NSError_MessagedTest
 
-- (void)testMessaged {
+- (void)testLogFiled {
     NSError *subject = [NSError errorWithDomain:@"::domain::" code:-1 userInfo:@{
         NSLocalizedDescriptionKey: @"Description.",
         NSLocalizedFailureReasonErrorKey: @"Failure Reason.",
         NSLocalizedRecoverySuggestionErrorKey: @"Recovery Suggestion.",
     }];
     
-    XCTAssertEqualObjects(@"Failure Reason.\n\nRecovery Suggestion.", subject.completeMessaged);
+    XCTAssertEqualObjects(@"Description.\n\nFailure Reason.\n\nRecovery Suggestion.", subject.logFiled);
 }
 
 @end

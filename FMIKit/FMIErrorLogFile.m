@@ -31,7 +31,7 @@ NSString *const FMIErrorLogFileExtension = @"log";
 }
 
 - (NSData *)dataRepresentation {
-    return [self.error.completeMessaged dataUsingEncoding:NSUTF8StringEncoding];
+    return [self.error.logFiled dataUsingEncoding:NSUTF8StringEncoding];
 }
 
 @end
