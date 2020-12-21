@@ -18,7 +18,6 @@
 		170C7E441C900D69000B5574 /* FMIWeek.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913598DD77E67B459BE40D /* FMIWeek.m */; };
 		170C7E451C900D69000B5574 /* FMIYear.m in Sources */ = {isa = PBXBuildFile; fileRef = 359133AD3EED17EBCFFC829C /* FMIYear.m */; };
 		1717200A247FC03200A54240 /* NSError+Messaged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17172009247FC03200A54240 /* NSError+Messaged.swift */; };
-		1717200F247FC0C400A54240 /* NSError+MessagedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1717200E247FC0C400A54240 /* NSError+MessagedTest.m */; };
 		171B97E4246AB47400AC36AB /* Mailer+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171B97E3246AB47400AC36AB /* Mailer+Error.swift */; };
 		171CB98B1AFB63C7002BE185 /* FMIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CB98A1AFB63C7002BE185 /* FMIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1722257E21AC6DFF0036D109 /* UI+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1722257D21AC6DFF0036D109 /* UI+Identifier.swift */; };
@@ -376,7 +375,6 @@
 		1700A1B61D1D564B0035EFB0 /* NSArray+FMIValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FMIValidation.m"; sourceTree = "<group>"; };
 		17172009247FC03200A54240 /* NSError+Messaged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Messaged.swift"; sourceTree = "<group>"; };
 		1717200B247FC07900A54240 /* FMIKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FMIKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		1717200E247FC0C400A54240 /* NSError+MessagedTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSError+MessagedTest.m"; path = "FMIKitTests/NSError+MessagedTest.m"; sourceTree = SOURCE_ROOT; };
 		1719EAF42472688C001BCCEF /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
 		1719EAF52472688D001BCCEF /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		171B97E3246AB47400AC36AB /* Mailer+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mailer+Error.swift"; sourceTree = "<group>"; };
@@ -818,7 +816,6 @@
 				1717200B247FC07900A54240 /* FMIKitTests-Bridging-Header.h */,
 				171B97E3246AB47400AC36AB /* Mailer+Error.swift */,
 				17172009247FC03200A54240 /* NSError+Messaged.swift */,
-				1717200E247FC0C400A54240 /* NSError+MessagedTest.m */,
 				17CCFAB4247D3A9600BD5C0A /* UIAlertController+ErrorHandling.swift */,
 				17CCFAB3247D3A9600BD5C0A /* UIResponder+ErrorHandling.swift */,
 				178C91E9247D53220055A38C /* UIViewController+ErrorHandling.swift */,
@@ -1571,7 +1568,6 @@
 				3591337D846CCAAAB2699E97 /* UIColor+SystemDefaultsTests.m in Sources */,
 				35913DB59C547ADE0F0566E3 /* FMIEditingToolbarTests.m in Sources */,
 				3591317D6BE22119739FDA24 /* FMIDateHelperTest.m in Sources */,
-				1717200F247FC0C400A54240 /* NSError+MessagedTest.m in Sources */,
 				35913037FE5DFDEE65F717D3 /* FMIComparatorTests.m in Sources */,
 				359135ABDD0EEBE3A85FB61D /* FMIEventPaserTests.m in Sources */,
 				3591387333257D86D6F26683 /* FMIGMTDateHelperTest.m in Sources */,
