@@ -20,7 +20,7 @@ extension NSError {
     }
 
     @objc public var logFiled: String {
-        var message = mediumMessaged
+        var message = longMessaged
         if let underlyingError = userInfo[NSUnderlyingErrorKey] as? NSError {
             message += "\n\n\(underlyingError.userInfo)"
         }
