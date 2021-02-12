@@ -6,13 +6,15 @@
 
 @implementation FMIFileCoordinator
 
-- (nullable id)unarchiveObjectAtURL:(NSURL *)url ofClass:(Class)cls error:(NSError **)error {
-    id unarchivedObject;
+- (nullable id)unarchiveObjectAtURL:(NSURL *)url error:(NSError **)error {
     NSData *contents = [NSData dataWithContentsOfURL:url options:NSDataReadingUncached error:error];
-    if (contents != nil) {
-        unarchivedObject = [NSKeyedUnarchiver unarchivedObjectOfClass:cls fromData:contents error:error];
+    if (contents == nil) {
+        return nil;
     }
-    return unarchivedObject;
+
+    NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:contents error:error];
+    unarchiver.requiresSecureCoding = NO;
+    return [unarchiver decodeTopLevelObjectForKey:NSKeyedArchiveRootObjectKey error:error];
 }
 
 - (BOOL)archiveObject:(id <NSSecureCoding>)anObject atURL:(NSURL *)url error:(NSError **)error {
