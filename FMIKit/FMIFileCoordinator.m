@@ -6,17 +6,17 @@
 
 @implementation FMIFileCoordinator
 
-- (nullable id)unarchiveObjectAtURL:(NSURL *)url error:(NSError **)error {
+- (nullable id)unarchiveObjectAtURL:(NSURL *)url ofClass:(Class)cls error:(NSError **)error {
     id unarchivedObject;
     NSData *contents = [NSData dataWithContentsOfURL:url options:NSDataReadingUncached error:error];
     if (contents != nil) {
-        unarchivedObject = [NSKeyedUnarchiver unarchiveObjectWithData:contents];
+        unarchivedObject = [NSKeyedUnarchiver unarchivedObjectOfClass:cls fromData:contents error:error];
     }
     return unarchivedObject;
 }
 
 - (BOOL)archiveObject:(id <NSSecureCoding>)anObject atURL:(NSURL *)url error:(NSError **)error {
-    NSData *archivedObjectData = [NSKeyedArchiver archivedDataWithRootObject:anObject];
+    NSData *archivedObjectData = [NSKeyedArchiver archivedDataWithRootObject:anObject requiringSecureCoding:YES error:error];
     BOOL success = [archivedObjectData writeToURL:url options:NSDataWritingAtomic error:error];
     if (success) {
         NSDictionary *fileAttributes = @{NSFileExtensionHidden: @YES};
