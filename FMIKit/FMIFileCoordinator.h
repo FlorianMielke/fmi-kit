@@ -4,7 +4,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FMIFileCoordinator : NSObject
 
-- (nullable id)unarchiveObjectAtURL:(NSURL *)url ofClass:(Class)cls error:(NSError **)error;
+- (nullable id)unarchiveObjectAtURL:(NSURL *)url error:(NSError **)error;
 
 - (BOOL)archiveObject:(id <NSSecureCoding>)anObject atURL:(NSURL *)url error:(NSError **)error;
 
