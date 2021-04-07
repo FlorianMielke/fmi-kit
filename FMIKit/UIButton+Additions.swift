@@ -16,6 +16,7 @@ extension UIButton {
     private static func make(cornerRadius: CGFloat = 6.0, tintColor: UIColor = .label, backgroundColor: UIColor?) -> UIButton {
         let button = UIButton(type: .custom)
         button.tintColor = tintColor
+        button.setTitleColor(tintColor, for: .normal)
         button.contentEdgeInsets = UIEdgeInsets(top: 4, left: 10, bottom: 4, right: 10)
         if let backgroundColor = backgroundColor {
             button.layer.backgroundColor = backgroundColor.cgColor
