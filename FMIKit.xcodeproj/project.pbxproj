@@ -35,6 +35,8 @@
 		1738D4511AFC948100B96929 /* TestImagePortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4491AFC948100B96929 /* TestImagePortrait.png */; };
 		1738D4521AFC948100B96929 /* TestImagePortraitSmallWidth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */; };
 		1738D4531AFC948100B96929 /* TestImageSquared.png in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44B1AFC948100B96929 /* TestImageSquared.png */; };
+		176507AC261DBDE600DB33E0 /* UIButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176507AB261DBDE600DB33E0 /* UIButton+Additions.swift */; };
+		176507B1261DBE2800DB33E0 /* UIToolbar+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176507B0261DBE2800DB33E0 /* UIToolbar+Additions.swift */; };
 		176F0390219AE01D000FCFDC /* CellMarkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F038F219AE01D000FCFDC /* CellMarkable.swift */; };
 		176F0396219AE108000FCFDC /* Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F0395219AE108000FCFDC /* Named.swift */; };
 		176F0397219AE108000FCFDC /* Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F0395219AE108000FCFDC /* Named.swift */; };
@@ -396,6 +398,8 @@
 		1738D4491AFC948100B96929 /* TestImagePortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TestImagePortrait.png; path = Resources/TestImagePortrait.png; sourceTree = "<group>"; };
 		1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TestImagePortraitSmallWidth.jpg; path = Resources/TestImagePortraitSmallWidth.jpg; sourceTree = "<group>"; };
 		1738D44B1AFC948100B96929 /* TestImageSquared.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TestImageSquared.png; path = Resources/TestImageSquared.png; sourceTree = "<group>"; };
+		176507AB261DBDE600DB33E0 /* UIButton+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Additions.swift"; sourceTree = "<group>"; };
+		176507B0261DBE2800DB33E0 /* UIToolbar+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIToolbar+Additions.swift"; sourceTree = "<group>"; };
 		176F038F219AE01D000FCFDC /* CellMarkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMarkable.swift; sourceTree = "<group>"; };
 		176F0395219AE108000FCFDC /* Named.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Named.swift; sourceTree = "<group>"; };
 		176F0398219AE10C000FCFDC /* IndexPath+Zero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexPath+Zero.swift"; sourceTree = "<group>"; };
@@ -780,6 +784,8 @@
 				176F038F219AE01D000FCFDC /* CellMarkable.swift */,
 				176F0398219AE10C000FCFDC /* IndexPath+Zero.swift */,
 				1722257D21AC6DFF0036D109 /* UI+Identifier.swift */,
+				176507AB261DBDE600DB33E0 /* UIButton+Additions.swift */,
+				176507B0261DBE2800DB33E0 /* UIToolbar+Additions.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -1440,6 +1446,7 @@
 				35913BBC1AE97717D7C85A62 /* FMIFoundationAdditions.m in Sources */,
 				359138FFFBA9CFA258651610 /* FMINumericTextView.m in Sources */,
 				3591327BD9BBEC4D26E628A1 /* FMITimeZoneHelper.m in Sources */,
+				176507B1261DBE2800DB33E0 /* UIToolbar+Additions.swift in Sources */,
 				35913660188DC6B13DB661EE /* FMIAlertController.m in Sources */,
 				35913D2E5D78D2DF589E337E /* FMIUUIDHelper.m in Sources */,
 				35913BFDE59284D54FFCB2C3 /* FMIGMTDateHelper.m in Sources */,
@@ -1524,6 +1531,7 @@
 				17360A76221EB2ED00A7131B /* PropertyList.swift in Sources */,
 				35913C3C87D212B377485C66 /* NSBundle+FMIAppInfo.m in Sources */,
 				35913C92E30326F916509E7F /* FMIMessageAttachment.m in Sources */,
+				176507AC261DBDE600DB33E0 /* UIButton+Additions.swift in Sources */,
 				3591366E697A6FCF2F862A15 /* FMIMessageMIMETypes.m in Sources */,
 				359138570A0179985FA29656 /* FMISupportMessage.m in Sources */,
 				D25892B84EC0E7570B770C27 /* UITableView+FMIScrolling.m in Sources */,
