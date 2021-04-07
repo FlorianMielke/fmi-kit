@@ -1,39 +1,7 @@
-//
-//  FMINumericTextView.h
-//
-//  Created by Florian Mielke on 10.09.13.
-//  Copyright (c) 2013 Florian Mielke. All rights reserved.
-//
-
-@import UIKit;
+#import <UIKit/UIKit.h>
 #import <FMIKit/FMIDurationFormatter.h>
 
-@class FMINumericTextView;
-
-@protocol FMINumericTextViewDelegate <NSObject, UITextViewDelegate>
-
-@optional
-
-/**
- *	Ask the delegate return a list of compound text view to balance toggle call with.
- *	@param	textView	The text view requesting this information.
- *	@return	A list of text view to balance the toggle call with.
- */
-- (NSArray *)compoundTextViewsForTextView:(FMINumericTextView *)textView;
-
-/**
- *	Informs the delegate that the text view has cleared it's text.
- *	@param	textView	The text view in which the text has been cleared.
- */
-- (void)textViewDidClearText:(FMINumericTextView *)textView;
-
-/**
- *	Informs the delegate that the text view has inverted it's text.
- *	@param	textView	The text view in which the text has been inverted.
- */
-- (void)textViewDidInvertText:(FMINumericTextView *)textView;
-
-@end
+NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM (NSInteger, FMINumericTextViewAccessoryButtonType) {
 	FMINumericTextViewAccessoryButtonTypeNone = 0,
@@ -41,55 +9,33 @@ typedef NS_ENUM (NSInteger, FMINumericTextViewAccessoryButtonType) {
 	FMINumericTextViewAccessoryButtonTypeInvert = 2
 };
 
-/**
- *	The FMINumericTextView class extends UITextView.
- */
+@class FMINumericTextView;
+
+@protocol FMINumericTextViewDelegate <NSObject, UITextViewDelegate>
+
+@optional
+
+- (NSArray *)compoundTextViewsForTextView:(FMINumericTextView *)textView;
+- (void)textViewDidClearText:(FMINumericTextView *)textView;
+- (void)textViewDidInvertText:(FMINumericTextView *)textView;
+
+@end
+
+
 @interface FMINumericTextView : UITextView
 
-/**
- *	The receiver’s accessory button.
- */
-@property (readonly, NS_NONATOMIC_IOSONLY) UIBarButtonItem *accessoryButton;
-
-/**
- *	The receiver’s delegate.
- *  @see FMINumericTextViewDelegate.
- */
-@property (weak, NS_NONATOMIC_IOSONLY) id <FMINumericTextViewDelegate> delegate;
-
-/**
- *	The duration style of the receiver.
- */
+@property (nullable, readonly, NS_NONATOMIC_IOSONLY) UIButton *accessoryButton;
+@property (nullable, weak, NS_NONATOMIC_IOSONLY) id <FMINumericTextViewDelegate> delegate;
 @property (NS_NONATOMIC_IOSONLY) FMIDurationFormatterStyle durationStyle;
-
-/**
- * The assigned button type.
- */
 @property (readonly, NS_NONATOMIC_IOSONLY) FMINumericTextViewAccessoryButtonType accessoryButtonType;
-
-/**
- *	A Boolean that indicates whether the keyboard is shown or not.
- */
 @property (readonly, NS_NONATOMIC_IOSONLY) BOOL showsKeyboard;
 
-/**
- *	Returns a new FMINumericTextView object initialized with a accessory button type.
- * @param accessoryButtonType The accessory button type to use.
- * @return A new FMINumericTextView object.
- */
-- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType;
+- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType buttonTintColor:(UIColor *)buttonTintColor buttonBackgroundColor:(UIColor *)buttonBackgroundColor;
 
-/**
- * Returns a new FMINumericTextView object initialized with a given parameter.
- * @param accessoryButtonType The accessory button type to use.
- * @param notificationCenter  The notification center to use for keyboard appearance notification.
- * @return A new FMINumericTextView object.
- */
-- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType notificationCenter:(NSNotificationCenter *)notificationCenter;
+- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType buttonTintColor:(UIColor *)buttonTintColor buttonBackgroundColor:(UIColor *)buttonBackgroundColor notificationCenter:(NSNotificationCenter *)notificationCenter;
 
-/**
- * Toggles the text view as first responder.
- */
 - (void)toggleKeyboard;
 
 @end
+
+NS_ASSUME_NONNULL_END
