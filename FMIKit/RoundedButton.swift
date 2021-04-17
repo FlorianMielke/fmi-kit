@@ -18,7 +18,7 @@ import UIKit
     private func applyStyle(cornerRadius: CGFloat, tintColor: UIColor, backgroundColor: UIColor?) {
         self.tintColor = tintColor
         setTitleColor(tintColor, for: .normal)
-        contentEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+        contentEdgeInsets = UIEdgeInsets(top: 6, left: 12, bottom: 6, right: 12)
         if let backgroundColor = backgroundColor {
             layer.backgroundColor = backgroundColor.cgColor
         }

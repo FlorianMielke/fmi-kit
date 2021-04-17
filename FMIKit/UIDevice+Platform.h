@@ -25,11 +25,7 @@
  */
 @property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *platform;
 
-/**
- *  Checks if the system version of the device is iOS8 or higher
- *
- *  @return YES if systen version is iOS8 or higher, otherwise NO.
- */
 @property (readonly, getter=isIOS8, NS_NONATOMIC_IOSONLY) BOOL IOS8;
+@property (readonly, getter=isIPad, NS_NONATOMIC_IOSONLY) BOOL isIPad;
 
 @end
