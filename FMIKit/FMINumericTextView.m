@@ -163,13 +163,13 @@
     FMIDurationFormatter *durationFormatter = [[FMIDurationFormatter alloc] init];
     durationFormatter.style = self.durationStyle;
 
-    UIButton *button = [UIButton makeWithCornerRadius:6.0 title:[durationFormatter stringFromDuration:[FMIDuration zero]] tintColor:self.buttonTintColor backgroundColor:self.buttonBackgroundColor];
+    RoundedButton *button = [[RoundedButton alloc] initWithTitle:[durationFormatter stringFromDuration:[FMIDuration zero]] cornerRadius:6.0 tintColor:self.buttonTintColor backgroundColor:self.buttonBackgroundColor];
     [button addTarget:self action:@selector(clearText:) forControlEvents:UIControlEventTouchUpInside];
     return button;
 }
 
 - (UIButton *)invertButton {
-    UIButton *button = [UIButton makeWithCornerRadius:6.0 systemName:@"plus.slash.minus" tintColor:self.buttonTintColor backgroundColor:self.buttonBackgroundColor];
+    RoundedButton *button = [[RoundedButton alloc] initWithSystemName:@"plus.slash.minus" cornerRadius:6.0 tintColor:self.buttonTintColor backgroundColor:self.buttonBackgroundColor];
     [button addTarget:self action:@selector(invertText:) forControlEvents:UIControlEventTouchUpInside];
     return button;
 }
