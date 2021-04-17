@@ -7,6 +7,7 @@
 
 #import "FMINumericTextView.h"
 #import "FMIDuration.h"
+#import "UIDevice+Platform.h"
 #import <FMIKit/FMIKit-Swift.h>
 
 @interface FMINumericTextView ()
@@ -19,6 +20,8 @@
 
 @property (NS_NONATOMIC_IOSONLY) UIColor *buttonTintColor;
 @property (NS_NONATOMIC_IOSONLY) UIColor *buttonBackgroundColor;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSString *titleForClearButton;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSString *titleForInvertButton;
 
 @end
 
@@ -29,30 +32,32 @@
 #pragma mark - Initialization
 
 - (instancetype)init {
-    return [self initWithAccessoryButtonType:FMINumericTextViewAccessoryButtonTypeNone buttonTintColor:[UIColor systemBlueColor] buttonBackgroundColor:[UIColor systemBackgroundColor]];
+    return [self initWithAccessoryButtonType:FMINumericTextViewAccessoryButtonTypeNone buttonTintColor:[UIColor systemBlueColor] buttonBackgroundColor:[UIColor systemBackgroundColor] durationStyle:FMIDurationFormatterStyleTime];
 }
 
-- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType buttonTintColor:(UIColor *)buttonTintColor buttonBackgroundColor:(UIColor *)buttonBackgroundColor {
-    return [self initWithAccessoryButtonType:accessoryButtonType buttonTintColor:buttonTintColor buttonBackgroundColor:buttonBackgroundColor notificationCenter:[NSNotificationCenter defaultCenter]];
+- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType buttonTintColor:(UIColor *)buttonTintColor buttonBackgroundColor:(UIColor *)buttonBackgroundColor durationStyle:(enum FMIDurationFormatterStyle)durationStyle {
+    return [self initWithAccessoryButtonType:accessoryButtonType buttonTintColor:buttonTintColor buttonBackgroundColor:buttonBackgroundColor  durationStyle:durationStyle notificationCenter:[NSNotificationCenter defaultCenter]];
 }
 
-- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType buttonTintColor:(UIColor *)buttonTintColor buttonBackgroundColor:(UIColor *)buttonBackgroundColor notificationCenter:(NSNotificationCenter *)notificationCenter {
+- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType buttonTintColor:(UIColor *)buttonTintColor buttonBackgroundColor:(UIColor *)buttonBackgroundColor durationStyle:(enum FMIDurationFormatterStyle)durationStyle notificationCenter:(NSNotificationCenter *)notificationCenter {
     self = [super init];
     
     if (self != nil) {
         self.buttonTintColor = buttonTintColor;
         self.buttonBackgroundColor = buttonBackgroundColor;
-        self.durationStyle = FMIDurationFormatterStyleTime;
+        self.durationStyle = durationStyle;
         self.accessoryButtonType = accessoryButtonType;
         self.notificationCenter = notificationCenter;
         self.keyboardType = UIKeyboardTypeNumberPad;
+        [self applyInputAssistantItem];
     }
     
     return self;
 }
 
 - (UIView *)inputAccessoryView {
-    if (_accessoryView == nil && self.accessoryButton != nil) {
+    /// Don't show the accessory view on an iPad, as we are there using the InputAssistantItem
+    if (_accessoryView == nil && self.accessoryButton != nil && !UIDevice.currentDevice.isIPad) {
         UIToolbar *toolbar = [UIToolbar makeTransparent];
         toolbar.items = @[[UIBarButtonItem flexibleSpaceItem], [[UIBarButtonItem alloc] initWithCustomView:self.accessoryButton]];
         [toolbar sizeToFit];
@@ -149,7 +154,36 @@
     }
 }
 
-#pragma mark - Prepare clear button
+#pragma mark - Prepare buttons
+
+- (void)applyInputAssistantItem {
+    UIBarButtonItem *buttonItem = [self inputAssistantButtonItem];
+    if (buttonItem == nil) {
+        return;
+    }
+
+    UITextInputAssistantItem *inputAssistant = self.inputAssistantItem;
+    UIBarButtonItemGroup *group = [[UIBarButtonItemGroup alloc] initWithBarButtonItems:@[buttonItem] representativeItem:nil];
+    inputAssistant.trailingBarButtonGroups = @[group];
+}
+
+- (nullable UIBarButtonItem *)inputAssistantButtonItem {
+    switch (self.accessoryButtonType) {
+        case FMINumericTextViewAccessoryButtonTypeNone:
+            return nil;
+            break;
+            
+        case FMINumericTextViewAccessoryButtonTypeInvert: {
+            UIImage *image = [UIImage systemImageNamed:self.titleForInvertButton];
+            return [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(invertText:)];
+            break;
+        }
+
+        case FMINumericTextViewAccessoryButtonTypeClear:
+            return [[UIBarButtonItem alloc] initWithTitle:self.titleForClearButton style:UIBarButtonItemStylePlain target:self action:@selector(clearText:)];
+            break;
+    }
+}
 
 - (UIButton *)accessoryButton {
     if (_accessoryButton == nil && self.accessoryButtonType != FMINumericTextViewAccessoryButtonTypeNone) {
@@ -160,18 +194,25 @@
 }
 
 - (UIButton *)clearButton {
-    FMIDurationFormatter *durationFormatter = [[FMIDurationFormatter alloc] init];
-    durationFormatter.style = self.durationStyle;
-
-    UIButton *button = [UIButton makeWithCornerRadius:6.0 title:[durationFormatter stringFromDuration:[FMIDuration zero]] tintColor:self.buttonTintColor backgroundColor:self.buttonBackgroundColor];
-    [button addTarget:self action:@selector(invertText:) forControlEvents:UIControlEventTouchUpInside];
+    RoundedButton *button = [[RoundedButton alloc] initWithTitle:self.titleForClearButton cornerRadius:6.0 tintColor:self.buttonTintColor backgroundColor:self.buttonBackgroundColor];
+    [button addTarget:self action:@selector(clearText:) forControlEvents:UIControlEventTouchUpInside];
     return button;
 }
 
 - (UIButton *)invertButton {
-    UIButton *button = [UIButton makeWithCornerRadius:6.0 systemName:@"plus.slash.minus" tintColor:self.buttonTintColor backgroundColor:self.buttonBackgroundColor];
+    RoundedButton *button = [[RoundedButton alloc] initWithSystemName:self.titleForInvertButton cornerRadius:6.0 tintColor:self.buttonTintColor backgroundColor:self.buttonBackgroundColor];
     [button addTarget:self action:@selector(invertText:) forControlEvents:UIControlEventTouchUpInside];
     return button;
+}
+
+- (NSString *)titleForClearButton {
+    FMIDurationFormatter *durationFormatter = [[FMIDurationFormatter alloc] init];
+    durationFormatter.style = self.durationStyle;
+    return [durationFormatter stringFromDuration:[FMIDuration zero]];
+}
+
+- (NSString *)titleForInvertButton {
+    return @"plus.slash.minus";
 }
 
 @end

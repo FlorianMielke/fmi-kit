@@ -30,9 +30,9 @@ typedef NS_ENUM (NSInteger, FMINumericTextViewAccessoryButtonType) {
 @property (readonly, NS_NONATOMIC_IOSONLY) FMINumericTextViewAccessoryButtonType accessoryButtonType;
 @property (readonly, NS_NONATOMIC_IOSONLY) BOOL showsKeyboard;
 
-- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType buttonTintColor:(UIColor *)buttonTintColor buttonBackgroundColor:(UIColor *)buttonBackgroundColor;
+- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType buttonTintColor:(UIColor *)buttonTintColor buttonBackgroundColor:(UIColor *)buttonBackgroundColor durationStyle:(enum FMIDurationFormatterStyle)durationStyle;
 
-- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType buttonTintColor:(UIColor *)buttonTintColor buttonBackgroundColor:(UIColor *)buttonBackgroundColor notificationCenter:(NSNotificationCenter *)notificationCenter;
+- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType buttonTintColor:(UIColor *)buttonTintColor buttonBackgroundColor:(UIColor *)buttonBackgroundColor durationStyle:(enum FMIDurationFormatterStyle)durationStyle notificationCenter:(NSNotificationCenter *)notificationCenter;
 
 - (void)toggleKeyboard;
 
