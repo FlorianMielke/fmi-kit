@@ -173,15 +173,15 @@
             return nil;
             break;
             
-        case FMINumericTextViewAccessoryButtonTypeInvert:
-            return [[UIBarButtonItem alloc] initWithTitle:self.titleForInvertButton style:UIBarButtonItemStylePlain target:self action:@selector(invertText:)];
-            break;
-
-        case FMINumericTextViewAccessoryButtonTypeClear: {
+        case FMINumericTextViewAccessoryButtonTypeInvert: {
             UIImage *image = [UIImage systemImageNamed:self.titleForClearButton];
-            return [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(clearText:)];
+            return [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(invertText:)];
             break;
         }
+
+        case FMINumericTextViewAccessoryButtonTypeClear:
+            return [[UIBarButtonItem alloc] initWithTitle:self.titleForClearButton style:UIBarButtonItemStylePlain target:self action:@selector(clearText:)];
+            break;
     }
 }
 
