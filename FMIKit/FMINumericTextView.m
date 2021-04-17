@@ -174,7 +174,7 @@
             break;
             
         case FMINumericTextViewAccessoryButtonTypeInvert: {
-            UIImage *image = [UIImage systemImageNamed:self.titleForClearButton];
+            UIImage *image = [UIImage systemImageNamed:self.titleForInvertButton];
             return [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(invertText:)];
             break;
         }
