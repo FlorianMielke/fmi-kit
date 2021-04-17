@@ -32,20 +32,20 @@
 #pragma mark - Initialization
 
 - (instancetype)init {
-    return [self initWithAccessoryButtonType:FMINumericTextViewAccessoryButtonTypeNone buttonTintColor:[UIColor systemBlueColor] buttonBackgroundColor:[UIColor systemBackgroundColor]];
+    return [self initWithAccessoryButtonType:FMINumericTextViewAccessoryButtonTypeNone buttonTintColor:[UIColor systemBlueColor] buttonBackgroundColor:[UIColor systemBackgroundColor] durationStyle:FMIDurationFormatterStyleTime];
 }
 
-- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType buttonTintColor:(UIColor *)buttonTintColor buttonBackgroundColor:(UIColor *)buttonBackgroundColor {
-    return [self initWithAccessoryButtonType:accessoryButtonType buttonTintColor:buttonTintColor buttonBackgroundColor:buttonBackgroundColor notificationCenter:[NSNotificationCenter defaultCenter]];
+- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType buttonTintColor:(UIColor *)buttonTintColor buttonBackgroundColor:(UIColor *)buttonBackgroundColor durationStyle:(enum FMIDurationFormatterStyle)durationStyle {
+    return [self initWithAccessoryButtonType:accessoryButtonType buttonTintColor:buttonTintColor buttonBackgroundColor:buttonBackgroundColor  durationStyle:durationStyle notificationCenter:[NSNotificationCenter defaultCenter]];
 }
 
-- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType buttonTintColor:(UIColor *)buttonTintColor buttonBackgroundColor:(UIColor *)buttonBackgroundColor notificationCenter:(NSNotificationCenter *)notificationCenter {
+- (instancetype)initWithAccessoryButtonType:(FMINumericTextViewAccessoryButtonType)accessoryButtonType buttonTintColor:(UIColor *)buttonTintColor buttonBackgroundColor:(UIColor *)buttonBackgroundColor durationStyle:(enum FMIDurationFormatterStyle)durationStyle notificationCenter:(NSNotificationCenter *)notificationCenter {
     self = [super init];
     
     if (self != nil) {
         self.buttonTintColor = buttonTintColor;
         self.buttonBackgroundColor = buttonBackgroundColor;
-        self.durationStyle = FMIDurationFormatterStyleTime;
+        self.durationStyle = durationStyle;
         self.accessoryButtonType = accessoryButtonType;
         self.notificationCenter = notificationCenter;
         self.keyboardType = UIKeyboardTypeNumberPad;
@@ -173,15 +173,15 @@
             return nil;
             break;
             
-        case FMINumericTextViewAccessoryButtonTypeInvert:
-            return [[UIBarButtonItem alloc] initWithTitle:self.titleForInvertButton style:UIBarButtonItemStylePlain target:self action:@selector(invertText:)];
-            break;
-
-        case FMINumericTextViewAccessoryButtonTypeClear: {
-            UIImage *image = [UIImage systemImageNamed:self.titleForClearButton];
-            return [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(clearText:)];
+        case FMINumericTextViewAccessoryButtonTypeInvert: {
+            UIImage *image = [UIImage systemImageNamed:self.titleForInvertButton];
+            return [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(invertText:)];
             break;
         }
+
+        case FMINumericTextViewAccessoryButtonTypeClear:
+            return [[UIBarButtonItem alloc] initWithTitle:self.titleForClearButton style:UIBarButtonItemStylePlain target:self action:@selector(clearText:)];
+            break;
     }
 }
 
