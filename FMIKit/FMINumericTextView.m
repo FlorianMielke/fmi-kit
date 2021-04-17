@@ -164,7 +164,7 @@
     durationFormatter.style = self.durationStyle;
 
     UIButton *button = [UIButton makeWithCornerRadius:6.0 title:[durationFormatter stringFromDuration:[FMIDuration zero]] tintColor:self.buttonTintColor backgroundColor:self.buttonBackgroundColor];
-    [button addTarget:self action:@selector(invertText:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(clearText:) forControlEvents:UIControlEventTouchUpInside];
     return button;
 }
 
