@@ -13,31 +13,31 @@
 @implementation FMIKitFactory
 
 - (id <FMIAlertView>)createActivityIndicatorAlertViewWithTitle:(NSString *)title {
-  UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleAlert];
-  UIActivityIndicatorView *activityIndicatorView = [UIActivityIndicatorView new];
-  FMIActivityIndicatorAlertView *alertView = [[FMIActivityIndicatorAlertView alloc] initWithAlertController:alertController activityIndicatorView:activityIndicatorView];
-  alertView.title = title;
-  return alertView;
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIActivityIndicatorView *activityIndicatorView = [UIActivityIndicatorView new];
+    FMIActivityIndicatorAlertView *alertView = [[FMIActivityIndicatorAlertView alloc] initWithAlertController:alertController activityIndicatorView:activityIndicatorView];
+    alertView.title = title;
+    return alertView;
 }
 
 + (FMIDateHelper *)createDateHelper {
-  return [[FMIDateHelper alloc] init];
+    return [[FMIDateHelper alloc] init];
 }
 
 + (FMICoreDataStore *)createStore {
-  return [FMICoreDataStore sharedStore];
+    return [FMICoreDataStore sharedStore];
 }
 
 + (FMIReviewNotificationCoordinator *)createReviewNotificationCoordinatorForAppStoreID:(NSString *)appStoreID {
-  NSUserDefaults *userDefaults = [FMIKitFactory createUserDefaults];
-  NSCalendar *calendar = [FMIKitFactory createCalendar];
-  return [[FMIReviewNotificationCoordinator alloc] initWithAppStoreID:appStoreID userDefaults:userDefaults calendar:calendar];
+    NSUserDefaults *userDefaults = [FMIKitFactory createUserDefaults];
+    NSCalendar *calendar = [FMIKitFactory createCalendar];
+    return [[FMIReviewNotificationCoordinator alloc] initWithAppStoreID:appStoreID userDefaults:userDefaults calendar:calendar];
 }
 
 + (FMIWhatsNewCoordinator *)createWhatsNewCoordinatorWithURLProvider:(id <FMIURLProvider>)URLProvider {
-  NSBundle *bundle = [NSBundle mainBundle];
-  NSUserDefaults *userDefaults = [FMIKitFactory createUserDefaults];
-  return [[FMIWhatsNewCoordinator alloc] initWithBundle:bundle userDefaults:userDefaults URLProvider:URLProvider];
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSUserDefaults *userDefaults = [FMIKitFactory createUserDefaults];
+    return [[FMIWhatsNewCoordinator alloc] initWithBundle:bundle userDefaults:userDefaults URLProvider:URLProvider];
 }
 
 + (id <FMIMessage>)createErrorMessageForError:(NSError *)error diagnosticData:(nullable NSString *)diagnosticData bundle:(NSBundle *)bundle {
@@ -55,15 +55,15 @@
 }
 
 + (NSUserDefaults *)createUserDefaults {
-  return [NSUserDefaults standardUserDefaults];
+    return [NSUserDefaults standardUserDefaults];
 }
 
 + (FMIFileCoordinator *)createFileCoordinator {
-  return [[FMIFileCoordinator alloc] init];
+    return [[FMIFileCoordinator alloc] init];
 }
 
 + (NSCalendar *)createCalendar {
-  return [NSCalendar currentCalendar];
+    return [NSCalendar currentCalendar];
 }
 
 @end
