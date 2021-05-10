@@ -60,6 +60,7 @@
 		17D878D1247E8A6B00C1B35F /* UIViewController+Mailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D878D0247E8A6B00C1B35F /* UIViewController+Mailer.swift */; };
 		17D878D3247E901D00C1B35F /* MailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D878D2247E901D00C1B35F /* MailController.swift */; };
 		17E00C711B90307500BA7024 /* FMIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171CB9851AFB63C7002BE185 /* FMIKit.framework */; };
+		17E5DCD6262AE3D80097235B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5DCD5262AE3D80097235B /* RoundedButton.swift */; };
 		3591302640A563A871070208 /* FMIComparator.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913DE59FA2BDAC428AA9F6 /* FMIComparator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913035116DA7197F430FCD /* SKProduct+LocalizedPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913FA137230747CDAAF19D /* SKProduct+LocalizedPrice.m */; };
 		35913037FE5DFDEE65F717D3 /* FMIComparatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913B3594D046E58F3CADC8 /* FMIComparatorTests.m */; };
@@ -416,6 +417,7 @@
 		17CCFAB8247D3B3200BD5C0A /* Bundle+FMIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+FMIKit.swift"; sourceTree = "<group>"; };
 		17D878D0247E8A6B00C1B35F /* UIViewController+Mailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Mailer.swift"; sourceTree = "<group>"; };
 		17D878D2247E901D00C1B35F /* MailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailController.swift; sourceTree = "<group>"; };
+		17E5DCD5262AE3D80097235B /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		359130076AB9B3937D318FE5 /* FMIFieldDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIFieldDescription.m; sourceTree = "<group>"; };
 		3591302B55363F40E9CF35C6 /* FMIYear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIYear.h; sourceTree = "<group>"; };
 		35913077C842966EE70D8BF3 /* UIDevice+PlatformTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+PlatformTests.m"; path = "FMIKitTests/UIDevice+PlatformTests.m"; sourceTree = SOURCE_ROOT; };
@@ -783,6 +785,7 @@
 			children = (
 				176F038F219AE01D000FCFDC /* CellMarkable.swift */,
 				176F0398219AE10C000FCFDC /* IndexPath+Zero.swift */,
+				17E5DCD5262AE3D80097235B /* RoundedButton.swift */,
 				1722257D21AC6DFF0036D109 /* UI+Identifier.swift */,
 				176507AB261DBDE600DB33E0 /* UIButton+Additions.swift */,
 				176507B0261DBE2800DB33E0 /* UIToolbar+Additions.swift */,
@@ -1477,6 +1480,7 @@
 				359136E54E9A3AF0FE3006A6 /* UIImage+Creation.m in Sources */,
 				35913C6AE0B91A0BD84FD5AF /* NSIndexSet+Initialization.m in Sources */,
 				3591374825151F83A6EF6EC6 /* NSString+FMIDrawing.m in Sources */,
+				17E5DCD6262AE3D80097235B /* RoundedButton.swift in Sources */,
 				35913E7F0798C24CEB97D105 /* NSData+FileAdditions.m in Sources */,
 				359130C3C5024F329A04621D /* UILabel+Sizing.m in Sources */,
 				35913035116DA7197F430FCD /* SKProduct+LocalizedPrice.m in Sources */,
