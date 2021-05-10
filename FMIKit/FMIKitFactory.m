@@ -40,18 +40,18 @@
     return [[FMIWhatsNewCoordinator alloc] initWithBundle:bundle userDefaults:userDefaults URLProvider:URLProvider];
 }
 
-+ (id <FMIMessage>)createErrorMessageForError:(NSError *)error bundle:(NSBundle *)bundle {
-    id <FMIAttachment> logFile = [FMIKitFactory createLogFileFromError:error bundle:bundle];
++ (id <FMIMessage>)createErrorMessageForError:(NSError *)error diagnosticData:(nullable NSString *)diagnosticData bundle:(NSBundle *)bundle {
+    id <FMIAttachment> logFile = [FMIKitFactory createLogFileFromError:error diagnosticData:diagnosticData bundle:bundle];
     return [[FMIErrorMessage alloc] initWithLogFile:logFile bundle:bundle];
 }
 
-+ (id <FMIMessage>)createErrorMessageForError:(NSError *)error bundle:(NSBundle *)bundle emailAddress:(NSString *)emailAddress {
-    id <FMIAttachment> logFile = [FMIKitFactory createLogFileFromError:error bundle:bundle];
++ (id <FMIMessage>)createErrorMessageForError:(NSError *)error diagnosticData:(nullable NSString *)diagnosticData bundle:(NSBundle *)bundle emailAddress:(NSString *)emailAddress {
+    id <FMIAttachment> logFile = [FMIKitFactory createLogFileFromError:error diagnosticData:diagnosticData bundle:bundle];
     return [[FMIErrorMessage alloc] initWithLogFile:logFile bundle:bundle emailAddress:emailAddress];
 }
 
-+ (id <FMIAttachment>)createLogFileFromError:(NSError *)error bundle:(NSBundle *)bundle {
-    return [[FMIErrorLogFile alloc] initWithError:error bundle:bundle];
++ (id <FMIAttachment>)createLogFileFromError:(NSError *)error diagnosticData:(nullable NSString *)diagnosticData bundle:(NSBundle *)bundle {
+    return [[FMIErrorLogFile alloc] initWithError:error diagnosticData:diagnosticData bundle:bundle];
 }
 
 + (NSUserDefaults *)createUserDefaults {

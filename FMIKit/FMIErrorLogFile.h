@@ -6,7 +6,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init NS_UNAVAILABLE;
 
-- (instancetype)initWithError:(NSError *)error bundle:(NSBundle *)bundle;
+- (instancetype)initWithError:(NSError *)error diagnosticData:(nullable NSString *)diagnosticData bundle:(NSBundle *)bundle;
 
 @end
 
