@@ -25,6 +25,8 @@ extension NSAttributedString {
         output.beginEditing()
 
         output.fixAttributes(in: range)
+        output.removeAttribute(NSAttributedString.Key.paragraphStyle, range: range)
+        output.removeAttribute(NSAttributedString.Key.shadow, range: range)
         output.removeAttribute(NSAttributedString.Key.textEffect, range: range)
         output.removeAttribute(NSAttributedString.Key.backgroundColor, range: range)
         output.removeAttribute(NSAttributedString.Key.font, range: range)
