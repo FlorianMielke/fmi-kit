@@ -21,7 +21,6 @@
 		171B97E4246AB47400AC36AB /* Mailer+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171B97E3246AB47400AC36AB /* Mailer+Error.swift */; };
 		171CB98B1AFB63C7002BE185 /* FMIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CB98A1AFB63C7002BE185 /* FMIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1722257E21AC6DFF0036D109 /* UI+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1722257D21AC6DFF0036D109 /* UI+Identifier.swift */; };
-		1733EBE9253C130D008FFB2D /* OCMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1733EBE8253C130D008FFB2D /* OCMock.framework */; };
 		17360A6D221EB2BF00A7131B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17360A6C221EB2BF00A7131B /* File.swift */; };
 		17360A6E221EB2BF00A7131B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17360A6C221EB2BF00A7131B /* File.swift */; };
 		17360A76221EB2ED00A7131B /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17360A75221EB2ED00A7131B /* PropertyList.swift */; };
@@ -369,8 +368,6 @@
 		1700A1B61D1D564B0035EFB0 /* NSArray+FMIValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FMIValidation.m"; sourceTree = "<group>"; };
 		17172009247FC03200A54240 /* NSError+Messaged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Messaged.swift"; sourceTree = "<group>"; };
 		1717200B247FC07900A54240 /* FMIKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FMIKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		1719EAF42472688C001BCCEF /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
-		1719EAF52472688D001BCCEF /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		171B97E3246AB47400AC36AB /* Mailer+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mailer+Error.swift"; sourceTree = "<group>"; };
 		171CB9851AFB63C7002BE185 /* FMIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		171CB9891AFB63C7002BE185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -378,7 +375,6 @@
 		171CB9901AFB63C7002BE185 /* FMIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		171CB9961AFB63C7002BE185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1722257D21AC6DFF0036D109 /* UI+Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI+Identifier.swift"; sourceTree = "<group>"; };
-		1733EBE8253C130D008FFB2D /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMock.framework; path = Carthage/Build/iOS/OCMock.framework; sourceTree = "<group>"; };
 		17360A6C221EB2BF00A7131B /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		17360A75221EB2ED00A7131B /* PropertyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
 		1736E46D1BA815400095227A /* FMIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -646,7 +642,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1733EBE9253C130D008FFB2D /* OCMock.framework in Frameworks */,
 				17E00C711B90307500BA7024 /* FMIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,7 +662,6 @@
 				171CB9871AFB63C7002BE185 /* FMIKit */,
 				171CB9941AFB63C7002BE185 /* FMIKitTests */,
 				1736E46E1BA815400095227A /* FMIKitWatch */,
-				17E00C791B9030A000BA7024 /* Frameworks */,
 				171CB9861AFB63C7002BE185 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -785,16 +779,6 @@
 				17360A6C221EB2BF00A7131B /* File.swift */,
 			);
 			name = File;
-			sourceTree = "<group>";
-		};
-		17E00C791B9030A000BA7024 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1719EAF42472688C001BCCEF /* Cartfile.private */,
-				1719EAF52472688D001BCCEF /* Cartfile.resolved */,
-				1733EBE8253C130D008FFB2D /* OCMock.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3591301B78D122E2104C8A32 /* Error Handling */ = {
