@@ -117,7 +117,6 @@
 		3591337C9FD26F6F305D0F25 /* NSString+CSV.h in Headers */ = {isa = PBXBuildFile; fileRef = 359135C561E1C704074B1BE5 /* NSString+CSV.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3591337D846CCAAAB2699E97 /* UIColor+SystemDefaultsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913BDBCF1F37152F467758 /* UIColor+SystemDefaultsTests.m */; };
 		35913397C44ADB79FD9F2682 /* FakeBindingObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913D05B64135615F0DCFA5 /* FakeBindingObserver.m */; };
-		359133B02B4166252E4A81BC /* NSBundle+ConfigurationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913EC046F5C93279EA60E5 /* NSBundle+ConfigurationTest.m */; };
 		359133C23269D029A75404D7 /* FMIKitPrivates.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913D42B24217B3787F33AB /* FMIKitPrivates.h */; };
 		359133C53E12D997996C2376 /* NSString+FMIDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913D078EE58243885A9973 /* NSString+FMIDrawing.m */; };
 		359133C7DA1DDD0C59324678 /* NSPersistentStoreCoordinator+Migration.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913726FA90F81083096904 /* NSPersistentStoreCoordinator+Migration.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -625,7 +624,6 @@
 		35913E8E9BDDABE539467560 /* UIImage+Resizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resizing.h"; sourceTree = "<group>"; };
 		35913EB997235D23138D0F7C /* FMIAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIAttachment.h; sourceTree = "<group>"; };
 		35913EBB315C867FE089DA01 /* FMIMonth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIMonth.m; sourceTree = "<group>"; };
-		35913EC046F5C93279EA60E5 /* NSBundle+ConfigurationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+ConfigurationTest.m"; path = "FMIKitTests/NSBundle+ConfigurationTest.m"; sourceTree = SOURCE_ROOT; };
 		35913EE53B04D994819F02A4 /* FMIEditingToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIEditingToolbar.m; sourceTree = "<group>"; };
 		35913EF550823C94C461F561 /* NSString+FileNameTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+FileNameTests.m"; path = "FMIKitTests/NSString+FileNameTests.m"; sourceTree = SOURCE_ROOT; };
 		35913EFFE3A47D4CC6A7F1A1 /* NSIndexPath+Comparing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+Comparing.m"; sourceTree = "<group>"; };
@@ -936,7 +934,6 @@
 				35913616D0FD2B3E483960A9 /* NSArray+QueryingTests.m */,
 				359131F7171D75365B63C4C7 /* NSBundle+Configuration.h */,
 				3591358170D9EC419DFC70E8 /* NSBundle+Configuration.m */,
-				35913EC046F5C93279EA60E5 /* NSBundle+ConfigurationTest.m */,
 				35913CC1589B139F1C36DA34 /* NSCalendar+Calculations.h */,
 				3591389713098B71689829D1 /* NSCalendar+Calculations.m */,
 				35913632E0EE02D9B8483556 /* NSCalendar+CalculationsTests.m */,
@@ -1554,7 +1551,6 @@
 				35913A2FB93438BE150CC895 /* UIImage+ResizingTests.m in Sources */,
 				35913E4D97B09F143CBDF427 /* NSIndexPath+ComparingTests.m in Sources */,
 				35913D9564011CC935070366 /* NSCalendar+SharedInstancesTests.m in Sources */,
-				359133B02B4166252E4A81BC /* NSBundle+ConfigurationTest.m in Sources */,
 				3591311D4B26ECE18A4AAAA6 /* NSString+FileNameTests.m in Sources */,
 				3591388B0941B6AA808FF3C8 /* UIImage+CreationTests.m in Sources */,
 				35913993E62927E57D1DBD74 /* NSArray+InitializationTests.m in Sources */,
