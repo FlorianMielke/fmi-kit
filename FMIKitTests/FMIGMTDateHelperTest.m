@@ -1,5 +1,4 @@
 #import <XCTest/XCTest.h>
-#import <OCMock/OCMock.h>
 #import "FMIGMTDateHelper.h"
 
 @interface FMIGMTDateHelperTest : XCTestCase
