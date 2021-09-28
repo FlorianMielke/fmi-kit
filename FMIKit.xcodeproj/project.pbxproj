@@ -375,7 +375,6 @@
 		171CB9901AFB63C7002BE185 /* FMIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		171CB9961AFB63C7002BE185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1722257D21AC6DFF0036D109 /* UI+Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI+Identifier.swift"; sourceTree = "<group>"; };
-		172417EA2701D5F200EB0B52 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		172417EE2701DFD500EB0B52 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		17360A6C221EB2BF00A7131B /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		17360A75221EB2ED00A7131B /* PropertyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
@@ -661,7 +660,6 @@
 		171CB97B1AFB63C7002BE185 = {
 			isa = PBXGroup;
 			children = (
-				172417EC2701D63200EB0B52 /* Deployment */,
 				171CB9871AFB63C7002BE185 /* FMIKit */,
 				171CB9941AFB63C7002BE185 /* FMIKitTests */,
 				1736E46E1BA815400095227A /* FMIKitWatch */,
@@ -729,14 +727,6 @@
 				171CB9961AFB63C7002BE185 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		172417EC2701D63200EB0B52 /* Deployment */ = {
-			isa = PBXGroup;
-			children = (
-				172417EA2701D5F200EB0B52 /* Package.swift */,
-			);
-			name = Deployment;
 			sourceTree = "<group>";
 		};
 		1736E46E1BA815400095227A /* FMIKitWatch */ = {
