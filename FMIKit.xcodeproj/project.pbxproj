@@ -366,6 +366,7 @@
 /* Begin PBXFileReference section */
 		1700A1B51D1D564B0035EFB0 /* NSArray+FMIValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FMIValidation.h"; sourceTree = "<group>"; };
 		1700A1B61D1D564B0035EFB0 /* NSArray+FMIValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FMIValidation.m"; sourceTree = "<group>"; };
+		170254942705A8570057D16B /* FMIKit.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FMIKit.xctestplan; sourceTree = "<group>"; };
 		17172009247FC03200A54240 /* NSError+Messaged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Messaged.swift"; sourceTree = "<group>"; };
 		1717200B247FC07900A54240 /* FMIKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FMIKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		171B97E3246AB47400AC36AB /* Mailer+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mailer+Error.swift"; sourceTree = "<group>"; };
@@ -657,9 +658,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		170254952705A8630057D16B /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				170254942705A8570057D16B /* FMIKit.xctestplan */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
 		171CB97B1AFB63C7002BE185 = {
 			isa = PBXGroup;
 			children = (
+				170254952705A8630057D16B /* Configuration */,
 				171CB9871AFB63C7002BE185 /* FMIKit */,
 				171CB9941AFB63C7002BE185 /* FMIKitTests */,
 				1736E46E1BA815400095227A /* FMIKitWatch */,

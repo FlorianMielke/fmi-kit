@@ -1,0 +1,43 @@
+{
+  "configurations" : [
+    {
+      "id" : "8AEC4F05-3587-4DA9-9EE7-E870AFD64122",
+      "name" : "Concurrency",
+      "options" : {
+        "threadSanitizerEnabled" : true
+      }
+    },
+    {
+      "id" : "ECF8FDEF-995C-4AD7-9424-ABB836CD5921",
+      "name" : "Memory Checker",
+      "options" : {
+        "addressSanitizer" : {
+          "enabled" : true
+        },
+        "undefinedBehaviorSanitizerEnabled" : true
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "language" : "en",
+    "region" : "US",
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:FMIKit.xcodeproj",
+      "identifier" : "171CB9841AFB63C7002BE185",
+      "name" : "FMIKit"
+    },
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:FMIKit.xcodeproj",
+        "identifier" : "171CB98F1AFB63C7002BE185",
+        "name" : "FMIKitTests"
+      }
+    }
+  ],
+  "version" : 1
+}
