@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:FMIKit.xcodeproj/FMIKit.xctestplan"
+            reference = "container:FMIKit.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

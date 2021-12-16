@@ -245,7 +245,6 @@
 		35913A496D71B8214E3401CC /* NSBundle+FMIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913762DEFCE14348F4DB8D /* NSBundle+FMIKit.h */; };
 		35913A51F0833F82E9F389EB /* FMIFileCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = 359132C60C9139F269124BBB /* FMIFileCoordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913A644E32EDA55DE2390D /* FMIEditingToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913EE53B04D994819F02A4 /* FMIEditingToolbar.m */; };
-		35913A6B90D8203C5C360B21 /* FMICoreDataStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913AAE65B14D777593872B /* FMICoreDataStoreTests.m */; };
 		35913A72F5D51B23909947C0 /* UITableView+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913D93A22C9932A027B731 /* UITableView+IndexPath.m */; };
 		35913A739B42D96FF77C3C24 /* NSCalendar+SharedInstances.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913F96CE17A3187641AAF6 /* NSCalendar+SharedInstances.m */; };
 		35913A7B428E31E8E7F8545D /* NSNumberFormatter+Editing.h in Headers */ = {isa = PBXBuildFile; fileRef = 359130B04AC7C0B171B2C775 /* NSNumberFormatter+Editing.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -258,7 +257,6 @@
 		35913AF59B80BFED56130F19 /* FMIDurationFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 359137D4F9CAA68F777105FE /* FMIDurationFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913B0687B5CDD7A150E51F /* FMICSVFileDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 359137888B3C38A449444CA7 /* FMICSVFileDescription.m */; };
 		35913B131B769C2477AF5E6E /* FMIBindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 359135296203D2254ECA66B5 /* FMIBindingManager.m */; };
-		35913B1BBD57FEFEF67F8F61 /* FMICoreDataStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913A5F9D191430E683497C /* FMICoreDataStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913B2CCE9E8D9A25AEC241 /* FMITimeZoneHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913C8DAE3035AE230A7436 /* FMITimeZoneHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913B4FB9CABCFE02466025 /* FMIBindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 359135296203D2254ECA66B5 /* FMIBindingManager.m */; };
 		35913B59A653A4F236B191C2 /* UILabel+Sizing.h in Headers */ = {isa = PBXBuildFile; fileRef = 359132EB51B83DC1F96ABE93 /* UILabel+Sizing.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -280,7 +278,6 @@
 		35913C0BA4F4AEBEF7ED523C /* NSString+FileName.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913F382E22B5CEEA0C232D /* NSString+FileName.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913C1AC73B522AA7E0E21E /* NSFileManager+DirectoryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 359138000372236FD48BF0A2 /* NSFileManager+DirectoryAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913C1FF167A167B96D4A32 /* FMIDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 359135B46D0291D94213149D /* FMIDateHelper.m */; };
-		35913C27F6F4CA18BD799A75 /* FMICoreDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913AAA7FB3673DBB722E43 /* FMICoreDataStore.m */; };
 		35913C2A63CEEB34ED449AA5 /* FMIDurationFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913522E4A8BE97B4DD5CCE /* FMIDurationFormatterTests.m */; };
 		35913C3C87D212B377485C66 /* NSBundle+FMIAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591364580F7582863F6E061 /* NSBundle+FMIAppInfo.m */; };
 		35913C444A0E39F104172058 /* FMIUUIDHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 359139A832DE54E59DA264F8 /* FMIUUIDHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -544,14 +541,11 @@
 		35913A05AC811C8207D6C975 /* FMIKitPrivates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIKitPrivates.m; sourceTree = "<group>"; };
 		35913A27EB3146523963164E /* UITableView+Selection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Selection.h"; sourceTree = "<group>"; };
 		35913A4AED9C8154B25BDEDD /* UILabel+StateHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+StateHandling.h"; sourceTree = "<group>"; };
-		35913A5F9D191430E683497C /* FMICoreDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMICoreDataStore.h; sourceTree = "<group>"; };
 		35913A666EC95E1D148B78FC /* FMIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIAlertView.h; sourceTree = "<group>"; };
 		35913A7111C3DA9E3B5ED86F /* FMIKitConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIKitConstants.h; sourceTree = "<group>"; };
 		35913A7C29DFBBC56090BA69 /* FMIDateHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIDateHelperTest.m; path = FMIKitTests/FMIDateHelperTest.m; sourceTree = SOURCE_ROOT; };
 		35913A7FB972942C65A78E6A /* NSArray+InitializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+InitializationTests.m"; path = "FMIKitTests/NSArray+InitializationTests.m"; sourceTree = SOURCE_ROOT; };
 		35913A84FF9AC6A10C9A2D85 /* UIView+I7ShakeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+I7ShakeAnimation.m"; sourceTree = "<group>"; };
-		35913AAA7FB3673DBB722E43 /* FMICoreDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMICoreDataStore.m; sourceTree = "<group>"; };
-		35913AAE65B14D777593872B /* FMICoreDataStoreTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMICoreDataStoreTests.m; path = FMIKitTests/FMICoreDataStoreTests.m; sourceTree = SOURCE_ROOT; };
 		35913AC3D0EA8A5A3AFA19B6 /* FMIEventParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIEventParser.h; sourceTree = "<group>"; };
 		35913B071455934120E45D3B /* FMIBlurredView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIBlurredView.m; sourceTree = "<group>"; };
 		35913B205FA4C90F8E45CDC4 /* NSDateFormatter+TimingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDateFormatter+TimingTests.m"; path = "FMIKitTests/NSDateFormatter+TimingTests.m"; sourceTree = SOURCE_ROOT; };
@@ -813,11 +807,8 @@
 		35913289D82054F3183139DB /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				35913A5F9D191430E683497C /* FMICoreDataStore.h */,
-				35913AAA7FB3673DBB722E43 /* FMICoreDataStore.m */,
 				359132CDEB6412F14213652E /* FMICoreDataStoreConfiguration.h */,
 				3591396BC9481554FE6BA9CE /* FMICoreDataStoreConfiguration.m */,
-				35913AAE65B14D777593872B /* FMICoreDataStoreTests.m */,
 				35913B2C358576012F63DCEC /* FMICSVDeserializer.h */,
 				35913CD7F29F8132F4BF7B4E /* FMICSVDeserializer.m */,
 				359134F49145637101E4632B /* FMICSVDeserializerTests.m */,
@@ -1188,7 +1179,6 @@
 				35913963293C31505BF02609 /* FMIWeek.h in Headers */,
 				35913405425AD225B4CCA397 /* FMIPeriod.h in Headers */,
 				3591370EAFB64A4FC2490D64 /* NSLocale+German.h in Headers */,
-				35913B1BBD57FEFEF67F8F61 /* FMICoreDataStore.h in Headers */,
 				35913A14F017368DF083B006 /* FMICoreDataStoreConfiguration.h in Headers */,
 				3591344C959327C079222242 /* FMICSVFileDescription.h in Headers */,
 				35913E761AA4F73EEBB57233 /* FMICSVFieldDeserializer.h in Headers */,
@@ -1488,7 +1478,6 @@
 				35913CCA67DABA21973D27B3 /* NSLocale+German.m in Sources */,
 				176F0396219AE108000FCFDC /* Named.swift in Sources */,
 				3591345535873DA9F2A1ABD3 /* FMICoreDataStoreConfiguration.m in Sources */,
-				35913C27F6F4CA18BD799A75 /* FMICoreDataStore.m in Sources */,
 				17360A6D221EB2BF00A7131B /* File.swift in Sources */,
 				35913688CD23334177B4FA7B /* FMICSVFieldDeserializer.m in Sources */,
 				35913422D3F167AACE6ADBD4 /* FMICSVDeserializer.m in Sources */,
@@ -1558,7 +1547,6 @@
 				3591372D149EE1709ED0656C /* FakeTextViewDelegate.m in Sources */,
 				35913397C44ADB79FD9F2682 /* FakeBindingObserver.m in Sources */,
 				3591327CE69A5FC3DDC3B099 /* FakeBindingModel.m in Sources */,
-				35913A6B90D8203C5C360B21 /* FMICoreDataStoreTests.m in Sources */,
 				359131244837E1AE890003ED /* FMICSVDeserializerTests.m in Sources */,
 				359134F4C7C3CC6859A6DA57 /* FMICSVFieldDeserializerTests.m in Sources */,
 				359131721FABCE9125F49853 /* NSFileManager+DirectoryAdditionsTests.m in Sources */,

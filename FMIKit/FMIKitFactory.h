@@ -1,7 +1,6 @@
 @import UIKit;
 
 @class FMIDateHelper;
-@class FMICoreDataStore;
 @class FMIFileCoordinator;
 @class FMIReviewNotificationCoordinator;
 @class FMIWhatsNewCoordinator;
@@ -22,8 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSUserDefaults *)createUserDefaults;
 
 + (FMIFileCoordinator *)createFileCoordinator;
-
-+ (FMICoreDataStore *)createStore;
 
 + (FMIReviewNotificationCoordinator *)createReviewNotificationCoordinatorForAppStoreID:(NSString *)appStoreID;
 

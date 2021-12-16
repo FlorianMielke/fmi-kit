@@ -1,7 +1,6 @@
 #import "FMIKitFactory.h"
 #import "FMIActivityIndicatorAlertView.h"
 #import "FMIDateHelper.h"
-#import "FMICoreDataStore.h"
 #import "FMIFileCoordinator.h"
 #import "FMIReviewNotificationCoordinator.h"
 #import "FMIWhatsNewCoordinator.h"
@@ -22,10 +21,6 @@
 
 + (FMIDateHelper *)createDateHelper {
     return [[FMIDateHelper alloc] init];
-}
-
-+ (FMICoreDataStore *)createStore {
-    return [FMICoreDataStore sharedStore];
 }
 
 + (FMIReviewNotificationCoordinator *)createReviewNotificationCoordinatorForAppStoreID:(NSString *)appStoreID {
