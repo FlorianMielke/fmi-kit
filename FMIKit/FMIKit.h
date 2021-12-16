@@ -81,7 +81,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/UIScrollView+Scrolling.h>
 #import <FMIKit/UIView+I7ShakeAnimation.h>
 #import <FMIKit/NSIndexPath+Comparing.h>
-#import <FMIKit/NSManagedObjectContext+PersistentStoreAdditions.h>
 
 #import <FMIKit/FMIAlertController.h>
 #import <FMIKit/FMIAlertView.h>
@@ -106,11 +105,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #pragma mark - Common
 
 #import <FMIKit/FMIURLProvider.h>
-
-#pragma mark - Persistence
-
-#import <FMIKit/FMICoreDataStoreConfiguration.h>
-#import <FMIKit/NSPersistentStoreCoordinator+Migration.h>
 
 #pragma mark - Review & What's New
 
