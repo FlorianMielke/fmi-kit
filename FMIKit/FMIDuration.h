@@ -14,7 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
  *  interface for specific and relative time interval values. The objects you create using FMIDuration are referred to as time interval objects. They 
  *  are immutable objects.
  */
-NS_SWIFT_NAME(Duration)
 @interface FMIDuration : NSObject <NSCopying, NSCoding>
 
 /**
