@@ -15,12 +15,13 @@ typedef NS_ENUM(NSInteger, FMIDurationFormatterStyle) {
     FMIDurationFormatterStyleDecimal = 1,
 	FMIDurationFormatterStyleTimeLeadingZero = 2,
 	FMIDurationFormatterStyleDecimalWithSymbol = 3,
-};
+} NS_SWIFT_NAME(DurationFormatterStyle);
 
 
 /**
  *	Instances of FMIDurationFormatter create string representations of FMIDuration objects, and convert textual representations of durations into FMIDuration objects.
  */
+NS_SWIFT_NAME(DurationFormatter)
 @interface FMIDurationFormatter : NSFormatter
 
 /**

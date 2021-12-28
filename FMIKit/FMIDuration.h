@@ -10,17 +10,18 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- *	FMIDuration objects represent a timeinterval. FMIDuration is a class cluster; its single public superclass, FMIDuration, declares the programmatic
- *  interface for specific and relative timeinterval values. The objects you create using FMIDuration are referred to as timeinterval objects. They 
+ *	FMIDuration objects represent a time interval. FMIDuration is a class cluster; its single public superclass, FMIDuration, declares the programmatic
+ *  interface for specific and relative time interval values. The objects you create using FMIDuration are referred to as time interval objects. They 
  *  are immutable objects.
  */
+NS_SWIFT_NAME(Duration)
 @interface FMIDuration : NSObject <NSCopying, NSCoding>
 
 /**
  *	Returns the interval of the receiver.
  *	@return	The interval.
  */
-@property (readonly, NS_NONATOMIC_IOSONLY) NSTimeInterval timeInterval;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSTimeInterval timeInterval NS_SWIFT_NAME(seconds);
 
 /**
  *	Returns a Boolean that indicates whether the receiver is negative or not.
@@ -70,7 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
  *	@param	seconds	The number of seconds.
  *	@return	A new duration.
  */
-- (instancetype)initWithTimeInterval:(NSTimeInterval)seconds NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithTimeInterval:(NSTimeInterval)seconds NS_SWIFT_NAME(init(seconds:)) NS_DESIGNATED_INITIALIZER;
 
 /**
  *	Returns an FMIDuration object initialized from data in the given unarchiver.
