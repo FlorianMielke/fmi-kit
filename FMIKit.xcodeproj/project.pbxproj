@@ -34,6 +34,7 @@
 		1738D4511AFC948100B96929 /* TestImagePortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4491AFC948100B96929 /* TestImagePortrait.png */; };
 		1738D4521AFC948100B96929 /* TestImagePortraitSmallWidth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */; };
 		1738D4531AFC948100B96929 /* TestImageSquared.png in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44B1AFC948100B96929 /* TestImageSquared.png */; };
+		173E1C6B277C532C0057C6D2 /* FMIDuration+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173E1C6A277C532C0057C6D2 /* FMIDuration+Additions.swift */; };
 		176507AC261DBDE600DB33E0 /* UIButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176507AB261DBDE600DB33E0 /* UIButton+Additions.swift */; };
 		176507B1261DBE2800DB33E0 /* UIToolbar+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176507B0261DBE2800DB33E0 /* UIToolbar+Additions.swift */; };
 		176F0390219AE01D000FCFDC /* CellMarkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F038F219AE01D000FCFDC /* CellMarkable.swift */; };
@@ -380,6 +381,7 @@
 		1738D4491AFC948100B96929 /* TestImagePortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TestImagePortrait.png; path = Resources/TestImagePortrait.png; sourceTree = "<group>"; };
 		1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TestImagePortraitSmallWidth.jpg; path = Resources/TestImagePortraitSmallWidth.jpg; sourceTree = "<group>"; };
 		1738D44B1AFC948100B96929 /* TestImageSquared.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TestImageSquared.png; path = Resources/TestImageSquared.png; sourceTree = "<group>"; };
+		173E1C6A277C532C0057C6D2 /* FMIDuration+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FMIDuration+Additions.swift"; sourceTree = "<group>"; };
 		176507AB261DBDE600DB33E0 /* UIButton+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Additions.swift"; sourceTree = "<group>"; };
 		176507B0261DBE2800DB33E0 /* UIToolbar+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIToolbar+Additions.swift"; sourceTree = "<group>"; };
 		176F038F219AE01D000FCFDC /* CellMarkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMarkable.swift; sourceTree = "<group>"; };
@@ -831,6 +833,7 @@
 			children = (
 				359137AD341DFF321A2C62E3 /* FMIDuration.h */,
 				359133C23A747D93F2A4C95C /* FMIDuration.m */,
+				173E1C6A277C532C0057C6D2 /* FMIDuration+Additions.swift */,
 				359137D4F9CAA68F777105FE /* FMIDurationFormatter.h */,
 				359135E4773D0271FE61736C /* FMIDurationFormatter.m */,
 				35913522E4A8BE97B4DD5CCE /* FMIDurationFormatterTests.m */,
@@ -1459,6 +1462,7 @@
 				176F0390219AE01D000FCFDC /* CellMarkable.swift in Sources */,
 				3591345A2136C2A5E56746E1 /* FMICSVFileDescription.m in Sources */,
 				359135926CF596F256A1E7BD /* FMIFileCoordinator.m in Sources */,
+				173E1C6B277C532C0057C6D2 /* FMIDuration+Additions.swift in Sources */,
 				359133E2BFAD7E2B2B7156C3 /* FMIFieldDescription.m in Sources */,
 				17D878D3247E901D00C1B35F /* MailController.swift in Sources */,
 				359136A4DB723AE1921B1A7F /* NSFileManager+DirectoryAdditions.m in Sources */,

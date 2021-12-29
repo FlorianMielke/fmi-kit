@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
  *	Returns the interval of the receiver.
  *	@return	The interval.
  */
-@property (readonly, NS_NONATOMIC_IOSONLY) NSTimeInterval timeInterval NS_SWIFT_NAME(seconds);
+@property (readonly, NS_NONATOMIC_IOSONLY) NSTimeInterval timeInterval;
 
 /**
  *	Returns a Boolean that indicates whether the receiver is negative or not.
@@ -70,7 +70,7 @@ NS_ASSUME_NONNULL_BEGIN
  *	@param	seconds	The number of seconds.
  *	@return	A new duration.
  */
-- (instancetype)initWithTimeInterval:(NSTimeInterval)seconds NS_SWIFT_NAME(init(seconds:)) NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithTimeInterval:(NSTimeInterval)seconds NS_DESIGNATED_INITIALIZER;
 
 /**
  *	Returns an FMIDuration object initialized from data in the given unarchiver.
