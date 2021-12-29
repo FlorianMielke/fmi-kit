@@ -17,12 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FMIDuration : NSObject <NSCopying, NSCoding>
 
 /**
- *	Returns the interval of the receiver.
- *	@return	The interval.
- */
-@property (readonly, NS_NONATOMIC_IOSONLY) NSTimeInterval timeInterval;
-
-/**
  *	Returns a Boolean that indicates whether the receiver is negative or not.
  *	@return	YES if the receiver is negative, otherwise NO.
  */
@@ -44,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
  *	Returns the seconds unit of the receiver.
  *	@return	The seconds unit.
  */
-@property (readonly, NS_NONATOMIC_IOSONLY) NSInteger seconds;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSTimeInterval seconds;
 
 /**
  *	Creates and returns an FMIDuration object set to 0 seconds.
@@ -57,20 +51,14 @@ NS_ASSUME_NONNULL_BEGIN
  *	@param	seconds	The number of seconds.
  *	@return	An FMIDuration object initialized with seconds.
  */
-+ (FMIDuration *)durationWithTimeInterval:(NSTimeInterval)seconds;
-
-/**
- * Returns an FMIDuration object equivalent to 24 hours in seconds.
- * @return An FMIDuration object equivalent to 24 hours in seconds.
- */
-+ (FMIDuration *)twentyFourHours;
++ (FMIDuration *)durationWithSeconds:(NSTimeInterval)seconds;
 
 /**
  *	Returns an FMIDuration object initialized with a given number of seconds.
  *	@param	seconds	The number of seconds.
  *	@return	A new duration.
  */
-- (instancetype)initWithTimeInterval:(NSTimeInterval)seconds NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithSeconds:(NSTimeInterval)seconds NS_DESIGNATED_INITIALIZER;
 
 /**
  *	Returns an FMIDuration object initialized from data in the given unarchiver.

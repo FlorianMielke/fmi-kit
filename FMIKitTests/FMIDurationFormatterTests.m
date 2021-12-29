@@ -196,19 +196,19 @@
 - (void)verifyDurationFromString:(NSString *)string style:(FMIDurationFormatterStyle)style returnsTimeInterval:(NSTimeInterval)timeInterval {
     [[self formatter] setStyle:style];
     FMIDuration *duration = [[self formatter] durationFromString:string];
-    XCTAssertEqual([duration timeInterval], timeInterval);
+    XCTAssertEqual(duration.seconds, timeInterval);
 }
 
 - (void)verifyStringFromDurationWithTimeInterval:(NSTimeInterval)timeInterval style:(FMIDurationFormatterStyle)style returnsFormattedString:(NSString *)string {
     [[self formatter] setStyle:style];
-    FMIDuration *duration = [FMIDuration durationWithTimeInterval:timeInterval];
+    FMIDuration *duration = [FMIDuration durationWithSeconds:timeInterval];
     NSString *formattedString = [[self formatter] stringFromDuration:duration];
     XCTAssertEqualObjects(formattedString, string);
 }
 
 - (void)verifyEditingStringFromDurationWithTimeInterval:(NSTimeInterval)timeInterval style:(FMIDurationFormatterStyle)style returnsEditingString:(NSString *)editingString {
     [[self formatter] setStyle:style];
-    FMIDuration *duration = [FMIDuration durationWithTimeInterval:timeInterval];
+    FMIDuration *duration = [FMIDuration durationWithSeconds:timeInterval];
     NSString *formattedString = [[self formatter] editingStringFromDuration:duration];
     XCTAssertEqualObjects(formattedString, editingString);
 }

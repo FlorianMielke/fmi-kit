@@ -47,22 +47,22 @@ static NSString *const FMIDurationFormatterFormatWithNumericPrefixForNegativeDur
 
 - (BOOL)getObjectValue:(__autoreleasing id *)obj forString:(NSString *)string errorDescription:(NSString *__autoreleasing *)error {
     BOOL returnValue = NO;
-    NSTimeInterval timeInterval = 0;
+    NSTimeInterval seconds = 0;
     if (string != nil && ![string isEqualToString:@""]) {
         NSScanner *scanner = [NSScanner scannerWithString:string];
         double stringDuration = [self stringDurationFromString:string scanner:scanner];
         if ([self isDurationLessThanAnHour:stringDuration]) {
-            timeInterval = [self timeIntervalFromMinutes:stringDuration];
+            seconds = [self timeIntervalFromMinutes:stringDuration];
         } else {
-            timeInterval = [self timeIntervalFromStringDuration:stringDuration];
+            seconds = [self timeIntervalFromStringDuration:stringDuration];
             if ((stringDuration < 0)) {
-                timeInterval *= (-1);
+                seconds *= (-1);
             }
         }
     }
     returnValue = YES;
     if (obj) {
-        *obj = [FMIDuration durationWithTimeInterval:timeInterval];
+        *obj = [FMIDuration durationWithSeconds:seconds];
     }
     return returnValue;
 }

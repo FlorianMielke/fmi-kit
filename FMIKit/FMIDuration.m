@@ -11,34 +11,30 @@ static NSString *const FMIDurationEncodingTimeIntervalKey = @"timeInterval";
 
 @interface FMIDuration ()
 
-@property (NS_NONATOMIC_IOSONLY) NSTimeInterval timeInterval;
+@property (NS_NONATOMIC_IOSONLY) NSTimeInterval seconds;
 
 @end
 
 @implementation FMIDuration
 
 + (FMIDuration *)zero {
-    return [[FMIDuration alloc] initWithTimeInterval:0];
+    return [[FMIDuration alloc] initWithSeconds:0];
 }
 
-+ (FMIDuration *)durationWithTimeInterval:(NSTimeInterval)seconds {
-    return [[FMIDuration alloc] initWithTimeInterval:seconds];
++ (FMIDuration *)durationWithSeconds:(NSTimeInterval)seconds {
+    return [[FMIDuration alloc] initWithSeconds:seconds];
 }
 
-+ (FMIDuration *)twentyFourHours {
-    return [[FMIDuration alloc] initWithTimeInterval:86400];
-}
-
-- (instancetype)initWithTimeInterval:(NSTimeInterval)seconds {
+- (instancetype)initWithSeconds:(NSTimeInterval)seconds {
     self = [super init];
     if (self) {
-        self.timeInterval = seconds;
+        self.seconds = seconds;
     }
     return self;
 }
 
 - (instancetype)init {
-    return [self initWithTimeInterval:0];
+    return [self initWithSeconds:0];
 }
 
 - (NSInteger)hours {
@@ -49,20 +45,16 @@ static NSString *const FMIDurationEncodingTimeIntervalKey = @"timeInterval";
     return ([self timeIntervalAsMinutes] % 60);
 }
 
-- (NSInteger)seconds {
-    return fmod(fabs(self.timeInterval), 60);
-}
-
 - (BOOL)isNegative {
-    return (self.timeInterval < 0);
+    return (self.seconds < 0);
 }
 
 - (NSInteger)timeIntervalAsMinutes {
-    return roundl(fabs(self.timeInterval) / 60);
+    return roundl(fabs(self.seconds) / 60);
 }
 
 - (NSDecimal)decimalValue {
-    return [@(self.timeInterval) decimalValue];
+    return [@(self.seconds) decimalValue];
 }
 
 - (BOOL)isEqual:(id)object {
@@ -76,18 +68,18 @@ static NSString *const FMIDurationEncodingTimeIntervalKey = @"timeInterval";
 }
 
 - (BOOL)isEqualToDuration:(FMIDuration *)duration {
-    if (!duration) {
+    if (duration == nil) {
         return NO;
     }
-    BOOL hasEqualTimeInterval = (self.timeInterval == duration.timeInterval);
-    return hasEqualTimeInterval;
+    BOOL hasEqualSeconds = (self.seconds == duration.seconds);
+    return hasEqualSeconds;
 }
 
 - (NSComparisonResult)compare:(FMIDuration *)anotherDuration {
     NSComparisonResult result = NSOrderedAscending;
-    if (self.timeInterval == anotherDuration.timeInterval) {
+    if (self.seconds == anotherDuration.seconds) {
         result = NSOrderedSame;
-    } else if (self.timeInterval > anotherDuration.timeInterval) {
+    } else if (self.seconds > anotherDuration.seconds) {
         result = NSOrderedDescending;
     }
 
@@ -97,7 +89,7 @@ static NSString *const FMIDurationEncodingTimeIntervalKey = @"timeInterval";
 - (id)copyWithZone:(NSZone *)zone {
     FMIDuration *copy = [[[self class] alloc] init];
     if (copy) {
-        [copy setTimeInterval:self.timeInterval];
+        [copy setSeconds:self.seconds];
     }
     return copy;
 }
@@ -105,17 +97,17 @@ static NSString *const FMIDurationEncodingTimeIntervalKey = @"timeInterval";
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
     if (self) {
-        self.timeInterval = [aDecoder decodeDoubleForKey:FMIDurationEncodingTimeIntervalKey];
+        self.seconds = [aDecoder decodeDoubleForKey:FMIDurationEncodingTimeIntervalKey];
     }
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeDouble:self.timeInterval forKey:FMIDurationEncodingTimeIntervalKey];
+    [aCoder encodeDouble:self.seconds forKey:FMIDurationEncodingTimeIntervalKey];
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"<FMIDuration: %p, Seconds: %0.f>", self, self.timeInterval];
+    return [NSString stringWithFormat:@"<FMIDuration: %p, seconds: %0.f>", self, self.seconds];
 }
 
 @end
