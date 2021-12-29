@@ -54,6 +54,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (FMIDuration *)durationWithSeconds:(NSTimeInterval)seconds;
 
 /**
+ * Returns an FMIDuration object equivalent to 24 hours in seconds.
+ * @return An FMIDuration object equivalent to 24 hours in seconds.
+ */
++ (FMIDuration *)twentyFourHours;
+
+/**
  *	Returns an FMIDuration object initialized with a given number of seconds.
  *	@param	seconds	The number of seconds.
  *	@return	A new duration.

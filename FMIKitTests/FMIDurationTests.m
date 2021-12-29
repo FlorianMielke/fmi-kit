@@ -41,6 +41,12 @@
     XCTAssertEqual([FMIDuration durationWithSeconds:1].seconds, 1);
 }
 
+- (void)test24HoursFactoryMethodShouldReturn86400Seconds {
+    NSTimeInterval secondsFor24Hours = 86400;
+    FMIDuration *duration = [FMIDuration durationWithSeconds:secondsFor24Hours];
+    XCTAssertTrue([[FMIDuration twentyFourHours] compare:duration] == NSOrderedSame);
+}
+
 - (void)testDurationShouldBeEqualToSelf {
     XCTAssertEqual(self.duration, self.duration);
 }

@@ -25,6 +25,10 @@ static NSString *const FMIDurationEncodingTimeIntervalKey = @"timeInterval";
     return [[FMIDuration alloc] initWithSeconds:seconds];
 }
 
++ (FMIDuration *)twentyFourHours {
+    return [[FMIDuration alloc] initWithSeconds:86400];
+}
+
 - (instancetype)initWithSeconds:(NSTimeInterval)seconds {
     self = [super init];
     if (self) {
