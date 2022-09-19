@@ -11,10 +11,10 @@
 
 
 typedef NS_ENUM(NSInteger, FMIDurationFormatterStyle) {
-    FMIDurationFormatterStyleTime = 0,
-    FMIDurationFormatterStyleDecimal = 1,
-	FMIDurationFormatterStyleTimeLeadingZero = 2,
-	FMIDurationFormatterStyleDecimalWithSymbol = 3,
+  FMIDurationFormatterStyleTime = 0,
+  FMIDurationFormatterStyleDecimal = 1,
+  FMIDurationFormatterStyleTimeLeadingZero = 2,
+  FMIDurationFormatterStyleDecimalWithSymbol = 3,
 } NS_SWIFT_NAME(DurationFormatterStyle);
 
 
@@ -33,6 +33,11 @@ NS_SWIFT_NAME(DurationFormatter)
  *	The locale for the receiver.
  */
 @property (NS_NONATOMIC_IOSONLY) NSLocale *locale;
+
+/**
+ *  Designated initializer
+ */
+- (instancetype)initWithDurationStyle:(enum FMIDurationFormatterStyle)style;
 
 /**
  *	Returns a string representation of a given duration used for editing.
