@@ -91,7 +91,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIEventParser.h>
 #import <FMIKit/FMIHairlineView.h>
 #import <FMIKit/FMINonAminatedPushSegue.h>
-#import <FMIKit/FMINumericTextView.h>
 #import <FMIKit/FMITableView.h>
 
 #pragma mark - Messages
