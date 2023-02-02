@@ -6,6 +6,7 @@
 //
 
 #import "FMIDuration.h"
+#import "FMIHelpers.h"
 
 static NSString *const FMIDurationEncodingTimeIntervalKey = @"timeInterval";
 
@@ -98,16 +99,20 @@ static NSString *const FMIDurationEncodingTimeIntervalKey = @"timeInterval";
     return copy;
 }
 
++ (BOOL)supportsSecureCoding {
+  return YES;
+}
+
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
     if (self) {
-        self.seconds = [aDecoder decodeDoubleForKey:FMIDurationEncodingTimeIntervalKey];
+      FMI_DECODE_DOUBLE(aDecoder, seconds);
     }
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeDouble:self.seconds forKey:FMIDurationEncodingTimeIntervalKey];
+    FMI_ENCODE_DOUBLE(aCoder, seconds);
 }
 
 - (NSString *)description {

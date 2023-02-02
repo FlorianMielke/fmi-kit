@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  interface for specific and relative time interval values. The objects you create using FMIDuration are referred to as time interval objects. They 
  *  are immutable objects.
  */
-@interface FMIDuration : NSObject <NSCopying, NSCoding>
+@interface FMIDuration : NSObject <NSCopying, NSSecureCoding>
 
 /**
  *	Returns a Boolean that indicates whether the receiver is negative or not.

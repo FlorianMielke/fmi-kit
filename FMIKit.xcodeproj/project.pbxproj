@@ -176,7 +176,6 @@
 		359136FDA73C0D620C0B6A1F /* NSUndoManager+Grouping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591317C8AD6D1BA6F6AE821 /* NSUndoManager+Grouping.m */; };
 		3591370EAFB64A4FC2490D64 /* NSLocale+German.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913DC40BE4C0F145C58281 /* NSLocale+German.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913719BE86EFDA122627D8 /* NSString+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591313595AFF6F7F428D3B2 /* NSString+Validation.m */; };
-		3591372D149EE1709ED0656C /* FakeTextViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 359135024938D421C87206DA /* FakeTextViewDelegate.m */; };
 		3591373644FB08E25901CCB7 /* NSCalendar+Calculations.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913CC1589B139F1C36DA34 /* NSCalendar+Calculations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359137389738409C49FB6487 /* UIImage+Masking.h in Headers */ = {isa = PBXBuildFile; fileRef = 359137FAFB5044CC1452A497 /* UIImage+Masking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913738CC5632FFBFBA24F2 /* NSArray+QueryingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913616D0FD2B3E483960A9 /* NSArray+QueryingTests.m */; };
@@ -446,7 +445,6 @@
 		359134E86EB3E44A077B1AF3 /* FakeBindingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeBindingModel.m; sourceTree = "<group>"; };
 		359134F49145637101E4632B /* FMICSVDeserializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMICSVDeserializerTests.m; path = FMIKitTests/FMICSVDeserializerTests.m; sourceTree = SOURCE_ROOT; };
 		359134F6A691844281EE4851 /* FMIEditingToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIEditingToolbar.h; sourceTree = "<group>"; };
-		359135024938D421C87206DA /* FakeTextViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeTextViewDelegate.m; sourceTree = "<group>"; };
 		35913502F8888774D158EA01 /* FakeBindingObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeBindingObserver.h; sourceTree = "<group>"; };
 		35913507D5DF4DF31A199114 /* FMIEventPaserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIEventPaserTests.m; path = FMIKitTests/FMIEventPaserTests.m; sourceTree = SOURCE_ROOT; };
 		35913522E4A8BE97B4DD5CCE /* FMIDurationFormatterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIDurationFormatterTests.m; path = FMIKitTests/FMIDurationFormatterTests.m; sourceTree = SOURCE_ROOT; };
@@ -503,7 +501,6 @@
 		3591389713098B71689829D1 /* NSCalendar+Calculations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+Calculations.m"; sourceTree = "<group>"; };
 		359138990E0045B41F6BF720 /* NSObject+AutoDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AutoDescription.h"; sourceTree = "<group>"; };
 		359138BFDD7A292979CBA6C9 /* FMIErrorLogFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIErrorLogFile.m; sourceTree = "<group>"; };
-		359138CF1839E68FA7D5ACC1 /* FakeTextViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeTextViewDelegate.h; sourceTree = "<group>"; };
 		359138E216A89E7801EC34A1 /* FMIMessageAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIMessageAttachment.h; sourceTree = "<group>"; };
 		359138E5F329478811A92C93 /* FMIAcceptedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIAcceptedCell.m; sourceTree = "<group>"; };
 		35913905530E10E71AE0B13C /* FMIStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIStore.h; sourceTree = "<group>"; };
@@ -985,8 +982,6 @@
 				35913287200CA2EDFD76F045 /* FakeCSVFileDescription.m */,
 				3591320A24AF7C3C0DF96AE6 /* FakeTableViewDataSource.h */,
 				35913F32E520C67BD6452446 /* FakeTableViewDataSource.m */,
-				359138CF1839E68FA7D5ACC1 /* FakeTextViewDelegate.h */,
-				359135024938D421C87206DA /* FakeTextViewDelegate.m */,
 			);
 			name = Doubles;
 			sourceTree = "<group>";
@@ -1501,7 +1496,6 @@
 				35913509AC4C39108D37B879 /* FMIKitPrivatesTests.m in Sources */,
 				359131B9C6A98AF2F7A8CF8B /* FakeTableViewDataSource.m in Sources */,
 				3591332F7A0D8F1CE5B1EC1B /* FakeCSVFileDescription.m in Sources */,
-				3591372D149EE1709ED0656C /* FakeTextViewDelegate.m in Sources */,
 				35913397C44ADB79FD9F2682 /* FakeBindingObserver.m in Sources */,
 				3591327CE69A5FC3DDC3B099 /* FakeBindingModel.m in Sources */,
 				359131244837E1AE890003ED /* FMICSVDeserializerTests.m in Sources */,
