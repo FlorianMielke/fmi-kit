@@ -64,7 +64,7 @@ NS_ASSUME_NONNULL_BEGIN
  *	@param	seconds	The number of seconds.
  *	@return	A new duration.
  */
-- (instancetype)initWithSeconds:(NSTimeInterval)seconds NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithSeconds:(NSTimeInterval)seconds NS_DESIGNATED_INITIALIZER NS_SWIFT_NAME(init(_:));
 
 /**
  *	Returns an FMIDuration object initialized from data in the given unarchiver.

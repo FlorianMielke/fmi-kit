@@ -8,15 +8,15 @@
 import Foundation
 
 extension FMIDuration : ObservableObject {
-    
+  
 }
 
 extension FMIDuration {
-    static func +(lhs: FMIDuration, rhs: FMIDuration) -> FMIDuration {
-        FMIDuration(seconds: lhs.seconds + rhs.seconds)
-    }
-    
-    static func -(lhs: FMIDuration, rhs: FMIDuration) -> FMIDuration {
-        FMIDuration(seconds: lhs.seconds - rhs.seconds)
-    }
+  static func +(lhs: FMIDuration, rhs: FMIDuration) -> FMIDuration {
+    FMIDuration(lhs.seconds + rhs.seconds)
+  }
+  
+  static func -(lhs: FMIDuration, rhs: FMIDuration) -> FMIDuration {
+    FMIDuration(lhs.seconds - rhs.seconds)
+  }
 }
