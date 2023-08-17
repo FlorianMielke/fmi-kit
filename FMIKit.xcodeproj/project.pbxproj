@@ -35,6 +35,9 @@
 		1738D4521AFC948100B96929 /* TestImagePortraitSmallWidth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */; };
 		1738D4531AFC948100B96929 /* TestImageSquared.png in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44B1AFC948100B96929 /* TestImageSquared.png */; };
 		173E1C6B277C532C0057C6D2 /* FMIDuration+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173E1C6A277C532C0057C6D2 /* FMIDuration+Additions.swift */; };
+		1757A7C02A8E1EE700563737 /* FMIDurationFormatter+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757A7BF2A8E1EE700563737 /* FMIDurationFormatter+Additions.swift */; };
+		1757A7C12A8E1F7300563737 /* FMIDurationFormatter+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757A7BF2A8E1EE700563737 /* FMIDurationFormatter+Additions.swift */; };
+		1757A7C32A8E204400563737 /* FMIDurationFormatter+AdditionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757A7C22A8E204400563737 /* FMIDurationFormatter+AdditionsTests.swift */; };
 		176507B1261DBE2800DB33E0 /* UIToolbar+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176507B0261DBE2800DB33E0 /* UIToolbar+Additions.swift */; };
 		176F0390219AE01D000FCFDC /* CellMarkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F038F219AE01D000FCFDC /* CellMarkable.swift */; };
 		176F0396219AE108000FCFDC /* Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F0395219AE108000FCFDC /* Named.swift */; };
@@ -376,6 +379,8 @@
 		1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TestImagePortraitSmallWidth.jpg; path = Resources/TestImagePortraitSmallWidth.jpg; sourceTree = "<group>"; };
 		1738D44B1AFC948100B96929 /* TestImageSquared.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TestImageSquared.png; path = Resources/TestImageSquared.png; sourceTree = "<group>"; };
 		173E1C6A277C532C0057C6D2 /* FMIDuration+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FMIDuration+Additions.swift"; sourceTree = "<group>"; };
+		1757A7BF2A8E1EE700563737 /* FMIDurationFormatter+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FMIDurationFormatter+Additions.swift"; sourceTree = "<group>"; };
+		1757A7C22A8E204400563737 /* FMIDurationFormatter+AdditionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FMIDurationFormatter+AdditionsTests.swift"; path = "FMIKitTests/FMIDurationFormatter+AdditionsTests.swift"; sourceTree = SOURCE_ROOT; };
 		176507B0261DBE2800DB33E0 /* UIToolbar+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIToolbar+Additions.swift"; sourceTree = "<group>"; };
 		176F038F219AE01D000FCFDC /* CellMarkable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMarkable.swift; sourceTree = "<group>"; };
 		176F0395219AE108000FCFDC /* Named.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Named.swift; sourceTree = "<group>"; };
@@ -821,6 +826,8 @@
 				173E1C6A277C532C0057C6D2 /* FMIDuration+Additions.swift */,
 				359137D4F9CAA68F777105FE /* FMIDurationFormatter.h */,
 				359135E4773D0271FE61736C /* FMIDurationFormatter.m */,
+				1757A7BF2A8E1EE700563737 /* FMIDurationFormatter+Additions.swift */,
+				1757A7C22A8E204400563737 /* FMIDurationFormatter+AdditionsTests.swift */,
 				35913522E4A8BE97B4DD5CCE /* FMIDurationFormatterTests.m */,
 				35913702E6AB909FCFFBE8F9 /* FMIDurationTests.m */,
 				359137DA236A1CED2510FB9C /* FMIMonth.h */,
@@ -1377,6 +1384,7 @@
 				35913BFDE59284D54FFCB2C3 /* FMIGMTDateHelper.m in Sources */,
 				3591389A7C8AD2DA033490B3 /* FMIEventParser.m in Sources */,
 				359139C9234892B2C026D5F8 /* FMIAcceptedCell.m in Sources */,
+				1757A7C02A8E1EE700563737 /* FMIDurationFormatter+Additions.swift in Sources */,
 				35913EBF2CAC745DE3BFEDC5 /* FMIAlertAction.m in Sources */,
 				35913E0A0D265D924423003A /* FMIDateHelper.m in Sources */,
 				35913A644E32EDA55DE2390D /* FMIEditingToolbar.m in Sources */,
@@ -1463,6 +1471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1738D44C1AFC948100B96929 /* Event.xcdatamodeld in Sources */,
+				1757A7C32A8E204400563737 /* FMIDurationFormatter+AdditionsTests.swift in Sources */,
 				35913B5B8B04BE230D9C81BB /* NSIndexSet+InitializationTests.m in Sources */,
 				35913AF235102FD3F6C4AC86 /* NSString+FMIDrawingTests.m in Sources */,
 				359132E39EB8CAA02F7903FC /* NSData+FileAdditionsTests.m in Sources */,
@@ -1535,6 +1544,7 @@
 				17360A6E221EB2BF00A7131B /* File.swift in Sources */,
 				359139D9BCDFDDC9EF8369BB /* NSDateFormatter+Timing.m in Sources */,
 				179EBEA31CE079A800479BCA /* NSLocale+German.m in Sources */,
+				1757A7C12A8E1F7300563737 /* FMIDurationFormatter+Additions.swift in Sources */,
 				170C7E451C900D69000B5574 /* FMIYear.m in Sources */,
 				170C7E441C900D69000B5574 /* FMIWeek.m in Sources */,
 				35913818C566561742241D1A /* NSBundle+Configuration.m in Sources */,
