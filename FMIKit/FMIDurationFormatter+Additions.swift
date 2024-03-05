@@ -1,5 +1,8 @@
 import Foundation
 
+extension DurationFormatter: ObservableObject {
+}
+
 extension DurationFormatter {
   public func duration(from string: String) -> TimeInterval {
     duration(from: string).seconds
