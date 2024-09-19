@@ -9,18 +9,10 @@ FOUNDATION_EXPORT double FMIKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 
 #import <FMIKit/FMIHelpers.h>
-#import <FMIKit/NSArray+FMIValidation.h>
-#import <FMIKit/NSArray+Querying.h>
 #import <FMIKit/NSCalendar+Calculations.h>
 #import <FMIKit/NSCalendar+SharedInstances.h>
-#import <FMIKit/NSData+FileAdditions.h>
 #import <FMIKit/NSDateFormatter+Timing.h>
-#import <FMIKit/NSFileManager+DirectoryAdditions.h>
 #import <FMIKit/NSNumberFormatter+Editing.h>
-#import <FMIKit/NSString+CSV.h>
-#import <FMIKit/NSString+FileName.h>
-#import <FMIKit/NSString+FMIDrawing.h>
-#import <FMIKit/NSString+Folding.h>
 #import <FMIKit/UIColor+SystemDefaults.h>
 
 #import <FMIKit/FMIBinding.h>
@@ -42,24 +34,20 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 
 #if !TARGET_OS_WATCH
 
-#import <FMIKit/NSUndoManager+Grouping.h>
 #import <FMIKit/UIDevice+Platform.h>
 #import <FMIKit/UIImage+Resizing.h>
 #import <FMIKit/UILabel+StateHandling.h>
 #import <FMIKit/UITableView+IndexPath.h>
-#import <FMIKit/UITableView+Selection.h>
 #import <FMIKit/UITableView+FMIScrolling.h>
 #import <FMIKit/UIScrollView+Scrolling.h>
 #import <FMIKit/UIView+I7ShakeAnimation.h>
 #import <FMIKit/NSIndexPath+Comparing.h>
 
 #import <FMIKit/FMIAlertController.h>
-#import <FMIKit/FMIEventParser.h>
 #import <FMIKit/FMITableView.h>
 
 #pragma mark - Messages
 
-#import <FMIKit/FMIMessageMIMETypes.h>
 #import <FMIKit/FMIAttachment.h>
 #import <FMIKit/FMIErrorMessage.h>
 
