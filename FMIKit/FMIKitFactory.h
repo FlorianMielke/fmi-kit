@@ -7,7 +7,6 @@
 @class FMIWhatsNewCoordinator;
 @protocol FMIAttachment;
 @protocol FMIMessage;
-@protocol FMIAlertView;
 @protocol FMIURLProvider;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -15,8 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FMIKitFactory : NSObject
 
 + (FMIDateHelper *)createDateHelper;
-
-- (id <FMIAlertView>)createActivityIndicatorAlertViewWithTitle:(NSString *)title;
 
 + (NSUserDefaults *)createUserDefaults;
 

@@ -27,7 +27,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIBinding.h>
 #import <FMIKit/FMIBindingManager.h>
 #import <FMIKit/FMIComparator.h>
-#import <FMIKit/FMIFoundationAdditions.h>
 #import <FMIKit/FMIDateHelper.h>
 #import <FMIKit/FMIGMTDateHelper.h>
 #import <FMIKit/FMIStore.h>
@@ -70,13 +69,7 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 
 #import <FMIKit/FMIAlertController.h>
 #import <FMIKit/FMIAlertView.h>
-#import <FMIKit/FMIAcceptedCell.h>
-#import <FMIKit/FMIBlurredView.h>
-#import <FMIKit/FMIBorderedButton.h>
-#import <FMIKit/FMIEditingToolbar.h>
 #import <FMIKit/FMIEventParser.h>
-#import <FMIKit/FMIHairlineView.h>
-#import <FMIKit/FMINonAminatedPushSegue.h>
 #import <FMIKit/FMITableView.h>
 
 #pragma mark - Messages

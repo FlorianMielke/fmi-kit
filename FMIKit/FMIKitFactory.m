@@ -1,5 +1,4 @@
 #import "FMIKitFactory.h"
-#import "FMIActivityIndicatorAlertView.h"
 #import "FMIDateHelper.h"
 #import "FMIFileCoordinator.h"
 #import "FMIReviewNotificationCoordinator.h"
@@ -10,14 +9,6 @@
 #import "FMIErrorMessage.h"
 
 @implementation FMIKitFactory
-
-- (id <FMIAlertView>)createActivityIndicatorAlertViewWithTitle:(NSString *)title {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleAlert];
-    UIActivityIndicatorView *activityIndicatorView = [UIActivityIndicatorView new];
-    FMIActivityIndicatorAlertView *alertView = [[FMIActivityIndicatorAlertView alloc] initWithAlertController:alertController activityIndicatorView:activityIndicatorView];
-    alertView.title = title;
-    return alertView;
-}
 
 + (FMIDateHelper *)createDateHelper {
     return [[FMIDateHelper alloc] init];
