@@ -1,7 +1,6 @@
 #import <Foundation/Foundation.h>
 
 @class FMIDateHelper;
-@class FMIFileCoordinator;
 @class FMIReviewNotificationCoordinator;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -11,8 +10,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (FMIDateHelper *)createDateHelper;
 
 + (NSUserDefaults *)createUserDefaults;
-
-+ (FMIFileCoordinator *)createFileCoordinator;
 
 + (FMIReviewNotificationCoordinator *)createReviewNotificationCoordinatorForAppStoreID:(NSString *)appStoreID;
 

@@ -13,7 +13,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/NSArray+Querying.h>
 #import <FMIKit/NSCalendar+Calculations.h>
 #import <FMIKit/NSCalendar+SharedInstances.h>
-#import <FMIKit/NSCoder+SecureCoding.h>
 #import <FMIKit/NSData+FileAdditions.h>
 #import <FMIKit/NSDateFormatter+Timing.h>
 #import <FMIKit/NSFileManager+DirectoryAdditions.h>
@@ -29,7 +28,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIComparator.h>
 #import <FMIKit/FMIDateHelper.h>
 #import <FMIKit/FMIGMTDateHelper.h>
-#import <FMIKit/FMIStore.h>
 #import <FMIKit/FMITimeZoneHelper.h>
 #import <FMIKit/FMIUUIDHelper.h>
 
@@ -43,14 +41,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #pragma mark - Common
 
 #import <FMIKit/NSBundle+FMIAppInfo.h>
-
-#pragma mark - Persistence
-
-#import <FMIKit/FMICSVDeserializer.h>
-#import <FMIKit/FMICSVFieldDeserializer.h>
-#import <FMIKit/FMICSVFileDescription.h>
-#import <FMIKit/FMIFieldDescription.h>
-#import <FMIKit/FMIFileCoordinator.h>
 
 #if !TARGET_OS_WATCH
 

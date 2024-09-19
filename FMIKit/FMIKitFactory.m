@@ -1,6 +1,5 @@
 #import "FMIKitFactory.h"
 #import "FMIDateHelper.h"
-#import "FMIFileCoordinator.h"
 #import "FMIReviewNotificationCoordinator.h"
 #import "FMIAttachment.h"
 #import "FMIErrorLogFile.h"
@@ -30,10 +29,6 @@
 
 + (NSUserDefaults *)createUserDefaults {
     return [NSUserDefaults standardUserDefaults];
-}
-
-+ (FMIFileCoordinator *)createFileCoordinator {
-    return [[FMIFileCoordinator alloc] init];
 }
 
 + (NSCalendar *)createCalendar {
