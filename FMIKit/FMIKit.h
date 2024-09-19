@@ -32,8 +32,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/FMIUUIDHelper.h>
 
 #import <FMIKit/FMIYear.h>
-#import <FMIKit/FMIMonth.h>
-#import <FMIKit/FMIWeek.h>
 #import <FMIKit/FMIPeriod.h>
 #import <FMIKit/FMIDuration.h>
 #import <FMIKit/FMIDurationFormatter.h>
@@ -43,8 +41,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/NSBundle+FMIAppInfo.h>
 
 #if !TARGET_OS_WATCH
-
-#import <FMIKit/FMIKitFactory.h>
 
 #import <FMIKit/NSUndoManager+Grouping.h>
 #import <FMIKit/UIDevice+Platform.h>
@@ -58,7 +54,6 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #import <FMIKit/NSIndexPath+Comparing.h>
 
 #import <FMIKit/FMIAlertController.h>
-#import <FMIKit/FMIAlertView.h>
 #import <FMIKit/FMIEventParser.h>
 #import <FMIKit/FMITableView.h>
 
@@ -71,10 +66,5 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #pragma mark - Common
 
 #import <FMIKit/FMIURLProvider.h>
-
-#pragma mark - Review & What's New
-
-#import <FMIKit/FMIReviewNotificationCoordinator.h>
-#import <FMIKit/FMIReviewNotificationViewController.h>
 
 #endif
