@@ -2,7 +2,6 @@
 #import "FMIDateHelper.h"
 #import "FMIFileCoordinator.h"
 #import "FMIReviewNotificationCoordinator.h"
-#import "FMIWhatsNewCoordinator.h"
 #import "FMIAttachment.h"
 #import "FMIErrorLogFile.h"
 #import "FMIMessage.h"
@@ -18,17 +17,6 @@
     NSUserDefaults *userDefaults = [FMIKitFactory createUserDefaults];
     NSCalendar *calendar = [FMIKitFactory createCalendar];
     return [[FMIReviewNotificationCoordinator alloc] initWithAppStoreID:appStoreID userDefaults:userDefaults calendar:calendar];
-}
-
-+ (FMIWhatsNewCoordinator *)createWhatsNewCoordinatorWithURLProvider:(id <FMIURLProvider>)URLProvider {
-    NSBundle *bundle = [NSBundle mainBundle];
-    NSUserDefaults *userDefaults = [FMIKitFactory createUserDefaults];
-    return [[FMIWhatsNewCoordinator alloc] initWithBundle:bundle userDefaults:userDefaults URLProvider:URLProvider];
-}
-
-+ (id <FMIMessage>)createErrorMessageForError:(NSError *)error diagnosticData:(nullable NSString *)diagnosticData bundle:(NSBundle *)bundle {
-    id <FMIAttachment> logFile = [FMIKitFactory createLogFileFromError:error diagnosticData:diagnosticData bundle:bundle];
-    return [[FMIErrorMessage alloc] initWithLogFile:logFile bundle:bundle];
 }
 
 + (id <FMIMessage>)createErrorMessageForError:(NSError *)error diagnosticData:(nullable NSString *)diagnosticData bundle:(NSBundle *)bundle emailAddress:(NSString *)emailAddress {

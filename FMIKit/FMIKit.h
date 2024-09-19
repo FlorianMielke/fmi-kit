@@ -88,6 +88,5 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 
 #import <FMIKit/FMIReviewNotificationCoordinator.h>
 #import <FMIKit/FMIReviewNotificationViewController.h>
-#import <FMIKit/FMIWhatsNewCoordinator.h>
 
 #endif
