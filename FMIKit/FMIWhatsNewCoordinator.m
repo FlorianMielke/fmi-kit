@@ -1,5 +1,4 @@
 #import "FMIWhatsNewCoordinator.h"
-#import "NSLocale+German.h"
 #import "FMIURLProvider.h"
 
 NSString *const FMIWhatsNewLastViewedVersionKey = @"FMIWhatsNewLastViewedVersionKey";
