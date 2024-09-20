@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		170C7E421C900D3C000B5574 /* FMIYear.h in Headers */ = {isa = PBXBuildFile; fileRef = 3591302B55363F40E9CF35C6 /* FMIYear.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		170C7E451C900D69000B5574 /* FMIYear.m in Sources */ = {isa = PBXBuildFile; fileRef = 359133AD3EED17EBCFFC829C /* FMIYear.m */; };
 		1717200A247FC03200A54240 /* NSError+Messaged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17172009247FC03200A54240 /* NSError+Messaged.swift */; };
 		171CB98B1AFB63C7002BE185 /* FMIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CB98A1AFB63C7002BE185 /* FMIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1722257E21AC6DFF0036D109 /* UI+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1722257D21AC6DFF0036D109 /* UI+Identifier.swift */; };
 		1736E4761BA815B30095227A /* FMIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 171CB98A1AFB63C7002BE185 /* FMIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1738D44C1AFC948100B96929 /* Event.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1738D4431AFC948100B96929 /* Event.xcdatamodeld */; };
 		1738D44D1AFC948100B96929 /* TestFile.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4451AFC948100B96929 /* TestFile.csv */; };
@@ -21,98 +18,55 @@
 		1738D4511AFC948100B96929 /* TestImagePortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 1738D4491AFC948100B96929 /* TestImagePortrait.png */; };
 		1738D4521AFC948100B96929 /* TestImagePortraitSmallWidth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */; };
 		1738D4531AFC948100B96929 /* TestImageSquared.png in Resources */ = {isa = PBXBuildFile; fileRef = 1738D44B1AFC948100B96929 /* TestImageSquared.png */; };
-		173E1C6B277C532C0057C6D2 /* FMIDuration+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173E1C6A277C532C0057C6D2 /* FMIDuration+Additions.swift */; };
-		1757A7C02A8E1EE700563737 /* FMIDurationFormatter+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757A7BF2A8E1EE700563737 /* FMIDurationFormatter+Additions.swift */; };
-		1757A7C12A8E1F7300563737 /* FMIDurationFormatter+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757A7BF2A8E1EE700563737 /* FMIDurationFormatter+Additions.swift */; };
-		1757A7C32A8E204400563737 /* FMIDurationFormatter+AdditionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757A7C22A8E204400563737 /* FMIDurationFormatter+AdditionsTests.swift */; };
-		176507B1261DBE2800DB33E0 /* UIToolbar+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176507B0261DBE2800DB33E0 /* UIToolbar+Additions.swift */; };
 		176F0396219AE108000FCFDC /* Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F0395219AE108000FCFDC /* Named.swift */; };
 		176F0397219AE108000FCFDC /* Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F0395219AE108000FCFDC /* Named.swift */; };
-		178584051C90112C0036A83A /* FMIPeriod.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913DAE3872A469ADCFF700 /* FMIPeriod.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		178584061C9011330036A83A /* FMIPeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913B64F30251D3C1C155E0 /* FMIPeriod.m */; };
 		178C91EA247D53220055A38C /* UIViewController+ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178C91E9247D53220055A38C /* UIViewController+ErrorHandling.swift */; };
 		17CBD6101BCC3A9000681FD9 /* FMIKitLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17CBD6121BCC3A9000681FD9 /* FMIKitLocalizable.strings */; };
 		17CCFAB6247D3A9600BD5C0A /* UIResponder+ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CCFAB3247D3A9600BD5C0A /* UIResponder+ErrorHandling.swift */; };
 		17CCFAB9247D3B3200BD5C0A /* Bundle+FMIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CCFAB8247D3B3200BD5C0A /* Bundle+FMIKit.swift */; };
 		17E00C711B90307500BA7024 /* FMIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171CB9851AFB63C7002BE185 /* FMIKit.framework */; };
-		3591302640A563A871070208 /* FMIComparator.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913DE59FA2BDAC428AA9F6 /* FMIComparator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35913037FE5DFDEE65F717D3 /* FMIComparatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913B3594D046E58F3CADC8 /* FMIComparatorTests.m */; };
-		35913062B7C65EA99F02DCBD /* FMIComparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913B3DB17A97C30E0FDE6D /* FMIComparator.m */; };
 		359130A7410D0233FDEA2625 /* FMIErrorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913BCE9444EA36FECA745C /* FMIErrorMessage.m */; };
-		359130B48477B0641D63A51A /* FMIDuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 359133C23A747D93F2A4C95C /* FMIDuration.m */; };
 		3591317D6BE22119739FDA24 /* FMIDateHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913A7C29DFBBC56090BA69 /* FMIDateHelperTest.m */; };
 		359131B9C6A98AF2F7A8CF8B /* FakeTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913F32E520C67BD6452446 /* FakeTableViewDataSource.m */; };
 		359131CD1B6160079F5A5FB2 /* NSCalendar+SharedInstances.h in Headers */ = {isa = PBXBuildFile; fileRef = 3591339CCDB752DC59D6D837 /* NSCalendar+SharedInstances.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359131E8F395B89E66F1A63C /* FMIErrorLogFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913C8709977D154A7F2F7A /* FMIErrorLogFile.h */; };
-		359131F62003A102582BB7EF /* FMIDuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 359137AD341DFF321A2C62E3 /* FMIDuration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3591321AB4F3EEEC5CC453E6 /* FMIKitConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913A7111C3DA9E3B5ED86F /* FMIKitConstants.h */; };
 		35913275D874453C547DB25C /* NSCalendar+SharedInstances.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913F96CE17A3187641AAF6 /* NSCalendar+SharedInstances.m */; };
-		3591327BD9BBEC4D26E628A1 /* FMITimeZoneHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591337F07AF3BF99180030B /* FMITimeZoneHelper.m */; };
 		3591327CE69A5FC3DDC3B099 /* FakeBindingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 359134E86EB3E44A077B1AF3 /* FakeBindingModel.m */; };
 		359132808A2EBCAB1E839C04 /* FMIBindingManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 359134CA9F45005389FA7708 /* FMIBindingManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913291B68887CA5E00D9A6 /* UIDevice+Platform.h in Headers */ = {isa = PBXBuildFile; fileRef = 359134D6412D6C6A38761812 /* UIDevice+Platform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359133635297A88D865337CD /* FMIErrorMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913B680C286D5E9DD609A6 /* FMIErrorMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913397C44ADB79FD9F2682 /* FakeBindingObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913D05B64135615F0DCFA5 /* FakeBindingObserver.m */; };
-		35913405425AD225B4CCA397 /* FMIPeriod.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913DAE3872A469ADCFF700 /* FMIPeriod.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		359134203497349F826EA01D /* FMIDurationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 359135E4773D0271FE61736C /* FMIDurationFormatter.m */; };
-		3591347BBB16953C85C69DE9 /* FMIYear.h in Headers */ = {isa = PBXBuildFile; fileRef = 3591302B55363F40E9CF35C6 /* FMIYear.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3591347DF1DD3909D6010450 /* FMIDuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 359137AD341DFF321A2C62E3 /* FMIDuration.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		359134B0B028435C7AFC52DD /* FMITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913B604CD3D2BB77BC9EBA /* FMITableView.m */; };
-		35913555CB90BBA70695A86A /* FMITableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913F4EB6636683222032BF /* FMITableViewTests.m */; };
-		359135655AB917A3BEDD30D0 /* FMITimeZoneHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591337F07AF3BF99180030B /* FMITimeZoneHelper.m */; };
 		359135883E3C112CB8C61284 /* FMIDateHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913FA870D304FE1539ECBA /* FMIDateHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		359135A6358CCA7F3750457E /* FMIAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913746C29B5340B1DA08B7 /* FMIAlertController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359135BB9EC783A8278B4D6E /* FMIErrorLogFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 359138BFDD7A292979CBA6C9 /* FMIErrorLogFile.m */; };
 		3591360DCC52DC874B9EB1B3 /* NSBundle+FMIAppInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913544F49739A75AB0C2C8 /* NSBundle+FMIAppInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35913660188DC6B13DB661EE /* FMIAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591377BD3DB001BC7760D27 /* FMIAlertController.m */; };
-		359136717DF3D82635D5B820 /* FMIMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 3591375B589044CC844CAA13 /* FMIMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3591368C148DE0BF2514DF10 /* FMIGMTDateHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 359132711A56643B56BB2621 /* FMIGMTDateHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359136978B0C634026DE1807 /* FMIURLProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913B64511B4BABA540BC2A /* FMIURLProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359136C1709732FAE3E10719 /* UITableView+IndexPathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913CD19B8A724944010728 /* UITableView+IndexPathTests.m */; };
 		359137CE0B2C41A56765CD74 /* FMIBindingManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 359134CA9F45005389FA7708 /* FMIBindingManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3591381A2F9AA8CA84395A8E /* FMIBindingManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591325652B0E018158092BC /* FMIBindingManagerTests.m */; };
 		359138389C1DA335435D49B6 /* FMIBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = 359133EC0F3F3F369C98A889 /* FMIBinding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35913852A6133DB91905702E /* FMIDuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 359133C23A747D93F2A4C95C /* FMIDuration.m */; };
-		35913855F4CB0E5484EC769D /* FMITableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 359130D02DBF84551D21618D /* FMITableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35913863748C6793F5BF1D5C /* FMIPeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913B64F30251D3C1C155E0 /* FMIPeriod.m */; };
 		3591387333257D86D6F26683 /* FMIGMTDateHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 359139104DE6854CACD6012C /* FMIGMTDateHelperTest.m */; };
 		3591389C23B6DD15B2DC5BC2 /* FMIBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = 359133EC0F3F3F369C98A889 /* FMIBinding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		359138A33936031E93902713 /* FMIComparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913B3DB17A97C30E0FDE6D /* FMIComparator.m */; };
-		359138A3AB7DAC42531712CB /* FMITimeZoneHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913C8DAE3035AE230A7436 /* FMITimeZoneHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359138AD5AC4C739AA46022D /* NSCalendar+SharedInstances.h in Headers */ = {isa = PBXBuildFile; fileRef = 3591339CCDB752DC59D6D837 /* NSCalendar+SharedInstances.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359138D6C9D1C5C1658F07B9 /* FMIGMTDateHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 359132711A56643B56BB2621 /* FMIGMTDateHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359139BB3728A7C5DB8DA1A7 /* NSBundle+FMIAppInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913544F49739A75AB0C2C8 /* NSBundle+FMIAppInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359139C16537036E8326A59C /* FMIBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 359136A1128DEF3389D6AE88 /* FMIBinding.m */; };
-		35913A4210A5D4C3852FB97F /* FMIComparator.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913DE59FA2BDAC428AA9F6 /* FMIComparator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913A496D71B8214E3401CC /* NSBundle+FMIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913762DEFCE14348F4DB8D /* NSBundle+FMIKit.h */; };
 		35913A72F5D51B23909947C0 /* UITableView+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913D93A22C9932A027B731 /* UITableView+IndexPath.m */; };
 		35913A739B42D96FF77C3C24 /* NSCalendar+SharedInstances.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913F96CE17A3187641AAF6 /* NSCalendar+SharedInstances.m */; };
-		35913A7B89992CA2E4E5FEE0 /* FMIUUIDHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 359139A832DE54E59DA264F8 /* FMIUUIDHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35913AF59B80BFED56130F19 /* FMIDurationFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 359137D4F9CAA68F777105FE /* FMIDurationFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913B131B769C2477AF5E6E /* FMIBindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 359135296203D2254ECA66B5 /* FMIBindingManager.m */; };
-		35913B2CCE9E8D9A25AEC241 /* FMITimeZoneHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913C8DAE3035AE230A7436 /* FMITimeZoneHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913B4FB9CABCFE02466025 /* FMIBindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 359135296203D2254ECA66B5 /* FMIBindingManager.m */; };
-		35913B5F5EBF628CDB2CF268 /* FMIUUIDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591344F655BD1EDF06C78F5 /* FMIUUIDHelper.m */; };
 		35913BBD69CADC8A53EB9E0F /* UIDevice+Platform.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913745DF27583BA4E591E4 /* UIDevice+Platform.m */; };
-		35913BC801F95C5C90CF91A2 /* FMIDurationFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 359137D4F9CAA68F777105FE /* FMIDurationFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913BFDE59284D54FFCB2C3 /* FMIGMTDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913D929BAE18D652875AF6 /* FMIGMTDateHelper.m */; };
 		35913C039AB5275BAA877B31 /* NSBundle+FMIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 359132B38EDA405B10D43539 /* NSBundle+FMIKit.m */; };
 		35913C1FF167A167B96D4A32 /* FMIDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 359135B46D0291D94213149D /* FMIDateHelper.m */; };
-		35913C2A63CEEB34ED449AA5 /* FMIDurationFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913522E4A8BE97B4DD5CCE /* FMIDurationFormatterTests.m */; };
 		35913C3C87D212B377485C66 /* NSBundle+FMIAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591364580F7582863F6E061 /* NSBundle+FMIAppInfo.m */; };
-		35913C444A0E39F104172058 /* FMIUUIDHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 359139A832DE54E59DA264F8 /* FMIUUIDHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913C8B8EFDC3A6E3519461 /* UITableView+IndexPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913191490ECD45DBF6648E /* UITableView+IndexPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35913C902C0640394E18CE67 /* FMIDurationFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 359135E4773D0271FE61736C /* FMIDurationFormatter.m */; };
-		35913D2E5D78D2DF589E337E /* FMIUUIDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591344F655BD1EDF06C78F5 /* FMIUUIDHelper.m */; };
-		35913D4D9FDE00ABBDA1DEA3 /* FMIYear.m in Sources */ = {isa = PBXBuildFile; fileRef = 359133AD3EED17EBCFFC829C /* FMIYear.m */; };
 		35913D9564011CC935070366 /* NSCalendar+SharedInstancesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913D6C064F2C195D8155E7 /* NSCalendar+SharedInstancesTests.m */; };
-		35913DB2F031FE21D1AF6BF9 /* FMIDurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913702E6AB909FCFFBE8F9 /* FMIDurationTests.m */; };
-		35913DC786B99EBB80B04BEE /* FMIAlertAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 3591365D28A3BD06A9D6DE99 /* FMIAlertAction.h */; };
 		35913E0A0D265D924423003A /* FMIDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 359135B46D0291D94213149D /* FMIDateHelper.m */; };
 		35913E875E33147914B176DD /* FMIDateHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913FA870D304FE1539ECBA /* FMIDateHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35913EBF2CAC745DE3BFEDC5 /* FMIAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 359132CAE00E661416C53B80 /* FMIAlertAction.m */; };
 		35913ED44B8288907BC4A620 /* FMIBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = 359136A1128DEF3389D6AE88 /* FMIBinding.m */; };
-		35913ED9949486DB086F53A8 /* FMIAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 35913EB997235D23138D0F7C /* FMIAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913EF22A2D8BA263AE000D /* FMIHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 3591323DC8B663841012BD82 /* FMIHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35913EF5EA8C0033D2A5BAFB /* FMIGMTDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913D929BAE18D652875AF6 /* FMIGMTDateHelper.m */; };
 		35913F5FB0136E21392C9B43 /* NSBundle+FMIAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591364580F7582863F6E061 /* NSBundle+FMIAppInfo.m */; };
@@ -138,7 +92,6 @@
 		171CB98A1AFB63C7002BE185 /* FMIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIKit.h; sourceTree = "<group>"; };
 		171CB9901AFB63C7002BE185 /* FMIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		171CB9961AFB63C7002BE185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1722257D21AC6DFF0036D109 /* UI+Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UI+Identifier.swift"; sourceTree = "<group>"; };
 		172417EE2701DFD500EB0B52 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1736E46D1BA815400095227A /* FMIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1736E4711BA815400095227A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -150,75 +103,45 @@
 		1738D4491AFC948100B96929 /* TestImagePortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TestImagePortrait.png; path = Resources/TestImagePortrait.png; sourceTree = "<group>"; };
 		1738D44A1AFC948100B96929 /* TestImagePortraitSmallWidth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TestImagePortraitSmallWidth.jpg; path = Resources/TestImagePortraitSmallWidth.jpg; sourceTree = "<group>"; };
 		1738D44B1AFC948100B96929 /* TestImageSquared.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TestImageSquared.png; path = Resources/TestImageSquared.png; sourceTree = "<group>"; };
-		173E1C6A277C532C0057C6D2 /* FMIDuration+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FMIDuration+Additions.swift"; sourceTree = "<group>"; };
-		1757A7BF2A8E1EE700563737 /* FMIDurationFormatter+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FMIDurationFormatter+Additions.swift"; sourceTree = "<group>"; };
-		1757A7C22A8E204400563737 /* FMIDurationFormatter+AdditionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FMIDurationFormatter+AdditionsTests.swift"; path = "FMIKitTests/FMIDurationFormatter+AdditionsTests.swift"; sourceTree = SOURCE_ROOT; };
-		176507B0261DBE2800DB33E0 /* UIToolbar+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIToolbar+Additions.swift"; sourceTree = "<group>"; };
 		176F0395219AE108000FCFDC /* Named.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Named.swift; sourceTree = "<group>"; };
 		178C91E9247D53220055A38C /* UIViewController+ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ErrorHandling.swift"; sourceTree = "<group>"; };
 		17CBD6111BCC3A9000681FD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FMIKitLocalizable.strings; sourceTree = "<group>"; };
 		17CBD6131BCC3A9200681FD9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/FMIKitLocalizable.strings; sourceTree = "<group>"; };
 		17CCFAB3247D3A9600BD5C0A /* UIResponder+ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+ErrorHandling.swift"; sourceTree = "<group>"; };
 		17CCFAB8247D3B3200BD5C0A /* Bundle+FMIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+FMIKit.swift"; sourceTree = "<group>"; };
-		3591302B55363F40E9CF35C6 /* FMIYear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIYear.h; sourceTree = "<group>"; };
-		359130D02DBF84551D21618D /* FMITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMITableView.h; sourceTree = "<group>"; };
 		35913191490ECD45DBF6648E /* UITableView+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+IndexPath.h"; sourceTree = "<group>"; };
 		3591320A24AF7C3C0DF96AE6 /* FakeTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeTableViewDataSource.h; sourceTree = "<group>"; };
 		3591323DC8B663841012BD82 /* FMIHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIHelpers.h; sourceTree = "<group>"; };
 		3591325652B0E018158092BC /* FMIBindingManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIBindingManagerTests.m; path = FMIKitTests/FMIBindingManagerTests.m; sourceTree = SOURCE_ROOT; };
 		359132711A56643B56BB2621 /* FMIGMTDateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIGMTDateHelper.h; sourceTree = "<group>"; };
 		359132B38EDA405B10D43539 /* NSBundle+FMIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+FMIKit.m"; sourceTree = "<group>"; };
-		359132CAE00E661416C53B80 /* FMIAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIAlertAction.m; sourceTree = "<group>"; };
-		3591337F07AF3BF99180030B /* FMITimeZoneHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMITimeZoneHelper.m; sourceTree = "<group>"; };
 		3591339CCDB752DC59D6D837 /* NSCalendar+SharedInstances.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+SharedInstances.h"; sourceTree = "<group>"; };
-		359133AD3EED17EBCFFC829C /* FMIYear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIYear.m; sourceTree = "<group>"; };
-		359133C23A747D93F2A4C95C /* FMIDuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIDuration.m; sourceTree = "<group>"; };
 		359133EC0F3F3F369C98A889 /* FMIBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIBinding.h; sourceTree = "<group>"; };
-		3591344F655BD1EDF06C78F5 /* FMIUUIDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIUUIDHelper.m; sourceTree = "<group>"; };
 		359134CA9F45005389FA7708 /* FMIBindingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIBindingManager.h; sourceTree = "<group>"; };
 		359134D6412D6C6A38761812 /* UIDevice+Platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Platform.h"; sourceTree = "<group>"; };
 		359134E86EB3E44A077B1AF3 /* FakeBindingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeBindingModel.m; sourceTree = "<group>"; };
 		35913502F8888774D158EA01 /* FakeBindingObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeBindingObserver.h; sourceTree = "<group>"; };
-		35913522E4A8BE97B4DD5CCE /* FMIDurationFormatterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIDurationFormatterTests.m; path = FMIKitTests/FMIDurationFormatterTests.m; sourceTree = SOURCE_ROOT; };
 		359135296203D2254ECA66B5 /* FMIBindingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIBindingManager.m; sourceTree = "<group>"; };
 		35913544F49739A75AB0C2C8 /* NSBundle+FMIAppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+FMIAppInfo.h"; sourceTree = "<group>"; };
 		359135B46D0291D94213149D /* FMIDateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIDateHelper.m; sourceTree = "<group>"; };
-		359135E4773D0271FE61736C /* FMIDurationFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIDurationFormatter.m; sourceTree = "<group>"; };
 		3591364580F7582863F6E061 /* NSBundle+FMIAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+FMIAppInfo.m"; sourceTree = "<group>"; };
-		3591365D28A3BD06A9D6DE99 /* FMIAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIAlertAction.h; sourceTree = "<group>"; };
 		359136A1128DEF3389D6AE88 /* FMIBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIBinding.m; sourceTree = "<group>"; };
-		35913702E6AB909FCFFBE8F9 /* FMIDurationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIDurationTests.m; path = FMIKitTests/FMIDurationTests.m; sourceTree = SOURCE_ROOT; };
 		35913745DF27583BA4E591E4 /* UIDevice+Platform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Platform.m"; sourceTree = "<group>"; };
-		35913746C29B5340B1DA08B7 /* FMIAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIAlertController.h; sourceTree = "<group>"; };
-		3591375B589044CC844CAA13 /* FMIMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIMessage.h; sourceTree = "<group>"; };
 		35913762DEFCE14348F4DB8D /* NSBundle+FMIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+FMIKit.h"; sourceTree = "<group>"; };
-		3591377BD3DB001BC7760D27 /* FMIAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIAlertController.m; sourceTree = "<group>"; };
-		359137AD341DFF321A2C62E3 /* FMIDuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIDuration.h; sourceTree = "<group>"; };
-		359137D4F9CAA68F777105FE /* FMIDurationFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIDurationFormatter.h; sourceTree = "<group>"; };
 		359138BFDD7A292979CBA6C9 /* FMIErrorLogFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIErrorLogFile.m; sourceTree = "<group>"; };
 		359139104DE6854CACD6012C /* FMIGMTDateHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIGMTDateHelperTest.m; path = FMIKitTests/FMIGMTDateHelperTest.m; sourceTree = SOURCE_ROOT; };
-		359139A832DE54E59DA264F8 /* FMIUUIDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIUUIDHelper.h; sourceTree = "<group>"; };
 		35913A7111C3DA9E3B5ED86F /* FMIKitConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIKitConstants.h; sourceTree = "<group>"; };
 		35913A7C29DFBBC56090BA69 /* FMIDateHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIDateHelperTest.m; path = FMIKitTests/FMIDateHelperTest.m; sourceTree = SOURCE_ROOT; };
-		35913B3594D046E58F3CADC8 /* FMIComparatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMIComparatorTests.m; path = FMIKitTests/FMIComparatorTests.m; sourceTree = SOURCE_ROOT; };
-		35913B3DB17A97C30E0FDE6D /* FMIComparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIComparator.m; sourceTree = "<group>"; };
-		35913B604CD3D2BB77BC9EBA /* FMITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMITableView.m; sourceTree = "<group>"; };
 		35913B64511B4BABA540BC2A /* FMIURLProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIURLProvider.h; sourceTree = "<group>"; };
-		35913B64F30251D3C1C155E0 /* FMIPeriod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIPeriod.m; sourceTree = "<group>"; };
 		35913B680C286D5E9DD609A6 /* FMIErrorMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIErrorMessage.h; sourceTree = "<group>"; };
 		35913BCE9444EA36FECA745C /* FMIErrorMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIErrorMessage.m; sourceTree = "<group>"; };
 		35913C8709977D154A7F2F7A /* FMIErrorLogFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIErrorLogFile.h; sourceTree = "<group>"; };
-		35913C8DAE3035AE230A7436 /* FMITimeZoneHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMITimeZoneHelper.h; sourceTree = "<group>"; };
 		35913CD19B8A724944010728 /* UITableView+IndexPathTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+IndexPathTests.m"; path = "FMIKitTests/UITableView+IndexPathTests.m"; sourceTree = SOURCE_ROOT; };
 		35913D05B64135615F0DCFA5 /* FakeBindingObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeBindingObserver.m; sourceTree = "<group>"; };
 		35913D6C064F2C195D8155E7 /* NSCalendar+SharedInstancesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSCalendar+SharedInstancesTests.m"; path = "FMIKitTests/NSCalendar+SharedInstancesTests.m"; sourceTree = SOURCE_ROOT; };
 		35913D929BAE18D652875AF6 /* FMIGMTDateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIGMTDateHelper.m; sourceTree = "<group>"; };
 		35913D93A22C9932A027B731 /* UITableView+IndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+IndexPath.m"; sourceTree = "<group>"; };
-		35913DAE3872A469ADCFF700 /* FMIPeriod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIPeriod.h; sourceTree = "<group>"; };
-		35913DE59FA2BDAC428AA9F6 /* FMIComparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIComparator.h; sourceTree = "<group>"; };
-		35913EB997235D23138D0F7C /* FMIAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIAttachment.h; sourceTree = "<group>"; };
 		35913F32E520C67BD6452446 /* FakeTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeTableViewDataSource.m; sourceTree = "<group>"; };
-		35913F4EB6636683222032BF /* FMITableViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMITableViewTests.m; path = FMIKitTests/FMITableViewTests.m; sourceTree = SOURCE_ROOT; };
 		35913F96CE17A3187641AAF6 /* NSCalendar+SharedInstances.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+SharedInstances.m"; sourceTree = "<group>"; };
 		35913FA870D304FE1539ECBA /* FMIDateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIDateHelper.h; sourceTree = "<group>"; };
 		35913FF3B778C393F6262E72 /* FakeBindingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeBindingModel.h; sourceTree = "<group>"; };
@@ -289,11 +212,8 @@
 				3591301B78D122E2104C8A32 /* Error Handling */,
 				171CB98A1AFB63C7002BE185 /* FMIKit.h */,
 				35913DE3A15D2FEA51B93AB8 /* Foundation */,
-				359139DF29C742B1FAFE4C51 /* Messages */,
 				1738D43F1AFC928200B96929 /* Resources */,
 				171CB9881AFB63C7002BE185 /* Supporting Files */,
-				176F038E219AE00C000FCFDC /* UI */,
-				35913936811D3AC35F6D804E /* Value Types */,
 			);
 			path = FMIKit;
 			sourceTree = "<group>";
@@ -356,15 +276,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		176F038E219AE00C000FCFDC /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				1722257D21AC6DFF0036D109 /* UI+Identifier.swift */,
-				176507B0261DBE2800DB33E0 /* UIToolbar+Additions.swift */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
 		3591301B78D122E2104C8A32 /* Error Handling */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,35 +289,6 @@
 				178C91E9247D53220055A38C /* UIViewController+ErrorHandling.swift */,
 			);
 			name = "Error Handling";
-			sourceTree = "<group>";
-		};
-		35913936811D3AC35F6D804E /* Value Types */ = {
-			isa = PBXGroup;
-			children = (
-				359137AD341DFF321A2C62E3 /* FMIDuration.h */,
-				359133C23A747D93F2A4C95C /* FMIDuration.m */,
-				173E1C6A277C532C0057C6D2 /* FMIDuration+Additions.swift */,
-				359137D4F9CAA68F777105FE /* FMIDurationFormatter.h */,
-				359135E4773D0271FE61736C /* FMIDurationFormatter.m */,
-				1757A7BF2A8E1EE700563737 /* FMIDurationFormatter+Additions.swift */,
-				1757A7C22A8E204400563737 /* FMIDurationFormatter+AdditionsTests.swift */,
-				35913522E4A8BE97B4DD5CCE /* FMIDurationFormatterTests.m */,
-				35913702E6AB909FCFFBE8F9 /* FMIDurationTests.m */,
-				35913DAE3872A469ADCFF700 /* FMIPeriod.h */,
-				35913B64F30251D3C1C155E0 /* FMIPeriod.m */,
-				3591302B55363F40E9CF35C6 /* FMIYear.h */,
-				359133AD3EED17EBCFFC829C /* FMIYear.m */,
-			);
-			name = "Value Types";
-			sourceTree = "<group>";
-		};
-		359139DF29C742B1FAFE4C51 /* Messages */ = {
-			isa = PBXGroup;
-			children = (
-				35913EB997235D23138D0F7C /* FMIAttachment.h */,
-				3591375B589044CC844CAA13 /* FMIMessage.h */,
-			);
-			name = Messages;
 			sourceTree = "<group>";
 		};
 		35913B38A4FF03091A89C925 /* Categories */ = {
@@ -448,31 +330,17 @@
 		35913E3154B3A61B735D302A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3591365D28A3BD06A9D6DE99 /* FMIAlertAction.h */,
-				359132CAE00E661416C53B80 /* FMIAlertAction.m */,
-				35913746C29B5340B1DA08B7 /* FMIAlertController.h */,
-				3591377BD3DB001BC7760D27 /* FMIAlertController.m */,
 				359133EC0F3F3F369C98A889 /* FMIBinding.h */,
 				359136A1128DEF3389D6AE88 /* FMIBinding.m */,
 				359134CA9F45005389FA7708 /* FMIBindingManager.h */,
 				359135296203D2254ECA66B5 /* FMIBindingManager.m */,
 				3591325652B0E018158092BC /* FMIBindingManagerTests.m */,
-				35913DE59FA2BDAC428AA9F6 /* FMIComparator.h */,
-				35913B3DB17A97C30E0FDE6D /* FMIComparator.m */,
-				35913B3594D046E58F3CADC8 /* FMIComparatorTests.m */,
 				35913FA870D304FE1539ECBA /* FMIDateHelper.h */,
 				359135B46D0291D94213149D /* FMIDateHelper.m */,
 				35913A7C29DFBBC56090BA69 /* FMIDateHelperTest.m */,
 				359132711A56643B56BB2621 /* FMIGMTDateHelper.h */,
 				35913D929BAE18D652875AF6 /* FMIGMTDateHelper.m */,
 				359139104DE6854CACD6012C /* FMIGMTDateHelperTest.m */,
-				359130D02DBF84551D21618D /* FMITableView.h */,
-				35913B604CD3D2BB77BC9EBA /* FMITableView.m */,
-				35913F4EB6636683222032BF /* FMITableViewTests.m */,
-				35913C8DAE3035AE230A7436 /* FMITimeZoneHelper.h */,
-				3591337F07AF3BF99180030B /* FMITimeZoneHelper.m */,
-				359139A832DE54E59DA264F8 /* FMIUUIDHelper.h */,
-				3591344F655BD1EDF06C78F5 /* FMIUUIDHelper.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -503,27 +371,15 @@
 				35913EF22A2D8BA263AE000D /* FMIHelpers.h in Headers */,
 				35913A496D71B8214E3401CC /* NSBundle+FMIKit.h in Headers */,
 				3591368C148DE0BF2514DF10 /* FMIGMTDateHelper.h in Headers */,
-				35913855F4CB0E5484EC769D /* FMITableView.h in Headers */,
-				3591347DF1DD3909D6010450 /* FMIDuration.h in Headers */,
-				35913AF59B80BFED56130F19 /* FMIDurationFormatter.h in Headers */,
-				359135A6358CCA7F3750457E /* FMIAlertController.h in Headers */,
 				359132808A2EBCAB1E839C04 /* FMIBindingManager.h in Headers */,
-				35913DC786B99EBB80B04BEE /* FMIAlertAction.h in Headers */,
 				3591389C23B6DD15B2DC5BC2 /* FMIBinding.h in Headers */,
-				35913C444A0E39F104172058 /* FMIUUIDHelper.h in Headers */,
 				359135883E3C112CB8C61284 /* FMIDateHelper.h in Headers */,
-				35913A4210A5D4C3852FB97F /* FMIComparator.h in Headers */,
-				359138A3AB7DAC42531712CB /* FMITimeZoneHelper.h in Headers */,
 				35913C8B8EFDC3A6E3519461 /* UITableView+IndexPath.h in Headers */,
 				35913291B68887CA5E00D9A6 /* UIDevice+Platform.h in Headers */,
 				359131CD1B6160079F5A5FB2 /* NSCalendar+SharedInstances.h in Headers */,
-				3591347BBB16953C85C69DE9 /* FMIYear.h in Headers */,
-				35913405425AD225B4CCA397 /* FMIPeriod.h in Headers */,
 				359131E8F395B89E66F1A63C /* FMIErrorLogFile.h in Headers */,
 				359133635297A88D865337CD /* FMIErrorMessage.h in Headers */,
 				359139BB3728A7C5DB8DA1A7 /* NSBundle+FMIAppInfo.h in Headers */,
-				35913ED9949486DB086F53A8 /* FMIAttachment.h in Headers */,
-				359136717DF3D82635D5B820 /* FMIMessage.h in Headers */,
 				359136978B0C634026DE1807 /* FMIURLProvider.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,17 +391,10 @@
 				1736E4761BA815B30095227A /* FMIKit.h in Headers */,
 				35913F9D3483403CDE293BA2 /* FMIHelpers.h in Headers */,
 				359138D6C9D1C5C1658F07B9 /* FMIGMTDateHelper.h in Headers */,
-				359131F62003A102582BB7EF /* FMIDuration.h in Headers */,
-				35913BC801F95C5C90CF91A2 /* FMIDurationFormatter.h in Headers */,
 				359137CE0B2C41A56765CD74 /* FMIBindingManager.h in Headers */,
 				359138389C1DA335435D49B6 /* FMIBinding.h in Headers */,
-				35913A7B89992CA2E4E5FEE0 /* FMIUUIDHelper.h in Headers */,
 				35913E875E33147914B176DD /* FMIDateHelper.h in Headers */,
-				3591302640A563A871070208 /* FMIComparator.h in Headers */,
-				35913B2CCE9E8D9A25AEC241 /* FMITimeZoneHelper.h in Headers */,
-				170C7E421C900D3C000B5574 /* FMIYear.h in Headers */,
 				359138AD5AC4C739AA46022D /* NSCalendar+SharedInstances.h in Headers */,
-				178584051C90112C0036A83A /* FMIPeriod.h in Headers */,
 				3591360DCC52DC874B9EB1B3 /* NSBundle+FMIAppInfo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -693,30 +542,16 @@
 				35913C039AB5275BAA877B31 /* NSBundle+FMIKit.m in Sources */,
 				1717200A247FC03200A54240 /* NSError+Messaged.swift in Sources */,
 				35913B4FB9CABCFE02466025 /* FMIBindingManager.m in Sources */,
-				359134203497349F826EA01D /* FMIDurationFormatter.m in Sources */,
-				359134B0B028435C7AFC52DD /* FMITableView.m in Sources */,
-				3591327BD9BBEC4D26E628A1 /* FMITimeZoneHelper.m in Sources */,
-				176507B1261DBE2800DB33E0 /* UIToolbar+Additions.swift in Sources */,
-				35913660188DC6B13DB661EE /* FMIAlertController.m in Sources */,
-				35913D2E5D78D2DF589E337E /* FMIUUIDHelper.m in Sources */,
 				35913BFDE59284D54FFCB2C3 /* FMIGMTDateHelper.m in Sources */,
-				1757A7C02A8E1EE700563737 /* FMIDurationFormatter+Additions.swift in Sources */,
-				35913EBF2CAC745DE3BFEDC5 /* FMIAlertAction.m in Sources */,
 				35913E0A0D265D924423003A /* FMIDateHelper.m in Sources */,
-				1722257E21AC6DFF0036D109 /* UI+Identifier.swift in Sources */,
 				359139C16537036E8326A59C /* FMIBinding.m in Sources */,
-				35913062B7C65EA99F02DCBD /* FMIComparator.m in Sources */,
-				359130B48477B0641D63A51A /* FMIDuration.m in Sources */,
 				17CCFAB9247D3B3200BD5C0A /* Bundle+FMIKit.swift in Sources */,
 				35913275D874453C547DB25C /* NSCalendar+SharedInstances.m in Sources */,
 				178C91EA247D53220055A38C /* UIViewController+ErrorHandling.swift in Sources */,
 				17CCFAB6247D3A9600BD5C0A /* UIResponder+ErrorHandling.swift in Sources */,
 				35913BBD69CADC8A53EB9E0F /* UIDevice+Platform.m in Sources */,
 				35913A72F5D51B23909947C0 /* UITableView+IndexPath.m in Sources */,
-				35913D4D9FDE00ABBDA1DEA3 /* FMIYear.m in Sources */,
-				35913863748C6793F5BF1D5C /* FMIPeriod.m in Sources */,
 				176F0396219AE108000FCFDC /* Named.swift in Sources */,
-				173E1C6B277C532C0057C6D2 /* FMIDuration+Additions.swift in Sources */,
 				359135BB9EC783A8278B4D6E /* FMIErrorLogFile.m in Sources */,
 				359130A7410D0233FDEA2625 /* FMIErrorMessage.m in Sources */,
 				35913C3C87D212B377485C66 /* NSBundle+FMIAppInfo.m in Sources */,
@@ -728,16 +563,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1738D44C1AFC948100B96929 /* Event.xcdatamodeld in Sources */,
-				1757A7C32A8E204400563737 /* FMIDurationFormatter+AdditionsTests.swift in Sources */,
 				359136C1709732FAE3E10719 /* UITableView+IndexPathTests.m in Sources */,
 				35913D9564011CC935070366 /* NSCalendar+SharedInstancesTests.m in Sources */,
 				3591317D6BE22119739FDA24 /* FMIDateHelperTest.m in Sources */,
-				35913037FE5DFDEE65F717D3 /* FMIComparatorTests.m in Sources */,
 				3591387333257D86D6F26683 /* FMIGMTDateHelperTest.m in Sources */,
-				35913DB2F031FE21D1AF6BF9 /* FMIDurationTests.m in Sources */,
 				3591381A2F9AA8CA84395A8E /* FMIBindingManagerTests.m in Sources */,
-				35913C2A63CEEB34ED449AA5 /* FMIDurationFormatterTests.m in Sources */,
-				35913555CB90BBA70695A86A /* FMITableViewTests.m in Sources */,
 				359131B9C6A98AF2F7A8CF8B /* FakeTableViewDataSource.m in Sources */,
 				35913397C44ADB79FD9F2682 /* FakeBindingObserver.m in Sources */,
 				3591327CE69A5FC3DDC3B099 /* FakeBindingModel.m in Sources */,
@@ -749,19 +579,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				35913B131B769C2477AF5E6E /* FMIBindingManager.m in Sources */,
-				35913C902C0640394E18CE67 /* FMIDurationFormatter.m in Sources */,
-				359135655AB917A3BEDD30D0 /* FMITimeZoneHelper.m in Sources */,
-				35913B5F5EBF628CDB2CF268 /* FMIUUIDHelper.m in Sources */,
 				35913EF5EA8C0033D2A5BAFB /* FMIGMTDateHelper.m in Sources */,
-				178584061C9011330036A83A /* FMIPeriod.m in Sources */,
 				35913C1FF167A167B96D4A32 /* FMIDateHelper.m in Sources */,
 				35913ED44B8288907BC4A620 /* FMIBinding.m in Sources */,
-				359138A33936031E93902713 /* FMIComparator.m in Sources */,
 				176F0397219AE108000FCFDC /* Named.swift in Sources */,
-				35913852A6133DB91905702E /* FMIDuration.m in Sources */,
 				35913A739B42D96FF77C3C24 /* NSCalendar+SharedInstances.m in Sources */,
-				1757A7C12A8E1F7300563737 /* FMIDurationFormatter+Additions.swift in Sources */,
-				170C7E451C900D69000B5574 /* FMIYear.m in Sources */,
 				35913F5FB0136E21392C9B43 /* NSBundle+FMIAppInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -971,7 +793,6 @@
 		171CB99F1AFB63C7002BE185 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "";
@@ -992,7 +813,6 @@
 		171CB9A01AFB63C7002BE185 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "";
@@ -1154,7 +974,6 @@
 		17B469991BCE5372000C5281 /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "";
