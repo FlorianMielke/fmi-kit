@@ -9,11 +9,7 @@ FOUNDATION_EXPORT double FMIKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 
 #import <FMIKit/FMIHelpers.h>
-#import <FMIKit/NSCalendar+Calculations.h>
 #import <FMIKit/NSCalendar+SharedInstances.h>
-#import <FMIKit/NSDateFormatter+Timing.h>
-#import <FMIKit/NSNumberFormatter+Editing.h>
-#import <FMIKit/UIColor+SystemDefaults.h>
 
 #import <FMIKit/FMIBinding.h>
 #import <FMIKit/FMIBindingManager.h>
@@ -35,13 +31,7 @@ FOUNDATION_EXPORT const unsigned char FMIKitVersionString[];
 #if !TARGET_OS_WATCH
 
 #import <FMIKit/UIDevice+Platform.h>
-#import <FMIKit/UIImage+Resizing.h>
-#import <FMIKit/UILabel+StateHandling.h>
 #import <FMIKit/UITableView+IndexPath.h>
-#import <FMIKit/UITableView+FMIScrolling.h>
-#import <FMIKit/UIScrollView+Scrolling.h>
-#import <FMIKit/UIView+I7ShakeAnimation.h>
-#import <FMIKit/NSIndexPath+Comparing.h>
 
 #import <FMIKit/FMIAlertController.h>
 #import <FMIKit/FMITableView.h>
